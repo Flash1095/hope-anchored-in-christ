@@ -2,9 +2,11 @@
 # Edit content at /admin after this repo is pushed to GitHub.
 # Repo: Flash1095/hope-anchored-in-christ (see README for the login setup).
 backend:
-  name: github
-  repo: Flash1095/hope-anchored-in-christ
+  name: git-gateway
   branch: main
+  identity_url: https://hope-anchored-in-christ.netlify.app/.netlify/identity
+  gateway_url: https://hope-anchored-in-christ.netlify.app/.netlify/git/github
+  repo: Flash1095/hope-anchored-in-christ
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
