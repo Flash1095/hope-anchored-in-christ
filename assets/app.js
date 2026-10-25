@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "38";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "39";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -218,6 +218,12 @@
   }
   function renderValue(field, value) {
     if (field === "Lessons") {
+      return "<ul>" + splitList(value).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>";
+    }
+    if (field === "Steps") {
+      return "<ol>" + splitList(value).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ol>";
+    }
+    if (field === "Questions") {
       return "<ul>" + splitList(value).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>";
     }
     if (REL_FIELDS.indexOf(field) !== -1) {
