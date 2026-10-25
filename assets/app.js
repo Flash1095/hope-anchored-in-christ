@@ -102,7 +102,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "23";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "24";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -116,6 +116,48 @@
   function shortDate(s) {
     s = String(s == null ? "" : s);
     return s.length > 10 ? s.slice(0, 10) : s;
+  }
+  // Instant blog posts: the editor commits straight to main, but the built
+  // posts.json only refreshes after the site rebuild, so a new post used to
+  // take minutes to appear. Instead the blog lists posts live from the repo:
+  // the GitHub contents API shows the post seconds after publishing, and the
+  // body is read from raw.githubusercontent.com, which also updates in
+  // seconds — no rebuild or page deploy needed. If GitHub is unreachable
+  // (or rate-limited), the built posts.json is used as before.
+  function parsePostFrontmatter(text, file) {
+    var meta = {};
+    var m = text.match(/^---\s*([\s\S]*?)\n---/);
+    if (m) m[1].split("\n").forEach(function (line) {
+      var i = line.indexOf(":");
+      if (i > 0) {
+        var val = line.slice(i + 1).trim();
+        if ((val.charAt(0) === '"' && val.slice(-1) === '"') || (val.charAt(0) === "'" && val.slice(-1) === "'")) val = val.slice(1, -1);
+        meta[line.slice(0, i).trim()] = val;
+      }
+    });
+    var slug = file.split("/").pop().replace(/\.md$/, "");
+    return { slug: slug, title: meta.title || slug, date: meta.date || "", category: meta.category || "", scripture: meta.scripture || "", file: file };
+  }
+  function loadPostsFromGithub() {
+    return fetch("https://api.github.com/repos/Flash1095/hope-anchored-in-christ/contents/content/posts?ref=main", { cache: "no-store" }).then(function (r) {
+      if (!r.ok) throw new Error("github posts list");
+      return r.json();
+    }).then(function (items) {
+      var files = items.filter(function (it) { return it.type === "file" && /\.md$/.test(it.name); });
+      return Promise.all(files.map(function (it) {
+        return fetch(it.download_url, { cache: "no-store" }).then(function (r) {
+          if (!r.ok) throw new Error("github post file");
+          return r.text();
+        }).then(function (text) {
+          var p = parsePostFrontmatter(text, "content/posts/" + it.name);
+          p.raw = it.download_url;
+          return p;
+        });
+      }));
+    }).then(function (list) {
+      list.sort(function (a, b) { return (b.date || "") < (a.date || "") ? -1 : ((b.date || "") > (a.date || "") ? 1 : 0); });
+      return list;
+    });
   }
   function label(field) {
     return field.replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
@@ -747,7 +789,7 @@
     if (slug) {
       var post = posts.filter(function (p) { return p.slug === slug; })[0];
       if (!post) return viewBlog(null);
-      fetch(post.file + "?v=" + ASSET_V).then(function (r) { if (!r.ok) throw new Error(post.file); return r.text(); }).then(function (text) {
+      fetch(post.raw || (post.file + "?v=" + ASSET_V)).then(function (r) { if (!r.ok) throw new Error(post.file); return r.text(); }).then(function (text) {
         var body = text.replace(/^---[\s\S]*?---\s*/, "");
         app.innerHTML = '<a class="back-link" href="#/blog">&larr; All posts</a><article class="post-body"><h2>' +
           esc(post.title) + '</h2><p class="post-meta">' + esc(shortDate(post.date)) +
@@ -989,7 +1031,9 @@
       return r.json();
     }).then(function (rows) { data[c.id] = rows; });
   });
-  jobs.push(fetch("content/posts.json?v=" + ASSET_V).then(function (r) { return r.json(); }).then(function (p) { posts = p; }));
+  jobs.push(loadPostsFromGithub().catch(function () {
+    return fetch("content/posts.json?v=" + ASSET_V).then(function (r) { return r.json(); });
+  }).then(function (p) { posts = p; }));
   jobs.push(fetch("content/maps.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : {}; }).then(function (m) { maps = m; }).catch(function () { maps = {}; }));
   jobs.push(fetch("content/pages/explore.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : {}; }).then(function (p) { explorePage = p; }).catch(function () { explorePage = {}; }));
   Promise.all(jobs).then(function () {
