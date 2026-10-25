@@ -104,7 +104,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "29";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "30";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -940,9 +940,7 @@
     }
     var comicScenes = Array.prototype.slice.call(document.querySelectorAll(".comic-scene"));
     var comicReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var comicTicking = false;
     function updateComicParallax() {
-      comicTicking = false;
       if (comicReduced) return;
       var vh = window.innerHeight;
       comicScenes.forEach(function (scene) {
@@ -951,8 +949,8 @@
         var offset = (r.top + r.height / 2) - vh / 2;
         var bg = scene.querySelector(".comic-scene-bg");
         var art = scene.querySelector(".comic-scene-art");
-        if (bg) bg.style.transform = "translateY(" + (offset * -0.06) + "px)";
-        if (art) art.style.transform = "translateY(" + (offset * -0.16) + "px)";
+        if (bg) bg.style.transform = "translateY(" + Math.max(-18, Math.min(18, offset * -0.05)) + "px)";
+        if (art) art.style.transform = "translateY(" + Math.max(-45, Math.min(45, offset * -0.14)) + "px)";
       });
     }
     function onComicScroll() {
@@ -961,7 +959,7 @@
       var h = document.documentElement;
       var max = h.scrollHeight - h.clientHeight;
       bar.style.width = (max > 0 ? Math.min(100, (h.scrollTop / max) * 100) : 0) + "%";
-      if (!comicTicking) { comicTicking = true; requestAnimationFrame(updateComicParallax); }
+      updateComicParallax();
     }
     window.addEventListener("scroll", onComicScroll, { passive: true });
     onComicScroll();
