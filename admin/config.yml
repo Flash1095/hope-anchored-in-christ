@@ -348,17 +348,17 @@ collections:
     extension: "json"
     format: "json"
     fields:
-      - {label: "Quiz", name: "Quiz", widget: "string"}
+      - {label: "Quiz", name: "Quiz", widget: "string", hint: "Use the exact same quiz name on every question in that quiz — questions group into a quiz by this name."}
       - {label: "Course", name: "Course", widget: "string"}
-      - {label: "Question", name: "Question", widget: "string"}
+      - {label: "Question", name: "Question", widget: "text"}
       - {label: "Option A", name: "OptionA", widget: "string"}
       - {label: "Option B", name: "OptionB", widget: "string"}
       - {label: "Option C", name: "OptionC", widget: "string"}
       - {label: "Option D", name: "OptionD", widget: "string"}
-      - {label: "Correct Answer", name: "CorrectAnswer", widget: "string"}
+      - {label: "Correct Answer", name: "CorrectAnswer", widget: "select", options: ["A", "B", "C", "D"]}
       - {label: "Explanation", name: "Explanation", widget: "text"}
-      - {label: "Difficulty", name: "Difficulty", widget: "string"}
-      - {label: "Scripture Reference", name: "ScriptureReference", widget: "list"}
+      - {label: "Difficulty", name: "Difficulty", widget: "select", options: ["Easy", "Medium", "Hard"]}
+      - {label: "Scripture Reference", name: "ScriptureReference", widget: "string"}
       - {label: "Slug", name: "Slug", widget: "string"}
   - name: "hymns"
     label: "Hymns"
