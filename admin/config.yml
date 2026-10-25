@@ -360,3 +360,22 @@ collections:
       - {label: "Difficulty", name: "Difficulty", widget: "string"}
       - {label: "Scripture Reference", name: "ScriptureReference", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "hymns"
+    label: "Hymns"
+    folder: "content/hymns"
+    create: true
+    slug: "{{fields.Hymn}}"
+    identifier_field: "Hymn"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Hymn", name: "Hymn", widget: "string"}
+      - {label: "Author", name: "Author", widget: "string"}
+      - {label: "Year", name: "Year", widget: "string"}
+      - {label: "Tune", name: "Tune", widget: "string"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Story", name: "Story", widget: "text"}
+      - {label: "Themes", name: "Themes", widget: "list"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}

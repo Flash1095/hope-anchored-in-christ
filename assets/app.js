@@ -57,22 +57,25 @@
       blurb: "Guided studies, from Foundations of Faith to Hebrew and Greek.",
       filters: [{ label: "Level", field: "Level" }], meta: ["Level", "Duration"] },
     { id: "quizzes", label: "Quizzes", file: "content/quizzes.json", primary: "Question",
-      blurb: "Test what you've learned — every answer teaches.", special: "quizzes" },
-  ];
+    blurb: "Test what you've learned — every answer teaches.", special: "quizzes" },
+  { id: "hymns", label: "Hymns", file: "content/hymns.json", primary: "Hymn",
+    blurb: "Great hymns and the stories behind them — how each song was born.",
+    meta: ["Author", "Year"] },
+];
 
   var REL_FIELDS = ["RelatedBooks", "RelatedPeople", "RelatedEvents", "RelatedTopics",
     "RelatedDoctrines", "RelatedQuestions", "RelatedFinds", "RelatedBook",
     "KeyPersons", "KeyPeople", "BibleBooks", "Places", "Events",
     "KeyScriptures", "KeyPassages", "KeyVerses", "ScriptureReference",
     "ScriptureIlluminated", "BibleReferences", "Tags", "Place", "Prophet", "Course"];
-  var SNIPPET_FIELDS = ["Summary", "Description", "Definition", "ShortAnswer",
+  var SNIPPET_FIELDS = ["Summary", "Description", "Story", "Definition", "ShortAnswer",
     "ProphecySummary", "Explanation", "BiblicalUsage", "Beliefs"];
   var SKIP_FIELDS = ["Slug", "Maps"];
 
   var data = {};      // collection id -> array of rows
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
-  var ASSET_V = "6";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "7";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 

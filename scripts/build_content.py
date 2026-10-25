@@ -50,6 +50,7 @@ SOURCES = [
     ("fallacies", "logical-fallacies-cms/Logical Fallacies CMS.csv", "Fallacy"),
     ("courses", "courses-cms/Courses CMS.csv", "Course"),
     ("quizzes", "quizzes-cms/Quizzes CMS.csv", "Slug"),
+    ("hymns", "hymns-cms/Hymns CMS.csv", "Hymn"),
 ]
 
 
