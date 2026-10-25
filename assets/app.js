@@ -104,7 +104,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "32";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "33";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -748,11 +748,17 @@
   }
 
   /* ---------- home / explore / blog / about / search ---------- */
+  /* Line art Lorraine creates herself, one per collection tile and one per
+     blog post. Add the file under assets/lineart/ and list it here; the
+     tile/post shows it automatically. Empty until her art arrives. */
+  var TILE_ART = {};
+  var POST_ART = {};
   function collectionCard(c) {
     var n = (data[c.id] || []).length;
     var blurb = c.blurb;
     (explorePage.blurbs || []).forEach(function (b) { if (b.collection === c.id && b.blurb) blurb = b.blurb; });
-    return '<a class="card" href="#/' + c.id + '"><h3>' + esc(c.label) + "</h3>" +
+    var art = TILE_ART[c.id] ? "<img class='card-art' src='" + esc(TILE_ART[c.id]) + "' alt=''>" : "";
+    return '<a class="card" href="#/' + c.id + '">' + art + "<h3>" + esc(c.label) + "</h3>" +
       '<p class="meta">' + n + " entries</p><p class='snippet'>" + esc(blurb) + "</p></a>";
   }
   function viewHome() {
@@ -772,7 +778,7 @@
       "&mdash; Hebrews 6:19&ndash;20</div>";
     if (latest) {
       html += "<h3>Latest from the blog</h3>" +
-        '<a class="card" href="#/blog/' + esc(latest.slug) + '"><h3>' + esc(latest.title) + "</h3>" +
+        '<a class="card" href="#/blog/' + esc(latest.slug) + '">' + (POST_ART[latest.slug] ? "<img class='card-art' src='" + esc(POST_ART[latest.slug]) + "' alt=''>" : "") + "<h3>" + esc(latest.title) + "</h3>" +
         '<p class="meta">' + esc(shortDate(latest.date)) + (latest.category ? " &middot; " + esc(latest.category) : "") + "</p></a>";
     }
     html += "<h3>Explore the collections</h3><div class='card-grid'>" +
@@ -797,6 +803,7 @@
           esc(post.title) + '</h2><p class="post-meta">' + esc(shortDate(post.date)) +
           (post.category ? " &middot; " + esc(post.category) : "") +
           (post.scripture ? " &middot; " + esc(post.scripture) : "") + "</p>" +
+          (POST_ART[post.slug] ? "<img class='post-art' src='" + esc(POST_ART[post.slug]) + "' alt=''>" : "") +
           renderMarkdown(body) + "</article>";
         window.scrollTo(0, 0);
       }).catch(function () {
@@ -807,7 +814,7 @@
     var html = "<h2>Blog</h2><p class='page-intro'>Reflections and studies from the anchored story.</p>";
     if (!posts.length) html += '<p class="empty">No posts yet.</p>';
     html += "<div class='card-grid'>" + posts.map(function (p) {
-      return '<a class="card" href="#/blog/' + esc(p.slug) + '"><h3>' + esc(p.title) + "</h3>" +
+      return '<a class="card" href="#/blog/' + esc(p.slug) + '">' + (POST_ART[p.slug] ? "<img class='card-art' src='" + esc(POST_ART[p.slug]) + "' alt=''>" : "") + "<h3>" + esc(p.title) + "</h3>" +
         '<p class="meta">' + esc(shortDate(p.date)) + (p.category ? " &middot; " + esc(p.category) : "") + "</p></a>";
     }).join("") + "</div>";
     app.innerHTML = html;

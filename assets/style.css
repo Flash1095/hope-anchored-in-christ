@@ -109,6 +109,9 @@ a:hover { color: var(--gold-dark); }
 .card-grid > .card:nth-child(5n+3) { background: var(--pastel-butter); border-color: #f2e3ac; }
 .card-grid > .card:nth-child(5n+4) { background: var(--pastel-lilac); border-color: #ddd2ee; }
 .card-grid > .card:nth-child(5n+5) { background: var(--pastel-sky); border-color: #c9dcee; }
+/* Line art (Lorraine's own drawings) on collection tiles and blog posts */
+.card-art { width: 100%; height: auto; display: block; border-radius: 8px; margin-bottom: 0.6rem; background: #fff; }
+.post-art { width: 100%; height: auto; display: block; border-radius: 12px; margin-bottom: 1.2rem; background: #fff; }
 .card h3 { margin: 0 0 0.3rem; font-size: 1.15rem; }
 .card .meta { color: var(--muted); font-size: 0.9rem; margin: 0.2rem 0; }
 .card .snippet { margin: 0.4rem 0 0; font-size: 0.95rem; }
