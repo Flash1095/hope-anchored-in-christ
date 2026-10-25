@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "39";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "40";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -205,7 +205,39 @@
           var w = val(row, "Word");
           if (!isEmpty(w) && !linkIndex[w]) linkIndex[w] = { coll: c.id, idx: idx };
         }
+        if (c.id === "questions") {
+          // RelatedQuestions stores slugs in most collections, not titles.
+          var s = val(row, "Slug");
+          if (!isEmpty(s) && !linkIndex[s]) linkIndex[s] = { coll: c.id, idx: idx };
+        }
       });
+    });
+    // Short-name aliases: a related token like "Augustine" should reach
+    // "Augustine of Hippo". Only ever add an alias when exactly one entry
+    // proposes it — ambiguous names (Peter, Saul, Joseph, Mary) stay plain
+    // text rather than linking to the wrong person.
+    var proposed = {};
+    COLLECTIONS.forEach(function (c) {
+      if (c.id === "quizzes") return;
+      (data[c.id] || []).forEach(function (row) {
+        var p = val(row, c.primary);
+        if (isEmpty(p)) return;
+        var cands = {};
+        if (p.indexOf(",") !== -1) cands[p.split(",")[0].trim()] = true;
+        if (p.indexOf(" of ") !== -1) cands[p.split(" of ")[0].trim()] = true;
+        var words = p.replace(/,/g, "").split(/\s+/);
+        if (words.length > 1) { cands[words[0]] = true; cands[words[words.length - 1]] = true; }
+        Object.keys(cands).forEach(function (a) {
+          if (a && a !== p && a.length > 1) {
+            if (!proposed[a]) proposed[a] = {};
+            proposed[a][p] = true;
+          }
+        });
+      });
+    });
+    Object.keys(proposed).forEach(function (a) {
+      var owners = Object.keys(proposed[a]);
+      if (owners.length === 1 && !linkIndex[a]) linkIndex[a] = linkIndex[owners[0]];
     });
   }
   function linkifyField(field, value) {
