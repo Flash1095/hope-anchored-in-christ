@@ -72,6 +72,7 @@
   var data = {};      // collection id -> array of rows
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
+  var ASSET_V = "6";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -560,7 +561,7 @@
     if (slug) {
       var post = posts.filter(function (p) { return p.slug === slug; })[0];
       if (!post) return viewBlog(null);
-      fetch(post.file).then(function (r) { return r.text(); }).then(function (text) {
+      fetch(post.file + "?v=" + ASSET_V).then(function (r) { return r.text(); }).then(function (text) {
         var body = text.replace(/^---[\s\S]*?---\s*/, "");
         app.innerHTML = '<a class="back-link" href="#/blog">&larr; All posts</a><article class="post-body"><h2>' +
           esc(post.title) + '</h2><p class="post-meta">' + esc(post.date) +
@@ -766,13 +767,13 @@
 
   app.innerHTML = '<p class="loading">Loading the collections…</p>';
   var jobs = COLLECTIONS.map(function (c) {
-    return fetch(c.file).then(function (r) {
+    return fetch(c.file + "?v=" + ASSET_V).then(function (r) {
       if (!r.ok) throw new Error(c.file);
       return r.json();
     }).then(function (rows) { data[c.id] = rows; });
   });
-  jobs.push(fetch("content/posts.json").then(function (r) { return r.json(); }).then(function (p) { posts = p; }));
-  jobs.push(fetch("content/maps.json").then(function (r) { return r.ok ? r.json() : {}; }).then(function (m) { maps = m; }).catch(function () { maps = {}; }));
+  jobs.push(fetch("content/posts.json?v=" + ASSET_V).then(function (r) { return r.json(); }).then(function (p) { posts = p; }));
+  jobs.push(fetch("content/maps.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : {}; }).then(function (m) { maps = m; }).catch(function () { maps = {}; }));
   Promise.all(jobs).then(function () {
     buildLinkIndex();
     window.addEventListener("hashchange", render);
