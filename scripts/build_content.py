@@ -38,7 +38,6 @@ SOURCES = [
     ("questions", "biblical-qa-database/Biblical QA Database v2.csv", "Question"),
     ("people", "biblical-people-cms/Biblical People CMS - 127 Profiles (Merged).csv", "Name"),
     ("finds", "archaeological-finds-cms/Archaeological Finds CMS.csv", "FindName"),
-    ("events", "biblical-events-cms/Biblical Events CMS.csv", "EventName"),
     ("places", "biblical-places-cms/Biblical Places CMS.csv", "Name"),
     ("topics", "topics-categories-cms/Topics and Categories CMS.csv", "Topic"),
     ("themes", "biblical-themes-cms/Biblical Themes CMS.csv", "Theme"),
@@ -52,6 +51,15 @@ SOURCES = [
     ("quizzes", "quizzes-cms/Quizzes CMS.csv", "Slug"),
     ("hymns", "hymns-cms/Hymns CMS.csv", "Hymn"),
     ("nature", "nature-cms/Nature CMS.csv", "Name"),
+    ("apologetics", "apologetics-cms/Apologetics CMS.csv", "Argument"),
+    ("objections", "objections-cms/Objections CMS.csv", "Objection"),
+    ("perspectives", "perspectives-cms/Perspectives CMS.csv", "Profession"),
+    ("heritage", "heritage-cms/Christian Heritage CMS.csv", "Name"),
+    ("politics", "politics-cms/Faith and Politics CMS.csv", "Issue"),
+    ("socialmedia", "socialmedia-cms/Social Media CMS.csv", "Post"),
+    ("stories", "stories-cms/Stories CMS.csv", "Story"),
+    ("hermeneutics", "hermeneutics-cms/Hermeneutics CMS.csv", "Principle"),
+    ("jewishculture", "jewishculture-cms/Jewish Culture CMS.csv", "Topic"),
 ]
 
 

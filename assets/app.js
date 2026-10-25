@@ -84,6 +84,9 @@
   { id: "hermeneutics", label: "Biblical Hermeneutics", file: "content/hermeneutics.json", primary: "Principle",
     blurb: "How to interpret Scripture rightly — context, literary genres, literary devices, and principles for handling God's Word with care.",
     filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
+  { id: "jewishculture", label: "Jewish Culture & the Messiah", file: "content/jewishculture.json", primary: "Topic",
+    blurb: "Jewish culture, feasts, and traditions \u2014 and how each one points to Jesus the Messiah.",
+    filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
 ];
 
   var REL_FIELDS = ["RelatedBooks", "RelatedPeople", "RelatedEvents", "RelatedTopics",
@@ -99,7 +102,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "21";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "22";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -765,13 +768,20 @@
      The list starts empty on purpose: real products are added here once the
      print-on-demand shop is set up, so the live page never shows fake items. */
   var STORE_PRODUCTS = [];
+  /* Set to the Printify Pop-Up Store URL once Lorraine shares it. Empty means coming soon. */
+  var STORE_URL = "";
+  /* Set to the giving link (Ko-fi/PayPal/Stripe) once Lorraine shares it. Empty means coming soon. */
+  var GIVE_URL = "";
   function viewStore() {
     var html = "<h2>Store</h2><div class='post-body'>" +
       "<p>Beautiful, faith-anchored goods, made to order and shipped to you. " +
       "Every item is printed on demand — nothing is mass-produced or warehoused — so your purchase supports this ministry " +
       "and arrives made just for you.</p>";
+    if (STORE_URL) {
+      html += "<p><a class='btn' href='" + esc(STORE_URL) + "' target='_blank' rel='noopener'>Visit our shop</a></p>";
+    }
     if (!STORE_PRODUCTS.length) {
-      html += "<p class='empty'>Our shop is coming soon. Check back shortly for our first collection.</p>";
+      if (!STORE_URL) html += "<p class='empty'>Our shop is coming soon. Our Printify store will be linked here as soon as it launches.</p>";
     } else {
       html += "<div class='card-grid'>" + STORE_PRODUCTS.map(function (p) {
         return "<div class='card store-card'>" +
@@ -794,6 +804,15 @@
       "<h3>Podcast</h3>" +
       "<p class='empty'>The Hope Anchored in Christ podcast is coming — conversations about Scripture, hope, and everyday faith. Episodes will be listed here as they're released.</p>" +
       "<p>Until then, the blog and the study collections are the best place to stay connected.</p>" +
+      "</div>";
+    window.scrollTo(0, 0);
+  }
+  function viewGive() {
+    app.innerHTML = "<h2>Give</h2><div class='post-body'>" +
+      "<p>Your gifts support this ministry — keeping the blog free for everyone, covering the costs of running the site, " +
+      "and funding future content including the podcast.</p>" +
+      (GIVE_URL ? "<p><a class='btn' href='" + esc(GIVE_URL) + "' target='_blank' rel='noopener'>Give to support this ministry</a></p>" :
+      "<p class='empty'>Giving options are coming soon. Check back shortly.</p>") +
       "</div>";
     window.scrollTo(0, 0);
   }
@@ -858,7 +877,8 @@
       "hope in Christ is not blind — it's anchored. We want to create a space that brings together faith and reason, where people can explore " +
       "theology, Scripture, apologetics, philosophy, science, culture, history, and more — all through a lens grounded in God's Word. Our hope is " +
       "that this blog can be a light to those who are searching, doubting, or growing, and a reminder that the Christian faith is strong enough " +
-      "to hold the weight of real life, real questions, and real hope.</p></div>";
+      "to hold the weight of real life, real questions, and real hope.</p>" +
+      "<p>If this ministry has blessed you and you'd like to help keep it going, visit our <a href=\"#/give\">Give page</a>.</p></div>";
     window.scrollTo(0, 0);
   }
   function viewSearch(params) {
@@ -940,6 +960,7 @@
     if (path[0] === "about") return viewAbout();
     if (path[0] === "store") return viewStore();
     if (path[0] === "connect") return viewConnect();
+    if (path[0] === "give") return viewGive();
     if (path[0] === "search") return viewSearch(params);
     if (path[0] === "quizzes" && path[1] === "play") return viewQuizPlay(path[2] ? decodeURIComponent(path[2]) : "", params);
     var c = coll(path[0]);
@@ -953,7 +974,7 @@
   });
   document.getElementById("footerNav").innerHTML =
     COLLECTIONS.map(function (c) { return '<a href="#/' + c.id + '">' + esc(c.label) + "</a>"; }).join("") +
-    '<a href="#/blog">Blog</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a>';
+    '<a href="#/blog">Blog</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a>';
 
   app.innerHTML = '<p class="loading">Loading the collections…</p>';
   var jobs = COLLECTIONS.map(function (c) {

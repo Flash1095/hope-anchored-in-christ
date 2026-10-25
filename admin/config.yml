@@ -525,6 +525,23 @@ collections:
       - {label: "Scripture", name: "Scripture", widget: "string"}
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "jewishculture"
+    label: "Jewish Culture & the Messiah"
+    folder: "content/jewishculture"
+    create: true
+    slug: "{{fields.Topic}}"
+    identifier_field: "Topic"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Topic", name: "Topic", widget: "string"}
+      - {label: "Category", name: "Category", widget: "select", options: ["Feast", "Custom", "Language", "History", "Messianic Reading"]}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Jewish Background", name: "JewishBackground", widget: "text"}
+      - {label: "Points to Christ", name: "PointsToChrist", widget: "text"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
   - name: "pages"
     label: "Site Pages"
     files:
@@ -538,5 +555,5 @@ collections:
             name: "blurbs"
             widget: "list"
             fields:
-              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "places", "topics", "themes", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories", "hermeneutics"]}
+              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "places", "topics", "themes", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories", "hermeneutics", "jewishculture"]}
               - {label: "Description", name: "blurb", widget: "text"}
