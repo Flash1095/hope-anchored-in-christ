@@ -1,0 +1,14 @@
+{
+  "Quiz": "Women of the Bible Quiz",
+  "Course": "Women of the Bible",
+  "Question": "Who prayed so earnestly for a child that the priest Eli thought she was drunk?",
+  "OptionA": "Hannah",
+  "OptionB": "Sarah",
+  "OptionC": "Rachel",
+  "OptionD": "Rebekah",
+  "CorrectAnswer": "A",
+  "Explanation": "Hannah poured out her heart at Shiloh, and God gave her Samuel, whom she dedicated back to the Lord. God hears whispered prayers too.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "1 Samuel 1",
+  "Slug": "woman-eli-thought-was-drunk"
+}

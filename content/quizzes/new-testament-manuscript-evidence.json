@@ -1,0 +1,14 @@
+{
+  "Quiz": "Apologetics Quiz",
+  "Course": "Christian Apologetics 101",
+  "Question": "Which best describes the manuscript evidence for the New Testament?",
+  "OptionA": "Only one late copy survives",
+  "OptionB": "The text changes in every copy",
+  "OptionC": "Thousands of Greek manuscripts, far more than for other ancient writings",
+  "OptionD": "No manuscripts before AD 1500",
+  "CorrectAnswer": "C",
+  "Explanation": "Over 5,800 Greek New Testament manuscripts survive, plus thousands more in other languages — vastly more, and earlier, than for any other ancient book. We can be confident we have what was written.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "John 20:30-31; 2 Peter 1:16",
+  "Slug": "new-testament-manuscript-evidence"
+}

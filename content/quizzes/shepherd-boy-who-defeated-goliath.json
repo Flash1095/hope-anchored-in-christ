@@ -1,0 +1,14 @@
+{
+  "Quiz": "Old Testament People Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Which shepherd boy defeated Goliath and later became king?",
+  "OptionA": "Solomon",
+  "OptionB": "Saul",
+  "OptionC": "David",
+  "OptionD": "Samuel",
+  "CorrectAnswer": "C",
+  "Explanation": "David trusted God rather than armour, defeated Goliath, and was later anointed king of Israel. God looks at the heart, not the height.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "1 Samuel 17; 1 Samuel 16:7",
+  "Slug": "shepherd-boy-who-defeated-goliath"
+}

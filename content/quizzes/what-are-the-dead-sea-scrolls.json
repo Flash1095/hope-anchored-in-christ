@@ -1,0 +1,14 @@
+{
+  "Quiz": "Archaeology Quiz",
+  "Course": "Archaeology & the Bible",
+  "Question": "What are the Dead Sea Scrolls?",
+  "OptionA": "Ancient biblical manuscripts found in caves near Qumran",
+  "OptionB": "Babylonian law tablets",
+  "OptionC": "Roman tax records",
+  "OptionD": "Egyptian temple carvings",
+  "CorrectAnswer": "A",
+  "Explanation": "Found from 1946-47 onward, the scrolls preserve biblical books over a thousand years older than copies known before — and the text matches remarkably well.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Isaiah 40:8",
+  "Slug": "what-are-the-dead-sea-scrolls"
+}

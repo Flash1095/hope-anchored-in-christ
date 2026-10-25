@@ -1,0 +1,14 @@
+{
+  "Quiz": "Prophecy Quiz",
+  "Course": "Understanding Bible Prophecy",
+  "Question": "Psalm 22, written by David long before crucifixion existed in Israel, begins with which words Jesus later cried from the cross?",
+  "OptionA": "Father, forgive them",
+  "OptionB": "My God, My God, why have You forsaken Me?",
+  "OptionC": "It is finished",
+  "OptionD": "Into Your hands I commit My spirit",
+  "CorrectAnswer": "B",
+  "Explanation": "Jesus quoted Psalm 22's opening line from the cross, pointing hearers to a psalm that goes on to describe pierced hands and divided garments.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Psalm 22:1; Psalm 22:16-18; Matthew 27:46",
+  "Slug": "psalm-22-words-from-the-cross"
+}

@@ -1,0 +1,14 @@
+{
+  "Quiz": "Old Testament People Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who led Israel out of slavery in Egypt?",
+  "OptionA": "Joshua",
+  "OptionB": "Moses",
+  "OptionC": "Caleb",
+  "OptionD": "Aaron",
+  "CorrectAnswer": "B",
+  "Explanation": "God called Moses at the burning bush and used him to lead Israel through the Red Sea. God delights to use unlikely people!",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Exodus 3:1-10; Exodus 14",
+  "Slug": "who-led-israel-out-of-egypt"
+}

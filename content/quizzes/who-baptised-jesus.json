@@ -1,0 +1,14 @@
+{
+  "Quiz": "Life of Christ Quiz",
+  "Course": "The Life of Christ",
+  "Question": "Who baptised Jesus in the Jordan River?",
+  "OptionA": "Peter",
+  "OptionB": "John the Baptist",
+  "OptionC": "Nicodemus",
+  "OptionD": "Paul",
+  "CorrectAnswer": "B",
+  "Explanation": "John baptised Jesus, and the Spirit descended like a dove as the Father spoke from heaven. All three Persons of the Trinity are present in this moment.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Matthew 3:13-17",
+  "Slug": "who-baptised-jesus"
+}

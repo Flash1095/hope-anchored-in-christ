@@ -1,0 +1,10 @@
+{
+  "Fallacy": "Hasty Generalization",
+  "Category": "Weak Induction",
+  "Definition": "Drawing a broad conclusion from too small or unrepresentative a sample. A few examples are treated as proof about a whole group.",
+  "Example": "After meeting two rude tourists, someone declares, 'Everyone from that country is rude.'",
+  "FaithDiscussionExample": "Someone meets two disinterested church members and concludes, 'Christians never really care about anyone outside their group,' based on a very narrow experience.",
+  "HowToRespond": "Validate the experience, then widen the picture: 'I am sorry that was your experience. Would you be open to meeting other examples before we settle on the whole group?'",
+  "RelatedTopics": "Logic; Stereotypes; Christian Witness",
+  "Slug": "hasty-generalization"
+}

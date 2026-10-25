@@ -1,0 +1,14 @@
+{
+  "Quiz": "Women of the Bible Quiz",
+  "Course": "Women of the Bible",
+  "Question": "Which woman judged Israel and sang a victory song with Barak?",
+  "OptionA": "Abigail",
+  "OptionB": "Huldah",
+  "OptionC": "Hannah",
+  "OptionD": "Deborah",
+  "CorrectAnswer": "D",
+  "Explanation": "Deborah was a prophetess and judge whose courage rallied Israel, and her song in Judges 5 is one of the oldest poems in the Bible.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Judges 4-5",
+  "Slug": "woman-who-judged-israel"
+}

@@ -1,0 +1,308 @@
+[
+  {
+    "Theme": "Covenant",
+    "Summary": "God binds Himself to His people with solemn promises, from Noah and Abraham through Moses and David to the new covenant in Christ's blood. Each covenant reveals more of His faithful character and His plan to bless the nations. In Jesus, every covenant promise finds its yes and its fulfilment.",
+    "KeyPassages": "Genesis 15:17-21; Exodus 19:5-6; 2 Samuel 7:12-16; Jeremiah 31:31-34; Luke 22:20; Hebrews 8:6",
+    "RelatedBooks": "Genesis; Exodus; 2 Samuel; Jeremiah; Luke; Hebrews",
+    "RelatedPeople": "Abraham; Noah; Moses; David; Jesus",
+    "RelatedEvents": "The Exodus and Crossing of the Red Sea; Last Supper; The Crucifixion",
+    "Slug": "covenant"
+  },
+  {
+    "Theme": "Redemption",
+    "Summary": "Redemption is God buying His people back at a price, first pictured when He ransomed Israel from slavery in Egypt. In the New Testament, Christ's blood redeems us from sin, and creation itself waits for final redemption. It is the story of a God who pays what we could never pay to make us His own.",
+    "KeyPassages": "Exodus 6:6; Ruth 4:4-10; Psalm 130:7; Mark 10:45; Ephesians 1:7; Romans 8:23",
+    "RelatedBooks": "Exodus; Ruth; Psalms; Mark; Ephesians; Romans",
+    "RelatedPeople": "Moses; Ruth; Boaz; Jesus; Paul",
+    "RelatedEvents": "The Exodus and Crossing of the Red Sea; The Crucifixion; The Resurrection",
+    "Slug": "redemption"
+  },
+  {
+    "Theme": "Sacrifice",
+    "Summary": "From the first offerings in Genesis to the Passover lamb and the daily temple sacrifices, Scripture teaches that sin costs life and that God Himself provides the substitute. All those sacrifices point forward to Jesus, the Lamb of God who offered Himself once for all. Because His sacrifice is complete, we can draw near to God with confidence.",
+    "KeyPassages": "Genesis 22:8; Leviticus 16:15-22; Isaiah 53:5-7; John 1:29; Hebrews 10:10-14",
+    "RelatedBooks": "Genesis; Leviticus; Isaiah; John; Hebrews",
+    "RelatedPeople": "Abraham; Isaac; Aaron; Jesus; John the Baptist",
+    "RelatedEvents": "Binding of Isaac; The Passover; The Crucifixion",
+    "Slug": "sacrifice"
+  },
+  {
+    "Theme": "Holiness",
+    "Summary": "God is utterly pure, set apart, and glorious, and He calls His people to be holy as He is holy. The tabernacle, the law, and the prophets all show both the beauty and the seriousness of His holiness. In Christ we are made holy and, by the Spirit, we grow in holiness day by day.",
+    "KeyPassages": "Exodus 15:11; Leviticus 19:2; Isaiah 6:3; 1 Peter 1:15-16; Hebrews 12:14",
+    "RelatedBooks": "Exodus; Leviticus; Isaiah; 1 Peter; Hebrews",
+    "RelatedPeople": "Moses; Isaiah; Aaron; Peter; Jesus",
+    "RelatedEvents": "Giving of the Law at Sinai; Pentecost",
+    "Slug": "holiness"
+  },
+  {
+    "Theme": "Sin",
+    "Summary": "Sin is humanity's rebellion against God, beginning with Adam and Eve and spreading to every heart, bringing death and brokenness to the world. Scripture never minimises sin, but it also never leaves us without hope. From Genesis 3:15 onward, God promises and provides a Saviour who defeats sin at the cross.",
+    "KeyPassages": "Genesis 3:6-19; Psalm 51:5; Isaiah 59:2; Romans 3:23; Romans 6:23; 1 John 1:8-9",
+    "RelatedBooks": "Genesis; Psalms; Isaiah; Romans; 1 John",
+    "RelatedPeople": "Adam; Eve; David; Paul; Jesus",
+    "RelatedEvents": "The Fall; David and Bathsheba; The Crucifixion",
+    "Slug": "sin"
+  },
+  {
+    "Theme": "Justice",
+    "Summary": "God loves justice and hates oppression, commanding His people to defend the widow, the orphan, the foreigner, and the poor. The prophets thundered against injustice when Israel grew comfortable and careless. At the cross, God's justice and mercy meet, and His coming kingdom will set every wrong right at last.",
+    "KeyPassages": "Deuteronomy 16:20; Psalm 33:5; Isaiah 1:17; Amos 5:24; Micah 6:8; Romans 3:25-26",
+    "RelatedBooks": "Deuteronomy; Psalms; Isaiah; Amos; Micah; Romans",
+    "RelatedPeople": "Moses; Amos; Micah; Jesus; Paul",
+    "RelatedEvents": "Giving of the Law at Sinai; The Crucifixion",
+    "Slug": "justice"
+  },
+  {
+    "Theme": "Mercy",
+    "Summary": "Mercy is God's compassion toward those who deserve judgment, shown when He spared Israel again and again and supremely when He gave His Son. Jesus embodied mercy, welcoming sinners, healing the broken, and forgiving even those who crucified Him. Because we have received mercy, we are called to be merciful to others.",
+    "KeyPassages": "Exodus 34:6-7; Psalm 103:8-13; Micah 7:18; Luke 6:36; Ephesians 2:4-5; Titus 3:5",
+    "RelatedBooks": "Exodus; Psalms; Micah; Luke; Ephesians; Titus",
+    "RelatedPeople": "Moses; David; Jonah; Jesus; Paul",
+    "RelatedEvents": "The Exodus and Crossing of the Red Sea; Jonah and the Great Fish; The Crucifixion",
+    "Slug": "mercy"
+  },
+  {
+    "Theme": "Salvation",
+    "Summary": "Salvation is God's rescue of sinners from sin, death, and judgment, accomplished by grace through faith in Jesus Christ. The Old Testament celebrates God as Saviour who delivers His people, and the New Testament proclaims that same salvation to all who believe. It is past, present, and future: we have been saved, are being saved, and will be saved.",
+    "KeyPassages": "Exodus 14:13; Psalm 62:1; Isaiah 12:2; Luke 19:10; Acts 4:12; Ephesians 2:8-9",
+    "RelatedBooks": "Exodus; Psalms; Isaiah; Luke; Acts; Ephesians",
+    "RelatedPeople": "Moses; Isaiah; Jesus; Peter; Paul",
+    "RelatedEvents": "The Exodus and Crossing of the Red Sea; The Crucifixion; The Resurrection; Pentecost",
+    "Slug": "salvation"
+  },
+  {
+    "Theme": "Faith",
+    "Summary": "Faith is trusting God and taking Him at His word, exemplified by Abraham who believed God and it was credited to him as righteousness. Hebrews 11 celebrates ordinary men and women who lived, suffered, and died trusting promises they had not yet seen fulfilled. Faith is not wishful thinking; it rests on the faithful character of God Himself.",
+    "KeyPassages": "Genesis 15:6; Habakkuk 2:4; Hebrews 11:1; Hebrews 11:6; Romans 10:17; James 2:17",
+    "RelatedBooks": "Genesis; Habakkuk; Hebrews; Romans; James",
+    "RelatedPeople": "Abraham; Noah; Moses; Rahab; Mary",
+    "RelatedEvents": "Binding of Isaac; Noah and the Flood; The Resurrection",
+    "Slug": "faith"
+  },
+  {
+    "Theme": "Grace",
+    "Summary": "Grace is God's undeserved favour freely given to sinners, the heartbeat of the gospel from beginning to end. We are justified by grace, sustained by grace, and taught by grace to say no to ungodliness and yes to godliness. Grace humbles the proud, lifts the lowly, and leaves no room for boasting except in Christ.",
+    "KeyPassages": "Genesis 6:8; Psalm 84:11; John 1:16-17; Romans 5:20; Ephesians 2:8; Titus 2:11-12",
+    "RelatedBooks": "Genesis; Psalms; John; Romans; Ephesians; Titus",
+    "RelatedPeople": "Noah; David; Mary; Jesus; Paul",
+    "RelatedEvents": "The Crucifixion; Conversion of Saul (Paul); Pentecost",
+    "Slug": "grace"
+  },
+  {
+    "Theme": "Love",
+    "Summary": "God is love, and His love is shown most clearly in giving His Son for us while we were still sinners. The great commandments sum up the whole law: love God with all your heart and love your neighbour as yourself. Love is the mark by which the world will know we belong to Jesus.",
+    "KeyPassages": "Deuteronomy 6:5; Psalm 136:1; John 3:16; Romans 5:8; 1 Corinthians 13:4-7; 1 John 4:8-10",
+    "RelatedBooks": "Deuteronomy; Psalms; John; Romans; 1 Corinthians; 1 John",
+    "RelatedPeople": "Moses; David; Jesus; Paul; John",
+    "RelatedEvents": "The Crucifixion; Last Supper; Creation",
+    "Slug": "love"
+  },
+  {
+    "Theme": "Hope",
+    "Summary": "Biblical hope is not wishful thinking but a confident expectation anchored in God's promises and in Christ's resurrection. It held Abraham, sustained Israel in exile, and carries believers through suffering today. Hebrews calls this hope an anchor for the soul, firm and secure — the anchor at the heart of this blog.",
+    "KeyPassages": "Psalm 42:11; Jeremiah 29:11; Romans 5:3-5; Romans 15:13; Hebrews 6:19; 1 Peter 1:3",
+    "RelatedBooks": "Psalms; Jeremiah; Romans; Hebrews; 1 Peter",
+    "RelatedPeople": "Abraham; Jeremiah; Paul; Peter; Jesus",
+    "RelatedEvents": "Fall of Jerusalem and the Exile; The Resurrection; Cyrus's Decree and Return from Exile",
+    "Slug": "hope"
+  },
+  {
+    "Theme": "Kingdom of God",
+    "Summary": "The Kingdom of God is God's righteous reign, promised in the Old Testament and announced by Jesus as near in His own ministry. It grows like a mustard seed, turns worldly values upside down, and will one day fill the earth when Christ returns. To seek first His kingdom is to live now by the values of the age to come.",
+    "KeyPassages": "Daniel 2:44; Daniel 7:14; Mark 1:14-15; Matthew 6:33; Luke 17:20-21; Revelation 11:15",
+    "RelatedBooks": "Daniel; Mark; Matthew; Luke; Revelation",
+    "RelatedPeople": "Daniel; Jesus; John the Baptist; Paul",
+    "RelatedEvents": "Birth of Jesus; The Crucifixion; The Resurrection; Pentecost",
+    "Slug": "kingdom-of-god"
+  },
+  {
+    "Theme": "Light and Darkness",
+    "Summary": "Scripture opens with God speaking light into darkness, and that contrast runs through the whole Bible as a picture of good and evil, truth and falsehood, life and death. Jesus declared Himself the Light of the World, and His followers are called to shine as lights in a dark world. In the new creation, darkness will be gone forever.",
+    "KeyPassages": "Genesis 1:3-4; Psalm 27:1; Isaiah 9:2; John 1:5; John 8:12; Ephesians 5:8; Revelation 22:5",
+    "RelatedBooks": "Genesis; Psalms; Isaiah; John; Ephesians; Revelation",
+    "RelatedPeople": "Jesus; Isaiah; Paul; John",
+    "RelatedEvents": "Creation; Birth of Jesus; The Crucifixion; The Resurrection",
+    "Slug": "light-and-darkness"
+  },
+  {
+    "Theme": "Shepherd",
+    "Summary": "God reveals Himself as a Shepherd who seeks, feeds, guides, and protects His sheep, most tenderly in Psalm 23. Israel's leaders were meant to shepherd the flock, and when they failed, God promised to shepherd His people Himself. Jesus fulfils that promise as the Good Shepherd who lays down His life for the sheep.",
+    "KeyPassages": "Genesis 49:24; Psalm 23:1; Psalm 80:1; Ezekiel 34:11-16; John 10:11-14; 1 Peter 5:4",
+    "RelatedBooks": "Genesis; Psalms; Ezekiel; John; 1 Peter",
+    "RelatedPeople": "David; Ezekiel; Jesus; Peter",
+    "RelatedEvents": "David Becomes King; Birth of Jesus; The Crucifixion",
+    "Slug": "shepherd"
+  },
+  {
+    "Theme": "Vine and Branches",
+    "Summary": "In the Old Testament, Israel is God's vine, planted to bear fruit for the nations, yet often failing to do so. Jesus takes up the image, declaring Himself the true Vine and His disciples the branches who bear fruit only by abiding in Him. Fruitfulness flows from remaining in Christ, not from striving apart from Him.",
+    "KeyPassages": "Psalm 80:8-16; Isaiah 5:1-7; John 15:1-8; Romans 11:17-24",
+    "RelatedBooks": "Psalms; Isaiah; John; Romans",
+    "RelatedPeople": "Isaiah; Jesus; Paul",
+    "RelatedEvents": "The Exodus and Crossing of the Red Sea; Last Supper; Pentecost",
+    "Slug": "vine-and-branches"
+  },
+  {
+    "Theme": "Temple",
+    "Summary": "The temple was the dwelling place of God's presence among Israel, the centre of worship, sacrifice, and prayer in Jerusalem. Jesus honoured the temple, cleansed it, and foretold its destruction, while pointing to His own body as the true temple. Now God's Spirit dwells in His church and in every believer, and the new creation needs no temple because the Lord Himself is there.",
+    "KeyPassages": "Exodus 25:8; 1 Kings 8:27-30; Psalm 84:1-4; John 2:19-21; 1 Corinthians 3:16; Revelation 21:22",
+    "RelatedBooks": "Exodus; 1 Kings; Psalms; John; 1 Corinthians; Revelation",
+    "RelatedPeople": "Moses; Solomon; Jesus; Paul",
+    "RelatedEvents": "Building of Solomon's Temple; Pentecost; Rebuilding of the Temple",
+    "Slug": "temple"
+  },
+  {
+    "Theme": "Deliverance (Exodus)",
+    "Summary": "God heard Israel's groaning in Egypt and delivered them with a mighty hand through Moses, the Passover, and the parting of the sea. The Exodus became Israel's defining story of salvation, retold at every Passover. The New Testament presents Jesus' work as the greater Exodus, delivering us from slavery to sin and death.",
+    "KeyPassages": "Exodus 3:7-10; Exodus 14:13-31; Deuteronomy 7:8; Luke 9:31; 1 Corinthians 10:1-11",
+    "RelatedBooks": "Exodus; Deuteronomy; Luke; 1 Corinthians",
+    "RelatedPeople": "Moses; Aaron; Jesus",
+    "RelatedEvents": "The Exodus and Crossing of the Red Sea; The Passover; The Crucifixion",
+    "Slug": "deliverance-exodus"
+  },
+  {
+    "Theme": "Exile and Return",
+    "Summary": "Because of persistent idolatry, Israel and Judah were carried into exile, losing land, temple, and king, yet God did not abandon them there. Prophets like Jeremiah and Ezekiel spoke hope in exile, and under Cyrus God brought His people home to rebuild. The return was real but incomplete, pointing forward to the greater restoration Jesus brings.",
+    "KeyPassages": "2 Kings 25:21; Jeremiah 29:4-14; Ezekiel 37:1-14; Ezra 1:1-4; Psalm 137:1; Isaiah 40:1-11",
+    "RelatedBooks": "2 Kings; Jeremiah; Ezekiel; Ezra; Psalms; Isaiah",
+    "RelatedPeople": "Jeremiah; Ezekiel; Daniel; Ezra; Nehemiah; Cyrus the Great",
+    "RelatedEvents": "Fall of Jerusalem and the Exile; Cyrus's Decree and Return from Exile; Rebuilding of the Temple",
+    "Slug": "exile-and-return"
+  },
+  {
+    "Theme": "Wisdom",
+    "Summary": "Biblical wisdom is skill for living in God's world God's way, beginning with the fear of the Lord. Proverbs, Job, and Ecclesiastes explore work, speech, money, suffering, and the limits of human understanding. In the New Testament, Christ Himself becomes for us wisdom from God, wiser than Solomon and the answer to our deepest questions.",
+    "KeyPassages": "Proverbs 1:7; Proverbs 3:5-6; Job 28:28; Ecclesiastes 12:13; James 1:5; 1 Corinthians 1:30",
+    "RelatedBooks": "Proverbs; Job; Ecclesiastes; James; 1 Corinthians",
+    "RelatedPeople": "Solomon; Job; Jesus; James; Paul",
+    "RelatedEvents": "Building of Solomon's Temple; Birth of Jesus",
+    "Slug": "wisdom"
+  },
+  {
+    "Theme": "Worship",
+    "Summary": "Worship is God's people ascribing worth to Him in spirit and in truth, in song, prayer, obedience, and everyday life offered as a living sacrifice. From Abraham's altars to the Psalms to the heavenly throne room in Revelation, worship is heaven's activity breaking into earth. True worship centres on who God is and what He has done in Christ.",
+    "KeyPassages": "Genesis 22:5; Psalm 95:6; Psalm 100:1-5; John 4:23-24; Romans 12:1; Revelation 5:12-13",
+    "RelatedBooks": "Genesis; Psalms; John; Romans; Revelation",
+    "RelatedPeople": "Abraham; David; Jesus; Paul; John",
+    "RelatedEvents": "Binding of Isaac; Building of Solomon's Temple; Pentecost",
+    "Slug": "worship"
+  },
+  {
+    "Theme": "Prayer",
+    "Summary": "Prayer runs through Scripture as God's people cry out, intercede, give thanks, and listen — from Abraham pleading for Sodom to Hannah's tears to Daniel's open window. Jesus taught His disciples to pray to their Father with simple trust, and He Himself prayed through the night and on the cross. Because of Christ, we can approach God's throne of grace with confidence.",
+    "KeyPassages": "Genesis 18:23-32; 1 Samuel 1:10-20; Psalm 66:19; Daniel 6:10; Matthew 6:9-13; Hebrews 4:16",
+    "RelatedBooks": "Genesis; 1 Samuel; Psalms; Daniel; Matthew; Hebrews",
+    "RelatedPeople": "Abraham; Hannah; Daniel; Jesus; Paul",
+    "RelatedEvents": "Destruction of Sodom and Gomorrah; Daniel in the Lions' Den; The Crucifixion; Pentecost",
+    "Slug": "prayer"
+  },
+  {
+    "Theme": "Forgiveness",
+    "Summary": "Forgiveness is at the centre of God's dealings with us: Joseph forgave his brothers, David pleaded for pardon, and Jesus forgave sinners and prayed for His executioners. On the cross, God provided the basis on which sins can be fully and justly forgiven. Having been forgiven so much, we are commanded to forgive others from the heart.",
+    "KeyPassages": "Genesis 50:15-21; Psalm 32:5; Psalm 103:12; Matthew 6:14-15; Luke 23:34; Ephesians 4:32; Colossians 3:13",
+    "RelatedBooks": "Genesis; Psalms; Matthew; Luke; Ephesians; Colossians",
+    "RelatedPeople": "Joseph; David; Jesus; Stephen; Paul",
+    "RelatedEvents": "Joseph Rises to Power in Egypt; The Crucifixion; Martyrdom of Stephen",
+    "Slug": "forgiveness"
+  },
+  {
+    "Theme": "New Creation",
+    "Summary": "The Bible ends where it began, only greater: a new heavens and new earth where God dwells with His people and wipes away every tear. That future has already broken in, for anyone in Christ is a new creation, raised to new life by the Spirit. New creation hope steadies us now and shapes how we care for God's world and one another.",
+    "KeyPassages": "Genesis 1:31; Isaiah 65:17; 2 Corinthians 5:17; Galatians 6:15; Revelation 21:1-5; Romans 8:19-21",
+    "RelatedBooks": "Genesis; Isaiah; 2 Corinthians; Galatians; Revelation; Romans",
+    "RelatedPeople": "Isaiah; Jesus; Paul; John",
+    "RelatedEvents": "Creation; The Resurrection; Pentecost",
+    "Slug": "new-creation"
+  },
+  {
+    "Theme": "Light",
+    "Summary": "Light in Scripture stands for God's truth, purity, guidance, and life, shining first at creation and finally in the face of Christ. Jesus, the Light of the World, exposes darkness, guides our steps, and calls His people the light of the world. Walking in the light means honest, joyful fellowship with God and one another.",
+    "KeyPassages": "Genesis 1:3; Psalm 119:105; Isaiah 60:1; Matthew 5:14-16; John 8:12; 1 John 1:5-7",
+    "RelatedBooks": "Genesis; Psalms; Isaiah; Matthew; John; 1 John",
+    "RelatedPeople": "Jesus; Isaiah; Paul; John",
+    "RelatedEvents": "Creation; Birth of Jesus; Transfiguration",
+    "Slug": "light"
+  },
+  {
+    "Theme": "Water",
+    "Summary": "Water appears at creation, in the Flood, at the Red Sea, and in water from the rock, as a picture of both judgment and life-giving salvation. The prophets promised cleansing water and rivers in the desert, and Jesus offered living water that becomes a spring welling up to eternal life. Baptism unites believers with Christ, and Revelation ends with the river of the water of life.",
+    "KeyPassages": "Genesis 1:2; Exodus 14:21-31; Exodus 17:6; Ezekiel 36:25; John 4:13-14; John 7:37-39; Revelation 22:1-2",
+    "RelatedBooks": "Genesis; Exodus; Ezekiel; John; Revelation",
+    "RelatedPeople": "Moses; Noah; Jesus; The Samaritan Woman",
+    "RelatedEvents": "Creation; Noah and the Flood; The Exodus and Crossing of the Red Sea; Baptism of Jesus",
+    "Slug": "water"
+  },
+  {
+    "Theme": "Bread",
+    "Summary": "Bread is God's daily provision, from manna in the wilderness to the prayer 'give us this day our daily bread.' Jesus multiplied loaves for hungry crowds and then declared, 'I am the Bread of Life,' giving His own body as food for the world. At His table we remember Him and are nourished by grace until He comes again.",
+    "KeyPassages": "Exodus 16:4; Deuteronomy 8:3; Matthew 6:11; John 6:35; John 6:51; 1 Corinthians 11:23-26",
+    "RelatedBooks": "Exodus; Deuteronomy; Matthew; John; 1 Corinthians",
+    "RelatedPeople": "Moses; Elijah; Jesus; Paul",
+    "RelatedEvents": "Wilderness Wanderings; Feeding of the Five Thousand; Last Supper",
+    "Slug": "bread"
+  },
+  {
+    "Theme": "Lamb",
+    "Summary": "The Lamb is one of Scripture's richest pictures of Christ: the Passover lamb whose blood sheltered Israel, the lamb provided on Mount Moriah, and Isaiah's suffering servant led like a lamb to the slaughter. John the Baptist announced Jesus as the Lamb of God who takes away the sin of the world. Revelation crowns the Lamb who was slain as worthy of all worship.",
+    "KeyPassages": "Genesis 22:7-8; Exodus 12:3-13; Isaiah 53:7; John 1:29; 1 Peter 1:18-19; Revelation 5:12",
+    "RelatedBooks": "Genesis; Exodus; Isaiah; John; 1 Peter; Revelation",
+    "RelatedPeople": "Abraham; Isaac; Moses; Isaiah; Jesus; John the Baptist",
+    "RelatedEvents": "Binding of Isaac; The Passover; The Crucifixion; The Resurrection",
+    "Slug": "lamb"
+  },
+  {
+    "Theme": "Cross",
+    "Summary": "The cross is the centre of the Christian faith, where Jesus bore our sin, defeated the powers of evil, and reconciled us to God. What looked like shame and defeat, God turned into wisdom, power, and salvation for all who believe. Believers take up their cross daily, boasting only in the cross of Christ.",
+    "KeyPassages": "Isaiah 53:4-6; Matthew 27:32-56; John 19:17-30; 1 Corinthians 1:18; Galatians 6:14; Colossians 2:14-15",
+    "RelatedBooks": "Isaiah; Matthew; John; 1 Corinthians; Galatians; Colossians",
+    "RelatedPeople": "Jesus; Mary, Mother of Jesus; Paul",
+    "RelatedEvents": "The Crucifixion; Last Supper",
+    "Slug": "cross"
+  },
+  {
+    "Theme": "Resurrection Life",
+    "Summary": "Jesus' resurrection is the firstfruits of the new creation, God's public declaration that death does not have the last word. Believers share that life now, raised with Christ and empowered by the Spirit to walk in newness of life. One day our bodies too will be raised, imperishable, to share His glory forever.",
+    "KeyPassages": "John 11:25-26; Romans 6:4-5; 1 Corinthians 15:20-22; Philippians 3:10-11; Colossians 3:1; 1 Peter 1:3",
+    "RelatedBooks": "John; Romans; 1 Corinthians; Philippians; Colossians; 1 Peter",
+    "RelatedPeople": "Jesus; Lazarus; Mary Magdalene; Paul; Peter",
+    "RelatedEvents": "The Resurrection; Raising of Lazarus; Pentecost",
+    "Slug": "resurrection-life"
+  },
+  {
+    "Theme": "Peace",
+    "Summary": "Peace — shalom — is wholeness with God, with others, and within ourselves, lost in the Fall and restored through Christ who is our peace. Jesus gives a peace the world cannot give, guarding hearts and minds even in trouble. One day the Prince of Peace will reign, and swords will become ploughshares.",
+    "KeyPassages": "Numbers 6:24-26; Isaiah 9:6; John 14:27; Romans 5:1; Ephesians 2:14; Philippians 4:7",
+    "RelatedBooks": "Numbers; Isaiah; John; Romans; Ephesians; Philippians",
+    "RelatedPeople": "Isaiah; Jesus; Paul",
+    "RelatedEvents": "Birth of Jesus; The Crucifixion; The Resurrection",
+    "Slug": "peace"
+  },
+  {
+    "Theme": "Joy",
+    "Summary": "Joy in Scripture is deeper than happiness, rooted in who God is and what He has done, so it can endure even in sorrow and suffering. The Psalms sing it, Jesus promised His joy to His disciples, and joy is a fruit of the Spirit in every believer. The joy of the Lord is our strength.",
+    "KeyPassages": "Nehemiah 8:10; Psalm 16:11; Habakkuk 3:17-18; John 15:11; Philippians 4:4; Galatians 5:22",
+    "RelatedBooks": "Nehemiah; Psalms; Habakkuk; John; Philippians; Galatians",
+    "RelatedPeople": "Nehemiah; David; Jesus; Paul",
+    "RelatedEvents": "Cyrus's Decree and Return from Exile; Birth of Jesus; The Resurrection; Pentecost",
+    "Slug": "joy"
+  },
+  {
+    "Theme": "Patience",
+    "Summary": "Patience reflects God's own character, for He is slow to anger and abounding in steadfast love toward a rebellious world. Abraham waited for a son, Joseph waited in prison, and God's people waited centuries for the Messiah, learning that God's timing is never wasted. The Spirit grows patience in us as we wait hopefully for Christ's return.",
+    "KeyPassages": "Exodus 34:6; Psalm 40:1; Romans 8:25; Galatians 5:22; James 5:7-8; 2 Peter 3:9",
+    "RelatedBooks": "Exodus; Psalms; Romans; Galatians; James; 2 Peter",
+    "RelatedPeople": "Abraham; Joseph; Job; Jesus; Paul",
+    "RelatedEvents": "Binding of Isaac; Joseph Sold into Egypt; Birth of Jesus",
+    "Slug": "patience"
+  },
+  {
+    "Theme": "Servanthood",
+    "Summary": "Greatness in God's kingdom is measured by service, a pattern set by Jesus who came not to be served but to serve and give His life as a ransom. Isaiah's Suffering Servant, the foot-washing in John 13, and Paul's teaching all call believers to humble, joyful service. The Servant King shows us that stooping to serve is the way up in His kingdom.",
+    "KeyPassages": "Isaiah 42:1; Isaiah 53:11; Mark 10:43-45; John 13:14-15; Philippians 2:5-8; 1 Peter 4:10",
+    "RelatedBooks": "Isaiah; Mark; John; Philippians; 1 Peter",
+    "RelatedPeople": "Isaiah; Jesus; Moses; Paul; Peter",
+    "RelatedEvents": "The Exodus and Crossing of the Red Sea; Last Supper; The Crucifixion",
+    "Slug": "servanthood"
+  }
+]

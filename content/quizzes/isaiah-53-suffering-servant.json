@@ -1,0 +1,14 @@
+{
+  "Quiz": "Prophecy Quiz",
+  "Course": "Understanding Bible Prophecy",
+  "Question": "Isaiah 53 describes the Messiah as what?",
+  "OptionA": "A suffering servant pierced for our transgressions",
+  "OptionB": "A wealthy merchant",
+  "OptionC": "A conquering king on a white horse",
+  "OptionD": "A priest in the temple",
+  "CorrectAnswer": "A",
+  "Explanation": "Isaiah's suffering servant was pierced for our transgressions and crushed for our iniquities — fulfilled in Jesus' crucifixion. The cross was planned, not an accident.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Isaiah 53:3-6",
+  "Slug": "isaiah-53-suffering-servant"
+}

@@ -1,0 +1,14 @@
+{
+  "Quiz": "Apologetics Quiz",
+  "Course": "Christian Apologetics 101",
+  "Question": "Why do Christians point to fulfilled prophecy in defending the faith?",
+  "OptionA": "Prophecy is always vague",
+  "OptionB": "Only one prophecy exists",
+  "OptionC": "Prophecies were written after the events",
+  "OptionD": "Specific predictions made centuries earlier were fulfilled in Jesus",
+  "CorrectAnswer": "D",
+  "Explanation": "Details like Bethlehem (Micah 5:2) and the suffering servant (Isaiah 53) were written centuries before Jesus and match His life closely. Coincidence struggles to explain that pattern.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Micah 5:2; Isaiah 53; Luke 24:27",
+  "Slug": "fulfilled-prophecy-as-evidence"
+}

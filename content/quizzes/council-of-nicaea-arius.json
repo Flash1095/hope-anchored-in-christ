@@ -1,0 +1,14 @@
+{
+  "Quiz": "Church History Quiz",
+  "Course": "Church History Journey",
+  "Question": "The Council of Nicaea (AD 325) was called mainly to answer Arius, who taught what?",
+  "OptionA": "Baptism should be by immersion only",
+  "OptionB": "Jesus was a created being, not eternally God",
+  "OptionC": "The books of the New Testament were not inspired",
+  "OptionD": "Churches should meet on Saturday",
+  "CorrectAnswer": "B",
+  "Explanation": "Arius claimed the Son was created and 'there was when He was not.' Nicaea rejected this and confessed Jesus as 'true God from true God' in the Nicene Creed.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "John 1:1; John 10:30",
+  "Slug": "council-of-nicaea-arius"
+}

@@ -1,0 +1,10 @@
+{
+  "Fallacy": "Texas Sharpshooter",
+  "Category": "Weak Induction",
+  "Definition": "Finding a pattern in random or selected data after the fact, then treating that pattern as if it was the target all along — like painting the target around bullet holes.",
+  "Example": "A gambler notices he won on three Tuesdays and declares Tuesdays are his lucky winning pattern, ignoring all the Tuesdays he lost.",
+  "FaithDiscussionExample": "Someone collects scattered numbers and dates from unrelated passages after an event and presents them as a precise prophecy of that event, having chosen only the fitting pieces afterward.",
+  "HowToRespond": "Ask what was predicted beforehand: 'That is an interesting pattern — was it identified before the event, and does it hold up when we include the pieces that do not fit?'",
+  "RelatedTopics": "Logic; Prophecy; Biblical Interpretation",
+  "Slug": "texas-sharpshooter"
+}

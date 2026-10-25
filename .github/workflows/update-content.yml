@@ -1,0 +1,24 @@
+name: Rebuild site content
+on:
+  push:
+    branches: [main]
+    paths: ["content/**"]
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild aggregate JSON from edited entries
+        run: python3 scripts/build_content.py --from-entries
+      - name: Commit rebuilt content
+        run: |
+          git config user.name "Content Bot"
+          git config user.email "content-bot@users.noreply.github.com"
+          git add content/
+          git diff --cached --quiet || git commit -m "Rebuild site content [skip ci]"
+          git push

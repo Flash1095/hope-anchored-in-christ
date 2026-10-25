@@ -1,0 +1,14 @@
+{
+  "Quiz": "Life of Christ Quiz",
+  "Course": "The Life of Christ",
+  "Question": "On which mountain were Moses and Elijah seen speaking with a transfigured Jesus?",
+  "OptionA": "Mount Carmel",
+  "OptionB": "The Mount of Transfiguration — the exact mountain is not named",
+  "OptionC": "Mount of Olives",
+  "OptionD": "Mount Sinai",
+  "CorrectAnswer": "B",
+  "Explanation": "Matthew, Mark and Luke describe the glory but never name the mountain, though tradition points to Mount Tabor. What matters is the glory, not the geography!",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Matthew 17:1-8",
+  "Slug": "mountain-of-the-transfiguration"
+}

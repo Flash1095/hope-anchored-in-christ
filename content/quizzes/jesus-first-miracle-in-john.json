@@ -1,0 +1,14 @@
+{
+  "Quiz": "Life of Christ Quiz",
+  "Course": "The Life of Christ",
+  "Question": "What was Jesus' first recorded miracle in John's Gospel?",
+  "OptionA": "Turning water into wine",
+  "OptionB": "Feeding the 5,000",
+  "OptionC": "Walking on water",
+  "OptionD": "Healing a blind man",
+  "CorrectAnswer": "A",
+  "Explanation": "At a wedding in Cana, Jesus turned water into wine, the first sign John records of His glory. His disciples believed in Him because of it.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "John 2:1-11",
+  "Slug": "jesus-first-miracle-in-john"
+}

@@ -1,0 +1,14 @@
+{
+  "Quiz": "Life of Christ Quiz",
+  "Course": "The Life of Christ",
+  "Question": "Which parable tells of a son who wastes his inheritance and is welcomed home by his father?",
+  "OptionA": "The Good Samaritan",
+  "OptionB": "The Sower",
+  "OptionC": "The Prodigal Son",
+  "OptionD": "The Lost Sheep",
+  "CorrectAnswer": "C",
+  "Explanation": "The father runs to meet his returning son — a picture of God's joy over every sinner who repents. Home is closer than you think.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Luke 15:11-32",
+  "Slug": "parable-of-the-returning-son"
+}

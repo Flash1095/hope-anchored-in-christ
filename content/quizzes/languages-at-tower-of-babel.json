@@ -1,0 +1,14 @@
+{
+  "Quiz": "Old Testament Events Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Into how many languages were people's tongues confused at Babel?",
+  "OptionA": "Seven",
+  "OptionB": "The Bible does not give a number",
+  "OptionC": "Seventy",
+  "OptionD": "Twelve",
+  "CorrectAnswer": "B",
+  "Explanation": "Genesis says the whole earth had one language and God confused it, but it never counts the languages. Careful reading keeps us honest — well done if you spotted that!",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Genesis 11:1-9",
+  "Slug": "languages-at-tower-of-babel"
+}

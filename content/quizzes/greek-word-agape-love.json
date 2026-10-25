@@ -1,0 +1,14 @@
+{
+  "Quiz": "Word Studies Quiz",
+  "Course": "Hebrew & Greek Word Studies",
+  "Question": "Which Greek word for love is used of God's self-giving love in John 3:16?",
+  "OptionA": "Eros",
+  "OptionB": "Storge",
+  "OptionC": "Agape",
+  "OptionD": "Philia",
+  "CorrectAnswer": "C",
+  "Explanation": "Agape is the love that seeks another's highest good, whatever it costs — the love God showed in giving His Son. It is love that acts.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "John 3:16; 1 Corinthians 13",
+  "Slug": "greek-word-agape-love"
+}

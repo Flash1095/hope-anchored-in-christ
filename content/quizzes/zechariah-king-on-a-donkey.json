@@ -1,0 +1,14 @@
+{
+  "Quiz": "Prophecy Quiz",
+  "Course": "Understanding Bible Prophecy",
+  "Question": "Zechariah foretold the King entering Jerusalem in what way?",
+  "OptionA": "In a golden chariot",
+  "OptionB": "Riding a war horse",
+  "OptionC": "Walking with an army",
+  "OptionD": "Riding on a donkey",
+  "CorrectAnswer": "D",
+  "Explanation": "Zechariah pictured a righteous, humble King riding on a donkey — exactly how Jesus entered Jerusalem on Palm Sunday.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Zechariah 9:9; Matthew 21:1-9",
+  "Slug": "zechariah-king-on-a-donkey"
+}

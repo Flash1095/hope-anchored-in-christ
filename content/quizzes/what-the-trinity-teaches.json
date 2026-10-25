@@ -1,0 +1,14 @@
+{
+  "Quiz": "Theology Basics Quiz",
+  "Course": "Theology Basics",
+  "Question": "What does the doctrine of the Trinity teach?",
+  "OptionA": "Jesus was only a man",
+  "OptionB": "There are three gods",
+  "OptionC": "The Spirit is an impersonal force",
+  "OptionD": "God is one in essence and three in Persons: Father, Son and Holy Spirit",
+  "CorrectAnswer": "D",
+  "Explanation": "Christians worship one God who eternally exists as Father, Son and Holy Spirit — three Persons, one essence. It is a mystery to adore, not a puzzle to solve.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 28:19; 2 Corinthians 13:14",
+  "Slug": "what-the-trinity-teaches"
+}

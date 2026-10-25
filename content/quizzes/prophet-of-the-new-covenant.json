@@ -1,0 +1,14 @@
+{
+  "Quiz": "Prophecy Quiz",
+  "Course": "Understanding Bible Prophecy",
+  "Question": "Which prophet foretold the new covenant, with God's law written on hearts?",
+  "OptionA": "Daniel",
+  "OptionB": "Malachi",
+  "OptionC": "Jeremiah",
+  "OptionD": "Ezekiel",
+  "CorrectAnswer": "C",
+  "Explanation": "Jeremiah promised a new covenant unlike the one broken at Sinai — forgiveness and God's law within. Jesus announced it at the Last Supper.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Jeremiah 31:31-34; Luke 22:20",
+  "Slug": "prophet-of-the-new-covenant"
+}

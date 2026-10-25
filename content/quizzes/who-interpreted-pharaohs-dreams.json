@@ -1,0 +1,14 @@
+{
+  "Quiz": "Old Testament People Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who interpreted Pharaoh's dreams and rose to second-in-command in Egypt?",
+  "OptionA": "Reuben",
+  "OptionB": "Judah",
+  "OptionC": "Benjamin",
+  "OptionD": "Joseph",
+  "CorrectAnswer": "D",
+  "Explanation": "Joseph explained Pharaoh's dreams of seven fat and seven thin cows, then led Egypt's famine preparations. God turned his brothers' betrayal into salvation.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 41; Genesis 50:20",
+  "Slug": "who-interpreted-pharaohs-dreams"
+}

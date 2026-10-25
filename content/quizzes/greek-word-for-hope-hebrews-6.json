@@ -1,0 +1,14 @@
+{
+  "Quiz": "Word Studies Quiz",
+  "Course": "Hebrew & Greek Word Studies",
+  "Question": "In Hebrews 6:19, hope is called an anchor for the soul. What is the Greek word for 'hope' in that verse?",
+  "OptionA": "Logos",
+  "OptionB": "Charis",
+  "OptionC": "Pistis",
+  "OptionD": "Elpis",
+  "CorrectAnswer": "D",
+  "Explanation": "Elpis (Strong's G1680) is confident expectation, not wishful thinking — hope so sure it anchors the soul within the veil, where Jesus has gone before us.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Hebrews 6:19",
+  "Slug": "greek-word-for-hope-hebrews-6"
+}

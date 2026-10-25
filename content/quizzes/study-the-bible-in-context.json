@@ -1,0 +1,14 @@
+{
+  "Quiz": "Bible Study Basics Quiz",
+  "Course": "How to Study the Bible",
+  "Question": "What does a good Bible study usually start with — reading the passage carefully in its context?",
+  "OptionA": "Guessing the meaning",
+  "OptionB": "Only reading one word",
+  "OptionC": "Skipping to a commentary",
+  "OptionD": "Reading the verses around it",
+  "CorrectAnswer": "D",
+  "Explanation": "Context is king: reading the verses and chapters around a passage keeps us from bending it to mean something it never said. Slow down and soak it in.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "2 Timothy 2:15; Psalm 1:2",
+  "Slug": "study-the-bible-in-context"
+}

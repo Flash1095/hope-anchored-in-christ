@@ -1,0 +1,14 @@
+{
+  "Quiz": "Bible Books Basics Quiz",
+  "Course": "Bible Overview: All 66 Books",
+  "Question": "Which is the longest chapter in the Bible?",
+  "OptionA": "Romans 8",
+  "OptionB": "Genesis 1",
+  "OptionC": "Psalm 119",
+  "OptionD": "John 1",
+  "CorrectAnswer": "C",
+  "Explanation": "Psalm 119 has 176 verses, almost all celebrating the goodness of God's Word. It is even arranged as an acrostic poem in Hebrew.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Psalm 119:105",
+  "Slug": "longest-chapter-in-the-bible"
+}

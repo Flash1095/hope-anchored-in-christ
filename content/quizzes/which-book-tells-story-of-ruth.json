@@ -1,0 +1,14 @@
+{
+  "Quiz": "Bible Books Basics Quiz",
+  "Course": "Bible Overview: All 66 Books",
+  "Question": "Which Old Testament book tells the story of a Moabite woman who stayed loyal to her mother-in-law Naomi?",
+  "OptionA": "Ruth",
+  "OptionB": "Ezra",
+  "OptionC": "Esther",
+  "OptionD": "Judges",
+  "CorrectAnswer": "A",
+  "Explanation": "Ruth clung to Naomi and to Israel's God, and she became an ancestor of David — and of Jesus. Loyalty and love run all through her little book.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Ruth 1:16-17",
+  "Slug": "which-book-tells-story-of-ruth"
+}

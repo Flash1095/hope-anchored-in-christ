@@ -1,0 +1,14 @@
+{
+  "Quiz": "Word Studies Quiz",
+  "Course": "Hebrew & Greek Word Studies",
+  "Question": "What is the Greek word 'agkura' (G45) in Hebrews 6:19?",
+  "OptionA": "An anchor",
+  "OptionB": "A ship's sail",
+  "OptionC": "A rope",
+  "OptionD": "A harbour wall",
+  "CorrectAnswer": "A",
+  "Explanation": "Agkura is the anchor — and Hebrews says hope itself is that anchor, firm and secure, fastened to Jesus behind the veil. That is the verse this whole blog is named for!",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Hebrews 6:19",
+  "Slug": "greek-word-agkura-anchor"
+}

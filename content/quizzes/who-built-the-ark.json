@@ -1,0 +1,14 @@
+{
+  "Quiz": "Old Testament People Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who built an ark at God's command?",
+  "OptionA": "Noah",
+  "OptionB": "Abraham",
+  "OptionC": "Moses",
+  "OptionD": "Jacob",
+  "CorrectAnswer": "A",
+  "Explanation": "Noah obeyed God and built the ark before a drop of rain fell, saving his family and the animals. Faith often means obeying before we see.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 6:13-22; Hebrews 11:7",
+  "Slug": "who-built-the-ark"
+}

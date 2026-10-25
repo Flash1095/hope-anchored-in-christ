@@ -1,0 +1,14 @@
+{
+  "Quiz": "Bible Books Basics Quiz",
+  "Course": "Bible Overview: All 66 Books",
+  "Question": "How many books are in the whole Bible?",
+  "OptionA": "27",
+  "OptionB": "66",
+  "OptionC": "73",
+  "OptionD": "39",
+  "CorrectAnswer": "B",
+  "Explanation": "There are 39 books in the Old Testament and 27 in the New Testament — 66 in all. That is a whole library God gave us to explore.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "2 Timothy 3:16",
+  "Slug": "how-many-books-in-the-bible"
+}

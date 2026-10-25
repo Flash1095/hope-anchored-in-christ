@@ -1,0 +1,14 @@
+{
+  "Quiz": "Bible Books Basics Quiz",
+  "Course": "Bible Overview: All 66 Books",
+  "Question": "Which book is the first book of the New Testament?",
+  "OptionA": "Mark",
+  "OptionB": "Luke",
+  "OptionC": "Matthew",
+  "OptionD": "John",
+  "CorrectAnswer": "C",
+  "Explanation": "Matthew opens the New Testament by linking Jesus to Abraham and David, showing He is the promised King. The story of Jesus begins here.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Matthew 1:1",
+  "Slug": "first-book-of-new-testament"
+}

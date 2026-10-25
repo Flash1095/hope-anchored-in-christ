@@ -1,0 +1,14 @@
+{
+  "Quiz": "Early Church Quiz",
+  "Course": "New Testament Survey",
+  "Question": "On which day did the Holy Spirit descend on the disciples in Acts 2?",
+  "OptionA": "Passover",
+  "OptionB": "Tabernacles",
+  "OptionC": "The Sabbath",
+  "OptionD": "Pentecost",
+  "CorrectAnswer": "D",
+  "Explanation": "At Pentecost the Spirit came with wind and tongues of fire, and about 3,000 people believed that day. The church was born with power!",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Acts 2:1-41",
+  "Slug": "day-the-holy-spirit-descended"
+}

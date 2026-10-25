@@ -1,0 +1,14 @@
+{
+  "Quiz": "Old Testament People Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Which queen risked her life by going to the king uninvited to save her people?",
+  "OptionA": "Bathsheba",
+  "OptionB": "Deborah",
+  "OptionC": "Esther",
+  "OptionD": "Jezebel",
+  "CorrectAnswer": "C",
+  "Explanation": "Esther fasted, prayed, and approached King Xerxes unsummoned — an act that could have cost her life. 'For such a time as this' is her story.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Esther 4:14-16; Esther 5",
+  "Slug": "queen-who-risked-her-life"
+}

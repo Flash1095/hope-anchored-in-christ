@@ -1,0 +1,14 @@
+{
+  "Quiz": "Theology Basics Quiz",
+  "Course": "Theology Basics",
+  "Question": "According to Ephesians 2, how are we saved?",
+  "OptionA": "By grace through faith",
+  "OptionB": "By good works",
+  "OptionC": "By keeping every law perfectly",
+  "OptionD": "By birth into a Christian family",
+  "CorrectAnswer": "A",
+  "Explanation": "Salvation is God's gift, received by faith — not earned by works, so no one can boast. Grace means the anchor holds because of Him, not us.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Ephesians 2:8-9",
+  "Slug": "how-are-we-saved-ephesians-2"
+}

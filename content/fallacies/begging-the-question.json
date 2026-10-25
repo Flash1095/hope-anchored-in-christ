@@ -1,0 +1,10 @@
+{
+  "Fallacy": "Begging the Question",
+  "Category": "Presumption",
+  "Definition": "Assuming the conclusion is already true inside the argument itself, so the reasoning goes in a circle without independent support. The claim is restated rather than proved.",
+  "Example": "Someone argues, 'This book is the most reliable because it says so itself and everything it says is true.'",
+  "FaithDiscussionExample": "In conversation: 'The Bible is true because it is God's Word, and we know it is God's Word because the Bible says so,' offered as the whole argument without any other reasons.",
+  "HowToRespond": "Notice the circle gently and offer additional grounds: 'That states what I believe — let me also share historical and experiential reasons that support it.'",
+  "RelatedTopics": "Logic; Apologetics; Biblical Authority",
+  "Slug": "begging-the-question"
+}

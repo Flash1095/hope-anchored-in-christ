@@ -1,0 +1,302 @@
+[
+  {
+    "Fallacy": "Ad Hominem",
+    "Category": "Relevance",
+    "Definition": "Attacking the person making an argument instead of addressing the argument itself. It distracts from whether the claim is true.",
+    "Example": "Someone says, 'You only think that diet works because you sell diet books,' instead of discussing the evidence for the diet.",
+    "FaithDiscussionExample": "In a discussion someone says, 'You only believe the Bible because you were raised in church,' instead of engaging with what the Bible actually says.",
+    "HowToRespond": "Thank the person for being honest, then gently separate the messenger from the message: 'My background is part of my story — could we look together at whether the claim itself holds up?'",
+    "RelatedTopics": "Apologetics; Logic; Respectful Dialogue",
+    "Slug": "ad-hominem"
+  },
+  {
+    "Fallacy": "Strawman",
+    "Category": "Relevance",
+    "Definition": "Misrepresenting someone's position to make it easier to attack, then arguing against the distorted version instead of their real view.",
+    "Example": "Someone argues for better road safety and is accused of wanting to ban all cars, which was never what they said.",
+    "FaithDiscussionExample": "A Christian who says faith and reason work together is told, 'So you think we should just believe blindly without any evidence,' which misstates their position.",
+    "HowToRespond": "Restate your view calmly and check understanding: 'That is not quite what I meant — here is what I am actually saying. Does that version sound fair to discuss?'",
+    "RelatedTopics": "Apologetics; Logic; Listening Well",
+    "Slug": "strawman"
+  },
+  {
+    "Fallacy": "False Dichotomy",
+    "Category": "Presumption",
+    "Definition": "Presenting only two options as if they are the only possibilities, when other options exist. It is also called a false dilemma.",
+    "Example": "A speaker says, 'You are either with our plan completely or you want the project to fail,' ignoring middle options and compromises.",
+    "FaithDiscussionExample": "Someone says, 'You must choose science or the Bible — you cannot have both,' as if thoughtful Christians have not held both together for centuries.",
+    "HowToRespond": "Name the missing options with kindness: 'I wonder if there might be a third way here that honors both concerns. Could we explore it together?'",
+    "RelatedTopics": "Logic; Science and Faith; Worldviews",
+    "Slug": "false-dichotomy"
+  },
+  {
+    "Fallacy": "Slippery Slope",
+    "Category": "Weak Induction",
+    "Definition": "Claiming that one step will inevitably lead to an extreme outcome, without showing why each step must follow. A possible concern is treated as a certain chain reaction.",
+    "Example": "A parent hears, 'If we let him stay up ten minutes later tonight, soon he will never follow any bedtime at all.'",
+    "FaithDiscussionExample": "Someone warns, 'If you question one interpretation of a passage, soon you will not believe anything in the Bible,' without showing why careful study must lead there.",
+    "HowToRespond": "Acknowledge the underlying concern, then ask for the links in the chain: 'I share your desire to stay faithful — can we look step by step at what actually follows?'",
+    "RelatedTopics": "Logic; Biblical Interpretation; Wisdom",
+    "Slug": "slippery-slope"
+  },
+  {
+    "Fallacy": "Appeal to Authority",
+    "Category": "Weak Induction",
+    "Definition": "Treating a claim as true simply because an authority figure said it, especially when that person is not an expert on the topic or experts disagree.",
+    "Example": "An advertisement says a toothpaste must be best because a famous actor recommends it, though the actor is not a dentist.",
+    "FaithDiscussionExample": "A video claims, 'A famous scientist said the resurrection is impossible, so it is settled,' without examining the historical evidence itself.",
+    "HowToRespond": "Respect expertise while asking for reasons: 'I value what experts say — could we look at the evidence and arguments they are pointing to, not just the conclusion?'",
+    "RelatedTopics": "Apologetics; Evidence; Logic",
+    "Slug": "appeal-to-authority"
+  },
+  {
+    "Fallacy": "Appeal to Ignorance",
+    "Category": "Weak Induction",
+    "Definition": "Claiming something is true because it has not been proved false, or false because it has not been proved true. Lack of evidence is treated as evidence itself.",
+    "Example": "Someone says, 'No one has proved this remedy does not work, so it definitely works.'",
+    "FaithDiscussionExample": "A skeptic says, 'Since you cannot prove God exists in a laboratory, God cannot exist,' and a believer might reply in reverse, 'You cannot disprove God, so that proves He exists.' Neither move is fair on its own.",
+    "HowToRespond": "Agree that uncertainty is honest, then shift to what we do know: 'Not having a final proof either way invites us to weigh the evidence we actually have.'",
+    "RelatedTopics": "Apologetics; Faith and Reason; Evidence",
+    "Slug": "appeal-to-ignorance"
+  },
+  {
+    "Fallacy": "Begging the Question",
+    "Category": "Presumption",
+    "Definition": "Assuming the conclusion is already true inside the argument itself, so the reasoning goes in a circle without independent support. The claim is restated rather than proved.",
+    "Example": "Someone argues, 'This book is the most reliable because it says so itself and everything it says is true.'",
+    "FaithDiscussionExample": "In conversation: 'The Bible is true because it is God's Word, and we know it is God's Word because the Bible says so,' offered as the whole argument without any other reasons.",
+    "HowToRespond": "Notice the circle gently and offer additional grounds: 'That states what I believe — let me also share historical and experiential reasons that support it.'",
+    "RelatedTopics": "Logic; Apologetics; Biblical Authority",
+    "Slug": "begging-the-question"
+  },
+  {
+    "Fallacy": "Circular Reasoning",
+    "Category": "Presumption",
+    "Definition": "A form of begging the question where the conclusion is used to support its own premise, so A is true because of B and B is true because of A.",
+    "Example": "A student says, 'Our team is the best because we are better than everyone, and we know we are better because we are the best.'",
+    "FaithDiscussionExample": "Someone says, 'I know this interpretation is right because my teacher taught it, and I know my teacher is always right because he taught this interpretation.'",
+    "HowToRespond": "Unpack the loop together without embarrassment: 'It sounds like we are using the same idea twice — is there an outside reason or passage we can test it against?'",
+    "RelatedTopics": "Logic; Biblical Interpretation; Truth",
+    "Slug": "circular-reasoning"
+  },
+  {
+    "Fallacy": "Genetic Fallacy",
+    "Category": "Relevance",
+    "Definition": "Judging a claim true or false based only on where it came from — its origin, history, or source — instead of its merits.",
+    "Example": "A helpful idea is dismissed with, 'That suggestion came from the new employee, so it cannot be any good.'",
+    "FaithDiscussionExample": "Someone says, 'The Bible cannot be trusted because it was written by ancient people,' judging the message only by its age and authors rather than its content and evidence.",
+    "HowToRespond": "Affirm that origins can raise good questions, then return to content: 'Ancient does not automatically mean untrue — could we examine what it says and the evidence for it?'",
+    "RelatedTopics": "Apologetics; Logic; Origins",
+    "Slug": "genetic-fallacy"
+  },
+  {
+    "Fallacy": "No True Scotsman",
+    "Category": "Presumption",
+    "Definition": "Redefining a group on the spot to exclude a counterexample, so the original claim can never be challenged. The definition moves whenever evidence appears.",
+    "Example": "After hearing of a kind Scotsman who disproves a stereotype, someone replies, 'Well, no true Scotsman would act that way.'",
+    "FaithDiscussionExample": "When a professing Christian behaves badly, someone says, 'No true Christian would ever do that,' instead of honestly acknowledging failure and the need for repentance.",
+    "HowToRespond": "Be honest about real examples: 'Christians, like everyone, can fail badly. Rather than redefine the word, let us look at what Christ actually calls His followers to be.'",
+    "RelatedTopics": "Logic; Christian Witness; Repentance",
+    "Slug": "no-true-scotsman"
+  },
+  {
+    "Fallacy": "Red Herring",
+    "Category": "Relevance",
+    "Definition": "Introducing an unrelated topic to distract from the original issue, so the conversation drifts away without answering the question at hand.",
+    "Example": "When asked about a missed deadline, an employee starts talking at length about how unfair the office parking is.",
+    "FaithDiscussionExample": "Asked about a difficult Bible passage, someone changes the subject entirely: 'Well, what about all the bad things done in the name of religion?' — an important topic, but a different one.",
+    "HowToRespond": "Honor the new topic while returning kindly: 'That is worth discussing too. Could we finish this question first, then come back to that one together?'",
+    "RelatedTopics": "Apologetics; Logic; Respectful Dialogue",
+    "Slug": "red-herring"
+  },
+  {
+    "Fallacy": "Tu Quoque",
+    "Category": "Relevance",
+    "Definition": "Answering a criticism by accusing the other person of the same thing — 'you do it too' — instead of addressing whether the criticism is true. It is a form of appeal to hypocrisy.",
+    "Example": "A driver caught speeding says, 'You speed sometimes too, so you have no right to say anything.'",
+    "FaithDiscussionExample": "When the church is challenged on generosity, a reply comes, 'Well, secular charities waste money too,' which does not answer how the church itself should give.",
+    "HowToRespond": "Own what is true first: 'You may be right that we fall short too — that is something we should fix. Can we still look at the original point on its own?'",
+    "RelatedTopics": "Logic; Humility; Christian Witness",
+    "Slug": "tu-quoque"
+  },
+  {
+    "Fallacy": "Appeal to Emotion",
+    "Category": "Relevance",
+    "Definition": "Trying to win agreement by stirring strong feelings — fear, pity, anger, or guilt — instead of offering reasons and evidence.",
+    "Example": "An advert says, 'If you really loved your family, you would buy this product today,' using guilt rather than facts about the product.",
+    "FaithDiscussionExample": "Someone says, 'How could a loving person ever believe in judgment? That idea just feels cruel,' letting a strong feeling settle a theological question by itself.",
+    "HowToRespond": "Take feelings seriously without letting them decide alone: 'I understand why that feels hard — I feel it too. Could we look slowly at what Scripture teaches and why?'",
+    "RelatedTopics": "Logic; Apologetics; Compassion",
+    "Slug": "appeal-to-emotion"
+  },
+  {
+    "Fallacy": "Hasty Generalization",
+    "Category": "Weak Induction",
+    "Definition": "Drawing a broad conclusion from too small or unrepresentative a sample. A few examples are treated as proof about a whole group.",
+    "Example": "After meeting two rude tourists, someone declares, 'Everyone from that country is rude.'",
+    "FaithDiscussionExample": "Someone meets two disinterested church members and concludes, 'Christians never really care about anyone outside their group,' based on a very narrow experience.",
+    "HowToRespond": "Validate the experience, then widen the picture: 'I am sorry that was your experience. Would you be open to meeting other examples before we settle on the whole group?'",
+    "RelatedTopics": "Logic; Stereotypes; Christian Witness",
+    "Slug": "hasty-generalization"
+  },
+  {
+    "Fallacy": "Post Hoc Ergo Propter Hoc",
+    "Category": "Weak Induction",
+    "Definition": "Assuming that because one event followed another, the first must have caused the second. The Latin means 'after this, therefore because of this.'",
+    "Example": "A player wears lucky socks, the team wins, and he concludes the socks caused the victory.",
+    "FaithDiscussionExample": "Someone prays for a job, receives an offer the next week, and while gratitude is fitting, a friend might too quickly claim prayer always works like a formula for getting what we want.",
+    "HowToRespond": "Celebrate good outcomes while staying careful about causes: 'I am thankful for how this turned out. Let us be thoughtful about what we can and cannot claim caused it.'",
+    "RelatedTopics": "Logic; Prayer; Providence",
+    "Slug": "post-hoc-ergo-propter-hoc"
+  },
+  {
+    "Fallacy": "Equivocation",
+    "Category": "Ambiguity",
+    "Definition": "Using the same word in two different senses within one argument, so the conclusion appears to follow when it does not. The meaning shifts midway.",
+    "Example": "Someone argues, 'A mouse needs cheese, and this computer mouse is a mouse, so it needs cheese,' shifting between animal and device.",
+    "FaithDiscussionExample": "In a faith talk, 'faith' shifts between 'trust based on reasons' and 'believing without any reason,' so a claim about blind belief is used to dismiss trusting faith.",
+    "HowToRespond": "Define terms together early: 'We may be using that word differently — could we pause and agree on what we each mean by it here?'",
+    "RelatedTopics": "Logic; Word Studies; Definitions",
+    "Slug": "equivocation"
+  },
+  {
+    "Fallacy": "Loaded Question",
+    "Category": "Presumption",
+    "Definition": "Asking a question that smuggles in an unproved assumption, so any direct yes-or-no answer accepts that assumption.",
+    "Example": "A reporter asks, 'Have you stopped wasting company money?' — answering either yes or no admits there was waste to begin with.",
+    "FaithDiscussionExample": "Someone asks a pastor, 'Why does your church keep brainwashing young people?' — the question assumes manipulation before any evidence is discussed.",
+    "HowToRespond": "Unpack the assumption politely before answering: 'There is an assumption tucked into that question — could we look at whether it is accurate first, then I will gladly answer?'",
+    "RelatedTopics": "Logic; Respectful Dialogue; Apologetics",
+    "Slug": "loaded-question"
+  },
+  {
+    "Fallacy": "Moving the Goalposts",
+    "Category": "Presumption",
+    "Definition": "Changing the standard of proof after the original standard has been met, so the other side can never succeed. The target keeps shifting.",
+    "Example": "A manager asks for ten sales, gets ten, then says only twenty would really prove the employee is doing well.",
+    "FaithDiscussionExample": "A skeptic asks for one good manuscript reason to trust a Gospel, is given several, then says none of it counts unless there is video evidence from the first century.",
+    "HowToRespond": "Name the original standard with grace: 'We started with that first request — since we have looked at it, could we agree on what would count as a fair next step?'",
+    "RelatedTopics": "Apologetics; Evidence; Logic",
+    "Slug": "moving-the-goalposts"
+  },
+  {
+    "Fallacy": "Bandwagon",
+    "Category": "Relevance",
+    "Definition": "Claiming something is true or good because many people are joining in or doing it right now. Popular momentum is treated as proof.",
+    "Example": "An advert urges, 'Everyone is switching to this phone — do not be left behind,' without comparing the phones themselves.",
+    "FaithDiscussionExample": "Someone says, 'This new spiritual trend is everywhere online, so it must be true and good for you,' based on how fast it is spreading.",
+    "HowToRespond": "Slow the momentum kindly: 'It is understandable to notice what is trending. Could we ask whether it is true and wise, apart from how popular it feels right now?'",
+    "RelatedTopics": "Logic; Discernment; Culture",
+    "Slug": "bandwagon"
+  },
+  {
+    "Fallacy": "Appeal to Nature",
+    "Category": "Presumption",
+    "Definition": "Assuming that because something is natural it must be good, or because something is unnatural it must be bad, without further moral reasoning.",
+    "Example": "Someone claims, 'This supplement must be safe and better because it is all-natural,' though some natural substances are harmful.",
+    "FaithDiscussionExample": "In an ethics discussion someone says, 'That behavior occurs in nature, so it must be morally right for people,' skipping the step of asking what God intends for human flourishing.",
+    "HowToRespond": "Appreciate creation while asking the deeper question: 'Nature teaches us a lot, but could we also ask what is good and purposeful, not only what occurs naturally?'",
+    "RelatedTopics": "Christian Ethics; Logic; Nature and Creation",
+    "Slug": "appeal-to-nature"
+  },
+  {
+    "Fallacy": "Appeal to Popularity",
+    "Category": "Relevance",
+    "Definition": "Treating widespread belief as evidence of truth — if most people believe it, it must be right. It is closely related to the bandwagon, but focuses on belief rather than behavior.",
+    "Example": "A student argues, 'Most people in our class think this answer is right, so it must be the correct one.'",
+    "FaithDiscussionExample": "Someone says, 'Millions of people no longer believe the Bible is relevant, so it clearly is not,' or the reverse, 'So many people believe it, that alone proves it true.' Both rely on numbers alone.",
+    "HowToRespond": "Respect people on all sides while returning to reasons: 'Numbers tell us what is common, not always what is true — could we weigh the actual claims together?'",
+    "RelatedTopics": "Logic; Truth; Apologetics",
+    "Slug": "appeal-to-popularity"
+  },
+  {
+    "Fallacy": "False Cause",
+    "Category": "Weak Induction",
+    "Definition": "Mistaking a connection between two things for proof that one caused the other, when they may be linked by coincidence or a third factor. It includes post hoc reasoning but is broader.",
+    "Example": "Ice cream sales and sunburn both rise in summer, so someone wrongly concludes ice cream causes sunburn, missing the sun as the common cause.",
+    "FaithDiscussionExample": "A decline in church attendance and a social problem rise in the same decade, and someone blames one for the other without checking other causes or evidence.",
+    "HowToRespond": "Look for other explanations together: 'They do rise together — could there be a third factor, or a different connection, that explains both more fairly?'",
+    "RelatedTopics": "Logic; Evidence; Science and Faith",
+    "Slug": "false-cause"
+  },
+  {
+    "Fallacy": "Anecdotal Fallacy",
+    "Category": "Weak Induction",
+    "Definition": "Using a single personal story or vivid example as proof for a broad claim, instead of wider evidence. Stories illuminate, but one story rarely settles a pattern.",
+    "Example": "Someone says, 'My grandfather smoked every day and lived to 95, so smoking cannot be harmful.'",
+    "FaithDiscussionExample": "A person says, 'I prayed once and nothing happened, so prayer never works,' or, 'My friend had a powerful experience, so that proves every claim about that teaching.'",
+    "HowToRespond": "Honor the story, then place it in context: 'Your experience matters and I want to hear it. Could we also look at the wider picture and what Scripture shows over time?'",
+    "RelatedTopics": "Logic; Testimony; Evidence",
+    "Slug": "anecdotal-fallacy"
+  },
+  {
+    "Fallacy": "Cherry Picking",
+    "Category": "Weak Induction",
+    "Definition": "Selecting only the evidence that supports a preferred conclusion while ignoring evidence that points the other way. It is also called selective evidence.",
+    "Example": "A review quotes one positive sentence from a mostly critical review and presents it as if the reviewer loved the product.",
+    "FaithDiscussionExample": "Someone quotes a single verse about judgment to prove God is only angry, ignoring the many passages about His mercy — or quotes only comfort verses and ignores calls to repentance.",
+    "HowToRespond": "Invite the whole picture: 'That passage is important — could we read it in context and alongside the other passages on this topic, so we hear the full counsel?'",
+    "RelatedTopics": "Biblical Interpretation; Logic; Context",
+    "Slug": "cherry-picking"
+  },
+  {
+    "Fallacy": "Texas Sharpshooter",
+    "Category": "Weak Induction",
+    "Definition": "Finding a pattern in random or selected data after the fact, then treating that pattern as if it was the target all along — like painting the target around bullet holes.",
+    "Example": "A gambler notices he won on three Tuesdays and declares Tuesdays are his lucky winning pattern, ignoring all the Tuesdays he lost.",
+    "FaithDiscussionExample": "Someone collects scattered numbers and dates from unrelated passages after an event and presents them as a precise prophecy of that event, having chosen only the fitting pieces afterward.",
+    "HowToRespond": "Ask what was predicted beforehand: 'That is an interesting pattern — was it identified before the event, and does it hold up when we include the pieces that do not fit?'",
+    "RelatedTopics": "Logic; Prophecy; Biblical Interpretation",
+    "Slug": "texas-sharpshooter"
+  },
+  {
+    "Fallacy": "Appeal to Novelty",
+    "Category": "Weak Induction",
+    "Definition": "Assuming something is better or truer simply because it is new, modern, or recent. Newness alone is not evidence.",
+    "Example": "An advert claims, 'This is the newest model, so it must be the best choice for everyone,' without comparing features.",
+    "FaithDiscussionExample": "Someone dismisses historic Christian teaching with, 'That belief is centuries old — it is time we moved past it,' as if age alone proved it wrong.",
+    "HowToRespond": "Welcome fresh insight while testing it: 'New ideas can be a gift. Could we judge this one by its truth and fruit, rather than by its date?'",
+    "RelatedTopics": "Logic; Church History; Discernment",
+    "Slug": "appeal-to-novelty"
+  },
+  {
+    "Fallacy": "Appeal to Tradition",
+    "Category": "Weak Induction",
+    "Definition": "Assuming something is right or better simply because it has long been done or believed that way. Tradition can carry wisdom, but longevity alone is not proof.",
+    "Example": "A workplace resists a helpful change with, 'We have always done it this way, so this way must be best.'",
+    "FaithDiscussionExample": "Someone says, 'Our church has always interpreted this passage this way, so there is no need to ever re-examine it,' closing the door on careful study of the text itself.",
+    "HowToRespond": "Honor tradition as a starting point: 'Tradition often preserves real wisdom — could we also test our practice against Scripture together, as earlier generations did?'",
+    "RelatedTopics": "Logic; Tradition; Biblical Interpretation",
+    "Slug": "appeal-to-tradition"
+  },
+  {
+    "Fallacy": "Composition",
+    "Category": "Ambiguity",
+    "Definition": "Assuming that what is true of the parts must be true of the whole. A quality of individual pieces is transferred to the group without justification.",
+    "Example": "Someone reasons, 'Every player on this team is excellent, so the team as a whole must play excellently together,' ignoring teamwork and chemistry.",
+    "FaithDiscussionExample": "Someone argues, 'Each verse in this chapter is encouraging, so the whole Bible must never contain anything challenging or hard,' moving from a part to the whole too quickly.",
+    "HowToRespond": "Distinguish parts and whole gently: 'That may be true of the parts — could we check whether it still holds when we consider the whole together?'",
+    "RelatedTopics": "Logic; Biblical Interpretation; Reasoning",
+    "Slug": "composition"
+  },
+  {
+    "Fallacy": "Division",
+    "Category": "Ambiguity",
+    "Definition": "Assuming that what is true of the whole must be true of each part. It is the reverse of composition, dividing a group quality down to every member.",
+    "Example": "A famous university is assumed to mean every single student there must be brilliant in every subject.",
+    "FaithDiscussionExample": "Someone says, 'The early church was generous, so every individual early Christian must have been generous in every way,' flattening a general description into a claim about each person.",
+    "HowToRespond": "Keep the whole and the parts distinct: 'A true description of the group does not always describe each member — could we look at the individuals on their own evidence?'",
+    "RelatedTopics": "Logic; Biblical Interpretation; Reasoning",
+    "Slug": "division"
+  },
+  {
+    "Fallacy": "Middle Ground",
+    "Category": "Weak Induction",
+    "Definition": "Assuming the truth must lie halfway between two opposing positions simply because it is the compromise. Sometimes one side is right, sometimes the middle is, but splitting the difference is not proof.",
+    "Example": "Two people disagree on a factual bill amount — one says $100, the other $0 despite a receipt for $100 — and someone insists the fair answer must be $50.",
+    "FaithDiscussionExample": "In a doctrinal disagreement, someone says, 'One side says Jesus rose bodily and the other says He did not, so the truth is probably somewhere in between,' treating a factual claim as a compromise.",
+    "HowToRespond": "Seek truth over symmetry: 'Compromise can be kind in preferences, but for factual claims could we follow the evidence, even if it lands closer to one side?'",
+    "RelatedTopics": "Logic; Truth; Apologetics",
+    "Slug": "middle-ground"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "Quiz": "Theology Basics Quiz",
+  "Course": "Foundations of Faith",
+  "Question": "What does 'justification' mean?",
+  "OptionA": "Paying for our own sins",
+  "OptionB": "Joining a church",
+  "OptionC": "Being declared righteous by God through faith in Christ",
+  "OptionD": "God gradually makes us perfect",
+  "CorrectAnswer": "C",
+  "Explanation": "Justification is a legal declaration: God counts Christ's righteousness to believers and no longer counts their sins against them. Declared righteous — what a relief!",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Romans 5:1; Romans 3:24-26",
+  "Slug": "what-is-justification"
+}

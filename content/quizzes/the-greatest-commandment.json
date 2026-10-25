@@ -1,0 +1,14 @@
+{
+  "Quiz": "Life of Christ Quiz",
+  "Course": "The Life of Christ",
+  "Question": "What did Jesus say is the greatest commandment?",
+  "OptionA": "Do not murder",
+  "OptionB": "Honour your father and mother",
+  "OptionC": "Love God with all your heart, soul and mind",
+  "OptionD": "Keep the Sabbath",
+  "CorrectAnswer": "C",
+  "Explanation": "Jesus summed up the whole Law: love God fully, and love your neighbour as yourself. Everything else hangs on those two.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 22:36-40",
+  "Slug": "the-greatest-commandment"
+}

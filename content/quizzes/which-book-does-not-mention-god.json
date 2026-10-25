@@ -1,0 +1,14 @@
+{
+  "Quiz": "Bible Books Basics Quiz",
+  "Course": "Bible Overview: All 66 Books",
+  "Question": "Which book of the Bible does not mention God by name?",
+  "OptionA": "Job",
+  "OptionB": "Esther",
+  "OptionC": "Ecclesiastes",
+  "OptionD": "Daniel",
+  "CorrectAnswer": "B",
+  "Explanation": "God's name never appears in Esther, yet His providence is on every page as He quietly protects His people. Sometimes God works behind the scenes.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Esther 4:14",
+  "Slug": "which-book-does-not-mention-god"
+}

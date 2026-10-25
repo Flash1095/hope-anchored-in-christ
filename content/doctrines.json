@@ -1,0 +1,302 @@
+[
+  {
+    "Doctrine": "Trinity",
+    "Summary": "The Trinity teaches that God is one in essence and three in Persons: Father, Son, and Holy Spirit. Each Person is fully God, distinct from the others, and eternally united, and Christians worship one God, not three gods.",
+    "BiblicalSupport": "Matthew 28:19; 2 Corinthians 13:14; John 1:1; John 10:30; Acts 5:3-4",
+    "HistoricalDevelopment": "Affirmed against Arianism at the Council of Nicaea in AD 325 and clarified at Constantinople in AD 381, the doctrine was expressed in the Nicene Creed and defended by Athanasius and the Cappadocian Fathers.",
+    "Interpretations": "All historic Christian traditions affirm the Trinity, though they differ in explaining the procession of the Spirit, including the Eastern Orthodox and Roman Catholic debate over the filioque clause.",
+    "RelatedTopics": "God; Jesus Christ; Holy Spirit; Monotheism",
+    "RelatedPeople": "Athanasius; Augustine; Basil of Caesarea; Aquinas",
+    "Slug": "trinity"
+  },
+  {
+    "Doctrine": "Incarnation",
+    "Summary": "The Incarnation is the belief that God the Son took on true human nature in the person of Jesus of Nazareth, conceived by the Holy Spirit and born of the Virgin Mary. Jesus is therefore fully God and fully man in one Person, without mixture or separation.",
+    "BiblicalSupport": "John 1:14; Philippians 2:6-8; Colossians 2:9; Hebrews 2:14; 1 Timothy 3:16",
+    "HistoricalDevelopment": "Defined at the Council of Chalcedon in AD 451 against Nestorianism and Eutychianism, the Chalcedonian Definition confessed one Person in two natures, building on the work of Athanasius, Cyril of Alexandria, and Leo the Great.",
+    "Interpretations": "Christians agree on the Chalcedonian confession, while differing in the language they use to describe how Christ's divine and human natures relate, a discussion continued in Miaphysite and Reformed traditions.",
+    "RelatedTopics": "Jesus Christ; Virgin Birth; Hypostatic Union; Salvation",
+    "RelatedPeople": "Athanasius; Cyril of Alexandria; Leo the Great; Augustine",
+    "Slug": "incarnation"
+  },
+  {
+    "Doctrine": "Atonement",
+    "Summary": "The Atonement is Christ's saving work in His life, death, and resurrection, by which sinners are reconciled to God. At the cross Jesus bore sin, defeated evil, and opened the way to forgiveness and new life.",
+    "BiblicalSupport": "Isaiah 53:5-6; Romans 3:25; 2 Corinthians 5:21; 1 Peter 2:24; Colossians 2:15",
+    "HistoricalDevelopment": "Taught throughout church history, it was explored by Irenaeus as recapitulation, Anselm in Cur Deus Homo (c. 1098) as satisfaction, and the Reformers as penal substitution, with Christus Victor emphasized in early writers.",
+    "Interpretations": "Christians explain the cross in complementary ways, including penal substitution, Christus Victor, satisfaction, moral influence, and governmental views, differing on which image should be primary.",
+    "RelatedTopics": "Salvation; Cross; Sacrifice; Reconciliation; Redemption",
+    "RelatedPeople": "Irenaeus; Anselm; Aquinas; Calvin; Luther",
+    "Slug": "atonement"
+  },
+  {
+    "Doctrine": "Justification",
+    "Summary": "Justification is God's gracious act of declaring sinners righteous on the basis of Christ's righteousness, received through faith. It is a legal declaration of pardon and acceptance, distinct from the lifelong process of becoming holy.",
+    "BiblicalSupport": "Romans 3:24; Romans 5:1; Galatians 2:16; Philippians 3:9; Romans 8:1",
+    "HistoricalDevelopment": "A central issue of the Reformation in the 1500s, it was defended by Luther and Calvin against late medieval views, and addressed by the Council of Trent (1545-1563), which gave the Roman Catholic response.",
+    "Interpretations": "Protestants generally teach justification by faith alone as a declaration, while Roman Catholics and Eastern Orthodox understand it as also including inner renewal, though all agree it rests on God's grace in Christ.",
+    "RelatedTopics": "Salvation; Faith; Grace; Righteousness; Sanctification",
+    "RelatedPeople": "Augustine; Luther; Calvin; Council of Trent",
+    "Slug": "justification"
+  },
+  {
+    "Doctrine": "Sanctification",
+    "Summary": "Sanctification is God's ongoing work of making believers holy in character and conduct, by the Holy Spirit through faith. Christians are set apart at conversion and grow in likeness to Christ throughout their lives.",
+    "BiblicalSupport": "1 Thessalonians 4:3; Hebrews 10:14; 2 Corinthians 3:18; Philippians 2:12-13; 1 Peter 1:15-16",
+    "HistoricalDevelopment": "Developed from biblical teaching on holiness by Augustine and the Reformers, it was given special emphasis in the Wesleyan and Holiness movements of the 1700s and 1800s and in later Keswick teaching.",
+    "Interpretations": "Christians differ on whether a distinct second blessing or entire sanctification is taught in Scripture, and on how instantaneous and progressive aspects of holiness relate, while agreeing growth in holiness is essential.",
+    "RelatedTopics": "Holiness; Holy Spirit; Christian Life; Discipleship",
+    "RelatedPeople": "Augustine; Calvin; John Wesley; Charles Wesley",
+    "Slug": "sanctification"
+  },
+  {
+    "Doctrine": "Original Sin",
+    "Summary": "Original Sin is the doctrine that Adam's first sin affected all humanity, so every person inherits a fallen nature and a tendency toward sin. It explains both the universality of sin and the universal need for God's grace in Christ.",
+    "BiblicalSupport": "Genesis 3; Psalm 51:5; Romans 5:12-19; 1 Corinthians 15:22; Ephesians 2:3",
+    "HistoricalDevelopment": "Developed most fully by Augustine in his debates with Pelagius in the early 400s and affirmed at the Council of Carthage in AD 418, it became a major theme for Aquinas, Luther, and Calvin.",
+    "Interpretations": "Christians differ on how Adam's guilt and corruption are passed on, with Eastern Orthodoxy speaking more of ancestral sin and mortality, and Pelagian and some Arminian views placing greater stress on personal choice.",
+    "RelatedTopics": "Sin; The Fall; Adam and Eve; Salvation; Pelagianism",
+    "RelatedPeople": "Augustine; Pelagius; Aquinas; Calvin",
+    "Slug": "original-sin"
+  },
+  {
+    "Doctrine": "Total Depravity",
+    "Summary": "Total Depravity teaches that sin affects every part of human nature — mind, will, affections, and body — so no one can come to God apart from grace. It does not mean people are as evil as they could possibly be, but that no part is untouched by the Fall.",
+    "BiblicalSupport": "Genesis 6:5; Jeremiah 17:9; Romans 3:10-18; Ephesians 2:1; Titus 1:15",
+    "HistoricalDevelopment": "Formulated in Reformed theology after Augustine's teaching on grace and given classic expression in the Canons of Dort (1618-1619) as the first of the Five Points of Calvinism.",
+    "Interpretations": "Reformed Christians stress total inability apart from effectual grace, while Arminian and Wesleyan Christians teach depravity is real but can be responded to through prevenient grace given to all.",
+    "RelatedTopics": "Sin; Original Sin; Grace; Free Will; Salvation",
+    "RelatedPeople": "Augustine; Calvin; Dort Synod; John Wesley",
+    "Slug": "total-depravity"
+  },
+  {
+    "Doctrine": "Election",
+    "Summary": "Election is God's gracious choice, before the foundation of the world, of persons to be saved in Christ. It emphasizes that salvation begins with God's initiative and mercy, not human merit.",
+    "BiblicalSupport": "Ephesians 1:4-5; Romans 8:29-30; Romans 9:11; John 6:37; 2 Thessalonians 2:13",
+    "HistoricalDevelopment": "Taught by Augustine against Pelagianism and developed by Aquinas, Luther, and Calvin, election became a defining Reformed doctrine at the Synod of Dort (1618-1619).",
+    "Interpretations": "Christians differ on whether election is unconditional and individual, conditional on foreseen faith, or primarily corporate in Christ, with Reformed, Arminian, and Lutheran views stated in their confessions.",
+    "RelatedTopics": "Predestination; Salvation; Grace; Sovereignty",
+    "RelatedPeople": "Augustine; Aquinas; Calvin; Jacobus Arminius",
+    "Slug": "election"
+  },
+  {
+    "Doctrine": "Perseverance of the Saints",
+    "Summary": "Perseverance of the Saints teaches that those truly united to Christ will be kept by God's power and will endure in faith to the end. It gives assurance not from human strength, but from God's faithfulness to complete His saving work.",
+    "BiblicalSupport": "John 10:28-29; Philippians 1:6; Romans 8:38-39; Jude 24; 1 Peter 1:5",
+    "HistoricalDevelopment": "Rooted in Augustine's teaching on the gift of perseverance and affirmed by the Reformers, it was stated as the fifth point in the Canons of Dort (1618-1619).",
+    "Interpretations": "Reformed Christians teach true believers cannot finally fall away, while Arminian, Wesleyan, and many other Christians warn that believers should heed Scripture's warnings and may teach the possibility of apostasy.",
+    "RelatedTopics": "Assurance; Salvation; Eternal Security; Faith",
+    "RelatedPeople": "Augustine; Calvin; Dort Synod; John Owen",
+    "Slug": "perseverance-of-the-saints"
+  },
+  {
+    "Doctrine": "Resurrection",
+    "Summary": "The Resurrection is the belief that Jesus rose bodily from the dead on the third day and that believers will also be raised to transformed, eternal life. It is central to Christian hope, confirming Jesus as Lord and guaranteeing the future renewal of creation.",
+    "BiblicalSupport": "1 Corinthians 15:3-8; Luke 24:39; Romans 6:9; John 11:25; Revelation 21:4",
+    "HistoricalDevelopment": "Proclaimed from the earliest Christian preaching in Acts and confessed in the Apostles' and Nicene Creeds, the bodily resurrection was defended by early writers such as Irenaeus and Tertullian against Gnostic views.",
+    "Interpretations": "Historic Christians agree on Christ's bodily resurrection and a future bodily resurrection, while differing on details of timing, the millennium, and the nature of the intermediate state.",
+    "RelatedTopics": "Jesus Christ; Eternal Life; Heaven; Hope; Second Coming",
+    "RelatedPeople": "Irenaeus; Tertullian; Augustine; Aquinas",
+    "Slug": "resurrection"
+  },
+  {
+    "Doctrine": "Second Coming",
+    "Summary": "The Second Coming is the promised return of Jesus Christ in glory to judge the living and the dead, defeat evil, and establish God's kingdom in full. Christians live in hopeful readiness, working and praying until He comes.",
+    "BiblicalSupport": "Acts 1:11; Matthew 24:30; 1 Thessalonians 4:16-17; Titus 2:13; Revelation 22:20",
+    "HistoricalDevelopment": "Confessed in the Apostles' and Nicene Creeds from the early centuries, expectation of Christ's return shaped early church hope, medieval theology, and Reformation and modern evangelical teaching.",
+    "Interpretations": "Christians agree Christ will return personally and visibly, while differing on the timing of the rapture and tribulation and on millennial views, including premillennial, amillennial, and postmillennial readings.",
+    "RelatedTopics": "Eschatology; Judgment; Millennial Views; Hope; Kingdom of God",
+    "RelatedPeople": "Irenaeus; Augustine; Calvin; John Darby",
+    "Slug": "second-coming"
+  },
+  {
+    "Doctrine": "Baptism",
+    "Summary": "Baptism is the Christian rite of initiation with water, commanded by Christ, signifying union with Him in His death and resurrection, cleansing from sin, and welcome into the church. It is an outward sign of God's gracious covenant promise.",
+    "BiblicalSupport": "Matthew 28:19; Acts 2:38; Romans 6:3-4; Colossians 2:12; 1 Peter 3:21",
+    "HistoricalDevelopment": "Practiced from the New Testament onward and described in the Didache (c. AD 100), baptism was debated at the Reformation, when Anabaptists defended believer's baptism and Reformers such as Luther, Calvin, and Zwingli gave differing accounts.",
+    "Interpretations": "Christians differ on subjects and mode: Baptist and many evangelical churches baptize professing believers by immersion, while Presbyterian, Methodist, Lutheran, Catholic, and Orthodox churches also baptize infants, by pouring, sprinkling, or immersion.",
+    "RelatedTopics": "The Church; Sacraments and Ordinances; Covenant; Christian Life",
+    "RelatedPeople": "Zwingli; Luther; Calvin; Menno Simons",
+    "Slug": "baptism"
+  },
+  {
+    "Doctrine": "Lord's Supper",
+    "Summary": "The Lord's Supper, also called Communion or the Eucharist, is the meal Jesus instituted on the night He was betrayed, in which believers remember His death, proclaim the gospel, and share fellowship with Christ and one another through bread and the cup.",
+    "BiblicalSupport": "Matthew 26:26-29; Luke 22:19-20; 1 Corinthians 11:23-26; John 6:53-56",
+    "HistoricalDevelopment": "Celebrated from the earliest church and described by Justin Martyr (c. AD 155), its meaning was debated at the Reformation, with the Roman Catholic doctrine of transubstantiation defined at the Fourth Lateran Council (1215) and Trent.",
+    "Interpretations": "Christians differ on Christ's presence in the elements: Roman Catholics teach transubstantiation, Lutherans teach sacramental union, Reformed Christians teach a spiritual presence, and many Baptists and evangelicals teach a memorial view.",
+    "RelatedTopics": "Worship; The Church; Sacraments and Ordinances; Atonement",
+    "RelatedPeople": "Justin Martyr; Aquinas; Luther; Zwingli; Calvin",
+    "Slug": "lords-supper"
+  },
+  {
+    "Doctrine": "Inspiration of Scripture",
+    "Summary": "Inspiration teaches that Scripture is God-breathed: God worked through human authors, in their own styles and settings, so that what they wrote is His Word. Christians therefore receive the Bible as authoritative for faith and life.",
+    "BiblicalSupport": "2 Timothy 3:16; 2 Peter 1:21; John 10:35; Hebrews 1:1; Psalm 119:105",
+    "HistoricalDevelopment": "Affirmed by early church fathers such as Irenaeus and Augustine as the church recognized the canon, inspiration was reaffirmed by the Reformers and discussed in modern statements such as the Chicago Statement (1978).",
+    "Interpretations": "Christians agree Scripture is inspired, while differing on models of inspiration, the precise relationship between divine and human authorship, and how inspiration applies to translations and textual variants.",
+    "RelatedTopics": "Bible; Inerrancy of Scripture; Revelation; Canon",
+    "RelatedPeople": "Irenaeus; Augustine; Calvin; B. B. Warfield",
+    "Slug": "inspiration-of-scripture"
+  },
+  {
+    "Doctrine": "Inerrancy of Scripture",
+    "Summary": "Inerrancy is the belief that Scripture, in its original writings, is without error in all it affirms, including matters of faith, history, and the created world. It rests on the character of God, who cannot lie, speaking truthfully through His Word.",
+    "BiblicalSupport": "Psalm 19:7; Psalm 119:160; John 17:17; Titus 1:2; Numbers 23:19",
+    "HistoricalDevelopment": "Taught in substance by Augustine, Aquinas, and the Reformers, the modern term was clarified by Princeton theologians such as B. B. Warfield and in the Chicago Statement on Biblical Inerrancy (1978).",
+    "Interpretations": "Many evangelicals affirm inerrancy as defined in Chicago, while other Christians prefer terms such as infallibility or trustworthiness, and Christians differ on how genre, phenomenological language, and textual questions should be handled.",
+    "RelatedTopics": "Bible; Inspiration of Scripture; Authority; Truth",
+    "RelatedPeople": "Augustine; Aquinas; B. B. Warfield; Charles Hodge",
+    "Slug": "inerrancy-of-scripture"
+  },
+  {
+    "Doctrine": "The Church",
+    "Summary": "The Church is the people of God, called out from the world, united to Christ by the Spirit, and gathered in local congregations for worship, teaching, fellowship, the ordinances, and mission. Jesus is its Head, and every believer is a member of His body.",
+    "BiblicalSupport": "Matthew 16:18; Acts 2:42; Ephesians 1:22-23; 1 Corinthians 12:27; 1 Peter 2:9",
+    "HistoricalDevelopment": "Described in the New Testament and confessed in the Nicene Creed as one, holy, catholic, and apostolic, the church's nature was debated at the Reformation over authority, sacraments, and marks of a true church.",
+    "Interpretations": "Christians differ on church government — episcopal, presbyterian, or congregational — and on the relationship between the universal church and local churches and denominations.",
+    "RelatedTopics": "Worship; Baptism; Lord's Supper; Mission; Priesthood of Believers",
+    "RelatedPeople": "Ignatius of Antioch; Cyprian; Augustine; Calvin",
+    "Slug": "the-church"
+  },
+  {
+    "Doctrine": "Angels",
+    "Summary": "Angels are created spiritual beings who serve God as messengers, worshippers, and agents of His purposes, and who minister to God's people. Scripture presents them as real, personal, and powerful, while directing worship to God alone.",
+    "BiblicalSupport": "Hebrews 1:14; Psalm 103:20; Luke 2:13-14; Matthew 18:10; Revelation 5:11",
+    "HistoricalDevelopment": "Taught throughout Scripture and early church writing, angelology was systematized by Pseudo-Dionysius (c. 500) and Aquinas in the Summa Theologiae, and affirmed in historic creeds and confessions.",
+    "Interpretations": "Christians agree angels are real created servants of God, while differing on details such as ranks and orders of angels, guardian angels, and how much can be known beyond what Scripture states.",
+    "RelatedTopics": "Creation; Heaven; Spiritual Warfare; Demons",
+    "RelatedPeople": "Pseudo-Dionysius; Aquinas; Augustine; Calvin",
+    "Slug": "angels"
+  },
+  {
+    "Doctrine": "Demons",
+    "Summary": "Demons are fallen angels who rebelled against God under Satan and now oppose God and His people, though they remain limited by God's sovereignty. Christ's life, death, and resurrection decisively defeated their power, and their final judgment is certain.",
+    "BiblicalSupport": "Mark 1:24; James 2:19; Colossians 2:15; Revelation 12:9; Ephesians 6:12",
+    "HistoricalDevelopment": "Taught in Scripture and early church writings on spiritual warfare, the fall of angels was discussed by Augustine and Aquinas, who placed demons within a larger account of evil and God's providence.",
+    "Interpretations": "Christians agree on the reality of evil spiritual powers and Christ's victory, while differing on explanations of demon possession, territorial spirits, and the methods emphasized in deliverance ministry.",
+    "RelatedTopics": "Angels; Satan; Spiritual Warfare; Sin; Atonement",
+    "RelatedPeople": "Augustine; Aquinas; Martin Luther; C. S. Lewis",
+    "Slug": "demons"
+  },
+  {
+    "Doctrine": "Heaven",
+    "Summary": "Heaven is God's dwelling place and the future home of the redeemed, where God's people will live in His presence, free from sin, sorrow, and death, in a renewed creation. Christian hope looks not to escape the world forever, but to resurrection life in the new heaven and new earth.",
+    "BiblicalSupport": "Revelation 21:3-4; John 14:2-3; Philippians 3:20; 2 Corinthians 5:8; Revelation 22:3-5",
+    "HistoricalDevelopment": "Confessed in historic creeds in the hope of resurrection and life everlasting, heaven was explored by Augustine in The City of God and by Aquinas and later writers on the beatific vision and eternal life.",
+    "Interpretations": "Christians agree on eternal life with God, while differing on the intermediate state between death and resurrection and on how literally to read biblical images of heaven and the new creation.",
+    "RelatedTopics": "Resurrection; Eternal Life; Second Coming; Hope",
+    "RelatedPeople": "Augustine; Aquinas; Jonathan Edwards; C. S. Lewis",
+    "Slug": "heaven"
+  },
+  {
+    "Doctrine": "Hell",
+    "Summary": "Hell is the solemn doctrine of final judgment for persistent rebellion against God, described in Scripture with images of darkness, fire, and separation from God's gracious presence. It underscores both God's justice and the seriousness of human response to Christ.",
+    "BiblicalSupport": "Matthew 25:41; Mark 9:48; Revelation 20:14-15; 2 Thessalonians 1:9; Luke 16:23",
+    "HistoricalDevelopment": "Taught by Jesus and the apostles and affirmed in early creeds and by Augustine and Aquinas, hell was a major topic in medieval theology and in Jonathan Edwards and other preachers on judgment.",
+    "Interpretations": "Christians who affirm final judgment differ on the nature and duration of punishment, with traditional eternal conscious punishment, conditional immortality or annihilationism, and other views discussed, while universalism is rejected by historic confessions.",
+    "RelatedTopics": "Judgment; Sin; Justice; Salvation; Second Coming",
+    "RelatedPeople": "Augustine; Aquinas; Jonathan Edwards; C. S. Lewis",
+    "Slug": "hell"
+  },
+  {
+    "Doctrine": "Creation",
+    "Summary": "Creation is the doctrine that God made all things out of nothing, by His Word and for His glory, and pronounced His work good. It grounds human dignity, stewardship of the earth, and worship of God as Maker of heaven and earth.",
+    "BiblicalSupport": "Genesis 1:1; Psalm 33:6; John 1:3; Colossians 1:16; Hebrews 11:3",
+    "HistoricalDevelopment": "Confessed in the Apostles' and Nicene Creeds in God as Maker of heaven and earth, creation ex nihilo was defended by Irenaeus and Augustine against Gnostic and dualist views in the early centuries.",
+    "Interpretations": "Christians agree God created all things, while differing on the age of the earth, the interpretation of the days of Genesis 1, and the relationship between biblical teaching and scientific accounts of origins.",
+    "RelatedTopics": "God; Providence; Humanity; Nature and Creation; Genesis",
+    "RelatedPeople": "Irenaeus; Augustine; Aquinas; Calvin",
+    "Slug": "creation"
+  },
+  {
+    "Doctrine": "Providence",
+    "Summary": "Providence is God's wise, powerful, and loving care by which He sustains, directs, and governs all creation and history toward His purposes. It gives Christians confidence that God is at work even in suffering and uncertainty, without making God the author of evil.",
+    "BiblicalSupport": "Genesis 50:20; Psalm 103:19; Romans 8:28; Matthew 6:26; Acts 17:28",
+    "HistoricalDevelopment": "Taught throughout Scripture and developed by Augustine, Aquinas, and Calvin, providence received classic Reformed expression in the Westminster Confession (1646) and Heidelberg Catechism.",
+    "Interpretations": "Christians agree God sovereignly cares for creation, while differing on how divine sovereignty and human responsibility relate, and on whether providence should be explained in more Calvinistic, Arminian, or open-theist terms.",
+    "RelatedTopics": "God; Sovereignty; Prayer; Suffering; Free Will",
+    "RelatedPeople": "Augustine; Aquinas; Calvin; John Wesley",
+    "Slug": "providence"
+  },
+  {
+    "Doctrine": "Virgin Birth",
+    "Summary": "The Virgin Birth teaches that Jesus was conceived in Mary by the Holy Spirit, without a human father, so that He is truly the Son of God and truly human. It signals that salvation is God's gracious initiative and that Jesus is uniquely set apart from birth.",
+    "BiblicalSupport": "Isaiah 7:14; Matthew 1:18-25; Luke 1:35; Galatians 4:4",
+    "HistoricalDevelopment": "Confessed in the Apostles' and Nicene Creeds as born of the Virgin Mary, the doctrine was defended by Ignatius, Irenaeus, and later councils as part of confessing the true identity of Christ.",
+    "Interpretations": "Historic Christian traditions — Catholic, Orthodox, and Protestant — affirm the Virgin Birth, while Christians discuss the precise prophetic use of Isaiah 7:14 and the doctrine's relationship to teachings about Mary.",
+    "RelatedTopics": "Incarnation; Jesus Christ; Mary; Miracles",
+    "RelatedPeople": "Ignatius of Antioch; Irenaeus; Athanasius; Augustine",
+    "Slug": "virgin-birth"
+  },
+  {
+    "Doctrine": "Ascension",
+    "Summary": "The Ascension is Christ's return to the Father in glory forty days after His resurrection, where He reigns at God's right hand and intercedes for His people. It marks the exaltation of Jesus as Lord and the sending of the Holy Spirit to the church.",
+    "BiblicalSupport": "Acts 1:9-11; Luke 24:51; Ephesians 1:20-22; Hebrews 4:14; 1 Timothy 3:16",
+    "HistoricalDevelopment": "Celebrated in the early church and confessed in the Apostles' and Nicene Creeds — He ascended into heaven and is seated at the right hand of the Father — the Ascension was linked by early writers to Christ's kingship and priesthood.",
+    "Interpretations": "Christians across traditions affirm the Ascension, while differing mainly in emphasis: some stress Christ's ongoing heavenly ministry and intercession, others His kingly reign and the church's mission until His return.",
+    "RelatedTopics": "Resurrection; Jesus Christ; Holy Spirit; Second Coming",
+    "RelatedPeople": "Irenaeus; Augustine; Calvin; Aquinas",
+    "Slug": "ascension"
+  },
+  {
+    "Doctrine": "Priesthood of Believers",
+    "Summary": "The Priesthood of Believers teaches that through Christ every Christian has direct access to God and shares in the church's ministry of worship, prayer, witness, and service. It does not remove the need for church leaders, but affirms no human priest stands between the believer and God besides Christ.",
+    "BiblicalSupport": "1 Peter 2:5; 1 Peter 2:9; Revelation 1:6; Hebrews 10:19-22; Romans 12:1",
+    "HistoricalDevelopment": "Grounded in the New Testament's teaching on Christ as High Priest, it was recovered with special force by Luther and the Reformers in the 1500s against a medieval system that emphasized a separate sacerdotal priesthood.",
+    "Interpretations": "Protestants strongly emphasize this doctrine, while Roman Catholic and Orthodox traditions affirm a common priesthood of the baptized alongside a distinct ministerial priesthood, differing on how the two relate.",
+    "RelatedTopics": "The Church; Worship; Ministry; Spiritual Gifts",
+    "RelatedPeople": "Luther; Calvin; Erasmus; Vatican II",
+    "Slug": "priesthood-of-believers"
+  },
+  {
+    "Doctrine": "Spiritual Gifts",
+    "Summary": "Spiritual Gifts are abilities and ministries given by the Holy Spirit to each believer for the common good and the building up of the church. They include serving, teaching, mercy, leadership, generosity, prophecy, tongues, healing, and other gifts listed in Scripture.",
+    "BiblicalSupport": "1 Corinthians 12:4-11; Romans 12:6-8; Ephesians 4:11-12; 1 Peter 4:10",
+    "HistoricalDevelopment": "Discussed by early church writers as the Spirit's work in the congregation, spiritual gifts received renewed attention with the Pentecostal movement beginning in the early 1900s and the later charismatic renewal.",
+    "Interpretations": "Christians differ on whether certain miraculous gifts ceased with the apostolic age (cessationism) or continue today (continuationism), and on how gifts such as tongues and prophecy should be practiced and tested in the church.",
+    "RelatedTopics": "Holy Spirit; The Church; Ministry; Worship",
+    "RelatedPeople": "Irenaeus; Augustine; Calvin; John Wesley",
+    "Slug": "spiritual-gifts"
+  },
+  {
+    "Doctrine": "Millennial Views",
+    "Summary": "Millennial Views concern how Christians understand the thousand years of Revelation 20 and Christ's reign in relation to His return. The main historic positions are premillennialism, amillennialism, and postmillennialism, all seeking to honor the hope of Christ's kingdom.",
+    "BiblicalSupport": "Revelation 20:1-6; 1 Corinthians 15:24-25; Matthew 24:30; Acts 1:6-7; Isaiah 11:6-9",
+    "HistoricalDevelopment": "Premillennial expectation appears in early writers such as Papias and Irenaeus, amillennial reading was shaped by Augustine in The City of God, and postmillennial hope rose in the Reformation and Great Awakening eras.",
+    "Interpretations": "Premillennialists expect Christ to return before a literal millennium, amillennialists read the millennium as Christ's present reign, and postmillennialists expect gospel progress before Christ returns; Christians hold these as secondary views.",
+    "RelatedTopics": "Second Coming; Eschatology; Kingdom of God; Resurrection",
+    "RelatedPeople": "Irenaeus; Augustine; Jonathan Edwards; John Darby",
+    "Slug": "millennial-views"
+  },
+  {
+    "Doctrine": "Predestination",
+    "Summary": "Predestination is God's eternal purpose to save His people in Christ, worked out in calling, justification, sanctification, and glorification. In its broadest sense it affirms that salvation rests on God's gracious plan from beginning to end.",
+    "BiblicalSupport": "Romans 8:29-30; Ephesians 1:5; Ephesians 1:11; Acts 4:28; 2 Timothy 1:9",
+    "HistoricalDevelopment": "Developed by Augustine in debates over grace, predestination was taught by Aquinas, emphasized by Luther and Calvin, and debated at the Synod of Dort (1618-1619) and in Arminian responses.",
+    "Interpretations": "Reformed Christians teach unconditional predestination to salvation, Arminians teach predestination based on God's foreknowledge of faith, and Lutherans and others frame it in distinct ways, while all orthodox views reject salvation by merit.",
+    "RelatedTopics": "Election; Salvation; Grace; Providence; Free Will",
+    "RelatedPeople": "Augustine; Aquinas; Calvin; Jacobus Arminius",
+    "Slug": "predestination"
+  },
+  {
+    "Doctrine": "Free Will",
+    "Summary": "Free Will concerns human ability to choose, and how that ability was affected by the Fall and restored by grace. Christians affirm real human responsibility for sin and for responding to God, while debating how free the fallen will is apart from grace.",
+    "BiblicalSupport": "Deuteronomy 30:19; Joshua 24:15; John 7:17; Romans 6:16; Revelation 22:17",
+    "HistoricalDevelopment": "Debated by Augustine and Pelagius in the early 400s and by Erasmus and Luther in Bondage of the Will (1525), free will was addressed in the Canons of Dort and in Arminian and Wesleyan teaching on prevenient grace.",
+    "Interpretations": "Reformed Christians teach the will is bound by sin until freed by effectual grace, Arminian and Wesleyan Christians teach grace enables a genuine response, and Molinist and other views seek middle positions.",
+    "RelatedTopics": "Original Sin; Total Depravity; Predestination; Grace; Salvation",
+    "RelatedPeople": "Pelagius; Augustine; Erasmus; Luther; John Wesley",
+    "Slug": "free-will"
+  },
+  {
+    "Doctrine": "Holy Spirit",
+    "Summary": "The Holy Spirit is the third Person of the Trinity, fully God, who convicts of sin, regenerates believers, indwells God's people, and empowers them for holy living and witness. He glorifies Christ, applies salvation, and builds the church through His gifts and fruit.",
+    "BiblicalSupport": "John 16:8-15; Acts 1:8; Romans 8:9; Galatians 5:22-23; 1 Corinthians 6:19",
+    "HistoricalDevelopment": "Confessed at Constantinople in AD 381 in the expanded Nicene Creed against those who denied the Spirit's deity, the Spirit's work was defended by Basil of Caesarea in On the Holy Spirit (c. AD 375).",
+    "Interpretations": "Christians agree the Spirit is fully God and active today, while differing on the baptism in the Spirit, the continuation of miraculous gifts, and the language used for the Spirit's fullness and filling.",
+    "RelatedTopics": "Trinity; Sanctification; Spiritual Gifts; Regeneration",
+    "RelatedPeople": "Basil of Caesarea; Augustine; Calvin; John Wesley",
+    "Slug": "holy-spirit"
+  }
+]

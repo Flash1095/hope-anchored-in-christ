@@ -1,0 +1,14 @@
+{
+  "Quiz": "Archaeology Quiz",
+  "Course": "Archaeology & the Bible",
+  "Question": "The Pool of Siloam, where Jesus healed a blind man in John 9, was rediscovered in which city?",
+  "OptionA": "Jericho",
+  "OptionB": "Jerusalem",
+  "OptionC": "Bethlehem",
+  "OptionD": "Capernaum",
+  "CorrectAnswer": "B",
+  "Explanation": "Workers repairing a pipe in Jerusalem in 2004 uncovered the steps of the first-century Pool of Siloam. The Bible's places keep turning up in the ground!",
+  "Difficulty": "Hard",
+  "ScriptureReference": "John 9:1-11",
+  "Slug": "pool-of-siloam-rediscovered"
+}

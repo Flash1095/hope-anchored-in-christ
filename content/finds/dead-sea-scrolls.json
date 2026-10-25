@@ -1,0 +1,14 @@
+{
+  "FindName": "Dead Sea Scrolls",
+  "DateDiscovered": "1947",
+  "ArtifactDate": "c. 250 BC - AD 68",
+  "DiscoveryLocation": "Qumran Caves, near the Dead Sea, Israel",
+  "CurrentLocation": "Israel Museum, Jerusalem",
+  "TimelineEra": "Return and Second Temple",
+  "Description": "Over 900 ancient manuscripts and fragments found in eleven caves near Qumran, including copies of nearly every Old Testament book. The collection includes the complete Great Isaiah Scroll, community rules, prayers, and commentaries.",
+  "BiblicalSignificance": "These are the oldest known biblical manuscripts, copied a thousand years before the previous oldest copies, yet remarkably faithful in transmission. They anchor our hope that the Scriptures we read today reliably preserve the words God gave, and the Isaiah Scroll in particular confirms the messianic prophecies Christians cherish.",
+  "ScriptureIlluminated": "Isaiah 53; Isaiah 40:3; Psalm 22; Daniel 7",
+  "RelatedPeople": "Isaiah; Daniel; John the Baptist",
+  "RelatedBooks": "Isaiah; Psalms; Daniel",
+  "Slug": "dead-sea-scrolls"
+}

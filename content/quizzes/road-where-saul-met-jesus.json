@@ -1,0 +1,14 @@
+{
+  "Quiz": "New Testament People Quiz",
+  "Course": "New Testament Survey",
+  "Question": "On which road was Saul (Paul) confronted by the risen Jesus?",
+  "OptionA": "Road to Jericho",
+  "OptionB": "Road to Damascus",
+  "OptionC": "Appian Way",
+  "OptionD": "Road to Emmaus",
+  "CorrectAnswer": "B",
+  "Explanation": "Blinded by the light on the Damascus road, persecutor Saul became apostle Paul. Nobody is beyond the reach of grace.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Acts 9:1-19",
+  "Slug": "road-where-saul-met-jesus"
+}

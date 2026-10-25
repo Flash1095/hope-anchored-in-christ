@@ -1,0 +1,14 @@
+{
+  "Quiz": "Early Church Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Who was the first Christian martyr, stoned while Saul watched?",
+  "OptionA": "Stephen",
+  "OptionB": "Barnabas",
+  "OptionC": "Philip",
+  "OptionD": "James",
+  "CorrectAnswer": "A",
+  "Explanation": "Stephen, full of the Spirit, saw heaven open and forgave his killers as he died — just as Jesus had. His witness planted seeds, even in Saul.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Acts 7:54-60",
+  "Slug": "first-christian-martyr"
+}

@@ -1,0 +1,14 @@
+{
+  "Quiz": "Archaeology Quiz",
+  "Course": "Archaeology & the Bible",
+  "Question": "The Tel Dan Stele contains one of the earliest extra-biblical references to which royal house?",
+  "OptionA": "House of Saul",
+  "OptionB": "House of Solomon",
+  "OptionC": "House of David",
+  "OptionD": "House of Omri",
+  "CorrectAnswer": "C",
+  "Explanation": "This 9th-century BC stone inscription mentions the 'House of David', confirming David's dynasty was known to Israel's neighbours. A small stone, a big witness.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "2 Samuel 7; 1 Kings 12",
+  "Slug": "tel-dan-stele-house-of-david"
+}

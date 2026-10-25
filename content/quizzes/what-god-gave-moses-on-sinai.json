@@ -1,0 +1,14 @@
+{
+  "Quiz": "Old Testament Events Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did God give Moses on Mount Sinai?",
+  "OptionA": "The Ten Commandments",
+  "OptionB": "Manna",
+  "OptionC": "The ark of the covenant",
+  "OptionD": "A bronze serpent",
+  "CorrectAnswer": "A",
+  "Explanation": "On Mount Sinai God gave the Ten Commandments, the heart of His covenant law for Israel. They still show us God's holy character today.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Exodus 19-20",
+  "Slug": "what-god-gave-moses-on-sinai"
+}

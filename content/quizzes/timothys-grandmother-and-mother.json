@@ -1,0 +1,14 @@
+{
+  "Quiz": "Women of the Bible Quiz",
+  "Course": "Women of the Bible",
+  "Question": "Which grandmother and mother are praised for Timothy's sincere faith?",
+  "OptionA": "Anna and Elizabeth",
+  "OptionB": "Ruth and Naomi",
+  "OptionC": "Lois and Eunice",
+  "OptionD": "Mary and Martha",
+  "CorrectAnswer": "C",
+  "Explanation": "Paul says Timothy's faith first lived in his grandmother Lois and his mother Eunice. Faith passed around the kitchen table is powerful.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "2 Timothy 1:5",
+  "Slug": "timothys-grandmother-and-mother"
+}

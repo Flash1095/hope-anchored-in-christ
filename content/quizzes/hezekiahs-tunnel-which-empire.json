@@ -1,0 +1,14 @@
+{
+  "Quiz": "Archaeology Quiz",
+  "Course": "Archaeology & the Bible",
+  "Question": "Hezekiah's Tunnel in Jerusalem was built to secure water before an invasion by which empire?",
+  "OptionA": "Egypt",
+  "OptionB": "Babylon",
+  "OptionC": "Rome",
+  "OptionD": "Assyria",
+  "CorrectAnswer": "D",
+  "Explanation": "King Hezekiah carved the tunnel to bring spring water inside the walls ahead of Sennacherib of Assyria's attack — and an inscription from its diggers survives.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "2 Kings 20:20; 2 Chronicles 32:30",
+  "Slug": "hezekiahs-tunnel-which-empire"
+}

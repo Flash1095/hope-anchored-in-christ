@@ -1,0 +1,10 @@
+{
+  "Fallacy": "Composition",
+  "Category": "Ambiguity",
+  "Definition": "Assuming that what is true of the parts must be true of the whole. A quality of individual pieces is transferred to the group without justification.",
+  "Example": "Someone reasons, 'Every player on this team is excellent, so the team as a whole must play excellently together,' ignoring teamwork and chemistry.",
+  "FaithDiscussionExample": "Someone argues, 'Each verse in this chapter is encouraging, so the whole Bible must never contain anything challenging or hard,' moving from a part to the whole too quickly.",
+  "HowToRespond": "Distinguish parts and whole gently: 'That may be true of the parts — could we check whether it still holds when we consider the whole together?'",
+  "RelatedTopics": "Logic; Biblical Interpretation; Reasoning",
+  "Slug": "composition"
+}

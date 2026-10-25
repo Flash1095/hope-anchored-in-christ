@@ -1,0 +1,14 @@
+{
+  "Quiz": "Theology Basics Quiz",
+  "Course": "Foundations of Faith",
+  "Question": "What is repentance?",
+  "OptionA": "Hiding our sin",
+  "OptionB": "Turning away from sin and turning to God",
+  "OptionC": "Feeling sorry for a moment",
+  "OptionD": "Making a list of good deeds",
+  "CorrectAnswer": "B",
+  "Explanation": "Repentance is a change of mind and direction — turning from sin toward God, who gladly receives us. It is the doorway to a fresh start.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Acts 3:19; Luke 15:7",
+  "Slug": "what-is-repentance"
+}

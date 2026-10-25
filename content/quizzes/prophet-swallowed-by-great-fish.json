@@ -1,0 +1,14 @@
+{
+  "Quiz": "Old Testament People Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who was swallowed by a great fish after running from God's call?",
+  "OptionA": "Elijah",
+  "OptionB": "Hosea",
+  "OptionC": "Elisha",
+  "OptionD": "Jonah",
+  "CorrectAnswer": "D",
+  "Explanation": "Jonah fled toward Tarshish, was swallowed by a great fish for three days, and then preached to Nineveh. You can run, but grace swims faster.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Jonah 1:17; Jonah 3",
+  "Slug": "prophet-swallowed-by-great-fish"
+}
