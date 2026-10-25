@@ -193,6 +193,8 @@ a:hover { color: var(--gold-dark); }
 .quiz-grade { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem 1.4rem; margin: 1rem 0; }
 .grade-big { font-size: 1.3rem; font-weight: 700; color: var(--navy); }
 .grade-pct { font-size: 1.1rem; font-weight: 700; }
+.quiz-reading { background: #fdf6e3; border-left: 4px solid var(--gold); border-radius: 8px; padding: 0.8rem 1rem; margin: 1rem 0; }
+.quiz-reading a { font-weight: 700; color: var(--navy); }
 
 /* Footer */
 .site-footer { background: var(--navy); color: #e9e2c8; text-align: center; padding: 1.5rem 1rem 2rem; }

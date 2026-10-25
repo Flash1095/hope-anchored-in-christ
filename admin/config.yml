@@ -359,6 +359,8 @@ collections:
       - {label: "Explanation", name: "Explanation", widget: "text"}
       - {label: "Difficulty", name: "Difficulty", widget: "select", options: ["Easy", "Medium", "Hard"]}
       - {label: "Scripture Reference", name: "ScriptureReference", widget: "string"}
+      - {label: "Reading Title", name: "ReadingTitle", widget: "string"}
+      - {label: "Reading Link", name: "ReadingLink", widget: "string"}
       - {label: "Slug", name: "Slug", widget: "string"}
   - name: "hymns"
     label: "Hymns"

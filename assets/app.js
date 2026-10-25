@@ -78,7 +78,7 @@
   var data = {};      // collection id -> array of rows
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
-  var ASSET_V = "10";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "11";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -584,6 +584,16 @@
         '<p class="page-intro">Test your Bible knowledge &mdash; every answer teaches. Answer each question and you will see right away whether you got it right, with an explanation from Scripture.</p>' +
         (group.course ? '<p class="meta"><strong>Theme:</strong> ' + esc(group.course) + "</p>" : "") +
         '<p class="meta">' + group.qs.length + " questions &middot; " + esc(diffBreakdown(group.qs)) + "</p>" +
+        (function () {
+          var reading = null;
+          group.qs.forEach(function (q) { if (!reading && !isEmpty(val(q, "ReadingLink"))) reading = q; });
+          if (!reading) return '<p class="meta">Trivia &mdash; answerable from reading Scripture, no extra reading needed.</p>';
+          var rl = val(reading, "ReadingLink");
+          var rt = val(reading, "ReadingTitle") || "Read this first";
+          var ext = rl.charAt(0) !== "#";
+          return '<div class="quiz-reading"><strong>Before you begin &mdash; this quiz draws on reading material.</strong><br>' +
+            '<a href="' + esc(rl) + '"' + (ext ? ' target="_blank" rel="noopener"' : "") + '>' + esc(rt) + "</a> &mdash; read it first, then come back and begin.</div>";
+        })() +
         diffChips();
       if (qs.length) {
         html += '<p class="meta">Playing' + (st.diff ? " " + esc(st.diff) + " questions" : "") + ": " + qs.length + " question" + (qs.length === 1 ? "" : "s") + ".</p>" +
