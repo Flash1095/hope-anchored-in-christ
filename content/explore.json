@@ -1,0 +1,122 @@
+{
+  "heading": "Explore",
+  "intro": "Every collection on the site — pick one and start browsing.",
+  "blurbs": [
+    {
+      "collection": "timeline",
+      "blurb": "The whole story, era by era, from Creation to the Early Church."
+    },
+    {
+      "collection": "books",
+      "blurb": "All 66 books: author, date, theme, outline, and context."
+    },
+    {
+      "collection": "questions",
+      "blurb": "Searchable Bible Q&A — short answers and full studies."
+    },
+    {
+      "collection": "people",
+      "blurb": "Every major person of Scripture, from Adam to the apostles."
+    },
+    {
+      "collection": "finds",
+      "blurb": "Archaeological finds that illuminate the Bible."
+    },
+    {
+      "collection": "places",
+      "blurb": "Where the story happened, and where those places are today."
+    },
+    {
+      "collection": "topics",
+      "blurb": "Central topic pages linking passages, people, doctrines, and questions."
+    },
+    {
+      "collection": "themes",
+      "blurb": "The great themes woven through Scripture."
+    },
+    {
+      "collection": "doctrines",
+      "blurb": "What Christians believe, with biblical support and history."
+    },
+    {
+      "collection": "heresies",
+      "blurb": "False teachings answered, with the Christian response."
+    },
+    {
+      "collection": "wordstudies",
+      "blurb": "Hebrew and Greek words, with Strong's numbers and meaning."
+    },
+    {
+      "collection": "prophecies",
+      "blurb": "What was foretold, how it was fulfilled — marked honestly."
+    },
+    {
+      "collection": "typology",
+      "blurb": "Old Testament shadows fulfilled in Christ."
+    },
+    {
+      "collection": "fallacies",
+      "blurb": "Spot bad reasoning in faith discussions — and answer graciously."
+    },
+    {
+      "collection": "courses",
+      "blurb": "Guided studies, from Foundations of Faith to Hebrew and Greek."
+    },
+    {
+      "collection": "quizzes",
+      "blurb": "Test what you've learned — every answer teaches."
+    },
+    {
+      "collection": "hymns",
+      "blurb": "Great hymns and the stories behind them — how each song was born."
+    },
+    {
+      "collection": "nature",
+      "blurb": "Birds, plants, and animals that point to the Creator — with photos from Lorraine."
+    },
+    {
+      "collection": "apologetics",
+      "blurb": "Why Christianity best explains reality — the cumulative case from philosophy, science, history, and experience."
+    },
+    {
+      "collection": "objections",
+      "blurb": "Honest objections from atheists, Muslims, Jews, and others — stated fairly and answered with grace and truth."
+    },
+    {
+      "collection": "perspectives",
+      "blurb": "How journalists, detectives, doctors, and other professionals shed light on the truth of the Bible."
+    },
+    {
+      "collection": "heritage",
+      "blurb": "Writings, commentaries, church history, and the men and women whose testimonies shaped Christianity."
+    },
+    {
+      "collection": "politics",
+      "blurb": "Political issues and current events — and how to respond to them biblically."
+    },
+    {
+      "collection": "socialmedia",
+      "blurb": "Viral posts, trends, and hot takes from TikTok, X, Facebook, Instagram, and beyond — addressed with grace and truth."
+    },
+    {
+      "collection": "stories",
+      "blurb": "Beloved Bible stories and events retold in detail — with the people, the meaning, and what they mean for us today."
+    },
+    {
+      "collection": "hermeneutics",
+      "blurb": "How to interpret Scripture rightly — context, literary genres, literary devices, and principles for handling God's Word with care."
+    },
+    {
+      "collection": "jewishculture",
+      "blurb": "Jewish culture, feasts, and traditions — and how each one points to Jesus the Messiah."
+    },
+    {
+      "collection": "comicstories",
+      "blurb": "Bible stories told comic-style — scroll down and each page appears as you read."
+    },
+    {
+      "collection": "studyguides",
+      "blurb": "Step-by-step guides for studying a book, a topic, a person, or a passage — with questions and application for every study."
+    }
+  ]
+}

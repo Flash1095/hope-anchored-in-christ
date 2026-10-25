@@ -89,6 +89,9 @@
     filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
   { id: "comicstories", label: "Comic Stories", file: "content/comicstories.json", primary: "Story",
     blurb: "Bible stories told comic-style — scroll down and each page appears as you read." },
+  { id: "studyguides", label: "Bible Study Guides", file: "content/studyguides.json", primary: "Guide",
+    blurb: "Step-by-step guides for studying a book, a topic, a person, or a passage — with questions and application for every study.",
+    filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
 ];
 
   var REL_FIELDS = ["RelatedBooks", "RelatedPeople", "RelatedEvents", "RelatedTopics",
@@ -104,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "37";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "38";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 

@@ -560,6 +560,25 @@ collections:
       - {label: "Panel Text", name: "PanelText", widget: "text"}
       - {label: "Character", name: "Character", widget: "string"}
       - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "studyguides"
+    label: "Bible Study Guides"
+    folder: "content/studyguides"
+    create: true
+    slug: "{{fields.Slug}}"
+    identifier_field: "Slug"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Guide", name: "Guide", widget: "string"}
+      - {label: "Category", name: "Category", widget: "select", options: ["Book Study", "Topical Study", "Character Study", "Passage Study", "Study Method"]}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Steps", name: "Steps", widget: "list"}
+      - {label: "Questions", name: "Questions", widget: "list"}
+      - {label: "Application", name: "Application", widget: "text"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
   - name: "pages"
     label: "Site Pages"
     files:
@@ -573,5 +592,5 @@ collections:
             name: "blurbs"
             widget: "list"
             fields:
-              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "places", "topics", "themes", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories", "hermeneutics", "jewishculture", "comicstories"]}
+              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "places", "topics", "themes", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories", "hermeneutics", "jewishculture", "comicstories", "studyguides"]}
               - {label: "Description", name: "blurb", widget: "text"}
