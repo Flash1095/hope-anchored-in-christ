@@ -92,7 +92,7 @@
   var data = {};      // collection id -> array of rows
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
-  var ASSET_V = "13";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "14";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -776,6 +776,17 @@
     app.innerHTML = html + "</div>";
     window.scrollTo(0, 0);
   }
+  function viewConnect() {
+    app.innerHTML = "<h2>Connect</h2><div class='post-body'>" +
+      "<p>Hope Anchored in Christ is growing beyond the blog. This is where you'll find us everywhere else — our social media and our podcast — as they launch.</p>" +
+      "<h3>Social Media</h3>" +
+      "<p class='empty'>We're not on social media yet. When our accounts launch, you'll find them right here.</p>" +
+      "<h3>Podcast</h3>" +
+      "<p class='empty'>The Hope Anchored in Christ podcast is coming — conversations about Scripture, hope, and everyday faith. Episodes will be listed here as they're released.</p>" +
+      "<p>Until then, the blog and the study collections are the best place to stay connected.</p>" +
+      "</div>";
+    window.scrollTo(0, 0);
+  }
   function viewAbout() {
     app.innerHTML = "<h2>About</h2><div class='post-body'>" +
       "<img class='about-photo' src='assets/about-photo.jpg' alt='Lorraine and her husband outdoors'>" +
@@ -918,6 +929,7 @@
     if (path[0] === "blog") return viewBlog(path[1] ? decodeURIComponent(path[1]) : null);
     if (path[0] === "about") return viewAbout();
     if (path[0] === "store") return viewStore();
+    if (path[0] === "connect") return viewConnect();
     if (path[0] === "search") return viewSearch(params);
     if (path[0] === "quizzes" && path[1] === "play") return viewQuizPlay(path[2] ? decodeURIComponent(path[2]) : "", params);
     var c = coll(path[0]);
@@ -931,7 +943,7 @@
   });
   document.getElementById("footerNav").innerHTML =
     COLLECTIONS.map(function (c) { return '<a href="#/' + c.id + '">' + esc(c.label) + "</a>"; }).join("") +
-    '<a href="#/blog">Blog</a><a href="#/about">About</a><a href="#/store">Store</a>';
+    '<a href="#/blog">Blog</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a>';
 
   app.innerHTML = '<p class="loading">Loading the collections…</p>';
   var jobs = COLLECTIONS.map(function (c) {
