@@ -78,6 +78,9 @@
     filters: [{ label: "Type", field: "Type" }], meta: ["Type", "Era"] },
   { id: "politics", label: "Faith & Politics", file: "content/politics.json", primary: "Issue",
     blurb: "Political issues and current events — and how to respond to them biblically." },
+  { id: "socialmedia", label: "Social Media Responses", file: "content/socialmedia.json", primary: "Post",
+    blurb: "Viral posts, trends, and hot takes from TikTok, X, Facebook, Instagram, and beyond — addressed with grace and truth.",
+    filters: [{ label: "Platform", field: "Platform" }], meta: ["Platform"] },
 ];
 
   var REL_FIELDS = ["RelatedBooks", "RelatedPeople", "RelatedEvents", "RelatedTopics",
@@ -92,7 +95,7 @@
   var data = {};      // collection id -> array of rows
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
-  var ASSET_V = "14";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "15";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 

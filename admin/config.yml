@@ -486,3 +486,19 @@ collections:
       - {label: "Scripture", name: "Scripture", widget: "string"}
       - {label: "Pitfalls", name: "Pitfalls", widget: "text"}
       - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "socialmedia"
+    label: "Social Media Responses"
+    folder: "content/socialmedia"
+    create: true
+    slug: "{{fields.Post}}"
+    identifier_field: "Post"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Post", name: "Post", widget: "string"}
+      - {label: "Platform", name: "Platform", widget: "select", options: ["TikTok", "X", "Facebook", "Instagram", "YouTube", "Other"]}
+      - {label: "Post Summary", name: "PostSummary", widget: "text"}
+      - {label: "Biblical Response", name: "BiblicalResponse", widget: "text"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
