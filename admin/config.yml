@@ -166,6 +166,7 @@ collections:
     fields:
       - {label: "Name", name: "Name", widget: "string"}
       - {label: "Modern Location", name: "ModernLocation", widget: "string"}
+      - {label: "Maps", name: "Maps", widget: "string"}
       - {label: "Testament", name: "Testament", widget: "string"}
       - {label: "Timeline Era", name: "TimelineEra", widget: "string"}
       - {label: "Description", name: "Description", widget: "text"}

@@ -2,6 +2,7 @@
   {
     "Name": "Garden of Eden",
     "ModernLocation": "Unknown; traditionally associated with Mesopotamia",
+    "Maps": "assyria-patriarchal-captivities",
     "Testament": "Old",
     "TimelineEra": "Primeval / Patriarchs",
     "Description": "The garden God planted as humanity's first home, where Adam and Eve walked with Him. Four rivers watered it, and at its center stood the tree of life and the tree of the knowledge of good and evil.",
@@ -14,6 +15,7 @@
   {
     "Name": "Mount Ararat",
     "ModernLocation": "Eastern Turkey",
+    "Maps": "assyria-patriarchal-captivities",
     "Testament": "Old",
     "TimelineEra": "Primeval / Patriarchs",
     "Description": "The mountainous region where Noah's ark came to rest as the floodwaters receded, and Noah stepped out into a washed world with his family and every living creature.",
@@ -26,6 +28,7 @@
   {
     "Name": "Babel",
     "ModernLocation": "Central Iraq (Babylon region)",
+    "Maps": "assyria-patriarchal-captivities",
     "Testament": "Old",
     "TimelineEra": "Primeval / Patriarchs",
     "Description": "The plain in Shinar where humanity built a city and a tower reaching to the heavens, defying God's command to fill the earth. God confused their language and scattered them across the world.",
@@ -38,6 +41,7 @@
   {
     "Name": "Ur",
     "ModernLocation": "Tell el-Muqayyar, southern Iraq",
+    "Maps": "assyria-patriarchal-captivities",
     "Testament": "Old",
     "TimelineEra": "Primeval / Patriarchs",
     "Description": "A wealthy Sumerian city of moon-god worship where Abraham was born. God called him out of Ur to a land He would show him - the beginning of the journey of faith.",
@@ -50,6 +54,7 @@
   {
     "Name": "Haran",
     "ModernLocation": "Near Sanliurfa, southeastern Turkey",
+    "Maps": "assyria-patriarchal-captivities",
     "Testament": "Old",
     "TimelineEra": "Primeval / Patriarchs",
     "Description": "The Mesopotamian trading city where Abraham settled after leaving Ur, staying until his father Terah died. Generations later Jacob fled here to Laban's household and met Rachel at its well.",
@@ -62,6 +67,7 @@
   {
     "Name": "Canaan",
     "ModernLocation": "Israel, Palestine, Lebanon, and western Jordan and Syria",
+    "Maps": "assyria-patriarchal-captivities",
     "Testament": "Old",
     "TimelineEra": "Primeval / Patriarchs",
     "Description": "The land God promised to Abraham and his descendants - 'a land flowing with milk and honey.' Abraham, Isaac, and Jacob lived there as nomads, dwelling in tents on the strength of a promise.",
@@ -74,6 +80,7 @@
   {
     "Name": "Shechem",
     "ModernLocation": "Near Nablus, West Bank",
+    "Maps": "assyria-patriarchal-captivities",
     "Testament": "Old",
     "TimelineEra": "Primeval / Patriarchs",
     "Description": "One of the first places Abraham camped in Canaan, where God appeared and promised the land to his offspring. Centuries later Joshua renewed the covenant here, and Joseph's bones were finally buried at Shechem.",
@@ -86,6 +93,7 @@
   {
     "Name": "Bethel",
     "ModernLocation": "Near Ramallah, West Bank (Beitin)",
+    "Maps": "assyria-patriarchal-captivities",
     "Testament": "Old",
     "TimelineEra": "Primeval / Patriarchs",
     "Description": "Where Jacob dreamed of a stairway between heaven and earth, angels ascending and descending, and woke declaring 'Surely the Lord is in this place.' He named it Bethel - house of God.",
@@ -98,6 +106,7 @@
   {
     "Name": "Hebron",
     "ModernLocation": "West Bank",
+    "Maps": "assyria-patriarchal-captivities",
     "Testament": "Old",
     "TimelineEra": "Primeval / Patriarchs",
     "Description": "One of the oldest continuously inhabited cities on earth, where Abraham bought the cave of Machpelah as a burial place for Sarah - his first owned parcel of the promised land. David was anointed king here before taking Jerusalem.",
@@ -110,6 +119,7 @@
   {
     "Name": "Beersheba",
     "ModernLocation": "Southern Israel",
+    "Maps": "assyria-patriarchal-captivities",
     "Testament": "Old",
     "TimelineEra": "Primeval / Patriarchs",
     "Description": "The southernmost city of settled Israel - 'from Dan to Beersheba' marked the nation's full extent. Abraham planted a tamarisk tree here and called on the name of the Lord, the Eternal God.",
@@ -122,6 +132,7 @@
   {
     "Name": "Egypt",
     "ModernLocation": "Egypt",
+    "Maps": "sinai-journeys",
     "Testament": "Old",
     "TimelineEra": "Exodus and Wilderness",
     "Description": "The Nile civilization where Joseph rose from prisoner to prime minister, where Israel multiplied into a nation - and where Pharaoh enslaved them for 400 years.",
@@ -134,6 +145,7 @@
   {
     "Name": "Goshen",
     "ModernLocation": "Eastern Nile Delta, Egypt",
+    "Maps": "sinai-journeys",
     "Testament": "Old",
     "TimelineEra": "Exodus and Wilderness",
     "Description": "The fertile delta region Pharaoh gave to Joseph's family - the best of the land. Israel lived here for generations, growing from a family into a people, until Goshen's plenty became Egypt's prison.",
@@ -146,6 +158,7 @@
   {
     "Name": "Midian",
     "ModernLocation": "Northwestern Saudi Arabia",
+    "Maps": "sinai-journeys",
     "Testament": "Old",
     "TimelineEra": "Exodus and Wilderness",
     "Description": "The desert wilderness east of the Red Sea where Moses fled after killing an Egyptian. He shepherded Jethro's flocks here for 40 years until God met him in the burning bush.",
@@ -158,6 +171,7 @@
   {
     "Name": "Mount Sinai",
     "ModernLocation": "Sinai Peninsula, Egypt (traditionally Jebel Musa)",
+    "Maps": "sinai-journeys",
     "Testament": "Old",
     "TimelineEra": "Exodus and Wilderness",
     "Description": "The mountain of God, wrapped in thunder and smoke, where Moses received the Ten Commandments and Israel became a covenant nation.",
@@ -170,6 +184,7 @@
   {
     "Name": "Kadesh Barnea",
     "ModernLocation": "Northern Sinai / Negev border",
+    "Maps": "sinai-journeys",
     "Testament": "Old",
     "TimelineEra": "Exodus and Wilderness",
     "Description": "The wilderness camp where the twelve spies returned from Canaan. Ten brought fear, two brought faith - and Israel's unbelief turned an eleven-day journey into forty years of wandering.",
@@ -182,6 +197,7 @@
   {
     "Name": "Jordan River",
     "ModernLocation": "Israel / Jordan",
+    "Maps": "sinai-journeys",
     "Testament": "Old",
     "TimelineEra": "Exodus and Wilderness",
     "Description": "The river Israel crossed on dry ground to enter the promised land, its waters piled up as the priests' feet touched them. Centuries later John baptized in the Jordan, and Jesus Himself was baptized here.",
@@ -194,6 +210,7 @@
   {
     "Name": "Plains of Moab",
     "ModernLocation": "Jordan, east of the Dead Sea",
+    "Maps": "sinai-journeys",
     "Testament": "Old",
     "TimelineEra": "Exodus and Wilderness",
     "Description": "The final camp of the wilderness generation, across the Jordan from Jericho. Here Moses preached Deuteronomy, viewed the promised land from Mount Nebo, and died.",
@@ -206,6 +223,7 @@
   {
     "Name": "Jericho",
     "ModernLocation": "West Bank",
+    "Maps": "canaan-tribes",
     "Testament": "Old",
     "TimelineEra": "Conquest and Judges",
     "Description": "The fortified Canaanite city whose walls fell after Israel marched around them for seven days - the first conquest of the promised land. Later, Jesus healed blind Bartimaeus and called Zacchaeus down from his tree here.",
@@ -218,6 +236,7 @@
   {
     "Name": "Gilgal",
     "ModernLocation": "Near Jericho, West Bank",
+    "Maps": "canaan-tribes",
     "Testament": "Old",
     "TimelineEra": "Conquest and Judges",
     "Description": "Israel's first camp inside the promised land, where twelve stones from the Jordan were set up as a memorial, the manna ceased, and the nation celebrated its first Passover in Canaan.",
@@ -230,6 +249,7 @@
   {
     "Name": "Ai",
     "ModernLocation": "Near Ramallah, West Bank (et-Tell)",
+    "Maps": "canaan-tribes",
     "Testament": "Old",
     "TimelineEra": "Conquest and Judges",
     "Description": "The small city that humiliated Israel after the triumph at Jericho - defeated because of Achan's hidden sin, then taken after the sin was judged.",
@@ -242,6 +262,7 @@
   {
     "Name": "Shiloh",
     "ModernLocation": "West Bank (Khirbet Seilun)",
+    "Maps": "canaan-tribes",
     "Testament": "Old",
     "TimelineEra": "Conquest and Judges",
     "Description": "Where the tabernacle stood for over 300 years and the ark rested. Hannah prayed here for a son, and young Samuel heard God's voice in the night.",
@@ -254,6 +275,7 @@
   {
     "Name": "Gibeon",
     "ModernLocation": "Near Jerusalem, West Bank (el-Jib)",
+    "Maps": "canaan-tribes",
     "Testament": "Old",
     "TimelineEra": "Conquest and Judges",
     "Description": "The Hivite city that tricked Israel into a treaty, then was defended by Joshua when the sun stood still. Later Solomon worshipped here, and God appeared to him in a dream offering anything he asked.",
@@ -266,6 +288,7 @@
   {
     "Name": "Gibeah",
     "ModernLocation": "Near Jerusalem, West Bank (Tell el-Ful)",
+    "Maps": "canaan-tribes",
     "Testament": "Old",
     "TimelineEra": "Conquest and Judges",
     "Description": "King Saul's hometown and capital. It was also the scene of the horrific crime in Judges 19 that nearly wiped out the tribe of Benjamin.",
@@ -278,6 +301,7 @@
   {
     "Name": "Mizpah",
     "ModernLocation": "Near Jerusalem, West Bank (Tell en-Nasbeh)",
+    "Maps": "canaan-tribes",
     "Testament": "Old",
     "TimelineEra": "Conquest and Judges",
     "Description": "The assembly place where Samuel called Israel to repentance, put away their idols, and watched God thunder against the Philistines. Samuel set up the Ebenezer stone here: 'Thus far the Lord has helped us.'",
@@ -290,6 +314,7 @@
   {
     "Name": "Ramah",
     "ModernLocation": "Near Jerusalem, West Bank",
+    "Maps": "canaan-tribes",
     "Testament": "Old",
     "TimelineEra": "Conquest and Judges",
     "Description": "Samuel's hometown, where he judged Israel and where the elders demanded a king. Deborah held court between Ramah and Bethel.",
@@ -302,6 +327,7 @@
   {
     "Name": "Jerusalem",
     "ModernLocation": "Israel",
+    "Maps": "david-solomon-dominion; ancient-jerusalem-plan",
     "Testament": "Both",
     "TimelineEra": "United Monarchy",
     "Description": "David's capital, Solomon's temple city, the place of Jesus's death and resurrection, and the birthplace of the church at Pentecost. No city looms larger in Scripture.",
@@ -314,6 +340,7 @@
   {
     "Name": "Mount Carmel",
     "ModernLocation": "Northern Israel",
+    "Maps": "judah-israel-kingdoms",
     "Testament": "Old",
     "TimelineEra": "Divided Monarchy",
     "Description": "The mountain overlooking the Mediterranean where Elijah faced 450 prophets of Baal in the great contest - fire from heaven deciding who is truly God.",
@@ -326,6 +353,7 @@
   {
     "Name": "Tyre",
     "ModernLocation": "Southern Lebanon",
+    "Maps": "judah-israel-kingdoms",
     "Testament": "Old",
     "TimelineEra": "Divided Monarchy",
     "Description": "The wealthy Phoenician port whose king Hiram supplied cedar and craftsmen for Solomon's temple - and whose princess Jezebel married Ahab, bringing Baal worship into Israel.",
@@ -338,6 +366,7 @@
   {
     "Name": "Samaria",
     "ModernLocation": "Near Nablus, West Bank (Sebastia)",
+    "Maps": "judah-israel-kingdoms",
     "Testament": "Old",
     "TimelineEra": "Divided Monarchy",
     "Description": "Capital of the northern kingdom of Israel, built by Omri. Its kings led the nation into idolatry until Assyria carried it away. Jesus later crossed its prejudices at Jacob's well.",
@@ -350,6 +379,7 @@
   {
     "Name": "Nineveh",
     "ModernLocation": "Mosul, Iraq",
+    "Maps": "assyria-patriarchal-captivities",
     "Testament": "Old",
     "TimelineEra": "Divided Monarchy",
     "Description": "The great Assyrian capital - 'the great city' of 120,000 people - to which Jonah reluctantly preached. To his dismay, they repented, and God spared them.",
@@ -362,6 +392,7 @@
   {
     "Name": "Babylon",
     "ModernLocation": "Near Hillah, Iraq",
+    "Maps": "assyria-patriarchal-captivities",
     "Testament": "Old",
     "TimelineEra": "Exile",
     "Description": "The glittering empire that destroyed Jerusalem and carried Judah into exile - and the city where Daniel served kings, his friends survived the furnace, and God's people learned to sing the Lord's song in a strange land.",
@@ -374,6 +405,7 @@
   {
     "Name": "Susa",
     "ModernLocation": "Southwestern Iran",
+    "Maps": "assyria-patriarchal-captivities",
     "Testament": "Old",
     "TimelineEra": "Exile",
     "Description": "The Persian winter capital where Esther became queen and risked her life to save the Jews from Haman's genocide - and where Nehemiah served as the king's cupbearer before rebuilding Jerusalem's walls.",
@@ -386,6 +418,7 @@
   {
     "Name": "River Chebar",
     "ModernLocation": "Southern Iraq",
+    "Maps": "assyria-patriarchal-captivities",
     "Testament": "Old",
     "TimelineEra": "Exile",
     "Description": "The canal in Babylonia where the exiles settled - and where Ezekiel, among the captives, saw the heavens opened and the glory of God in visions.",
@@ -398,6 +431,7 @@
   {
     "Name": "Bethlehem",
     "ModernLocation": "West Bank",
+    "Maps": "palestine-time-of-christ",
     "Testament": "Both",
     "TimelineEra": "Return and Second Temple",
     "Description": "The 'little town' of Ruth and Boaz, birthplace of David, and - as Micah foretold - birthplace of Jesus. Shepherds heard the angels here; wise men brought gifts here.",
@@ -410,6 +444,7 @@
   {
     "Name": "Nazareth",
     "ModernLocation": "Northern Israel",
+    "Maps": "palestine-time-of-christ",
     "Testament": "New",
     "TimelineEra": "Life of Christ",
     "Description": "The Galilean hill town where Jesus grew up - 'Can anything good come from Nazareth?' His neighbors knew Him as the carpenter's son and rejected Him.",
@@ -422,6 +457,7 @@
   {
     "Name": "Capernaum",
     "ModernLocation": "Northern Israel (Sea of Galilee)",
+    "Maps": "palestine-time-of-christ",
     "Testament": "New",
     "TimelineEra": "Life of Christ",
     "Description": "The fishing town Jesus made His home base - 'His own town.' Peter's house was here; the synagogue where He taught stands in ruins still. More miracles happened here than anywhere else.",
@@ -434,6 +470,7 @@
   {
     "Name": "Galilee",
     "ModernLocation": "Northern Israel",
+    "Maps": "palestine-time-of-christ",
     "Testament": "New",
     "TimelineEra": "Life of Christ",
     "Description": "The northern region - 'Galilee of the Gentiles' - where Jesus grew up, called His disciples, preached the Sermon on the Mount, and walked on water. After the resurrection He met them here again.",
@@ -446,6 +483,7 @@
   {
     "Name": "Bethany",
     "ModernLocation": "Near Jerusalem, West Bank (el-Azariyeh)",
+    "Maps": "palestine-time-of-christ",
     "Testament": "New",
     "TimelineEra": "Life of Christ",
     "Description": "The village home of Mary, Martha, and Lazarus - Jesus's retreat two miles from Jerusalem. Here He raised Lazarus, was anointed for burial, and ascended from nearby.",
@@ -458,6 +496,7 @@
   {
     "Name": "Golgotha",
     "ModernLocation": "Jerusalem",
+    "Maps": "palestine-time-of-christ; ancient-jerusalem-plan",
     "Testament": "New",
     "TimelineEra": "Life of Christ",
     "Description": "'The Place of the Skull' - the hill outside Jerusalem's walls where Jesus was crucified between two criminals, with a nearby tomb where He was buried and rose.",
@@ -470,6 +509,7 @@
   {
     "Name": "Antioch",
     "ModernLocation": "Antakya, Turkey",
+    "Maps": "pauls-journeys",
     "Testament": "New",
     "TimelineEra": "Early Church",
     "Description": "The Syrian metropolis where believers were first called 'Christians.' From here Paul and Barnabas were sent out, and the gospel crossed decisively into the Gentile world.",
@@ -482,6 +522,7 @@
   {
     "Name": "Ephesus",
     "ModernLocation": "Near Selcuk, Turkey",
+    "Maps": "pauls-journeys",
     "Testament": "New",
     "TimelineEra": "Early Church",
     "Description": "The great Asian port where Paul taught for over two years, 'so that all who lived in Asia heard the word.' Home of the Artemis temple, the silversmiths' riot, and the church that lost its first love.",
@@ -494,6 +535,7 @@
   {
     "Name": "Corinth",
     "ModernLocation": "Greece",
+    "Maps": "pauls-journeys",
     "Testament": "New",
     "TimelineEra": "Early Church",
     "Description": "The wealthy, immoral Greek port where Paul planted a church and wrote two of his most famous letters - on love, resurrection, and grace for a messy congregation.",
@@ -506,6 +548,7 @@
   {
     "Name": "Philippi",
     "ModernLocation": "Northern Greece",
+    "Maps": "pauls-journeys",
     "Testament": "New",
     "TimelineEra": "Early Church",
     "Description": "The Roman colony where Paul's European mission began - Lydia's conversion by the river, the jailer's midnight baptism after an earthquake, and the joyful letter Paul later wrote from prison.",
@@ -518,6 +561,7 @@
   {
     "Name": "Thessalonica",
     "ModernLocation": "Thessaloniki, Greece",
+    "Maps": "pauls-journeys",
     "Testament": "New",
     "TimelineEra": "Early Church",
     "Description": "The Macedonian capital where Paul preached three Sabbaths, a church was born amid riots, and Paul wrote his earliest letters - full of teaching on Christ's return.",
@@ -530,6 +574,7 @@
   {
     "Name": "Colossae",
     "ModernLocation": "Near Denizli, Turkey",
+    "Maps": "pauls-journeys",
     "Testament": "New",
     "TimelineEra": "Early Church",
     "Description": "The small Lycus Valley town Paul never visited, yet loved enough to write one of his richest letters - exalting Christ's supremacy against every rival philosophy.",
@@ -542,6 +587,7 @@
   {
     "Name": "Patmos",
     "ModernLocation": "Greece (Aegean island)",
+    "Maps": "pauls-journeys",
     "Testament": "New",
     "TimelineEra": "Early Church",
     "Description": "The small rocky island where the aged apostle John was exiled 'for the word of God' - and where he received the Revelation, the Bible's final book.",
@@ -554,6 +600,7 @@
   {
     "Name": "Rome",
     "ModernLocation": "Italy",
+    "Maps": "pauls-journeys",
     "Testament": "New",
     "TimelineEra": "Early Church",
     "Description": "The empire's capital and Paul's long-desired destination. He arrived in chains, preached from house arrest for two years, wrote his greatest letter to its church, and was martyred here under Nero.",

@@ -67,10 +67,11 @@
     "ScriptureIlluminated", "BibleReferences", "Tags", "Place", "Prophet", "Course"];
   var SNIPPET_FIELDS = ["Summary", "Description", "Definition", "ShortAnswer",
     "ProphecySummary", "Explanation", "BiblicalUsage", "Beliefs"];
-  var SKIP_FIELDS = ["Slug"];
+  var SKIP_FIELDS = ["Slug", "Maps"];
 
   var data = {};      // collection id -> array of rows
   var posts = [];     // blog manifest
+  var maps = {};      // map id -> {title, file, credit, source}
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -391,6 +392,16 @@
       html += "<h2>" + esc(val(row, "Transliteration")) + ' <span class="word-script">' + esc(val(row, "Word")) + "</span></h2>";
     } else {
       html += "<h2>" + esc(val(row, c.primary)) + "</h2>";
+    }
+    var mapIds = splitList(val(row, "Maps"));
+    if (mapIds.length) {
+      html += '<div class="map-figures">' + mapIds.map(function (id) {
+        var m = maps[id];
+        if (!m) return "";
+        return '<figure class="map-figure"><img src="' + esc(m.file) + '" alt="' + esc(m.title) + '">' +
+          '<figcaption>' + esc(m.title) + " — " + esc(m.credit) +
+          ' <a href="' + esc(m.source) + '" target="_blank" rel="noopener">Source</a></figcaption></figure>';
+      }).join("") + "</div>";
     }
     html += '<div class="detail"><dl>';
     Object.keys(row).forEach(function (field) {
@@ -761,6 +772,7 @@
     }).then(function (rows) { data[c.id] = rows; });
   });
   jobs.push(fetch("content/posts.json").then(function (r) { return r.json(); }).then(function (p) { posts = p; }));
+  jobs.push(fetch("content/maps.json").then(function (r) { return r.ok ? r.json() : {}; }).then(function (m) { maps = m; }).catch(function () { maps = {}; }));
   Promise.all(jobs).then(function () {
     buildLinkIndex();
     window.addEventListener("hashchange", render);

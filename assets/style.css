@@ -113,6 +113,9 @@ a:hover { color: var(--gold-dark); }
 .conn-chip:hover { text-decoration: underline; }
 .conn-chip.gold { background: #f3e8cf; }
 .conn-plain { margin-right: 0.25rem; }
+.map-figure { margin: 1rem 0 1.5rem; }
+.map-figure img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; }
+.map-figure figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 0.35rem; }
 .badge {
   display: inline-block; background: var(--sage-light); color: var(--navy);
   border-radius: 999px; padding: 0.1rem 0.65rem; font-size: 0.8rem; font-weight: 700;
