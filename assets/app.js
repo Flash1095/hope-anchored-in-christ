@@ -61,6 +61,9 @@
   { id: "hymns", label: "Hymns", file: "content/hymns.json", primary: "Hymn",
     blurb: "Great hymns and the stories behind them — how each song was born.",
     meta: ["Author", "Year"] },
+  { id: "nature", label: "Nature & Creation", file: "content/nature.json", primary: "Name",
+    blurb: "Birds, plants, and animals that point to the Creator — with photos from Lorraine.",
+    meta: ["Category"] },
 ];
 
   var REL_FIELDS = ["RelatedBooks", "RelatedPeople", "RelatedEvents", "RelatedTopics",
@@ -70,12 +73,12 @@
     "ScriptureIlluminated", "BibleReferences", "Tags", "Place", "Prophet", "Course"];
   var SNIPPET_FIELDS = ["Summary", "Description", "Story", "Definition", "ShortAnswer",
     "ProphecySummary", "Explanation", "BiblicalUsage", "Beliefs"];
-  var SKIP_FIELDS = ["Slug", "Maps"];
+  var SKIP_FIELDS = ["Slug", "Maps", "Image", "ImageCredit", "ImageSource"];
 
   var data = {};      // collection id -> array of rows
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
-  var ASSET_V = "7";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "8";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -151,6 +154,7 @@
     var c = coll(id);
     if (!c) return viewHome();
     if (id === "timeline" && (idx === undefined || idx === null || idx === "")) return viewTimeline(params);
+    if (id === "nature" && (idx === undefined || idx === null || idx === "")) return viewNature(params);
     if (c.special === "quizzes") return idx ? viewQuizPlay(idx, params) : viewQuizList(params);
     if (idx !== undefined && idx !== null && idx !== "") return viewDetail(c, parseInt(idx, 10));
     var rows = data[id] || [];
@@ -236,6 +240,77 @@
         });
         syncUrl();
         renderGrid();
+      });
+    });
+    window.scrollTo(0, 0);
+  }
+  /* ---------- nature: clickable photo tiles ---------- */
+  function viewNature(params) {
+    var rows = data.nature || [];
+    var cats = ["Bird", "Plant", "Animal"];
+    var state = { q: (params.get("q") || ""), cat: (params.get("cat") || "") };
+    function tileSrc(r) {
+      var s = val(r, "Image");
+      if (s && s.charAt(0) === "/") s = s.slice(1);
+      return s || "assets/nature/placeholder.svg";
+    }
+    function renderTiles() {
+      var wrap = document.getElementById("natureWrap");
+      if (!wrap) return;
+      var q = state.q.toLowerCase();
+      var shown = rows.map(function (r, i) { return { row: r, idx: i }; }).filter(function (item) {
+        var r = item.row;
+        if (state.cat && val(r, "Category") !== state.cat) return false;
+        if (q) {
+          var hay = Object.keys(r).map(function (k) { return val(r, k); }).join(" ").toLowerCase();
+          if (hay.indexOf(q) === -1) return false;
+        }
+        return true;
+      });
+      if (!shown.length) {
+        wrap.innerHTML = '<p class="empty">Nothing matches. Try clearing the search or filters.</p>';
+      } else {
+        wrap.innerHTML = '<div class="nature-grid">' + shown.map(function (item) {
+          var r = item.row;
+          return '<a class="nature-tile" href="#/nature/' + item.idx + '">' +
+            '<img src="' + esc(tileSrc(r)) + '" alt="' + esc(val(r, "Name")) + '" loading="lazy">' +
+            '<span class="nature-tile-name">' + esc(val(r, "Name")) + '</span>' +
+            '<span class="nature-tile-cat">' + esc(val(r, "Category")) + '</span></a>';
+        }).join("") + "</div>";
+      }
+    }
+    function syncUrl() {
+      var p = new URLSearchParams();
+      if (state.q) p.set("q", state.q);
+      if (state.cat) p.set("cat", state.cat);
+      var s = p.toString();
+      history.replaceState(null, "", "#/nature" + (s ? "?" + s : ""));
+    }
+    var html = "<h2>Nature &amp; Creation</h2><p class='page-intro'>Birds, plants, and animals that point to the Creator — " +
+      rows.length + " entries. Tap a tile to open its page.</p>" +
+      "<p class='page-intro'><em>Preview: the tile images are placeholders for now. Lorraine's own photos will replace them as she uploads them.</em></p>";
+    html += '<div class="controls"><input type="search" id="natureSearch" placeholder="Search nature…" value="' + esc(state.q) + '">';
+    html += '<div class="chips"><span class="chip-label">Category:</span>';
+    html += '<button class="chip' + (state.cat === "" ? " active" : "") + '" data-cat="">All</button>';
+    cats.forEach(function (cat) {
+      html += '<button class="chip' + (state.cat === cat ? " active" : "") + '" data-cat="' + cat + '">' + cat + "s</button>";
+    });
+    html += '</div></div><div id="natureWrap"></div>';
+    app.innerHTML = html;
+    renderTiles();
+    document.getElementById("natureSearch").addEventListener("input", function (e) {
+      state.q = e.target.value;
+      syncUrl();
+      renderTiles();
+    });
+    app.querySelectorAll("[data-cat]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        state.cat = btn.getAttribute("data-cat");
+        btn.parentNode.querySelectorAll("[data-cat]").forEach(function (b) {
+          b.classList.toggle("active", b.getAttribute("data-cat") === state.cat);
+        });
+        syncUrl();
+        renderTiles();
       });
     });
     window.scrollTo(0, 0);
@@ -406,6 +481,18 @@
           '<figcaption>' + esc(m.title) + " — " + esc(m.credit) +
           ' <a href="' + esc(m.source) + '" target="_blank" rel="noopener">Source</a></figcaption></figure>';
       }).join("") + "</div>";
+    }
+    var imgSrc = val(row, "Image");
+    if (imgSrc) {
+      if (imgSrc.charAt(0) === "/") imgSrc = imgSrc.slice(1);
+      html += '<figure class="nature-figure"><img src="' + esc(imgSrc) + '" alt="' + esc(val(row, c.primary)) + '">';
+      var cap = val(row, "ImageCredit");
+      if (cap) {
+        html += '<figcaption>' + esc(cap);
+        if (val(row, "ImageSource")) html += ' <a href="' + esc(val(row, "ImageSource")) + '" target="_blank" rel="noopener">Source</a>';
+        html += '</figcaption>';
+      }
+      html += '</figure>';
     }
     html += '<div class="detail"><dl>';
     Object.keys(row).forEach(function (field) {

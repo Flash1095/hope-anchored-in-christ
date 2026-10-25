@@ -1,0 +1,13 @@
+{
+  "Name": "Sheep",
+  "Category": "Animal",
+  "Description": "Sheep are gentle, flocking animals that know their shepherd's voice and follow where he leads. They appear more than any other animal in the Bible, as sacrifices, as livelihood, and as the picture of God's people: creatures who stray easily and need a keeper.",
+  "Scripture": "Psalm 23:1",
+  "CreationReflection": "We are the sheep of His pasture, known by name, led beside still waters, and carried home when we wander. The whole gospel is a Shepherd who lays down His life for the flock.",
+  "Habitat": "Pastures and hillsides around the world.",
+  "Image": "assets/nature/placeholder.svg",
+  "ImageCredit": "Photo coming soon — Lorraine's own photo will appear here",
+  "ImageSource": "",
+  "RelatedTopics": "Redemption; Love; Faith",
+  "Slug": "sheep"
+}

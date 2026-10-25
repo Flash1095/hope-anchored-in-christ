@@ -1,0 +1,13 @@
+{
+  "Name": "Barn Owl",
+  "Category": "Bird",
+  "Description": "The barn owl hunts in complete darkness, its heart-shaped face funneling sound to ears so sharp it can catch a mouse it cannot see. Its flight is nearly silent, thanks to soft-fringed feathers, and it has lived alongside farmers for centuries, nesting in barns and old towers.",
+  "Scripture": "Psalm 102:6",
+  "CreationReflection": "Owls belong to the night watches, when worries grow loudest. The psalmist knew those hours too, and still prayed. God is present in the dark, not only in the daylight.",
+  "Habitat": "Barns, open fields, and grasslands on every continent except Antarctica.",
+  "Image": "assets/nature/placeholder.svg",
+  "ImageCredit": "Photo coming soon — Lorraine's own photo will appear here",
+  "ImageSource": "",
+  "RelatedTopics": "Suffering; Fear; Prayer",
+  "Slug": "barn-owl"
+}

@@ -1,0 +1,13 @@
+{
+  "Name": "Monarch Butterfly",
+  "Category": "Animal",
+  "Description": "The monarch begins as a striped caterpillar eating milkweed, then dissolves inside a chrysalis and emerges utterly remade, orange and black. Each fall, monarchs migrate thousands of miles to a few mountain forests in Mexico, a journey no single butterfly has ever made before.",
+  "Scripture": "2 Corinthians 5:17",
+  "CreationReflection": "Metamorphosis is the gospel in miniature: what goes into the chrysalis is not improved but transformed. In Christ, we are not merely better, we are new.",
+  "Habitat": "Milkweed meadows and migration routes across North America.",
+  "Image": "assets/nature/placeholder.svg",
+  "ImageCredit": "Photo coming soon — Lorraine's own photo will appear here",
+  "ImageSource": "",
+  "RelatedTopics": "Redemption; Creation; Hope",
+  "Slug": "monarch-butterfly"
+}

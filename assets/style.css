@@ -116,6 +116,16 @@ a:hover { color: var(--gold-dark); }
 .map-figure { margin: 1rem 0 1.5rem; }
 .map-figure img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; }
 .map-figure figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 0.35rem; }
+/* ---------- nature tiles ---------- */
+.nature-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.nature-tile { display: block; text-decoration: none; color: inherit; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; transition: box-shadow 0.15s, transform 0.15s; }
+.nature-tile:hover { box-shadow: 0 6px 18px rgba(27, 42, 78, 0.15); transform: translateY(-2px); }
+.nature-tile img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.nature-tile-name { display: block; background: var(--navy); color: #fff; font-family: "Playfair Display", Georgia, serif; font-size: 1.05rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.6rem 0.8rem; }
+.nature-tile-cat { display: block; color: var(--muted); font-size: 0.85rem; padding: 0.35rem 0.8rem 0.6rem; }
+.nature-figure { margin: 1rem 0 1.5rem; }
+.nature-figure img { width: 100%; max-width: 720px; height: auto; border: 1px solid var(--line); border-radius: 8px; }
+.nature-figure figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 0.35rem; }
 .badge {
   display: inline-block; background: var(--sage-light); color: var(--navy);
   border-radius: 999px; padding: 0.1rem 0.65rem; font-size: 0.8rem; font-weight: 700;
