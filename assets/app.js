@@ -102,7 +102,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "22";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "23";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -110,6 +110,12 @@
     return String(s == null ? "" : s)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
+  }
+  // Blog dates: the editor stores full timestamps (2026-10-25T15:00:00.000-05:00)
+  // but the blog displays plain dates like the older posts, so trim to YYYY-MM-DD.
+  function shortDate(s) {
+    s = String(s == null ? "" : s);
+    return s.length > 10 ? s.slice(0, 10) : s;
   }
   function label(field) {
     return field.replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
@@ -723,7 +729,7 @@
     if (latest) {
       html += "<h3>Latest from the blog</h3>" +
         '<a class="card" href="#/blog/' + esc(latest.slug) + '"><h3>' + esc(latest.title) + "</h3>" +
-        '<p class="meta">' + esc(latest.date) + (latest.category ? " &middot; " + esc(latest.category) : "") + "</p></a>";
+        '<p class="meta">' + esc(shortDate(latest.date)) + (latest.category ? " &middot; " + esc(latest.category) : "") + "</p></a>";
     }
     html += "<h3>Explore the collections</h3><div class='card-grid'>" +
       COLLECTIONS.map(collectionCard).join("") + "</div>";
@@ -744,7 +750,7 @@
       fetch(post.file + "?v=" + ASSET_V).then(function (r) { if (!r.ok) throw new Error(post.file); return r.text(); }).then(function (text) {
         var body = text.replace(/^---[\s\S]*?---\s*/, "");
         app.innerHTML = '<a class="back-link" href="#/blog">&larr; All posts</a><article class="post-body"><h2>' +
-          esc(post.title) + '</h2><p class="post-meta">' + esc(post.date) +
+          esc(post.title) + '</h2><p class="post-meta">' + esc(shortDate(post.date)) +
           (post.category ? " &middot; " + esc(post.category) : "") +
           (post.scripture ? " &middot; " + esc(post.scripture) : "") + "</p>" +
           renderMarkdown(body) + "</article>";
@@ -758,7 +764,7 @@
     if (!posts.length) html += '<p class="empty">No posts yet.</p>';
     html += "<div class='card-grid'>" + posts.map(function (p) {
       return '<a class="card" href="#/blog/' + esc(p.slug) + '"><h3>' + esc(p.title) + "</h3>" +
-        '<p class="meta">' + esc(p.date) + (p.category ? " &middot; " + esc(p.category) : "") + "</p></a>";
+        '<p class="meta">' + esc(shortDate(p.date)) + (p.category ? " &middot; " + esc(p.category) : "") + "</p></a>";
     }).join("") + "</div>";
     app.innerHTML = html;
     window.scrollTo(0, 0);
