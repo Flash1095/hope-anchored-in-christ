@@ -78,7 +78,7 @@
   var data = {};      // collection id -> array of rows
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
-  var ASSET_V = "9";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "10";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -559,38 +559,60 @@
     window.scrollTo(0, 0);
   }
   function viewQuizPlay(name, params) {
-    var diff = params.get("difficulty") || "";
     var group = quizGroups().filter(function (g) { return g.name === name; })[0];
     if (!group) return viewQuizList(params);
-    var qs = diff ? group.qs.filter(function (q) { return val(q, "Difficulty") === diff; }) : group.qs;
-    var html = '<a class="back-link" href="#/quizzes">&larr; All quizzes</a><h2>' + esc(name) + "</h2>" +
-      '<p class="page-intro">' + esc(group.course) + " &middot; " + qs.length + " questions</p>" +
-      '<div class="chips"><span class="chip-label">Difficulty:</span>' +
-      ["", "Easy", "Medium", "Hard"].map(function (d) {
-        return '<button class="chip' + (diff === d ? " active" : "") + '" data-diff="' + d + '">' + (d || "All") + "</button>";
-      }).join("") + "</div>" +
-      '<div class="quiz-score" id="quizScore">Score: 0 / 0 answered</div>';
-    qs.forEach(function (q, i) {
-      html += '<div class="question-card" data-q="' + i + '"><h3>' + (i + 1) + ". " + esc(val(q, "Question")) + "</h3>" +
+    var startDiff = params.get("difficulty") || "";
+    if (["", "Easy", "Medium", "Hard"].indexOf(startDiff) === -1) startDiff = "";
+    var st = { stage: "start", diff: startDiff, i: 0, correct: 0, wrong: 0 };
+    function filteredQs() {
+      return st.diff ? group.qs.filter(function (q) { return val(q, "Difficulty") === st.diff; }) : group.qs.slice();
+    }
+    function diffBreakdown(qs) {
+      var counts = {};
+      qs.forEach(function (q) { var d = val(q, "Difficulty"); counts[d] = (counts[d] || 0) + 1; });
+      return Object.keys(counts).map(function (d) { return d + " " + counts[d]; }).join(" · ");
+    }
+    function diffChips() {
+      return '<div class="chips"><span class="chip-label">Difficulty:</span>' +
+        ["", "Easy", "Medium", "Hard"].map(function (d) {
+          return '<button class="chip' + (st.diff === d ? " active" : "") + '" data-diff="' + d + '">' + (d || "All") + "</button>";
+        }).join("") + "</div>";
+    }
+    function renderStart() {
+      var qs = filteredQs();
+      var html = '<a class="back-link" href="#/quizzes">&larr; All quizzes</a><h2>' + esc(group.name) + "</h2>" +
+        '<p class="page-intro">Test your Bible knowledge &mdash; every answer teaches. Answer each question and you will see right away whether you got it right, with an explanation from Scripture.</p>' +
+        (group.course ? '<p class="meta"><strong>Theme:</strong> ' + esc(group.course) + "</p>" : "") +
+        '<p class="meta">' + group.qs.length + " questions &middot; " + esc(diffBreakdown(group.qs)) + "</p>" +
+        diffChips();
+      if (qs.length) {
+        html += '<p class="meta">Playing' + (st.diff ? " " + esc(st.diff) + " questions" : "") + ": " + qs.length + " question" + (qs.length === 1 ? "" : "s") + ".</p>" +
+          '<button class="quiz-btn" id="quizBegin">Begin quiz</button>';
+      } else {
+        html += '<p class="empty">No questions at this difficulty &mdash; choose another difficulty above.</p>';
+      }
+      app.innerHTML = html;
+      app.querySelectorAll("[data-diff]").forEach(function (btn) {
+        btn.addEventListener("click", function () { st.diff = btn.getAttribute("data-diff"); renderStart(); });
+      });
+      var begin = document.getElementById("quizBegin");
+      if (begin) begin.addEventListener("click", function () { st.stage = "play"; st.i = 0; st.correct = 0; st.wrong = 0; renderQuestion(); });
+      window.scrollTo(0, 0);
+    }
+    function renderQuestion() {
+      var qs = filteredQs();
+      var q = qs[st.i];
+      var html = '<a class="back-link" href="#/quizzes">&larr; Quit quiz</a><h2>' + esc(group.name) + "</h2>" +
+        '<p class="quiz-progress">Question ' + (st.i + 1) + " of " + qs.length + " &middot; Correct: " + st.correct + " &middot; Wrong: " + st.wrong + "</p>" +
+        '<div class="question-card"><h3>' + esc(val(q, "Question")) + "</h3>" +
         '<div class="options">' + ["A", "B", "C", "D"].map(function (letter) {
           return '<button class="option-btn" data-letter="' + letter + '"><strong>' + letter + ".</strong> " +
             esc(val(q, "Option" + letter)) + "</button>";
         }).join("") + "</div>" +
-        '<div class="explanation" hidden><strong>Answer: ' + esc(val(q, "CorrectAnswer")) + "</strong> &mdash; " +
-        esc(val(q, "Explanation")) +
-        (val(q, "ScriptureReference") ? " <em>(" + esc(val(q, "ScriptureReference")) + ")</em>" : "") + "</div></div>";
-    });
-    app.innerHTML = html;
-    var correct = 0, answered = 0;
-    var scoreEl = document.getElementById("quizScore");
-    app.querySelectorAll("[data-diff]").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var d = btn.getAttribute("data-diff");
-        navigate("#/quizzes/play/" + encodeURIComponent(name) + (d ? "?difficulty=" + d : ""), true);
-      });
-    });
-    app.querySelectorAll(".question-card").forEach(function (card) {
-      var q = qs[parseInt(card.getAttribute("data-q"), 10)];
+        '<div class="explanation" hidden></div>' +
+        '<button class="quiz-btn" id="quizNext" hidden>' + (st.i + 1 === qs.length ? "See my grade" : "Next question") + "</button></div>";
+      app.innerHTML = html;
+      var card = app.querySelector(".question-card");
       var right = val(q, "CorrectAnswer");
       card.querySelectorAll(".option-btn").forEach(function (btn) {
         btn.addEventListener("click", function () {
@@ -599,15 +621,46 @@
             b.disabled = true;
             if (b.getAttribute("data-letter") === right) b.classList.add("correct");
           });
-          if (picked !== right) btn.classList.add("wrong"); else correct++;
-          answered++;
-          card.querySelector(".explanation").hidden = false;
-          scoreEl.textContent = "Score: " + correct + " / " + answered + " answered" +
-            (answered === qs.length ? " — Quiz complete!" : "");
+          var fb = card.querySelector(".explanation");
+          var note = (val(q, "ScriptureReference") ? " <em>(" + esc(val(q, "ScriptureReference")) + ")</em>" : "");
+          if (picked === right) {
+            st.correct++;
+            fb.innerHTML = "<strong>Correct!</strong> &mdash; " + esc(val(q, "Explanation")) + note;
+          } else {
+            st.wrong++;
+            btn.classList.add("wrong");
+            fb.innerHTML = "<strong>Not quite &mdash; the correct answer is " + esc(right) + ".</strong> &mdash; " + esc(val(q, "Explanation")) + note;
+          }
+          fb.hidden = false;
+          var next = document.getElementById("quizNext");
+          next.hidden = false;
+          next.addEventListener("click", function () {
+            st.i++;
+            if (st.i < qs.length) renderQuestion(); else renderGrade();
+          });
+          var prog = app.querySelector(".quiz-progress");
+          if (prog) prog.textContent = "Question " + (st.i + 1) + " of " + qs.length + " · Correct: " + st.correct + " · Wrong: " + st.wrong;
         });
       });
-    });
-    window.scrollTo(0, 0);
+      window.scrollTo(0, 0);
+    }
+    function renderGrade() {
+      var qs = filteredQs();
+      var total = qs.length;
+      var pct = total ? Math.round(st.correct / total * 100) : 0;
+      var msg = pct === 100 ? "Perfect score &mdash; excellent Bible knowledge!" :
+        pct >= 70 ? "Well done &mdash; strong Bible knowledge!" :
+        pct >= 40 ? "Good effort &mdash; read back over the explanations and try again!" :
+        "Keep studying &mdash; every answer teaches. Try again!";
+      app.innerHTML = '<a class="back-link" href="#/quizzes">&larr; All quizzes</a><h2>' + esc(group.name) + "</h2>" +
+        '<div class="quiz-grade"><p class="grade-big">You got ' + st.correct + " right and " + st.wrong + " wrong out of " + total + ".</p>" +
+        '<p class="grade-pct">' + pct + "% correct</p><p>" + msg + "</p></div>" +
+        '<button class="quiz-btn" id="quizRetake">Retake quiz</button> ' +
+        '<a class="quiz-btn quiz-btn-link" href="#/quizzes">Back to all quizzes</a>';
+      document.getElementById("quizRetake").addEventListener("click", function () { st.stage = "start"; st.i = 0; st.correct = 0; st.wrong = 0; renderStart(); });
+      window.scrollTo(0, 0);
+    }
+    renderStart();
   }
 
   /* ---------- home / explore / blog / about / search ---------- */
@@ -842,6 +895,7 @@
     if (path[0] === "about") return viewAbout();
     if (path[0] === "store") return viewStore();
     if (path[0] === "search") return viewSearch(params);
+    if (path[0] === "quizzes" && path[1] === "play") return viewQuizPlay(path[2] ? decodeURIComponent(path[2]) : "", params);
     var c = coll(path[0]);
     if (c) return viewCollection(c.id, path[1] ? decodeURIComponent(path[1]) : null, params);
     return viewHome();

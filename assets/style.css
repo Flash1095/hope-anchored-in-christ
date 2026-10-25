@@ -186,6 +186,13 @@ a:hover { color: var(--gold-dark); }
 .option-btn.wrong { background: #fbe4e4; border-color: var(--red-no); }
 .option-btn:disabled { cursor: default; opacity: 0.95; }
 .explanation { background: var(--sage-light); border-radius: 8px; padding: 0.7rem 1rem; margin-top: 0.8rem; }
+.quiz-btn { background: var(--navy); color: #fff; border: none; border-radius: 8px; padding: 0.7rem 1.4rem; font-size: 1rem; font-family: inherit; cursor: pointer; margin-top: 1rem; }
+.quiz-btn:hover { background: var(--gold); color: var(--navy); }
+.quiz-btn-link { display: inline-block; text-decoration: none; }
+.quiz-progress { color: var(--muted); font-weight: 700; margin: 0.5rem 0; }
+.quiz-grade { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem 1.4rem; margin: 1rem 0; }
+.grade-big { font-size: 1.3rem; font-weight: 700; color: var(--navy); }
+.grade-pct { font-size: 1.1rem; font-weight: 700; }
 
 /* Footer */
 .site-footer { background: var(--navy); color: #e9e2c8; text-align: center; padding: 1.5rem 1rem 2rem; }
