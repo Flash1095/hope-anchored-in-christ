@@ -95,7 +95,8 @@
   var data = {};      // collection id -> array of rows
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
-  var ASSET_V = "15";  // bump when site code or content changes, so browsers fetch fresh copies
+  var explorePage = {}; // editable Explore page text (content/pages/explore.json)
+  var ASSET_V = "16";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -693,8 +694,10 @@
   /* ---------- home / explore / blog / about / search ---------- */
   function collectionCard(c) {
     var n = (data[c.id] || []).length;
+    var blurb = c.blurb;
+    (explorePage.blurbs || []).forEach(function (b) { if (b.collection === c.id && b.blurb) blurb = b.blurb; });
     return '<a class="card" href="#/' + c.id + '"><h3>' + esc(c.label) + "</h3>" +
-      '<p class="meta">' + n + " entries</p><p class='snippet'>" + esc(c.blurb) + "</p></a>";
+      '<p class="meta">' + n + " entries</p><p class='snippet'>" + esc(blurb) + "</p></a>";
   }
   function viewHome() {
     var total = COLLECTIONS.reduce(function (sum, c) { return sum + (data[c.id] || []).length; }, 0);
@@ -722,7 +725,8 @@
     window.scrollTo(0, 0);
   }
   function viewExplore() {
-    var html = "<h2>Explore</h2><p class='page-intro'>Every collection on the site — pick one and start browsing.</p>" +
+    var html = "<h2>" + esc(explorePage.heading || "Explore") + "</h2><p class='page-intro'>" +
+      esc(explorePage.intro || "Every collection on the site — pick one and start browsing.") + "</p>" +
       "<div class='card-grid'>" + COLLECTIONS.map(collectionCard).join("") + "</div>";
     app.innerHTML = html;
     window.scrollTo(0, 0);
@@ -957,6 +961,7 @@
   });
   jobs.push(fetch("content/posts.json?v=" + ASSET_V).then(function (r) { return r.json(); }).then(function (p) { posts = p; }));
   jobs.push(fetch("content/maps.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : {}; }).then(function (m) { maps = m; }).catch(function () { maps = {}; }));
+  jobs.push(fetch("content/pages/explore.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : {}; }).then(function (p) { explorePage = p; }).catch(function () { explorePage = {}; }));
   Promise.all(jobs).then(function () {
     buildLinkIndex();
     window.addEventListener("hashchange", render);

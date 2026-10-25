@@ -502,3 +502,18 @@ collections:
       - {label: "Scripture", name: "Scripture", widget: "string"}
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "pages"
+    label: "Site Pages"
+    files:
+      - name: "explore"
+        label: "Explore Page"
+        file: "content/pages/explore.json"
+        fields:
+          - {label: "Page Heading", name: "heading", widget: "string"}
+          - {label: "Intro Text", name: "intro", widget: "text"}
+          - label: "Collection Descriptions"
+            name: "blurbs"
+            widget: "list"
+            fields:
+              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "events", "places", "topics", "themes", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia"]}
+              - {label: "Description", name: "blurb", widget: "text"}
