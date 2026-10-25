@@ -445,12 +445,66 @@
   }
   function viewAbout() {
     app.innerHTML = "<h2>About</h2><div class='post-body'>" +
-      "<p><em>Hope Anchored in Christ</em> is a Bible study site built around one verse: Hebrews 6:19 — " +
-      "&ldquo;We have this hope as an anchor for the soul, firm and secure.&rdquo;</p>" +
-      "<p>Here you'll find a timeline of the whole biblical story, all 66 books, the people and places, " +
-      "archaeological discoveries, prophecies and their fulfillments, word studies in Hebrew and Greek, " +
-      "courses, and quizzes — everything cross-linked, so one question can lead you through the whole story.</p>" +
-      "<p>Whatever storm you're in, the anchor holds: firm, secure, fastened behind the curtain where Jesus already stands.</p></div>";
+      "<img class='about-photo' src='assets/about-photo.jpg' alt='Lorraine and her husband outdoors'>" +
+      "<h3>Our Story</h3>" +
+      "<p>Our story begins with two very different but deeply meaningful paths that God wove together for a purpose bigger than ourselves. " +
+      "I was raised by my grandmother, a strong, faithful woman who stepped in when both my parents — due to mental illness and " +
+      "instability — were unable to care for me. Though she had already faced the pain of divorce and thought her season of raising " +
+      "children had ended, she took on the enormous responsibility of raising her grandchild with unwavering love and dedication.</p>" +
+      "<p>My upbringing was sheltered in many ways — we lived simply, my social world was small, and many of the opportunities other " +
+      "kids had were not part of my childhood. But I look back not with bitterness or regret, but with a heart full of gratitude. " +
+      "I see now that God was using those years to shape me. My grandmother gave me the gift of faith, a love for learning, and a hunger " +
+      "for truth. I spent much of that quiet time diving into books, Scripture, art, science, history, and apologetics. I was given time, " +
+      "and I used it to sharpen my mind and my heart. That time wasn't wasted — it was an investment I now pour into this blog, hoping " +
+      "to encourage others, just as my grandmother encouraged me.</p>" +
+      "<p>My husband's story is a beautiful complement to mine. He was raised in the church, surrounded by a family who loved the Lord, " +
+      "and his love for Christ was planted early. Like me, he also grew up sheltered — protected from many of the world's influences, " +
+      "raised with strong values, and taught to keep God at the center of life. This is one area where we deeply connected. We both " +
+      "understood what it was like to grow up outside the mainstream, with fewer social experiences but a richer focus on faith, family, " +
+      "and personal growth. While others may have seen our sheltered upbringings as limitations, we both came to see them as blessings — " +
+      "foundations that protected and prepared us for a purpose greater than ourselves.</p>" +
+      "<p>From a young age, music became one of his greatest passions — especially the guitar. While he didn't sing, he found joy and " +
+      "worship through playing, using music as a quiet, personal way to connect with God and process life. His journey, like mine, hasn't " +
+      "been without its struggles, but through each season, his faith has grown stronger. Together, we've come to see that our experiences — " +
+      "though different in some ways — were both orchestrated by God to prepare us for this very purpose: to share His truth, love, and " +
+      "beauty with others. Whether it's through writing, photography, art, or music, our desire is to point people back to the One who " +
+      "anchors us through every storm: Christ. This blog, Hope Anchored in Christ, is a reflection of all we've learned, all we continue " +
+      "to discover, and all the hope we hold onto as we live, create, and serve together.</p>" +
+      "<h3>What you will find on this blog</h3>" +
+      "<p>Hope Anchored in Christ is a place where faith meets thoughtful reflection, and where deep questions are met with biblical truth " +
+      "and grace. This blog is built to encourage, challenge, and equip you in your walk with Christ by exploring the richness of Scripture " +
+      "and the world around us. Whether you're seeking spiritual growth, biblical answers, or simply a deeper understanding of God's truth " +
+      "in a complex world, there's something here for you.</p>" +
+      "<p>Here you'll find a variety of content including blog posts, devotionals, Bible studies, and scripture reflections that draw you " +
+      "into a deeper relationship with God. We offer apologetics resources to help defend the faith with gentleness and respect, and explore " +
+      "theology in an approachable and meaningful way. You'll also find thoughtful questions and answers, free and paid courses, quizzes and " +
+      "reflections on how Christian truth interacts with history, culture, science, philosophy, psychology, and art. Each topic is approached " +
+      "with the goal of encouraging truth-seeking, grounded faith, and thoughtful living. Whether you're new in your walk or have been on the " +
+      "journey for years, this space is for those hungry to grow in truth and hope — anchored firmly in Christ.</p>" +
+      "<h3>The meaning behind our name</h3>" +
+      "<p>The name Hope Anchored in Christ comes from a deep place in both of our hearts and stories. Life has brought storms, heartache, " +
+      "questions, and seasons of waiting — but through it all, one thing has remained constant: the hope we have in Jesus. It's not a shallow " +
+      "hope or wishful thinking. It's a confident assurance grounded in who Christ is, what He has done, and what He promises still to do. " +
+      "Just as an anchor holds a ship steady in the wind and waves, Christ holds our souls firm and secure, no matter what comes. " +
+      "The inspiration comes directly from Hebrews 6:19, which says, &ldquo;We have this hope as an anchor for the soul, firm and secure.&rdquo; " +
+      "That verse spoke to our hearts and became a foundation for everything we want to share through this blog.</p>" +
+      "<p>We arrived at the name Hope Anchored in Christ because it captures both our personal testimony and our mission. From my sheltered " +
+      "but spiritually rich upbringing with my grandmother to my husband's early life in the church and passion for music, we both experienced " +
+      "seasons where we had to learn to trust God in the unknown. We realized that no matter our background, struggles, or questions, the only " +
+      "unshakable anchor we have is Jesus. As we began creating this blog, we wanted a name that would reflect not just our content, but our " +
+      "purpose: to encourage others to place their hope where it won't be moved — in Christ alone. Every part of this blog is shaped by that truth.</p>" +
+      "<h3>Why We Started This Blog</h3>" +
+      "<p>We started Hope Anchored in Christ because we've seen a growing need for deeper, more thoughtful conversations about faith — the kind " +
+      "that aren't afraid to wrestle with hard questions or dive beneath the surface. So many people today, especially young adults and teens, " +
+      "are walking away from Christianity. And not necessarily because they hate God or don't care, but because they had real, difficult questions — " +
+      "and the answers they found outside the faith seemed more satisfying, more thoughtful, or simply more honest than what they heard in church. " +
+      "That broke our hearts.</p>" +
+      "<p>We believe the Christian faith is not only true but also intellectually and spiritually satisfying. God is not afraid of our questions — " +
+      "and neither are we. This blog was born from our desire to help others dig deeper, to find solid, biblically sound answers, and to see that " +
+      "hope in Christ is not blind — it's anchored. We want to create a space that brings together faith and reason, where people can explore " +
+      "theology, Scripture, apologetics, philosophy, science, culture, history, and more — all through a lens grounded in God's Word. Our hope is " +
+      "that this blog can be a light to those who are searching, doubting, or growing, and a reminder that the Christian faith is strong enough " +
+      "to hold the weight of real life, real questions, and real hope.</p></div>";
     window.scrollTo(0, 0);
   }
   function viewSearch(params) {
