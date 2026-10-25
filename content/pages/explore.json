@@ -101,6 +101,10 @@
     {
       "collection": "socialmedia",
       "blurb": "Viral posts, trends, and hot takes from TikTok, X, Facebook, Instagram, and beyond — addressed with grace and truth."
+    },
+    {
+      "collection": "stories",
+      "blurb": "Beloved Bible stories and events retold in detail — with the people, the meaning, and what they mean for us today."
     }
   ]
 }

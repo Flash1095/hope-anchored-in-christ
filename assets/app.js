@@ -9,24 +9,24 @@
     { id: "timeline", label: "Timeline", file: "content/timeline.json", primary: "Title",
       blurb: "The whole story, era by era, from Creation to the Early Church.",
       filters: [{ label: "Era", field: "Era" }], meta: ["DateApprox", "Era"] },
-    { id: "books", label: "Books", file: "content/books.json", primary: "Book",
+    { id: "books", label: "Books of the Bible", file: "content/books.json", primary: "Book",
       blurb: "All 66 books: author, date, theme, outline, and context.",
       filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }],
       meta: ["Testament", "Category", "DateApprox"] },
-    { id: "questions", label: "Questions", file: "content/questions.json", primary: "Question",
+    { id: "questions", label: "Questions and Answers", file: "content/questions.json", primary: "Question",
       blurb: "Searchable Bible Q&A — short answers and full studies.",
       filters: [{ label: "Category", field: "Category" }], meta: ["Category", "Subcategory"] },
-    { id: "people", label: "People", file: "content/people.json", primary: "Name",
+    { id: "people", label: "Biblical People", file: "content/people.json", primary: "Name",
       blurb: "Every major person of Scripture, from Adam to the apostles.",
       filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }],
       meta: ["Role", "Testament"] },
-    { id: "finds", label: "Discoveries", file: "content/finds.json", primary: "FindName",
+    { id: "finds", label: "Ancient Discoveries", file: "content/finds.json", primary: "FindName",
       blurb: "Archaeological finds that illuminate the Bible.",
       filters: [{ label: "Era", field: "TimelineEra" }], meta: ["DiscoveryLocation", "ArtifactDate"] },
     { id: "events", label: "Events", file: "content/events.json", primary: "EventName",
       blurb: "The great events of the biblical story.",
       filters: [{ label: "Era", field: "TimelineEra" }], meta: ["DateApprox", "Place"] },
-    { id: "places", label: "Places", file: "content/places.json", primary: "Name",
+    { id: "places", label: "Biblical Places", file: "content/places.json", primary: "Name",
       blurb: "Where the story happened, and where those places are today.",
       filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }],
       meta: ["ModernLocation", "Testament"] },
@@ -81,6 +81,9 @@
   { id: "socialmedia", label: "Social Media Responses", file: "content/socialmedia.json", primary: "Post",
     blurb: "Viral posts, trends, and hot takes from TikTok, X, Facebook, Instagram, and beyond — addressed with grace and truth.",
     filters: [{ label: "Platform", field: "Platform" }], meta: ["Platform"] },
+  { id: "stories", label: "Biblical Stories & Events", file: "content/stories.json", primary: "Story",
+    blurb: "Beloved Bible stories and events retold in detail — with the people, the meaning, and what they mean for us today.",
+    filters: [{ label: "Testament", field: "Testament" }], meta: ["Testament"] },
 ];
 
   var REL_FIELDS = ["RelatedBooks", "RelatedPeople", "RelatedEvents", "RelatedTopics",
@@ -96,7 +99,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "16";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "17";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
