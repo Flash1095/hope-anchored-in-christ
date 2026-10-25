@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diag2 starting...</title>
+</head>
+<body>
+<pre id="out">starting diag2...</pre>
+<script>
+(function(){
+  var pre = document.getElementById('out');
+  function line(s){ pre.textContent += '\n' + s; }
+  Promise.all([
+    fetch('https://hope-anchored-in-christ.netlify.app/.netlify/identity/settings')
+      .then(function(r){ return r.text().then(function(t){ return 'identity settings: HTTP ' + r.status + ' :: ' + t.slice(0, 200); }); })
+      .catch(function(e){ return 'identity settings: FETCH FAILED :: ' + e; }),
+    fetch('https://hope-anchored-in-christ.netlify.app/.netlify/git/github')
+      .then(function(r){ return 'git gateway: HTTP ' + r.status; })
+      .catch(function(e){ return 'git gateway: FETCH FAILED :: ' + e; })
+  ]).then(function(results){
+    results.forEach(line);
+    document.title = results.join(' | ').slice(0, 240);
+  });
+})();
+</script>
+</body>
+</html>
