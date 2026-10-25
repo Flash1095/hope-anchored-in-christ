@@ -128,3 +128,5 @@ Its claims are public. Its evidence is strong. Its logic is sound. And its truth
 Don’t settle for a worldview that crumbles under scrutiny. Test Christianity. Examine its claims. Challenge its foundations.
 
 And when you do, you may just discover it’s not only true—…it’s the **best news in the world**.
+
+Ready to test what you've picked up? Take the [Christianity Invites Testing Quiz](#/quizzes/play/Christianity%20Invites%20Testing%20Quiz).
