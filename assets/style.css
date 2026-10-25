@@ -216,3 +216,73 @@ a:hover { color: var(--gold-dark); }
   .header-search input { flex: 1; min-width: 0; }
   .detail { padding: 1rem; }
 }
+
+/* ---------- comic stories ---------- */
+img { max-width: 100%; }
+.comic-card img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 0.6rem; display: block; }
+.comic-reader { max-width: 720px; margin: 0 auto; }
+.comic-progress { position: fixed; top: 0; left: 0; right: 0; height: 4px; z-index: 20; pointer-events: none; }
+.comic-progress-bar { height: 100%; width: 0; background: var(--gold); }
+.comic-panel {
+  background: #fff; border: 1px solid var(--line); border-radius: 12px;
+  overflow: hidden; margin: 0 0 2rem;
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.comic-panel.comic-visible { opacity: 1; transform: none; }
+.comic-panel img { width: 100%; height: auto; display: block; }
+.comic-credit { font-size: 0.85rem; color: var(--muted); margin: 0.35rem 1.2rem 0; }
+.comic-panel-body { padding: 1rem 1.2rem 1.2rem; }
+.comic-text { font-size: 1.1rem; margin: 0; }
+.comic-meta { color: var(--muted); font-size: 0.9rem; margin: 0.7rem 0 0; }
+.comic-char {
+  display: inline-block; background: #f3e8cf; color: var(--navy);
+  border-radius: 999px; padding: 0.1rem 0.65rem; font-weight: 700;
+}
+@media (prefers-reduced-motion: reduce) {
+  .comic-panel { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
+/* ---------- responsive: tablet (2 columns) ---------- */
+@media (min-width: 701px) and (max-width: 1100px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+  .nature-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- responsive: desktop (centered column, 3 columns) ---------- */
+@media (min-width: 1100px) {
+  .header-inner, .content { max-width: 1200px; }
+  .card-grid { grid-template-columns: repeat(3, 1fr); }
+  .nature-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- responsive: mobile ---------- */
+@media (max-width: 700px) {
+  .header-inner { padding: 0.6rem 0.75rem; gap: 0.6rem; }
+  .brand { font-size: 1.05rem; }
+  .main-nav { gap: 0.5rem 0.8rem; }
+  .main-nav a { font-size: 0.95rem; padding: 0.15rem 0; }
+  .header-search { margin-left: 0; width: 100%; }
+  .header-search input { flex: 1; min-width: 0; }
+  .content { padding: 1rem 0.75rem 2.5rem; }
+  h2 { font-size: 1.5rem; }
+  .banner-title { padding: 0.7rem 1rem; }
+  .card-grid, .nature-grid { grid-template-columns: 1fr; }
+  .card, .question-card, .quiz-grade { padding: 1rem; }
+  .detail { padding: 1rem; }
+  .verse-band { font-size: 1rem; padding: 0.8rem 1rem; }
+  .stat { flex: 1 1 100px; padding: 0.6rem 0.8rem; }
+  .stat strong { font-size: 1.3rem; }
+  .tl { margin-left: 0.2rem; padding-left: 1.2rem; }
+  .tl-era { margin-left: -1.2rem; padding-left: 1.2rem; font-size: 1.2rem; }
+  .tl-node { padding: 0.8rem 1rem; }
+  .tl-node::before { left: calc(-1.2rem - 9px); }
+  .options { grid-template-columns: 1fr; }
+  .option-btn { width: 100%; }
+  .quiz-btn { width: 100%; text-align: center; }
+  .controls input[type="search"] { max-width: none; }
+  .comic-panel-body { padding: 0.8rem 1rem 1rem; }
+  .comic-text { font-size: 1.05rem; }
+  .comic-credit { margin: 0.35rem 1rem 0; }
+  .footer-nav { gap: 0.4rem 0.8rem; }
+}

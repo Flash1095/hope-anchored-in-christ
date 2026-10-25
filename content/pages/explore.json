@@ -109,6 +109,10 @@
     {
       "collection": "jewishculture",
       "blurb": "Jewish culture, feasts, and traditions — and how each one points to Jesus the Messiah."
+    },
+    {
+      "collection": "comicstories",
+      "blurb": "Bible stories told comic-style — scroll down and each page appears as you read."
     }
   ]
 }

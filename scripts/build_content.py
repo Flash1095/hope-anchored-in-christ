@@ -60,6 +60,7 @@ SOURCES = [
     ("stories", "stories-cms/Stories CMS.csv", "Story"),
     ("hermeneutics", "hermeneutics-cms/Hermeneutics CMS.csv", "Principle"),
     ("jewishculture", "jewishculture-cms/Jewish Culture CMS.csv", "Topic"),
+    ("comicstories", "comicstories-cms/Comic Stories CMS.csv", "Slug"),
 ]
 
 
