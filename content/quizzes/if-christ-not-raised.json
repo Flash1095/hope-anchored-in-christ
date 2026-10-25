@@ -1,0 +1,16 @@
+{
+  "Quiz": "Christianity Invites Testing Quiz",
+  "Course": "Christian Apologetics 101",
+  "Question": "According to 1 Corinthians 15:17, what would follow if Christ had not been raised from the dead?",
+  "OptionA": "Christian faith would be futile, and believers would remain in their sins",
+  "OptionB": "Only Gentile believers would be affected",
+  "OptionC": "Faith would still save, but without assurance",
+  "OptionD": "The church would need to choose a new leader",
+  "CorrectAnswer": "A",
+  "Explanation": "Paul says it plainly: if Christ has not been raised, our faith is futile and we are still in our sins (1 Corinthians 15:17).",
+  "Difficulty": "Easy",
+  "ScriptureReference": "1 Corinthians 15:17",
+  "ReadingTitle": "Christianity Invites Testing — Because It’s True",
+  "ReadingLink": "#/blog/hi",
+  "Slug": "if-christ-not-raised"
+}

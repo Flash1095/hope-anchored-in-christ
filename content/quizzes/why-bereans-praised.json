@@ -1,0 +1,16 @@
+{
+  "Quiz": "Christianity Invites Testing Quiz",
+  "Course": "Christian Apologetics 101",
+  "Question": "Why were the Bereans praised in Acts 17:11?",
+  "OptionA": "They accepted Paul's teaching without examining the Scriptures",
+  "OptionB": "They searched the Scriptures daily to see whether Paul's teachings were true",
+  "OptionC": "They rejected everything Paul taught",
+  "OptionD": "They wrote the first gospel",
+  "CorrectAnswer": "B",
+  "Explanation": "The Bereans were commended for searching the Scriptures daily to determine whether Paul's teachings were true — not for accepting them unexamined.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Acts 17:11",
+  "ReadingTitle": "Christianity Invites Testing — Because It’s True",
+  "ReadingLink": "#/blog/hi",
+  "Slug": "why-bereans-praised"
+}

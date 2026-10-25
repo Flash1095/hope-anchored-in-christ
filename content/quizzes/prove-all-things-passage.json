@@ -1,0 +1,16 @@
+{
+  "Quiz": "Christianity Invites Testing Quiz",
+  "Course": "Christian Apologetics 101",
+  "Question": "Which passage contains the instruction, “Prove all things; hold fast that which is good”?",
+  "OptionA": "1 Thessalonians 5:21",
+  "OptionB": "Acts 17:11",
+  "OptionC": "1 Peter 3:15",
+  "OptionD": "John 20:29",
+  "CorrectAnswer": "A",
+  "Explanation": "“Prove all things; hold fast that which is good” is 1 Thessalonians 5:21 (KJV).",
+  "Difficulty": "Medium",
+  "ScriptureReference": "1 Thessalonians 5:21",
+  "ReadingTitle": "Christianity Invites Testing — Because It’s True",
+  "ReadingLink": "#/blog/hi",
+  "Slug": "prove-all-things-passage"
+}

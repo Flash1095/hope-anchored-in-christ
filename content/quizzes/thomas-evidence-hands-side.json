@@ -1,0 +1,16 @@
+{
+  "Quiz": "Christianity Invites Testing Quiz",
+  "Course": "Christian Apologetics 101",
+  "Question": "In John 20:24–29, what physical evidence did Jesus invite Thomas to examine after His resurrection?",
+  "OptionA": "The wounds in His hands and side",
+  "OptionB": "The empty tomb",
+  "OptionC": "The folded linen cloths",
+  "OptionD": "His appearance from a distance",
+  "CorrectAnswer": "A",
+  "Explanation": "Jesus invited Thomas to put his finger into the marks of the nails and his hand into His side (John 20:24–29).",
+  "Difficulty": "Easy",
+  "ScriptureReference": "John 20:24–29",
+  "ReadingTitle": "Christianity Invites Testing — Because It’s True",
+  "ReadingLink": "#/blog/hi",
+  "Slug": "thomas-evidence-hands-side"
+}

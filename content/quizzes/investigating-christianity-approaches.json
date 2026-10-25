@@ -1,0 +1,16 @@
+{
+  "Quiz": "Christianity Invites Testing Quiz",
+  "Course": "Christian Apologetics 101",
+  "Question": "Which of the following is an approach Christians should use when investigating Christianity?",
+  "OptionA": "Examining historical testimony concerning Jesus",
+  "OptionB": "Accepting claims without any examination",
+  "OptionC": "Avoiding difficult questions",
+  "OptionD": "Relying on personal experience alone",
+  "CorrectAnswer": "A",
+  "Explanation": "Christians should examine historical testimony concerning Jesus, compare teachings with the Scriptures, and ask difficult questions while evaluating claims (Acts 17:11; 1 Peter 3:15; 1 Thessalonians 5:21).",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Acts 17:11; 1 Peter 3:15; 1 Thessalonians 5:21",
+  "ReadingTitle": "Christianity Invites Testing — Because It’s True",
+  "ReadingLink": "#/blog/hi",
+  "Slug": "investigating-christianity-approaches"
+}
