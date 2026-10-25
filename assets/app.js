@@ -104,7 +104,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "33";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "34";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -751,7 +751,7 @@
   /* Line art Lorraine creates herself, one per collection tile and one per
      blog post. Add the file under assets/lineart/ and list it here; the
      tile/post shows it automatically. Empty until her art arrives. */
-  var TILE_ART = {};
+  var TILE_ART = { timeline: "assets/lineart/timeline.png" };
   var POST_ART = {};
   function collectionCard(c) {
     var n = (data[c.id] || []).length;
