@@ -88,6 +88,13 @@ a:hover { color: var(--gold-dark); }
 .card h3 { margin: 0 0 0.3rem; font-size: 1.15rem; }
 .card .meta { color: var(--muted); font-size: 0.9rem; margin: 0.2rem 0; }
 .card .snippet { margin: 0.4rem 0 0; font-size: 0.95rem; }
+.store-card img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 0.6rem; }
+.store-card .price { font-weight: 700; color: var(--navy); font-size: 1.1rem; margin: 0.3rem 0; }
+.buy-btn {
+  display: inline-block; background: var(--navy); color: #fff; text-decoration: none;
+  border-radius: 999px; padding: 0.5rem 1.4rem; font-weight: 700; margin-top: 0.4rem;
+}
+.buy-btn:hover { background: var(--gold); color: var(--navy); }
 .badge {
   display: inline-block; background: var(--sage-light); color: var(--navy);
   border-radius: 999px; padding: 0.1rem 0.65rem; font-size: 0.8rem; font-weight: 700;

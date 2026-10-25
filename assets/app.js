@@ -443,6 +443,32 @@
     app.innerHTML = html;
     window.scrollTo(0, 0);
   }
+  /* ---------- store ---------- */
+  /* Each product: name, price, image, url (the print-on-demand checkout page), desc.
+     The list starts empty on purpose: real products are added here once the
+     print-on-demand shop is set up, so the live page never shows fake items. */
+  var STORE_PRODUCTS = [];
+  function viewStore() {
+    var html = "<h2>Store</h2><div class='post-body'>" +
+      "<p>Beautiful, faith-anchored goods, made to order and shipped to you. " +
+      "Every item is printed on demand — nothing is mass-produced or warehoused — so your purchase supports this ministry " +
+      "and arrives made just for you.</p>";
+    if (!STORE_PRODUCTS.length) {
+      html += "<p class='empty'>Our shop is coming soon. Check back shortly for our first collection.</p>";
+    } else {
+      html += "<div class='card-grid'>" + STORE_PRODUCTS.map(function (p) {
+        return "<div class='card store-card'>" +
+          "<img src='" + esc(p.image) + "' alt='" + esc(p.name) + "'>" +
+          "<h3>" + esc(p.name) + "</h3>" +
+          "<p class='price'>" + esc(p.price) + "</p>" +
+          "<p class='snippet'>" + esc(p.desc) + "</p>" +
+          "<p><a class='buy-btn' href='" + esc(p.url) + "' target='_blank' rel='noopener'>Buy</a></p>" +
+          "</div>";
+      }).join("") + "</div>";
+    }
+    app.innerHTML = html + "</div>";
+    window.scrollTo(0, 0);
+  }
   function viewAbout() {
     app.innerHTML = "<h2>About</h2><div class='post-body'>" +
       "<img class='about-photo' src='assets/about-photo.jpg' alt='Lorraine and her husband outdoors'>" +
@@ -584,6 +610,7 @@
     if (path[0] === "explore") return viewExplore();
     if (path[0] === "blog") return viewBlog(path[1] ? decodeURIComponent(path[1]) : null);
     if (path[0] === "about") return viewAbout();
+    if (path[0] === "store") return viewStore();
     if (path[0] === "search") return viewSearch(params);
     var c = coll(path[0]);
     if (c) return viewCollection(c.id, path[1] ? decodeURIComponent(path[1]) : null, params);
@@ -596,7 +623,7 @@
   });
   document.getElementById("footerNav").innerHTML =
     COLLECTIONS.map(function (c) { return '<a href="#/' + c.id + '">' + esc(c.label) + "</a>"; }).join("") +
-    '<a href="#/blog">Blog</a><a href="#/about">About</a>';
+    '<a href="#/blog">Blog</a><a href="#/about">About</a><a href="#/store">Store</a>';
 
   app.innerHTML = '<p class="loading">Loading the collections…</p>';
   var jobs = COLLECTIONS.map(function (c) {
