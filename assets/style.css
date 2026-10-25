@@ -33,6 +33,7 @@ a:hover { color: var(--gold-dark); }
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0) 55%, #ffffff 100%),
     linear-gradient(105deg, rgba(217, 138, 158, 0.25) 0%, rgba(253, 250, 243, 0.4) 30%, rgba(197, 168, 128, 0.25) 55%, rgba(123, 160, 122, 0.22) 80%, rgba(253, 250, 243, 0.45) 100%);
+  background-color: #fdfaf3;
   color: var(--navy); position: sticky; top: 0; z-index: 10;
 }
 .header-inner {
@@ -230,7 +231,11 @@ img { max-width: 100%; }
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 .comic-panel.comic-visible { opacity: 1; transform: none; }
-.comic-panel img { width: 100%; height: auto; display: block; }
+.comic-scene { position: relative; height: 62vh; min-height: 340px; max-height: 620px; overflow: hidden; background: #f3e9d2; }
+.comic-scene-bg { position: absolute; left: 0; right: 0; top: -12%; bottom: -12%; background-size: cover; background-position: center; will-change: transform; }
+.comic-scene-bg-default { background: linear-gradient(180deg, #fdfaf3 0%, #f3e9d2 55%, #dfe8d8 100%); }
+.comic-scene-art { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; will-change: transform; }
+.comic-scene-art img { max-width: 94%; max-height: 92%; width: auto; height: auto; display: block; border-radius: 8px; box-shadow: 0 8px 24px rgba(27, 42, 78, 0.25); }
 .comic-credit { font-size: 0.85rem; color: var(--muted); margin: 0.35rem 1.2rem 0; }
 .comic-panel-body { padding: 1rem 1.2rem 1.2rem; }
 .comic-text { font-size: 1.1rem; margin: 0; }
@@ -241,6 +246,10 @@ img { max-width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
   .comic-panel { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .comic-scene-bg, .comic-scene-art { transform: none !important; }
+}
+@media (max-width: 700px) {
+  .comic-scene { height: 52vh; min-height: 280px; }
 }
 
 /* ---------- responsive: tablet (2 columns) ---------- */

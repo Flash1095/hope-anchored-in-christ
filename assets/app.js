@@ -104,7 +104,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "28";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "29";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -913,7 +913,10 @@
       "<h2>" + esc(g.title) + "</h2><p class='page-intro'>" + esc(g.description) + "</p>" +
       "<div class='comic-reader'>" + panels.map(function (p, i) {
         return "<article class='comic-panel'>" +
-          (p.PanelImage ? "<img src='" + esc(p.PanelImage) + "' alt='Comic panel " + (i + 1) + "'>" : "") +
+          "<div class='comic-scene'>" +
+          (p.PanelBackground ? "<div class='comic-scene-bg' data-bg='" + esc(p.PanelBackground) + "'></div>" : "<div class='comic-scene-bg comic-scene-bg-default'></div>") +
+          (p.PanelImage ? "<div class='comic-scene-art'><img src='" + esc(p.PanelImage) + "' alt='Comic panel " + (i + 1) + "'></div>" : "") +
+          "</div>" +
           (p.PanelImageCredit ? "<p class='comic-credit'>" + esc(p.PanelImageCredit) + "</p>" : "") +
           "<div class='comic-panel-body'><p class='comic-text'>" + esc(p.PanelText) + "</p>" +
           "<p class='comic-meta'><span class='comic-char'>" + esc(p.Character) + "</span> &middot; Panel " + (i + 1) + " of " + panels.length + "</p></div>" +
@@ -921,6 +924,9 @@
       }).join("") + "</div>";
     app.innerHTML = html;
     window.scrollTo(0, 0);
+    Array.prototype.slice.call(document.querySelectorAll(".comic-scene-bg[data-bg]")).forEach(function (bg) {
+      bg.style.backgroundImage = "url('" + bg.getAttribute("data-bg") + "')";
+    });
     var els = Array.prototype.slice.call(document.querySelectorAll(".comic-panel"));
     if (!("IntersectionObserver" in window) || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) {
       els.forEach(function (el) { el.classList.add("comic-visible"); });
@@ -932,12 +938,30 @@
       }, { threshold: 0.15 });
       els.forEach(function (el) { obs.observe(el); });
     }
+    var comicScenes = Array.prototype.slice.call(document.querySelectorAll(".comic-scene"));
+    var comicReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var comicTicking = false;
+    function updateComicParallax() {
+      comicTicking = false;
+      if (comicReduced) return;
+      var vh = window.innerHeight;
+      comicScenes.forEach(function (scene) {
+        var r = scene.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > vh) return;
+        var offset = (r.top + r.height / 2) - vh / 2;
+        var bg = scene.querySelector(".comic-scene-bg");
+        var art = scene.querySelector(".comic-scene-art");
+        if (bg) bg.style.transform = "translateY(" + (offset * -0.06) + "px)";
+        if (art) art.style.transform = "translateY(" + (offset * -0.16) + "px)";
+      });
+    }
     function onComicScroll() {
       var bar = document.getElementById("comicProgressBar");
       if (!bar) return;
       var h = document.documentElement;
       var max = h.scrollHeight - h.clientHeight;
       bar.style.width = (max > 0 ? Math.min(100, (h.scrollTop / max) * 100) : 0) + "%";
+      if (!comicTicking) { comicTicking = true; requestAnimationFrame(updateComicParallax); }
     }
     window.addEventListener("scroll", onComicScroll, { passive: true });
     onComicScroll();
