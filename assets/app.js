@@ -64,6 +64,20 @@
   { id: "nature", label: "Nature & Creation", file: "content/nature.json", primary: "Name",
     blurb: "Birds, plants, and animals that point to the Creator — with photos from Lorraine.",
     meta: ["Category"] },
+  { id: "apologetics", label: "Apologetics", file: "content/apologetics.json", primary: "Argument",
+    blurb: "Why Christianity best explains reality — the cumulative case from philosophy, science, history, and experience.",
+    filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
+  { id: "objections", label: "Objections & Answers", file: "content/objections.json", primary: "Objection",
+    blurb: "Honest objections from atheists, Muslims, Jews, and others — stated fairly and answered with grace and truth.",
+    filters: [{ label: "Worldview", field: "Worldview" }], meta: ["Worldview"] },
+  { id: "perspectives", label: "Perspectives", file: "content/perspectives.json", primary: "Profession",
+    blurb: "How journalists, detectives, doctors, and other professionals shed light on the truth of the Bible.",
+    meta: ["Exemplar"] },
+  { id: "heritage", label: "Christian Heritage", file: "content/heritage.json", primary: "Name",
+    blurb: "Writings, commentaries, church history, and the men and women whose testimonies shaped Christianity.",
+    filters: [{ label: "Type", field: "Type" }], meta: ["Type", "Era"] },
+  { id: "politics", label: "Faith & Politics", file: "content/politics.json", primary: "Issue",
+    blurb: "Political issues and current events — and how to respond to them biblically." },
 ];
 
   var REL_FIELDS = ["RelatedBooks", "RelatedPeople", "RelatedEvents", "RelatedTopics",
@@ -78,7 +92,7 @@
   var data = {};      // collection id -> array of rows
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
-  var ASSET_V = "12";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "13";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 

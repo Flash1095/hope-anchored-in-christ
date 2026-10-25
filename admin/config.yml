@@ -401,3 +401,88 @@ collections:
       - {label: "Image Source", name: "ImageSource", widget: "string"}
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "apologetics"
+    label: "Apologetics"
+    folder: "content/apologetics"
+    create: true
+    slug: "{{fields.Argument}}"
+    identifier_field: "Argument"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Argument", name: "Argument", widget: "string"}
+      - {label: "Category", name: "Category", widget: "select", options: ["Philosophy", "Science", "History", "Experience"]}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Key Points", name: "KeyPoints", widget: "list"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "objections"
+    label: "Objections & Answers"
+    folder: "content/objections"
+    create: true
+    slug: "{{fields.Objection}}"
+    identifier_field: "Objection"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Objection", name: "Objection", widget: "string"}
+      - {label: "Worldview", name: "Worldview", widget: "select", options: ["Atheism", "Islam", "Judaism", "Hinduism", "Buddhism", "Skepticism", "Other"]}
+      - {label: "Objection Summary", name: "ObjectionSummary", widget: "text"}
+      - {label: "Response", name: "Response", widget: "text"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "perspectives"
+    label: "Perspectives"
+    folder: "content/perspectives"
+    create: true
+    slug: "{{fields.Profession}}"
+    identifier_field: "Profession"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Profession", name: "Profession", widget: "string"}
+      - {label: "Exemplar", name: "Exemplar", widget: "string"}
+      - {label: "Method", name: "Method", widget: "text"}
+      - {label: "Biblical Insight", name: "BiblicalInsight", widget: "text"}
+      - {label: "Key Work", name: "KeyWork", widget: "string"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "heritage"
+    label: "Christian Heritage"
+    folder: "content/heritage"
+    create: true
+    slug: "{{fields.Name}}"
+    identifier_field: "Name"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Name", name: "Name", widget: "string"}
+      - {label: "Type", name: "Type", widget: "select", options: ["Figure", "Writing", "Event", "Movement"]}
+      - {label: "Era", name: "Era", widget: "string"}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Contribution", name: "Contribution", widget: "text"}
+      - {label: "Key Works", name: "KeyWorks", widget: "list"}
+      - {label: "Testimony", name: "Testimony", widget: "text"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "politics"
+    label: "Faith & Politics"
+    folder: "content/politics"
+    create: true
+    slug: "{{fields.Issue}}"
+    identifier_field: "Issue"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Issue", name: "Issue", widget: "string"}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Biblical Principles", name: "BiblicalPrinciples", widget: "text"}
+      - {label: "Biblical Response", name: "BiblicalResponse", widget: "text"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Pitfalls", name: "Pitfalls", widget: "text"}
+      - {label: "Slug", name: "Slug", widget: "string"}
