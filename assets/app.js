@@ -23,9 +23,6 @@
     { id: "finds", label: "Ancient Discoveries", file: "content/finds.json", primary: "FindName",
       blurb: "Archaeological finds that illuminate the Bible.",
       filters: [{ label: "Era", field: "TimelineEra" }], meta: ["DiscoveryLocation", "ArtifactDate"] },
-    { id: "events", label: "Events", file: "content/events.json", primary: "EventName",
-      blurb: "The great events of the biblical story.",
-      filters: [{ label: "Era", field: "TimelineEra" }], meta: ["DateApprox", "Place"] },
     { id: "places", label: "Biblical Places", file: "content/places.json", primary: "Name",
       blurb: "Where the story happened, and where those places are today.",
       filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }],
@@ -99,7 +96,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "17";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "18";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -351,7 +348,7 @@
     var placesMap = nameMap("places", "Name");
     var booksMap = nameMap("books", "Book");
     var findsList = (data.finds || []).map(function (r, i) { return { name: val(r, "FindName"), idx: i }; }).filter(function (f) { return !isEmpty(f.name); });
-    var eventsList = (data.events || []).map(function (r, i) { return { name: val(r, "EventName"), idx: i }; }).filter(function (e) { return !isEmpty(e.name); });
+    var eventsList = (data.stories || []).map(function (r, i) { return { name: val(r, "Story"), idx: i }; }).filter(function (e) { return !isEmpty(e.name); });
     function chips(value, map, collId) {
       return splitList(value).map(function (n) {
         var i = map[n];
@@ -389,7 +386,7 @@
       eventsList.forEach(function (e) {
         if (e.name.length >= 4 && !seen[e.name] && hay.indexOf(e.name.toLowerCase()) !== -1) {
           seen[e.name] = true;
-          out.push('<a class="conn-chip" href="#/events/' + e.idx + '">' + esc(e.name) + "</a>");
+          out.push('<a class="conn-chip" href="#/stories/' + e.idx + '">' + esc(e.name) + "</a>");
         }
       });
       return out.join("");

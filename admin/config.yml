@@ -135,26 +135,6 @@ collections:
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Related Books", name: "RelatedBooks", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
-  - name: "events"
-    label: "Events"
-    folder: "content/events"
-    create: true
-    slug: "{{fields.EventName}}"
-    identifier_field: "EventName"
-    extension: "json"
-    format: "json"
-    fields:
-      - {label: "Event Name", name: "EventName", widget: "string"}
-      - {label: "Date Approx", name: "DateApprox", widget: "string"}
-      - {label: "Timeline Era", name: "TimelineEra", widget: "string"}
-      - {label: "Place", name: "Place", widget: "list"}
-      - {label: "Key People", name: "KeyPeople", widget: "list"}
-      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
-      - {label: "Scripture Reference", name: "ScriptureReference", widget: "list"}
-      - {label: "Summary", name: "Summary", widget: "text"}
-      - {label: "Significance", name: "Significance", widget: "text"}
-      - {label: "Related Finds", name: "RelatedFinds", widget: "list"}
-      - {label: "Slug", name: "Slug", widget: "string"}
   - name: "places"
     label: "Biblical Places"
     folder: "content/places"
@@ -514,12 +494,18 @@ collections:
       - {label: "Story", name: "Story", widget: "string"}
       - {label: "Testament", name: "Testament", widget: "select", options: ["Old Testament", "New Testament"]}
       - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Summary", name: "Summary", widget: "text"}
       - {label: "Retelling", name: "Retelling", widget: "text"}
-      - {label: "Key People", name: "KeyPeople", widget: "list"}
-      - {label: "Themes", name: "Themes", widget: "list"}
       - {label: "Discussion", name: "Discussion", widget: "text"}
+      - {label: "Significance", name: "Significance", widget: "text"}
+      - {label: "Themes", name: "Themes", widget: "list"}
+      - {label: "Date Approx", name: "DateApprox", widget: "string"}
+      - {label: "Timeline Era", name: "TimelineEra", widget: "string"}
+      - {label: "Place", name: "Place", widget: "string"}
+      - {label: "Key People", name: "KeyPeople", widget: "list"}
       - {label: "Related Books", name: "RelatedBooks", widget: "list"}
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Related Finds", name: "RelatedFinds", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
   - name: "pages"
     label: "Site Pages"
@@ -534,5 +520,5 @@ collections:
             name: "blurbs"
             widget: "list"
             fields:
-              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "events", "places", "topics", "themes", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories"]}
+              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "places", "topics", "themes", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories"]}
               - {label: "Description", name: "blurb", widget: "text"}
