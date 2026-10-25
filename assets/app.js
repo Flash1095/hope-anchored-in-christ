@@ -104,7 +104,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "30";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "31";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -949,8 +949,8 @@
         var offset = (r.top + r.height / 2) - vh / 2;
         var bg = scene.querySelector(".comic-scene-bg");
         var art = scene.querySelector(".comic-scene-art");
-        if (bg) bg.style.transform = "translateY(" + Math.max(-18, Math.min(18, offset * -0.05)) + "px)";
-        if (art) art.style.transform = "translateY(" + Math.max(-45, Math.min(45, offset * -0.14)) + "px)";
+        if (bg) bg.style.transform = "translateY(" + Math.max(-r.height * 0.05, Math.min(r.height * 0.05, offset * -0.10)) + "px)";
+        if (art) art.style.transform = "translateY(" + Math.max(-r.height * 0.12, Math.min(r.height * 0.12, offset * -0.30)) + "px)";
       });
     }
     function onComicScroll() {
