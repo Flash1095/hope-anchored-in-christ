@@ -98,7 +98,7 @@
     "RelatedDoctrines", "RelatedQuestions", "RelatedFinds", "RelatedBook",
     "KeyPersons", "KeyPeople", "BibleBooks", "Places", "Events",
     "KeyScriptures", "KeyPassages", "KeyVerses", "ScriptureReference",
-    "ScriptureIlluminated", "BibleReferences", "Tags", "Place", "Prophet", "Course"];
+    "ScriptureIlluminated", "BibleReferences", "Tags", "Themes", "Place", "Prophet", "Course"];
   var SNIPPET_FIELDS = ["Summary", "Description", "Story", "Definition", "ShortAnswer",
     "ProphecySummary", "Explanation", "BiblicalUsage", "Beliefs"];
   var SKIP_FIELDS = ["Slug", "Maps", "Image", "ImageCredit", "ImageSource", "PanelImage", "PanelImageCredit"];
@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "41";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "42";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -227,6 +227,9 @@
         if (p.indexOf(" of ") !== -1) cands[p.split(" of ")[0].trim()] = true;
         var words = p.replace(/,/g, "").split(/\s+/);
         if (words.length > 1) { cands[words[0]] = true; cands[words[words.length - 1]] = true; }
+        // Lowercase form, so lowercase tags ("forgiveness", "trinity") reach
+        // their topic/theme pages. Same uniqueness rule applies.
+        cands[p.toLowerCase()] = true;
         Object.keys(cands).forEach(function (a) {
           if (a && a !== p && a.length > 1) {
             if (!proposed[a]) proposed[a] = {};
