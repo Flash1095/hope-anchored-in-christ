@@ -95,6 +95,24 @@ a:hover { color: var(--gold-dark); }
   border-radius: 999px; padding: 0.5rem 1.4rem; font-weight: 700; margin-top: 0.4rem;
 }
 .buy-btn:hover { background: var(--gold); color: var(--navy); }
+/* ---------- timeline ---------- */
+.tl { position: relative; margin: 1.5rem 0 0 0.6rem; padding-left: 1.8rem; border-left: 3px solid var(--gold); }
+.tl-era { position: relative; margin: 2.2rem 0 1rem -1.8rem; padding-left: 1.8rem; font-size: 1.4rem; font-weight: 700; color: var(--navy); font-family: Georgia, "Times New Roman", serif; }
+.tl-era::before { content: ""; position: absolute; left: -11px; top: 0.3rem; width: 20px; height: 20px; border-radius: 50%; background: var(--gold); border: 3px solid #fff; box-shadow: 0 0 0 1px var(--gold); }
+.tl-node { position: relative; margin: 0 0 1.4rem; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.2rem; }
+.tl-node::before { content: ""; position: absolute; left: calc(-1.8rem - 9px); top: 1.4rem; width: 12px; height: 12px; border-radius: 50%; background: var(--navy); border: 3px solid var(--gold); }
+.tl-node h3 { margin: 0.15rem 0 0.3rem; font-size: 1.2rem; }
+.tl-node h3 a { color: var(--navy); text-decoration: none; }
+.tl-node h3 a:hover { text-decoration: underline; }
+.tl-date { margin: 0; font-weight: 700; color: var(--gold-dark); font-size: 0.9rem; }
+.tl-desc { margin: 0.3rem 0; }
+.tl-meta { margin: 0.3rem 0 0; color: var(--muted); font-size: 0.9rem; font-style: italic; }
+.tl-conn { margin: 0.55rem 0 0; font-size: 0.9rem; line-height: 1.7; }
+.conn-label { font-weight: 700; color: var(--muted); margin-right: 0.3rem; }
+.conn-chip { display: inline-block; background: var(--sage-light); color: var(--navy); border-radius: 999px; padding: 0.1rem 0.65rem; font-weight: 600; text-decoration: none; margin: 0.1rem 0.25rem 0.1rem 0; }
+.conn-chip:hover { text-decoration: underline; }
+.conn-chip.gold { background: #f3e8cf; }
+.conn-plain { margin-right: 0.25rem; }
 .badge {
   display: inline-block; background: var(--sage-light); color: var(--navy);
   border-radius: 999px; padding: 0.1rem 0.65rem; font-size: 0.8rem; font-weight: 700;

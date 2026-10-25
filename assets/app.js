@@ -145,6 +145,7 @@
   function viewCollection(id, idx, params) {
     var c = coll(id);
     if (!c) return viewHome();
+    if (id === "timeline" && (idx === undefined || idx === null || idx === "")) return viewTimeline(params);
     if (c.special === "quizzes") return idx ? viewQuizPlay(idx, params) : viewQuizList(params);
     if (idx !== undefined && idx !== null && idx !== "") return viewDetail(c, parseInt(idx, 10));
     var rows = data[id] || [];
@@ -230,6 +231,133 @@
         });
         syncUrl();
         renderGrid();
+      });
+    });
+    window.scrollTo(0, 0);
+  }
+  /* ---------- timeline: a real vertical timeline with connections ---------- */
+  function viewTimeline(params) {
+    var rows = data.timeline || [];
+    var state = { q: (params.get("q") || ""), era: (params.get("f_Era") || "") };
+    var eras = [];
+    rows.forEach(function (r) { var e = val(r, "Era"); if (!isEmpty(e) && eras.indexOf(e) === -1) eras.push(e); });
+    function nameMap(collId, primary) {
+      var m = {};
+      (data[collId] || []).forEach(function (r, i) { var p = val(r, primary); if (!isEmpty(p) && m[p] === undefined) m[p] = i; });
+      return m;
+    }
+    var peopleMap = nameMap("people", "Name");
+    var placesMap = nameMap("places", "Name");
+    var booksMap = nameMap("books", "Book");
+    var findsList = (data.finds || []).map(function (r, i) { return { name: val(r, "FindName"), idx: i }; }).filter(function (f) { return !isEmpty(f.name); });
+    var eventsList = (data.events || []).map(function (r, i) { return { name: val(r, "EventName"), idx: i }; }).filter(function (e) { return !isEmpty(e.name); });
+    function chips(value, map, collId) {
+      return splitList(value).map(function (n) {
+        var i = map[n];
+        if (i !== undefined) return '<a class="conn-chip" href="#/' + collId + "/" + i + '">' + esc(n) + "</a>";
+        return '<span class="conn-plain">' + esc(n) + "</span>";
+      }).join("");
+    }
+    function findMatch(token) {
+      var t = token.toLowerCase(), hit = null;
+      findsList.forEach(function (f) {
+        if (hit) return;
+        var name = f.name.toLowerCase();
+        if (t.indexOf(name) !== -1) { hit = f; return; }
+        var core = name.split(" (")[0];
+        if (core !== name && t.indexOf(core) !== -1) { hit = f; return; }
+        var words = name.split(" ");
+        while (words.length > 1) {
+          words.pop();
+          var prefix = words.join(" ");
+          if (prefix.length >= 10 && t.indexOf(prefix) !== -1) { hit = f; return; }
+        }
+      });
+      return hit;
+    }
+    function findChips(value) {
+      return splitList(value).map(function (t) {
+        var hit = findMatch(t);
+        if (hit) return '<a class="conn-chip gold" href="#/finds/' + hit.idx + '">' + esc(t) + "</a>";
+        return '<span class="conn-plain">' + esc(t) + "</span>";
+      }).join("");
+    }
+    function eventChips(row) {
+      var hay = (val(row, "Title") + " " + val(row, "Events")).toLowerCase();
+      var seen = {}, out = [];
+      eventsList.forEach(function (e) {
+        if (e.name.length >= 4 && !seen[e.name] && hay.indexOf(e.name.toLowerCase()) !== -1) {
+          seen[e.name] = true;
+          out.push('<a class="conn-chip" href="#/events/' + e.idx + '">' + esc(e.name) + "</a>");
+        }
+      });
+      return out.join("");
+    }
+    function connGroup(labelText, inner) {
+      if (!inner) return "";
+      return '<p class="tl-conn"><span class="conn-label">' + labelText + ":</span> " + inner + "</p>";
+    }
+    function filtered() {
+      var q = state.q.toLowerCase();
+      return rows.map(function (r, i) { return { row: r, idx: i }; }).filter(function (item) {
+        var r = item.row;
+        if (state.era && val(r, "Era") !== state.era) return false;
+        if (q) {
+          var hay = Object.keys(r).map(function (k) { return val(r, k); }).join(" ").toLowerCase();
+          if (hay.indexOf(q) === -1) return false;
+        }
+        return true;
+      });
+    }
+    function renderTl() {
+      var wrap = document.getElementById("tlWrap");
+      if (!wrap) return;
+      var items = filtered();
+      if (!items.length) { wrap.innerHTML = '<p class="empty">Nothing matches. Try clearing the search or filters.</p>'; return; }
+      var html = '<div class="tl">', lastEra = null;
+      items.forEach(function (item) {
+        var r = item.row;
+        var era = val(r, "Era");
+        if (era !== lastEra) { html += '<div class="tl-era">' + esc(era) + "</div>"; lastEra = era; }
+        html += '<article class="tl-node">' +
+          '<p class="tl-date">' + esc(val(r, "DateApprox")) + "</p>" +
+          '<h3><a href="#/timeline/' + item.idx + '">' + esc(val(r, "Title")) + "</a></h3>" +
+          (isEmpty(val(r, "Events")) ? "" : '<p class="tl-desc">' + esc(val(r, "Events")) + "</p>") +
+          (isEmpty(val(r, "ScriptureReference")) ? "" : '<p class="tl-meta">' + esc(val(r, "ScriptureReference")) + "</p>") +
+          connGroup("People", chips(val(r, "KeyPersons"), peopleMap, "people")) +
+          connGroup("Places", chips(val(r, "Places"), placesMap, "places")) +
+          connGroup("Books", chips(val(r, "BibleBooks"), booksMap, "books")) +
+          connGroup("Events", eventChips(r)) +
+          connGroup("Archaeology", isEmpty(val(r, "ArchaeologicalFinds")) ? "" : findChips(val(r, "ArchaeologicalFinds"))) +
+          "</article>";
+      });
+      html += "</div>";
+      wrap.innerHTML = html;
+    }
+    function syncUrl() {
+      var p = new URLSearchParams();
+      if (state.q) p.set("q", state.q);
+      if (state.era) p.set("f_Era", state.era);
+      var s = p.toString();
+      history.replaceState(null, "", "#/timeline" + (s ? "?" + s : ""));
+    }
+    var html = "<h2>Timeline</h2><p class='page-intro'>The whole story, era by era, from Creation to the Early Church — " +
+      "with the people, places, events, and discoveries connected at every step. &middot; " + rows.length + " entries</p>";
+    html += '<div class="controls"><input type="search" id="tlSearch" placeholder="Search the timeline…" value="' + esc(state.q) + '">';
+    html += '<div class="chips"><span class="chip-label">Era:</span>';
+    html += '<button class="chip' + (state.era === "" ? " active" : "") + '" data-era="">All</button>';
+    eras.forEach(function (e) {
+      html += '<button class="chip' + (state.era === e ? " active" : "") + '" data-era="' + esc(e) + '">' + esc(e) + "</button>";
+    });
+    html += "</div></div><div id='tlWrap'></div>";
+    app.innerHTML = html;
+    renderTl();
+    document.getElementById("tlSearch").addEventListener("input", function (e) { state.q = e.target.value; syncUrl(); renderTl(); });
+    app.querySelectorAll("[data-era]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        state.era = btn.getAttribute("data-era");
+        btn.parentNode.querySelectorAll("[data-era]").forEach(function (b) { b.classList.toggle("active", b.getAttribute("data-era") === state.era); });
+        syncUrl(); renderTl();
       });
     });
     window.scrollTo(0, 0);
