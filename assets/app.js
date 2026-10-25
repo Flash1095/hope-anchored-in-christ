@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "40";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "41";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -200,15 +200,15 @@
     COLLECTIONS.forEach(function (c) {
       (data[c.id] || []).forEach(function (row, idx) {
         var p = val(row, c.primary);
-        if (!isEmpty(p) && !linkIndex[p]) linkIndex[p] = { coll: c.id, idx: idx };
+        if (!isEmpty(p) && !linkIndex[p]) linkIndex[p] = { coll: c.id, idx: idx, display: p };
         if (c.id === "wordstudies") {
           var w = val(row, "Word");
-          if (!isEmpty(w) && !linkIndex[w]) linkIndex[w] = { coll: c.id, idx: idx };
+          if (!isEmpty(w) && !linkIndex[w]) linkIndex[w] = { coll: c.id, idx: idx, display: p };
         }
         if (c.id === "questions") {
           // RelatedQuestions stores slugs in most collections, not titles.
           var s = val(row, "Slug");
-          if (!isEmpty(s) && !linkIndex[s]) linkIndex[s] = { coll: c.id, idx: idx };
+          if (!isEmpty(s) && !linkIndex[s]) linkIndex[s] = { coll: c.id, idx: idx, display: p };
         }
       });
     });
@@ -244,7 +244,7 @@
     if (REL_FIELDS.indexOf(field) === -1) return esc(value);
     return splitList(value).map(function (token) {
       var hit = linkIndex[token];
-      if (hit) return '<a href="#/' + hit.coll + "/" + hit.idx + '">' + esc(token) + "</a>";
+      if (hit) return '<a href="#/' + hit.coll + "/" + hit.idx + '">' + esc(hit.display || token) + "</a>";
       return esc(token);
     }).join("; ");
   }
