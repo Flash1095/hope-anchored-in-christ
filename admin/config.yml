@@ -507,6 +507,24 @@ collections:
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Related Finds", name: "RelatedFinds", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "hermeneutics"
+    label: "Biblical Hermeneutics"
+    folder: "content/hermeneutics"
+    create: true
+    slug: "{{fields.Principle}}"
+    identifier_field: "Principle"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Principle", name: "Principle", widget: "string"}
+      - {label: "Category", name: "Category", widget: "select", options: ["Context", "Genre", "Device", "Principle"]}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "How to Apply", name: "HowToApply", widget: "text"}
+      - {label: "Scripture Example", name: "ScriptureExample", widget: "text"}
+      - {label: "Common Mistake", name: "CommonMistake", widget: "text"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
   - name: "pages"
     label: "Site Pages"
     files:
@@ -520,5 +538,5 @@ collections:
             name: "blurbs"
             widget: "list"
             fields:
-              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "places", "topics", "themes", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories"]}
+              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "places", "topics", "themes", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories", "hermeneutics"]}
               - {label: "Description", name: "blurb", widget: "text"}

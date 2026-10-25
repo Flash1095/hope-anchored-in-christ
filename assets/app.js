@@ -81,6 +81,9 @@
   { id: "stories", label: "Biblical Stories & Events", file: "content/stories.json", primary: "Story",
     blurb: "Beloved Bible stories and events retold in detail — with the people, the meaning, and what they mean for us today.",
     filters: [{ label: "Testament", field: "Testament" }], meta: ["Testament"] },
+  { id: "hermeneutics", label: "Biblical Hermeneutics", file: "content/hermeneutics.json", primary: "Principle",
+    blurb: "How to interpret Scripture rightly — context, literary genres, literary devices, and principles for handling God's Word with care.",
+    filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
 ];
 
   var REL_FIELDS = ["RelatedBooks", "RelatedPeople", "RelatedEvents", "RelatedTopics",
@@ -96,7 +99,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "20";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "21";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
