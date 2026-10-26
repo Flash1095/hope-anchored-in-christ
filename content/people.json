@@ -6346,5 +6346,44 @@
     "LifeLesson": "God's story keeps moving through families we know almost nothing about — and He knows them all.",
     "Slug": "zithri",
     "Places": "Egypt"
+  },
+  {
+    "Name": "Dibri",
+    "Role": "Father of Shelomith",
+    "Testament": "Old",
+    "TimelineEra": "Exodus and Wilderness",
+    "Summary": "Dibri was of the tribe of Dan, and the father of Shelomith.",
+    "KeyStory": "Dibri is named only as Shelomith's father, in the account of his grandson's blasphemy and stoning.",
+    "KeyVerses": "Leviticus 24:11",
+    "RelatedBooks": "Leviticus",
+    "RelatedPeople": "Shelomith; Son of Shelomith",
+    "LifeLesson": "Even a single mention means God did not overlook him.",
+    "Slug": "dibri"
+  },
+  {
+    "Name": "Shelomith",
+    "Role": "Daughter of Dibri",
+    "Testament": "Old",
+    "TimelineEra": "Exodus and Wilderness",
+    "Summary": "Shelomith was the daughter of Dibri, of the tribe of Dan, and the mother of the man who blasphemed the Name and was stoned.",
+    "KeyStory": "Shelomith's son fought with an Israelite in the camp, blasphemed the Name, and was put in custody until Moses inquired of the LORD — and her name is preserved in the law that followed.",
+    "KeyVerses": "Leviticus 24:10-11",
+    "RelatedBooks": "Leviticus",
+    "RelatedPeople": "Dibri; Son of Shelomith; Moses",
+    "LifeLesson": "A mother's name can be remembered even in her family's hardest chapter — God does not look away.",
+    "Slug": "shelomith"
+  },
+  {
+    "Name": "Son of Shelomith",
+    "Role": "The Blasphemer",
+    "Testament": "Old",
+    "TimelineEra": "Exodus and Wilderness",
+    "Summary": "The son of Shelomith — Scripture gives him no name — was a man of mixed parentage, his father an Egyptian, who blasphemed the Name during a fight in the camp.",
+    "KeyStory": "After he cursed the Name, Moses put him in custody, inquired of the LORD, and the whole congregation stoned him outside the camp — establishing the law that whoever blasphemes the Name shall be put to death.",
+    "KeyVerses": "Leviticus 24:10-23",
+    "RelatedBooks": "Leviticus",
+    "RelatedPeople": "Shelomith; Dibri; Moses",
+    "LifeLesson": "Words against God's holy Name are no small thing: what we say about Him reveals what we believe about Him.",
+    "Slug": "son-of-shelomith"
   }
 ]
