@@ -66,6 +66,8 @@ a:hover { color: var(--gold-dark); }
 /* Banner */
 .banner { position: relative; }
 .banner img { display: block; width: 100%; height: auto; }
+/* Lower banner — full-width strip above the footer, on every page */
+.lower-banner img { display: block; width: 100%; height: auto; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .banner-title {
   position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
