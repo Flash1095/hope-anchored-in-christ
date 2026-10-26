@@ -79,6 +79,13 @@ a:hover { color: var(--gold-dark); }
 .banner-title p { margin: 0.3rem 0 0; font-style: italic; color: var(--navy); }
 .about-photo { display: block; width: 100%; max-width: 720px; margin: 0 auto 1.5rem; border-radius: 12px; }
 
+/* About page enrichment — same words and photo, more visual interest */
+.about-photo-frame { max-width: 720px; margin: 0 auto 1.5rem; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 0.6rem; box-shadow: 0 4px 16px rgba(27, 42, 78, 0.10); }
+.about-photo-frame .about-photo { margin: 0; }
+.about-page h3 { border-left: 4px solid var(--gold); padding-left: 0.7rem; }
+.about-lead::first-letter { font-family: "Playfair Display", Georgia, serif; font-size: 3.2rem; line-height: 0.85; float: left; padding: 0.3rem 0.5rem 0 0; color: var(--navy); font-weight: 700; }
+.about-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1.2rem 0; }
+
 /* Layout */
 .content { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
 .page-intro { color: var(--muted); max-width: 720px; }

@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "76";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "77";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1425,10 +1425,12 @@
     onComicScroll();
   }
   function viewAbout() {
-    app.innerHTML = "<h2>About</h2><div class='post-body'>" +
-      "<img class='about-photo' src='assets/about-photo.jpg' alt='Lorraine and her husband outdoors'>" +
+    var total = COLLECTIONS.reduce(function (sum, c) { return sum + (data[c.id] || []).length; }, 0);
+    app.innerHTML = "<h2>About</h2><div class='post-body about-page'>" +
+      "<figure class='about-photo-frame'><img class='about-photo' src='assets/about-photo.jpg' alt='Lorraine and her husband outdoors'></figure>" +
+      '<div class="verse-band">&ldquo;We have this hope as an anchor for the soul, firm and secure.&rdquo; &mdash; Hebrews 6:19</div>' +
       "<h3>Our Story</h3>" +
-      "<p>Our story begins with two very different but deeply meaningful paths that God wove together for a purpose bigger than ourselves. " +
+      "<p class='about-lead'>Our story begins with two very different but deeply meaningful paths that God wove together for a purpose bigger than ourselves. " +
       "I was raised by my grandmother, a strong, faithful woman who stepped in when both my parents — due to mental illness and " +
       "instability — were unable to care for me. Though she had already faced the pain of divorce and thought her season of raising " +
       "children had ended, she took on the enormous responsibility of raising her grandchild with unwavering love and dedication.</p>" +
@@ -1462,6 +1464,12 @@
       "reflections on how Christian truth interacts with history, culture, science, philosophy, psychology, and art. Each topic is approached " +
       "with the goal of encouraging truth-seeking, grounded faith, and thoughtful living. Whether you're new in your walk or have been on the " +
       "journey for years, this space is for those hungry to grow in truth and hope — anchored firmly in Christ.</p>" +
+      '<div class="stats">' +
+      '<div class="stat"><strong>' + COLLECTIONS.length + "</strong><span>collections</span></div>" +
+      '<div class="stat"><strong>' + total + "</strong><span>entries</span></div>" +
+      '<div class="stat"><strong>' + (data.books || []).length + "</strong><span>books of the Bible</span></div>" +
+      '<div class="stat"><strong>' + quizGroups().length + "</strong><span>quizzes</span></div></div>" +
+      '<div class="about-actions"><a class="btn" href="#/explore">Explore the collections</a><a class="btn" href="#/bible">Read the Bible</a><a class="btn" href="#/blog">Visit the blog</a></div>' +
       "<h3>The meaning behind our name</h3>" +
       "<p>The name Hope Anchored in Christ comes from a deep place in both of our hearts and stories. Life has brought storms, heartache, " +
       "questions, and seasons of waiting — but through it all, one thing has remained constant: the hope we have in Jesus. It's not a shallow " +
