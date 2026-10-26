@@ -107,8 +107,17 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "45";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "46";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
+  var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
+  // A related field's home collection: a RelatedEvents token that matches a
+  // story title must land on the story page, not on a timeline/topic page
+  // that happens to share the name and comes first in COLLECTIONS order.
+  var FIELD_HOME = { RelatedBooks: "books", RelatedBook: "books", BibleBooks: "books",
+    RelatedPeople: "people", KeyPeople: "people", KeyPersons: "people", Prophet: "people",
+    RelatedEvents: "stories", Events: "stories", RelatedTopics: "topics", Themes: "themes",
+    RelatedDoctrines: "doctrines", RelatedQuestions: "questions", RelatedFinds: "finds",
+    Places: "places", Place: "places", Course: "courses" };
   var app = document.getElementById("app");
 
   function esc(s) {
@@ -202,15 +211,24 @@
     COLLECTIONS.forEach(function (c) {
       (data[c.id] || []).forEach(function (row, idx) {
         var p = val(row, c.primary);
+        if (!linkIndexByColl[c.id]) linkIndexByColl[c.id] = {};
+        var put = function (key) {
+          if (isEmpty(key)) return;
+          if (!linkIndexByColl[c.id][key]) linkIndexByColl[c.id][key] = { coll: c.id, idx: idx, display: p };
+          if (!linkIndexByColl[c.id][key.toLowerCase()]) linkIndexByColl[c.id][key.toLowerCase()] = { coll: c.id, idx: idx, display: p };
+        };
         if (!isEmpty(p) && !linkIndex[p]) linkIndex[p] = { coll: c.id, idx: idx, display: p };
+        put(p);
         if (c.id === "wordstudies") {
           var w = val(row, "Word");
           if (!isEmpty(w) && !linkIndex[w]) linkIndex[w] = { coll: c.id, idx: idx, display: p };
+          put(w);
         }
         if (c.id === "questions") {
           // RelatedQuestions stores slugs in most collections, not titles.
           var s = val(row, "Slug");
           if (!isEmpty(s) && !linkIndex[s]) linkIndex[s] = { coll: c.id, idx: idx, display: p };
+          put(s);
         }
       });
     });
@@ -248,10 +266,13 @@
   function linkifyField(field, value) {
     if (REL_FIELDS.indexOf(field) === -1) return esc(value);
     return splitList(value).map(function (token) {
-      // Exact match first; then the lowercase alias, so a token that differs
-      // from its entry only by capitalisation ("New life" vs "New Life")
-      // still links instead of staying plain.
-      var hit = linkIndex[token] || linkIndex[token.toLowerCase()];
+      // The field's home collection first (a RelatedEvents token goes to its
+      // story page even when a timeline/topic entry shares the name), then
+      // the global index, then the lowercase alias for case-only variants.
+      var home = FIELD_HOME[field];
+      var homeIdx = home && linkIndexByColl[home];
+      var hit = (homeIdx && (homeIdx[token] || homeIdx[token.toLowerCase()])) ||
+        linkIndex[token] || linkIndex[token.toLowerCase()];
       if (hit) return '<a href="#/' + hit.coll + "/" + hit.idx + '">' + esc(hit.display || token) + "</a>";
       return esc(token);
     }).join("; ");
