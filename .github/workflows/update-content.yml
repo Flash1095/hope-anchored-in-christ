@@ -15,10 +15,12 @@ jobs:
           python-version: "3.12"
       - name: Rebuild aggregate JSON from edited entries
         run: python3 scripts/build_content.py --from-entries
+      - name: Regenerate static post pages, sitemap and robots
+        run: python3 scripts/generate_static.py
       - name: Commit rebuilt content
         run: |
           git config user.name "Content Bot"
           git config user.email "content-bot@users.noreply.github.com"
-          git add content/
+          git add content/ blog/ sitemap.xml robots.txt
           git diff --cached --quiet || git commit -m "Rebuild site content [skip ci]"
           git push

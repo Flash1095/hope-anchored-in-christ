@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://flash1095.github.io/hope-anchored-in-christ/sitemap.xml
