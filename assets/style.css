@@ -29,7 +29,7 @@
 body {
   margin: 0;
   font-family: "Source Sans 3", system-ui, -apple-system, sans-serif;
-  background: #ffffff url("floral-wash.jpg?v=90") center top / cover fixed;
+  background: var(--ivory);
   color: var(--ink);
   line-height: 1.6;
 }
@@ -346,4 +346,16 @@ img { max-width: 100%; }
   .post-row-card { flex-direction: column; }
   .post-row-art { width: 100%; aspect-ratio: 16 / 9; }
   .post-row-body { padding: 1rem; }
+}
+
+/* Side flowers — Lorraine's own wildflowers framing every page, like watercolor sprigs down the edges */
+.side-flower {
+  position: fixed; top: 0; bottom: 0; z-index: 1; pointer-events: none;
+  width: max(34px, calc((100vw - 1100px) / 2));
+  background-size: cover; background-repeat: no-repeat;
+}
+.side-left { left: 0; background-image: url("side-left.jpg?v=91"); background-position: left center; }
+.side-right { right: 0; background-image: url("side-right.jpg?v=91"); background-position: right center; }
+@media (max-width: 1100px) {
+  .content { padding-left: 2.75rem; padding-right: 2.75rem; }
 }
