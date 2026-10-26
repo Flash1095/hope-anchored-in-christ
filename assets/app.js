@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "51";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "52";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -986,6 +986,255 @@
       "</div>";
     window.scrollTo(0, 0);
   }
+  /* ---------- Bible (KJV, public domain) ---------- */
+  /* The full King James text lives in content/bible/<slug>.json, one file per
+     book, generated from the public-domain 1769 text. Names in the text link
+     to the site's people, place, and story articles through the same link
+     index the collections use; other collections attach at the chapter level
+     through the scripture references already on their entries. NIV and ESV
+     are copyrighted, so they are reached through BibleGateway links, not
+     copied here. */
+  var BIBLE_BOOKS = [
+    { slug: "genesis", name: "Genesis", chapters: 50, testament: "Old" },
+    { slug: "exodus", name: "Exodus", chapters: 40, testament: "Old" },
+    { slug: "leviticus", name: "Leviticus", chapters: 27, testament: "Old" },
+    { slug: "numbers", name: "Numbers", chapters: 36, testament: "Old" },
+    { slug: "deuteronomy", name: "Deuteronomy", chapters: 34, testament: "Old" },
+    { slug: "joshua", name: "Joshua", chapters: 24, testament: "Old" },
+    { slug: "judges", name: "Judges", chapters: 21, testament: "Old" },
+    { slug: "ruth", name: "Ruth", chapters: 4, testament: "Old" },
+    { slug: "1-samuel", name: "1 Samuel", chapters: 31, testament: "Old" },
+    { slug: "2-samuel", name: "2 Samuel", chapters: 24, testament: "Old" },
+    { slug: "1-kings", name: "1 Kings", chapters: 22, testament: "Old" },
+    { slug: "2-kings", name: "2 Kings", chapters: 25, testament: "Old" },
+    { slug: "1-chronicles", name: "1 Chronicles", chapters: 29, testament: "Old" },
+    { slug: "2-chronicles", name: "2 Chronicles", chapters: 36, testament: "Old" },
+    { slug: "ezra", name: "Ezra", chapters: 10, testament: "Old" },
+    { slug: "nehemiah", name: "Nehemiah", chapters: 13, testament: "Old" },
+    { slug: "esther", name: "Esther", chapters: 10, testament: "Old" },
+    { slug: "job", name: "Job", chapters: 42, testament: "Old" },
+    { slug: "psalms", name: "Psalms", chapters: 150, testament: "Old" },
+    { slug: "proverbs", name: "Proverbs", chapters: 31, testament: "Old" },
+    { slug: "ecclesiastes", name: "Ecclesiastes", chapters: 12, testament: "Old" },
+    { slug: "song-of-solomon", name: "Song of Solomon", chapters: 8, testament: "Old" },
+    { slug: "isaiah", name: "Isaiah", chapters: 66, testament: "Old" },
+    { slug: "jeremiah", name: "Jeremiah", chapters: 52, testament: "Old" },
+    { slug: "lamentations", name: "Lamentations", chapters: 5, testament: "Old" },
+    { slug: "ezekiel", name: "Ezekiel", chapters: 48, testament: "Old" },
+    { slug: "daniel", name: "Daniel", chapters: 12, testament: "Old" },
+    { slug: "hosea", name: "Hosea", chapters: 14, testament: "Old" },
+    { slug: "joel", name: "Joel", chapters: 3, testament: "Old" },
+    { slug: "amos", name: "Amos", chapters: 9, testament: "Old" },
+    { slug: "obadiah", name: "Obadiah", chapters: 1, testament: "Old" },
+    { slug: "jonah", name: "Jonah", chapters: 4, testament: "Old" },
+    { slug: "micah", name: "Micah", chapters: 7, testament: "Old" },
+    { slug: "nahum", name: "Nahum", chapters: 3, testament: "Old" },
+    { slug: "habakkuk", name: "Habakkuk", chapters: 3, testament: "Old" },
+    { slug: "zephaniah", name: "Zephaniah", chapters: 3, testament: "Old" },
+    { slug: "haggai", name: "Haggai", chapters: 2, testament: "Old" },
+    { slug: "zechariah", name: "Zechariah", chapters: 14, testament: "Old" },
+    { slug: "malachi", name: "Malachi", chapters: 4, testament: "Old" },
+    { slug: "matthew", name: "Matthew", chapters: 28, testament: "New" },
+    { slug: "mark", name: "Mark", chapters: 16, testament: "New" },
+    { slug: "luke", name: "Luke", chapters: 24, testament: "New" },
+    { slug: "john", name: "John", chapters: 21, testament: "New" },
+    { slug: "acts", name: "Acts", chapters: 28, testament: "New" },
+    { slug: "romans", name: "Romans", chapters: 16, testament: "New" },
+    { slug: "1-corinthians", name: "1 Corinthians", chapters: 16, testament: "New" },
+    { slug: "2-corinthians", name: "2 Corinthians", chapters: 13, testament: "New" },
+    { slug: "galatians", name: "Galatians", chapters: 6, testament: "New" },
+    { slug: "ephesians", name: "Ephesians", chapters: 6, testament: "New" },
+    { slug: "philippians", name: "Philippians", chapters: 4, testament: "New" },
+    { slug: "colossians", name: "Colossians", chapters: 4, testament: "New" },
+    { slug: "1-thessalonians", name: "1 Thessalonians", chapters: 5, testament: "New" },
+    { slug: "2-thessalonians", name: "2 Thessalonians", chapters: 3, testament: "New" },
+    { slug: "1-timothy", name: "1 Timothy", chapters: 6, testament: "New" },
+    { slug: "2-timothy", name: "2 Timothy", chapters: 4, testament: "New" },
+    { slug: "titus", name: "Titus", chapters: 3, testament: "New" },
+    { slug: "philemon", name: "Philemon", chapters: 1, testament: "New" },
+    { slug: "hebrews", name: "Hebrews", chapters: 13, testament: "New" },
+    { slug: "james", name: "James", chapters: 5, testament: "New" },
+    { slug: "1-peter", name: "1 Peter", chapters: 5, testament: "New" },
+    { slug: "2-peter", name: "2 Peter", chapters: 3, testament: "New" },
+    { slug: "1-john", name: "1 John", chapters: 5, testament: "New" },
+    { slug: "2-john", name: "2 John", chapters: 1, testament: "New" },
+    { slug: "3-john", name: "3 John", chapters: 1, testament: "New" },
+    { slug: "jude", name: "Jude", chapters: 1, testament: "New" },
+    { slug: "revelation", name: "Revelation", chapters: 22, testament: "New" }
+  ];
+  function bibleBookBySlug(slug) {
+    for (var i = 0; i < BIBLE_BOOKS.length; i++) if (BIBLE_BOOKS[i].slug === slug) return BIBLE_BOOKS[i];
+    return null;
+  }
+  function escapeRegExp(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+  var bibleLinkCache = null;
+  function bibleLinkData() {
+    if (bibleLinkCache) return bibleLinkCache;
+    var map = {};
+    Object.keys(linkIndex).forEach(function (key) {
+      var hit = linkIndex[key];
+      if (hit.coll !== "people" && hit.coll !== "places" && hit.coll !== "stories") return;
+      if (!map[key]) map[key] = hit;
+    });
+    var terms = Object.keys(map).sort(function (a, b) { return b.length - a.length; });
+    var multi = terms.filter(function (t) { return t.indexOf(" ") !== -1; });
+    var single = terms.filter(function (t) { return t.indexOf(" ") === -1; });
+    var lower = {};
+    Object.keys(map).forEach(function (key) {
+      var lk = key.toLowerCase();
+      if (!lower[lk]) lower[lk] = map[key];
+    });
+    bibleLinkCache = {
+      map: map,
+      lower: lower,
+      reMulti: new RegExp("\\b(" + multi.map(escapeRegExp).join("|") + ")\\b", "g"),
+      reSingle: new RegExp("(<a\\b[^>]*>.*?</a>)|\\b(" + single.map(escapeRegExp).join("|") + ")\\b", "gi")
+    };
+    return bibleLinkCache;
+  }
+  function linkifyVerseText(text) {
+    var t = bibleLinkData();
+    var safe = esc(text).replace(/\[([^\]]+)\]/g, "<em>$1</em>");
+    safe = safe.replace(t.reMulti, function (m) {
+      var hit = t.map[m];
+      if (!hit) return m;
+      return '<a href="#/' + hit.coll + '/' + hit.idx + '">' + esc(m) + '</a>';
+    });
+    safe = safe.replace(t.reSingle, function (m, anchor, term) {
+      if (anchor) return anchor;
+      var hit = t.map[term] || t.lower[term.toLowerCase()];
+      if (!hit) return term;
+      return '<a href="#/' + hit.coll + '/' + hit.idx + '">' + esc(term) + '</a>';
+    });
+    return safe;
+  }
+  function parseBibleRef(q) {
+    var low = q.toLowerCase();
+    if (low.indexOf("psalm ") === 0) q = "Psalms " + q.slice(6);
+    else if (low.indexOf("song of songs ") === 0) q = "Song of Solomon " + q.slice(14);
+    else if (low.indexOf("song ") === 0) q = "Song of Solomon " + q.slice(5);
+    var books = BIBLE_BOOKS.slice().sort(function (a, b) { return b.name.length - a.name.length; });
+    for (var i = 0; i < books.length; i++) {
+      var name = books[i].name;
+      if (q.toLowerCase().indexOf(name.toLowerCase()) === 0) {
+        var rest = q.slice(name.length).trim();
+        var m = rest.match(/^(\d+)(?::(\d+))?/);
+        if (m && +m[1] >= 1 && +m[1] <= books[i].chapters) {
+          return { slug: books[i].slug, chapter: +m[1], verse: m[2] ? +m[2] : null };
+        }
+        return null;
+      }
+    }
+    return null;
+  }
+  function viewBible() {
+    function grid(list) {
+      return "<div class='card-grid'>" + list.map(function (b) {
+        return "<a class='card' href='#/bible/" + b.slug + "'><h3>" + esc(b.name) + "</h3><p class='meta'>" + b.chapters + " chapters</p></a>";
+      }).join("") + "</div>";
+    }
+    var ot = BIBLE_BOOKS.filter(function (b) { return b.testament === "Old"; });
+    var nt = BIBLE_BOOKS.filter(function (b) { return b.testament === "New"; });
+    var html = "<h2>Bible</h2><div class='post-body'>" +
+      "<p>Read the King James Version — public domain, free for everyone — with names linked to the site's articles. Tap a person, place, or event in the text to open its article.</p>" +
+      "<p>Looking for another translation? The NIV and ESV are copyrighted, so this reader shows the KJV on-site; every chapter page also links to the same passage on BibleGateway in NIV and ESV.</p>" +
+      '<div class="controls"><input type="search" id="bibleRef" placeholder="Go to a passage, e.g. John 3:16">' +
+      '<button class="btn" id="bibleGo">Go</button></div>' +
+      "<h3>Old Testament</h3>" + grid(ot) +
+      "<h3>New Testament</h3>" + grid(nt) + "</div>";
+    app.innerHTML = html;
+    function go() {
+      var q = document.getElementById("bibleRef").value.trim();
+      var ref = parseBibleRef(q);
+      if (ref) location.hash = "#/bible/" + ref.slug + "/" + ref.chapter + (ref.verse ? "?v=" + ref.verse : "");
+      else document.getElementById("bibleRef").focus();
+    }
+    document.getElementById("bibleGo").addEventListener("click", go);
+    document.getElementById("bibleRef").addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); go(); } });
+    window.scrollTo(0, 0);
+  }
+  function viewBibleBook(slug) {
+    var book = bibleBookBySlug(slug);
+    if (!book) return viewBible();
+    var html = "<h2>" + esc(book.name) + "</h2><div class='post-body'>" +
+      "<p class='page-intro'>" + esc(book.testament === "Old" ? "Old Testament" : "New Testament") + " &middot; " + book.chapters + " chapters &middot; King James Version</p>";
+    var artIdx = -1;
+    (data.books || []).forEach(function (r, i) { if (val(r, "Book") === book.name) artIdx = i; });
+    if (artIdx !== -1) html += "<p><a class='btn' href='#/books/" + artIdx + "'>About " + esc(book.name) + " &rarr;</a></p>";
+    html += "<p>Also read " + esc(book.name) + " on BibleGateway: " +
+      "<a href='https://www.biblegateway.com/passage/?search=" + encodeURIComponent(book.name) + "&version=NIV' target='_blank' rel='noopener'>NIV</a> &middot; " +
+      "<a href='https://www.biblegateway.com/passage/?search=" + encodeURIComponent(book.name) + "&version=ESV' target='_blank' rel='noopener'>ESV</a></p>";
+    html += '<div class="chips">';
+    for (var c = 1; c <= book.chapters; c++) html += '<a class="chip" href="#/bible/' + slug + '/' + c + '">' + c + '</a>';
+    html += "</div></div>";
+    app.innerHTML = html;
+    window.scrollTo(0, 0);
+  }
+  function articlesForChapter(bookName, chapter) {
+    var variants = [bookName];
+    if (bookName === "Psalms") variants.push("Psalm");
+    if (bookName === "Song of Solomon") variants.push("Song of Songs", "Song");
+    var res = variants.map(function (v) {
+      return new RegExp("(^|[^0-9A-Za-z])" + escapeRegExp(v) + " " + chapter + ":", "i");
+    });
+    var out = [];
+    COLLECTIONS.forEach(function (c) {
+      if (c.id === "quizzes" || c.id === "comicstories") return;
+      (data[c.id] || []).forEach(function (row, i) {
+        var hit = Object.keys(row).some(function (k) {
+          return res.some(function (re) { return re.test(" " + val(row, k)); });
+        });
+        if (hit) out.push({ c: c, row: row, idx: i });
+      });
+    });
+    return out;
+  }
+  function viewBibleChapter(slug, chapter, params) {
+    var book = bibleBookBySlug(slug);
+    if (!book) return viewBible();
+    fetch("content/bible/" + slug + ".json?v=" + ASSET_V).then(function (r) {
+      if (!r.ok) throw new Error("book");
+      return r.json();
+    }).then(function (bj) {
+      var chaps = bj.chapters;
+      var verses = chaps[chapter];
+      if (!verses) return viewBibleBook(slug);
+      var nums = Object.keys(chaps).map(function (n) { return +n; }).sort(function (a, b) { return a - b; });
+      var ci = nums.indexOf(+chapter);
+      var prev = ci > 0 ? nums[ci - 1] : null;
+      var next = ci < nums.length - 1 ? nums[ci + 1] : null;
+      var paras = [""];
+      Object.keys(verses).sort(function (a, b) { return +a - +b; }).forEach(function (n) {
+        var txt = verses[n];
+        if (txt.indexOf("# ") === 0) { txt = txt.slice(2); paras.push(""); }
+        paras[paras.length - 1] += '<span class="verse" id="v' + n + '"><sup>' + n + '</sup> ' + linkifyVerseText(txt) + '</span> ';
+      });
+      var html = "<h2>" + esc(book.name) + " " + esc(chapter) + "</h2><div class='post-body'>" +
+        "<p class='page-intro'>King James Version &middot; " + esc(book.testament === "Old" ? "Old Testament" : "New Testament") + "</p>";
+      html += "<p>";
+      if (prev) html += "<a class='btn' href='#/bible/" + slug + "/" + prev + "'>&larr; Chapter " + prev + "</a> ";
+      html += "<a class='btn' href='#/bible/" + slug + "'>All chapters</a>";
+      if (next) html += " <a class='btn' href='#/bible/" + slug + "/" + next + "'>Chapter " + next + " &rarr;</a>";
+      html += "</p>";
+      html += "<p>Also read this passage on BibleGateway: " +
+        "<a href='https://www.biblegateway.com/passage/?search=" + encodeURIComponent(book.name + " " + chapter) + "&version=NIV' target='_blank' rel='noopener'>NIV</a> &middot; " +
+        "<a href='https://www.biblegateway.com/passage/?search=" + encodeURIComponent(book.name + " " + chapter) + "&version=ESV' target='_blank' rel='noopener'>ESV</a></p>";
+      html += "<div class='bible-verses'>" + paras.map(function (p) { return "<p>" + p + "</p>"; }).join("") + "</div>";
+      var arts = articlesForChapter(book.name, chapter);
+      if (arts.length) {
+        html += "<h3>Articles about this chapter</h3><div class='card-grid'>" + arts.map(function (a) {
+          return "<a class='card' href='#/" + a.c.id + "/" + a.idx + "'><h3>" + esc(val(a.row, a.c.primary)) + "</h3><p class='meta'>" + esc(a.c.label) + "</p></a>";
+        }).join("") + "</div>";
+      }
+      html += "</div>";
+      app.innerHTML = html;
+      var v = params && params.get ? params.get("v") : null;
+      if (v) { var el = document.getElementById("v" + v); if (el) el.scrollIntoView(); }
+      else window.scrollTo(0, 0);
+    }).catch(function () {
+      app.innerHTML = "<h2>" + esc(book.name) + " " + esc(chapter) + "</h2><p class='empty'>This chapter could not be loaded. Please try again.</p>";
+    });
+  }
   /* ---------- comic stories ---------- */
   /* Panels group into stories by Story name, exactly like quiz questions group by Quiz name. */
   function comicStoryKey(name) {
@@ -1229,6 +1478,11 @@
     if (path[0] === "store") return viewStore();
     if (path[0] === "connect") return viewConnect();
     if (path[0] === "give") return viewGive();
+    if (path[0] === "bible") {
+      if (!path[1]) return viewBible();
+      if (!path[2]) return viewBibleBook(path[1]);
+      return viewBibleChapter(path[1], path[2], params);
+    }
     if (path[0] === "search") return viewSearch(params);
     if (path[0] === "quizzes" && path[1] === "play") return viewQuizPlay(path[2] ? decodeURIComponent(path[2]) : "", params);
     if (path[0] === "comicstories") {
@@ -1248,7 +1502,7 @@
   });
   document.getElementById("footerNav").innerHTML =
     COLLECTIONS.map(function (c) { return '<a href="#/' + c.id + '">' + esc(c.label) + "</a>"; }).join("") +
-    '<a href="#/blog">Blog</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a>';
+    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a>';
 
   app.innerHTML = '<p class="loading">Loading the collections…</p>';
   var jobs = COLLECTIONS.map(function (c) {
