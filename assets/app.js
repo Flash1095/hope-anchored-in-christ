@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "83";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "84";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -277,6 +277,58 @@
       return esc(token);
     }).join("; ");
   }
+  /* Scripture references (KeyVerses etc.) link into the Bible reader.
+     One entry's references become one link per passage, derived from the
+     text already on the entry — nothing is hand-linked per person. A part
+     without its own book name inherits the previous part's book, so
+     "Numbers 1:5; 7:30-35" links both passages, and a range like
+     "Numbers 22-24" links to its first chapter. Anything unparseable
+     stays plain text, never a broken link. */
+  var SCRIPTURE_FIELDS = ["KeyVerses", "KeyPassages", "KeyScriptures", "ScriptureReference",
+    "ScriptureIlluminated", "BibleReferences"];
+  function bibleBookByNameStart(text) {
+    var low = text.toLowerCase();
+    var books = BIBLE_BOOKS.slice().sort(function (a, b) { return b.name.length - a.name.length; });
+    for (var i = 0; i < books.length; i++) {
+      if (low.indexOf(books[i].name.toLowerCase()) === 0) {
+        var after = text.charAt(books[i].name.length);
+        if (after && /[A-Za-z]/.test(after)) continue;
+        return { book: books[i], rest: text.slice(books[i].name.length).trim(), prefix: books[i].name };
+      }
+    }
+    if (low.indexOf("psalm ") === 0) return { book: bookByName("Psalms"), rest: text.slice(6).trim(), prefix: "Psalm" };
+    if (low.indexOf("song of songs ") === 0) return { book: bookByName("Song of Solomon"), rest: text.slice(14).trim(), prefix: "Song of Songs" };
+    if (low.indexOf("song ") === 0) return { book: bookByName("Song of Solomon"), rest: text.slice(5).trim(), prefix: "Song" };
+    return null;
+  }
+  function bookByName(name) {
+    for (var i = 0; i < BIBLE_BOOKS.length; i++) if (BIBLE_BOOKS[i].name === name) return BIBLE_BOOKS[i];
+    return null;
+  }
+  function linkifyScriptureRefs(value) {
+    var lastBook = null;
+    return String(value).split(";").map(function (part) {
+      var p = part.trim();
+      if (!p) return "";
+      var found = bibleBookByNameStart(p);
+      var book = found ? found.book : lastBook;
+      var rest = found ? found.rest : p;
+      if (found) lastBook = book;
+      if (!book || !rest) return esc(p);
+      var first = true;
+      return rest.split(",").map(function (item) {
+        var it = item.trim();
+        var label = (first && found) ? found.prefix + " " + it : it;
+        first = false;
+        var m = it.match(/^(\d+)(?::(\d+))?/);
+        if (!m) return esc(label);
+        var ch = +m[1];
+        if (ch < 1 || ch > book.chapters) return esc(label);
+        var href = "#/bible/" + book.slug + "/" + ch + (m[2] ? "?v=" + m[2] : "");
+        return '<a href="' + href + '">' + esc(label) + '</a>';
+      }).join(", ");
+    }).join("; ");
+  }
   function renderValue(field, value) {
     if (field === "Lessons") {
       return "<ul>" + splitList(value).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>";
@@ -286,6 +338,9 @@
     }
     if (field === "Questions") {
       return "<ul>" + splitList(value).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>";
+    }
+    if (SCRIPTURE_FIELDS.indexOf(field) !== -1) {
+      return '<span class="related">' + linkifyScriptureRefs(value) + "</span>";
     }
     if (REL_FIELDS.indexOf(field) !== -1) {
       return '<span class="related">' + linkifyField(field, value) + "</span>";
@@ -1203,7 +1258,7 @@
     if (bookName === "Psalms") variants.push("Psalm");
     if (bookName === "Song of Solomon") variants.push("Song of Songs", "Song");
     var res = variants.map(function (v) {
-      return new RegExp("(^|[^0-9A-Za-z])" + escapeRegExp(v) + " " + chapter + ":", "i");
+      return new RegExp("(^|[^0-9A-Za-z])" + escapeRegExp(v) + " " + chapter + "(?![0-9])", "i");
     });
     var out = [];
     COLLECTIONS.forEach(function (c) {

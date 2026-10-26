@@ -352,12 +352,90 @@ def static_linkify(field, value, cur_coll, glob, home):
     return "; ".join(out)
 
 
+def load_bible_books():
+    """Parse the app's BIBLE_BOOKS list (slug, name, chapter count) from app.js,
+    so static scripture links use the same book list as the live reader."""
+    src = open(os.path.join(ROOT, "assets", "app.js"), encoding="utf-8").read()
+    books = []
+    for m in re.finditer(
+            r'\{\s*slug:\s*"([^"]+)",\s*name:\s*"([^"]+)",\s*chapters:\s*(\d+)',
+            src):
+        books.append({"slug": m.group(1), "name": m.group(2),
+                      "chapters": int(m.group(3))})
+    return books
+
+
+BIBLE_BOOKS = []
+
+SCRIPTURE_FIELDS = ["KeyVerses", "KeyPassages", "KeyScriptures", "ScriptureReference",
+                    "ScriptureIlluminated", "BibleReferences"]
+
+
+def linkify_scripture_refs(value):
+    """Mirror of the app's linkifyScriptureRefs, pointing at the live reader:
+    SITE_URL + '/#/bible/<slug>/<chapter>?v=<verse>' (a fragment link on a
+    static page would go nowhere, so the full reader address is used)."""
+    by_name = {b["name"]: b for b in BIBLE_BOOKS}
+    ordered = sorted(BIBLE_BOOKS, key=lambda b: -len(b["name"]))
+    last_book = None
+    out_parts = []
+    for part in str(value).split(";"):
+        p = part.strip()
+        if not p:
+            continue
+        found = None
+        low = p.lower()
+        for b in ordered:
+            if low.startswith(b["name"].lower()):
+                after = p[len(b["name"]):len(b["name"]) + 1]
+                if after and after.isalpha():
+                    continue
+                found = (b, p[len(b["name"]):].strip(), b["name"])
+                break
+        if found is None:
+            if low.startswith("psalm "):
+                found = (by_name["Psalms"], p[6:].strip(), "Psalm")
+            elif low.startswith("song of songs "):
+                found = (by_name["Song of Solomon"], p[14:].strip(), "Song of Songs")
+            elif low.startswith("song "):
+                found = (by_name["Song of Solomon"], p[5:].strip(), "Song")
+        book = found[0] if found else last_book
+        rest = found[1] if found else p
+        if found:
+            last_book = book
+        if book is None or not rest:
+            out_parts.append(esc(p))
+            continue
+        links = []
+        first = True
+        for item in rest.split(","):
+            it = item.strip()
+            label = (found[2] + " " + it) if (first and found) else it
+            first = False
+            m = re.match(r"^(\d+)(?::(\d+))?", it)
+            if not m:
+                links.append(esc(label))
+                continue
+            ch = int(m.group(1))
+            if ch < 1 or ch > book["chapters"]:
+                links.append(esc(label))
+                continue
+            href = "%s/#/bible/%s/%d" % (SITE_URL, book["slug"], ch)
+            if m.group(2):
+                href += "?v=" + m.group(2)
+            links.append('<a href="%s">%s</a>' % (href, esc(label)))
+        out_parts.append(", ".join(links))
+    return "; ".join(out_parts)
+
+
 def render_entry_field(field, value, cur_coll, glob, home):
     toks = [t.strip() for t in value.split(";") if t.strip()]
     if field == "Steps":
         return "<ol>" + "".join("<li>%s</li>" % esc(t) for t in toks) + "</ol>"
     if field in ("Questions", "Lessons"):
         return "<ul>" + "".join("<li>%s</li>" % esc(t) for t in toks) + "</ul>"
+    if field in SCRIPTURE_FIELDS:
+        return '<span class="related">' + linkify_scripture_refs(value) + "</span>"
     if field in REL_FIELDS:
         return '<span class="related">' + static_linkify(field, value, cur_coll, glob, home) + "</span>"
     if field == "DetailedAnswer":
@@ -453,6 +531,8 @@ def entry_page(e, glob, home, quizzes_by_course):
 
 
 def generate_entries():
+    global BIBLE_BOOKS
+    BIBLE_BOOKS = load_bible_books()
     colls = load_collections()
     entries, glob, home = build_entry_index(colls)
     quizzes = []
