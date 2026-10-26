@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "47";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "48";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -936,8 +936,9 @@
   }
   function viewGive() {
     app.innerHTML = "<h2>Give</h2><div class='post-body'>" +
-      "<p>Your gifts support this ministry — keeping the blog free for everyone, covering the costs of running the site, " +
-      "and funding future content including the podcast.</p>" +
+      "<p>Donations support the ministry and keep it going.</p>" +
+      "<p>Your gifts keep the blog free for everyone, cover the costs of running the site, " +
+      "and fund future content including the podcast.</p>" +
       (GIVE_URL ? "<p><a class='btn' href='" + esc(GIVE_URL) + "' target='_blank' rel='noopener'>Give to support this ministry</a></p>" :
       "<p class='empty'>Giving options are coming soon. Check back shortly.</p>") +
       "</div>";
