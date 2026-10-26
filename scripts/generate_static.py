@@ -21,8 +21,10 @@ Usage: python3 scripts/generate_static.py
 """
 
 import html
+import json
 import os
 import re
+from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -196,6 +198,284 @@ def post_page(slug, fm, body_html, desc):
            meta=meta, body=body_html, slug=slug, footer=FOOTER)
 
 
+REL_FIELDS = ["RelatedBooks", "RelatedPeople", "RelatedEvents", "RelatedTopics",
+    "RelatedDoctrines", "RelatedQuestions", "RelatedFinds", "RelatedBook",
+    "KeyPersons", "KeyPeople", "BibleBooks", "Places", "Events",
+    "KeyScriptures", "KeyPassages", "KeyVerses", "ScriptureReference",
+    "ScriptureIlluminated", "BibleReferences", "Tags", "Themes", "Place", "Prophet", "Course"]
+FIELD_HOME = {"RelatedBooks": "books", "RelatedBook": "books", "BibleBooks": "books",
+    "RelatedPeople": "people", "KeyPeople": "people", "KeyPersons": "people", "Prophet": "people",
+    "RelatedEvents": "stories", "Events": "stories", "RelatedTopics": "topics", "Themes": "themes",
+    "RelatedDoctrines": "doctrines", "RelatedQuestions": "questions", "RelatedFinds": "finds",
+    "Places": "places", "Place": "places", "Course": "courses"}
+SKIP_FIELDS = ["Slug", "Maps", "Image", "ImageCredit", "ImageSource", "PanelImage", "PanelImageCredit"]
+SNIPPET_FIELDS = ["Summary", "Description", "Story", "Definition", "ShortAnswer",
+    "ProphecySummary", "Explanation", "BiblicalUsage", "Beliefs"]
+# Collections with no generic detail page: quizzes is an interactive player,
+# comicstories is a panel reader. Everything else gets a static page.
+SKIP_COLLECTIONS = {"quizzes", "comicstories"}
+
+
+def slugify(s):
+    return re.sub(r"[^a-z0-9]+", "-", (s or "").lower()).strip("-")
+
+
+def label(field):
+    if field == "Places":
+        return "Related Places"
+    if field == "Place":
+        return "Related Place"
+    s = re.sub(r"([A-Z]+)([A-Z][a-z])", r"\1 \2", field)
+    s = re.sub(r"([a-z0-9])([A-Z])", r"\1 \2", s)
+    return s[:1].upper() + s[1:] if s else s
+
+
+def load_collections():
+    src = open(os.path.join(ROOT, "assets", "app.js"), encoding="utf-8").read()
+    colls = []
+    for m in re.finditer(
+            r'\{\s*id:\s*"([^"]+)",\s*label:\s*"([^"]+)",\s*file:\s*"([^"]+)",\s*primary:\s*"([^"]+)"',
+            src):
+        colls.append({"id": m.group(1), "label": m.group(2),
+                      "file": m.group(3), "primary": m.group(4)})
+    return colls
+
+
+def build_entry_index(colls):
+    """Mirror of the app's link index, but resolving to static page URLs.
+
+    Returns (entries, glob, home): entries in COLLECTIONS order, a global
+    exact/alias index, and per-collection indexes (exact + lowercase keys).
+    """
+    entries = []
+    by_coll = {}
+    for c in colls:
+        if c["id"] in SKIP_COLLECTIONS:
+            continue
+        rows = json.load(open(os.path.join(ROOT, c["file"]), encoding="utf-8"))
+        used = set()
+        coll_entries = []
+        for idx, row in enumerate(rows):
+            primary = (row.get(c["primary"]) or "")
+            if isinstance(primary, list):
+                primary = "; ".join(str(x) for x in primary)
+            primary = primary.strip()
+            if not primary:
+                continue
+            base = (row.get("Slug") or "").strip() or slugify(primary)
+            slug, n = base, 2
+            while slug in used:
+                slug = "%s-%d" % (base, n)
+                n += 1
+            used.add(slug)
+            e = {"coll": c["id"], "label": c["label"], "idx": idx, "row": row,
+                 "slug": slug, "primary": primary, "display": primary}
+            coll_entries.append(e)
+            entries.append(e)
+        by_coll[c["id"]] = coll_entries
+    glob = {}
+
+    def put_global(key, e):
+        if key and key not in glob:
+            glob[key] = e
+
+    for e in entries:
+        put_global(e["primary"], e)
+        row = e["row"]
+        if e["coll"] == "wordstudies":
+            put_global((row.get("Word") or "").strip(), e)
+        if e["coll"] == "questions":
+            put_global((row.get("Slug") or "").strip(), e)
+    proposed = {}
+    for e in entries:
+        p = e["primary"]
+        cands = set()
+        if "," in p:
+            cands.add(p.split(",")[0].strip())
+        if " of " in p:
+            cands.add(p.split(" of ")[0].strip())
+        words = p.replace(",", "").split()
+        if len(words) > 1:
+            cands.add(words[0])
+            cands.add(words[-1])
+        cands.add(p.lower())
+        for a in cands:
+            if a and a != p and len(a) > 1:
+                proposed.setdefault(a, set()).add(p)
+    prim_to_entry = {}
+    for e in entries:
+        prim_to_entry.setdefault(e["primary"], e)
+    for a, owners in proposed.items():
+        if len(owners) == 1 and a not in glob:
+            glob[a] = prim_to_entry[next(iter(owners))]
+    home = {}
+    for coll_id, coll_entries in by_coll.items():
+        d = {}
+        for e in coll_entries:
+            keys = [e["primary"]]
+            if coll_id == "wordstudies":
+                keys.append((e["row"].get("Word") or "").strip())
+            if coll_id == "questions":
+                keys.append((e["row"].get("Slug") or "").strip())
+            for key in keys:
+                if not key:
+                    continue
+                if key not in d:
+                    d[key] = e
+                if key.lower() not in d:
+                    d[key.lower()] = e
+        home[coll_id] = d
+    return entries, glob, home
+
+
+def static_linkify(field, value, cur_coll, glob, home):
+    if field not in REL_FIELDS:
+        return esc(value)
+    out = []
+    for tok in [t.strip() for t in value.split(";")]:
+        if not tok:
+            continue
+        hit = None
+        h = FIELD_HOME.get(field)
+        if h and h in home:
+            hit = home[h].get(tok) or home[h].get(tok.lower())
+        if not hit:
+            hit = glob.get(tok) or glob.get(tok.lower())
+        if hit:
+            if hit["coll"] == cur_coll:
+                href = "../%s/" % hit["slug"]
+            else:
+                href = "../../%s/%s/" % (hit["coll"], hit["slug"])
+            out.append('<a href="%s">%s</a>' % (href, esc(hit["display"] or tok)))
+        else:
+            out.append(esc(tok))
+    return "; ".join(out)
+
+
+def render_entry_field(field, value, cur_coll, glob, home):
+    toks = [t.strip() for t in value.split(";") if t.strip()]
+    if field == "Steps":
+        return "<ol>" + "".join("<li>%s</li>" % esc(t) for t in toks) + "</ol>"
+    if field in ("Questions", "Lessons"):
+        return "<ul>" + "".join("<li>%s</li>" % esc(t) for t in toks) + "</ul>"
+    if field in REL_FIELDS:
+        return '<span class="related">' + static_linkify(field, value, cur_coll, glob, home) + "</span>"
+    return esc(value)
+
+
+def entry_page(e, glob, home, quizzes_by_course):
+    row = e["row"]
+    coll = e["coll"]
+    title = e["primary"]
+    url = "%s/%s/%s/" % (SITE_URL, coll, e["slug"])
+    desc = ""
+    for f in SNIPPET_FIELDS:
+        v = row.get(f) or ""
+        if isinstance(v, list):
+            v = "; ".join(str(x) for x in v)
+        v = v.strip()
+        if v:
+            desc = plain_text(v)
+            if len(desc) > 160:
+                desc = desc[:157].rsplit(" ", 1)[0] + "…"
+            break
+    if not desc:
+        desc = "Hope Anchored in Christ — a Bible study site anchored on Hebrews 6:19."
+    parts = []
+    img = (row.get("Image") or "").strip()
+    if img:
+        fig = '<figure class="nature-figure"><img src="../../%s" alt="%s">' % (
+            esc(img.lstrip("/")), esc(title))
+        cap = (row.get("ImageCredit") or "").strip()
+        if cap:
+            fig += "<figcaption>" + esc(cap)
+            if (row.get("ImageSource") or "").strip():
+                fig += ' <a href="%s" target="_blank" rel="noopener">Source</a>' % esc(row["ImageSource"])
+            fig += "</figcaption>"
+        fig += "</figure>"
+        parts.append(fig)
+    dl = []
+    for field, v in row.items():
+        if field in SKIP_FIELDS:
+            continue
+        if isinstance(v, list):
+            v = "; ".join(str(x) for x in v)
+        v = "" if v is None else str(v)
+        if not v.strip():
+            continue
+        dl.append("<dt>%s</dt><dd>%s</dd>" % (
+            esc(label(field)), render_entry_field(field, v, coll, glob, home)))
+    body = "\n".join(parts) + '<div class="detail"><dl>' + "\n".join(dl) + "</dl>"
+    if coll == "courses":
+        qs = quizzes_by_course.get(title, [])
+        if qs:
+            body += "<h3>Quizzes for this course</h3><ul>" + "".join(
+                '<li><a href="../../#/quizzes/play/%s">%s</a></li>' % (quote(q), esc(q))
+                for q in qs) + "</ul>"
+    body += "</div>"
+    return """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title} | Hope Anchored in Christ</title>
+<meta name="description" content="{desc}">
+<link rel="canonical" href="{url}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Hope Anchored in Christ">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{desc}">
+<meta property="og:url" content="{url}">
+<meta property="og:image" content="{site}/assets/banner.jpg?v={banner_v}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="{site}/assets/banner.jpg?v={banner_v}">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+{header}
+<main class="content">
+<a class="back-link" href="../../#/{coll}">&larr; All {label}</a>
+<h1>{title}</h1>
+{body}
+<p><a class="btn" href="../../#/{coll}/{idx}">View on the full site &rarr;</a></p>
+</main>
+{footer}
+</body>
+</html>
+""".format(title=esc(title), desc=esc(desc), url=url, site=SITE_URL,
+           banner_v=BANNER_V, header=HEADER.format(banner_v=BANNER_V),
+           coll=coll, label=esc(e["label"]), body=body, idx=e["idx"], footer=FOOTER)
+
+
+def generate_entries():
+    colls = load_collections()
+    entries, glob, home = build_entry_index(colls)
+    quizzes = []
+    try:
+        quizzes = json.load(open(os.path.join(ROOT, "content", "quizzes.json"),
+                                 encoding="utf-8"))
+    except FileNotFoundError:
+        pass
+    qbc = {}
+    for q in quizzes:
+        c = (q.get("Course") or "").strip()
+        quiz = (q.get("Quiz") or "").strip()
+        if c and quiz and quiz not in qbc.setdefault(c, []):
+            qbc[c].append(quiz)
+    urls = []
+    for e in entries:
+        out_dir = os.path.join(ROOT, e["coll"], e["slug"])
+        os.makedirs(out_dir, exist_ok=True)
+        with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as fh:
+            fh.write(entry_page(e, glob, home, qbc))
+        urls.append("%s/%s/%s/" % (SITE_URL, e["coll"], e["slug"]))
+    print("entries: %d static pages across %d collections" % (
+        len(entries), len({e["coll"] for e in entries})))
+    return urls
+
+
 def main():
     posts_dir = os.path.join(ROOT, "content", "posts")
     posts = []
@@ -251,12 +531,14 @@ def main():
     with open(os.path.join(blog_dir, "index.html"), "w", encoding="utf-8") as fh:
         fh.write(listing)
     print("listing: blog/")
+    entry_urls = generate_entries()
     # Sitemap: only addresses that exist as real files (the app shell root,
     # the blog listing, and the static post pages). Hash routes are not
     # separate pages and must not appear here.
     urls = [(SITE_URL + "/", None), (SITE_URL + "/blog/", None)]
     urls += [("%s/blog/%s/" % (SITE_URL, slug), fm.get("date"))
              for slug, fm, _ in posts]
+    urls += [(u, None) for u in entry_urls]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for url, lastmod in urls:
