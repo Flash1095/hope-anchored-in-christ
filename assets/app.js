@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "68";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "69";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -827,7 +827,7 @@
      blog post. Add the file under assets/lineart/ and list it here; the
      tile/post shows it automatically. Empty until her art arrives. */
   var TILE_ART = { timeline: "assets/lineart/timeline.png", people: "assets/lineart/people.png?v=2", books: "assets/lineart/books.png", finds: "assets/lineart/finds.jpg?v=3", places: "assets/lineart/places.jpg", topics: "assets/lineart/topics.jpg", hymns: "assets/lineart/hymns.jpg", wordstudies: "assets/lineart/wordstudies.jpg", jewishculture: "assets/lineart/jewishculture.jpg", socialmedia: "assets/lineart/socialmedia.jpg", nature: "assets/lineart/nature.jpg" };
-  var POST_ART = { "do-animals-go-to-heaven": "assets/lineart/do-animals-go-to-heaven.jpg" };
+  var POST_ART = { "do-animals-go-to-heaven": "assets/lineart/do-animals-go-to-heaven.jpg", "christianity-invites-testing-because-its-true": "assets/lineart/christianity-invites-testing-because-its-true.jpg" };
   /* Blog post teaser cards, in the style of the mockup's bottom row:
      image on the left when post art exists, label + title + excerpt +
      "Read the Post" arrow on the right. Excerpts fill in from each post's
