@@ -360,6 +360,9 @@ def render_entry_field(field, value, cur_coll, glob, home):
         return "<ul>" + "".join("<li>%s</li>" % esc(t) for t in toks) + "</ul>"
     if field in REL_FIELDS:
         return '<span class="related">' + static_linkify(field, value, cur_coll, glob, home) + "</span>"
+    if field == "DetailedAnswer":
+        paras = [p for p in re.split(r"\n\s*\n", value) if p.strip()]
+        return "".join("<p>%s</p>" % esc(p).replace("\n", "<br>") for p in paras)
     return esc(value)
 
 

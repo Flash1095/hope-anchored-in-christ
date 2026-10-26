@@ -503,6 +503,8 @@ I believe we have every reason to entrust that question to His goodness.
 
 And I have hope that one day, in a world where suffering and death no longer exist, we may discover that the creatures we loved were never forgotten by their Creator.
 
+---
+
 ### Scriptures for Further Study
 
 Genesis 1:20–31; Genesis 2:19–20; Genesis 6–9; Psalm 36:6; Psalm 104; Psalm 145:9; Psalm 148; Proverbs 12:10; Ecclesiastes 3:19–21; Isaiah 11:6–9; Isaiah 65:17–25; Matthew 6:26; Matthew 10:29; Matthew 22:30; Romans 8:18–23; 1 Corinthians 15:26; Colossians 1:19–20; Revelation 21:1–5.

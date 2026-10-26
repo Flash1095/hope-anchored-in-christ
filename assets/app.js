@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "64";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "65";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -289,6 +289,11 @@
     }
     if (REL_FIELDS.indexOf(field) !== -1) {
       return '<span class="related">' + linkifyField(field, value) + "</span>";
+    }
+    if (field === "DetailedAnswer") {
+      return value.split(/\n\s*\n/).filter(function (p) { return p.trim() !== ""; }).map(function (para) {
+        return "<p>" + esc(para).replace(/\n/g, "<br>") + "</p>";
+      }).join("");
     }
     return esc(value);
   }
