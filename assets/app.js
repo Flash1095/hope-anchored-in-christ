@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "66";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "67";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -828,6 +828,32 @@
      tile/post shows it automatically. Empty until her art arrives. */
   var TILE_ART = { timeline: "assets/lineart/timeline.png", people: "assets/lineart/people.png?v=2", books: "assets/lineart/books.png", finds: "assets/lineart/finds.jpg?v=3", places: "assets/lineart/places.jpg", topics: "assets/lineart/topics.jpg", hymns: "assets/lineart/hymns.jpg", wordstudies: "assets/lineart/wordstudies.jpg", jewishculture: "assets/lineart/jewishculture.jpg", socialmedia: "assets/lineart/socialmedia.jpg", nature: "assets/lineart/nature.jpg" };
   var POST_ART = {};
+  /* Blog post teaser cards, in the style of the mockup's bottom row:
+     image on the left when post art exists, label + title + excerpt +
+     "Read the Post" arrow on the right. Excerpts fill in from each post's
+     first paragraph once its file loads; cards read fine without them. */
+  function postRowCard(p, label) {
+    var art = POST_ART[p.slug] ? "<img class='post-row-art' src='" + esc(POST_ART[p.slug]) + "' alt=''>" : "";
+    return '<a class="post-row-card" href="#/blog/' + esc(p.slug) + '">' + art + "<div class='post-row-body'>" +
+      '<span class="post-row-label">' + esc(label || p.category || "From the blog") + "</span>" +
+      "<h3>" + esc(p.title) + "</h3>" +
+      '<p class="post-row-excerpt" data-excerpt-for="' + esc(p.slug) + '"></p>' +
+      '<p class="post-row-meta">' + esc(shortDate(p.date)) + (p.scripture ? " &middot; " + esc(p.scripture) : "") + "</p>" +
+      '<span class="post-row-more">Read the Post &rarr;</span></div></a>';
+  }
+  function loadExcerpts() {
+    posts.forEach(function (p) {
+      var el = document.querySelector('[data-excerpt-for="' + p.slug + '"]');
+      if (!el) return;
+      fetch(p.raw || (p.file + "?v=" + ASSET_V), { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error(p.file); return r.text(); }).then(function (text) {
+        var body = text.replace(/^---[\s\S]*?---\s*/, "");
+        var para = body.split(/\n\s*\n/).filter(function (chunk) { return chunk.trim() && chunk.trim().charAt(0) !== "#"; })[0] || "";
+        var clean = para.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/[*_]+/g, "").replace(/\s+/g, " ").trim();
+        if (clean.length > 180) clean = clean.slice(0, 180).replace(/\s+\S*$/, "") + "…";
+        if (clean && document.body.contains(el)) el.textContent = clean;
+      }).catch(function () { /* excerpt stays empty; the card still reads fine */ });
+    });
+  }
   function collectionCard(c) {
     var n = (data[c.id] || []).length;
     var blurb = c.blurb;
@@ -852,13 +878,12 @@
       "It enters the inner sanctuary behind the curtain, where our forerunner, Jesus, has entered on our behalf.&rdquo; " +
       "&mdash; Hebrews 6:19&ndash;20</div>";
     if (latest) {
-      html += "<h3>Latest from the blog</h3>" +
-        '<a class="card" href="#/blog/' + esc(latest.slug) + '">' + (POST_ART[latest.slug] ? "<img class='card-art' src='" + esc(POST_ART[latest.slug]) + "' alt=''>" : "") + "<h3>" + esc(latest.title) + "</h3>" +
-        '<p class="meta">' + esc(shortDate(latest.date)) + (latest.category ? " &middot; " + esc(latest.category) : "") + "</p></a>";
+      html += "<h3>Latest from the blog</h3>" + postRowCard(latest, "Latest blog post");
     }
     html += "<h3>Explore the collections</h3><div class='card-grid'>" +
       COLLECTIONS.map(collectionCard).join("") + "</div>";
     app.innerHTML = html;
+    loadExcerpts();
     window.scrollTo(0, 0);
   }
   function viewExplore() {
@@ -888,11 +913,9 @@
     }
     var html = "<h2>Blog</h2><p class='page-intro'>Reflections and studies from the anchored story.</p>";
     if (!posts.length) html += '<p class="empty">No posts yet.</p>';
-    html += "<div class='card-grid'>" + posts.map(function (p) {
-      return '<a class="card" href="#/blog/' + esc(p.slug) + '">' + (POST_ART[p.slug] ? "<img class='card-art' src='" + esc(POST_ART[p.slug]) + "' alt=''>" : "") + "<h3>" + esc(p.title) + "</h3>" +
-        '<p class="meta">' + esc(shortDate(p.date)) + (p.category ? " &middot; " + esc(p.category) : "") + "</p></a>";
-    }).join("") + "</div>";
+    html += "<div class='post-row-list'>" + posts.map(function (p) { return postRowCard(p); }).join("") + "</div>";
     app.innerHTML = html;
+    loadExcerpts();
     window.scrollTo(0, 0);
   }
   /* ---------- store ---------- */
