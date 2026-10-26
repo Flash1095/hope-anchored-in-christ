@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "49";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "50";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -906,7 +906,7 @@
   function viewStore() {
     fetch("content/store.json?v=" + ASSET_V).then(function (r) {
       return r.ok ? r.json() : { products: [] };
-    }).catch(function () { return { products: []; }; }).then(function (json) {
+    }).catch(function () { return { products: [] }; }).then(function (json) {
       var products = json.products || [];
       var state = { q: "", kind: "" };
       function renderGrid() {
