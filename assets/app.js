@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "86";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "87";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -316,6 +316,7 @@
       if (found) lastBook = book;
       if (!book || !rest) return esc(p);
       var first = true;
+      var lastChapter = null, lastHadVerse = false;
       return rest.split(",").map(function (item) {
         var it = item.trim();
         var label = (first && found) ? found.prefix + " " + it : it;
@@ -323,8 +324,23 @@
         var m = it.match(/^(\d+)(?::(\d+))?/);
         if (!m) return esc(label);
         var ch = +m[1];
+        var verse = m[2] ? +m[2] : null;
+        if (!m[2] && lastChapter !== null && lastHadVerse) {
+          /* A bare number after a chapter:verse item continues that
+             chapter's verses ("Numbers 13:22, 28, 33" = 13:22, 13:28,
+             13:33), it does not start a new chapter. */
+          verse = ch; ch = lastChapter;
+        } else if (book.chapters === 1 && !m[2] && ch !== 1) {
+          /* A single-chapter book cited by verse alone ("Jude 22"
+             means Jude 1:22); without this, those references stayed
+             plain. */
+          verse = ch; ch = 1;
+        }
         if (ch < 1 || ch > book.chapters) return esc(label);
-        var href = "#/bible/" + book.slug + "/" + ch + (m[2] ? "?v=" + m[2] : "");
+        if (m[2]) { lastChapter = ch; lastHadVerse = true; }
+        else if (verse !== null && lastChapter !== null && lastHadVerse) { /* verse continuation: chapter unchanged */ }
+        else { lastChapter = ch; lastHadVerse = false; }
+        var href = "#/bible/" + book.slug + "/" + ch + (verse ? "?v=" + verse : "");
         return '<a href="' + href + '">' + esc(label) + '</a>';
       }).join(", ");
     }).join("; ");
@@ -1164,7 +1180,8 @@
     "her": true, "his": true, "him": true, "he": true, "she": true,
     "it": true, "they": true, "them": true, "we": true, "us": true,
     "you": true, "the": true, "and": true, "for": true, "with": true,
-    "from": true, "that": true, "this": true, "saves": true, "seed": true };
+    "from": true, "that": true, "this": true, "saves": true, "seed": true,
+    "simeon": true, "hadar": true };
   function bibleLinkData() {
     if (bibleLinkCache) return bibleLinkCache;
     /* Only words with a corresponding article link: a person, story,
@@ -1178,16 +1195,35 @@
     var allowed = { people: true, places: true, stories: true, themes: true,
       topics: true, timeline: true, wordstudies: true };
     var map = {};
-    COLLECTIONS.forEach(function (c) {
-      if (!allowed[c.id]) return;
-      (data[c.id] || []).forEach(function (row, idx) {
-        var p = val(row, c.primary);
-        if (!isEmpty(p) && !map[p]) map[p] = { coll: c.id, idx: idx };
-        if (c.id === "wordstudies") {
-          var w = val(row, "Word");
-          if (!isEmpty(w) && !map[w]) map[w] = { coll: c.id, idx: idx };
-        }
+    /* Two passes, places before people: where a person and a place share
+       one name, the place is what the word means in most verses
+       ("Haran", "Midian", "Shechem" are cities far more often than
+       men), so the place wins the bare word. Person links are
+       unaffected: RelatedPeople tokens still resolve people-first in
+       the separate link index, and a person's full name ("Shechem the
+       son of Hamor") still resolves by the phrase pass below. */
+    [false, true].forEach(function (peoplePass) {
+      COLLECTIONS.forEach(function (c) {
+        if (!allowed[c.id]) return;
+        if ((c.id === "people") !== peoplePass) return;
+        (data[c.id] || []).forEach(function (row, idx) {
+          var p = val(row, c.primary);
+          if (!isEmpty(p) && !map[p]) map[p] = { coll: c.id, idx: idx };
+          if (c.id === "wordstudies") {
+            var w = val(row, "Word");
+            if (!isEmpty(w) && !map[w]) map[w] = { coll: c.id, idx: idx };
+          }
+        });
       });
+    });
+    /* Alternate names the KJV itself uses: Matthew's own KeyVerses cite
+       Luke 5:27-28, where he is called Levi the son of Alphaeus, so
+       that phrase resolves to Matthew's profile. (Bare "Levi" still
+       means Jacob's son, as in most verses.) */
+    (data.people || []).forEach(function (row, idx) {
+      if (val(row, "Name") === "Matthew" && !map["Levi, Son of Alphaeus"]) {
+        map["Levi, Son of Alphaeus"] = { coll: "people", idx: idx };
+      }
     });
     var proposed = {};
     COLLECTIONS.forEach(function (c) {
@@ -1232,21 +1268,40 @@
        the son to "Jahaziel, Son of Zechariah" when it exists, the
        father to "Zechariah, Father of Jahaziel" when it exists — and
        the connector ("the son of") stays inside the first link, so no
-       word of the name stands plain. Falls back to the plain names
-       when no qualified profile exists, and to one link over the whole
-       phrase when only the first name resolves. A name that resolves
-       to nothing (e.g. "Then the son of ...") is left untouched. */
-    safe = safe.replace(/\b([A-Z][A-Za-z]+),? the (son|daughter) of ([A-Z][A-Za-z]+)\b/g, function (m, x, rel, y) {
-      var xKeys = rel === "son" ? [x + ", Son of " + y, x] : [x + ", Daughter of " + y, x];
-      var yKeys = rel === "son" ? [y + ", Father of " + x, y] : [y + ", Father of " + x, y + ", Mother of " + x, y];
-      var xHit = null, yHit = null, i;
-      for (i = 0; i < xKeys.length; i++) { xHit = t.map[xKeys[i]] || t.lower[xKeys[i].toLowerCase()]; if (xHit) break; }
-      for (i = 0; i < yKeys.length; i++) { yHit = t.map[yKeys[i]] || t.lower[yKeys[i].toLowerCase()]; if (yHit) break; }
+       word of the name stands plain. The same pass handles "X the
+       daughter of Y" and "X the mother of Y" ("Mary the mother of
+       Jesus" -> Mary, Mother of Jesus, and Jesus). A chain
+       ("Achan the son of Carmi, the son of Zabdi") resolves the middle
+       name against the name that follows it, so Carmi goes to Carmi,
+       Son of Zabdi, not to Carmi son of Reuben. Falls back to the
+       plain names when no qualified profile exists, and to one link
+       over the first name plus its connector when only the first name
+       resolves. A name that resolves to nothing is left untouched, and
+       a stopped bare name (an ambiguous one, like Simeon) never wins a
+       fallback. */
+    safe = safe.replace(/\b([A-Z][A-Za-z]+),? the (son|daughter|mother) of ([A-Z][A-Za-z]+)(, the (son|daughter) of ([A-Z][A-Za-z]+))?\b/g, function (m, x, rel, y, chain, rel2, z) {
+      var xKeys = rel === "son" ? [x + ", Son of " + y, x] : rel === "daughter" ? [x + ", Daughter of " + y, x] : [x + ", Mother of " + y, x];
+      var yKeys = [];
+      if (chain && (rel2 === "son" || rel2 === "daughter")) yKeys.push(y + (rel2 === "son" ? ", Son of " : ", Daughter of ") + z);
+      if (rel === "son") yKeys.push(y + ", Father of " + x, y);
+      else if (rel === "daughter") yKeys.push(y + ", Father of " + x, y + ", Mother of " + x, y);
+      else yKeys.push(y + ", Son of " + x, y + ", Daughter of " + x, y);
+      var xHit = null, yHit = null, i, hit;
+      for (i = 0; i < xKeys.length; i++) {
+        hit = t.map[xKeys[i]] || t.lower[xKeys[i].toLowerCase()];
+        if (hit && !BIBLE_STOP[xKeys[i].toLowerCase()]) { xHit = hit; break; }
+      }
+      for (i = 0; i < yKeys.length; i++) {
+        hit = t.map[yKeys[i]] || t.lower[yKeys[i].toLowerCase()];
+        if (hit && !BIBLE_STOP[yKeys[i].toLowerCase()]) { yHit = hit; break; }
+      }
       if (!xHit) return m;
-      if (!yHit) return '<a href="#/' + xHit.coll + '/' + xHit.idx + '">' + esc(m) + '</a>';
-      var connector = m.slice(x.length, m.length - y.length);
+      var yPos = m.indexOf(y, x.length);
+      var connector = m.slice(x.length, yPos);
+      var tail = m.slice(yPos + y.length);
+      if (!yHit) return '<a href="#/' + xHit.coll + '/' + xHit.idx + '">' + esc(x + connector + y) + '</a>' + esc(tail);
       return '<a href="#/' + xHit.coll + '/' + xHit.idx + '">' + esc(x + connector) + '</a>' +
-        '<a href="#/' + yHit.coll + '/' + yHit.idx + '">' + esc(y) + '</a>';
+        '<a href="#/' + yHit.coll + '/' + yHit.idx + '">' + esc(y) + '</a>' + esc(tail);
     });
     safe = safe.replace(t.reMulti, function (m, anchor, term) {
       if (anchor) return anchor;
@@ -1279,13 +1334,28 @@
       var rest = found ? found.rest : p;
       if (found) lastBook = book;
       if (!book || !rest) return;
+      var lastChapter = null, lastHadVerse = false;
       rest.split(",").forEach(function (item) {
         var it = item.trim();
         var m = it.match(/^(\d+)(?::(\d+))?/);
         if (!m) return;
         var ch = +m[1];
+        var remapped = false;
+        if (!m[2] && lastChapter !== null && lastHadVerse) {
+          /* Verse continuation, same rule as linkifyScriptureRefs:
+             "Numbers 13:22, 28, 33" cites chapter 13 three times, not
+             chapters 28 and 33. */
+          ch = lastChapter; remapped = true;
+        } else if (book.chapters === 1 && !m[2] && ch !== 1) {
+          /* Single-chapter book cited by verse alone ("Jude 22"). */
+          ch = 1; remapped = true;
+        }
         if (ch < 1 || ch > book.chapters) return;
         out.push({ slug: book.slug, name: book.name, chapter: ch });
+        if (m[2]) { lastChapter = ch; lastHadVerse = true; }
+        else if (remapped) { /* chapter unchanged */ }
+        else { lastChapter = ch; lastHadVerse = false; }
+        if (remapped) return;
         var rm = it.match(/^(\d+)\s*-\s*(\d+)/);
         if (rm) {
           var a = +rm[1], b = +rm[2];
@@ -1396,6 +1466,16 @@
     window.scrollTo(0, 0);
   }
   function articlesForChapter(bookName, chapter) {
+    /* Scripture fields are parsed properly (book inheritance, verse
+       continuations, ranges), so "1 John 1:9" counts for 1 John 1 and
+       never for John 1, and "Numbers 1:5; 7:30-35" counts for Numbers
+       7 as well as Numbers 1. Other fields (prose that mentions a
+       passage) still match by text, except a numbered book's chapter
+       is never claimed from its numbered sibling's reference. */
+    var numbered = ["Samuel", "Kings", "Chronicles", "Corinthians",
+      "Thessalonians", "Timothy", "Peter", "John"];
+    var stripRe = numbered.indexOf(bookName) !== -1
+      ? new RegExp("[123] " + escapeRegExp(bookName) + " " + chapter + "(?![0-9])", "gi") : null;
     var variants = [bookName];
     if (bookName === "Psalms") variants.push("Psalm");
     if (bookName === "Song of Solomon") variants.push("Song of Songs", "Song");
@@ -1406,9 +1486,19 @@
     COLLECTIONS.forEach(function (c) {
       if (c.id === "quizzes" || c.id === "comicstories") return;
       (data[c.id] || []).forEach(function (row, i) {
-        var hit = Object.keys(row).some(function (k) {
-          return res.some(function (re) { return re.test(" " + val(row, k)); });
+        var hit = SCRIPTURE_FIELDS.some(function (f) {
+          var v = val(row, f);
+          if (isEmpty(v)) return false;
+          return refsInValue(v).some(function (r) { return r.name === bookName && r.chapter === chapter; });
         });
+        if (!hit) {
+          hit = Object.keys(row).some(function (k) {
+            if (SCRIPTURE_FIELDS.indexOf(k) !== -1) return false;
+            var text = " " + val(row, k);
+            if (stripRe) text = text.replace(stripRe, " ");
+            return res.some(function (re) { return re.test(text); });
+          });
+        }
         if (hit) out.push({ c: c, row: row, idx: i });
       });
     });

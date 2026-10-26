@@ -408,6 +408,8 @@ def linkify_scripture_refs(value):
             continue
         links = []
         first = True
+        last_chapter = None
+        last_had_verse = False
         for item in rest.split(","):
             it = item.strip()
             label = (found[2] + " " + it) if (first and found) else it
@@ -417,12 +419,30 @@ def linkify_scripture_refs(value):
                 links.append(esc(label))
                 continue
             ch = int(m.group(1))
+            verse = int(m.group(2)) if m.group(2) else None
+            if not m.group(2) and last_chapter is not None and last_had_verse:
+                # Verse continuation: "Numbers 13:22, 28, 33" = 13:22,
+                # 13:28, 13:33, not chapters 28 and 33.
+                verse = ch
+                ch = last_chapter
+            elif book["chapters"] == 1 and not m.group(2) and ch != 1:
+                # Single-chapter book cited by verse alone ("Jude 22").
+                verse = ch
+                ch = 1
             if ch < 1 or ch > book["chapters"]:
                 links.append(esc(label))
                 continue
-            href = "%s/#/bible/%s/%d" % (SITE_URL, book["slug"], ch)
             if m.group(2):
-                href += "?v=" + m.group(2)
+                last_chapter = ch
+                last_had_verse = True
+            elif verse is not None and last_chapter is not None and last_had_verse:
+                pass  # verse continuation: chapter unchanged
+            else:
+                last_chapter = ch
+                last_had_verse = False
+            href = "%s/#/bible/%s/%d" % (SITE_URL, book["slug"], ch)
+            if verse:
+                href += "?v=" + str(verse)
             links.append('<a href="%s">%s</a>' % (href, esc(label)))
         out_parts.append(", ".join(links))
     return "; ".join(out_parts)

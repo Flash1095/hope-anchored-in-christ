@@ -2670,7 +2670,7 @@
     "KeyStory": "Dinah's story in Shechem led her brothers Simeon and Levi to take revenge on the whole city — a dark chapter of vengeance.",
     "KeyVerses": "Genesis 30:21; Genesis 34; Genesis 46:15",
     "RelatedBooks": "Genesis",
-    "RelatedPeople": "Jacob; Leah; Simeon, Son of Jacob; Levi; Shechem; Hamor",
+    "RelatedPeople": "Jacob; Leah; Simeon, Son of Jacob; Levi; Shechem, Son of Hamor; Hamor",
     "LifeLesson": "Dinah's story warns us: one wrong answered with a greater wrong only multiplies the harm.",
     "Slug": "dinah"
   },
@@ -3241,7 +3241,7 @@
     "KeyStory": "After his son wronged Dinah, Hamor negotiated for intermarriage — but Simeon and Levi used the negotiations to destroy his city.",
     "KeyVerses": "Genesis 34",
     "RelatedBooks": "Genesis",
-    "RelatedPeople": "Shechem; Dinah; Jacob; Simeon, Son of Jacob; Levi",
+    "RelatedPeople": "Shechem, Son of Hamor; Dinah; Jacob; Simeon, Son of Jacob; Levi",
     "LifeLesson": "Negotiation without repentance cannot undo a wrong.",
     "Slug": "hamor"
   },
@@ -3402,7 +3402,7 @@
     "KeyStory": "Heth appears in the Table of Nations, tracing the peoples of the earth back to Noah's family.",
     "KeyVerses": "Genesis 10:15",
     "RelatedBooks": "Genesis",
-    "RelatedPeople": "Canaan",
+    "RelatedPeople": "Canaan, Son of Ham",
     "LifeLesson": "God's promise to fill the earth moved forward through families like this one.",
     "Slug": "heth"
   },
@@ -3662,7 +3662,7 @@
     "KeyStory": "Jachin appears in the list of Jacob's family that came into Egypt.",
     "KeyVerses": "Genesis 46:10",
     "RelatedBooks": "Genesis",
-    "RelatedPeople": "Simeon",
+    "RelatedPeople": "Simeon, Son of Jacob",
     "LifeLesson": "God's story keeps moving through families we know almost nothing about — and He knows them all.",
     "Slug": "jachin",
     "Places": "Egypt"
@@ -3704,7 +3704,7 @@
     "KeyStory": "Jamin appears in the list of Jacob's family that came into Egypt.",
     "KeyVerses": "Genesis 46:10",
     "RelatedBooks": "Genesis",
-    "RelatedPeople": "Simeon",
+    "RelatedPeople": "Simeon, Son of Jacob",
     "LifeLesson": "God's story keeps moving through families we know almost nothing about — and He knows them all.",
     "Slug": "jamin",
     "Places": "Egypt"
@@ -3744,7 +3744,7 @@
     "KeyStory": "Jemuel appears in the list of Jacob's family that came into Egypt.",
     "KeyVerses": "Genesis 46:10",
     "RelatedBooks": "Genesis",
-    "RelatedPeople": "Simeon",
+    "RelatedPeople": "Simeon, Son of Jacob",
     "LifeLesson": "God's story keeps moving through families we know almost nothing about — and He knows them all.",
     "Slug": "jemuel",
     "Places": "Egypt"
@@ -4671,7 +4671,7 @@
     "KeyStory": "Ohad appears in the list of Jacob's family that came into Egypt.",
     "KeyVerses": "Genesis 46:10",
     "RelatedBooks": "Genesis",
-    "RelatedPeople": "Simeon",
+    "RelatedPeople": "Simeon, Son of Jacob",
     "LifeLesson": "God's story keeps moving through families we know almost nothing about — and He knows them all.",
     "Slug": "ohad",
     "Places": "Egypt"
@@ -5134,7 +5134,7 @@
     "KeyStory": "Shaul appears in the list of Jacob's family that came into Egypt.",
     "KeyVerses": "Genesis 46:10",
     "RelatedBooks": "Genesis",
-    "RelatedPeople": "Simeon",
+    "RelatedPeople": "Simeon, Son of Jacob",
     "LifeLesson": "God's story keeps moving through families we know almost nothing about — and He knows them all.",
     "Slug": "shaul",
     "Places": "Egypt"
@@ -5177,19 +5177,6 @@
     "RelatedPeople": "Raamah; Dedan, Son of Raamah",
     "LifeLesson": "God's promise to fill the earth moved forward through families like this one.",
     "Slug": "sheba-son-of-raamah"
-  },
-  {
-    "Name": "Shechem",
-    "Role": "Son of Hamor",
-    "Testament": "Old",
-    "TimelineEra": "Primeval / Patriarchs",
-    "Summary": "Shechem was the son of Hamor the Hivite, the prince whose assault on Dinah brought destruction on his city.",
-    "KeyStory": "Shechem took Dinah by force, then asked to marry her — and while his men were weakened by circumcision, Simeon and Levi killed them all.",
-    "KeyVerses": "Genesis 34",
-    "RelatedBooks": "Genesis",
-    "RelatedPeople": "Hamor; Dinah; Jacob; Simeon, Son of Jacob; Levi",
-    "LifeLesson": "Desire without restraint destroys both the one who takes and everyone around him.",
-    "Slug": "shechem"
   },
   {
     "Name": "Shelah, Son of Judah",
@@ -5350,7 +5337,7 @@
     "KeyStory": "Sidon appears in the Table of Nations, tracing the peoples of the earth back to Noah's family.",
     "KeyVerses": "Genesis 10:15",
     "RelatedBooks": "Genesis",
-    "RelatedPeople": "Canaan",
+    "RelatedPeople": "Canaan, Son of Ham",
     "LifeLesson": "God's promise to fill the earth moved forward through families like this one.",
     "Slug": "sidon"
   },
@@ -8010,5 +7997,18 @@
     "Summary": "Zechariah was a Levite of the sons of Asaph, named in Scripture as the father of Jahaziel, in the line given when the Spirit came upon his son.",
     "Testament": "Old",
     "TimelineEra": "Divided Monarchy"
+  },
+  {
+    "Name": "Shechem, Son of Hamor",
+    "Role": "Son of Hamor",
+    "Testament": "Old",
+    "TimelineEra": "Primeval / Patriarchs",
+    "Summary": "Shechem was the son of Hamor the Hivite, the prince whose assault on Dinah brought destruction on his city.",
+    "KeyStory": "Shechem took Dinah by force, then asked to marry her — and while his men were weakened by circumcision, Simeon and Levi killed them all.",
+    "KeyVerses": "Genesis 34",
+    "RelatedBooks": "Genesis",
+    "RelatedPeople": "Hamor; Dinah; Jacob; Simeon, Son of Jacob; Levi",
+    "LifeLesson": "Desire without restraint destroys both the one who takes and everyone around him.",
+    "Slug": "shechem"
   }
 ]
