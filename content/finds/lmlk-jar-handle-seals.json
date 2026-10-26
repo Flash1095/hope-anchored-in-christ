@@ -1,14 +1,20 @@
 {
-  "Slug": "lmlk-jar-handle-seals",
   "FindName": "LMLK Jar-Handle Seals",
-  "DateDiscovered": "1869",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "Late 8th century BC (c. 700 BC)",
+  "DateDiscovered": "1869",
   "DiscoveryLocation": "Throughout Judah, Israel",
   "CurrentLocation": "Israel Museum, Jerusalem, and other museums",
   "TimelineEra": "Divided Monarchy",
   "Description": "More than two thousand jar handles stamped before firing with the Hebrew letters lmlk — 'belonging to the king' — plus one of four towns (Hebron, Ziph, Socoh, or mmst) and a winged scarab or sun disk. First found by Charles Warren in 1869, they cluster in Judah and date to the reign of Hezekiah, most likely a royal stockpiling program ahead of Sennacherib's invasion in 701 BC.",
   "BiblicalSignificance": "When Assyria marched on Judah, Hezekiah did not only pray — he prepared: storehouses, waterworks, and stamped jars of oil, wine, and grain ready for a siege. The lmlk seals are the logistics of faith under pressure, the same king who spread Sennacherib's letter before the LORD also making sure the jars were full.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree the stamps are genuine royal Judahite jar marks; debate concerns the meaning of ‘mmst’ (a place or the government) and whether the system was Hezekiah’s alone.",
   "ScriptureIlluminated": "2 Kings 18:13-16; 2 Chronicles 32:1-8",
   "RelatedBooks": "2 Kings; 2 Chronicles",
-  "RelatedEvents": "Hezekiah, Josiah, and Judah's Reforms"
+  "RelatedEvents": "Hezekiah, Josiah, and Judah's Reforms",
+  "Image": "assets/finds/lmlk-jar-handle-seals.jpg",
+  "ImageCredit": "Photo: Tom Bahar (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3ALMLK_Seals_on_Jar_Handles.jpg",
+  "Slug": "lmlk-jar-handle-seals"
 }

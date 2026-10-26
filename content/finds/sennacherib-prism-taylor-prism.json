@@ -1,16 +1,22 @@
 {
   "FindName": "Sennacherib Prism (Taylor Prism)",
-  "DateDiscovered": "c. 1830s",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "c. 691 BC",
+  "DateDiscovered": "c. 1830s",
   "DiscoveryLocation": "Nineveh, Iraq",
   "CurrentLocation": "British Museum, London",
   "TimelineEra": "Divided Monarchy",
   "Description": "A six-sided clay prism inscribed with the annals of Assyrian king Sennacherib, including his campaign against Judah in 701 BC. Sennacherib boasts that he shut Hezekiah up in Jerusalem 'like a bird in a cage' and received heavy tribute.",
   "BiblicalSignificance": "Remarkably, for all his boasting, Sennacherib never claims to have captured Jerusalem, matching the Bible's account that the city was delivered. The prism confirms Hezekiah, the siege, and the tribute from Assyria's own records, while its silence about conquest leaves room for the miraculous deliverance Scripture celebrates.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the prism is Sennacherib’s own account of the 701 BC campaign; it confirms the siege of Jerusalem while boasting of tribute — and notably never claims the city fell, matching 2 Kings 19.",
   "ScriptureIlluminated": "2 Kings 18-19; Isaiah 36-37; 2 Chronicles 32",
   "RelatedPeople": "Sennacherib; Hezekiah; Isaiah",
   "RelatedBooks": "2 Kings; Isaiah; 2 Chronicles",
-  "Slug": "sennacherib-prism",
   "Places": "Nineveh; Jerusalem",
-  "RelatedEvents": "Hezekiah and Sennacherib's Invasion"
+  "RelatedEvents": "Hezekiah and Sennacherib's Invasion",
+  "Image": "assets/finds/sennacherib-prism.jpg",
+  "ImageCredit": "Photo: This image was produced by me, David Castor (user:dcastor). The pictures I submi (Public domain)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3ATaylor_Prism-3.jpg",
+  "Slug": "sennacherib-prism"
 }

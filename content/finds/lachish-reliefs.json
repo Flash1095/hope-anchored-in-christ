@@ -1,16 +1,22 @@
 {
   "FindName": "Lachish Reliefs",
-  "DateDiscovered": "1845",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "c. 700-692 BC",
+  "DateDiscovered": "1845",
   "DiscoveryLocation": "Nineveh, Iraq (Palace of Sennacherib)",
   "CurrentLocation": "British Museum, London",
   "TimelineEra": "Divided Monarchy",
   "Description": "A series of carved stone panels from Sennacherib's palace depicting, in vivid detail, the Assyrian siege and capture of Lachish in 701 BC, with battering ramps, archers, captives, and the king enthroned reviewing the spoil. The panels lined a single room as a visual war report.",
   "BiblicalSignificance": "These reliefs picture the very campaign described in 2 Kings 18, against Judah's second city, and excavations at Lachish have found the Assyrian siege ramp they depict. They help us feel the terror Hezekiah's generation faced, and therefore the size of God's deliverance of Jerusalem.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the reliefs depict Sennacherib’s siege of Lachish in 701 BC; they are Assyrian palace propaganda, so the Judean side of the story comes from 2 Kings 18–19.",
   "ScriptureIlluminated": "2 Kings 18:13-17; 2 Chronicles 32:9; Micah 1:13",
   "RelatedPeople": "Sennacherib; Hezekiah; Micah",
   "RelatedBooks": "2 Kings; 2 Chronicles; Micah",
-  "Slug": "lachish-reliefs",
   "Places": "Nineveh",
-  "RelatedEvents": "Hezekiah and Sennacherib's Invasion"
+  "RelatedEvents": "Hezekiah and Sennacherib's Invasion",
+  "Image": "assets/finds/lachish-reliefs.jpg",
+  "ImageCredit": "Photo: Osama Shukir Muhammed Amin FRCP(Glasg) (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AThe_fall_of_Lachish%2C_King_Sennacherib_reviews_Judaean_prisoners..JPG",
+  "Slug": "lachish-reliefs"
 }

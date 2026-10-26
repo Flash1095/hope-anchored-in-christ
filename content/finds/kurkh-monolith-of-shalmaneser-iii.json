@@ -1,16 +1,23 @@
 {
   "FindName": "Kurkh Monolith of Shalmaneser III",
-  "DateDiscovered": "1861",
+  "AlternativeNames": "Kurkh Stele",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "c. 853 BC",
+  "DateDiscovered": "1861",
   "DiscoveryLocation": "Kurkh, Turkey (near Diyarbakir)",
   "CurrentLocation": "British Museum, London",
   "TimelineEra": "Divided Monarchy",
   "Description": "A stone monolith of Shalmaneser III describing his sixth year, the Battle of Qarqar in 853 BC, against a coalition of western kings. Its list of allies includes 'Ahab the Israelite,' credited with 2,000 chariots and 10,000 foot soldiers, the largest chariot force in the alliance.",
   "BiblicalSignificance": "The monolith is the earliest Assyrian mention of an Israelite king and confirms Ahab commanded a major military power, just as Kings portrays the wealthy Omride kingdom. Ahab is no hero of faith, but his presence in an enemy's monument anchors Israel's divided kingdom firmly in international history.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the monolith names Ahab of Israel among the kings who fought Shalmaneser III at Qarqar in 853 BC, confirming Ahab’s reign and army from an enemy’s record.",
   "ScriptureIlluminated": "1 Kings 16:29; 1 Kings 20; 1 Kings 22:1",
   "RelatedPeople": "Ahab; Shalmaneser III; Ben-Hadad",
   "RelatedBooks": "1 Kings; 2 Chronicles",
-  "Slug": "kurkh-monolith-of-shalmaneser-iii",
   "Places": "Samaria",
-  "RelatedEvents": "The Kingdom Divides"
+  "RelatedEvents": "The Kingdom Divides",
+  "Image": "assets/finds/kurkh-monolith-of-shalmaneser-iii.jpg",
+  "ImageCredit": "Photo: Osama Shukir Muhammed Amin FRCP(Glasg) (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AKurkh_stele_of_Shalmaneser_III._From_Diyarbak%C4%B1r%2C_southern_Turkey._British_Museum.jpg",
+  "Slug": "kurkh-monolith-of-shalmaneser-iii"
 }

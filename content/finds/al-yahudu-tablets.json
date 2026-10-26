@@ -1,13 +1,19 @@
 {
-  "Slug": "al-yahudu-tablets",
   "FindName": "Al-Yahudu Tablets",
-  "DateDiscovered": "Early 2000s (published from 2014)",
+  "HistoricalPeriod": "Babylonian–Persian",
   "ArtifactDate": "6th–5th century BC (c. 572–477 BC)",
+  "DateDiscovered": "Early 2000s (published from 2014)",
   "DiscoveryLocation": "Al-Yahudu ('Town of Judah'), near Nippur, Iraq",
   "CurrentLocation": "Moussaieff Collection, London, and other private collections",
   "TimelineEra": "Exile",
   "Description": "About two hundred cuneiform tablets recording the business of Judean exiles settled in a Babylonian town literally named 'Town of Judah.' They farmed, lent, borrowed, and witnessed contracts, bearing Hebrew names — including names honoring Yahweh — across three generations. The tablets surfaced on the antiquities market rather than in a controlled dig, but scholars accept them on internal evidence: the names, the place, and the dates all fit.",
   "BiblicalSignificance": "Psalm 137 asks how God's people could sing in a foreign land. The Al-Yahudu tablets answer with ledgers: they did — they worked, married, named their children for the LORD, and stayed recognizably Judahite in Babylon for generations. Exile did not erase them; it is where the Jewish people, as a people of the book, began to take shape.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars accept the tablets on internal evidence — Judean names, the town name ‘Al-Yahudu,’ and consistent dates — while noting they surfaced on the market, not in a controlled dig.",
   "ScriptureIlluminated": "2 Kings 25:11-12; Psalm 137:1",
-  "RelatedBooks": "2 Kings; Psalms"
+  "RelatedBooks": "2 Kings; Psalms",
+  "Image": "assets/finds/al-yahudu-tablets.jpg",
+  "ImageCredit": "Photo: עמית אבידן (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AAl-Yahudu_Tablets2.jpg",
+  "Slug": "al-yahudu-tablets"
 }

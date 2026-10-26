@@ -1,14 +1,20 @@
 {
-  "Slug": "arad-temple",
   "FindName": "Arad Temple",
-  "DateDiscovered": "1962–1967",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "9th–8th century BC",
+  "DateDiscovered": "1962–1967",
   "DiscoveryLocation": "Tel Arad, Negev, Israel",
   "CurrentLocation": "In situ, Tel Arad National Park",
   "TimelineEra": "Divided Monarchy",
   "Description": "A complete Judahite temple inside the fortress at Arad, found by Yohanan Aharoni: an outer court, a main hall, and a holy of holies with a stone altar, two incense altars, and a standing stone. It was deliberately dismantled and buried — its altars laid on their sides and covered with earth — most likely during the reforms of Hezekiah or Josiah.",
   "BiblicalSignificance": "Here is the reform in action: a working temple outside Jerusalem, carefully closed down rather than smashed, when Judah's kings decided worship belonged in one place. The buried altars are the physical footprint of 2 Kings 18 and 23 — kings who took God's law seriously enough to shut a temple down.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree the temple is a genuine Judahite sanctuary deliberately dismantled; debate concerns when — Hezekiah’s reform or Josiah’s — and whether the burial was reverent or punitive.",
   "ScriptureIlluminated": "2 Kings 18:4; 2 Kings 23:8",
   "RelatedBooks": "2 Kings",
-  "RelatedEvents": "Hezekiah, Josiah, and Judah's Reforms"
+  "RelatedEvents": "Hezekiah, Josiah, and Judah's Reforms",
+  "Image": "assets/finds/arad-temple.jpg",
+  "ImageCredit": "Photo: יעקב (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3ATel_arad_fortress_temple1957.jpg",
+  "Slug": "arad-temple"
 }

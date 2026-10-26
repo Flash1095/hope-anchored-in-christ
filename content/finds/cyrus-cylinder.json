@@ -1,16 +1,22 @@
 {
   "FindName": "Cyrus Cylinder",
-  "DateDiscovered": "1879",
+  "HistoricalPeriod": "Persian",
   "ArtifactDate": "c. 539 BC",
+  "DateDiscovered": "1879",
   "DiscoveryLocation": "Babylon, Iraq",
   "CurrentLocation": "British Museum, London",
   "TimelineEra": "Return and Second Temple",
   "Description": "A barrel-shaped clay cylinder in Akkadian cuneiform recording Cyrus the Great's conquest of Babylon and his policy of restoring temples and returning displaced peoples to their homelands. It was buried as a foundation deposit in Babylon.",
   "BiblicalSignificance": "Though it does not name Judah, the cylinder confirms exactly the policy Ezra records: Cyrus decreed that exiled peoples could return and rebuild their sanctuaries. It shows the biblical return from exile fits real Persian royal practice, and reminds us God can move the heart of a pagan king to keep His promise.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree the cylinder records Cyrus’s policy of restoring peoples and gods; debate centers on how far it supports Ezra’s account — the cylinder does not name Judah or Jerusalem, so it illuminates the decree’s context rather than quoting it.",
   "ScriptureIlluminated": "Ezra 1:1-4; 2 Chronicles 36:22-23; Isaiah 44:28; Isaiah 45:1",
   "RelatedPeople": "Cyrus the Great; Zerubbabel; Ezra",
   "RelatedBooks": "Ezra; 2 Chronicles; Isaiah",
-  "Slug": "cyrus-cylinder",
   "Places": "Babylon",
-  "RelatedEvents": "Cyrus's Decree and Return from Exile"
+  "RelatedEvents": "Cyrus's Decree and Return from Exile",
+  "Image": "assets/finds/cyrus-cylinder.jpg",
+  "ImageCredit": "Photo: Photograph by Mike Peel (www.mikepeel.net). (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3ACyrus_Cylinder_2.jpg",
+  "Slug": "cyrus-cylinder"
 }

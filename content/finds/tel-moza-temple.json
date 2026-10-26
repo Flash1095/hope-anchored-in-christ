@@ -1,13 +1,16 @@
 {
-  "Slug": "tel-moza-temple",
   "FindName": "Tel Moza Temple",
-  "DateDiscovered": "2012",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "9th–8th century BC",
+  "DateDiscovered": "2012",
   "DiscoveryLocation": "Tel Moza, near Jerusalem, Israel",
   "CurrentLocation": "In situ near Jerusalem",
   "TimelineEra": "Divided Monarchy",
   "Description": "A Judahite temple excavated from 2012 at Tel Moza, just seven kilometers west of Jerusalem — aligned east-west like Solomon's Temple, with a courtyard, altars, standing stones, and figurines, in use during the ninth and eighth centuries BC. It operated at the same time as the Jerusalem Temple, in the very shadow of the capital.",
   "BiblicalSignificance": "The law said worship belonged in the place God would choose, yet here is a full temple running a short walk from Jerusalem while Solomon's Temple stood. Tel Moza shows why the reforms of Hezekiah and Josiah mattered so much — centralizing worship was not tidy theory but a real struggle against real altars in real towns.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree the temple is a genuine ninth- to eighth-century Judahite sanctuary near Jerusalem; debate concerns its implications — how a temple so close to Jerusalem operated alongside Solomon’s.",
   "ScriptureIlluminated": "Deuteronomy 12:11; 2 Kings 23:8",
-  "RelatedBooks": "Deuteronomy; 2 Kings"
+  "RelatedBooks": "Deuteronomy; 2 Kings",
+  "Slug": "tel-moza-temple"
 }

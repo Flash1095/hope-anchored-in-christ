@@ -1,14 +1,20 @@
 {
-  "Slug": "dura-europos-church",
   "FindName": "Dura-Europos Church",
-  "DateDiscovered": "1928–1937",
+  "HistoricalPeriod": "Roman",
   "ArtifactDate": "c. AD 232",
+  "DateDiscovered": "1928–1937",
   "DiscoveryLocation": "Dura-Europos, Syria",
   "CurrentLocation": "Yale University Art Gallery (wall paintings); ruins in situ, Syria",
   "TimelineEra": "Early Church",
   "Description": "A converted house in the Roman frontier city of Dura-Europos on the Euphrates, excavated by Yale University and the French Academy. It is the oldest surviving church building ever found: a plain assembly room beside a baptistery whose walls were painted with the Good Shepherd, the healing of the paralytic, and the women at the empty tomb.",
   "BiblicalSignificance": "Before there were cathedrals, there was a house with pictures on the walls — the stories Christians told their newest members as they stepped into the water. The paintings show a church that already treasured the same Gospels we read: the Shepherd who seeks, the Healer who forgives, and the tomb that could not hold him.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree the house-church and its baptistery paintings are third-century; the building was buried in the city’s defenses in AD 256, which preserved the paintings.",
   "ScriptureIlluminated": "Mark 2:1-12; John 20:1-18",
+  "RelatedPeople": "Jesus",
   "RelatedBooks": "Mark; John",
-  "RelatedPeople": "Jesus"
+  "Image": "assets/finds/dura-europos-church.jpg",
+  "ImageCredit": "Photo: anonymous (CC0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3ADura-Europos_archival_photograph%2C_YUAG_negative_number_h304b_-object-id-3852.jpg",
+  "Slug": "dura-europos-church"
 }

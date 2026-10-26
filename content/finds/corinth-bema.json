@@ -1,14 +1,21 @@
 {
-  "Slug": "corinth-bema",
   "FindName": "Corinth Bema (Judgment Seat)",
-  "DateDiscovered": "1930s",
+  "HistoricalPeriod": "Roman",
   "ArtifactDate": "1st century AD",
+  "DateDiscovered": "1930s",
   "DiscoveryLocation": "Ancient Corinth, Greece",
   "CurrentLocation": "In situ, Ancient Corinth",
   "TimelineEra": "Early Church",
   "Description": "The raised stone platform in the forum of ancient Corinth where the Roman governor sat in judgment, excavated by the American School of Classical Studies. This is the bema — the judgment seat — before which Paul was brought by the Jews of Corinth, as Acts 18 describes.",
   "BiblicalSignificance": "Gallio dismissed the case against Paul from this very platform, and the gospel went on spreading in Corinth for another year and a half. Standing where Paul stood, before the same stones, the trial that could have silenced him becomes a place you can visit — and the Lord's promise to him that night, that no one would harm him, reads like history rather than legend.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the platform is Corinth’s forum bema, the judgment seat of Acts 18; Gallio’s verdict there is also fixed in time by the Delphi inscription.",
   "ScriptureIlluminated": "Acts 18:12-17",
+  "RelatedPeople": "Paul",
   "RelatedBooks": "Acts",
-  "RelatedPeople": "Paul"
+  "Places": "Corinth",
+  "Image": "assets/finds/corinth-bema.jpg",
+  "ImageCredit": "Photo: Zde (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3ABema_of_Corinth%2C_203034.jpg",
+  "Slug": "corinth-bema"
 }

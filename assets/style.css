@@ -29,7 +29,7 @@
 body {
   margin: 0;
   font-family: "Source Sans 3", system-ui, -apple-system, sans-serif;
-  background: var(--ivory);
+  background: #ffffff url("floral-wash.jpg?v=89") center top / cover fixed;
   color: var(--ink);
   line-height: 1.6;
 }
@@ -42,6 +42,12 @@ a:hover { color: var(--gold-dark); }
   background: #ffffff;
   box-shadow: 0 2px 12px rgba(27, 42, 78, 0.08);
   color: var(--navy); position: sticky; top: 0; z-index: 10;
+}
+/* Floral garland under the sticky header — Lorraine's own wildflowers */
+.site-header::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 8px;
+  background: url("floral-strip.jpg?v=89") center / cover no-repeat;
+  pointer-events: none;
 }
 .header-inner {
   max-width: 1100px; margin: 0 auto; padding: 0.7rem 1rem;

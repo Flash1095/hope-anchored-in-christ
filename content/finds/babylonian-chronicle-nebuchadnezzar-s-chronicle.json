@@ -1,16 +1,19 @@
 {
   "FindName": "Babylonian Chronicle (Nebuchadnezzar's Chronicle)",
-  "DateDiscovered": "19th century (published 1956)",
+  "HistoricalPeriod": "Babylonian",
   "ArtifactDate": "c. 605-594 BC",
+  "DateDiscovered": "19th century (published 1956)",
   "DiscoveryLocation": "Babylon, Iraq",
   "CurrentLocation": "British Museum, London",
   "TimelineEra": "Exile",
   "Description": "A cuneiform tablet from the Babylonian Chronicle series recording year-by-year events of King Nebuchadnezzar, including his campaign to Jerusalem. The chronicle states that in his seventh year Nebuchadnezzar captured the city of Judah, seized its king, and appointed a king of his own choosing.",
   "BiblicalSignificance": "That spare Babylonian entry matches 2 Kings 24: the capture of Jerusalem in 597 BC, the capture of Jehoiachin, and the installation of Zedekiah. An enemy empire's own diary confirming the exile's first deportation is powerful reassurance that the Bible's hardest chapters are history, not legend.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the chronicle records Nebuchadnezzar’s capture of Jerusalem in 597 BC, matching 2 Kings 24 — a rare case where a biblical date can be checked against Babylon’s own records.",
   "ScriptureIlluminated": "2 Kings 24:10-17; 2 Kings 25; Jeremiah 52",
   "RelatedPeople": "Nebuchadnezzar; Jehoiachin; Zedekiah; Jeremiah",
   "RelatedBooks": "2 Kings; Jeremiah; 2 Chronicles",
-  "Slug": "babylonian-chronicle-nebuchadnezzar",
   "Places": "Babylon; Jerusalem",
-  "RelatedEvents": "Fall of Jerusalem and the Exile"
+  "RelatedEvents": "Fall of Jerusalem and the Exile",
+  "Slug": "babylonian-chronicle-nebuchadnezzar"
 }

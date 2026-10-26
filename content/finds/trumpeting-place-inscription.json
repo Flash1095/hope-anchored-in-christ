@@ -1,16 +1,22 @@
 {
   "FindName": "Trumpeting Place Inscription",
-  "DateDiscovered": "1968",
+  "HistoricalPeriod": "Roman",
   "ArtifactDate": "c. AD 1-70",
+  "DateDiscovered": "1968",
   "DiscoveryLocation": "Temple Mount Excavations, Jerusalem, Israel",
   "CurrentLocation": "Israel Museum, Jerusalem",
   "TimelineEra": "Life of Christ",
   "Description": "A carved stone bearing the Hebrew words 'To the place of trumpeting,' found toppled at the southwestern corner of the Temple Mount where it fell in the Roman destruction of AD 70. It marked the spot where a priest blew the trumpet to announce the start and end of the Sabbath.",
   "BiblicalSignificance": "The stone confirms Josephus's description of Temple practice and lets us picture the rhythms of worship in the Jerusalem Jesus and the apostles knew. Stones that announced the Sabbath now announce something else to us: the faith of the Gospels is rooted in a real city, a real Temple, and a real people.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the stone marked the Temple’s ‘place of trumpeting,’ where priests blew the shofar; it fell from the Temple Mount and was found at the foot of the wall.",
   "ScriptureIlluminated": "Leviticus 23:3; Acts 3:1; Luke 24:53",
   "RelatedPeople": "Jesus; Peter; John",
   "RelatedBooks": "Acts; Luke; Leviticus",
-  "Slug": "trumpeting-place-inscription",
   "Places": "Jerusalem",
-  "RelatedEvents": "Rebuilding of the Temple"
+  "RelatedEvents": "Rebuilding of the Temple",
+  "Image": "assets/finds/trumpeting-place-inscription.jpg",
+  "ImageCredit": "Photo: Andrey Zeigarnik from Raanana, Israel (CC BY-SA 2.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3ATrumpeting_place_Zeigarnik.jpg",
+  "Slug": "trumpeting-place-inscription"
 }

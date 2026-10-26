@@ -1,13 +1,19 @@
 {
-  "Slug": "chester-beatty-papyri",
   "FindName": "Chester Beatty Papyri",
-  "DateDiscovered": "1930–1931",
+  "HistoricalPeriod": "Roman",
   "ArtifactDate": "2nd–3rd century AD",
+  "DateDiscovered": "1930–1931",
   "DiscoveryLocation": "Egypt (said to be from Aphroditopolis)",
   "CurrentLocation": "Chester Beatty Library, Dublin",
   "TimelineEra": "Early Church",
   "Description": "A group of early New Testament papyri purchased by Alfred Chester Beatty in 1930–31, including P45 (Gospels and Acts, c. AD 250), P46 (Paul's letters, c. AD 200 — the oldest collection of Paul's epistles), and P47 (Revelation, 3rd century). They are among the earliest surviving copies of the New Testament books.",
   "BiblicalSignificance": "P46 gathers Paul's letters into a single book within about a hundred and fifty years of his death — Romans, Corinthians, Galatians, and the rest already traveling together as Scripture. The church did not wait centuries to treasure the apostles' writings; it copied, collected, and carried them while the ink of the originals was barely dry in living memory.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the papyri are genuine second- to third-century New Testament copies; their exact Egyptian findspot is uncertain because they were purchased, not excavated.",
   "ScriptureIlluminated": "John 1:1; Romans 1:1",
-  "RelatedBooks": "John; Romans"
+  "RelatedBooks": "John; Romans",
+  "Image": "assets/finds/chester-beatty-papyri.jpg",
+  "ImageCredit": "Photo: Unknown authorUnknown author (Public domain)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AP._Chester_Beatty_I%2C_folio_13-14%2C_recto.jpg",
+  "Slug": "chester-beatty-papyri"
 }

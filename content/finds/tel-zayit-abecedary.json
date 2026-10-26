@@ -1,12 +1,19 @@
 {
-  "Slug": "tel-zayit-abecedary",
   "FindName": "Tel Zayit Abecedary",
-  "DateDiscovered": "2005",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "c. 1000 BC",
+  "DateDiscovered": "2005",
   "DiscoveryLocation": "Tel Zayit, Shephelah, Israel",
+  "CurrentLocation": "Not publicly confirmed",
   "TimelineEra": "United Monarchy",
   "Description": "A 38-pound limestone boulder found embedded in a 10th-century BC wall at Tel Zayit, excavated under Ron Tappy. One face carries all twenty-two letters of the early Hebrew alphabet in sequence over two lines — the earliest complete abecedary ever found, essentially a schoolchild's practice stone. The letter order differs slightly from the later standard, and the reverse side is hollowed like a bowl or mortar.",
   "BiblicalSignificance": "The alphabet behind the acrostic psalms — Psalm 119, built letter by letter — was already being taught in Judah in the days of David and Solomon. This stone is a classroom artifact from the kingdom that produced the Scriptures: somebody sat down, took a sharp tool, and carefully learned the letters that would carry God's word.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree the stone carries a complete tenth-century abecedary; debate concerns whether its letter forms are Hebrew, Phoenician, or broadly South Canaanite.",
   "ScriptureIlluminated": "Psalm 119:1; Proverbs 31:10",
-  "RelatedBooks": "Psalms; Proverbs"
+  "RelatedBooks": "Psalms; Proverbs",
+  "Image": "assets/finds/tel-zayit-abecedary.jpg",
+  "ImageCredit": "Photo: Zeitah Excavations and Israel Antiquities (Public domain)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AOldest_Hebrew_Inscription_X_BC.jpg",
+  "Slug": "tel-zayit-abecedary"
 }

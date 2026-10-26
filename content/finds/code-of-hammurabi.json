@@ -1,16 +1,22 @@
 {
   "FindName": "Code of Hammurabi",
-  "DateDiscovered": "1901",
+  "HistoricalPeriod": "Bronze Age",
   "ArtifactDate": "c. 1754 BC",
+  "DateDiscovered": "1901",
   "DiscoveryLocation": "Susa, Iran (originally from Babylon)",
   "CurrentLocation": "Louvre, Paris",
   "TimelineEra": "Primeval / Patriarchs",
   "Description": "A tall basalt stele topped with a carving of King Hammurabi receiving authority from the sun god Shamash, inscribed with 282 laws covering family, trade, injury, and property. It was carried off to Susa as war booty in antiquity and rediscovered by French excavators in 1901.",
   "BiblicalSignificance": "Hammurabi's code is not Scripture and predates Moses by centuries, but it is essential background: it shows the legal world Israel inhabited and how distinctive God's law could be in its care for the vulnerable. Comparing the two helps readers see both the Bible's ancient roots and its unique, hope-filled vision of justice.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree the code predates Moses by centuries and shares laws with Exodus; debate concerns influence — whether the parallels show borrowing, shared culture, or independent development.",
   "ScriptureIlluminated": "Exodus 21:23-25; Deuteronomy 19:21; Leviticus 24:19-20",
   "RelatedPeople": "Hammurabi; Moses",
   "RelatedBooks": "Exodus; Leviticus; Deuteronomy",
-  "Slug": "code-of-hammurabi",
-  "Places": "Babylon",
-  "RelatedEvents": "Giving of the Law at Sinai; The Ten Commandments"
+  "Places": "Babylon; Susa",
+  "RelatedEvents": "Giving of the Law at Sinai; The Ten Commandments",
+  "Image": "assets/finds/code-of-hammurabi.jpg",
+  "ImageCredit": "Photo: Mbzt (CC BY 3.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AP1050763_Louvre_code_Hammurabi_face_rwk.JPG",
+  "Slug": "code-of-hammurabi"
 }

@@ -1,16 +1,22 @@
 {
   "FindName": "Pilate Stone",
-  "DateDiscovered": "1961",
+  "HistoricalPeriod": "Roman",
   "ArtifactDate": "AD 26-36",
+  "DateDiscovered": "1961",
   "DiscoveryLocation": "Caesarea Maritima, Israel",
   "CurrentLocation": "Israel Museum, Jerusalem",
   "TimelineEra": "Life of Christ",
   "Description": "A limestone dedicatory inscription found reused in the theatre at Caesarea, reading in part 'Pontius Pilate, Prefect of Judea.' It is the only surviving inscription naming Pilate, discovered during Italian excavations in 1961.",
   "BiblicalSignificance": "For centuries Pilate was known only from the Gospels and a few Roman and Jewish writers; this stone confirms he was a real Roman official with the title prefect in Judea. It anchors the trial of Jesus, and therefore the cross itself, firmly in Roman administrative history.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the stone names Pontius Pilate as prefect of Judea, confirming his title and tenure; it was reused in a later theater, so its original building is unknown.",
   "ScriptureIlluminated": "Matthew 27:2; Luke 3:1; John 19:13-16; Acts 4:27",
   "RelatedPeople": "Pontius Pilate; Jesus",
   "RelatedBooks": "Matthew; Luke; John; Acts",
-  "Slug": "pilate-stone",
   "Places": "Jerusalem",
-  "RelatedEvents": "The Crucifixion"
+  "RelatedEvents": "The Crucifixion",
+  "Image": "assets/finds/pilate-stone.jpg",
+  "ImageCredit": "Photo: BRBurton (CC0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/Pontius_Pilate_Inscription.JPG",
+  "Slug": "pilate-stone"
 }

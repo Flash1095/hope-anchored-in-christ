@@ -1,16 +1,22 @@
 {
   "FindName": "Caiaphas Ossuary",
-  "DateDiscovered": "1990",
+  "HistoricalPeriod": "Roman",
   "ArtifactDate": "c. AD 10-70",
+  "DateDiscovered": "1990",
   "DiscoveryLocation": "Peace Forest, Jerusalem, Israel",
   "CurrentLocation": "Israel Museum, Jerusalem",
   "TimelineEra": "Life of Christ",
   "Description": "An ornately carved limestone ossuary (bone box) inscribed 'Joseph son of Caiaphas,' found in a family burial cave south of ancient Jerusalem. Inside were the bones of a man of about sixty, consistent with the high priest who presided at Jesus's trial.",
   "BiblicalSignificance": "The Gospels name Caiaphas as the high priest who plotted Jesus's death and questioned Him before the Sanhedrin. Finding his family's burial box confirms this named official and illuminates Second Temple burial customs that also frame Joseph of Arimathea's tomb.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars broadly accept the ossuary as that of the high priest’s family (‘Joseph son of Caiaphas’), though a few note it was found in a salvage context rather than a controlled excavation.",
   "ScriptureIlluminated": "Matthew 26:57-68; John 11:49-53; John 18:13-14",
   "RelatedPeople": "Caiaphas; Jesus; Joseph of Arimathea",
   "RelatedBooks": "Matthew; John; Luke",
-  "Slug": "caiaphas-ossuary",
   "Places": "Jerusalem",
-  "RelatedEvents": "The Crucifixion"
+  "RelatedEvents": "The Crucifixion",
+  "Image": "assets/finds/caiaphas-ossuary.jpg",
+  "ImageCredit": "Photo: deror_avi (CC BY-SA 3.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AOssuary_of_the_high_priest_Joseph_Caiaphas_P1180839.JPG",
+  "Slug": "caiaphas-ossuary"
 }

@@ -1,16 +1,22 @@
 {
   "FindName": "Black Obelisk of Shalmaneser III",
-  "DateDiscovered": "1846",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "c. 825 BC",
+  "DateDiscovered": "1846",
   "DiscoveryLocation": "Nimrud, Iraq (ancient Calah)",
   "CurrentLocation": "British Museum, London",
   "TimelineEra": "Divided Monarchy",
   "Description": "A black limestone obelisk carved with tribute scenes from the reign of Assyrian king Shalmaneser III. One register shows a king of Israel kneeling before Shalmaneser, captioned as Jehu, 'son of Omri,' bringing tribute in about 841 BC.",
   "BiblicalSignificance": "It is the only known contemporary depiction of an Israelite king, and it confirms Jehu and the Omride dynasty from Assyrian records. Even in a scene of political submission, the stone preserves the names Scripture preserves, grounding Israel's kings in verifiable history.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the obelisk shows Jehu of Israel paying tribute to Shalmaneser III; the inscription calls him ‘son of Omri,’ using the dynasty’s name rather than his actual father.",
   "ScriptureIlluminated": "2 Kings 9-10; 2 Kings 8:18",
   "RelatedPeople": "Jehu; Shalmaneser III; Ahab",
   "RelatedBooks": "2 Kings",
-  "Slug": "black-obelisk-of-shalmaneser-iii",
   "Places": "Samaria",
-  "RelatedEvents": "The Kingdom Divides"
+  "RelatedEvents": "The Kingdom Divides",
+  "Image": "assets/finds/black-obelisk-of-shalmaneser-iii.jpg",
+  "ImageCredit": "Photo: Osama Shukir Muhammed Amin FRCP(Glasg) (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AThe_Black_Obelisk_of_Shalmaneser_III%2C_9th_century_BC%2C_from_Nimrud%2C_Iraq._The_British_Museum.jpg",
+  "Slug": "black-obelisk-of-shalmaneser-iii"
 }

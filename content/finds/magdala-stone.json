@@ -1,14 +1,20 @@
 {
-  "Slug": "magdala-stone",
   "FindName": "Magdala Stone",
-  "DateDiscovered": "2009",
+  "HistoricalPeriod": "Roman",
   "ArtifactDate": "1st century AD",
+  "DateDiscovered": "2009",
   "DiscoveryLocation": "Magdala (Migdal), Galilee, Israel",
   "CurrentLocation": "On site at Magdala, Galilee",
   "TimelineEra": "Life of Christ",
   "Description": "A carved limestone block found in 2009 in the synagogue at Magdala, the hometown of Mary Magdalene. Its faces show the seven-branched menorah, a chariot-like structure, and rosettes — the earliest known stone depiction of the Second Temple and its furnishings, carved while the Temple still stood.",
   "BiblicalSignificance": "Jesus taught in synagogues throughout Galilee, and here is one of them, with its worship carved in stone: the menorah, the Temple it pointed to, the faith of a fishing town. The stone lets us see the world Jesus preached in — not a backdrop, but a place with its own synagogue, its own hopes, and its own people.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree the stone is a first-century synagogue carving with Temple imagery; debate concerns the details of its iconography — which Temple vessels each face shows.",
   "ScriptureIlluminated": "Luke 4:16; Matthew 4:23",
+  "RelatedPeople": "Jesus",
   "RelatedBooks": "Luke; Matthew",
-  "RelatedPeople": "Jesus"
+  "Image": "assets/finds/magdala-stone.jpg",
+  "ImageCredit": "Photo: Hanay (CC BY-SA 3.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AMagdala_Stone_%285%29.jpg",
+  "Slug": "magdala-stone"
 }

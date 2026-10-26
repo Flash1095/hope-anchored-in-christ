@@ -1,14 +1,20 @@
 {
   "FindName": "Megiddo Gates",
-  "DateDiscovered": "1925",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "c. 10th-9th century BC",
+  "DateDiscovered": "1925",
   "DiscoveryLocation": "Megiddo, Israel",
   "CurrentLocation": "In situ, Megiddo National Park, Israel",
   "TimelineEra": "United Monarchy",
   "Description": "Monumental six-chambered city gates and water systems excavated at Megiddo, the strategic fortress guarding the Jezreel Valley pass. Similar gates at Hazor and Gezer led excavator Yigael Yadin to link all three to Solomon's building programme, though some scholars date Megiddo's gate to the following century under the Omrides.",
   "BiblicalSignificance": "First Kings names Megiddo, Hazor, and Gezer together as Solomon's fortified cities, and the matching gates remain a famous, debated illustration of that verse. Whether dated to Solomon or shortly after, they confirm a powerful Iron Age kingdom in Israel, and Megiddo's name lives on in Revelation's Armageddon.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars debate the gates’ date: the Bible credits Solomon with fortifying Megiddo (1 Kings 9:15), but archaeologists divide between a tenth-century Solomonic date and a ninth-century Omride one.",
   "ScriptureIlluminated": "1 Kings 9:15; 1 Kings 10:26; Revelation 16:16",
   "RelatedPeople": "Solomon; Ahab",
   "RelatedBooks": "1 Kings; 2 Chronicles; Revelation",
+  "Image": "assets/finds/megiddo-gates.jpg",
+  "ImageCredit": "Photo: Ian Scott (CC BY-SA 2.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AChambered_Gate_of_Megiddo_%2820726303061%29.jpg",
   "Slug": "megiddo-gates"
 }

@@ -1,12 +1,18 @@
 {
-  "Slug": "codex-sinaiticus",
   "FindName": "Codex Sinaiticus",
-  "DateDiscovered": "1844–1859",
+  "HistoricalPeriod": "Roman",
   "ArtifactDate": "4th century AD (c. AD 350)",
+  "DateDiscovered": "1844–1859",
   "DiscoveryLocation": "St. Catherine's Monastery, Sinai, Egypt",
   "CurrentLocation": "British Library, London",
   "TimelineEra": "Early Church",
   "Description": "The oldest complete New Testament in existence, written in Greek on parchment in the fourth century, found by Constantin von Tischendorf at St. Catherine's Monastery — some leaves in a basket awaiting burning, the rest obtained in 1859. It contains the whole New Testament and much of the Greek Old Testament, with the books in an ancient order.",
   "BiblicalSignificance": "Every modern Bible is translated from manuscripts like this one. Sinaiticus lets scholars check our New Testaments against a copy made within three centuries of the apostles — and find them remarkably faithful. The word that was first preached in houses and marketplaces was already being guarded, copied, and bound as a book.",
-  "ScriptureIlluminated": "2 Timothy 3:16"
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree Sinaiticus is a genuine fourth-century Bible; debate concerns its place of production (Caesarea is often suggested) and the history of its leaves.",
+  "ScriptureIlluminated": "2 Timothy 3:16",
+  "Image": "assets/finds/codex-sinaiticus.jpg",
+  "ImageCredit": "Photo: Unknown authorUnknown author (Public domain)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3ACodex_Sinaiticus_Matthew_6%2C4-32.JPG",
+  "Slug": "codex-sinaiticus"
 }

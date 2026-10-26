@@ -1,15 +1,22 @@
 {
-  "Slug": "nabonidus-chronicle",
   "FindName": "Nabonidus Chronicle",
-  "DateDiscovered": "1879",
+  "HistoricalPeriod": "Babylonian",
   "ArtifactDate": "c. 556–539 BC",
+  "DateDiscovered": "1879",
   "DiscoveryLocation": "Babylon, Iraq",
   "CurrentLocation": "British Museum, London",
   "TimelineEra": "Exile",
   "Description": "A Babylonian chronicle tablet recording the reign of Nabonidus, the last king of Babylon, down to the Persian conquest: the capture of Babylon by Cyrus's army in 539 BC, the death of the king's son, and the entry of Cyrus himself. It is the Babylonian side of the night Belshazzar's feast ended.",
   "BiblicalSignificance": "Daniel 5 tells of handwriting on the wall and a kingdom weighed and divided in a single night. The chronicle gives the same night from the empire's own records — Babylon fell, Cyrus entered, and the exile that had begun with Nebuchadnezzar ended with a Persian king's decree. God's timetable, kept by both prophet and chronicler.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the chronicle records Babylon’s fall to Cyrus in 539 BC; it complements Daniel 5, which tells the same night from inside the palace.",
   "ScriptureIlluminated": "Daniel 5:30-31; Ezra 1:1-4",
-  "RelatedBooks": "Daniel; Ezra",
   "RelatedPeople": "Daniel",
-  "RelatedEvents": "Return from Exile under Cyrus"
+  "RelatedBooks": "Daniel; Ezra",
+  "Places": "Babylon",
+  "RelatedEvents": "Return from Exile under Cyrus",
+  "Image": "assets/finds/nabonidus-chronicle.jpg",
+  "ImageCredit": "Photo: Osama Shukir Muhammed Amin FRCP(Glasg) (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3ANabonidus%27s_faults_and_absences_were_recorded_alongside_events_of_his_reign._By_the_autumn_of_539_BCE%2C_Babylon_had_surrendered_to_the_army_of_king_Cyrus_to_become_part_of_the_growing_Achaemenid_Empire._From_Babylon%2C_Iraq%2C_530-400_BCE.jpg",
+  "Slug": "nabonidus-chronicle"
 }

@@ -1,16 +1,22 @@
 {
   "FindName": "Mesha Stele (Moabite Stone)",
-  "DateDiscovered": "1868",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "c. 840 BC",
+  "DateDiscovered": "1868",
   "DiscoveryLocation": "Dhiban, Jordan (ancient Dibon, Moab)",
   "CurrentLocation": "Louvre, Paris",
   "TimelineEra": "Divided Monarchy",
   "Description": "A black basalt stele inscribed by Mesha, king of Moab, describing his revolt against Israel and his building projects. It is the longest Iron Age inscription found in the region and is written in the Moabite language, very close to biblical Hebrew.",
   "BiblicalSignificance": "The stele tells the same war described in 2 Kings 3 from the other side, naming Omri of Israel and referring to vessels of Yahweh taken from Nebo. It confirms the biblical picture of Moab, Israel, and Chemosh-era politics, and a proposed reading may also mention the House of David, though that line is damaged and debated.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the stele is a genuine 9th-century Moabite royal inscription; its account of the war with Israel complements 2 Kings 3, with debate over damaged lines and whether a ‘David’ reading in line 31 is genuine.",
   "ScriptureIlluminated": "2 Kings 3; Numbers 21:26-30; Isaiah 15-16",
   "RelatedPeople": "Mesha; Omri; Ahab; Jehoram",
   "RelatedBooks": "2 Kings; Numbers; Isaiah",
-  "Slug": "mesha-stele",
   "Places": "Plains of Moab",
-  "RelatedEvents": "The Kingdom Divides"
+  "RelatedEvents": "The Kingdom Divides",
+  "Image": "assets/finds/mesha-stele.jpg",
+  "ImageCredit": "Photo: Mbzt (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AF4171_Louvre_stele_de_Mesha_AO5066_rwk.jpg",
+  "Slug": "mesha-stele"
 }

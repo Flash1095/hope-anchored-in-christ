@@ -134,6 +134,8 @@ collections:
     format: "json"
     fields:
       - {label: "Find Name", name: "FindName", widget: "string"}
+      - {label: "Alternative Names", name: "AlternativeNames", widget: "string", required: false}
+      - {label: "Historical Period", name: "HistoricalPeriod", widget: "select", options: ["Bronze Age", "Iron Age I", "Iron Age II", "Babylonian", "Persian", "Babylonian–Persian", "Hellenistic", "Hellenistic–Roman", "Roman", "Roman–Byzantine", "Byzantine"], required: false}
       - {label: "Date Discovered", name: "DateDiscovered", widget: "string"}
       - {label: "Artifact Date", name: "ArtifactDate", widget: "string"}
       - {label: "Discovery Location", name: "DiscoveryLocation", widget: "string"}
@@ -141,12 +143,17 @@ collections:
       - {label: "Timeline Era", name: "TimelineEra", widget: "string"}
       - {label: "Description", name: "Description", widget: "text"}
       - {label: "Biblical Significance", name: "BiblicalSignificance", widget: "text"}
+      - {label: "Evidence Class", name: "EvidenceClass", widget: "select", options: ["Direct", "Contextual", "Disputed"], required: false}
+      - {label: "Interpretations", name: "Interpretations", widget: "text", required: false}
       - {label: "Scripture Illuminated", name: "ScriptureIlluminated", widget: "list"}
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Related Books", name: "RelatedBooks", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Image", name: "Image", widget: "image", required: false}
+      - {label: "Image Credit", name: "ImageCredit", widget: "string", required: false}
+      - {label: "Image Source", name: "ImageSource", widget: "string", required: false}
   - name: "places"
     label: "Biblical Places"
     folder: "content/places"

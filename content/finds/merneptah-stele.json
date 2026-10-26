@@ -1,16 +1,22 @@
 {
   "FindName": "Merneptah Stele",
-  "DateDiscovered": "1896",
+  "HistoricalPeriod": "Bronze Age",
   "ArtifactDate": "c. 1208 BC",
+  "DateDiscovered": "1896",
   "DiscoveryLocation": "Thebes, Egypt",
   "CurrentLocation": "Egyptian Museum, Cairo",
   "TimelineEra": "Conquest and Judges",
   "Description": "A large granite victory stele of Pharaoh Merneptah listing peoples and cities defeated in Canaan, including Ashkelon, Gezer, and Yanoam. In its closing lines it names 'Israel' with a hieroglyph used for a people rather than a city-state.",
   "BiblicalSignificance": "This is the earliest extra-biblical mention of Israel by name, showing a people called Israel already present in Canaan by about 1208 BC. It does not prove every detail of the Exodus or Conquest, but it happily confirms the Bible's basic claim that Israel existed in the land in this period.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree this c. 1208 BC inscription is the earliest extra-biblical mention of Israel, though its claim that ‘Israel is laid waste’ is royal boasting — Israel plainly survived, as the later record shows.",
   "ScriptureIlluminated": "Joshua 11; Judges 1; Exodus 12:40-41",
   "RelatedPeople": "Joshua; Pharaoh Merneptah",
   "RelatedBooks": "Joshua; Judges; Exodus",
-  "Slug": "merneptah-stele",
   "Places": "Egypt",
-  "RelatedEvents": "Crossing the Jordan; Fall of Jericho"
+  "RelatedEvents": "Crossing the Jordan; Fall of Jericho",
+  "Image": "assets/finds/merneptah-stele.jpg",
+  "ImageCredit": "Photo: 𐰇𐱅𐰚𐰤 (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AMerneptah_Steli_%28cropped%29.jpg",
+  "Slug": "merneptah-stele"
 }

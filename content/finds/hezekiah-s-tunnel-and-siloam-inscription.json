@@ -1,16 +1,22 @@
 {
   "FindName": "Hezekiah's Tunnel and Siloam Inscription",
-  "DateDiscovered": "1880",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "c. 701 BC",
+  "DateDiscovered": "1880",
   "DiscoveryLocation": "City of David, Jerusalem, Israel",
   "CurrentLocation": "Istanbul Archaeology Museums, Turkey; Tunnel: In situ, City of David, Jerusalem",
   "TimelineEra": "Divided Monarchy",
   "Description": "A 533-metre water tunnel cut through solid rock under Jerusalem, bringing the Gihon Spring's water inside the city to the Pool of Siloam. The Siloam Inscription, found in the tunnel in 1880, describes two crews digging from opposite ends and hearing each other's voices before breaking through.",
   "BiblicalSignificance": "Scripture credits Hezekiah with exactly this engineering work as he prepared for Sennacherib's siege. Walking the tunnel today, readers can literally stand inside a verse: God preserved Jerusalem in its crisis, and Hezekiah's faith-driven preparation still speaks of trusting God while doing the work He gives us.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the tunnel and its inscription are Hezekiah’s waterworks of c. 701 BC, matching 2 Kings 20:20; the inscription itself is now in Istanbul, with a replica at the tunnel.",
   "ScriptureIlluminated": "2 Kings 20:20; 2 Chronicles 32:2-4; 2 Chronicles 32:30; John 9:7",
   "RelatedPeople": "Hezekiah; Isaiah",
   "RelatedBooks": "2 Kings; 2 Chronicles; John",
-  "Slug": "hezekiahs-tunnel-and-siloam-inscription",
   "Places": "Jerusalem",
-  "RelatedEvents": "Hezekiah and Sennacherib's Invasion"
+  "RelatedEvents": "Hezekiah and Sennacherib's Invasion",
+  "Image": "assets/finds/hezekiahs-tunnel-and-siloam-inscription.jpg",
+  "ImageCredit": "Photo: Davidbena (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AHezekiah%27s_Tunnel_enlightened.jpg",
+  "Slug": "hezekiahs-tunnel-and-siloam-inscription"
 }

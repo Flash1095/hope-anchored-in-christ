@@ -1,16 +1,22 @@
 {
   "FindName": "Hezekiah's Royal Seal (Bulla)",
-  "DateDiscovered": "2009 (published 2015)",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "c. 727-698 BC",
+  "DateDiscovered": "2009 (published 2015)",
   "DiscoveryLocation": "Ophel Excavations, Jerusalem, Israel",
   "CurrentLocation": "Hebrew University of Jerusalem, Jerusalem, Israel",
   "TimelineEra": "Divided Monarchy",
   "Description": "A tiny clay seal impression, about 13 mm wide, reading 'Belonging to Hezekiah, [son of] Ahaz, king of Judah,' stamped with a winged sun and ankh symbols. It was found in a royal refuse layer at the Ophel, south of the Temple Mount, and deciphered in 2015.",
   "BiblicalSignificance": "This is the first seal impression of a Judean king found in a controlled scientific excavation, and it belonged to the king who prayed as Sennacherib surrounded Jerusalem. Holding Hezekiah's own seal in the record ties the Bible's great deliverance story to a real king's real administration.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the bulla reads ‘Belonging to Hezekiah, son of Ahaz, king of Judah’; it surfaced on the antiquities market, so its exact findspot is unknown.",
   "ScriptureIlluminated": "2 Kings 18:1-7; Isaiah 37:14-20; 2 Chronicles 32:17-19",
   "RelatedPeople": "Hezekiah; Ahaz; Isaiah",
   "RelatedBooks": "2 Kings; Isaiah; 2 Chronicles",
-  "Slug": "hezekiahs-royal-seal-bulla",
   "Places": "Jerusalem",
-  "RelatedEvents": "Hezekiah and Sennacherib's Invasion"
+  "RelatedEvents": "Hezekiah and Sennacherib's Invasion",
+  "Image": "assets/finds/hezekiahs-royal-seal-bulla.jpg",
+  "ImageCredit": "Photo: Tamir Zegman (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3A%D7%98%D7%91%D7%99%D7%A2%D7%AA_%D7%97%D7%95%D7%AA%D7%9D_%D7%94%D7%9E%D7%9C%D7%9A_%D7%97%D7%96%D7%A7%D7%99%D7%94%D7%95.jpg",
+  "Slug": "hezekiahs-royal-seal-bulla"
 }

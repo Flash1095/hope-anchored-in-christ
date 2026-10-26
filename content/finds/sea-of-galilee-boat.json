@@ -1,14 +1,22 @@
 {
-  "Slug": "sea-of-galilee-boat",
   "FindName": "Sea of Galilee Boat",
-  "DateDiscovered": "1986",
+  "AlternativeNames": "Jesus Boat",
+  "HistoricalPeriod": "Roman",
   "ArtifactDate": "1st century AD",
+  "DateDiscovered": "1986",
   "DiscoveryLocation": "Sea of Galilee, near Ginosar, Israel",
   "CurrentLocation": "Yigal Allon Museum, Ginosar",
   "TimelineEra": "Life of Christ",
   "Description": "A wooden fishing boat about twenty-seven feet long, exposed by a drought in 1986 and excavated from the mud of the Sea of Galilee by Shelley Wachsmann and Orna Cohen. Built of cedar, oak, and other local woods with mortise-and-tenon joints, it is the kind of boat Galilean fishermen used in the first century — the kind that carried thirteen people at most.",
   "BiblicalSignificance": "When Jesus calmed the storm or called fishermen from their nets, he did it from a boat like this one, on this lake, with men who mended nets for a living. The boat makes the Gospels' lake stories tangible: the same water, the same wood, the same sudden storms that still rise over Galilee.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree the boat is a genuine first-century fishing boat; it is not claimed to be any boat Jesus used — its value is showing exactly what such boats were like.",
   "ScriptureIlluminated": "Mark 4:35-41; Luke 5:1-11",
+  "RelatedPeople": "Jesus",
   "RelatedBooks": "Mark; Luke",
-  "RelatedPeople": "Jesus"
+  "Places": "Galilee",
+  "Image": "assets/finds/sea-of-galilee-boat.jpg",
+  "ImageCredit": "Photo: Berthold Werner (Public domain)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AGinosar_BW_7.jpg",
+  "Slug": "sea-of-galilee-boat"
 }

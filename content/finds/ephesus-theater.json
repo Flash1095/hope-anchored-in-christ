@@ -1,14 +1,21 @@
 {
-  "Slug": "ephesus-theater",
   "FindName": "Ephesus Theater",
-  "DateDiscovered": "1895",
+  "HistoricalPeriod": "Roman",
   "ArtifactDate": "1st century AD (rebuilt; original Hellenistic)",
+  "DateDiscovered": "1895",
   "DiscoveryLocation": "Ephesus, Türkiye",
   "CurrentLocation": "In situ, Selçuk, Türkiye",
   "TimelineEra": "Early Church",
   "Description": "The great theater of Ephesus, seating about twenty-five thousand, excavated by Austrian archaeologists from 1895 and restored in the twentieth century. Its marble seats and stage building are the setting of the riot in Acts 19, when the silversmiths dragged Paul's companions into the theater and the crowd shouted for two hours.",
   "BiblicalSignificance": "Luke names the theater, the city clerk who calmed the crowd, and the assembly's confusion — and all three check out against the stones. The gospel's advance in Ephesus was not a quiet idea but a public disturbance in a real city's largest gathering place, and the building still stands to prove the city was that big and that loud.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the theater is the one of Acts 19; its present form is largely Roman rebuilding, with Hellenistic origins beneath.",
   "ScriptureIlluminated": "Acts 19:23-41",
+  "RelatedPeople": "Paul",
   "RelatedBooks": "Acts",
-  "RelatedPeople": "Paul"
+  "Places": "Ephesus",
+  "Image": "assets/finds/ephesus-theater.jpg",
+  "ImageCredit": "Photo: Furkan Akkurt (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AGreat_Theatre_of_Ephesus_2024.jpg",
+  "Slug": "ephesus-theater"
 }

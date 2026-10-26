@@ -1,15 +1,21 @@
 {
   "FindName": "Ekron Temple Inscription",
-  "DateDiscovered": "1996",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "c. 7th century BC",
+  "DateDiscovered": "1996",
   "DiscoveryLocation": "Tel Miqne-Ekron, Israel",
   "CurrentLocation": "Israel Museum, Jerusalem",
   "TimelineEra": "Divided Monarchy",
   "Description": "A large limestone dedicatory inscription from the temple at Ekron, one of Philistia's five great cities, naming a line of Ekron's kings including Ikausu (Achish) son of Padi. It was found in place in the temple's sanctuary during the final excavation season.",
   "BiblicalSignificance": "The inscription names Achish and Padi, both known from Assyrian records, and confirms Ekron's royal line in the exact period when Philistines, Assyrians, and Judah collided in Scripture. It grounds the Philistine world of Samuel and the prophets in inscriptions those cities left for themselves.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the inscription names Achish (Ikausu), king of Ekron, and dedicates a temple; this is a later Achish than the one David knew, showing the name’s long Philistine history.",
   "ScriptureIlluminated": "1 Samuel 5:8; 1 Samuel 21:10; Jeremiah 25:20; Zephaniah 2:4",
   "RelatedPeople": "Achish; Goliath; Samuel",
   "RelatedBooks": "1 Samuel; Jeremiah; Zephaniah",
-  "Slug": "ekron-temple-inscription",
-  "RelatedEvents": "David and Goliath"
+  "RelatedEvents": "David and Goliath",
+  "Image": "assets/finds/ekron-temple-inscription.jpg",
+  "ImageCredit": "Photo: Oren Rozen (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AJRSLM_300116_Ekron_inscription.jpg",
+  "Slug": "ekron-temple-inscription"
 }

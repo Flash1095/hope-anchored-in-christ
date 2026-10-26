@@ -1,15 +1,21 @@
 {
   "FindName": "Pool of Bethesda",
-  "DateDiscovered": "1888",
+  "HistoricalPeriod": "Roman",
   "ArtifactDate": "c. 2nd century BC - AD 70",
+  "DateDiscovered": "1888",
   "DiscoveryLocation": "Old City, Jerusalem, Israel",
   "CurrentLocation": "In situ, Church of St. Anne, Jerusalem, Israel",
   "TimelineEra": "Life of Christ",
   "Description": "A double pool complex north of the Temple Mount, excavated beside the Church of St. Anne, with five porticoes formed by colonnades around and between its two basins. In the Byzantine period a church was built over it to commemorate Jesus's healing there.",
   "BiblicalSignificance": "John 5 describes Bethesda as having five porticoes, a detail once doubted as symbolic until the five colonnades were uncovered. Archaeology here vindicates John's eyewitness eye for Jerusalem, and points us to the mercy of Jesus, who found a forgotten man at a crowded pool and made him whole.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the twin pools with five porticoes match John’s description of Bethesda; the site also has later Roman and Byzantine layers, including a healing shrine.",
   "ScriptureIlluminated": "John 5:1-15",
   "RelatedPeople": "Jesus",
   "RelatedBooks": "John",
-  "Slug": "pool-of-bethesda",
-  "Places": "Jerusalem"
+  "Places": "Jerusalem",
+  "Image": "assets/finds/pool-of-bethesda.jpg",
+  "ImageCredit": "Photo: Berthold Werner (Public domain)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AJerusalem_Bethesda_BW_1.JPG",
+  "Slug": "pool-of-bethesda"
 }

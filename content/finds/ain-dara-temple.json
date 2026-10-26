@@ -1,13 +1,19 @@
 {
-  "Slug": "ain-dara-temple",
   "FindName": "Ain Dara Temple",
-  "DateDiscovered": "1955",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "Iron Age (c. 1000–800 BC)",
+  "DateDiscovered": "1955",
   "DiscoveryLocation": "Ain Dara, near Aleppo, Syria",
   "CurrentLocation": "In situ near Aleppo, Syria (damaged in 2018)",
   "TimelineEra": "United Monarchy",
   "Description": "A Syro-Hittite temple in northern Syria, discovered in 1955 and excavated in the 1980s. Its layout matches Solomon's Temple in Jerusalem almost feature for feature: a porch with two columns, a main hall, and a raised inner sanctuary, decorated with lions, cherubim-like creatures, and — carved into the threshold — a pair of giant footprints, as if a god had walked in.",
   "BiblicalSignificance": "Solomon's Temple is gone, but its neighbors built temples the same way — and Ain Dara lets us picture what 1 Kings 6 describes: the porch, the hall, the Most Holy Place, the carved guardians. The footprints at the door are a silent sermon: the ancients believed their gods entered their temples, while Israel's God promised something greater — to dwell among a people, not a building.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree the temple’s tripartite plan parallels Solomon’s Temple; it is a neighbor’s temple, not Israel’s, so it illuminates the Temple’s architecture rather than proving its existence.",
   "ScriptureIlluminated": "1 Kings 6:1-38",
-  "RelatedBooks": "1 Kings"
+  "RelatedBooks": "1 Kings",
+  "Image": "assets/finds/ain-dara-temple.jpg",
+  "ImageCredit": "Photo: Dosseman (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AAin_Dara_temple_front_side_right_of_entrance_03_sphinx_0559.jpg",
+  "Slug": "ain-dara-temple"
 }

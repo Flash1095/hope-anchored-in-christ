@@ -22,7 +22,7 @@
       meta: ["Role", "Testament"] },
     { id: "finds", label: "Ancient Discoveries", file: "content/finds.json", primary: "FindName",
       blurb: "Archaeological finds that illuminate the Bible.",
-      filters: [{ label: "Era", field: "TimelineEra" }], meta: ["DiscoveryLocation", "ArtifactDate"] },
+      filters: [{ label: "Era", field: "TimelineEra" }, { label: "Evidence", field: "EvidenceClass" }], meta: ["DiscoveryLocation", "ArtifactDate"] },
     { id: "places", label: "Biblical Places", file: "content/places.json", primary: "Name",
       blurb: "Where the story happened, and where those places are today.",
       filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }],
@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "88";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "89";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a

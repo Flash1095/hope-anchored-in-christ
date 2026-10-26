@@ -1,14 +1,20 @@
 {
   "FindName": "Gezer Calendar",
-  "DateDiscovered": "1908",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "c. 925 BC",
+  "DateDiscovered": "1908",
   "DiscoveryLocation": "Gezer (Tell Gezer), Israel",
   "CurrentLocation": "Istanbul Archaeology Museums, Turkey",
   "TimelineEra": "United Monarchy",
   "Description": "A small limestone tablet inscribed with a seven-line Hebrew poem listing the agricultural seasons: two months of gathering, two of sowing, two of late planting, and so on through the year. It is one of the oldest known Hebrew inscriptions and may have been a schoolboy's writing exercise.",
   "BiblicalSignificance": "Found at Gezer, the city Pharaoh gave as a dowry to Solomon's wife, the calendar shows everyday Hebrew writing and farming rhythms in the early monarchy period. It quietly confirms that Israel's faith was lived by farmers counting seasons under God's providence, much as Ecclesiastes and the Psalms describe.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree the calendar is a tenth-century agricultural list; debate concerns whether its script is Hebrew or Phoenician and whether it is a school exercise or a farmer’s almanac.",
   "ScriptureIlluminated": "1 Kings 9:16-17; Ecclesiastes 3:1-2; Psalm 65:9-13",
   "RelatedPeople": "Solomon",
   "RelatedBooks": "1 Kings; Ecclesiastes; Psalms",
+  "Image": "assets/finds/gezer-calendar.jpg",
+  "ImageCredit": "Photo: oncenawhile (CC BY-SA 3.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AGezer_calendar_close_up.jpg",
   "Slug": "gezer-calendar"
 }

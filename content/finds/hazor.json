@@ -1,15 +1,21 @@
 {
   "FindName": "Hazor",
-  "DateDiscovered": "1955",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "c. 13th-9th century BC",
+  "DateDiscovered": "1955",
   "DiscoveryLocation": "Tel Hazor, Israel",
   "CurrentLocation": "In situ, Tel Hazor National Park, Israel; Israel Museum, Jerusalem",
   "TimelineEra": "United Monarchy",
   "Description": "The largest biblical-period mound in Israel, excavated by Yigael Yadin in 1955-58, revealing a great Late Bronze Age city with temples and royal buildings, a destruction layer by fire, and a six-chambered gate like Megiddo's. Hazor was 'head of all those kingdoms' in Joshua's day and was fortified again in the monarchy period.",
   "BiblicalSignificance": "Hazor's burned Bronze Age layer fits its biblical description as the one northern city Joshua burned, though the exact dating and identity of its destroyers are debated. Together with its Solomonic-era gate, Hazor spans the story from conquest to kingdom, showing God's people planted in a land of real cities and real kings.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars debate Hazor’s Solomonic gate and the extent of its tenth-century fortifications, as with Megiddo; the city’s importance in Joshua and Judges is not in doubt, but which stones are Solomon’s is.",
   "ScriptureIlluminated": "Joshua 11:10-13; Judges 4:2; 1 Kings 9:15",
   "RelatedPeople": "Joshua; Deborah; Barak; Solomon; Jabin",
   "RelatedBooks": "Joshua; Judges; 1 Kings",
-  "Slug": "hazor",
-  "RelatedEvents": "Crossing the Jordan"
+  "RelatedEvents": "Crossing the Jordan",
+  "Image": "assets/finds/hazor.jpg",
+  "ImageCredit": "Photo: Bukvoed (CC BY 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/Tel-Hazor-2004.jpg",
+  "Slug": "hazor"
 }

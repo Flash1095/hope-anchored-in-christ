@@ -1,16 +1,22 @@
 {
   "FindName": "Capernaum - Peter's House and Synagogue",
-  "DateDiscovered": "1905",
+  "HistoricalPeriod": "Roman–Byzantine",
   "ArtifactDate": "c. 1st century BC - AD 400",
+  "DateDiscovered": "1905",
   "DiscoveryLocation": "Capernaum (Tel Hum), Israel",
   "CurrentLocation": "In situ, Capernaum, Israel",
   "TimelineEra": "Life of Christ",
   "Description": "The lakeside fishing village Jesus made His ministry home, with a first-century house venerated from early on as Peter's home (later enclosed in an octagonal church) and a white limestone synagogue standing over an earlier basalt synagogue foundation. Franciscan excavations from 1968 carefully exposed the house's rooms and inscriptions.",
   "BiblicalSignificance": "Capernaum is named over fifty times in the Gospels, and here its streets, synagogue, and a very ordinary fisherman's house can still be walked. That ordinariness is the wonder: the Son of God taught, healed, and called disciples in a real village whose stones still preach.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars debate the identification: a first-century house beneath a fourth-century church, with graffiti naming Peter, is traditionally Peter’s house — but the link rests on later veneration, not proof. The later synagogue is securely dated to the fourth–fifth century, not Jesus’ day.",
   "ScriptureIlluminated": "Matthew 4:13; Mark 1:21-34; Luke 7:1-10; John 6:59",
   "RelatedPeople": "Jesus; Peter; Andrew; James; John",
   "RelatedBooks": "Matthew; Mark; Luke; John",
-  "Slug": "capernaum-peters-house-and-synagogue",
   "Places": "Capernaum",
-  "RelatedEvents": "Jesus Calms the Storm"
+  "RelatedEvents": "Jesus Calms the Storm",
+  "Image": "assets/finds/capernaum-peters-house-and-synagogue.jpg",
+  "ImageCredit": "Photo: Berthold Werner (Public domain)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AKafarnaum_BW_20.jpg",
+  "Slug": "capernaum-peters-house-and-synagogue"
 }

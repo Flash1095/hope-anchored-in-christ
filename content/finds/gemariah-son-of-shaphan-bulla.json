@@ -1,14 +1,18 @@
 {
-  "Slug": "gemariah-son-of-shaphan-bulla",
   "FindName": "Gemariah Son of Shaphan Bulla",
-  "DateDiscovered": "1982",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "c. 600 BC",
+  "DateDiscovered": "1982",
   "DiscoveryLocation": "City of David, Jerusalem",
   "CurrentLocation": "Israel Museum, Jerusalem",
   "TimelineEra": "Divided Monarchy",
   "Description": "A small clay seal impression from a controlled excavation in the City of David, reading 'Belonging to Gemariah son of Shaphan.' Gemariah was a court official in the days of King Jehoiakim. The back of the bulla still shows the marks of the papyrus document and cord it once sealed.",
   "BiblicalSignificance": "Jeremiah 36 tells how Baruch read Jeremiah's scroll aloud 'in the chamber of Gemariah son of Shaphan the scribe' — and then the king cut the scroll up and burned it. This lump of clay is the seal of the man whose office heard the word of God read, days before it went into the fire. It is Jeremiah's world, small enough to hold in your hand.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the bulla is a genuine seal impression from a controlled City of David excavation naming Gemariah son of Shaphan, the official of Jeremiah 36.",
   "ScriptureIlluminated": "Jeremiah 36:10-12",
+  "RelatedPeople": "Jeremiah",
   "RelatedBooks": "Jeremiah",
-  "RelatedPeople": "Jeremiah"
+  "Places": "Jerusalem",
+  "Slug": "gemariah-son-of-shaphan-bulla"
 }

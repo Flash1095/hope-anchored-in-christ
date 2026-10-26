@@ -1,15 +1,21 @@
 {
   "FindName": "Tel Dan Stele (House of David)",
-  "DateDiscovered": "1993",
+  "HistoricalPeriod": "Iron Age II",
   "ArtifactDate": "c. 840 BC",
+  "DateDiscovered": "1993",
   "DiscoveryLocation": "Tel Dan, northern Israel",
   "CurrentLocation": "Israel Museum, Jerusalem",
   "TimelineEra": "Divided Monarchy",
   "Description": "A basalt victory stele in Aramaic, set up by an Aramean king (most likely Hazael of Damascus) boasting of victory over Israel and Judah. Its fragments were reused in a wall at Tel Dan and reassembled after discovery.",
   "BiblicalSignificance": "The stele contains the phrase 'House of David' (bytdwd), the earliest extra-biblical reference to David as founder of Judah's royal line. For readers who anchor hope in God's promise to David, it is a stone witness that David was a real king whose house neighbouring nations knew by name.",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree the phrase reads ‘House of David’ and dates to the 9th century BC; debate centers on the stele’s author (most often Hazael of Damascus) and which kings’ deaths it boasts of.",
   "ScriptureIlluminated": "2 Samuel 7; 1 Kings 15:16-22; 2 Kings 8:28-29",
   "RelatedPeople": "King David; Hazael; Jehu; Ahaziah",
   "RelatedBooks": "2 Samuel; 1 Kings; 2 Kings",
-  "Slug": "tel-dan-stele",
-  "RelatedEvents": "David Becomes King"
+  "RelatedEvents": "David Becomes King",
+  "Image": "assets/finds/tel-dan-stele.jpg",
+  "ImageCredit": "Photo: Oren Rozen (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File%3AJRSLM_300116_Tel_Dan_Stele_01.jpg",
+  "Slug": "tel-dan-stele"
 }
