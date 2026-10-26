@@ -24,6 +24,18 @@
     "BlogPostLink": ""
   },
   {
+    "Title": "Enoch Walks with God",
+    "Era": "Primeval / Patriarchs",
+    "DateApprox": "Primeval period (date varies by tradition)",
+    "KeyPersons": "Enoch",
+    "BibleBooks": "Genesis",
+    "Places": "",
+    "Events": "Enoch walks faithfully with God and is taken up without dying",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Genesis 5:21-24",
+    "BlogPostLink": ""
+  },
+  {
     "Title": "Noah and the Flood",
     "Era": "Primeval / Patriarchs",
     "DateApprox": "Primeval period (date varies by tradition)",
@@ -60,6 +72,18 @@
     "BlogPostLink": ""
   },
   {
+    "Title": "Abram, Lot, and Melchizedek",
+    "Era": "Primeval / Patriarchs",
+    "DateApprox": "c. 2000-1800 BC (approx.)",
+    "KeyPersons": "Abraham; Lot; Melchizedek",
+    "BibleBooks": "Genesis",
+    "Places": "Bethel; Sodom; Salem",
+    "Events": "Abram and Lot part ways; Abram rescues Lot and meets Melchizedek, priest of God Most High",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Genesis 13-14",
+    "BlogPostLink": ""
+  },
+  {
     "Title": "Abraham, Isaac, and Jacob",
     "Era": "Primeval / Patriarchs",
     "DateApprox": "c. 2000-1800 BC (approx.)",
@@ -72,6 +96,150 @@
     "BlogPostLink": ""
   },
   {
+    "Title": "Hagar and Ishmael",
+    "Era": "Primeval / Patriarchs",
+    "DateApprox": "c. 2000-1800 BC (approx.)",
+    "KeyPersons": "Abraham; Sarah; Hagar; Ishmael",
+    "BibleBooks": "Genesis",
+    "Places": "Canaan",
+    "Events": "Hagar bears Ishmael; God hears her in the wilderness and promises her son a future",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Genesis 16",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Sodom and Gomorrah",
+    "Era": "Primeval / Patriarchs",
+    "DateApprox": "c. 2000-1800 BC (approx.)",
+    "KeyPersons": "Abraham; Lot",
+    "BibleBooks": "Genesis",
+    "Places": "Sodom; Gomorrah; Zoar",
+    "Events": "God judges Sodom and Gomorrah; Lot escapes the destruction",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Genesis 18-19",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Abraham and Abimelech",
+    "Era": "Primeval / Patriarchs",
+    "DateApprox": "c. 2000-1800 BC (approx.)",
+    "KeyPersons": "Abraham; Sarah; Abimelech",
+    "BibleBooks": "Genesis",
+    "Places": "Gerar",
+    "Events": "God protects Sarah and Abraham in Gerar; Abraham prays for Abimelech",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Genesis 20",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Birth of Isaac",
+    "Era": "Primeval / Patriarchs",
+    "DateApprox": "c. 2000-1800 BC (approx.)",
+    "KeyPersons": "Abraham; Sarah; Isaac",
+    "BibleBooks": "Genesis",
+    "Places": "Beersheba",
+    "Events": "Isaac, the child of promise, is born to Abraham and Sarah in their old age",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Genesis 21",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "The Binding of Isaac",
+    "Era": "Primeval / Patriarchs",
+    "DateApprox": "c. 2000-1800 BC (approx.)",
+    "KeyPersons": "Abraham; Isaac",
+    "BibleBooks": "Genesis",
+    "Places": "Moriah",
+    "Events": "God tests Abraham; he provides a ram in place of Isaac on the mountain",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Genesis 22",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Isaac and Rebekah",
+    "Era": "Primeval / Patriarchs",
+    "DateApprox": "c. 2000-1800 BC (approx.)",
+    "KeyPersons": "Isaac; Rebekah",
+    "BibleBooks": "Genesis",
+    "Places": "Haran; Canaan",
+    "Events": "Abraham's servant finds Rebekah; she marries Isaac and the promise continues",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Genesis 24",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Jacob and Esau: Birthright and Blessing",
+    "Era": "Primeval / Patriarchs",
+    "DateApprox": "c. 2000-1800 BC (approx.)",
+    "KeyPersons": "Isaac; Rebekah; Jacob; Esau",
+    "BibleBooks": "Genesis",
+    "Places": "Beersheba",
+    "Events": "Esau sells his birthright; Jacob receives Isaac's blessing and flees",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Genesis 25; 27",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Isaac and Abimelech",
+    "Era": "Primeval / Patriarchs",
+    "DateApprox": "c. 2000-1800 BC (approx.)",
+    "KeyPersons": "Isaac; Rebekah; Abimelech",
+    "BibleBooks": "Genesis",
+    "Places": "Gerar; Beersheba",
+    "Events": "God renews the covenant with Isaac in Gerar; he prospers and makes peace with Abimelech",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Genesis 26",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Jacob's Ladder at Bethel",
+    "Era": "Primeval / Patriarchs",
+    "DateApprox": "c. 2000-1800 BC (approx.)",
+    "KeyPersons": "Jacob",
+    "BibleBooks": "Genesis",
+    "Places": "Bethel",
+    "Events": "Jacob dreams of a stairway to heaven; God renews the covenant with him at Bethel",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Genesis 28",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Jacob in Haran",
+    "Era": "Primeval / Patriarchs",
+    "DateApprox": "c. 2000-1800 BC (approx.)",
+    "KeyPersons": "Jacob; Leah; Rachel; Laban",
+    "BibleBooks": "Genesis",
+    "Places": "Haran; Paddan Aram",
+    "Events": "Jacob serves Laban, marries Leah and Rachel, and returns with his family and flocks",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Genesis 29-31",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Jacob Wrestles with God at Peniel",
+    "Era": "Primeval / Patriarchs",
+    "DateApprox": "c. 2000-1800 BC (approx.)",
+    "KeyPersons": "Jacob",
+    "BibleBooks": "Genesis",
+    "Places": "Peniel",
+    "Events": "Jacob wrestles through the night with God and is renamed Israel",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Genesis 32",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Jacob's Return and Reconciliation",
+    "Era": "Primeval / Patriarchs",
+    "DateApprox": "c. 2000-1800 BC (approx.)",
+    "KeyPersons": "Jacob; Esau; Rachel; Isaac",
+    "BibleBooks": "Genesis",
+    "Places": "Bethel; Hebron",
+    "Events": "Jacob reconciles with Esau, returns to Bethel, and buries his father Isaac",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Genesis 33-35",
+    "BlogPostLink": ""
+  },
+  {
     "Title": "Joseph in Egypt",
     "Era": "Primeval / Patriarchs",
     "DateApprox": "c. 1800-1700 BC (approx.)",
@@ -81,6 +249,18 @@
     "Events": "Joseph is sold into Egypt, rises to power, and saves his family in famine",
     "ArchaeologicalFinds": "",
     "ScriptureReference": "Genesis 37-50",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Judah and Tamar",
+    "Era": "Primeval / Patriarchs",
+    "DateApprox": "c. 2000-1800 BC (approx.)",
+    "KeyPersons": "Judah; Tamar",
+    "BibleBooks": "Genesis",
+    "Places": "Canaan",
+    "Events": "Tamar secures her place in Judah's line; Perez is born, ancestor of David",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Genesis 38",
     "BlogPostLink": ""
   },
   {
