@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "59";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "60";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -821,7 +821,7 @@
   /* Line art Lorraine creates herself, one per collection tile and one per
      blog post. Add the file under assets/lineart/ and list it here; the
      tile/post shows it automatically. Empty until her art arrives. */
-  var TILE_ART = { timeline: "assets/lineart/timeline.png", people: "assets/lineart/people.png?v=2", books: "assets/lineart/books.png", finds: "assets/lineart/finds.jpg?v=3", places: "assets/lineart/places.jpg", topics: "assets/lineart/topics.jpg", hymns: "assets/lineart/hymns.jpg", wordstudies: "assets/lineart/wordstudies.jpg" };
+  var TILE_ART = { timeline: "assets/lineart/timeline.png", people: "assets/lineart/people.png?v=2", books: "assets/lineart/books.png", finds: "assets/lineart/finds.jpg?v=3", places: "assets/lineart/places.jpg", topics: "assets/lineart/topics.jpg", hymns: "assets/lineart/hymns.jpg", wordstudies: "assets/lineart/wordstudies.jpg", jewishculture: "assets/lineart/jewishculture.jpg" };
   var POST_ART = {};
   function collectionCard(c) {
     var n = (data[c.id] || []).length;
