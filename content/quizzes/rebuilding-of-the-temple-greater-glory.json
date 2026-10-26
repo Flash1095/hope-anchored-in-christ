@@ -1,0 +1,16 @@
+{
+ "Quiz": "Rebuilding of the Temple Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did God promise about the glory of the latter house?",
+ "OptionA": "It shall be greater than that of the former",
+ "OptionB": "It shall be smaller forever",
+ "OptionC": "It shall be made of gold",
+ "OptionD": "It shall stand only a few years",
+ "CorrectAnswer": "A",
+ "Explanation": "The Lord said, 'The glory of this latter house shall be greater than of the former,' and in that place He would give peace.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Haggai 2:9",
+ "Slug": "rebuilding-of-the-temple-greater-glory",
+ "ReadingTitle": "Rebuilding of the Temple",
+ "ReadingLink": "#/stories/58"
+}

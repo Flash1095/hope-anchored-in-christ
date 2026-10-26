@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Last Supper Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "After the meal, where did Jesus lead His disciples, singing a hymn as they went?",
+  "OptionA": "Back to Galilee",
+  "OptionB": "To the house of the high priest",
+  "OptionC": "Toward the garden of Gethsemane",
+  "OptionD": "To Bethany to rest",
+  "CorrectAnswer": "C",
+  "Explanation": "After singing a hymn, Jesus led them out toward Gethsemane.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 26:30",
+  "Slug": "the-last-supper-hymn-to-gethsemane",
+  "ReadingTitle": "The Last Supper",
+  "ReadingLink": "#/stories/22"
+}

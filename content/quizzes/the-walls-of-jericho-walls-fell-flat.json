@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Walls of Jericho Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What happened to the walls of Jericho when Israel did exactly what God said?",
+  "OptionA": "The walls grew thicker",
+  "OptionB": "The walls fell flat",
+  "OptionC": "The walls caught fire",
+  "OptionD": "The walls opened like gates",
+  "CorrectAnswer": "B",
+  "Explanation": "When Israel did exactly what God said, the walls fell flat, and Israel took the city.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Joshua 6:20",
+  "Slug": "the-walls-of-jericho-walls-fell-flat",
+  "ReadingTitle": "The Walls of Jericho",
+  "ReadingLink": "#/stories/29"
+}

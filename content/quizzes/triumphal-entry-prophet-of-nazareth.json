@@ -1,0 +1,16 @@
+{
+ "Quiz": "Triumphal Entry Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "When the city asked, Who is this? what did the multitude answer?",
+ "OptionA": "This is the King of Rome",
+ "OptionB": "This is John the Baptist risen",
+ "OptionC": "This is Jesus the prophet of Nazareth of Galilee",
+ "OptionD": "This is the son of Herod",
+ "CorrectAnswer": "C",
+ "Explanation": "The multitude answered, This is Jesus the prophet of Nazareth of Galilee.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Matthew 21:11",
+ "Slug": "triumphal-entry-prophet-of-nazareth",
+ "ReadingTitle": "Triumphal Entry",
+ "ReadingLink": "#/stories/67"
+}

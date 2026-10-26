@@ -1,0 +1,16 @@
+{
+  "Quiz": "Noah and the Flood Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did God tell Noah to build, even though there was no sea in sight?",
+  "OptionA": "A tower",
+  "OptionB": "A temple",
+  "OptionC": "A city wall",
+  "OptionD": "An enormous ark",
+  "CorrectAnswer": "D",
+  "Explanation": "God told Noah to build an enormous ark, and Noah obeyed even though there was no sea in sight.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 6:14",
+  "Slug": "story-noah-and-the-flood-build-ark",
+  "ReadingTitle": "Noah and the Flood",
+  "ReadingLink": "#/stories/7"
+}

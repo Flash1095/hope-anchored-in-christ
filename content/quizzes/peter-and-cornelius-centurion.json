@@ -1,0 +1,16 @@
+{
+ "Quiz": "Peter and Cornelius Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What was Cornelius' role in the Roman army?",
+ "OptionA": "A centurion",
+ "OptionB": "A general",
+ "OptionC": "A tax collector",
+ "OptionD": "A palace guard",
+ "CorrectAnswer": "A",
+ "Explanation": "Cornelius was a centurion of the band called the Italian band, stationed at Caesarea.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Acts 10:1",
+ "Slug": "peter-and-cornelius-centurion",
+ "ReadingTitle": "Peter and Cornelius",
+ "ReadingLink": "#/stories/56"
+}

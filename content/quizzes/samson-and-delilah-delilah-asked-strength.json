@@ -1,0 +1,16 @@
+{
+  "Quiz": "Samson and Delilah Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who asked Samson again and again where his strength lay?",
+  "OptionA": "His mother",
+  "OptionB": "The queen of Gaza",
+  "OptionC": "A Philistine priestess",
+  "OptionD": "Delilah",
+  "CorrectAnswer": "D",
+  "Explanation": "Delilah asked Samson where his strength lay, and three times he lied to her before telling the truth.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Judges 16:6",
+  "Slug": "samson-and-delilah-delilah-asked-strength",
+  "ReadingTitle": "Samson and Delilah",
+  "ReadingLink": "#/stories/10"
+}

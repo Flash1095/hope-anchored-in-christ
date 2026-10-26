@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Sermon on the Mount Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Where did Jesus say not to store up treasures?",
+  "OptionA": "In the temple",
+  "OptionB": "In a neighbour's house",
+  "OptionC": "Under the mountainside",
+  "OptionD": "On earth",
+  "CorrectAnswer": "D",
+  "Explanation": "Treasures stored on earth do not last, so Jesus pointed His listeners to the kingdom instead.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 6:19",
+  "Slug": "the-sermon-on-the-mount-treasures-on-earth",
+  "ReadingTitle": "The Sermon on the Mount",
+  "ReadingLink": "#/stories/25"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jesus Turns Water into Wine at Cana Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "How many large stone waterpots were standing at the wedding?",
+ "OptionA": "Three",
+ "OptionB": "Four",
+ "OptionC": "Five",
+ "OptionD": "Six",
+ "CorrectAnswer": "D",
+ "Explanation": "John says there were six waterpots of stone, used for the purifying of the Jews. Jesus used them all for His sign.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "John 2:6",
+ "Slug": "jesus-turns-water-into-wine-at-cana-six-waterpots",
+ "ReadingTitle": "Jesus Turns Water into Wine at Cana",
+ "ReadingLink": "#/stories/50"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Jonah and Nineveh Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How many days was Jonah in the belly of the fish?",
+  "OptionA": "One",
+  "OptionB": "Two",
+  "OptionC": "Three",
+  "OptionD": "Seven",
+  "CorrectAnswer": "C",
+  "Explanation": "Jonah spent three days in the belly of the great fish before he prayed.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Jonah 1:17",
+  "Slug": "jonah-and-nineveh-three-days-fish",
+  "ReadingTitle": "Jonah and Nineveh",
+  "ReadingLink": "#/stories/5"
+}

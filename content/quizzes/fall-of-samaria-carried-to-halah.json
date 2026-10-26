@@ -1,0 +1,16 @@
+{
+ "Quiz": "Fall of Samaria Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "To which places was Israel carried away, according to 2 Kings 17:6?",
+ "OptionA": "Babylon and Egypt",
+ "OptionB": "Tyre and Sidon",
+ "OptionC": "Moab and Edom",
+ "OptionD": "Halah, Habor by the river of Gozan, and the cities of the Medes",
+ "CorrectAnswer": "D",
+ "Explanation": "The king of Assyria carried Israel away and placed them in Halah and in Habor by the river of Gozan, and in the cities of the Medes.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "2 Kings 17:6",
+ "Slug": "fall-of-samaria-carried-to-halah",
+ "ReadingTitle": "Fall of Samaria",
+ "ReadingLink": "#/stories/43"
+}

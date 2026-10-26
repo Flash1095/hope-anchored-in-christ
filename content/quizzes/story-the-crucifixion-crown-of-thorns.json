@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Crucifixion Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What was placed on Jesus' head in mockery?",
+  "OptionA": "A crown of gold",
+  "OptionB": "A veil",
+  "OptionC": "A Roman helmet",
+  "OptionD": "A crown of thorns",
+  "CorrectAnswer": "D",
+  "Explanation": "Jesus was flogged and mocked with a crown of thorns before he was led to Golgotha.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Matthew 27:29",
+  "Slug": "story-the-crucifixion-crown-of-thorns",
+  "ReadingTitle": "The Crucifixion",
+  "ReadingLink": "#/stories/17"
+}

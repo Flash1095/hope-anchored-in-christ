@@ -1,0 +1,16 @@
+{
+  "Quiz": "Esther Saves Her People Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What happened to Haman in the end?",
+  "OptionA": "He was exiled",
+  "OptionB": "He fled Persia",
+  "OptionC": "He was hanged on the gallows he built for Mordecai",
+  "OptionD": "He was pardoned",
+  "CorrectAnswer": "C",
+  "Explanation": "The king had Haman hanged on the very gallows Haman had built for Mordecai.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Esther 7:10",
+  "Slug": "esther-saves-her-people-haman-hanged",
+  "ReadingTitle": "Esther Saves Her People",
+  "ReadingLink": "#/stories/4"
+}

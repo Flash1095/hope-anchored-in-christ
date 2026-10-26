@@ -1,0 +1,16 @@
+{
+ "Quiz": "Deborah and Barak Defeat Sisera Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What two roles did Deborah hold in Israel?",
+ "OptionA": "Prophetess and judge",
+ "OptionB": "Queen and priestess",
+ "OptionC": "Singer and shepherd",
+ "OptionD": "General and scribe",
+ "CorrectAnswer": "A",
+ "Explanation": "Deborah, a prophetess, the wife of Lapidoth, judged Israel at that time.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Judges 4:4",
+ "Slug": "deborah-and-barak-defeat-sisera-prophetess-and-judge",
+ "ReadingTitle": "Deborah and Barak Defeat Sisera",
+ "ReadingLink": "#/stories/39"
+}

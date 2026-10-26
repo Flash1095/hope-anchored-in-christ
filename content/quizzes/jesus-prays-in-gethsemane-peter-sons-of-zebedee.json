@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jesus Prays in Gethsemane Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "Whom did Jesus take with Him as He began to be sorrowful and very heavy?",
+ "OptionA": "Only Judas",
+ "OptionB": "The twelve together",
+ "OptionC": "Nicodemus and Joseph",
+ "OptionD": "Peter and the two sons of Zebedee",
+ "CorrectAnswer": "D",
+ "Explanation": "He took with Him Peter and the two sons of Zebedee, and began to be sorrowful and very heavy.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Matthew 26:37",
+ "Slug": "jesus-prays-in-gethsemane-peter-sons-of-zebedee",
+ "ReadingTitle": "Jesus Prays in Gethsemane",
+ "ReadingLink": "#/stories/49"
+}

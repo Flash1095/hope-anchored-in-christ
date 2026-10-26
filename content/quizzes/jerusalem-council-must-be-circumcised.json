@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jerusalem Council Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What did some men from Judaea insist Gentile believers must do to be saved?",
+ "OptionA": "Be baptised in the Jordan",
+ "OptionB": "Travel to Jerusalem yearly",
+ "OptionC": "Be circumcised after the manner of Moses",
+ "OptionD": "Learn Hebrew",
+ "CorrectAnswer": "C",
+ "Explanation": "Certain men from Judaea taught the brethren, Except ye be circumcised after the manner of Moses, ye cannot be saved.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Acts 15:1",
+ "Slug": "jerusalem-council-must-be-circumcised",
+ "ReadingTitle": "Jerusalem Council",
+ "ReadingLink": "#/stories/47"
+}

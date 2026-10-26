@@ -1,0 +1,16 @@
+{
+ "Quiz": "Deborah and Barak Defeat Sisera Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did Jael use to strike Sisera down?",
+ "OptionA": "A sword",
+ "OptionB": "A stone",
+ "OptionC": "A tent nail and a hammer",
+ "OptionD": "A spear",
+ "CorrectAnswer": "C",
+ "Explanation": "While Sisera was fast asleep and weary, Jael took a nail of the tent and a hammer, and smote the nail into his temples.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Judges 4:21",
+ "Slug": "deborah-and-barak-defeat-sisera-tent-nail-hammer",
+ "ReadingTitle": "Deborah and Barak Defeat Sisera",
+ "ReadingLink": "#/stories/39"
+}

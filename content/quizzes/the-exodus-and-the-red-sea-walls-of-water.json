@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Exodus and the Red Sea Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What stood on either side of Israel as they crossed?",
+  "OptionA": "Walls of water",
+  "OptionB": "Cliffs of rock",
+  "OptionC": "Banks of reeds",
+  "OptionD": "Pillars of cloud",
+  "CorrectAnswer": "A",
+  "Explanation": "The people walked through on dry ground with walls of water on either side.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Exodus 14:22",
+  "Slug": "the-exodus-and-the-red-sea-walls-of-water",
+  "ReadingTitle": "The Exodus and the Red Sea",
+  "ReadingLink": "#/stories/18"
+}

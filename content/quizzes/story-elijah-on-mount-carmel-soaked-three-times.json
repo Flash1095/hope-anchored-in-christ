@@ -1,0 +1,16 @@
+{
+  "Quiz": "Elijah on Mount Carmel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How many times did Elijah have the LORD's altar soaked with water?",
+  "OptionA": "Once",
+  "OptionB": "Twice",
+  "OptionC": "Three times",
+  "OptionD": "Four times",
+  "CorrectAnswer": "C",
+  "Explanation": "Elijah had the altar soaked with water three times, so no one could doubt what happened next.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "1 Kings 18:34",
+  "Slug": "story-elijah-on-mount-carmel-soaked-three-times",
+  "ReadingTitle": "Elijah on Mount Carmel",
+  "ReadingLink": "#/stories/3"
+}

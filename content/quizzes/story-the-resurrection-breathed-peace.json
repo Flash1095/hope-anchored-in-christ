@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Resurrection Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did Jesus breathe over His disciples that evening?",
+  "OptionA": "A blessing for the temple",
+  "OptionB": "A song of victory",
+  "OptionC": "Peace",
+  "OptionD": "A warning about Rome",
+  "CorrectAnswer": "C",
+  "Explanation": "That evening Jesus appeared behind locked doors and breathed peace over His frightened disciples.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "John 20:19",
+  "Slug": "story-the-resurrection-breathed-peace",
+  "ReadingTitle": "The Resurrection",
+  "ReadingLink": "#/stories/24"
+}

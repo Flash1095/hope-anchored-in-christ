@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Call of Abraham Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What kind of land was Abram told to go to?",
+  "OptionA": "A land God would show him",
+  "OptionB": "The land of Egypt",
+  "OptionC": "A land he had already visited",
+  "OptionD": "The land of his birth",
+  "CorrectAnswer": "A",
+  "Explanation": "God told Abram to go to a land that God would show him, though Abram did not yet know the destination.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 12:1",
+  "Slug": "the-call-of-abraham-land-god-would-show",
+  "ReadingTitle": "The Call of Abraham",
+  "ReadingLink": "#/stories/15"
+}

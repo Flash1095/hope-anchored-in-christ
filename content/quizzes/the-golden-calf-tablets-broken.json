@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Golden Calf Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did Moses do to the tablets of the testimony when he saw the calf and the dancing?",
+ "OptionA": "Hid them in the tent",
+ "OptionB": "Broke them beneath the mountain",
+ "OptionC": "Gave them to Aaron",
+ "OptionD": "Carried them back up",
+ "CorrectAnswer": "B",
+ "Explanation": "Moses' anger burned hot when he saw the calf and the dancing, and he cast the tablets from his hands and broke them.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Exodus 32:19",
+ "Slug": "the-golden-calf-tablets-broken",
+ "ReadingTitle": "The Golden Calf",
+ "ReadingLink": "#/stories/61"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Crossing the Jordan Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Which river did Israel cross to enter the land?",
+ "OptionA": "Jordan",
+ "OptionB": "Nile",
+ "OptionC": "Euphrates",
+ "OptionD": "Red Sea",
+ "CorrectAnswer": "A",
+ "Explanation": "The priests bearing the ark stood firm on dry ground in the midst of Jordan while all Israel passed over.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Joshua 3:17",
+ "Slug": "crossing-the-jordan-river-jordan",
+ "ReadingTitle": "Crossing the Jordan",
+ "ReadingLink": "#/stories/34"
+}

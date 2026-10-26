@@ -1,0 +1,16 @@
+{
+  "Quiz": "Noah and the Flood Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "According to Hebrews 11:7, what moved Noah to prepare the ark?",
+  "OptionA": "Being warned by God about things not yet seen",
+  "OptionB": "A dream of rain",
+  "OptionC": "A command from his sons",
+  "OptionD": "Fear of his neighbors",
+  "CorrectAnswer": "A",
+  "Explanation": "Noah built the ark because God had warned him about things not yet seen, and he trusted that warning.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Hebrews 11:7",
+  "Slug": "story-noah-and-the-flood-warned-by-faith",
+  "ReadingTitle": "Noah and the Flood",
+  "ReadingLink": "#/stories/7"
+}

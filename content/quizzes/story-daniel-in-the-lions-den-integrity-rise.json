@@ -1,0 +1,16 @@
+{
+  "Quiz": "Daniel in the Lions' Den Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Why had Daniel risen to the top of the Persian empire?",
+  "OptionA": "His integrity",
+  "OptionB": "His riches",
+  "OptionC": "His army",
+  "OptionD": "His family name",
+  "CorrectAnswer": "A",
+  "Explanation": "Daniel rose high because of his integrity, which is why his enemies resented him.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Daniel 6:3",
+  "Slug": "story-daniel-in-the-lions-den-integrity-rise",
+  "ReadingTitle": "Daniel in the Lions' Den",
+  "ReadingLink": "#/stories/1"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Paul in Rome Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "In his letter to Philemon, how does Paul ask Philemon to receive Onesimus?",
+ "OptionA": "As a brother beloved",
+ "OptionB": "As a hired servant",
+ "OptionC": "As a prisoner",
+ "OptionD": "As a stranger",
+ "CorrectAnswer": "A",
+ "Explanation": "Paul asks Philemon to receive Onesimus not now as a servant, but above a servant, a brother beloved, both in the flesh and in the Lord.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Philemon 1:16",
+ "Slug": "paul-in-rome-onesimus-brother",
+ "ReadingTitle": "Paul in Rome",
+ "ReadingLink": "#/stories/53"
+}

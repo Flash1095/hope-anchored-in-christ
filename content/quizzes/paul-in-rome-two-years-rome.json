@@ -1,0 +1,16 @@
+{
+ "Quiz": "Paul in Rome Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "How long did Paul live in his own hired house in Rome, receiving all who came to him?",
+ "OptionA": "Six months",
+ "OptionB": "One year",
+ "OptionC": "Two whole years",
+ "OptionD": "Five years",
+ "CorrectAnswer": "C",
+ "Explanation": "Paul dwelt two whole years in his own hired house and received all that came in to him, preaching without hindrance.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Acts 28:30",
+ "Slug": "paul-in-rome-two-years-rome",
+ "ReadingTitle": "Paul in Rome",
+ "ReadingLink": "#/stories/53"
+}

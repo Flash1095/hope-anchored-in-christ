@@ -1,0 +1,16 @@
+{
+  "Quiz": "Jonah and Nineveh Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Why was Jonah furious after Nineveh repented?",
+  "OptionA": "He was hungry",
+  "OptionB": "God relented and showed mercy instead of judgment",
+  "OptionC": "The king ignored him",
+  "OptionD": "The fish returned",
+  "CorrectAnswer": "B",
+  "Explanation": "Jonah had wanted judgment for his enemies, but God wanted mercy, and God relented.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Jonah 4:2",
+  "Slug": "jonah-and-nineveh-jonah-furious-mercy",
+  "ReadingTitle": "Jonah and Nineveh",
+  "ReadingLink": "#/stories/5"
+}

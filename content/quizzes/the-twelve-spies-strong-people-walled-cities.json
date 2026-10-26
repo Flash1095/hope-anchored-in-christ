@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Twelve Spies and Israel's Unbelief Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What fearful report did the ten spies give about the people of the land?",
+ "OptionA": "They were few and weak",
+ "OptionB": "The people are strong, the cities are walled and very great, and the children of Anak are there",
+ "OptionC": "The land has no water",
+ "OptionD": "The land is empty of people",
+ "CorrectAnswer": "B",
+ "Explanation": "The ten reported that the people were strong, the cities walled and very great, and the children of Anak dwelt there.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Numbers 13:28",
+ "Slug": "the-twelve-spies-strong-people-walled-cities",
+ "ReadingTitle": "The Twelve Spies and Israel's Unbelief",
+ "ReadingLink": "#/stories/65"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Feeding of the Five Thousand Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Which disciple brought the boy with the loaves and fish to Jesus?",
+  "OptionA": "Andrew",
+  "OptionB": "Philip",
+  "OptionC": "Peter",
+  "OptionD": "John",
+  "CorrectAnswer": "A",
+  "Explanation": "Andrew noticed the boy and brought what little he had to Jesus.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "John 6:8",
+  "Slug": "the-feeding-of-the-five-thousand-andrew-brought-boy",
+  "ReadingTitle": "The Feeding of the Five Thousand",
+  "ReadingLink": "#/stories/20"
+}

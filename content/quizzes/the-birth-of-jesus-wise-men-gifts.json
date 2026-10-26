@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Birth of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the wise men bear when they came to Jesus?",
+  "OptionA": "Scrolls of prophecy",
+  "OptionB": "Gold coins for the census",
+  "OptionC": "Gifts",
+  "OptionD": "Offerings for the temple",
+  "CorrectAnswer": "C",
+  "Explanation": "The wise men from the east followed a star, bearing gifts for the child.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Matthew 2:11",
+  "Slug": "the-birth-of-jesus-wise-men-gifts",
+  "ReadingTitle": "The Birth of Jesus",
+  "ReadingLink": "#/stories/13"
+}

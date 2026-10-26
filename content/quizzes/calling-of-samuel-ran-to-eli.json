@@ -1,0 +1,16 @@
+{
+ "Quiz": "Calling of Samuel Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "At first, to whom did Samuel run, thinking he had called him?",
+ "OptionA": "Hannah",
+ "OptionB": "Elkanah",
+ "OptionC": "Eli",
+ "OptionD": "A visiting prophet",
+ "CorrectAnswer": "C",
+ "Explanation": "Samuel ran to Eli and said, 'Here am I; for thou calledst me,' but Eli said he had not called.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "1 Samuel 3:5",
+ "Slug": "calling-of-samuel-ran-to-eli",
+ "ReadingTitle": "Calling of Samuel",
+ "ReadingLink": "#/stories/33"
+}

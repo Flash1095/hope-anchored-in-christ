@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Golden Calf Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did the people persuade Aaron to make for them?",
+ "OptionA": "A golden calf",
+ "OptionB": "A bronze serpent",
+ "OptionC": "A stone altar",
+ "OptionD": "A silver crown",
+ "CorrectAnswer": "A",
+ "Explanation": "Aaron fashioned a molten calf from their gold, and the people worshipped it as the god who had brought them from Egypt.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Exodus 32:4",
+ "Slug": "the-golden-calf-golden-calf-made",
+ "ReadingTitle": "The Golden Calf",
+ "ReadingLink": "#/stories/61"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Baptism of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the voice from heaven declare about Jesus?",
+  "OptionA": "This is the prophet Moses promised",
+  "OptionB": "This is my beloved Son, with whom I am well pleased",
+  "OptionC": "This is the king of Jerusalem",
+  "OptionD": "This is my servant, listen to him",
+  "CorrectAnswer": "B",
+  "Explanation": "A voice from heaven declared, “This is my beloved Son, with whom I am well pleased.”",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 3:17",
+  "Slug": "the-baptism-of-jesus-beloved-son-voice",
+  "ReadingTitle": "The Baptism of Jesus",
+  "ReadingLink": "#/stories/11"
+}

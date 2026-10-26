@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Feeding of the Five Thousand Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did Jesus do with the loaves before He broke them?",
+  "OptionA": "He counted them twice",
+  "OptionB": "He sent them back to the boy",
+  "OptionC": "He gave thanks",
+  "OptionD": "He hid them from the crowd",
+  "CorrectAnswer": "C",
+  "Explanation": "Jesus took the small gift, thanked God for it, and then broke it for the crowd.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "John 6:11",
+  "Slug": "the-feeding-of-the-five-thousand-jesus-gave-thanks",
+  "ReadingTitle": "The Feeding of the Five Thousand",
+  "ReadingLink": "#/stories/20"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Wilderness Wanderings Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What bread from heaven sustained Israel in the wilderness?",
+ "OptionA": "Showbread",
+ "OptionB": "Unleavened cakes only",
+ "OptionC": "Barley loaves",
+ "OptionD": "Manna",
+ "CorrectAnswer": "D",
+ "Explanation": "God humbled them and fed them with manna, which neither they nor their fathers had known.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Deuteronomy 8:3",
+ "Slug": "wilderness-wanderings-manna-from-heaven",
+ "ReadingTitle": "Wilderness Wanderings",
+ "ReadingLink": "#/stories/68"
+}

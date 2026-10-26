@@ -1,0 +1,16 @@
+{
+ "Quiz": "Cain Murders Abel Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Where did Cain dwell after going out from the presence of the LORD?",
+ "OptionA": "In the Garden of Eden",
+ "OptionB": "In the land of Nod, east of Eden",
+ "OptionC": "In the land of Shinar",
+ "OptionD": "On the plains of Jericho",
+ "CorrectAnswer": "B",
+ "Explanation": "Cain went out from the presence of the LORD and dwelt in the land of Nod, on the east of Eden.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Genesis 4:16",
+ "Slug": "cain-murders-abel-land-of-nod",
+ "ReadingTitle": "Cain Murders Abel",
+ "ReadingLink": "#/stories/32"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jesus Calms the Storm Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What happened after Jesus rebuked the winds and the sea?",
+ "OptionA": "There was a great calm",
+ "OptionB": "The ship sank",
+ "OptionC": "A second storm arose",
+ "OptionD": "The disciples rowed to shore",
+ "CorrectAnswer": "A",
+ "Explanation": "Then He arose, and rebuked the winds and the sea; and there was a great calm.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Matthew 8:26",
+ "Slug": "jesus-calms-the-storm-great-calm-followed",
+ "ReadingTitle": "Jesus Calms the Storm",
+ "ReadingLink": "#/stories/48"
+}

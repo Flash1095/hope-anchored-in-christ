@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Conversion of Paul Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What knocked Saul to the ground on the road?",
+  "OptionA": "A light from heaven brighter than the sun",
+  "OptionB": "An earthquake",
+  "OptionC": "A storm wind",
+  "OptionD": "A Roman chariot",
+  "CorrectAnswer": "A",
+  "Explanation": "A light from heaven, brighter than the sun, knocked Saul to the ground on the road to Damascus.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Acts 9:3",
+  "Slug": "the-conversion-of-paul-light-from-heaven",
+  "ReadingTitle": "The Conversion of Paul",
+  "ReadingLink": "#/stories/16"
+}

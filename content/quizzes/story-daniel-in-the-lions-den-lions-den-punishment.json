@@ -1,0 +1,16 @@
+{
+  "Quiz": "Daniel in the Lions' Den Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What was the punishment for breaking the new prayer law?",
+  "OptionA": "Prison",
+  "OptionB": "The lions' den",
+  "OptionC": "Exile",
+  "OptionD": "A fine",
+  "CorrectAnswer": "B",
+  "Explanation": "Anyone who broke the law was to be thrown into the lions' den.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Daniel 6:7",
+  "Slug": "story-daniel-in-the-lions-den-lions-den-punishment",
+  "ReadingTitle": "Daniel in the Lions' Den",
+  "ReadingLink": "#/stories/1"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Creation Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did God call everything He had made?",
+  "OptionA": "Good enough",
+  "OptionB": "Useful",
+  "OptionC": "Very good",
+  "OptionD": "Finished",
+  "CorrectAnswer": "C",
+  "Explanation": "After all His creating work, God looked at everything and called it very good.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 1:31",
+  "Slug": "story-creation-very-good",
+  "ReadingTitle": "Creation",
+  "ReadingLink": "#/stories/0"
+}

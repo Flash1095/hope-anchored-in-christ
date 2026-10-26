@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Ten Commandments Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Which day-keeping commandment did God give?",
+  "OptionA": "Keep the Sabbath",
+  "OptionB": "Keep the new moon",
+  "OptionC": "Keep the seventh year",
+  "OptionD": "Keep every feast day",
+  "CorrectAnswer": "A",
+  "Explanation": "Among the ten words was the command to keep the Sabbath.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Exodus 20:8",
+  "Slug": "the-ten-commandments-keep-the-sabbath",
+  "ReadingTitle": "The Ten Commandments",
+  "ReadingLink": "#/stories/27"
+}

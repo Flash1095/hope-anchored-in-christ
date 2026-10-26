@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Fall Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did the serpent promise eating would do?",
+  "OptionA": "Make them live forever",
+  "OptionB": "Make them rulers of the garden",
+  "OptionC": "Make them like God",
+  "OptionD": "Make them wise as angels",
+  "CorrectAnswer": "C",
+  "Explanation": "The serpent promised that eating would make Adam and Eve like God.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 3:5",
+  "Slug": "story-the-fall-like-god-promise",
+  "ReadingTitle": "The Fall",
+  "ReadingLink": "#/stories/19"
+}

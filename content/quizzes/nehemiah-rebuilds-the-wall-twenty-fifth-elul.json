@@ -1,0 +1,16 @@
+{
+ "Quiz": "Nehemiah Rebuilds the Wall Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "On what day of the month of Elul was the wall finished?",
+ "OptionA": "The first day",
+ "OptionB": "The twenty-fifth day",
+ "OptionC": "The tenth day",
+ "OptionD": "The thirtieth day",
+ "CorrectAnswer": "B",
+ "Explanation": "Scripture records the wall was finished on the twenty-fifth day of Elul, in fifty-two days.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Nehemiah 6:15",
+ "Slug": "nehemiah-rebuilds-the-wall-twenty-fifth-elul",
+ "ReadingTitle": "Nehemiah Rebuilds the Wall",
+ "ReadingLink": "#/stories/52"
+}

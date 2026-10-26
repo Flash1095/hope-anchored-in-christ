@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Good Samaritan Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the Samaritan promise the innkeeper about further costs?",
+  "OptionA": "He would cover whatever more was needed",
+  "OptionB": "The wounded man would pay double",
+  "OptionC": "The priest would settle the bill",
+  "OptionD": "The innkeeper should send the man away if costs grew",
+  "CorrectAnswer": "A",
+  "Explanation": "The Samaritan paid for the man's care and promised to cover any extra cost on his return.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Luke 10:35",
+  "Slug": "the-good-samaritan-cover-more-needed",
+  "ReadingTitle": "The Good Samaritan",
+  "ReadingLink": "#/stories/21"
+}

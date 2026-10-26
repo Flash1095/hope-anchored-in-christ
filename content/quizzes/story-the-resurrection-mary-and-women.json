@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Resurrection Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Who came to the tomb on the first day of the week?",
+  "OptionA": "Peter and John alone",
+  "OptionB": "Mary Magdalene and the other women",
+  "OptionC": "The twelve disciples together",
+  "OptionD": "The Roman guards",
+  "CorrectAnswer": "B",
+  "Explanation": "Mary Magdalene and the other women were the first to come to the tomb.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 28:1",
+  "Slug": "story-the-resurrection-mary-and-women",
+  "ReadingTitle": "The Resurrection",
+  "ReadingLink": "#/stories/24"
+}

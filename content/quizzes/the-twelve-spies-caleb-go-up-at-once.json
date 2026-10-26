@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Twelve Spies and Israel's Unbelief Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did Caleb say when he quieted the people before Moses?",
+ "OptionA": "Let us return to Egypt",
+ "OptionB": "Let us wait another year",
+ "OptionC": "Let us send more spies",
+ "OptionD": "Let us go up at once and possess it, for we are well able to overcome it",
+ "CorrectAnswer": "D",
+ "Explanation": "Caleb stilled the people and said, Let us go up at once and possess it, for we are well able to overcome it.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Numbers 13:30",
+ "Slug": "the-twelve-spies-caleb-go-up-at-once",
+ "ReadingTitle": "The Twelve Spies and Israel's Unbelief",
+ "ReadingLink": "#/stories/65"
+}

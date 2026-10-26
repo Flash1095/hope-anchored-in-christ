@@ -1,0 +1,16 @@
+{
+ "Quiz": "Nehemiah Rebuilds the Wall Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "In how many days was Jerusalem's wall finished?",
+ "OptionA": "Forty days",
+ "OptionB": "Fifty-two days",
+ "OptionC": "Seventy days",
+ "OptionD": "Ninety days",
+ "CorrectAnswer": "B",
+ "Explanation": "The wall was finished on the twenty-fifth day of Elul, in fifty-two days. It was a remarkably swift work.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Nehemiah 6:15",
+ "Slug": "nehemiah-rebuilds-the-wall-fifty-two-days",
+ "ReadingTitle": "Nehemiah Rebuilds the Wall",
+ "ReadingLink": "#/stories/52"
+}

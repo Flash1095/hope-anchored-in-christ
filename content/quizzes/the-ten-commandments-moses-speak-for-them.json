@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Ten Commandments Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did the trembling people ask Moses to do?",
+  "OptionA": "Climb the mountain with them",
+  "OptionB": "Write the commandments himself",
+  "OptionC": "Speak to God for them",
+  "OptionD": "Lead them back to Egypt",
+  "CorrectAnswer": "C",
+  "Explanation": "The people trembled at the mountain and asked Moses to speak to God for them.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Exodus 20:19",
+  "Slug": "the-ten-commandments-moses-speak-for-them",
+  "ReadingTitle": "The Ten Commandments",
+  "ReadingLink": "#/stories/27"
+}

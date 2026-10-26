@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Conversion of Paul Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did Saul use when he hunted Christians?",
+  "OptionA": "Temple guards",
+  "OptionB": "Arrest warrants",
+  "OptionC": "Roman swords",
+  "OptionD": "Letters of blessing",
+  "CorrectAnswer": "B",
+  "Explanation": "Saul hunted Christians with arrest warrants, determined to destroy the church.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Acts 9:2",
+  "Slug": "the-conversion-of-paul-arrest-warrants",
+  "ReadingTitle": "The Conversion of Paul",
+  "ReadingLink": "#/stories/16"
+}

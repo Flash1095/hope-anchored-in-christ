@@ -1,0 +1,16 @@
+{
+  "Quiz": "Esther Saves Her People Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How many days did Esther ask her people to fast before she went to the king?",
+  "OptionA": "Three",
+  "OptionB": "Seven",
+  "OptionC": "One",
+  "OptionD": "Forty",
+  "CorrectAnswer": "A",
+  "Explanation": "Esther asked her people to fast for three days before she risked going to the king.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Esther 4:16",
+  "Slug": "esther-saves-her-people-three-days-fast",
+  "ReadingTitle": "Esther Saves Her People",
+  "ReadingLink": "#/stories/4"
+}

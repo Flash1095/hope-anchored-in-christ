@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jesus Prays in Gethsemane Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What did Jesus find the disciples doing when He came back to them?",
+ "OptionA": "They were praying aloud",
+ "OptionB": "They were asleep",
+ "OptionC": "They had fled",
+ "OptionD": "They were eating",
+ "CorrectAnswer": "B",
+ "Explanation": "He cometh unto the disciples, and findeth them asleep, and saith unto Peter, What, could ye not watch with Me one hour?",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Matthew 26:40",
+ "Slug": "jesus-prays-in-gethsemane-disciples-asleep",
+ "ReadingTitle": "Jesus Prays in Gethsemane",
+ "ReadingLink": "#/stories/49"
+}

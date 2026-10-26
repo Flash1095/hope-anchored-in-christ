@@ -1,0 +1,16 @@
+{
+  "Quiz": "Daniel in the Lions' Den Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who was tricked into signing the law against prayer?",
+  "OptionA": "Darius's son",
+  "OptionB": "A Persian general",
+  "OptionC": "King Darius",
+  "OptionD": "Daniel himself",
+  "CorrectAnswer": "C",
+  "Explanation": "Jealous officials tricked King Darius into signing a law he did not realise was aimed at Daniel.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Daniel 6:9",
+  "Slug": "story-daniel-in-the-lions-den-king-darius-law",
+  "ReadingTitle": "Daniel in the Lions' Den",
+  "ReadingLink": "#/stories/1"
+}

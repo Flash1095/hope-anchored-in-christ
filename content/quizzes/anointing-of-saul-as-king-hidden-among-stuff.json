@@ -1,0 +1,16 @@
+{
+  "Quiz": "Anointing of Saul as King Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Where was Saul found hiding when the people came to make him king?",
+  "OptionA": "In a cave",
+  "OptionB": "In a field",
+  "OptionC": "Behind the ark",
+  "OptionD": "Among the baggage",
+  "CorrectAnswer": "D",
+  "Explanation": "When the people looked for their new king, the LORD said Saul had hidden himself among the stuff, so they ran and fetched him.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "1 Samuel 10:22",
+  "Slug": "anointing-of-saul-as-king-hidden-among-stuff",
+  "ReadingTitle": "Anointing of Saul as King",
+  "ReadingLink": "#/stories/30"
+}

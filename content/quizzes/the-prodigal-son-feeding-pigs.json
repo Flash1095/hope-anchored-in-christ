@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Prodigal Son Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "After a famine came, what work was the younger son left doing?",
+  "OptionA": "Herding his father's sheep",
+  "OptionB": "Feeding pigs",
+  "OptionC": "Building houses in the far country",
+  "OptionD": "Serving at a rich man's table",
+  "CorrectAnswer": "B",
+  "Explanation": "Having squandered everything, the son ended up feeding pigs in a strange land.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Luke 15:15",
+  "Slug": "the-prodigal-son-feeding-pigs",
+  "ReadingTitle": "The Prodigal Son",
+  "ReadingLink": "#/stories/23"
+}

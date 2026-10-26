@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Feeding of the Five Thousand Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the boy Andrew brought to Jesus have with him?",
+  "OptionA": "Seven wheat loaves and three large fish",
+  "OptionB": "Two barley loaves and five small fish",
+  "OptionC": "A basket of bread and a jar of olives",
+  "OptionD": "Five barley loaves and two small fish",
+  "CorrectAnswer": "D",
+  "Explanation": "It was only a small lunch, yet Jesus used it to feed the whole crowd.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "John 6:9",
+  "Slug": "the-feeding-of-the-five-thousand-boy-loaves-fish",
+  "ReadingTitle": "The Feeding of the Five Thousand",
+  "ReadingLink": "#/stories/20"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jerusalem Council Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "Who gave Paul and Barnabas the right hands of fellowship in Galatians 2?",
+ "OptionA": "Peter and Andrew",
+ "OptionB": "The elders of Antioch",
+ "OptionC": "James, Cephas, and John",
+ "OptionD": "The seven deacons",
+ "CorrectAnswer": "C",
+ "Explanation": "When James, Cephas, and John, who seemed to be pillars, perceived the grace given to me, they gave to me and Barnabas the right hands of fellowship.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Galatians 2:9",
+ "Slug": "jerusalem-council-right-hands-fellowship",
+ "ReadingTitle": "Jerusalem Council",
+ "ReadingLink": "#/stories/47"
+}

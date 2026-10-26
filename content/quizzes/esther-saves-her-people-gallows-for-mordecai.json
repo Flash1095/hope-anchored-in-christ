@@ -1,0 +1,16 @@
+{
+  "Quiz": "Esther Saves Her People Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "For whom had Haman built the gallows?",
+  "OptionA": "Mordecai",
+  "OptionB": "Esther",
+  "OptionC": "The king",
+  "OptionD": "Haman himself",
+  "CorrectAnswer": "A",
+  "Explanation": "Haman had built the gallows intending to hang Mordecai on it.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Esther 5:14",
+  "Slug": "esther-saves-her-people-gallows-for-mordecai",
+  "ReadingTitle": "Esther Saves Her People",
+  "ReadingLink": "#/stories/4"
+}

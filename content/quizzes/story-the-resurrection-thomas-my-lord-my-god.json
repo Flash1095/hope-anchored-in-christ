@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Resurrection Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did Thomas cry when he touched Jesus' wounds?",
+  "OptionA": "My teacher and my friend!",
+  "OptionB": "My master, I believe at last!",
+  "OptionC": "Blessed is he who comes!",
+  "OptionD": "My Lord and my God!",
+  "CorrectAnswer": "D",
+  "Explanation": "Thomas, who had doubted, saw and touched the risen Jesus and worshipped Him.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "John 20:28",
+  "Slug": "story-the-resurrection-thomas-my-lord-my-god",
+  "ReadingTitle": "The Resurrection",
+  "ReadingLink": "#/stories/24"
+}

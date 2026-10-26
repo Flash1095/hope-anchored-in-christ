@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Fall Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What replaced innocence after Adam and Eve ate?",
+  "OptionA": "Anger",
+  "OptionB": "Fear alone",
+  "OptionC": "Sorrow",
+  "OptionD": "Shame",
+  "CorrectAnswer": "D",
+  "Explanation": "After they ate, shame replaced innocence and blame replaced trust.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 3:7",
+  "Slug": "story-the-fall-shame-replaced-innocence",
+  "ReadingTitle": "The Fall",
+  "ReadingLink": "#/stories/19"
+}

@@ -15,7 +15,7 @@
     "Outline": "Creation and the Fall (1-11); Abraham (12-25); Isaac and Jacob (26-36); Joseph (37-50)",
     "HistoricalContext": "Written for Israel after the Exodus, looking back to primeval history and the patriarchal age in Canaan and Egypt, roughly 2000-1800 BC for the patriarchs.",
     "Places": "Garden of Eden; Mount Ararat; Babel; Ur; Haran; Canaan; Shechem; Bethel; Hebron; Beersheba; Egypt; Goshen",
-    "RelatedEvents": "Creation; The Fall; Cain Murders Abel; Noah and the Flood; The Tower of Babel; The Call of Abraham; Destruction of Sodom and Gomorrah; The Binding of Isaac; Jacob Wrestles with God; Joseph and His Brothers; Joseph Sold into Egypt; Joseph Rises to Power in Egypt"
+    "RelatedEvents": "Creation; The Fall; Cain Murders Abel; Noah and the Flood; The Tower of Babel; The Call of Abraham; Destruction of Sodom and Gomorrah; The Binding of Isaac; Jacob Wrestles with God; Joseph and His Brothers"
   },
   {
     "Book": "Exodus",
@@ -33,7 +33,7 @@
     "Outline": "Deliverance from Egypt (1-18); Law at Sinai (19-24); Tabernacle (25-40)",
     "HistoricalContext": "Set during Israel's exodus from Egypt, traditionally dated to the 15th century BC, and the first year in the wilderness at Sinai.",
     "Places": "Egypt; Goshen; Midian; Mount Sinai; Kadesh Barnea",
-    "RelatedEvents": "The Burning Bush; The Ten Plagues; The Passover; The Exodus and the Red Sea; The Ten Commandments; Giving of the Law at Sinai; The Golden Calf; Wilderness Wanderings"
+    "RelatedEvents": "The Burning Bush; The Ten Plagues; The Passover; The Exodus and the Red Sea; The Ten Commandments; The Golden Calf; Wilderness Wanderings"
   },
   {
     "Book": "Leviticus",
@@ -51,7 +51,7 @@
     "Outline": "Sacrifices and priesthood (1-10); Purity laws (11-15); Day of Atonement and holiness code (16-27)",
     "HistoricalContext": "Delivered at Mount Sinai during Israel's wilderness encampment, in the year after the Exodus.",
     "Places": "Mount Sinai",
-    "RelatedEvents": "Giving of the Law at Sinai"
+    "RelatedEvents": "The Ten Commandments"
   },
   {
     "Book": "Numbers",
@@ -87,7 +87,7 @@
     "Outline": "First sermon - history reviewed (1-4); Second sermon - Law restated (5-26); Third sermon - blessings and curses; Moses' death (27-34)",
     "HistoricalContext": "Spoken in Moab just east of the Jordan River at the end of the forty wilderness years, before the conquest under Joshua.",
     "Places": "Plains of Moab; Jordan River",
-    "RelatedEvents": "Giving of the Law at Sinai"
+    "RelatedEvents": "The Ten Commandments"
   },
   {
     "Book": "Joshua",
@@ -123,7 +123,7 @@
     "Outline": "Introduction - failure to drive out Canaanites (1-2); Judges' cycles (3-16); Appendix - moral chaos (17-21)",
     "HistoricalContext": "Covers roughly 1380-1050 BC, between the conquest and the rise of Saul, when Israel was a loose tribal confederacy.",
     "Places": "Shiloh; Shechem",
-    "RelatedEvents": "Deborah and Barak Defeat Sisera; Gideon's Victory over Midian; Samson and Delilah; Samson and the Philistines"
+    "RelatedEvents": "Deborah and Barak Defeat Sisera; Gideon's Victory over Midian; Samson and Delilah"
   },
   {
     "Book": "Ruth",
@@ -566,7 +566,7 @@
     "Outline": "Jonah flees (1); Jonah's prayer (2); Nineveh repents (3); Jonah's anger and God's lesson (4)",
     "HistoricalContext": "Set in the 8th century BC, involving Israel, the Mediterranean Sea, and Nineveh, capital of Assyria.",
     "Places": "Nineveh",
-    "RelatedEvents": "Jonah and Nineveh; Jonah and the Great Fish"
+    "RelatedEvents": "Jonah and Nineveh"
   },
   {
     "Book": "Micah",

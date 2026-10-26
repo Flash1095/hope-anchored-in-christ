@@ -1,0 +1,16 @@
+{
+  "Quiz": "Samson and Delilah Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How many times did Samson lie to Delilah about his strength before telling her the truth?",
+  "OptionA": "Once",
+  "OptionB": "Twice",
+  "OptionC": "Seven times",
+  "OptionD": "Three times",
+  "CorrectAnswer": "D",
+  "Explanation": "Three times Samson lied to Delilah about the secret of his strength, until at last he told her the truth.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Judges 16:13",
+  "Slug": "samson-and-delilah-three-times-lied",
+  "ReadingTitle": "Samson and Delilah",
+  "ReadingLink": "#/stories/10"
+}

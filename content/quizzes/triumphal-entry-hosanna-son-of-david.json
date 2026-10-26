@@ -1,0 +1,16 @@
+{
+ "Quiz": "Triumphal Entry Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What did the crowds shout as Jesus entered Jerusalem?",
+ "OptionA": "Glory to Rome",
+ "OptionB": "Long live the temple",
+ "OptionC": "Hosanna to the Son of David",
+ "OptionD": "Peace to Jerusalem",
+ "CorrectAnswer": "C",
+ "Explanation": "The multitudes cried, Hosanna to the Son of David: Blessed is He that cometh in the name of the Lord.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Matthew 21:9",
+ "Slug": "triumphal-entry-hosanna-son-of-david",
+ "ReadingTitle": "Triumphal Entry",
+ "ReadingLink": "#/stories/67"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Triumphal Entry Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "From which village near the Mount of Olives did Jesus send two disciples to fetch the donkey and colt?",
+ "OptionA": "Bethphage",
+ "OptionB": "Bethany",
+ "OptionC": "Emmaus",
+ "OptionD": "Bethsaida",
+ "CorrectAnswer": "A",
+ "Explanation": "When they drew near Jerusalem and came to Bethphage, unto the Mount of Olives, Jesus sent two disciples into the village.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Matthew 21:1",
+ "Slug": "triumphal-entry-bethphage-mount-olives",
+ "ReadingTitle": "Triumphal Entry",
+ "ReadingLink": "#/stories/67"
+}

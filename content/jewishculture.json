@@ -23,7 +23,7 @@
     "Slug": "day-of-atonement",
     "RelatedPeople": "Aaron; Moses",
     "Places": "Jerusalem",
-    "RelatedEvents": "Giving of the Law at Sinai; The Crucifixion"
+    "RelatedEvents": "The Ten Commandments; The Crucifixion"
   },
   {
     "Topic": "Feast of Tabernacles",
@@ -49,7 +49,7 @@
     "Slug": "feast-of-trumpets",
     "RelatedPeople": "Moses",
     "Places": "Mount Sinai",
-    "RelatedEvents": "Giving of the Law at Sinai"
+    "RelatedEvents": "The Ten Commandments"
   },
   {
     "Topic": "Firstfruits",
@@ -85,7 +85,7 @@
     "RelatedTopics": "Wisdom; Prophecy; Faith",
     "Slug": "hebrew-language",
     "RelatedPeople": "Moses; Ezra",
-    "RelatedEvents": "Giving of the Law at Sinai; Ezra Reads the Law"
+    "RelatedEvents": "The Ten Commandments; Ezra Reads the Law"
   },
   {
     "Topic": "Isaiah 53: The Suffering Servant",
@@ -146,7 +146,7 @@
     "Slug": "micah-5-2-born-in-bethlehem",
     "RelatedPeople": "Micah; Jesus; King David",
     "Places": "Bethlehem",
-    "RelatedEvents": "Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus"
   },
   {
     "Topic": "Mikveh",
@@ -159,7 +159,7 @@
     "Slug": "mikveh",
     "RelatedPeople": "John the Baptist; Jesus",
     "Places": "Jordan River",
-    "RelatedEvents": "Baptism of Jesus"
+    "RelatedEvents": "The Baptism of Jesus"
   },
   {
     "Topic": "Passover Seder",
@@ -172,7 +172,7 @@
     "Slug": "passover-seder",
     "RelatedPeople": "Moses; Jesus",
     "Places": "Egypt; Jerusalem",
-    "RelatedEvents": "The Passover; Last Supper"
+    "RelatedEvents": "The Passover; The Last Supper"
   },
   {
     "Topic": "Passover",
@@ -224,7 +224,7 @@
     "Slug": "purim",
     "RelatedPeople": "Queen Esther; Mordecai",
     "Places": "Susa",
-    "RelatedEvents": "Esther Saves the Jews"
+    "RelatedEvents": "Esther Saves Her People"
   },
   {
     "Topic": "Sadducees",
@@ -262,7 +262,7 @@
     "Slug": "shabbat",
     "RelatedPeople": "Moses; Jesus",
     "Places": "Mount Sinai",
-    "RelatedEvents": "Creation; Giving of the Law at Sinai"
+    "RelatedEvents": "Creation; The Ten Commandments"
   },
   {
     "Topic": "Shavuot",
@@ -275,7 +275,7 @@
     "Slug": "shavuot",
     "RelatedPeople": "Moses; Simon Peter",
     "Places": "Mount Sinai; Jerusalem",
-    "RelatedEvents": "Giving of the Law at Sinai; Pentecost"
+    "RelatedEvents": "The Ten Commandments; Pentecost"
   },
   {
     "Topic": "Synagogue",
@@ -313,7 +313,7 @@
     "Slug": "the-menorah",
     "RelatedPeople": "Moses; Aaron",
     "Places": "Mount Sinai",
-    "RelatedEvents": "Giving of the Law at Sinai"
+    "RelatedEvents": "The Ten Commandments"
   },
   {
     "Topic": "The Passover Lamb",
@@ -363,7 +363,7 @@
     "Slug": "torah-the-five-books-of-moses",
     "RelatedPeople": "Moses; Ezra",
     "Places": "Mount Sinai",
-    "RelatedEvents": "Giving of the Law at Sinai; Ezra Reads the Law"
+    "RelatedEvents": "The Ten Commandments; Ezra Reads the Law"
   },
   {
     "Topic": "Zechariah 12:10: The Pierced One",

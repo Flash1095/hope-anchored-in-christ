@@ -1,0 +1,16 @@
+{
+ "Quiz": "Deborah and Barak Defeat Sisera Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How many men was Barak to take with him?",
+ "OptionA": "One thousand",
+ "OptionB": "Three thousand",
+ "OptionC": "Ten thousand",
+ "OptionD": "Forty thousand",
+ "CorrectAnswer": "C",
+ "Explanation": "The LORD's command through Deborah was to take ten thousand men of Naphtali and Zebulun toward Mount Tabor.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Judges 4:6",
+ "Slug": "deborah-and-barak-defeat-sisera-ten-thousand-men",
+ "ReadingTitle": "Deborah and Barak Defeat Sisera",
+ "ReadingLink": "#/stories/39"
+}

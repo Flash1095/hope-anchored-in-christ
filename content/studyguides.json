@@ -55,7 +55,7 @@
     "Slug": "esther",
     "RelatedPeople": "Queen Esther; Mordecai",
     "Places": "Susa",
-    "RelatedEvents": "Esther Saves the Jews"
+    "RelatedEvents": "Esther Saves Her People"
   },
   {
     "Guide": "Faith",
@@ -157,7 +157,7 @@
     "Slug": "james",
     "RelatedPeople": "Jesus",
     "Places": "Jerusalem",
-    "RelatedEvents": "Jerusalem Council; Sermon on the Mount"
+    "RelatedEvents": "Jerusalem Council; The Sermon on the Mount"
   },
   {
     "Guide": "John",
@@ -172,7 +172,7 @@
     "Slug": "john",
     "RelatedPeople": "John the Apostle; Jesus",
     "Places": "Jerusalem; Galilee; Bethany",
-    "RelatedEvents": "Baptism of Jesus; Raising of Lazarus; The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Baptism of Jesus; Raising of Lazarus; The Crucifixion; The Resurrection"
   },
   {
     "Guide": "Joseph",
@@ -187,7 +187,7 @@
     "Slug": "joseph",
     "RelatedPeople": "Joseph, Son of Jacob; Jacob; Judah",
     "Places": "Canaan; Egypt",
-    "RelatedEvents": "Joseph and His Brothers; Joseph Sold into Egypt; Joseph Rises to Power in Egypt"
+    "RelatedEvents": "Joseph and His Brothers"
   },
   {
     "Guide": "The Lord's Prayer",
@@ -201,7 +201,7 @@
     "RelatedTopics": "Prayer; Kingdom of God",
     "Slug": "lords-prayer",
     "RelatedPeople": "Jesus",
-    "RelatedEvents": "Sermon on the Mount"
+    "RelatedEvents": "The Sermon on the Mount"
   },
   {
     "Guide": "Love",
@@ -231,7 +231,7 @@
     "Slug": "mark",
     "RelatedPeople": "Simon Peter; Jesus",
     "Places": "Galilee; Jerusalem; Capernaum",
-    "RelatedEvents": "Baptism of Jesus; The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Baptism of Jesus; The Crucifixion; The Resurrection"
   },
   {
     "Guide": "Mary",
@@ -246,7 +246,7 @@
     "Slug": "mary",
     "RelatedPeople": "Mary, Mother of Jesus; Jesus; Elizabeth; Joseph, Husband of Mary",
     "Places": "Nazareth; Bethlehem",
-    "RelatedEvents": "Birth of Jesus; Jesus Turns Water into Wine at Cana; The Crucifixion"
+    "RelatedEvents": "The Birth of Jesus; Jesus Turns Water into Wine at Cana; The Crucifixion"
   },
   {
     "Guide": "Moses",
@@ -261,7 +261,7 @@
     "Slug": "moses",
     "RelatedPeople": "Moses; Aaron; Miriam; Joshua",
     "Places": "Egypt; Mount Sinai; Plains of Moab",
-    "RelatedEvents": "The Burning Bush; The Ten Plagues; The Exodus and Crossing of the Red Sea; Giving of the Law at Sinai; Wilderness Wanderings"
+    "RelatedEvents": "The Burning Bush; The Ten Plagues; The Exodus and the Red Sea; The Ten Commandments; Wilderness Wanderings"
   },
   {
     "Guide": "Paul",
@@ -276,7 +276,7 @@
     "Slug": "paul",
     "RelatedPeople": "Paul; Barnabas; Timothy; Stephen",
     "Places": "Jerusalem; Antioch; Corinth; Rome",
-    "RelatedEvents": "Conversion of Saul (Paul); Paul's Missionary Journeys; Paul in Rome; Martyrdom of Stephen"
+    "RelatedEvents": "The Conversion of Paul; Paul's Missionary Journeys; Paul in Rome; Martyrdom of Stephen"
   },
   {
     "Guide": "Philippians",
@@ -409,7 +409,7 @@
     "Slug": "ruth",
     "RelatedPeople": "Ruth; Naomi; Boaz",
     "Places": "Bethlehem",
-    "RelatedEvents": "Story of Ruth"
+    "RelatedEvents": "Ruth's Loyalty"
   },
   {
     "Guide": "The Sermon on the Mount",
@@ -424,7 +424,7 @@
     "Slug": "sermon-on-the-mount",
     "RelatedPeople": "Jesus",
     "Places": "Galilee",
-    "RelatedEvents": "Sermon on the Mount"
+    "RelatedEvents": "The Sermon on the Mount"
   },
   {
     "Guide": "Wisdom",

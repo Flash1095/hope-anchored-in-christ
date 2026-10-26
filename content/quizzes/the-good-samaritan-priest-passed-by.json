@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Good Samaritan Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Who was the first person to pass by on the other side of the road?",
+  "OptionA": "A priest",
+  "OptionB": "A Levite",
+  "OptionC": "A Samaritan",
+  "OptionD": "A Roman soldier",
+  "CorrectAnswer": "A",
+  "Explanation": "The priest saw the wounded man and passed by on the other side.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Luke 10:31",
+  "Slug": "the-good-samaritan-priest-passed-by",
+  "ReadingTitle": "The Good Samaritan",
+  "ReadingLink": "#/stories/21"
+}

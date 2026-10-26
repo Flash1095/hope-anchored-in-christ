@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Prodigal Son Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "On his way home, what had the younger son rehearsed?",
+  "OptionA": "A song for the feast",
+  "OptionB": "A speech of repentance",
+  "OptionC": "A list of his brother's faults",
+  "OptionD": "A plan to earn his inheritance back",
+  "CorrectAnswer": "B",
+  "Explanation": "Coming to his senses, the son rehearsed words of repentance for his journey home.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Luke 15:18",
+  "Slug": "the-prodigal-son-speech-of-repentance",
+  "ReadingTitle": "The Prodigal Son",
+  "ReadingLink": "#/stories/23"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Elijah on Mount Carmel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Whose altar did Elijah rebuild before he prayed?",
+  "OptionA": "The LORD's altar",
+  "OptionB": "Baal's altar",
+  "OptionC": "Ahab's altar",
+  "OptionD": "The people's altar",
+  "CorrectAnswer": "A",
+  "Explanation": "Elijah first rebuilt the LORD's altar, which had been broken down.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "1 Kings 18:30",
+  "Slug": "story-elijah-on-mount-carmel-rebuilt-lords-altar",
+  "ReadingTitle": "Elijah on Mount Carmel",
+  "ReadingLink": "#/stories/3"
+}

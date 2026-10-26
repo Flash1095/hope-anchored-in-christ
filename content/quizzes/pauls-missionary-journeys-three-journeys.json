@@ -1,0 +1,16 @@
+{
+ "Quiz": "Paul's Missionary Journeys Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "How many great missionary journeys did Paul make from Antioch, according to the story?",
+ "OptionA": "One",
+ "OptionB": "Two",
+ "OptionC": "Three",
+ "OptionD": "Four",
+ "CorrectAnswer": "C",
+ "Explanation": "Paul made three great journeys from Antioch, carrying the gospel through Cyprus, Asia Minor, and Greece.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Acts 13:4",
+ "Slug": "pauls-missionary-journeys-three-journeys",
+ "ReadingTitle": "Paul's Missionary Journeys",
+ "ReadingLink": "#/stories/55"
+}

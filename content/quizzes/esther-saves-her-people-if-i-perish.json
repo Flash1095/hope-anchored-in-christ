@@ -1,0 +1,16 @@
+{
+  "Quiz": "Esther Saves Her People Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Esther say as she risked her life?",
+  "OptionA": "I will hide",
+  "OptionB": "Send someone else",
+  "OptionC": "The king will understand",
+  "OptionD": "If I perish, I perish",
+  "CorrectAnswer": "D",
+  "Explanation": "Esther went to the king saying, if I perish, I perish, trusting God with the outcome.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Esther 4:16",
+  "Slug": "esther-saves-her-people-if-i-perish",
+  "ReadingTitle": "Esther Saves Her People",
+  "ReadingLink": "#/stories/4"
+}

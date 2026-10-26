@@ -1,0 +1,16 @@
+{
+  "Quiz": "Elijah on Mount Carmel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did the fire consume besides the sacrifice and the wood?",
+  "OptionA": "Only the altar cloth",
+  "OptionB": "The stones and even the water",
+  "OptionC": "Only the dust",
+  "OptionD": "The prophets' robes",
+  "CorrectAnswer": "B",
+  "Explanation": "The fire consumed the sacrifice, the wood, the stones, and even the water around the altar.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "1 Kings 18:38",
+  "Slug": "story-elijah-on-mount-carmel-fire-consumed-water",
+  "ReadingTitle": "Elijah on Mount Carmel",
+  "ReadingLink": "#/stories/3"
+}

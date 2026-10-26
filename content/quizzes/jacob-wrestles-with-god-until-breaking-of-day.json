@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jacob Wrestles with God Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How long did Jacob wrestle with the mysterious man?",
+ "OptionA": "One hour",
+ "OptionB": "Until noon",
+ "OptionC": "Until the breaking of the day",
+ "OptionD": "For seven days",
+ "CorrectAnswer": "C",
+ "Explanation": "Jacob was left alone, and there wrestled a man with him until the breaking of the day.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Genesis 32:24",
+ "Slug": "jacob-wrestles-with-god-until-breaking-of-day",
+ "ReadingTitle": "Jacob Wrestles with God",
+ "ReadingLink": "#/stories/46"
+}

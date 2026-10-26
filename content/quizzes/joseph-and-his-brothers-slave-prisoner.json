@@ -1,0 +1,16 @@
+{
+  "Quiz": "Joseph and His Brothers Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "For years Joseph lived as what, before God raised him up?",
+  "OptionA": "A slave and a prisoner",
+  "OptionB": "A prince and a priest",
+  "OptionC": "A merchant and a soldier",
+  "OptionD": "A shepherd and a scribe",
+  "CorrectAnswer": "A",
+  "Explanation": "Joseph spent years as a slave and a prisoner, forgotten by everyone except God.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Genesis 39:20",
+  "Slug": "joseph-and-his-brothers-slave-prisoner",
+  "ReadingTitle": "Joseph and His Brothers",
+  "ReadingLink": "#/stories/6"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Samson and Delilah Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What was Samson set apart as from birth?",
+  "OptionA": "A Nazirite",
+  "OptionB": "A Philistine prince",
+  "OptionC": "A temple priest",
+  "OptionD": "A king of Israel",
+  "CorrectAnswer": "A",
+  "Explanation": "Samson was set apart from birth as a Nazirite, and his uncut hair was the sign of that vow.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Judges 13:5",
+  "Slug": "samson-and-delilah-nazirite-from-birth",
+  "ReadingTitle": "Samson and Delilah",
+  "ReadingLink": "#/stories/10"
+}

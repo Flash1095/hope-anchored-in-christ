@@ -1,0 +1,16 @@
+{
+ "Quiz": "Fall of Jerusalem and the Exile Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "According to the story summary, in what year did Jerusalem fall?",
+ "OptionA": "586 BC",
+ "OptionB": "722 BC",
+ "OptionC": "701 BC",
+ "OptionD": "538 BC",
+ "CorrectAnswer": "A",
+ "Explanation": "After a long siege, Nebuchadnezzar's army breached Jerusalem in 586 BC, burned the Temple, and carried Judah's people into exile.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "2 Kings 25:1",
+ "Slug": "fall-of-jerusalem-and-the-exile-year-586-bc",
+ "ReadingTitle": "Fall of Jerusalem and the Exile",
+ "ReadingLink": "#/stories/42"
+}

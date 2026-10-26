@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Burning Bush Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did God tell Moses to take off?",
+  "OptionA": "His cloak",
+  "OptionB": "His sandals",
+  "OptionC": "His staff",
+  "OptionD": "His ring",
+  "CorrectAnswer": "B",
+  "Explanation": "God told Moses to take off his sandals, for he stood on holy ground.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Exodus 3:5",
+  "Slug": "story-the-burning-bush-take-off-sandals",
+  "ReadingTitle": "The Burning Bush",
+  "ReadingLink": "#/stories/14"
+}

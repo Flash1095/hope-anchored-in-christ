@@ -1,0 +1,16 @@
+{
+  "Quiz": "Pentecost Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What filled the house where the disciples were gathered?",
+  "OptionA": "A bright cloud",
+  "OptionB": "A choir",
+  "OptionC": "Silence",
+  "OptionD": "A sound like a rushing wind",
+  "CorrectAnswer": "D",
+  "Explanation": "Suddenly a sound like a rushing wind filled the house where they were sitting.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Acts 2:2",
+  "Slug": "story-pentecost-rushing-wind",
+  "ReadingTitle": "Pentecost",
+  "ReadingLink": "#/stories/8"
+}

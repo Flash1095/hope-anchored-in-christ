@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Good Samaritan Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What question from the lawyer prompted Jesus to tell this story?",
+  "OptionA": "Who is the greatest in the kingdom?",
+  "OptionB": "What must I do to be healed?",
+  "OptionC": "Who should pay for the wounded man?",
+  "OptionD": "Who is my neighbour?",
+  "CorrectAnswer": "D",
+  "Explanation": "The lawyer asked who his neighbour was, and Jesus answered with this story.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Luke 10:29",
+  "Slug": "the-good-samaritan-who-is-my-neighbor",
+  "ReadingTitle": "The Good Samaritan",
+  "ReadingLink": "#/stories/21"
+}

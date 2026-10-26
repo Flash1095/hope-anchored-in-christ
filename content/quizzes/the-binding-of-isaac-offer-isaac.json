@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Binding of Isaac Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Whom did God ask Abraham to offer as a sacrifice?",
+  "OptionA": "His nephew Lot",
+  "OptionB": "His servant Eliezer",
+  "OptionC": "His son Isaac",
+  "OptionD": "His son Ishmael",
+  "CorrectAnswer": "C",
+  "Explanation": "God tested Abraham by asking him to offer his beloved son Isaac, the son of the promise.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 22:2",
+  "Slug": "the-binding-of-isaac-offer-isaac",
+  "ReadingTitle": "The Binding of Isaac",
+  "ReadingLink": "#/stories/12"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Ezra Reads the Law Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Where did all the people gather to hear Ezra bring the book of the Law?",
+ "OptionA": "The temple court",
+ "OptionB": "The street before the Water Gate",
+ "OptionC": "The king's palace",
+ "OptionD": "The valley of Kidron",
+ "CorrectAnswer": "B",
+ "Explanation": "All the people gathered as one man into the street that was before the Water Gate and asked Ezra to bring the book.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Nehemiah 8:1",
+ "Slug": "ezra-reads-the-law-water-gate-gathering",
+ "ReadingTitle": "Ezra Reads the Law",
+ "ReadingLink": "#/stories/41"
+}

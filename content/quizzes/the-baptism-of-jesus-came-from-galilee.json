@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Baptism of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "From where did Jesus come to be baptized?",
+  "OptionA": "Judea",
+  "OptionB": "Samaria",
+  "OptionC": "Galilee",
+  "OptionD": "Egypt",
+  "CorrectAnswer": "C",
+  "Explanation": "Jesus came from Galilee to the Jordan River to be baptized by John.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Mark 1:9",
+  "Slug": "the-baptism-of-jesus-came-from-galilee",
+  "ReadingTitle": "The Baptism of Jesus",
+  "ReadingLink": "#/stories/11"
+}

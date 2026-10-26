@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Last Supper Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "According to Jesus' words over the cup, His blood was poured out for many for what?",
+  "OptionA": "For the forgiveness of sins",
+  "OptionB": "For the freedom of Jerusalem",
+  "OptionC": "For the wealth of the disciples",
+  "OptionD": "For the rebuilding of the temple",
+  "CorrectAnswer": "A",
+  "Explanation": "The cup pointed to forgiveness through the blood Jesus would shed.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Matthew 26:28",
+  "Slug": "the-last-supper-forgiveness-of-sins",
+  "ReadingTitle": "The Last Supper",
+  "ReadingLink": "#/stories/22"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Creation Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "According to Psalm 19:1, what do the heavens declare?",
+  "OptionA": "The power of kings",
+  "OptionB": "The glory of God",
+  "OptionC": "The age of the earth",
+  "OptionD": "The beauty of angels",
+  "CorrectAnswer": "B",
+  "Explanation": "The heavens themselves declare the glory of God, pointing us to the Creator.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Psalm 19:1",
+  "Slug": "story-creation-heavens-declare",
+  "ReadingTitle": "Creation",
+  "ReadingLink": "#/stories/0"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Fall Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who came with a question that planted doubt?",
+  "OptionA": "A wild beast",
+  "OptionB": "The serpent",
+  "OptionC": "An angel",
+  "OptionD": "A stranger",
+  "CorrectAnswer": "B",
+  "Explanation": "The serpent came with a question that planted doubt: did God really mean what he said?",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 3:1",
+  "Slug": "story-the-fall-serpent-came",
+  "ReadingTitle": "The Fall",
+  "ReadingLink": "#/stories/19"
+}

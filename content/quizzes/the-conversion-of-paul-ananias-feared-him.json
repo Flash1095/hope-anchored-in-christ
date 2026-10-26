@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Conversion of Paul Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "How did Ananias feel about Saul before the Lord sent him?",
+  "OptionA": "He welcomed him gladly",
+  "OptionB": "He did not know him",
+  "OptionC": "He refused to meet him",
+  "OptionD": "He feared him",
+  "CorrectAnswer": "D",
+  "Explanation": "Ananias feared Saul, yet he obeyed the Lord's command and went to him.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Acts 9:13",
+  "Slug": "the-conversion-of-paul-ananias-feared-him",
+  "ReadingTitle": "The Conversion of Paul",
+  "ReadingLink": "#/stories/16"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Ruth's Loyalty Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Naomi tell her daughters-in-law to do?",
+  "OptionA": "Go to Bethlehem with her",
+  "OptionB": "Stay in Moab",
+  "OptionC": "Return to their own people",
+  "OptionD": "Find new husbands at once",
+  "CorrectAnswer": "C",
+  "Explanation": "Naomi told her daughters-in-law to return to their own people, but Ruth refused to leave her.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Ruth 1:8",
+  "Slug": "ruths-loyalty-return-own-people",
+  "ReadingTitle": "Ruth's Loyalty",
+  "ReadingLink": "#/stories/9"
+}

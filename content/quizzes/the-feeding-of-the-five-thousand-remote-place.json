@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Feeding of the Five Thousand Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Where had the crowd followed Jesus when evening came and there was no food in sight?",
+  "OptionA": "Into the temple in Jerusalem",
+  "OptionB": "Across the Jordan to Jericho",
+  "OptionC": "Up to the top of Mount Sinai",
+  "OptionD": "Into a remote place",
+  "CorrectAnswer": "D",
+  "Explanation": "The crowd had followed Jesus far from towns and shops, so there was nowhere to buy food.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 14:13",
+  "Slug": "the-feeding-of-the-five-thousand-remote-place",
+  "ReadingTitle": "The Feeding of the Five Thousand",
+  "ReadingLink": "#/stories/20"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Paul's Missionary Journeys Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "Who was set apart with Saul for missionary work at Antioch?",
+ "OptionA": "Barnabas",
+ "OptionB": "Silas",
+ "OptionC": "Timothy",
+ "OptionD": "Luke",
+ "CorrectAnswer": "A",
+ "Explanation": "As the church ministered and fasted, the Holy Ghost said, 'Separate me Barnabas and Saul for the work.'",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Acts 13:2",
+ "Slug": "pauls-missionary-journeys-barnabas-set-apart",
+ "ReadingTitle": "Paul's Missionary Journeys",
+ "ReadingLink": "#/stories/55"
+}

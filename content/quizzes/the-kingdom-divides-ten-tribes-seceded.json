@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Kingdom Divides Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How many tribes seceded under Jeroboam when Rehoboam answered harshly?",
+ "OptionA": "Ten tribes",
+ "OptionB": "Two tribes",
+ "OptionC": "Five tribes",
+ "OptionD": "Twelve tribes",
+ "CorrectAnswer": "A",
+ "Explanation": "Ten tribes broke away under Jeroboam, leaving only Judah following the house of David.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "1 Kings 12:20",
+ "Slug": "the-kingdom-divides-ten-tribes-seceded",
+ "ReadingTitle": "The Kingdom Divides",
+ "ReadingLink": "#/stories/62"
+}

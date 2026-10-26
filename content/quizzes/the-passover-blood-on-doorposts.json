@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Passover Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Where were families to put the lamb's blood?",
+ "OptionA": "On the threshold only",
+ "OptionB": "On the roof of the house",
+ "OptionC": "On the altar in the courtyard",
+ "OptionD": "On the two side posts and the upper door post of the house",
+ "CorrectAnswer": "D",
+ "Explanation": "They were to take the blood and strike it on the two side posts and the upper door post of the houses where they ate.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Exodus 12:7",
+ "Slug": "the-passover-blood-on-doorposts",
+ "ReadingTitle": "The Passover",
+ "ReadingLink": "#/stories/63"
+}

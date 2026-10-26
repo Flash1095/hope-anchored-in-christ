@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Passover Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How many years had passed when the hosts of the LORD went out of Egypt that very day?",
+ "OptionA": "Forty years",
+ "OptionB": "Four hundred years",
+ "OptionC": "Four hundred and thirty years",
+ "OptionD": "Seventy years",
+ "CorrectAnswer": "C",
+ "Explanation": "At the end of four hundred and thirty years, on that very day, all the hosts of the LORD went out from Egypt.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Exodus 12:41",
+ "Slug": "the-passover-four-hundred-thirty-years",
+ "ReadingTitle": "The Passover",
+ "ReadingLink": "#/stories/63"
+}

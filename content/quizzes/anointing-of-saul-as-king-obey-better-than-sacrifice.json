@@ -1,0 +1,16 @@
+{
+  "Quiz": "Anointing of Saul as King Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Samuel say is better than sacrifice?",
+  "OptionA": "Many burnt offerings",
+  "OptionB": "Obeying the voice of the LORD",
+  "OptionC": "Singing psalms",
+  "OptionD": "Building altars",
+  "CorrectAnswer": "B",
+  "Explanation": "Samuel told Saul that to obey is better than sacrifice, and to listen is better than the fat of rams.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "1 Samuel 15:22",
+  "Slug": "anointing-of-saul-as-king-obey-better-than-sacrifice",
+  "ReadingTitle": "Anointing of Saul as King",
+  "ReadingLink": "#/stories/30"
+}

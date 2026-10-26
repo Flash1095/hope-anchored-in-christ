@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Ten Plagues Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What was the final plague on Egypt?",
+ "OptionA": "Hail",
+ "OptionB": "Locusts",
+ "OptionC": "The death of the firstborn",
+ "OptionD": "Boils",
+ "CorrectAnswer": "C",
+ "Explanation": "The last plague was the death of the firstborn, from Pharaoh's throne to the captive's household.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Exodus 11:5",
+ "Slug": "the-ten-plagues-death-of-firstborn",
+ "ReadingTitle": "The Ten Plagues",
+ "ReadingLink": "#/stories/64"
+}

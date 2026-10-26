@@ -1,0 +1,16 @@
+{
+  "Quiz": "Ruth's Loyalty Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "In whose fields did Ruth glean?",
+  "OptionA": "Boaz",
+  "OptionB": "Naomi",
+  "OptionC": "Elimelech",
+  "OptionD": "David",
+  "CorrectAnswer": "A",
+  "Explanation": "Ruth gleaned in the fields of Boaz to keep Naomi and herself alive.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Ruth 2:3",
+  "Slug": "ruths-loyalty-gleaned-boaz-fields",
+  "ReadingTitle": "Ruth's Loyalty",
+  "ReadingLink": "#/stories/9"
+}

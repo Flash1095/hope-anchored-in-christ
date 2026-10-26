@@ -1,0 +1,16 @@
+{
+ "Quiz": "Destruction of Sodom and Gomorrah Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What town had Lot entered by the time the sun had risen?",
+ "OptionA": "Hebron",
+ "OptionB": "Zoar",
+ "OptionC": "Bethel",
+ "OptionD": "Jericho",
+ "CorrectAnswer": "B",
+ "Explanation": "The sun was risen upon the earth when Lot entered into Zoar.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Genesis 19:23",
+ "Slug": "destruction-of-sodom-and-gomorrah-lot-entered-zoar",
+ "ReadingTitle": "Destruction of Sodom and Gomorrah",
+ "ReadingLink": "#/stories/40"
+}

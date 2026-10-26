@@ -1,0 +1,16 @@
+{
+  "Quiz": "Pentecost Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "According to Joel 2:28, what did God promise to pour out?",
+  "OptionA": "His Spirit",
+  "OptionB": "Fire on His enemies",
+  "OptionC": "Gold on the temple",
+  "OptionD": "Rain on the fields",
+  "CorrectAnswer": "A",
+  "Explanation": "God promised to pour out His Spirit, and at Pentecost that promise was fulfilled.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Joel 2:28",
+  "Slug": "story-pentecost-pour-out-spirit",
+  "ReadingTitle": "Pentecost",
+  "ReadingLink": "#/stories/8"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Sermon on the Mount Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did Jesus say about enemies?",
+  "OptionA": "Love your enemies and pray for those who persecute you",
+  "OptionB": "Avoid your enemies and ignore them",
+  "OptionC": "Love your enemies only if they repent",
+  "OptionD": "Pray for your enemies to be punished",
+  "CorrectAnswer": "A",
+  "Explanation": "Kingdom living means loving even enemies and praying for those who persecute you.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 5:44",
+  "Slug": "the-sermon-on-the-mount-love-your-enemies",
+  "ReadingTitle": "The Sermon on the Mount",
+  "ReadingLink": "#/stories/25"
+}

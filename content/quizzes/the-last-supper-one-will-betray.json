@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Last Supper Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did Jesus tell the disciples at the table about one of them?",
+  "OptionA": "One of them would soon be made king",
+  "OptionB": "One of them would betray Him",
+  "OptionC": "One of them would refuse to eat",
+  "OptionD": "One of them would sing alone",
+  "CorrectAnswer": "B",
+  "Explanation": "Even as He shared the meal, Jesus knew betrayal was coming.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 26:21",
+  "Slug": "the-last-supper-one-will-betray",
+  "ReadingTitle": "The Last Supper",
+  "ReadingLink": "#/stories/22"
+}

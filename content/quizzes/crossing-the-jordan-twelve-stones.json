@@ -1,0 +1,16 @@
+{
+ "Quiz": "Crossing the Jordan Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How many memorial stones were taken from the middle of the Jordan?",
+ "OptionA": "Seven",
+ "OptionB": "Twelve",
+ "OptionC": "Forty",
+ "OptionD": "Seventy",
+ "CorrectAnswer": "B",
+ "Explanation": "Twelve stones were taken from where the priests' feet stood firm, according to the number of the tribes of Israel.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Joshua 4:8",
+ "Slug": "crossing-the-jordan-twelve-stones",
+ "ReadingTitle": "Crossing the Jordan",
+ "ReadingLink": "#/stories/34"
+}

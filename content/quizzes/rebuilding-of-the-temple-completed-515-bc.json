@@ -1,0 +1,16 @@
+{
+ "Quiz": "Rebuilding of the Temple Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "In what year was the second Temple completed?",
+ "OptionA": "444 BC",
+ "OptionB": "515 BC",
+ "OptionC": "520 BC",
+ "OptionD": "585 BC",
+ "CorrectAnswer": "B",
+ "Explanation": "After years of delay, the second Temple was completed and dedicated with joy in 515 BC, and Passover was celebrated.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Ezra 6:15",
+ "Slug": "rebuilding-of-the-temple-completed-515-bc",
+ "ReadingTitle": "Rebuilding of the Temple",
+ "ReadingLink": "#/stories/58"
+}

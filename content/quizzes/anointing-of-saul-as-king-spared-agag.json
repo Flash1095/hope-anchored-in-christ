@@ -1,0 +1,16 @@
+{
+  "Quiz": "Anointing of Saul as King Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "In 1 Samuel 15, what did Saul spare even though God had told him to utterly destroy Amalek?",
+  "OptionA": "Only the city walls",
+  "OptionB": "Only the camels",
+  "OptionC": "Agag and the best of the sheep and oxen",
+  "OptionD": "Only the gold and silver",
+  "CorrectAnswer": "C",
+  "Explanation": "Saul and the people spared King Agag and the best of the livestock, while destroying only what was worthless.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "1 Samuel 15:9",
+  "Slug": "anointing-of-saul-as-king-spared-agag",
+  "ReadingTitle": "Anointing of Saul as King",
+  "ReadingLink": "#/stories/30"
+}

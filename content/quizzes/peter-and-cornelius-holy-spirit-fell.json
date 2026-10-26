@@ -1,0 +1,16 @@
+{
+ "Quiz": "Peter and Cornelius Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What fell on the Gentile hearers as Peter preached in Cornelius' house?",
+ "OptionA": "A great silence",
+ "OptionB": "A shower of rain",
+ "OptionC": "The Holy Spirit",
+ "OptionD": "A Roman decree",
+ "CorrectAnswer": "C",
+ "Explanation": "While Peter yet spoke, the Holy Ghost fell on all them which heard the word.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Acts 10:44",
+ "Slug": "peter-and-cornelius-holy-spirit-fell",
+ "ReadingTitle": "Peter and Cornelius",
+ "ReadingLink": "#/stories/56"
+}

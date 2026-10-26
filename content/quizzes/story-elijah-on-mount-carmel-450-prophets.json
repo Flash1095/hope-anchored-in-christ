@@ -1,0 +1,16 @@
+{
+  "Quiz": "Elijah on Mount Carmel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How many prophets of Baal did Elijah challenge on Mount Carmel?",
+  "OptionA": "450",
+  "OptionB": "400",
+  "OptionC": "100",
+  "OptionD": "850",
+  "CorrectAnswer": "A",
+  "Explanation": "Elijah stood alone against 450 prophets of Baal on Mount Carmel.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "1 Kings 18:19",
+  "Slug": "story-elijah-on-mount-carmel-450-prophets",
+  "ReadingTitle": "Elijah on Mount Carmel",
+  "ReadingLink": "#/stories/3"
+}

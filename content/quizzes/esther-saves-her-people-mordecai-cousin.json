@@ -1,0 +1,16 @@
+{
+  "Quiz": "Esther Saves Her People Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who was Esther's cousin who urged her to speak to the king?",
+  "OptionA": "Haman",
+  "OptionB": "Mordecai",
+  "OptionC": "Xerxes",
+  "OptionD": "Hegai",
+  "CorrectAnswer": "B",
+  "Explanation": "Mordecai, Esther's cousin, urged her to speak up for her people.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Esther 2:7",
+  "Slug": "esther-saves-her-people-mordecai-cousin",
+  "ReadingTitle": "Esther Saves Her People",
+  "ReadingLink": "#/stories/4"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Hezekiah and Sennacherib's Invasion Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did Hezekiah do with the threatening letter from Assyria?",
+ "OptionA": "He burned it",
+ "OptionB": "He spread it before the LORD in prayer",
+ "OptionC": "He hid it in the treasury",
+ "OptionD": "He sent it back unread",
+ "CorrectAnswer": "B",
+ "Explanation": "Hezekiah received the letter, read it, went up into the house of the LORD, and spread it before the LORD.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "2 Kings 19:14",
+ "Slug": "hezekiah-and-sennacheribs-invasion-spread-letter-before-lord",
+ "ReadingTitle": "Hezekiah and Sennacherib's Invasion",
+ "ReadingLink": "#/stories/45"
+}

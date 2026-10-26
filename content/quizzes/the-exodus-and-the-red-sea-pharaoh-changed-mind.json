@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Exodus and the Red Sea Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Pharaoh do after letting Israel go?",
+  "OptionA": "He sent gifts after them",
+  "OptionB": "He changed his mind and chased them",
+  "OptionC": "He closed Egypt's borders",
+  "OptionD": "He freed all his slaves",
+  "CorrectAnswer": "B",
+  "Explanation": "Pharaoh changed his mind and chased Israel with chariots, trapping them between an army and the sea.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Exodus 14:5",
+  "Slug": "the-exodus-and-the-red-sea-pharaoh-changed-mind",
+  "ReadingTitle": "The Exodus and the Red Sea",
+  "ReadingLink": "#/stories/18"
+}

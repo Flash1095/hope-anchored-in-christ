@@ -1,0 +1,16 @@
+{
+  "Quiz": "Noah and the Flood Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did God promise never again to do?",
+  "OptionA": "Send rain at all",
+  "OptionB": "Flood the whole earth",
+  "OptionC": "Judge anyone",
+  "OptionD": "Let the sea rise",
+  "CorrectAnswer": "B",
+  "Explanation": "God promised never again to flood the whole earth, and the rainbow is the sign of that promise.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 9:11",
+  "Slug": "story-noah-and-the-flood-never-flood-again",
+  "ReadingTitle": "Noah and the Flood",
+  "ReadingLink": "#/stories/7"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Resurrection Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "According to the retelling, what had been defeated by the resurrection?",
+  "OptionA": "Death",
+  "OptionB": "The Roman empire",
+  "OptionC": "The temple priesthood",
+  "OptionD": "The city of Jerusalem",
+  "CorrectAnswer": "A",
+  "Explanation": "Death itself had been defeated, and the story of the world had turned.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "1 Corinthians 15:55",
+  "Slug": "story-the-resurrection-death-defeated",
+  "ReadingTitle": "The Resurrection",
+  "ReadingLink": "#/stories/24"
+}

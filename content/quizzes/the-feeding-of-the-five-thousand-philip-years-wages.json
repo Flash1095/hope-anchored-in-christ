@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Feeding of the Five Thousand Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did Philip calculate about buying bread for the crowd?",
+  "OptionA": "Even a year's wages could not buy enough bread",
+  "OptionB": "A day's wages would buy bread for everyone",
+  "OptionC": "Two months' wages would be more than enough",
+  "OptionD": "The disciples had already saved enough to feed them all",
+  "CorrectAnswer": "A",
+  "Explanation": "Philip did the sums and saw the need was far beyond what they could afford.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "John 6:7",
+  "Slug": "the-feeding-of-the-five-thousand-philip-years-wages",
+  "ReadingTitle": "The Feeding of the Five Thousand",
+  "ReadingLink": "#/stories/20"
+}

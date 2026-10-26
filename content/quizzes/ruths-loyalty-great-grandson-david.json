@@ -1,0 +1,16 @@
+{
+  "Quiz": "Ruth's Loyalty Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who was Ruth's great-grandson?",
+  "OptionA": "Obed",
+  "OptionB": "Jesse",
+  "OptionC": "Solomon",
+  "OptionD": "David",
+  "CorrectAnswer": "D",
+  "Explanation": "Ruth and Boaz's great-grandson was David, king of Israel, through whom Jesus would come.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Ruth 4:22",
+  "Slug": "ruths-loyalty-great-grandson-david",
+  "ReadingTitle": "Ruth's Loyalty",
+  "ReadingLink": "#/stories/9"
+}

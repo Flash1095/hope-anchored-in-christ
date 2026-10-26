@@ -1,0 +1,16 @@
+{
+  "Quiz": "Elijah on Mount Carmel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "According to James 5:17, what kind of man was Elijah?",
+  "OptionA": "An angel in disguise",
+  "OptionB": "A king",
+  "OptionC": "A man with no feelings",
+  "OptionD": "A man subject to like passions as we are",
+  "CorrectAnswer": "D",
+  "Explanation": "Elijah was an ordinary man like us, yet God answered his prayer, which encourages our own praying.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "James 5:17",
+  "Slug": "story-elijah-on-mount-carmel-like-passions",
+  "ReadingTitle": "Elijah on Mount Carmel",
+  "ReadingLink": "#/stories/3"
+}

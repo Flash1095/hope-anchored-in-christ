@@ -1,0 +1,16 @@
+{
+ "Quiz": "Deborah and Barak Defeat Sisera Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Where did the fleeing Sisera go?",
+ "OptionA": "To Jael's tent",
+ "OptionB": "To Hazor's palace",
+ "OptionC": "To the Kishon river",
+ "OptionD": "To Mount Tabor",
+ "CorrectAnswer": "A",
+ "Explanation": "Sisera fled on foot to the tent of Jael, the wife of Heber the Kenite, where there was peace with Jabin's house.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Judges 4:17",
+ "Slug": "deborah-and-barak-defeat-sisera-jaels-tent",
+ "ReadingTitle": "Deborah and Barak Defeat Sisera",
+ "ReadingLink": "#/stories/39"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Prodigal Son Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Heading home, what did the younger son expect at best?",
+  "OptionA": "To be welcomed as a son at once",
+  "OptionB": "To be given his inheritance again",
+  "OptionC": "To be hired as a servant",
+  "OptionD": "To be put in charge of the estate",
+  "CorrectAnswer": "C",
+  "Explanation": "He hoped only to be hired as a servant, never dreaming of the welcome waiting for him.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Luke 15:19",
+  "Slug": "the-prodigal-son-hired-as-servant",
+  "ReadingTitle": "The Prodigal Son",
+  "ReadingLink": "#/stories/23"
+}

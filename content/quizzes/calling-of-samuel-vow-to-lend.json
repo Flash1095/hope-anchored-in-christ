@@ -1,0 +1,16 @@
+{
+ "Quiz": "Calling of Samuel Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did Hannah promise to do if God gave her a son?",
+ "OptionA": "Make him a king",
+ "OptionB": "Give him land in Ephraim",
+ "OptionC": "Lend him to the LORD all his life",
+ "OptionD": "Send him to Egypt",
+ "CorrectAnswer": "C",
+ "Explanation": "Hannah vowed that if God gave her a son, she would give him unto the LORD all the days of his life.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "1 Samuel 1:11",
+ "Slug": "calling-of-samuel-vow-to-lend",
+ "ReadingTitle": "Calling of Samuel",
+ "ReadingLink": "#/stories/33"
+}

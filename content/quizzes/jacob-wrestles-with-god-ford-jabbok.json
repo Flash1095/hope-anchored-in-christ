@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jacob Wrestles with God Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "At which ford did Jacob pass over with his family that night?",
+ "OptionA": "The ford of Jordan",
+ "OptionB": "The ford Jabbok",
+ "OptionC": "The ford of Arnon",
+ "OptionD": "The ford of Euphrates",
+ "CorrectAnswer": "B",
+ "Explanation": "He rose up that night and took his two wives, his two womenservants, and his eleven sons, and passed over the ford Jabbok.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Genesis 32:22",
+ "Slug": "jacob-wrestles-with-god-ford-jabbok",
+ "ReadingTitle": "Jacob Wrestles with God",
+ "ReadingLink": "#/stories/46"
+}

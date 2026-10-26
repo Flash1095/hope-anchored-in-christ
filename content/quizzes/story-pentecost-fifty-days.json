@@ -1,0 +1,16 @@
+{
+  "Quiz": "Pentecost Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "How many days after the resurrection did Pentecost come?",
+  "OptionA": "Forty",
+  "OptionB": "Fifty",
+  "OptionC": "Ten",
+  "OptionD": "Seven",
+  "CorrectAnswer": "B",
+  "Explanation": "Fifty days after the resurrection, the disciples were gathered in Jerusalem when the Spirit came.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Acts 2:1",
+  "Slug": "story-pentecost-fifty-days",
+  "ReadingTitle": "Pentecost",
+  "ReadingLink": "#/stories/8"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Feeding of the Five Thousand Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "After Jesus broke the loaves, who distributed the food to the crowd?",
+  "OptionA": "The boy and his family",
+  "OptionB": "Philip on his own",
+  "OptionC": "The disciples",
+  "OptionD": "The crowd's leaders",
+  "CorrectAnswer": "C",
+  "Explanation": "Jesus gave the broken bread to His disciples, and they shared it out until everyone had eaten their fill.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Matthew 14:19",
+  "Slug": "the-feeding-of-the-five-thousand-disciples-distributed",
+  "ReadingTitle": "The Feeding of the Five Thousand",
+  "ReadingLink": "#/stories/20"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Sermon on the Mount Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Where did Jesus go to teach the Sermon on the Mount?",
+  "OptionA": "Into the temple in Jerusalem",
+  "OptionB": "Down to the shore of the sea",
+  "OptionC": "Up on a mountainside",
+  "OptionD": "Into a synagogue in Nazareth",
+  "CorrectAnswer": "C",
+  "Explanation": "Jesus went up on a mountainside, sat down as a teacher, and began to speak.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Matthew 5:1",
+  "Slug": "the-sermon-on-the-mount-mountainside-teacher",
+  "ReadingTitle": "The Sermon on the Mount",
+  "ReadingLink": "#/stories/25"
+}

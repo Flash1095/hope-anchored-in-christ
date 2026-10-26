@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Resurrection Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "When Jesus appeared to His disciples behind locked doors, what did He show them?",
+  "OptionA": "His crown and His robe",
+  "OptionB": "The empty tomb",
+  "OptionC": "A scroll of the Scriptures",
+  "OptionD": "His hands and His side",
+  "CorrectAnswer": "D",
+  "Explanation": "Jesus showed His disciples His hands and His side, the marks of His crucifixion.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "John 20:20",
+  "Slug": "story-the-resurrection-hands-and-side",
+  "ReadingTitle": "The Resurrection",
+  "ReadingLink": "#/stories/24"
+}

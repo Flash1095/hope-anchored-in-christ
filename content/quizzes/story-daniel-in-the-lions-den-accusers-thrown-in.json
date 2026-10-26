@@ -1,0 +1,16 @@
+{
+  "Quiz": "Daniel in the Lions' Den Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What happened to Daniel's accusers in the end?",
+  "OptionA": "They were exiled",
+  "OptionB": "They were fined",
+  "OptionC": "They were thrown into the lions' den instead",
+  "OptionD": "They were pardoned",
+  "CorrectAnswer": "C",
+  "Explanation": "The king had Daniel's accusers thrown into the very den they had prepared for him.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Daniel 6:24",
+  "Slug": "story-daniel-in-the-lions-den-accusers-thrown-in",
+  "ReadingTitle": "Daniel in the Lions' Den",
+  "ReadingLink": "#/stories/1"
+}

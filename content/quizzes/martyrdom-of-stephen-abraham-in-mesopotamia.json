@@ -1,0 +1,16 @@
+{
+ "Quiz": "Martyrdom of Stephen Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "In his speech, which father did Stephen say God appeared to in Mesopotamia?",
+ "OptionA": "Moses",
+ "OptionB": "Jacob",
+ "OptionC": "Abraham",
+ "OptionD": "Isaac",
+ "CorrectAnswer": "C",
+ "Explanation": "Stephen began his defence by recalling how 'the God of glory appeared unto our father Abraham' before he lived in Haran.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Acts 7:2",
+ "Slug": "martyrdom-of-stephen-abraham-in-mesopotamia",
+ "ReadingTitle": "Martyrdom of Stephen",
+ "ReadingLink": "#/stories/51"
+}

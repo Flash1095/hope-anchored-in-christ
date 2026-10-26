@@ -1,0 +1,16 @@
+{
+ "Quiz": "Deborah and Barak Defeat Sisera Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did Deborah prophesy about who would receive Sisera?",
+ "OptionA": "Barak alone",
+ "OptionB": "The king of Hazor",
+ "OptionC": "A child from Kedesh",
+ "OptionD": "A woman, into whose hand the LORD would sell Sisera",
+ "CorrectAnswer": "D",
+ "Explanation": "Deborah warned Barak that the journey would not be for his honour, for the LORD would sell Sisera into the hand of a woman.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Judges 4:9",
+ "Slug": "deborah-and-barak-defeat-sisera-hand-of-a-woman",
+ "ReadingTitle": "Deborah and Barak Defeat Sisera",
+ "ReadingLink": "#/stories/39"
+}

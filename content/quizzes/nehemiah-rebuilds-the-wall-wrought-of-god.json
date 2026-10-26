@@ -1,0 +1,16 @@
+{
+ "Quiz": "Nehemiah Rebuilds the Wall Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "When the wall was finished, what did even Nehemiah's enemies perceive?",
+ "OptionA": "That the workers were exhausted",
+ "OptionB": "That the work was wrought of God",
+ "OptionC": "That the wall would soon fall",
+ "OptionD": "That Nehemiah had bribed the king",
+ "CorrectAnswer": "B",
+ "Explanation": "When the enemies heard and saw it, they were cast down, for they perceived that this work was wrought of God.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Nehemiah 6:16",
+ "Slug": "nehemiah-rebuilds-the-wall-wrought-of-god",
+ "ReadingTitle": "Nehemiah Rebuilds the Wall",
+ "ReadingLink": "#/stories/52"
+}

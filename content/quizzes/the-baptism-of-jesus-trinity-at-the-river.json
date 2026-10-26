@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Baptism of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "According to the retelling, who appeared together at the river?",
+  "OptionA": "The Trinity, Father, Son, and Holy Spirit",
+  "OptionB": "Only the Father and the Son",
+  "OptionC": "John and the twelve disciples",
+  "OptionD": "A host of angels alone",
+  "CorrectAnswer": "A",
+  "Explanation": "At the river the Trinity appeared together: the Son baptized, the Spirit descending, and the Father speaking from heaven.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Matthew 3:16",
+  "Slug": "the-baptism-of-jesus-trinity-at-the-river",
+  "ReadingTitle": "The Baptism of Jesus",
+  "ReadingLink": "#/stories/11"
+}

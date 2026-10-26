@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Ten Commandments Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Where did Israel camp when God gave the Ten Commandments?",
+  "OptionA": "At Mount Carmel",
+  "OptionB": "Beside the Red Sea",
+  "OptionC": "Outside Jericho",
+  "OptionD": "At Mount Sinai",
+  "CorrectAnswer": "D",
+  "Explanation": "Three months after leaving Egypt, Israel camped at Mount Sinai.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Exodus 19:2",
+  "Slug": "the-ten-commandments-mount-sinai-camp",
+  "ReadingTitle": "The Ten Commandments",
+  "ReadingLink": "#/stories/27"
+}

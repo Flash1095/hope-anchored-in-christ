@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jacob Wrestles with God Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Why was Jacob called Israel, according to Genesis 32:28?",
+ "OptionA": "He had crossed the river first",
+ "OptionB": "As a prince he had power with God and with men, and had prevailed",
+ "OptionC": "He was the eldest son",
+ "OptionD": "He had built Peniel",
+ "CorrectAnswer": "B",
+ "Explanation": "Thy name shall be called no more Jacob, but Israel: for as a prince hast thou power with God and with men, and hast prevailed.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Genesis 32:28",
+ "Slug": "jacob-wrestles-with-god-prince-power-with-god",
+ "ReadingTitle": "Jacob Wrestles with God",
+ "ReadingLink": "#/stories/46"
+}

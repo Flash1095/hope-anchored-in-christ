@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jesus Turns Water into Wine at Cana Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "At what kind of celebration did Jesus turn water into wine at Cana?",
+ "OptionA": "A wedding",
+ "OptionB": "A Passover meal",
+ "OptionC": "A Sabbath dinner",
+ "OptionD": "A harvest festival",
+ "CorrectAnswer": "A",
+ "Explanation": "John tells us there was a marriage in Cana, and Jesus and His disciples were invited. It was an ordinary wedding day that became His first sign.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "John 2:1",
+ "Slug": "jesus-turns-water-into-wine-at-cana-wedding",
+ "ReadingTitle": "Jesus Turns Water into Wine at Cana",
+ "ReadingLink": "#/stories/50"
+}

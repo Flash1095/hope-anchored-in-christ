@@ -1,0 +1,16 @@
+{
+  "Quiz": "Creation Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "In whose image did God form human beings?",
+  "OptionA": "The angels' image",
+  "OptionB": "God's own image",
+  "OptionC": "The animals' image",
+  "OptionD": "Adam's image",
+  "CorrectAnswer": "B",
+  "Explanation": "Men and women were made in God's own image, which gives every person dignity and purpose.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 1:27",
+  "Slug": "story-creation-image-of-god",
+  "ReadingTitle": "Creation",
+  "ReadingLink": "#/stories/0"
+}

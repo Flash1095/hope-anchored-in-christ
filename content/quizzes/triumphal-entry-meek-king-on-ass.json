@@ -1,0 +1,16 @@
+{
+ "Quiz": "Triumphal Entry Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "How does Matthew describe the coming King in the prophecy he quotes?",
+ "OptionA": "Meek, and sitting upon an ass, and a colt the foal of an ass",
+ "OptionB": "Mighty and riding a warhorse",
+ "OptionC": "Crowned in gold",
+ "OptionD": "Surrounded by soldiers",
+ "CorrectAnswer": "A",
+ "Explanation": "Matthew quotes the prophecy: Behold, thy King cometh unto thee, meek, and sitting upon an ass.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Matthew 21:5",
+ "Slug": "triumphal-entry-meek-king-on-ass",
+ "ReadingTitle": "Triumphal Entry",
+ "ReadingLink": "#/stories/67"
+}

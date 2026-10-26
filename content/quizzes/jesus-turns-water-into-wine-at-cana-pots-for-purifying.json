@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jesus Turns Water into Wine at Cana Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What were the stone waterpots normally used for?",
+ "OptionA": "Jewish purification",
+ "OptionB": "Storing wine for the feast",
+ "OptionC": "Cooking the wedding meal",
+ "OptionD": "Carrying water from the well",
+ "CorrectAnswer": "A",
+ "Explanation": "John explains the pots were there 'after the manner of the purifying of the Jews.' Jesus turned their ordinary washing water into wine.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "John 2:6",
+ "Slug": "jesus-turns-water-into-wine-at-cana-pots-for-purifying",
+ "ReadingTitle": "Jesus Turns Water into Wine at Cana",
+ "ReadingLink": "#/stories/50"
+}

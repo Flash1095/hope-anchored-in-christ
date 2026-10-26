@@ -1,0 +1,16 @@
+{
+  "Quiz": "Anointing of Saul as King Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "From which tribe did Saul come?",
+  "OptionA": "Judah",
+  "OptionB": "Benjamin",
+  "OptionC": "Levi",
+  "OptionD": "Ephraim",
+  "CorrectAnswer": "B",
+  "Explanation": "Saul was the son of Kish, a Benjamite, and he himself wondered why Samuel spoke so highly of someone from the smallest tribe.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "1 Samuel 9:1",
+  "Slug": "anointing-of-saul-as-king-tribe-of-benjamin",
+  "ReadingTitle": "Anointing of Saul as King",
+  "ReadingLink": "#/stories/30"
+}

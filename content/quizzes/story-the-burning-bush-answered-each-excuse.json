@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Burning Bush Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did God do with each excuse Moses offered?",
+  "OptionA": "He chose someone else instead",
+  "OptionB": "He waited forty more years",
+  "OptionC": "He sent the plagues at once",
+  "OptionD": "He answered each one",
+  "CorrectAnswer": "D",
+  "Explanation": "Moses offered every excuse he could think of, and God answered each one.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Exodus 4:11",
+  "Slug": "story-the-burning-bush-answered-each-excuse",
+  "ReadingTitle": "The Burning Bush",
+  "ReadingLink": "#/stories/14"
+}

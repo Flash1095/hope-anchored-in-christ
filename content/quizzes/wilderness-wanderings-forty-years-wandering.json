@@ -1,0 +1,16 @@
+{
+ "Quiz": "Wilderness Wanderings Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "For how many years did Israel wander in the wilderness?",
+ "OptionA": "Forty years",
+ "OptionB": "Seven years",
+ "OptionC": "Twelve years",
+ "OptionD": "Seventy years",
+ "CorrectAnswer": "A",
+ "Explanation": "The LORD led Israel for forty years in the wilderness, to humble and prove them.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Deuteronomy 8:2",
+ "Slug": "wilderness-wanderings-forty-years-wandering",
+ "ReadingTitle": "Wilderness Wanderings",
+ "ReadingLink": "#/stories/68"
+}

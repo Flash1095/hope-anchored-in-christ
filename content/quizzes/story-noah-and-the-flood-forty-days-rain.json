@@ -1,0 +1,16 @@
+{
+  "Quiz": "Noah and the Flood Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How long did the rains fall?",
+  "OptionA": "Forty days and nights",
+  "OptionB": "Seven days",
+  "OptionC": "One hundred days",
+  "OptionD": "A year",
+  "CorrectAnswer": "A",
+  "Explanation": "The rains came and the waters covered the earth for forty days and nights.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 7:12",
+  "Slug": "story-noah-and-the-flood-forty-days-rain",
+  "ReadingTitle": "Noah and the Flood",
+  "ReadingLink": "#/stories/7"
+}

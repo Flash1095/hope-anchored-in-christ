@@ -1,0 +1,16 @@
+{
+ "Quiz": "Destruction of Sodom and Gomorrah Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Whom did the angels urge Lot to take with him when morning came?",
+ "OptionA": "His servants and his flocks",
+ "OptionB": "His wife and his two daughters",
+ "OptionC": "His neighbours in Sodom",
+ "OptionD": "His brother and his sons",
+ "CorrectAnswer": "B",
+ "Explanation": "The angels hastened Lot, telling him to take his wife and his two daughters who were there, lest they be consumed.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Genesis 19:15",
+ "Slug": "destruction-of-sodom-and-gomorrah-wife-and-two-daughters",
+ "ReadingTitle": "Destruction of Sodom and Gomorrah",
+ "ReadingLink": "#/stories/40"
+}

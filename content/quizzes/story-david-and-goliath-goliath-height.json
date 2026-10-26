@@ -1,0 +1,16 @@
+{
+  "Quiz": "David and Goliath Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "About how tall was Goliath?",
+  "OptionA": "About six feet",
+  "OptionB": "Nearly ten feet",
+  "OptionC": "About twelve feet",
+  "OptionD": "About eight feet",
+  "CorrectAnswer": "B",
+  "Explanation": "Goliath was a giant, nearly ten feet tall and armored head to toe.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "1 Samuel 17:4",
+  "Slug": "story-david-and-goliath-goliath-height",
+  "ReadingTitle": "David and Goliath",
+  "ReadingLink": "#/stories/2"
+}

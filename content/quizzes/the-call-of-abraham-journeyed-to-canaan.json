@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Call of Abraham Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "To where did Abram journey in obedience?",
+  "OptionA": "To Egypt",
+  "OptionB": "To Canaan",
+  "OptionC": "To Babylon",
+  "OptionD": "To Mount Sinai",
+  "CorrectAnswer": "B",
+  "Explanation": "Abram journeyed to Canaan, building altars to the Lord wherever he camped.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 12:5",
+  "Slug": "the-call-of-abraham-journeyed-to-canaan",
+  "ReadingTitle": "The Call of Abraham",
+  "ReadingLink": "#/stories/15"
+}

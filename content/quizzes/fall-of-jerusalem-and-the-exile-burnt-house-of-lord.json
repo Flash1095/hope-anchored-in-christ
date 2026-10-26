@@ -1,0 +1,16 @@
+{
+ "Quiz": "Fall of Jerusalem and the Exile Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did the Babylonians burn in Jerusalem?",
+ "OptionA": "The house of the LORD and the king's house",
+ "OptionB": "Only the city walls",
+ "OptionC": "The ships in the harbour",
+ "OptionD": "The olive groves",
+ "CorrectAnswer": "A",
+ "Explanation": "He burnt the house of the LORD, and the king's house, and all the houses of Jerusalem, and every great man's house.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "2 Kings 25:9",
+ "Slug": "fall-of-jerusalem-and-the-exile-burnt-house-of-lord",
+ "ReadingTitle": "Fall of Jerusalem and the Exile",
+ "ReadingLink": "#/stories/42"
+}

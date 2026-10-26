@@ -1,0 +1,16 @@
+{
+ "Quiz": "Paul Shipwrecked on Malta Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "On which island did Paul's ship wreck?",
+ "OptionA": "Crete",
+ "OptionB": "Cyprus",
+ "OptionC": "Sicily",
+ "OptionD": "Malta",
+ "CorrectAnswer": "D",
+ "Explanation": "When they escaped, they learned the island was called Melita, the Malta of Paul's journey to Rome.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Acts 28:1",
+ "Slug": "paul-shipwrecked-on-malta-malta",
+ "ReadingTitle": "Paul Shipwrecked on Malta",
+ "ReadingLink": "#/stories/54"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Wilderness Wanderings Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "According to Deuteronomy, why did God lead Israel those forty years in the wilderness?",
+ "OptionA": "To punish them forever",
+ "OptionB": "To find a shorter road",
+ "OptionC": "To humble them and prove them, to know what was in their heart, whether they would keep His commandments",
+ "OptionD": "To wait for Moses to grow old",
+ "CorrectAnswer": "C",
+ "Explanation": "God led them forty years to humble them and prove them, to know what was in their heart.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Deuteronomy 8:2",
+ "Slug": "wilderness-wanderings-humble-and-prove",
+ "ReadingTitle": "Wilderness Wanderings",
+ "ReadingLink": "#/stories/68"
+}

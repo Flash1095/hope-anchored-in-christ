@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Binding of Isaac Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How is Isaac described in the retelling?",
+  "OptionA": "The son born to Hagar",
+  "OptionB": "The son of the promise",
+  "OptionC": "The heir of Lot",
+  "OptionD": "The firstborn of the household",
+  "CorrectAnswer": "B",
+  "Explanation": "Isaac was the beloved son of the promise, the son through whom God's promises would come.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Genesis 22:2",
+  "Slug": "the-binding-of-isaac-son-of-the-promise",
+  "ReadingTitle": "The Binding of Isaac",
+  "ReadingLink": "#/stories/12"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Esther Saves Her People Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Where did Esther expose Haman's plot?",
+  "OptionA": "At a banquet",
+  "OptionB": "In the temple",
+  "OptionC": "At the city gate",
+  "OptionD": "In the marketplace",
+  "CorrectAnswer": "A",
+  "Explanation": "Esther exposed Haman's plot at a banquet before the king.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Esther 7:2",
+  "Slug": "esther-saves-her-people-banquet-exposure",
+  "ReadingTitle": "Esther Saves Her People",
+  "ReadingLink": "#/stories/4"
+}

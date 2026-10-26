@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Ten Commandments Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How long after leaving Egypt did Israel reach Mount Sinai?",
+  "OptionA": "Three months",
+  "OptionB": "Three days",
+  "OptionC": "Three years",
+  "OptionD": "Forty days",
+  "CorrectAnswer": "A",
+  "Explanation": "Israel arrived at Sinai three months after leaving Egypt.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Exodus 19:1",
+  "Slug": "the-ten-commandments-three-months-after-egypt",
+  "ReadingTitle": "The Ten Commandments",
+  "ReadingLink": "#/stories/27"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Burning Bush Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Moses see that made him turn aside to look?",
+  "OptionA": "A bush burning without being consumed",
+  "OptionB": "A pillar of fire on the mountain",
+  "OptionC": "A golden calf",
+  "OptionD": "A river turned to blood",
+  "CorrectAnswer": "A",
+  "Explanation": "Moses saw a bush burning without being consumed, and when he turned aside to look, God called his name.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Exodus 3:2",
+  "Slug": "story-the-burning-bush-bush-not-consumed",
+  "ReadingTitle": "The Burning Bush",
+  "ReadingLink": "#/stories/14"
+}

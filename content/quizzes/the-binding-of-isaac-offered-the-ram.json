@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Binding of Isaac Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Abraham offer instead of Isaac?",
+  "OptionA": "The ram",
+  "OptionB": "A dove",
+  "OptionC": "A bullock",
+  "OptionD": "The wood itself",
+  "CorrectAnswer": "A",
+  "Explanation": "Abraham offered the ram from the thicket instead of his son Isaac.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 22:13",
+  "Slug": "the-binding-of-isaac-offered-the-ram",
+  "ReadingTitle": "The Binding of Isaac",
+  "ReadingLink": "#/stories/12"
+}

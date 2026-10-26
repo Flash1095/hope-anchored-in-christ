@@ -1,0 +1,16 @@
+{
+ "Quiz": "Gideon's Victory over Midian Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How many men were left with Gideon for the battle against Midian?",
+ "OptionA": "Three thousand",
+ "OptionB": "Ten thousand",
+ "OptionC": "Three hundred",
+ "OptionD": "Thirty-two thousand",
+ "CorrectAnswer": "C",
+ "Explanation": "The LORD said, By the three hundred men that lapped will I save you, and deliver the Midianites into your hand.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Judges 7:7",
+ "Slug": "gideons-victory-over-midian-three-hundred-men",
+ "ReadingTitle": "Gideon's Victory over Midian",
+ "ReadingLink": "#/stories/44"
+}

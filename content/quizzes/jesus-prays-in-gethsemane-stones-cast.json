@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jesus Prays in Gethsemane Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "According to Luke, how far did Jesus withdraw from the disciples to pray?",
+ "OptionA": "About a mile",
+ "OptionB": "To the next village",
+ "OptionC": "About a stone's cast",
+ "OptionD": "Across the Kidron valley",
+ "CorrectAnswer": "C",
+ "Explanation": "He was withdrawn from them about a stone's cast, and kneeled down, and prayed.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Luke 22:41",
+ "Slug": "jesus-prays-in-gethsemane-stones-cast",
+ "ReadingTitle": "Jesus Prays in Gethsemane",
+ "ReadingLink": "#/stories/49"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Ruth's Loyalty Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What else did Ruth promise Naomi besides going where she went?",
+  "OptionA": "I will never marry",
+  "OptionB": "I will build you a house",
+  "OptionC": "Your people will be my people and your God my God",
+  "OptionD": "I will return to Moab one day",
+  "CorrectAnswer": "C",
+  "Explanation": "Ruth promised Naomi that her people would be Ruth's people and her God would be Ruth's God.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Ruth 1:16",
+  "Slug": "ruths-loyalty-your-people-my-people",
+  "ReadingTitle": "Ruth's Loyalty",
+  "ReadingLink": "#/stories/9"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Pentecost Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "With what were the disciples filled?",
+  "OptionA": "With fear",
+  "OptionB": "With wine",
+  "OptionC": "With questions",
+  "OptionD": "With the Holy Spirit",
+  "CorrectAnswer": "D",
+  "Explanation": "Filled with the Holy Spirit, the disciples began to speak in languages they had never learned.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Acts 2:4",
+  "Slug": "story-pentecost-filled-spirit",
+  "ReadingTitle": "Pentecost",
+  "ReadingLink": "#/stories/8"
+}

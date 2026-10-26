@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Kingdom Divides Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "After the split, what were the two kingdoms called?",
+ "OptionA": "Israel in the north and Judah in the south",
+ "OptionB": "Samaria and Galilee",
+ "OptionC": "Ephraim and Benjamin",
+ "OptionD": "Egypt and Assyria",
+ "CorrectAnswer": "A",
+ "Explanation": "The kingdom split into Israel in the north and Judah in the south, a division that lasted for generations.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "1 Kings 12:20",
+ "Slug": "the-kingdom-divides-israel-and-judah",
+ "ReadingTitle": "The Kingdom Divides",
+ "ReadingLink": "#/stories/62"
+}

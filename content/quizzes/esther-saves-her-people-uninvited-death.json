@@ -1,0 +1,16 @@
+{
+  "Quiz": "Esther Saves Her People Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What was the danger of approaching the king uninvited?",
+  "OptionA": "Being exiled",
+  "OptionB": "Being fined",
+  "OptionC": "Losing her crown",
+  "OptionD": "Death",
+  "CorrectAnswer": "D",
+  "Explanation": "Approaching the king uninvited could mean death, which is why Esther's courage was so great.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Esther 4:11",
+  "Slug": "esther-saves-her-people-uninvited-death",
+  "ReadingTitle": "Esther Saves Her People",
+  "ReadingLink": "#/stories/4"
+}

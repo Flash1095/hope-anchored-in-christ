@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jesus Prays in Gethsemane Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "How did Judas betray Jesus in Gethsemane?",
+ "OptionA": "With a sword",
+ "OptionB": "By pointing from afar",
+ "OptionC": "With a kiss",
+ "OptionD": "By calling His name loudly",
+ "CorrectAnswer": "C",
+ "Explanation": "Forthwith he came to Jesus, and said, Hail, Master; and kissed Him.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Matthew 26:49",
+ "Slug": "jesus-prays-in-gethsemane-judas-kiss",
+ "ReadingTitle": "Jesus Prays in Gethsemane",
+ "ReadingLink": "#/stories/49"
+}

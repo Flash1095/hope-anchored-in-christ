@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Golden Calf Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "According to Psalm 106, whom had the people forgotten when they worshipped the calf?",
+ "OptionA": "Pharaoh",
+ "OptionB": "Aaron",
+ "OptionC": "The elders of Israel",
+ "OptionD": "God their Saviour, who had done great things in Egypt",
+ "CorrectAnswer": "D",
+ "Explanation": "Psalm 106 says they forgot God their Saviour, who had done great things in Egypt and wondrous works by the Red Sea.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Psalms 106:21",
+ "Slug": "the-golden-calf-forgot-god-saviour",
+ "ReadingTitle": "The Golden Calf",
+ "ReadingLink": "#/stories/61"
+}

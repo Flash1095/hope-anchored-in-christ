@@ -1,0 +1,16 @@
+{
+  "Quiz": "David and Goliath Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "From what had God already delivered David before he faced Goliath?",
+  "OptionA": "Floods and famine",
+  "OptionB": "Lions and bears",
+  "OptionC": "Prison and exile",
+  "OptionD": "Storms and shipwreck",
+  "CorrectAnswer": "B",
+  "Explanation": "David remembered that God had delivered him from lions and bears, and he trusted God again.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "1 Samuel 17:37",
+  "Slug": "story-david-and-goliath-lions-and-bears",
+  "ReadingTitle": "David and Goliath",
+  "ReadingLink": "#/stories/2"
+}

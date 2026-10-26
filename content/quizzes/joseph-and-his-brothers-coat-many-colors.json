@@ -1,0 +1,16 @@
+{
+  "Quiz": "Joseph and His Brothers Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What special coat did Jacob give Joseph?",
+  "OptionA": "A coat of many colors",
+  "OptionB": "A coat of leather",
+  "OptionC": "A coat of royal purple",
+  "OptionD": "A coat of linen",
+  "CorrectAnswer": "A",
+  "Explanation": "Jacob gave Joseph, his favorite son, a coat of many colors.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 37:3",
+  "Slug": "joseph-and-his-brothers-coat-many-colors",
+  "ReadingTitle": "Joseph and His Brothers",
+  "ReadingLink": "#/stories/6"
+}

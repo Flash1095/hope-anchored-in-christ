@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Good Samaritan Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "On which road was the man robbed, beaten, and left half dead?",
+  "OptionA": "The road from Jericho to Jerusalem",
+  "OptionB": "The road from Jerusalem to Bethlehem",
+  "OptionC": "The road from Jerusalem to Jericho",
+  "OptionD": "The road from Jericho to Nazareth",
+  "CorrectAnswer": "C",
+  "Explanation": "The man was travelling down to Jericho when robbers attacked him and left him by the roadside.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Luke 10:30",
+  "Slug": "the-good-samaritan-jerusalem-to-jericho-road",
+  "ReadingTitle": "The Good Samaritan",
+  "ReadingLink": "#/stories/21"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Baptism of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Why did John protest when Jesus came to be baptized?",
+  "OptionA": "He said the river was too shallow",
+  "OptionB": "He said Jesus was too young",
+  "OptionC": "He said only priests could baptize",
+  "OptionD": "He said he needed Jesus to baptize him",
+  "CorrectAnswer": "D",
+  "Explanation": "John protested because he felt he needed Jesus to baptize him, not the other way around.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Matthew 3:14",
+  "Slug": "the-baptism-of-jesus-john-protested",
+  "ReadingTitle": "The Baptism of Jesus",
+  "ReadingLink": "#/stories/11"
+}

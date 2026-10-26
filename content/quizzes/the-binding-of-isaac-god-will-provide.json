@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Binding of Isaac Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Abraham answer when Isaac asked about the lamb?",
+  "OptionA": "We will buy one in the city",
+  "OptionB": "Isaac will find one along the way",
+  "OptionC": "We do not need one",
+  "OptionD": "God Himself will provide",
+  "CorrectAnswer": "D",
+  "Explanation": "Abraham answered Isaac's question about the lamb with the words, “God Himself will provide.”",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 22:8",
+  "Slug": "the-binding-of-isaac-god-will-provide",
+  "ReadingTitle": "The Binding of Isaac",
+  "ReadingLink": "#/stories/12"
+}

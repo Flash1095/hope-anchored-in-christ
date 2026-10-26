@@ -1,0 +1,16 @@
+{
+  "Quiz": "Samson and Delilah Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Samson do before his final act of strength?",
+  "OptionA": "He prayed for strength one last time",
+  "OptionB": "He bargained with the Philistine lords",
+  "OptionC": "He asked Delilah to forgive him",
+  "OptionD": "He offered a sacrifice on the altar",
+  "CorrectAnswer": "A",
+  "Explanation": "Even after failure, Samson prayed for strength one last time, and God heard his final prayer.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Judges 16:28",
+  "Slug": "samson-and-delilah-final-prayer",
+  "ReadingTitle": "Samson and Delilah",
+  "ReadingLink": "#/stories/10"
+}

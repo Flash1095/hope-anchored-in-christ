@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Passover Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "At what time of night did the LORD strike the firstborn of Egypt?",
+ "OptionA": "At sunset",
+ "OptionB": "At dawn",
+ "OptionC": "At midnight",
+ "OptionD": "At the third hour",
+ "CorrectAnswer": "C",
+ "Explanation": "It came to pass at midnight that the LORD smote all the firstborn in the land of Egypt.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Exodus 12:29",
+ "Slug": "the-passover-midnight-firstborn",
+ "ReadingTitle": "The Passover",
+ "ReadingLink": "#/stories/63"
+}

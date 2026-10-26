@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Resurrection Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the women find when they reached the tomb?",
+  "OptionA": "The stone rolled away and the tomb empty",
+  "OptionB": "The stone sealed and guards asleep",
+  "OptionC": "The tomb empty but the stone still sealed",
+  "OptionD": "The body wrapped and waiting inside",
+  "CorrectAnswer": "A",
+  "Explanation": "The stone was rolled away, and the tomb where Jesus had lain was empty.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "John 20:1",
+  "Slug": "story-the-resurrection-stone-rolled-empty-tomb",
+  "ReadingTitle": "The Resurrection",
+  "ReadingLink": "#/stories/24"
+}

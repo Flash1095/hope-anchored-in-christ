@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Conversion of Paul Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Who laid hands on Saul at the Lord's command?",
+  "OptionA": "Barnabas",
+  "OptionB": "Peter",
+  "OptionC": "Ananias",
+  "OptionD": "Stephen",
+  "CorrectAnswer": "C",
+  "Explanation": "The disciple Ananias, who feared Saul, laid hands on him at the Lord's command.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Acts 9:17",
+  "Slug": "the-conversion-of-paul-ananias-laid-hands",
+  "ReadingTitle": "The Conversion of Paul",
+  "ReadingLink": "#/stories/16"
+}

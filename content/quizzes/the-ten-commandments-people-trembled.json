@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Ten Commandments Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How did the people respond at the mountain?",
+  "OptionA": "They sang and danced",
+  "OptionB": "They slept through the thunder",
+  "OptionC": "They trembled at the mountain",
+  "OptionD": "They built an altar at once",
+  "CorrectAnswer": "C",
+  "Explanation": "The people trembled at the thunder and lightning of God's presence on the mountain.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Exodus 20:18",
+  "Slug": "the-ten-commandments-people-trembled",
+  "ReadingTitle": "The Ten Commandments",
+  "ReadingLink": "#/stories/27"
+}

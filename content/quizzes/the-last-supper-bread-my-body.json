@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Last Supper Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did Jesus say when He took the bread, blessed and broke it?",
+  "OptionA": "This is the bread of the new temple",
+  "OptionB": "This is my body, given for you",
+  "OptionC": "This is my body, given for the priests alone",
+  "OptionD": "This is bread for the journey ahead",
+  "CorrectAnswer": "B",
+  "Explanation": "Jesus gave the bread a new meaning, pointing to His body given for His disciples.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Luke 22:19",
+  "Slug": "the-last-supper-bread-my-body",
+  "ReadingTitle": "The Last Supper",
+  "ReadingLink": "#/stories/22"
+}

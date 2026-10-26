@@ -1,0 +1,16 @@
+{
+ "Quiz": "Transfiguration Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "Which three disciples did Jesus take up the high mountain with Him?",
+ "OptionA": "Andrew, Philip, and Thomas",
+ "OptionB": "Peter, Andrew, and Matthew",
+ "OptionC": "Peter, James, and John",
+ "OptionD": "James, John, and Judas",
+ "CorrectAnswer": "C",
+ "Explanation": "Jesus took Peter, James, and John his brother and brought them up into a high mountain apart.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Matthew 17:1",
+ "Slug": "transfiguration-peter-james-john",
+ "ReadingTitle": "Transfiguration",
+ "ReadingLink": "#/stories/66"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Good Samaritan Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "When Jesus asked which of the three was a neighbour, what did the lawyer answer?",
+  "OptionA": "The priest, because he served God",
+  "OptionB": "The Levite, because he knew the law",
+  "OptionC": "The one who had mercy on him",
+  "OptionD": "The innkeeper, because he gave shelter",
+  "CorrectAnswer": "C",
+  "Explanation": "The lawyer could see that the true neighbour was the one who showed mercy.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Luke 10:37",
+  "Slug": "the-good-samaritan-one-who-had-mercy",
+  "ReadingTitle": "The Good Samaritan",
+  "ReadingLink": "#/stories/21"
+}

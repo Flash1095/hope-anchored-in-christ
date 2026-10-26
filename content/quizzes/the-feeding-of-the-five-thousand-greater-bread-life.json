@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Feeding of the Five Thousand Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "According to the retelling, what greater bread had Jesus come to give for the world?",
+  "OptionA": "His own life",
+  "OptionB": "Bread baked in the temple",
+  "OptionC": "A feast for the whole of Galilee",
+  "OptionD": "A daily supply of barley loaves",
+  "CorrectAnswer": "A",
+  "Explanation": "Jesus had come to give far more than full stomachs: He gave His own life for the world.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "John 6:51",
+  "Slug": "the-feeding-of-the-five-thousand-greater-bread-life",
+  "ReadingTitle": "The Feeding of the Five Thousand",
+  "ReadingLink": "#/stories/20"
+}

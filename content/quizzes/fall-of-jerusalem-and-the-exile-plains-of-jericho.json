@@ -1,0 +1,16 @@
+{
+ "Quiz": "Fall of Jerusalem and the Exile Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Where was King Zedekiah overtaken by the Chaldean army after he fled?",
+ "OptionA": "At the Water Gate",
+ "OptionB": "In the hills of Moab",
+ "OptionC": "In the plains of Jericho",
+ "OptionD": "Beside the river Euphrates",
+ "CorrectAnswer": "C",
+ "Explanation": "The army of the Chaldees pursued after the king, and overtook him in the plains of Jericho, and all his army were scattered.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "2 Kings 25:5",
+ "Slug": "fall-of-jerusalem-and-the-exile-plains-of-jericho",
+ "ReadingTitle": "Fall of Jerusalem and the Exile",
+ "ReadingLink": "#/stories/42"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Crucifixion Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Between whom was Jesus nailed to the cross?",
+  "OptionA": "Two criminals",
+  "OptionB": "Two soldiers",
+  "OptionC": "Two priests",
+  "OptionD": "Two disciples",
+  "CorrectAnswer": "A",
+  "Explanation": "Jesus was nailed to a cross between two criminals, with a sign above his head.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Matthew 27:38",
+  "Slug": "story-the-crucifixion-between-two-criminals",
+  "ReadingTitle": "The Crucifixion",
+  "ReadingLink": "#/stories/17"
+}

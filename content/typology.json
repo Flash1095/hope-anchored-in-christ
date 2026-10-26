@@ -34,7 +34,7 @@
     "Explanation": "Isaac carried the wood up the mountain just as Jesus carried His cross, and Abraham's words, 'God himself will provide the lamb,' found their full answer in Jesus. The scene teaches both the cost of sin and the wonder of a God who provides the sacrifice Himself.",
     "RelatedBooks": "Genesis; John; Romans; Hebrews",
     "RelatedPeople": "Abraham; Isaac; Jesus",
-    "RelatedEvents": "Binding of Isaac; The Crucifixion",
+    "RelatedEvents": "The Binding of Isaac; The Crucifixion",
     "Slug": "isaacs-near-sacrifice",
     "Places": "Jerusalem"
   },
@@ -47,7 +47,7 @@
     "Explanation": "Joseph's story whispers of Jesus at every turn: the beloved son, the unjust suffering, and the forgiving heart that says, 'You intended to harm me, but God intended it for good.' Joseph fed the hungry with bread in famine; Jesus gives Himself as the bread of life forever.",
     "RelatedBooks": "Genesis; Matthew; Acts; Philippians",
     "RelatedPeople": "Joseph, Son of Jacob; Jesus; Stephen",
-    "RelatedEvents": "Joseph Sold into Egypt; Joseph Rises to Power in Egypt; The Crucifixion",
+    "RelatedEvents": "Joseph and His Brothers; The Crucifixion",
     "Slug": "joseph",
     "Places": "Egypt"
   },
@@ -60,7 +60,7 @@
     "Explanation": "Moses and Jesus mirror each other at nearly every turn: both were born under a king's order to kill Hebrew baby boys and were miraculously preserved (Exodus 1-2; Matthew 2); both spent time in Egypt and came out of it (Hosea 11:1; Matthew 2:15); both fasted forty days (Exodus 34:28; Matthew 4:2); both mediated a covenant between God and His people (Exodus 24; Luke 22:20); both interceded for a guilty people, Moses even offering himself for them (Exodus 32:32), while Jesus actually gave Himself (Romans 5:8); both were meek (Numbers 12:3; Matthew 11:29); both taught God's law from a mountain, Sinai and the Sermon on the Mount (Exodus 20; Matthew 5-7); both were rejected by their own people (Exodus 32; John 1:11); both provided bread in the wilderness, manna and the Bread of Life (Exodus 16; John 6:35); both led God's people out of bondage, from Egypt and from sin. Where Moses could only lead Israel to the border of the promised land, Jesus brings His people all the way home. And Moses himself foretold a Prophet like him (Deuteronomy 18:15), a promise Peter and Stephen applied directly to Jesus (Acts 3:22-23; Acts 7:37).",
     "RelatedBooks": "Exodus; Numbers; Deuteronomy; Matthew; John; Acts; Hebrews",
     "RelatedPeople": "Moses; Aaron; Jesus",
-    "RelatedEvents": "The Burning Bush; The Exodus and Crossing of the Red Sea; Giving of the Law at Sinai; Transfiguration",
+    "RelatedEvents": "The Burning Bush; The Exodus and the Red Sea; The Ten Commandments; Transfiguration",
     "Slug": "moses",
     "Places": "Egypt; Midian; Mount Sinai"
   },
@@ -73,7 +73,7 @@
     "Explanation": "The blood on the doorposts turned God's judgment aside and set a captive people free to journey toward the promised land. Christ's blood does far more: it cleanses the conscience, frees us from slavery to sin, and marks us as God's own for the journey home.",
     "RelatedBooks": "Exodus; John; 1 Corinthians",
     "RelatedPeople": "Moses; Jesus; John the Baptist",
-    "RelatedEvents": "The Passover; The Exodus and Crossing of the Red Sea; The Crucifixion; Last Supper",
+    "RelatedEvents": "The Passover; The Exodus and the Red Sea; The Crucifixion; The Last Supper",
     "Slug": "passover-lamb",
     "Places": "Egypt"
   },
@@ -86,7 +86,7 @@
     "Explanation": "Manna taught Israel daily dependence: God fed His people morning by morning with bread they did not earn or bake. Jesus feeds our souls the same way, not once but daily, as we come to Him in His word and prayer and find Him enough for today.",
     "RelatedBooks": "Exodus; Psalms; John",
     "RelatedPeople": "Moses; Aaron; Jesus",
-    "RelatedEvents": "Wilderness Wanderings; Feeding of the Five Thousand",
+    "RelatedEvents": "Wilderness Wanderings; The Feeding of the Five Thousand",
     "Slug": "manna-from-heaven"
   },
   {
@@ -110,7 +110,7 @@
     "Explanation": "Every part of the tabernacle whispered of Christ: the one door, the altar, the lampstand, the bread, and the veil guarding the Holy of Holies. It taught a wandering people that a holy God longs to dwell in their midst, a longing fulfilled when Emmanuel came.",
     "RelatedBooks": "Exodus; John; Colossians; Hebrews; Revelation",
     "RelatedPeople": "Moses; Aaron; Jesus",
-    "RelatedEvents": "Wilderness Wanderings; Birth of Jesus",
+    "RelatedEvents": "Wilderness Wanderings; The Birth of Jesus",
     "Slug": "tabernacle",
     "Places": "Mount Sinai"
   },
@@ -123,7 +123,7 @@
     "Explanation": "Between the cherubim above the ark, judgment and mercy met: the law inside the ark condemned, yet the blood above it covered. In Christ, God's justice and love meet fully at the cross, so sinners can draw near without fear.",
     "RelatedBooks": "Exodus; Leviticus; Romans; Hebrews; 1 John",
     "RelatedPeople": "Aaron; Moses; Jesus; Paul",
-    "RelatedEvents": "Giving of the Law at Sinai; The Crucifixion",
+    "RelatedEvents": "The Ten Commandments; The Crucifixion",
     "Slug": "mercy-seat",
     "Places": "Jerusalem"
   },
@@ -149,7 +149,7 @@
     "Explanation": "Burnt, sin, guilt, and fellowship offerings each highlighted a facet of atonement: substitution, cleansing, forgiveness, and restored fellowship. Christ gathers them all into Himself; where the old system was a shadow that pointed forward, His sacrifice is the substance that settles the debt.",
     "RelatedBooks": "Leviticus; Hebrews; 1 Peter; 1 John",
     "RelatedPeople": "Aaron; Moses; Jesus",
-    "RelatedEvents": "Giving of the Law at Sinai; The Crucifixion",
+    "RelatedEvents": "The Ten Commandments; The Crucifixion",
     "Slug": "sacrificial-system",
     "Places": "Mount Sinai; Jerusalem"
   },
@@ -175,7 +175,7 @@
     "Explanation": "Jonah was, in a sense, given up to death to calm a storm and save sailors, then 'resurrected' to preach repentance to the nations. Jesus truly died to save others, truly rose, and sends a message of repentance far wider than Nineveh, to the ends of the earth.",
     "RelatedBooks": "Jonah; Matthew; Luke",
     "RelatedPeople": "Jonah; Jesus",
-    "RelatedEvents": "Jonah and the Great Fish; The Resurrection",
+    "RelatedEvents": "Jonah and Nineveh; The Resurrection",
     "Slug": "jonah",
     "Places": "Nineveh"
   },
@@ -188,7 +188,7 @@
     "Explanation": "David was shepherd, singer, and king, a man after God's own heart, yet he also fell grievously and needed mercy. Jesus is David perfected: the Good Shepherd who lays down His life, the righteous King who never fails, whose reign brings the justice and peace David only glimpsed.",
     "RelatedBooks": "1 Samuel; 2 Samuel; Psalms; Matthew; Luke; Acts; Romans",
     "RelatedPeople": "King David; Jesus; Nathan",
-    "RelatedEvents": "David Becomes King; Davidic Covenant; Birth of Jesus; The Crucifixion; The Resurrection",
+    "RelatedEvents": "David Becomes King; Davidic Covenant; The Birth of Jesus; The Crucifixion; The Resurrection",
     "Slug": "king-david",
     "Places": "Bethlehem; Jerusalem"
   },
@@ -201,7 +201,7 @@
     "Explanation": "Built on Mount Moriah, where Abraham once offered Isaac, the temple was the meeting place of heaven and earth, filled with God's glory at its dedication. Christ fulfills it by being the true meeting place, and one day the whole new creation becomes God's temple, with no building needed at all.",
     "RelatedBooks": "1 Kings; 2 Chronicles; Matthew; John; Ephesians; 1 Peter",
     "RelatedPeople": "King Solomon; King David; Jesus",
-    "RelatedEvents": "Building of Solomon's Temple; Binding of Isaac; The Resurrection",
+    "RelatedEvents": "Building of Solomon's Temple; The Binding of Isaac; The Resurrection",
     "Slug": "solomons-temple",
     "Places": "Jerusalem"
   },
@@ -214,7 +214,7 @@
     "Explanation": "Unlike Aaron's priests, who died and were replaced, Melchizedek points to a priesthood that never ends and a king who is also a priest. Because Jesus lives forever in this order, He is able to save completely those who come to God through Him.",
     "RelatedBooks": "Genesis; Psalms; Hebrews",
     "RelatedPeople": "Melchizedek; Abraham; Jesus",
-    "RelatedEvents": "Call of Abraham; Last Supper",
+    "RelatedEvents": "The Call of Abraham; The Last Supper",
     "Slug": "melchizedek",
     "Places": "Jerusalem"
   },
@@ -227,7 +227,7 @@
     "Explanation": "The Hebrew word goel, redeemer, required kinship, ability, and willingness, and Boaz shows all three with kindness and integrity. Ruth, a foreign widow with nothing, pictures us: welcomed by grace into the family line that would lead, through her own great-grandson David, to Christ.",
     "RelatedBooks": "Ruth; Leviticus; Titus; 1 Peter; Revelation",
     "RelatedPeople": "Ruth; Naomi; Boaz; King David; Jesus",
-    "RelatedEvents": "Story of Ruth; The Crucifixion",
+    "RelatedEvents": "Ruth's Loyalty; The Crucifixion",
     "Slug": "boaz-kinsman-redeemer",
     "Places": "Bethlehem"
   },
@@ -253,7 +253,7 @@
     "Explanation": "The sea that saved Israel destroyed the power that enslaved them; God made a way where there was no way, through water no one could cross alone. Baptism proclaims the same pattern: behind us, a defeated enemy and a buried old life; ahead of us, resurrection life with Christ.",
     "RelatedBooks": "Exodus; Romans; 1 Corinthians; Colossians",
     "RelatedPeople": "Moses; Aaron; Jesus; Paul",
-    "RelatedEvents": "The Exodus and Crossing of the Red Sea; The Ten Plagues; Baptism of Jesus; The Resurrection",
+    "RelatedEvents": "The Exodus and the Red Sea; The Ten Plagues; The Baptism of Jesus; The Resurrection",
     "Slug": "red-sea-crossing",
     "Places": "Egypt"
   },
@@ -266,7 +266,7 @@
     "Explanation": "Hosea's name was changed to Joshua as a declaration that salvation belongs to the Lord, not to human strength. The conquest's victories and the land's rest were real gifts, yet Hebrews insists a greater rest remained, and it is found only in Christ, who leads His people home for good.",
     "RelatedBooks": "Joshua; Numbers; Matthew; Hebrews; Acts",
     "RelatedPeople": "Joshua; Moses; Caleb; Jesus",
-    "RelatedEvents": "Crossing the Jordan; Fall of Jericho",
+    "RelatedEvents": "Crossing the Jordan; The Walls of Jericho",
     "Slug": "joshua",
     "Places": "Jericho; Jordan River"
   },
@@ -279,7 +279,7 @@
     "Explanation": "Long before Isaiah wrote, Joseph's rejection by his brothers and unjust suffering before his exaltation sketched the same pattern of the righteous one suffering to save others. Isaiah gives that pattern its clearest voice, and in Jesus the Servant's wounds become, as Peter writes, the very means by which we are healed.",
     "RelatedBooks": "Isaiah; Matthew; Luke; Acts; 1 Peter",
     "RelatedPeople": "Isaiah; Joseph, Son of Jacob; Jesus; Philip",
-    "RelatedEvents": "Joseph Sold into Egypt; The Crucifixion; The Resurrection",
+    "RelatedEvents": "Joseph and His Brothers; The Crucifixion; The Resurrection",
     "Slug": "suffering-servant",
     "Places": "Golgotha; Jerusalem"
   },
@@ -292,7 +292,7 @@
     "Explanation": "The ram is a pure picture of substitution: an innocent life taken so the beloved son could walk down the mountain alive and free. At the cross the pattern completes itself, for God's Son was not spared, so that everyone who trusts Him goes free.",
     "RelatedBooks": "Genesis; John; Romans; 2 Corinthians",
     "RelatedPeople": "Abraham; Isaac; Jesus",
-    "RelatedEvents": "Binding of Isaac; The Crucifixion",
+    "RelatedEvents": "The Binding of Isaac; The Crucifixion",
     "Slug": "ram-in-the-thicket",
     "Places": "Jerusalem"
   },
@@ -330,7 +330,7 @@
     "Explanation": "Jubilee taught Israel that the land, the people, and even time itself belong to God, and that His economy runs on release rather than accumulation. In Christ, the greater Jubilee has dawned: sins forgiven, captives freed, and an eternal inheritance restored that can never be lost again.",
     "RelatedBooks": "Leviticus; Isaiah; Luke",
     "RelatedPeople": "Moses; Isaiah; Jesus",
-    "RelatedEvents": "Giving of the Law at Sinai; Sermon on the Mount",
+    "RelatedEvents": "The Ten Commandments; The Sermon on the Mount",
     "Slug": "year-of-jubilee",
     "Places": "Mount Sinai; Nazareth"
   },
@@ -343,7 +343,7 @@
     "Explanation": "The oracle is striking because God spoke it through a hired prophet who came to curse Israel and could only bless. The star promises a royal deliverer rising from Jacob's line in God's timing, a promise the Magi's journey confirms and Revelation seals, as Christ's reign dawns over all nations.",
     "RelatedBooks": "Numbers; Matthew; Revelation",
     "RelatedPeople": "Jacob; Jesus",
-    "RelatedEvents": "Wilderness Wanderings; Birth of Jesus",
+    "RelatedEvents": "Wilderness Wanderings; The Birth of Jesus",
     "Slug": "star-out-of-jacob",
     "Places": "Plains of Moab; Bethlehem"
   },
@@ -369,7 +369,7 @@
     "Explanation": "Bethel, 'the house of God,' was an ordinary patch of ground until God revealed that heaven was nearer than Jacob knew. Jesus is the true ladder and the true Bethel: in Him, heaven and earth meet, God speaks His promises, and a runaway sinner finds the way home open.",
     "RelatedBooks": "Genesis; John",
     "RelatedPeople": "Jacob; Jesus",
-    "RelatedEvents": "Jacob Wrestles with God; Birth of Jesus",
+    "RelatedEvents": "Jacob Wrestles with God; The Birth of Jesus",
     "Slug": "jacobs-ladder",
     "Places": "Bethel"
   },
@@ -395,7 +395,7 @@
     "Explanation": "Like Moses, Jesus speaks God's words directly (Deuteronomy 18:18; John 12:49), stands between God and the people, and is authenticated by signs. But Jesus is greater: Moses was a faithful servant in God's house, while Jesus is the Son over the house (Hebrews 3:5-6). The crowds recognized it themselves, saying after the feeding of the five thousand, \"This is indeed the Prophet who is to come into the world\" (John 6:14). See the Moses entry for the full set of parallels between their lives.",
     "RelatedBooks": "Deuteronomy; John; Acts; Hebrews",
     "RelatedPeople": "Moses; Jesus; Simon Peter; Stephen",
-    "RelatedEvents": "Giving of the Law at Sinai; Feeding of the Five Thousand; Transfiguration",
+    "RelatedEvents": "The Ten Commandments; The Feeding of the Five Thousand; Transfiguration",
     "Slug": "prophet-like-moses",
     "Places": "Mount Sinai; Plains of Moab"
   }

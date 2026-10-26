@@ -1,0 +1,16 @@
+{
+ "Quiz": "Nehemiah Rebuilds the Wall Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What was Nehemiah's job for the king of Persia?",
+ "OptionA": "Cupbearer",
+ "OptionB": "High priest",
+ "OptionC": "Army commander",
+ "OptionD": "Tax collector",
+ "CorrectAnswer": "A",
+ "Explanation": "Nehemiah was the king's cupbearer, a trusted servant close to the king. From that place he wept over Jerusalem and asked to go and rebuild.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Nehemiah 2:1",
+ "Slug": "nehemiah-rebuilds-the-wall-cupbearer",
+ "ReadingTitle": "Nehemiah Rebuilds the Wall",
+ "ReadingLink": "#/stories/52"
+}

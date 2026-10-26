@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Prodigal Son Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the father do when he saw his son?",
+  "OptionA": "He waited in the house for an apology",
+  "OptionB": "He sent a servant to meet him",
+  "OptionC": "He scolded him before forgiving him",
+  "OptionD": "He ran to him, embraced him, and threw a feast",
+  "CorrectAnswer": "D",
+  "Explanation": "The father ran to his son, embraced him, and celebrated his return with a feast.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Luke 15:20",
+  "Slug": "the-prodigal-son-father-ran-embraced",
+  "ReadingTitle": "The Prodigal Son",
+  "ReadingLink": "#/stories/23"
+}

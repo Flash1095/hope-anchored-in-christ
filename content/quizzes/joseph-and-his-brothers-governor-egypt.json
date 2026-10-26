@@ -1,0 +1,16 @@
+{
+  "Quiz": "Joseph and His Brothers Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What position did God raise Joseph to in Egypt?",
+  "OptionA": "Prison keeper",
+  "OptionB": "Governor over Egypt",
+  "OptionC": "Captain of the guard",
+  "OptionD": "Royal baker",
+  "CorrectAnswer": "B",
+  "Explanation": "From slave and prisoner, Joseph was raised to govern Egypt under Pharaoh.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 41:41",
+  "Slug": "joseph-and-his-brothers-governor-egypt",
+  "ReadingTitle": "Joseph and His Brothers",
+  "ReadingLink": "#/stories/6"
+}

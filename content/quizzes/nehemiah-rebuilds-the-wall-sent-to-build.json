@@ -1,0 +1,16 @@
+{
+ "Quiz": "Nehemiah Rebuilds the Wall Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did Nehemiah ask the king to let him do?",
+ "OptionA": "Become governor of Persia",
+ "OptionB": "Build a new palace",
+ "OptionC": "Send him to Judah to build the city of his fathers' tombs",
+ "OptionD": "Free all the captives at once",
+ "CorrectAnswer": "C",
+ "Explanation": "Nehemiah asked the king to send him to Judah, to the city of his fathers' sepulchres, that he might build it.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Nehemiah 2:5",
+ "Slug": "nehemiah-rebuilds-the-wall-sent-to-build",
+ "ReadingTitle": "Nehemiah Rebuilds the Wall",
+ "ReadingLink": "#/stories/52"
+}

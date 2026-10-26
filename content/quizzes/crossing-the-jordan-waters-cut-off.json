@@ -1,0 +1,16 @@
+{
+ "Quiz": "Crossing the Jordan Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What happened when the priests' feet touched the Jordan's water?",
+ "OptionA": "The river flooded higher",
+ "OptionB": "The priests sank in the mud",
+ "OptionC": "The water turned to blood",
+ "OptionD": "The waters were cut off and stood in a heap",
+ "CorrectAnswer": "D",
+ "Explanation": "The waters coming down from above stood and rose up in a heap far away, so Israel crossed on dry ground.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Joshua 3:16",
+ "Slug": "crossing-the-jordan-waters-cut-off",
+ "ReadingTitle": "Crossing the Jordan",
+ "ReadingLink": "#/stories/34"
+}

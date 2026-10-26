@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Burning Bush Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did God give Moses to prove he was sent?",
+  "OptionA": "Signs",
+  "OptionB": "An army",
+  "OptionC": "A written law",
+  "OptionD": "A golden crown",
+  "CorrectAnswer": "A",
+  "Explanation": "God answered Moses' excuses and gave him signs to prove he was sent.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Exodus 4:8",
+  "Slug": "story-the-burning-bush-signs-he-was-sent",
+  "ReadingTitle": "The Burning Bush",
+  "ReadingLink": "#/stories/14"
+}

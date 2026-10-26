@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Good Samaritan Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did Jesus say to the lawyer at the end of the story?",
+  "OptionA": "Go and do likewise",
+  "OptionB": "Go and tell the priests",
+  "OptionC": "Go and pay the innkeeper yourself",
+  "OptionD": "Go and find the robbers",
+  "CorrectAnswer": "A",
+  "Explanation": "Jesus did not just explain the story; He told the lawyer to live it out.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Luke 10:37",
+  "Slug": "the-good-samaritan-go-and-do-likewise",
+  "ReadingTitle": "The Good Samaritan",
+  "ReadingLink": "#/stories/21"
+}

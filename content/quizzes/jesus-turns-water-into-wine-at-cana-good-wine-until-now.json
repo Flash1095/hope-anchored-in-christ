@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jesus Turns Water into Wine at Cana Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What did the governor of the feast say about the wine Jesus had made?",
+ "OptionA": "It was weaker than the first wine",
+ "OptionB": "It should have been served earlier",
+ "OptionC": "Thou hast kept the good wine until now",
+ "OptionD": "It tasted like ordinary water",
+ "CorrectAnswer": "C",
+ "Explanation": "Usually the best wine came first, but the governor told the bridegroom this good wine had been kept until now.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "John 2:10",
+ "Slug": "jesus-turns-water-into-wine-at-cana-good-wine-until-now",
+ "ReadingTitle": "Jesus Turns Water into Wine at Cana",
+ "ReadingLink": "#/stories/50"
+}

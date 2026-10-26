@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Temptation in the Wilderness Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "After the devil left Him, who came and ministered to Jesus?",
+  "OptionA": "Angels",
+  "OptionB": "His disciples",
+  "OptionC": "John the Baptist",
+  "OptionD": "The people of the wilderness",
+  "CorrectAnswer": "A",
+  "Explanation": "When the devil left Him, angels came and ministered to Jesus.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Matthew 4:11",
+  "Slug": "the-temptation-in-the-wilderness-angels-ministered",
+  "ReadingTitle": "The Temptation in the Wilderness",
+  "ReadingLink": "#/stories/26"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Anointing of Saul as King Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did God give Saul when he turned to leave Samuel?",
+  "OptionA": "A sword",
+  "OptionB": "Another heart",
+  "OptionC": "A crown of gold",
+  "OptionD": "A new name",
+  "CorrectAnswer": "B",
+  "Explanation": "God gave Saul another heart, and all the signs Samuel had spoken of came to pass that very day.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "1 Samuel 10:9",
+  "Slug": "anointing-of-saul-as-king-another-heart",
+  "ReadingTitle": "Anointing of Saul as King",
+  "ReadingLink": "#/stories/30"
+}

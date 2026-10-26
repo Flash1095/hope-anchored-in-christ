@@ -1,0 +1,16 @@
+{
+  "Quiz": "Noah and the Flood Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "According to Genesis 8:4, when did the ark come to rest?",
+  "OptionA": "First month, first day",
+  "OptionB": "Tenth month, first day",
+  "OptionC": "Fifth month, tenth day",
+  "OptionD": "Seventh month, seventeenth day",
+  "CorrectAnswer": "D",
+  "Explanation": "Months after the rains, the ark came to rest in the seventh month, on the seventeenth day.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Genesis 8:4",
+  "Slug": "story-noah-and-the-flood-ark-rested-date",
+  "ReadingTitle": "Noah and the Flood",
+  "ReadingLink": "#/stories/7"
+}

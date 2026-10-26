@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Burning Bush Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How does the retelling describe Moses' life before the burning bush?",
+  "OptionA": "A shepherd born in the wilderness",
+  "OptionB": "A priest of Midian",
+  "OptionC": "A fugitive who had failed as a prince",
+  "OptionD": "A king of Egypt",
+  "CorrectAnswer": "C",
+  "Explanation": "Moses was a fugitive who had failed as a prince and settled for obscurity before God called him.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Acts 7:29",
+  "Slug": "story-the-burning-bush-fugitive-failed-prince",
+  "ReadingTitle": "The Burning Bush",
+  "ReadingLink": "#/stories/14"
+}

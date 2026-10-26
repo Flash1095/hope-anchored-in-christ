@@ -1,0 +1,16 @@
+{
+ "Quiz": "Fall of Jerusalem and the Exile Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "In what year of Jehoiachin's captivity was he lifted up out of prison?",
+ "OptionA": "The seventh year",
+ "OptionB": "The nineteenth year",
+ "OptionC": "The thirty-seventh year",
+ "OptionD": "The seventieth year",
+ "CorrectAnswer": "C",
+ "Explanation": "In the seven and thirtieth year of the captivity of Jehoiachin king of Judah, the king of Babylon lifted up his head out of prison.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "2 Kings 25:27",
+ "Slug": "fall-of-jerusalem-and-the-exile-jehoiachin-thirty-seventh-year",
+ "ReadingTitle": "Fall of Jerusalem and the Exile",
+ "ReadingLink": "#/stories/42"
+}

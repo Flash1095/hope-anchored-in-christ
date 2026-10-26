@@ -1,0 +1,16 @@
+{
+  "Quiz": "Jonah and Nineveh Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did the fish do after Jonah prayed?",
+  "OptionA": "Vomit him onto dry land",
+  "OptionB": "Carry him to Tarshish",
+  "OptionC": "Sink to the deep",
+  "OptionD": "Keep him another week",
+  "CorrectAnswer": "A",
+  "Explanation": "After Jonah prayed, the fish vomited him onto dry land, and he went to Nineveh.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Jonah 2:10",
+  "Slug": "jonah-and-nineveh-vomited-dry-land",
+  "ReadingTitle": "Jonah and Nineveh",
+  "ReadingLink": "#/stories/5"
+}

@@ -5,7 +5,7 @@
     "KeyPassages": "Genesis 15:17-21; Exodus 19:5-6; 2 Samuel 7:12-16; Jeremiah 31:31-34; Luke 22:20; Hebrews 8:6",
     "RelatedBooks": "Genesis; Exodus; 2 Samuel; Jeremiah; Luke; Hebrews",
     "RelatedPeople": "Abraham; Noah; Moses; David; Jesus",
-    "RelatedEvents": "The Exodus and Crossing of the Red Sea; Last Supper; The Crucifixion",
+    "RelatedEvents": "The Exodus and the Red Sea; The Last Supper; The Crucifixion",
     "Slug": "covenant",
     "Places": "Egypt; Jerusalem; Golgotha"
   },
@@ -15,7 +15,7 @@
     "KeyPassages": "Exodus 6:6; Ruth 4:4-10; Psalm 130:7; Mark 10:45; Ephesians 1:7; Romans 8:23",
     "RelatedBooks": "Exodus; Ruth; Psalms; Mark; Ephesians; Romans",
     "RelatedPeople": "Moses; Ruth; Boaz; Jesus; Paul",
-    "RelatedEvents": "The Exodus and Crossing of the Red Sea; The Crucifixion; The Resurrection",
+    "RelatedEvents": "The Exodus and the Red Sea; The Crucifixion; The Resurrection",
     "Slug": "redemption",
     "Places": "Egypt; Golgotha; Jerusalem"
   },
@@ -25,7 +25,7 @@
     "KeyPassages": "Genesis 22:8; Leviticus 16:15-22; Isaiah 53:5-7; John 1:29; Hebrews 10:10-14",
     "RelatedBooks": "Genesis; Leviticus; Isaiah; John; Hebrews",
     "RelatedPeople": "Abraham; Isaac; Aaron; Jesus; John the Baptist",
-    "RelatedEvents": "Binding of Isaac; The Passover; The Crucifixion",
+    "RelatedEvents": "The Binding of Isaac; The Passover; The Crucifixion",
     "Slug": "sacrifice",
     "Places": "Jerusalem; Egypt; Golgotha"
   },
@@ -35,7 +35,7 @@
     "KeyPassages": "Exodus 15:11; Leviticus 19:2; Isaiah 6:3; 1 Peter 1:15-16; Hebrews 12:14",
     "RelatedBooks": "Exodus; Leviticus; Isaiah; 1 Peter; Hebrews",
     "RelatedPeople": "Moses; Isaiah; Aaron; Peter; Jesus",
-    "RelatedEvents": "Giving of the Law at Sinai; Pentecost",
+    "RelatedEvents": "The Ten Commandments; Pentecost",
     "Slug": "holiness",
     "Places": "Mount Sinai; Jerusalem"
   },
@@ -55,7 +55,7 @@
     "KeyPassages": "Deuteronomy 16:20; Psalm 33:5; Isaiah 1:17; Amos 5:24; Micah 6:8; Romans 3:25-26",
     "RelatedBooks": "Deuteronomy; Psalms; Isaiah; Amos; Micah; Romans",
     "RelatedPeople": "Moses; Amos; Micah; Jesus; Paul",
-    "RelatedEvents": "Giving of the Law at Sinai; The Crucifixion",
+    "RelatedEvents": "The Ten Commandments; The Crucifixion",
     "Slug": "justice",
     "Places": "Mount Sinai; Golgotha; Jerusalem"
   },
@@ -65,7 +65,7 @@
     "KeyPassages": "Exodus 34:6-7; Psalm 103:8-13; Micah 7:18; Luke 6:36; Ephesians 2:4-5; Titus 3:5",
     "RelatedBooks": "Exodus; Psalms; Micah; Luke; Ephesians; Titus",
     "RelatedPeople": "Moses; David; Jonah; Jesus; Paul",
-    "RelatedEvents": "The Exodus and Crossing of the Red Sea; Jonah and the Great Fish; The Crucifixion",
+    "RelatedEvents": "The Exodus and the Red Sea; Jonah and Nineveh; The Crucifixion",
     "Slug": "mercy",
     "Places": "Egypt; Nineveh; Golgotha; Jerusalem"
   },
@@ -75,7 +75,7 @@
     "KeyPassages": "Exodus 14:13; Psalm 62:1; Isaiah 12:2; Luke 19:10; Acts 4:12; Ephesians 2:8-9",
     "RelatedBooks": "Exodus; Psalms; Isaiah; Luke; Acts; Ephesians",
     "RelatedPeople": "Moses; Isaiah; Jesus; Peter; Paul",
-    "RelatedEvents": "The Exodus and Crossing of the Red Sea; The Crucifixion; The Resurrection; Pentecost",
+    "RelatedEvents": "The Exodus and the Red Sea; The Crucifixion; The Resurrection; Pentecost",
     "Slug": "salvation",
     "Places": "Egypt; Golgotha; Jerusalem"
   },
@@ -85,7 +85,7 @@
     "KeyPassages": "Genesis 15:6; Habakkuk 2:4; Hebrews 11:1; Hebrews 11:6; Romans 10:17; James 2:17",
     "RelatedBooks": "Genesis; Habakkuk; Hebrews; Romans; James",
     "RelatedPeople": "Abraham; Noah; Moses; Rahab; Mary",
-    "RelatedEvents": "Binding of Isaac; Noah and the Flood; The Resurrection",
+    "RelatedEvents": "The Binding of Isaac; Noah and the Flood; The Resurrection",
     "Slug": "faith",
     "Places": "Mount Ararat; Jerusalem"
   },
@@ -95,7 +95,7 @@
     "KeyPassages": "Genesis 6:8; Psalm 84:11; John 1:16-17; Romans 5:20; Ephesians 2:8; Titus 2:11-12",
     "RelatedBooks": "Genesis; Psalms; John; Romans; Ephesians; Titus",
     "RelatedPeople": "Noah; David; Mary; Jesus; Paul",
-    "RelatedEvents": "The Crucifixion; Conversion of Saul (Paul); Pentecost",
+    "RelatedEvents": "The Crucifixion; The Conversion of Paul; Pentecost",
     "Slug": "grace",
     "Places": "Golgotha; Jerusalem"
   },
@@ -105,7 +105,7 @@
     "KeyPassages": "Deuteronomy 6:5; Psalm 136:1; John 3:16; Romans 5:8; 1 Corinthians 13:4-7; 1 John 4:8-10",
     "RelatedBooks": "Deuteronomy; Psalms; John; Romans; 1 Corinthians; 1 John",
     "RelatedPeople": "Moses; David; Jesus; Paul; John",
-    "RelatedEvents": "The Crucifixion; Last Supper; Creation",
+    "RelatedEvents": "The Crucifixion; The Last Supper; Creation",
     "Slug": "love",
     "Places": "Golgotha; Jerusalem; Garden of Eden"
   },
@@ -125,7 +125,7 @@
     "KeyPassages": "Daniel 2:44; Daniel 7:14; Mark 1:14-15; Matthew 6:33; Luke 17:20-21; Revelation 11:15",
     "RelatedBooks": "Daniel; Mark; Matthew; Luke; Revelation",
     "RelatedPeople": "Daniel; Jesus; John the Baptist; Paul",
-    "RelatedEvents": "Birth of Jesus; The Crucifixion; The Resurrection; Pentecost",
+    "RelatedEvents": "The Birth of Jesus; The Crucifixion; The Resurrection; Pentecost",
     "Slug": "kingdom-of-god",
     "Places": "Bethlehem; Golgotha; Jerusalem"
   },
@@ -135,7 +135,7 @@
     "KeyPassages": "Genesis 1:3-4; Psalm 27:1; Isaiah 9:2; John 1:5; John 8:12; Ephesians 5:8; Revelation 22:5",
     "RelatedBooks": "Genesis; Psalms; Isaiah; John; Ephesians; Revelation",
     "RelatedPeople": "Jesus; Isaiah; Paul; John",
-    "RelatedEvents": "Creation; Birth of Jesus; The Crucifixion; The Resurrection",
+    "RelatedEvents": "Creation; The Birth of Jesus; The Crucifixion; The Resurrection",
     "Slug": "light-and-darkness",
     "Places": "Garden of Eden; Bethlehem; Golgotha; Jerusalem"
   },
@@ -145,7 +145,7 @@
     "KeyPassages": "Genesis 49:24; Psalm 23:1; Psalm 80:1; Ezekiel 34:11-16; John 10:11-14; 1 Peter 5:4",
     "RelatedBooks": "Genesis; Psalms; Ezekiel; John; 1 Peter",
     "RelatedPeople": "David; Ezekiel; Jesus; Peter",
-    "RelatedEvents": "David Becomes King; Birth of Jesus; The Crucifixion",
+    "RelatedEvents": "David Becomes King; The Birth of Jesus; The Crucifixion",
     "Slug": "shepherd",
     "Places": "Bethlehem; Hebron; Jerusalem; Golgotha"
   },
@@ -155,7 +155,7 @@
     "KeyPassages": "Psalm 80:8-16; Isaiah 5:1-7; John 15:1-8; Romans 11:17-24",
     "RelatedBooks": "Psalms; Isaiah; John; Romans",
     "RelatedPeople": "Isaiah; Jesus; Paul",
-    "RelatedEvents": "The Exodus and Crossing of the Red Sea; Last Supper; Pentecost",
+    "RelatedEvents": "The Exodus and the Red Sea; The Last Supper; Pentecost",
     "Slug": "vine-and-branches",
     "Places": "Egypt; Jerusalem"
   },
@@ -175,7 +175,7 @@
     "KeyPassages": "Exodus 3:7-10; Exodus 14:13-31; Deuteronomy 7:8; Luke 9:31; 1 Corinthians 10:1-11",
     "RelatedBooks": "Exodus; Deuteronomy; Luke; 1 Corinthians",
     "RelatedPeople": "Moses; Aaron; Jesus",
-    "RelatedEvents": "The Exodus and Crossing of the Red Sea; The Passover; The Crucifixion",
+    "RelatedEvents": "The Exodus and the Red Sea; The Passover; The Crucifixion",
     "Slug": "deliverance-exodus",
     "Places": "Egypt; Goshen; Golgotha; Jerusalem"
   },
@@ -195,7 +195,7 @@
     "KeyPassages": "Proverbs 1:7; Proverbs 3:5-6; Job 28:28; Ecclesiastes 12:13; James 1:5; 1 Corinthians 1:30",
     "RelatedBooks": "Proverbs; Job; Ecclesiastes; James; 1 Corinthians",
     "RelatedPeople": "Solomon; Job; Jesus; James; Paul",
-    "RelatedEvents": "Building of Solomon's Temple; Birth of Jesus",
+    "RelatedEvents": "Building of Solomon's Temple; The Birth of Jesus",
     "Slug": "wisdom",
     "Places": "Jerusalem; Bethlehem"
   },
@@ -205,7 +205,7 @@
     "KeyPassages": "Genesis 22:5; Psalm 95:6; Psalm 100:1-5; John 4:23-24; Romans 12:1; Revelation 5:12-13",
     "RelatedBooks": "Genesis; Psalms; John; Romans; Revelation",
     "RelatedPeople": "Abraham; David; Jesus; Paul; John",
-    "RelatedEvents": "Binding of Isaac; Building of Solomon's Temple; Pentecost",
+    "RelatedEvents": "The Binding of Isaac; Building of Solomon's Temple; Pentecost",
     "Slug": "worship",
     "Places": "Jerusalem"
   },
@@ -225,7 +225,7 @@
     "KeyPassages": "Genesis 50:15-21; Psalm 32:5; Psalm 103:12; Matthew 6:14-15; Luke 23:34; Ephesians 4:32; Colossians 3:13",
     "RelatedBooks": "Genesis; Psalms; Matthew; Luke; Ephesians; Colossians",
     "RelatedPeople": "Joseph; David; Jesus; Stephen; Paul",
-    "RelatedEvents": "Joseph Rises to Power in Egypt; The Crucifixion; Martyrdom of Stephen",
+    "RelatedEvents": "Joseph and His Brothers; The Crucifixion; Martyrdom of Stephen",
     "Slug": "forgiveness",
     "Places": "Egypt; Golgotha; Jerusalem"
   },
@@ -245,7 +245,7 @@
     "KeyPassages": "Genesis 1:3; Psalm 119:105; Isaiah 60:1; Matthew 5:14-16; John 8:12; 1 John 1:5-7",
     "RelatedBooks": "Genesis; Psalms; Isaiah; Matthew; John; 1 John",
     "RelatedPeople": "Jesus; Isaiah; Paul; John",
-    "RelatedEvents": "Creation; Birth of Jesus; Transfiguration",
+    "RelatedEvents": "Creation; The Birth of Jesus; Transfiguration",
     "Slug": "light",
     "Places": "Garden of Eden; Bethlehem"
   },
@@ -255,7 +255,7 @@
     "KeyPassages": "Genesis 1:2; Exodus 14:21-31; Exodus 17:6; Ezekiel 36:25; John 4:13-14; John 7:37-39; Revelation 22:1-2",
     "RelatedBooks": "Genesis; Exodus; Ezekiel; John; Revelation",
     "RelatedPeople": "Moses; Noah; Jesus; The Samaritan Woman",
-    "RelatedEvents": "Creation; Noah and the Flood; The Exodus and Crossing of the Red Sea; Baptism of Jesus",
+    "RelatedEvents": "Creation; Noah and the Flood; The Exodus and the Red Sea; The Baptism of Jesus",
     "Slug": "water",
     "Places": "Garden of Eden; Mount Ararat; Egypt; Jordan River"
   },
@@ -265,7 +265,7 @@
     "KeyPassages": "Exodus 16:4; Deuteronomy 8:3; Matthew 6:11; John 6:35; John 6:51; 1 Corinthians 11:23-26",
     "RelatedBooks": "Exodus; Deuteronomy; Matthew; John; 1 Corinthians",
     "RelatedPeople": "Moses; Elijah; Jesus; Paul",
-    "RelatedEvents": "Wilderness Wanderings; Feeding of the Five Thousand; Last Supper",
+    "RelatedEvents": "Wilderness Wanderings; The Feeding of the Five Thousand; The Last Supper",
     "Slug": "bread",
     "Places": "Galilee; Jerusalem"
   },
@@ -275,7 +275,7 @@
     "KeyPassages": "Genesis 22:7-8; Exodus 12:3-13; Isaiah 53:7; John 1:29; 1 Peter 1:18-19; Revelation 5:12",
     "RelatedBooks": "Genesis; Exodus; Isaiah; John; 1 Peter; Revelation",
     "RelatedPeople": "Abraham; Isaac; Moses; Isaiah; Jesus; John the Baptist",
-    "RelatedEvents": "Binding of Isaac; The Passover; The Crucifixion; The Resurrection",
+    "RelatedEvents": "The Binding of Isaac; The Passover; The Crucifixion; The Resurrection",
     "Slug": "lamb",
     "Places": "Jerusalem; Egypt; Golgotha"
   },
@@ -285,7 +285,7 @@
     "KeyPassages": "Isaiah 53:4-6; Matthew 27:32-56; John 19:17-30; 1 Corinthians 1:18; Galatians 6:14; Colossians 2:14-15",
     "RelatedBooks": "Isaiah; Matthew; John; 1 Corinthians; Galatians; Colossians",
     "RelatedPeople": "Jesus; Mary, Mother of Jesus; Paul",
-    "RelatedEvents": "The Crucifixion; Last Supper",
+    "RelatedEvents": "The Crucifixion; The Last Supper",
     "Slug": "cross",
     "Places": "Golgotha; Jerusalem"
   },
@@ -305,7 +305,7 @@
     "KeyPassages": "Numbers 6:24-26; Isaiah 9:6; John 14:27; Romans 5:1; Ephesians 2:14; Philippians 4:7",
     "RelatedBooks": "Numbers; Isaiah; John; Romans; Ephesians; Philippians",
     "RelatedPeople": "Isaiah; Jesus; Paul",
-    "RelatedEvents": "Birth of Jesus; The Crucifixion; The Resurrection",
+    "RelatedEvents": "The Birth of Jesus; The Crucifixion; The Resurrection",
     "Slug": "peace",
     "Places": "Bethlehem; Golgotha; Jerusalem"
   },
@@ -315,7 +315,7 @@
     "KeyPassages": "Nehemiah 8:10; Psalm 16:11; Habakkuk 3:17-18; John 15:11; Philippians 4:4; Galatians 5:22",
     "RelatedBooks": "Nehemiah; Psalms; Habakkuk; John; Philippians; Galatians",
     "RelatedPeople": "Nehemiah; David; Jesus; Paul",
-    "RelatedEvents": "Cyrus's Decree and Return from Exile; Birth of Jesus; The Resurrection; Pentecost",
+    "RelatedEvents": "Cyrus's Decree and Return from Exile; The Birth of Jesus; The Resurrection; Pentecost",
     "Slug": "joy",
     "Places": "Babylon; Bethlehem; Jerusalem"
   },
@@ -325,7 +325,7 @@
     "KeyPassages": "Exodus 34:6; Psalm 40:1; Romans 8:25; Galatians 5:22; James 5:7-8; 2 Peter 3:9",
     "RelatedBooks": "Exodus; Psalms; Romans; Galatians; James; 2 Peter",
     "RelatedPeople": "Abraham; Joseph; Job; Jesus; Paul",
-    "RelatedEvents": "Binding of Isaac; Joseph Sold into Egypt; Birth of Jesus",
+    "RelatedEvents": "The Binding of Isaac; Joseph and His Brothers; The Birth of Jesus",
     "Slug": "patience",
     "Places": "Jerusalem; Egypt; Bethlehem"
   },
@@ -335,7 +335,7 @@
     "KeyPassages": "Isaiah 42:1; Isaiah 53:11; Mark 10:43-45; John 13:14-15; Philippians 2:5-8; 1 Peter 4:10",
     "RelatedBooks": "Isaiah; Mark; John; Philippians; 1 Peter",
     "RelatedPeople": "Isaiah; Jesus; Moses; Paul; Peter",
-    "RelatedEvents": "The Exodus and Crossing of the Red Sea; Last Supper; The Crucifixion",
+    "RelatedEvents": "The Exodus and the Red Sea; The Last Supper; The Crucifixion",
     "Slug": "servanthood",
     "Places": "Egypt; Jerusalem; Golgotha"
   },
@@ -374,7 +374,7 @@
     "KeyPassages": "John 3:16; Romans 10:9-10; Hebrews 11:6; James 2:19",
     "RelatedBooks": "John; Romans; Hebrews; James",
     "RelatedPeople": "Jesus; Paul; Abraham; Thomas",
-    "RelatedEvents": "The Resurrection; Conversion of Saul (Paul)",
+    "RelatedEvents": "The Resurrection; The Conversion of Paul",
     "Slug": "belief",
     "Places": "Jerusalem; Golgotha"
   },
@@ -394,7 +394,7 @@
     "KeyPassages": "Deuteronomy 28; Deuteronomy 30:19-20; Joshua 24:15; Galatians 3:13-14",
     "RelatedBooks": "Deuteronomy; Joshua; Galatians",
     "RelatedPeople": "Moses; Joshua; Paul",
-    "RelatedEvents": "Giving of the Law at Sinai; Crossing the Jordan",
+    "RelatedEvents": "The Ten Commandments; Crossing the Jordan",
     "Slug": "blessing-and-curse",
     "Places": "Mount Sinai; Plains of Moab"
   },
@@ -424,7 +424,7 @@
     "KeyPassages": "Romans 5:3-4; Galatians 5:22-23; 2 Peter 1:5-8; Philippians 4:8",
     "RelatedBooks": "Romans; Galatians; 2 Peter; Philippians",
     "RelatedPeople": "Paul; Simon Peter; Joseph, Son of Jacob",
-    "RelatedEvents": "Joseph Rises to Power in Egypt; The Temptation in the Wilderness",
+    "RelatedEvents": "Joseph and His Brothers; The Temptation in the Wilderness",
     "Slug": "character",
     "Places": "Egypt"
   },
@@ -524,7 +524,7 @@
     "KeyPassages": "Joshua 1:6-9; Joshua 6:16-20; Judges 2:16-19; Hebrews 11:30",
     "RelatedBooks": "Joshua; Judges; Hebrews",
     "RelatedPeople": "Joshua; Caleb; Rahab",
-    "RelatedEvents": "Crossing the Jordan; Fall of Jericho",
+    "RelatedEvents": "Crossing the Jordan; The Walls of Jericho",
     "Slug": "conquest",
     "Places": "Jordan River; Gilgal; Jericho"
   },
@@ -534,7 +534,7 @@
     "KeyPassages": "Exodus 19:5-6; Leviticus 20:26; Romans 12:1; 1 Peter 2:9",
     "RelatedBooks": "Exodus; Leviticus; Romans; 1 Peter",
     "RelatedPeople": "Moses; Aaron; Simon Peter",
-    "RelatedEvents": "Giving of the Law at Sinai; The Ten Commandments",
+    "RelatedEvents": "The Ten Commandments",
     "Slug": "consecration",
     "Places": "Mount Sinai"
   },
@@ -604,7 +604,7 @@
     "KeyPassages": "Ruth 4:17-22; 2 Samuel 7:12-16; Matthew 1:1-17; Luke 3:23-38",
     "RelatedBooks": "Ruth; 2 Samuel; Matthew; Luke",
     "RelatedPeople": "King David; Ruth; Boaz; Jesus",
-    "RelatedEvents": "Story of Ruth; David Becomes King",
+    "RelatedEvents": "Ruth's Loyalty; David Becomes King",
     "Slug": "david-s-lineage",
     "Places": "Bethlehem; Hebron; Jerusalem"
   },
@@ -653,7 +653,7 @@
     "KeyPassages": "Genesis 2:15; Ecclesiastes 9:10; Colossians 3:23-24; 2 Thessalonians 3:10-12",
     "RelatedBooks": "Genesis; Ecclesiastes; Colossians; 2 Thessalonians",
     "RelatedPeople": "Adam; Paul; Joseph, Son of Jacob",
-    "RelatedEvents": "Creation; Joseph Rises to Power in Egypt",
+    "RelatedEvents": "Creation; Joseph and His Brothers",
     "Slug": "diligent-work",
     "Places": "Garden of Eden; Egypt"
   },
@@ -663,7 +663,7 @@
     "KeyPassages": "Genesis 37:5-11; Genesis 41:1-36; Daniel 2:1-23; Matthew 1:20-24; Matthew 2:13-15",
     "RelatedBooks": "Genesis; Daniel; Matthew",
     "RelatedPeople": "Joseph, Son of Jacob; Daniel; Joseph, Husband of Mary",
-    "RelatedEvents": "Joseph Sold into Egypt; Joseph Rises to Power in Egypt",
+    "RelatedEvents": "Joseph and His Brothers",
     "Slug": "dreams",
     "Places": "Canaan; Egypt"
   },
@@ -723,7 +723,7 @@
     "KeyPassages": "Lamentations 3:22-23; Matthew 25:21; 1 Corinthians 4:2; Revelation 2:10",
     "RelatedBooks": "Lamentations; Matthew; 1 Corinthians; Revelation",
     "RelatedPeople": "Daniel; Joseph, Son of Jacob; Paul",
-    "RelatedEvents": "Daniel in the Lions' Den; Joseph Rises to Power in Egypt",
+    "RelatedEvents": "Daniel in the Lions' Den; Joseph and His Brothers",
     "Slug": "faithfulness",
     "Places": "Babylon; Egypt"
   },
@@ -743,7 +743,7 @@
     "KeyPassages": "Colossians 2:8-10; 1 Timothy 6:3-5; Titus 1:10-16; Galatians 1:6-9",
     "RelatedBooks": "Colossians; 1 Timothy; Titus; Galatians",
     "RelatedPeople": "Paul; Timothy; John the Apostle",
-    "RelatedEvents": "Jerusalem Council; Conversion of Saul (Paul)",
+    "RelatedEvents": "Jerusalem Council; The Conversion of Paul",
     "Slug": "false-teaching-refuted",
     "Places": "Jerusalem"
   },
@@ -753,7 +753,7 @@
     "KeyPassages": "Proverbs 9:10; Ecclesiastes 12:13; Psalm 111:10; 1 Peter 1:17",
     "RelatedBooks": "Proverbs; Ecclesiastes; Psalms; 1 Peter",
     "RelatedPeople": "King Solomon; Simon Peter; Moses",
-    "RelatedEvents": "Giving of the Law at Sinai; The Ten Commandments",
+    "RelatedEvents": "The Ten Commandments",
     "Slug": "fear-of-god",
     "Places": "Mount Sinai"
   },
@@ -763,7 +763,7 @@
     "KeyPassages": "Deuteronomy 10:12-13; Psalm 34:9-11; Proverbs 1:7; Isaiah 11:2-3",
     "RelatedBooks": "Deuteronomy; Psalms; Proverbs; Isaiah",
     "RelatedPeople": "Moses; King David; Isaiah",
-    "RelatedEvents": "The Burning Bush; Giving of the Law at Sinai",
+    "RelatedEvents": "The Burning Bush; The Ten Commandments",
     "Slug": "fear-of-the-lord",
     "Places": "Midian; Mount Sinai"
   },
@@ -1003,7 +1003,7 @@
     "KeyPassages": "Galatians 1:6-9; 2 Corinthians 11:3-4; Philippians 3:8-9; Jude 3",
     "RelatedBooks": "Galatians; 2 Corinthians; Philippians; Jude",
     "RelatedPeople": "Paul; John the Apostle",
-    "RelatedEvents": "Jerusalem Council; Conversion of Saul (Paul)",
+    "RelatedEvents": "Jerusalem Council; The Conversion of Paul",
     "Slug": "gospel-purity",
     "Places": "Jerusalem"
   },
@@ -1093,7 +1093,7 @@
     "KeyPassages": "2 Corinthians 5:17; Galatians 2:20; Ephesians 1:5; 1 Peter 2:9",
     "RelatedBooks": "2 Corinthians; Galatians; Ephesians; 1 Peter",
     "RelatedPeople": "Paul; Simon Peter; Jesus",
-    "RelatedEvents": "Conversion of Saul (Paul); The Baptism of Jesus",
+    "RelatedEvents": "The Conversion of Paul; The Baptism of Jesus",
     "Slug": "identity-in-christ",
     "Places": "Jordan River"
   },
@@ -1123,7 +1123,7 @@
     "KeyPassages": "Exodus 19:5-6; Deuteronomy 7:6; Isaiah 43:1; Romans 11:1-2",
     "RelatedBooks": "Exodus; Deuteronomy; Isaiah; Romans",
     "RelatedPeople": "Moses; Abraham; Paul",
-    "RelatedEvents": "The Exodus and the Red Sea; Giving of the Law at Sinai",
+    "RelatedEvents": "The Exodus and the Red Sea; The Ten Commandments",
     "Slug": "israel-s-identity",
     "Places": "Egypt; Mount Sinai"
   },
@@ -1173,7 +1173,7 @@
     "KeyPassages": "Nahum 1:1-3; Nahum 3:1-7; Jonah 3:10; Jonah 4:11",
     "RelatedBooks": "Nahum; Jonah",
     "RelatedPeople": "Jonah; Jesus",
-    "RelatedEvents": "Jonah and Nineveh; Jonah and the Great Fish",
+    "RelatedEvents": "Jonah and Nineveh",
     "Slug": "judgment-on-nineveh",
     "Places": "Nineveh"
   },
@@ -1253,7 +1253,7 @@
     "KeyPassages": "Philippians 3:8-10; John 17:3; 2 Peter 1:2-3; Ephesians 3:18-19",
     "RelatedBooks": "Philippians; John; 2 Peter; Ephesians",
     "RelatedPeople": "Paul; Jesus; Simon Peter",
-    "RelatedEvents": "Transfiguration; Conversion of Saul (Paul)",
+    "RelatedEvents": "Transfiguration; The Conversion of Paul",
     "Slug": "knowledge-of-christ"
   },
   {
@@ -1313,7 +1313,7 @@
     "RelatedPeople": "Adam; Eve; Jesus; Paul",
     "Slug": "marriage-covenant",
     "Places": "Garden of Eden; Jerusalem; Ephesus",
-    "RelatedEvents": "Creation; Story of Ruth"
+    "RelatedEvents": "Creation; Ruth's Loyalty"
   },
   {
     "Theme": "Meaning",
@@ -1371,7 +1371,7 @@
     "KeyPassages": "Jeremiah 31:31-34; Luke 22:20; Hebrews 8:6-13; 2 Corinthians 3:6",
     "RelatedBooks": "Jeremiah; Luke; Hebrews; 2 Corinthians",
     "RelatedPeople": "Jeremiah; Jesus; Paul",
-    "RelatedEvents": "Last Supper; The Crucifixion; Pentecost",
+    "RelatedEvents": "The Last Supper; The Crucifixion; Pentecost",
     "Slug": "new-covenant",
     "Places": "Jerusalem; Golgotha"
   },
@@ -1433,7 +1433,7 @@
     "RelatedPeople": "King David; Paul",
     "Slug": "praise",
     "Places": "Jerusalem; Philippi; Patmos",
-    "RelatedEvents": "Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus"
   },
   {
     "Theme": "Preservation",
@@ -1463,7 +1463,7 @@
     "RelatedPeople": "Jesus; Martha; Mary of Bethany; Paul",
     "Slug": "priorities",
     "Places": "Bethany; Galilee",
-    "RelatedEvents": "Sermon on the Mount"
+    "RelatedEvents": "The Sermon on the Mount"
   },
   {
     "Theme": "Prophetic witness",
@@ -1493,7 +1493,7 @@
     "RelatedPeople": "Jesus; Paul; John the Apostle",
     "Slug": "purity",
     "Places": "Galilee; Thessalonica",
-    "RelatedEvents": "Sermon on the Mount"
+    "RelatedEvents": "The Sermon on the Mount"
   },
   {
     "Theme": "Rebellion",
@@ -1529,7 +1529,7 @@
     "KeyPassages": "Deuteronomy 6:12; Deuteronomy 8:2; Psalm 77:11-12; Luke 22:19",
     "RelatedBooks": "Deuteronomy; Psalms; Luke",
     "RelatedPeople": "Moses; Jesus",
-    "RelatedEvents": "The Passover; Last Supper; The Exodus and Crossing of the Red Sea",
+    "RelatedEvents": "The Passover; The Last Supper; The Exodus and the Red Sea",
     "Slug": "remembering",
     "Places": "Egypt; Goshen; Jerusalem"
   },
@@ -1539,7 +1539,7 @@
     "KeyPassages": "Exodus 12:14; Joshua 4:6-7; Psalm 105:5; 1 Corinthians 11:24-26",
     "RelatedBooks": "Exodus; Joshua; Psalms; 1 Corinthians",
     "RelatedPeople": "Moses; Joshua; Jesus; Paul",
-    "RelatedEvents": "The Passover; Crossing the Jordan; Last Supper",
+    "RelatedEvents": "The Passover; Crossing the Jordan; The Last Supper",
     "Slug": "remembrance",
     "Places": "Egypt; Jordan River; Gilgal; Jerusalem"
   },
@@ -1638,7 +1638,7 @@
     "KeyPassages": "Isaiah 42:1-4; Isaiah 53:11; Mark 10:42-45; Philippians 2:5-8",
     "RelatedBooks": "Isaiah; Mark; Philippians",
     "RelatedPeople": "Isaiah; Jesus; Paul",
-    "RelatedEvents": "Last Supper; The Crucifixion",
+    "RelatedEvents": "The Last Supper; The Crucifixion",
     "Slug": "servant",
     "Places": "Jerusalem; Golgotha"
   },
@@ -1648,7 +1648,7 @@
     "KeyPassages": "Galatians 5:13; Mark 10:43-44; 1 Peter 4:10-11; John 13:12-15",
     "RelatedBooks": "Galatians; Mark; 1 Peter; John",
     "RelatedPeople": "Jesus; Simon Peter; Paul",
-    "RelatedEvents": "Last Supper",
+    "RelatedEvents": "The Last Supper",
     "Slug": "service",
     "Places": "Jerusalem"
   },
@@ -1756,7 +1756,7 @@
     "KeyPassages": "Psalm 23:1; 2 Corinthians 3:5; 2 Corinthians 9:8; Philippians 4:19",
     "RelatedBooks": "Psalms; 2 Corinthians; Philippians",
     "RelatedPeople": "King David; Paul",
-    "RelatedEvents": "Feeding of the Five Thousand",
+    "RelatedEvents": "The Feeding of the Five Thousand",
     "Slug": "sufficiency",
     "Places": "Galilee"
   },
@@ -1876,7 +1876,7 @@
     "RelatedPeople": "King Solomon; Jesus",
     "Slug": "vanity",
     "Places": "Jerusalem",
-    "RelatedEvents": "Tower of Babel"
+    "RelatedEvents": "The Tower of Babel"
   },
   {
     "Theme": "Victory of Christ",

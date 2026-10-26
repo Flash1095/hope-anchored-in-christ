@@ -1,0 +1,16 @@
+{
+  "Quiz": "Elijah on Mount Carmel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did the people cry when the fire fell?",
+  "OptionA": "Baal is god!",
+  "OptionB": "Elijah is king!",
+  "OptionC": "The fire is ours!",
+  "OptionD": "The Lord, He is God!",
+  "CorrectAnswer": "D",
+  "Explanation": "Seeing the fire, the people fell on their faces crying that the Lord is God.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "1 Kings 18:39",
+  "Slug": "story-elijah-on-mount-carmel-lord-he-is-god",
+  "ReadingTitle": "Elijah on Mount Carmel",
+  "ReadingLink": "#/stories/3"
+}

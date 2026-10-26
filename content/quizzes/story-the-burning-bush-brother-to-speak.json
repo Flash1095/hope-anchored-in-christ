@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Burning Bush Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Whom did God give Moses to speak for him?",
+  "OptionA": "His son",
+  "OptionB": "His brother",
+  "OptionC": "A Levite priest",
+  "OptionD": "An Egyptian scribe",
+  "CorrectAnswer": "B",
+  "Explanation": "God answered each of Moses' excuses, giving him a brother to speak for him.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Exodus 4:14",
+  "Slug": "story-the-burning-bush-brother-to-speak",
+  "ReadingTitle": "The Burning Bush",
+  "ReadingLink": "#/stories/14"
+}

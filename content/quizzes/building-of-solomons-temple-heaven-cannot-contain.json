@@ -1,0 +1,16 @@
+{
+ "Quiz": "Building of Solomon's Temple Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "According to Solomon's prayer, what can even the heaven of heavens not do?",
+ "OptionA": "Hide the Temple from enemies",
+ "OptionB": "Hold all Israel at once",
+ "OptionC": "Contain God",
+ "OptionD": "Reach above the clouds",
+ "CorrectAnswer": "C",
+ "Explanation": "Solomon marvelled that the heaven and heaven of heavens cannot contain God, much less the house he had built.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "1 Kings 8:27",
+ "Slug": "building-of-solomons-temple-heaven-cannot-contain",
+ "ReadingTitle": "Building of Solomon's Temple",
+ "ReadingLink": "#/stories/31"
+}

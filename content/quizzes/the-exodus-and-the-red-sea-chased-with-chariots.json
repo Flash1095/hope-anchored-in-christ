@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Exodus and the Red Sea Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Pharaoh chase Israel with?",
+  "OptionA": "Camels",
+  "OptionB": "Ships",
+  "OptionC": "Chariots",
+  "OptionD": "Foot soldiers alone",
+  "CorrectAnswer": "C",
+  "Explanation": "Pharaoh chased Israel with chariots, and Israel found itself trapped between an army and the sea.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Exodus 14:9",
+  "Slug": "the-exodus-and-the-red-sea-chased-with-chariots",
+  "ReadingTitle": "The Exodus and the Red Sea",
+  "ReadingLink": "#/stories/18"
+}

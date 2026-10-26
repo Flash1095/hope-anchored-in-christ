@@ -1,0 +1,16 @@
+{
+  "Quiz": "Ruth's Loyalty Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Where did famine drive Naomi's family?",
+  "OptionA": "Bethlehem",
+  "OptionB": "Moab",
+  "OptionC": "Egypt",
+  "OptionD": "Jerusalem",
+  "CorrectAnswer": "B",
+  "Explanation": "Famine drove Naomi and her family from their home to Moab.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Ruth 1:1",
+  "Slug": "ruths-loyalty-famine-moab",
+  "ReadingTitle": "Ruth's Loyalty",
+  "ReadingLink": "#/stories/9"
+}

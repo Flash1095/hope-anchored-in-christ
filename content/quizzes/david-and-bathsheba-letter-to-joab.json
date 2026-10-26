@@ -1,0 +1,16 @@
+{
+ "Quiz": "David and Bathsheba Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "To whom did David send the letter about Uriah?",
+ "OptionA": "Nathan",
+ "OptionB": "Bathsheba",
+ "OptionC": "The king of Ammon",
+ "OptionD": "Joab",
+ "CorrectAnswer": "D",
+ "Explanation": "David wrote a letter to Joab and sent it by the hand of Uriah himself, ordering Uriah's death in battle.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "2 Samuel 11:14",
+ "Slug": "david-and-bathsheba-letter-to-joab",
+ "ReadingTitle": "David and Bathsheba",
+ "ReadingLink": "#/stories/36"
+}

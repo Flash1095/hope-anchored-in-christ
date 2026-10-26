@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Good Samaritan Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Where did the Samaritan bring the wounded man?",
+  "OptionA": "To the temple in Jerusalem",
+  "OptionB": "To his own house in Samaria",
+  "OptionC": "Back to the city of Jericho",
+  "OptionD": "To an inn",
+  "CorrectAnswer": "D",
+  "Explanation": "The Samaritan brought the man to an inn, where he could be looked after properly.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Luke 10:34",
+  "Slug": "the-good-samaritan-brought-to-inn",
+  "ReadingTitle": "The Good Samaritan",
+  "ReadingLink": "#/stories/21"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Shadrach, Meshach and Abednego in the Fiery Furnace Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did the three men say even if God did not deliver them?",
+ "OptionA": "We will not serve thy gods, nor worship the golden image",
+ "OptionB": "We will bow this once",
+ "OptionC": "We will leave Babylon",
+ "OptionD": "We will pray in secret",
+ "CorrectAnswer": "A",
+ "Explanation": "They said, 'But if not, be it known unto thee, O king, that we will not serve thy gods, nor worship the golden image.'",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Daniel 3:18",
+ "Slug": "shadrach-meshach-and-abednego-in-the-fiery-furnace-but-if-not",
+ "ReadingTitle": "Shadrach, Meshach and Abednego in the Fiery Furnace",
+ "ReadingLink": "#/stories/59"
+}

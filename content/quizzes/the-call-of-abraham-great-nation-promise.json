@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Call of Abraham Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did God promise to make Abram?",
+  "OptionA": "A great nation",
+  "OptionB": "A mighty army",
+  "OptionC": "A wealthy merchant",
+  "OptionD": "A priestly tribe",
+  "CorrectAnswer": "A",
+  "Explanation": "God promised to make Abram a great nation, to bless him, and to bless all the families of the earth through him.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 12:2",
+  "Slug": "the-call-of-abraham-great-nation-promise",
+  "ReadingTitle": "The Call of Abraham",
+  "ReadingLink": "#/stories/15"
+}

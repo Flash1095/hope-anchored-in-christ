@@ -1,0 +1,16 @@
+{
+  "Quiz": "Pentecost Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did Peter preach about Jesus?",
+  "OptionA": "That He was only a prophet",
+  "OptionB": "That He had left for Egypt",
+  "OptionC": "That Jesus, crucified and risen, was Lord and Christ",
+  "OptionD": "That He would return that night",
+  "CorrectAnswer": "C",
+  "Explanation": "Peter preached that Jesus, whom they had crucified, had risen and was Lord and Christ.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Acts 2:36",
+  "Slug": "story-pentecost-lord-and-christ",
+  "ReadingTitle": "Pentecost",
+  "ReadingLink": "#/stories/8"
+}

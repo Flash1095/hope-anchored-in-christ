@@ -1,0 +1,16 @@
+{
+ "Quiz": "Nehemiah Rebuilds the Wall Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How did the builders work while enemies threatened them?",
+ "OptionA": "Only at night",
+ "OptionB": "With soldiers doing all the building",
+ "OptionC": "Behind a wall of shields",
+ "OptionD": "With one hand building and the other holding a weapon",
+ "CorrectAnswer": "D",
+ "Explanation": "Everyone who built on the wall worked with one hand and held a weapon with the other, ready to defend their families and their work.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Nehemiah 4:17",
+ "Slug": "nehemiah-rebuilds-the-wall-one-hand-weapon",
+ "ReadingTitle": "Nehemiah Rebuilds the Wall",
+ "ReadingLink": "#/stories/52"
+}

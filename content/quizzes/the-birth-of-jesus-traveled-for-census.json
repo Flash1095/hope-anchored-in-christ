@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Birth of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Why did Mary and Joseph travel to Bethlehem?",
+  "OptionA": "For the Passover feast",
+  "OptionB": "For a census",
+  "OptionC": "To visit Elizabeth",
+  "OptionD": "To flee from Herod",
+  "CorrectAnswer": "B",
+  "Explanation": "Mary and Joseph traveled to Bethlehem because of the census, and Jesus was born there.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Luke 2:4",
+  "Slug": "the-birth-of-jesus-traveled-for-census",
+  "ReadingTitle": "The Birth of Jesus",
+  "ReadingLink": "#/stories/13"
+}

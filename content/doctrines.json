@@ -19,7 +19,7 @@
     "RelatedPeople": "Athanasius; Cyril of Alexandria; Leo the Great; Augustine",
     "Slug": "incarnation",
     "Places": "Bethlehem; Nazareth",
-    "RelatedEvents": "Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus"
   },
   {
     "Doctrine": "Atonement",
@@ -130,7 +130,7 @@
     "RelatedPeople": "Zwingli; Luther; Calvin; Menno Simons",
     "Slug": "baptism",
     "Places": "Jordan River",
-    "RelatedEvents": "Baptism of Jesus"
+    "RelatedEvents": "The Baptism of Jesus"
   },
   {
     "Doctrine": "Lord's Supper",
@@ -142,7 +142,7 @@
     "RelatedPeople": "Justin Martyr; Aquinas; Luther; Zwingli; Calvin",
     "Slug": "lords-supper",
     "Places": "Jerusalem",
-    "RelatedEvents": "Last Supper"
+    "RelatedEvents": "The Last Supper"
   },
   {
     "Doctrine": "Inspiration of Scripture",
@@ -238,7 +238,7 @@
     "RelatedPeople": "Augustine; Aquinas; Calvin; John Wesley",
     "Slug": "providence",
     "Places": "Egypt",
-    "RelatedEvents": "Joseph Sold into Egypt"
+    "RelatedEvents": "Joseph and His Brothers"
   },
   {
     "Doctrine": "Virgin Birth",
@@ -250,7 +250,7 @@
     "RelatedPeople": "Ignatius of Antioch; Irenaeus; Athanasius; Augustine",
     "Slug": "virgin-birth",
     "Places": "Bethlehem; Nazareth",
-    "RelatedEvents": "Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus"
   },
   {
     "Doctrine": "Ascension",

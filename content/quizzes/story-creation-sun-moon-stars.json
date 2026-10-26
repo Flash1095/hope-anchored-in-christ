@@ -1,0 +1,16 @@
+{
+  "Quiz": "Creation Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did God set in their courses in the sky?",
+  "OptionA": "Clouds and rain",
+  "OptionB": "Birds only",
+  "OptionC": "Mountains",
+  "OptionD": "The sun, the moon, and the stars",
+  "CorrectAnswer": "D",
+  "Explanation": "God set the sun, moon, and stars in place to mark days, seasons, and years.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 1:16",
+  "Slug": "story-creation-sun-moon-stars",
+  "ReadingTitle": "Creation",
+  "ReadingLink": "#/stories/0"
+}

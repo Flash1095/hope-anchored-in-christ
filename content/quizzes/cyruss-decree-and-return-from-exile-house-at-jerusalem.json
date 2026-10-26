@@ -1,0 +1,16 @@
+{
+ "Quiz": "Cyrus's Decree and Return from Exile Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did Cyrus charge the returning exiles to build?",
+ "OptionA": "A wall around Babylon",
+ "OptionB": "A palace for Cyrus",
+ "OptionC": "The house of the LORD at Jerusalem",
+ "OptionD": "A temple in Persia",
+ "CorrectAnswer": "C",
+ "Explanation": "Cyrus declared that the LORD God of heaven had charged him to build Him a house at Jerusalem, in Judah.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Ezra 1:2",
+ "Slug": "cyruss-decree-and-return-from-exile-house-at-jerusalem",
+ "ReadingTitle": "Cyrus's Decree and Return from Exile",
+ "ReadingLink": "#/stories/35"
+}

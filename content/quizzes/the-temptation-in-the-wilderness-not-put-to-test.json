@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Temptation in the Wilderness Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "How did Jesus answer the temptation at the temple?",
+  "OptionA": "You shall not put the Lord your God to the test",
+  "OptionB": "You shall test God once only",
+  "OptionC": "You shall trust angels to catch you",
+  "OptionD": "You shall not climb the temple",
+  "CorrectAnswer": "A",
+  "Explanation": "Jesus met the second temptation with Scripture as well.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 4:7",
+  "Slug": "the-temptation-in-the-wilderness-not-put-to-test",
+  "ReadingTitle": "The Temptation in the Wilderness",
+  "ReadingLink": "#/stories/26"
+}

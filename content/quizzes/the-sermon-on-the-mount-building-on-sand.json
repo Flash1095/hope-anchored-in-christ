@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Sermon on the Mount Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Against what did Jesus warn, as the opposite of building on the rock?",
+  "OptionA": "Building on stone",
+  "OptionB": "Building in a city",
+  "OptionC": "Building by the sea",
+  "OptionD": "Building on sand",
+  "CorrectAnswer": "D",
+  "Explanation": "Hearing without practising is like building on sand, and such a house will not stand.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Matthew 7:26",
+  "Slug": "the-sermon-on-the-mount-building-on-sand",
+  "ReadingTitle": "The Sermon on the Mount",
+  "ReadingLink": "#/stories/25"
+}

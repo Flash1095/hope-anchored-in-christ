@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Last Supper Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Where in Jerusalem did Jesus gather His twelve disciples for the Passover meal?",
+  "OptionA": "In an upper room",
+  "OptionB": "In the temple courts",
+  "OptionC": "In a garden courtyard",
+  "OptionD": "In the house of the high priest",
+  "CorrectAnswer": "A",
+  "Explanation": "Jesus and His disciples met in an upper room in Jerusalem on the night before He died.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Luke 22:12",
+  "Slug": "the-last-supper-upper-room-jerusalem",
+  "ReadingTitle": "The Last Supper",
+  "ReadingLink": "#/stories/22"
+}

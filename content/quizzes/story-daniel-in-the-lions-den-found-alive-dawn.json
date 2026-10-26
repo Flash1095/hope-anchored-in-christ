@@ -1,0 +1,16 @@
+{
+  "Quiz": "Daniel in the Lions' Den Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "At dawn, what did the king find when he hurried to the den?",
+  "OptionA": "Daniel gone",
+  "OptionB": "Daniel asleep",
+  "OptionC": "Daniel injured",
+  "OptionD": "Daniel alive",
+  "CorrectAnswer": "D",
+  "Explanation": "At dawn the king found Daniel alive, just as Daniel had trusted God would keep him.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Daniel 6:20",
+  "Slug": "story-daniel-in-the-lions-den-found-alive-dawn",
+  "ReadingTitle": "Daniel in the Lions' Den",
+  "ReadingLink": "#/stories/1"
+}

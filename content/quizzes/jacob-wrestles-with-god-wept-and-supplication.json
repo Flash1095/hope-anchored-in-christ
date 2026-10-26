@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jacob Wrestles with God Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "According to Hosea, what did Jacob do as he had power over the angel and prevailed?",
+ "OptionA": "He offered a sacrifice",
+ "OptionB": "He built an altar of stone",
+ "OptionC": "He sang a song",
+ "OptionD": "He wept, and made supplication unto him",
+ "CorrectAnswer": "D",
+ "Explanation": "He had power over the angel, and prevailed: he wept, and made supplication unto him.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Hosea 12:4",
+ "Slug": "jacob-wrestles-with-god-wept-and-supplication",
+ "ReadingTitle": "Jacob Wrestles with God",
+ "ReadingLink": "#/stories/46"
+}

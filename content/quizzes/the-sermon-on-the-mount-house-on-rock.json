@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Sermon on the Mount Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "The wise man who hears Jesus' words and puts them into practice is like a man who built his house on what?",
+  "OptionA": "On the rock",
+  "OptionB": "On the sand",
+  "OptionC": "On the hillside",
+  "OptionD": "On the plain",
+  "CorrectAnswer": "A",
+  "Explanation": "The wise builder's house stands firm because it is built on the rock of Jesus' words.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Matthew 7:24",
+  "Slug": "the-sermon-on-the-mount-house-on-rock",
+  "ReadingTitle": "The Sermon on the Mount",
+  "ReadingLink": "#/stories/25"
+}

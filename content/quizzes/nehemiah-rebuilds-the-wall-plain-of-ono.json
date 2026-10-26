@@ -1,0 +1,16 @@
+{
+ "Quiz": "Nehemiah Rebuilds the Wall Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Where did Sanballat and Geshem invite Nehemiah to meet, planning to do him harm?",
+ "OptionA": "In the king's palace",
+ "OptionB": "In the plain of Ono",
+ "OptionC": "At the Sheep Gate",
+ "OptionD": "In the temple courts",
+ "CorrectAnswer": "B",
+ "Explanation": "They sent word, 'Come, let us meet together in some one of the villages in the plain of Ono,' but they thought to do him mischief.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Nehemiah 6:2",
+ "Slug": "nehemiah-rebuilds-the-wall-plain-of-ono",
+ "ReadingTitle": "Nehemiah Rebuilds the Wall",
+ "ReadingLink": "#/stories/52"
+}

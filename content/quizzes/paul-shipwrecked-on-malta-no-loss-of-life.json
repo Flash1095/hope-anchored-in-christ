@@ -1,0 +1,16 @@
+{
+ "Quiz": "Paul Shipwrecked on Malta Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What did Paul tell the frightened sailors God had promised about their lives?",
+ "OptionA": "The ship would be saved",
+ "OptionB": "There would be no loss of any man's life, but of the ship",
+ "OptionC": "They would reach Rome that night",
+ "OptionD": "The storm would stop at dawn",
+ "CorrectAnswer": "B",
+ "Explanation": "Paul exhorted them to be of good cheer, for there would be no loss of any man's life among them, but only of the ship.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Acts 27:22",
+ "Slug": "paul-shipwrecked-on-malta-no-loss-of-life",
+ "ReadingTitle": "Paul Shipwrecked on Malta",
+ "ReadingLink": "#/stories/54"
+}

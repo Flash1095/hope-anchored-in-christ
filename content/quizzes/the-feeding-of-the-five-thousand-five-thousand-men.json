@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Feeding of the Five Thousand Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "How many men were in the crowd that followed Jesus, besides the women and children?",
+  "OptionA": "Three thousand men",
+  "OptionB": "Five thousand men",
+  "OptionC": "Four thousand men",
+  "OptionD": "Ten thousand men",
+  "CorrectAnswer": "B",
+  "Explanation": "The crowd counted five thousand men, plus women and children, so this was a very large gathering indeed.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "John 6:10",
+  "Slug": "the-feeding-of-the-five-thousand-five-thousand-men",
+  "ReadingTitle": "The Feeding of the Five Thousand",
+  "ReadingLink": "#/stories/20"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Ten Commandments Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What accompanied God's descent on the mountain?",
+  "OptionA": "Rain, hail, and a strong wind",
+  "OptionB": "Fire, smoke, and an earthquake alone",
+  "OptionC": "Thunder, lightning, and a thick cloud",
+  "OptionD": "Silence and darkness",
+  "CorrectAnswer": "C",
+  "Explanation": "God descended on the mountain in thunder, lightning, and a thick cloud.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Exodus 19:16",
+  "Slug": "the-ten-commandments-thunder-lightning-cloud",
+  "ReadingTitle": "The Ten Commandments",
+  "ReadingLink": "#/stories/27"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Resurrection Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "When did Mary Magdalene and the other women come to the tomb?",
+  "OptionA": "On the Sabbath, at noon",
+  "OptionB": "On the first day of the week, before dawn",
+  "OptionC": "On the third day, at sunset",
+  "OptionD": "On the first day of the week, at midday",
+  "CorrectAnswer": "B",
+  "Explanation": "The women came early, before dawn, on the first day of the week.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "John 20:1",
+  "Slug": "story-the-resurrection-first-day-before-dawn",
+  "ReadingTitle": "The Resurrection",
+  "ReadingLink": "#/stories/24"
+}

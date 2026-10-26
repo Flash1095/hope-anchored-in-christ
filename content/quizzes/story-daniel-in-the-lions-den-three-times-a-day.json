@@ -1,0 +1,16 @@
+{
+  "Quiz": "Daniel in the Lions' Den Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How many times a day did Daniel pray?",
+  "OptionA": "Twice",
+  "OptionB": "Four times",
+  "OptionC": "Three times",
+  "OptionD": "Once",
+  "CorrectAnswer": "C",
+  "Explanation": "Daniel prayed three times a day, just as he always had, even when prayer was outlawed.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Daniel 6:10",
+  "Slug": "story-daniel-in-the-lions-den-three-times-a-day",
+  "ReadingTitle": "Daniel in the Lions' Den",
+  "ReadingLink": "#/stories/1"
+}

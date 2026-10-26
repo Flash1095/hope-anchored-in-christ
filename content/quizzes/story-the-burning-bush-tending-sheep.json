@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Burning Bush Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What was Moses doing in the wilderness?",
+  "OptionA": "Building Pharaoh's cities",
+  "OptionB": "Leading Israel's army",
+  "OptionC": "Serving as a priest in Midian",
+  "OptionD": "Tending sheep",
+  "CorrectAnswer": "D",
+  "Explanation": "Moses was tending sheep in the wilderness, a fugitive who had settled for obscurity, when he saw the bush.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Exodus 3:1",
+  "Slug": "story-the-burning-bush-tending-sheep",
+  "ReadingTitle": "The Burning Bush",
+  "ReadingLink": "#/stories/14"
+}

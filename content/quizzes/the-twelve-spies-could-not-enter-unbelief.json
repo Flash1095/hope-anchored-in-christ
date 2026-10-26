@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Twelve Spies and Israel's Unbelief Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "According to Hebrews, why could that generation not enter God's rest?",
+ "OptionA": "Because they lacked food",
+ "OptionB": "Because of unbelief",
+ "OptionC": "Because they had no leader",
+ "OptionD": "Because the land was too far",
+ "CorrectAnswer": "B",
+ "Explanation": "Hebrews concludes plainly: they could not enter in because of unbelief.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Hebrews 3:19",
+ "Slug": "the-twelve-spies-could-not-enter-unbelief",
+ "ReadingTitle": "The Twelve Spies and Israel's Unbelief",
+ "ReadingLink": "#/stories/65"
+}

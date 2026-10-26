@@ -1,0 +1,16 @@
+{
+ "Quiz": "Hezekiah and Sennacherib's Invasion Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Which Assyrian king invaded Judah and demanded Jerusalem's surrender?",
+ "OptionA": "Shalmaneser",
+ "OptionB": "Sennacherib",
+ "OptionC": "Nebuchadnezzar",
+ "OptionD": "Sargon",
+ "CorrectAnswer": "B",
+ "Explanation": "Sennacherib of Assyria crushed Judah's fortified cities and demanded Jerusalem's surrender, mocking Hezekiah's trust in God.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "2 Kings 18:13",
+ "Slug": "hezekiah-and-sennacheribs-invasion-sennacherib-invaded",
+ "ReadingTitle": "Hezekiah and Sennacherib's Invasion",
+ "ReadingLink": "#/stories/45"
+}

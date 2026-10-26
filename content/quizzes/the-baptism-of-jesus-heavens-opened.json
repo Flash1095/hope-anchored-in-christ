@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Baptism of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What happened as Jesus came up from the water?",
+  "OptionA": "The heavens opened",
+  "OptionB": "The river parted",
+  "OptionC": "The sun went dark",
+  "OptionD": "An earthquake shook the banks",
+  "CorrectAnswer": "A",
+  "Explanation": "As Jesus came up from the water, the heavens opened and the Spirit descended on him.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 3:16",
+  "Slug": "the-baptism-of-jesus-heavens-opened",
+  "ReadingTitle": "The Baptism of Jesus",
+  "ReadingLink": "#/stories/11"
+}

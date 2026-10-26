@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Baptism of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did Jesus' baptism mark the beginning of?",
+  "OptionA": "Jesus' public ministry",
+  "OptionB": "His journey back to Egypt",
+  "OptionC": "His years as a carpenter in Nazareth",
+  "OptionD": "His time in the wilderness alone",
+  "CorrectAnswer": "A",
+  "Explanation": "After his baptism at the Jordan, Jesus' public ministry began.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Mark 1:9",
+  "Slug": "the-baptism-of-jesus-public-ministry-began",
+  "ReadingTitle": "The Baptism of Jesus",
+  "ReadingLink": "#/stories/11"
+}

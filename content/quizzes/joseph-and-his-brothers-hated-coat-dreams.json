@@ -1,0 +1,16 @@
+{
+  "Quiz": "Joseph and His Brothers Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Why did Joseph's brothers hate him?",
+  "OptionA": "He was the youngest",
+  "OptionB": "He was a shepherd",
+  "OptionC": "For his coat and his dreams of ruling over them",
+  "OptionD": "For his wealth",
+  "CorrectAnswer": "C",
+  "Explanation": "His brothers hated Joseph for his coat of many colors and for his dreams of ruling over them.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 37:8",
+  "Slug": "joseph-and-his-brothers-hated-coat-dreams",
+  "ReadingTitle": "Joseph and His Brothers",
+  "ReadingLink": "#/stories/6"
+}

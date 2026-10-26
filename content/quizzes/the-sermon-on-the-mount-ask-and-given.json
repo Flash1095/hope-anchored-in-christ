@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Sermon on the Mount Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did Jesus promise those who ask?",
+  "OptionA": "It will be earned",
+  "OptionB": "It will be delayed a year",
+  "OptionC": "It will be given",
+  "OptionD": "It will be given only to the rich",
+  "CorrectAnswer": "C",
+  "Explanation": "Jesus encouraged His listeners to ask, trusting that it will be given.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 7:7",
+  "Slug": "the-sermon-on-the-mount-ask-and-given",
+  "ReadingTitle": "The Sermon on the Mount",
+  "ReadingLink": "#/stories/25"
+}

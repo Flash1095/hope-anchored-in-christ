@@ -1,0 +1,16 @@
+{
+ "Quiz": "Nehemiah Rebuilds the Wall Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Which two men led the mockery and opposition against Nehemiah?",
+ "OptionA": "Sanballat and Tobiah",
+ "OptionB": "Haman and Mordecai",
+ "OptionC": "Pharaoh and Aaron",
+ "OptionD": "Geshem and Darius",
+ "CorrectAnswer": "A",
+ "Explanation": "Sanballat the Horonite and Tobiah the Ammonite laughed the builders to scorn and despised their work, yet the work went on.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Nehemiah 2:19",
+ "Slug": "nehemiah-rebuilds-the-wall-sanballat-and-tobiah",
+ "ReadingTitle": "Nehemiah Rebuilds the Wall",
+ "ReadingLink": "#/stories/52"
+}

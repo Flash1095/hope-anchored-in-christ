@@ -1,0 +1,16 @@
+{
+ "Quiz": "Cain Murders Abel Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What was Abel's occupation?",
+ "OptionA": "Tiller of the ground",
+ "OptionB": "Keeper of sheep",
+ "OptionC": "Fisherman",
+ "OptionD": "Builder of cities",
+ "CorrectAnswer": "B",
+ "Explanation": "Abel was a keeper of sheep, while his brother Cain worked the ground as a farmer.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Genesis 4:2",
+ "Slug": "cain-murders-abel-abel-keeper-of-sheep",
+ "ReadingTitle": "Cain Murders Abel",
+ "ReadingLink": "#/stories/32"
+}

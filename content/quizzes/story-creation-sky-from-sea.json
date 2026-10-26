@@ -1,0 +1,16 @@
+{
+  "Quiz": "Creation Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "In the creation account, what did God separate?",
+  "OptionA": "The rivers from the lakes",
+  "OptionB": "The mountains from the valleys",
+  "OptionC": "The sky from the sea",
+  "OptionD": "The earth from the moon",
+  "CorrectAnswer": "C",
+  "Explanation": "God separated the sky from the sea as He ordered the world He was making.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 1:7",
+  "Slug": "story-creation-sky-from-sea",
+  "ReadingTitle": "Creation",
+  "ReadingLink": "#/stories/0"
+}

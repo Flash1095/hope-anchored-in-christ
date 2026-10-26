@@ -1,15 +1,15 @@
 {
-  "Name": "Jericho",
-  "ModernLocation": "West Bank",
-  "Maps": "canaan-tribes",
-  "Testament": "Old",
-  "TimelineEra": "Conquest and Judges",
-  "Description": "The fortified Canaanite city whose walls fell after Israel marched around them for seven days - the first conquest of the promised land. Later, Jesus healed blind Bartimaeus and called Zacchaeus down from his tree here.",
-  "BiblicalSignificance": "Jericho proves that God's battle plans rarely look like ours. Marching, trumpets, and a shout - and the walls fell. Victory belongs to the Lord, not to conventional wisdom.",
-  "KeyScriptures": "Joshua 6:20; Hebrews 11:30; Luke 19:1-10",
-  "RelatedBooks": "Joshua; Hebrews; Luke",
-  "RelatedPeople": "Joshua; Rahab; Jesus; Zacchaeus",
-  "Slug": "jericho",
-  "RelatedEvents": "Fall of Jericho",
-  "Places": "Jordan River; Gilgal; Jerusalem"
+ "Name": "Jericho",
+ "ModernLocation": "West Bank",
+ "Maps": "canaan-tribes",
+ "Testament": "Old",
+ "TimelineEra": "Conquest and Judges",
+ "Description": "The fortified Canaanite city whose walls fell after Israel marched around them for seven days - the first conquest of the promised land. Later, Jesus healed blind Bartimaeus and called Zacchaeus down from his tree here.",
+ "BiblicalSignificance": "Jericho proves that God's battle plans rarely look like ours. Marching, trumpets, and a shout - and the walls fell. Victory belongs to the Lord, not to conventional wisdom.",
+ "KeyScriptures": "Joshua 6:20; Hebrews 11:30; Luke 19:1-10",
+ "RelatedBooks": "Joshua; Hebrews; Luke",
+ "RelatedPeople": "Joshua; Rahab; Jesus; Zacchaeus",
+ "Slug": "jericho",
+ "RelatedEvents": "The Walls of Jericho",
+ "Places": "Jordan River; Gilgal; Jerusalem"
 }

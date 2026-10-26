@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Walls of Jericho Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What were Jericho's walls like, according to the retelling?",
+  "OptionA": "So low that anyone could climb them",
+  "OptionB": "So thick that houses were built into them",
+  "OptionC": "So new that the mortar was still wet",
+  "OptionD": "Made of wood and rope",
+  "CorrectAnswer": "B",
+  "Explanation": "Jericho's walls were so thick that houses were built into them, yet they fell flat before God.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Joshua 6:2",
+  "Slug": "the-walls-of-jericho-walls-houses-built-in",
+  "ReadingTitle": "The Walls of Jericho",
+  "ReadingLink": "#/stories/29"
+}

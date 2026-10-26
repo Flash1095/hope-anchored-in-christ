@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Exodus and the Red Sea Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Moses do at the sea?",
+  "OptionA": "He struck the rock",
+  "OptionB": "He prayed on the mountain",
+  "OptionC": "He built a bridge",
+  "OptionD": "He stretched out his hand",
+  "CorrectAnswer": "D",
+  "Explanation": "Moses stretched out his hand, and God drove the sea back with a strong wind.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Exodus 14:21",
+  "Slug": "the-exodus-and-the-red-sea-moses-stretched-hand",
+  "ReadingTitle": "The Exodus and the Red Sea",
+  "ReadingLink": "#/stories/18"
+}

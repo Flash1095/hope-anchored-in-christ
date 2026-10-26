@@ -1,0 +1,16 @@
+{
+  "Quiz": "Daniel in the Lions' Den Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What was the one thing Daniel's jealous officials could attack?",
+  "OptionA": "His prayer life",
+  "OptionB": "His wealth",
+  "OptionC": "His family",
+  "OptionD": "His age",
+  "CorrectAnswer": "A",
+  "Explanation": "Daniel's integrity left his enemies nothing to attack except his faithful prayer life.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Daniel 6:5",
+  "Slug": "story-daniel-in-the-lions-den-prayer-life-attack",
+  "ReadingTitle": "Daniel in the Lions' Den",
+  "ReadingLink": "#/stories/1"
+}

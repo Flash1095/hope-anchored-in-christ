@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jerusalem Council Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "Who went up to Jerusalem to the apostles and elders about this question?",
+ "OptionA": "Peter and John",
+ "OptionB": "James and Jude",
+ "OptionC": "Timothy and Titus",
+ "OptionD": "Paul and Barnabas",
+ "CorrectAnswer": "D",
+ "Explanation": "They determined that Paul and Barnabas, and certain others, should go up to Jerusalem unto the apostles and elders about this question.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Acts 15:2",
+ "Slug": "jerusalem-council-paul-barnabas-jerusalem",
+ "ReadingTitle": "Jerusalem Council",
+ "ReadingLink": "#/stories/47"
+}

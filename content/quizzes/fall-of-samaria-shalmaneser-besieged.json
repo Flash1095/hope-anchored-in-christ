@@ -1,0 +1,16 @@
+{
+ "Quiz": "Fall of Samaria Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Which Assyrian king came up against Samaria in the account in 2 Kings 18:9?",
+ "OptionA": "Sennacherib",
+ "OptionB": "Nebuchadnezzar",
+ "OptionC": "Tiglath-pileser",
+ "OptionD": "Shalmaneser",
+ "CorrectAnswer": "D",
+ "Explanation": "In the fourth year of King Hezekiah, which was the seventh year of Hoshea, Shalmaneser king of Assyria came up against Samaria and besieged it.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "2 Kings 18:9",
+ "Slug": "fall-of-samaria-shalmaneser-besieged",
+ "ReadingTitle": "Fall of Samaria",
+ "ReadingLink": "#/stories/43"
+}

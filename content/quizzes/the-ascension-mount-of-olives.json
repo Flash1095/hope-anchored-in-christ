@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Ascension Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "From which mount did the disciples return to Jerusalem after Jesus was taken up?",
+ "OptionA": "Mount Sinai",
+ "OptionB": "Mount Carmel",
+ "OptionC": "Mount Hermon",
+ "OptionD": "Mount of Olives",
+ "CorrectAnswer": "D",
+ "Explanation": "After the Ascension the disciples returned to Jerusalem from the mount called Olivet, the Mount of Olives.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Acts 1:12",
+ "Slug": "the-ascension-mount-of-olives",
+ "ReadingTitle": "The Ascension",
+ "ReadingLink": "#/stories/60"
+}

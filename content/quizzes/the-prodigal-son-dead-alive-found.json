@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Prodigal Son Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "At the feast, how did the father describe his son?",
+  "OptionA": "This son of mine was poor and is rich again",
+  "OptionB": "This son of mine was foolish and is wise again",
+  "OptionC": "This son of mine was dead and is alive again; he was lost and is found",
+  "OptionD": "This son of mine was far away and is home again",
+  "CorrectAnswer": "C",
+  "Explanation": "The father's words sum up the whole story: what was lost had been found.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Luke 15:24",
+  "Slug": "the-prodigal-son-dead-alive-found",
+  "ReadingTitle": "The Prodigal Son",
+  "ReadingLink": "#/stories/23"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Raising of Lazarus Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "After hearing Lazarus was sick, how long did Jesus stay where He was before travelling to Bethany?",
+ "OptionA": "One day",
+ "OptionB": "Three days",
+ "OptionC": "Two days",
+ "OptionD": "A week",
+ "CorrectAnswer": "C",
+ "Explanation": "When Jesus heard Lazarus was sick, He abode two days still in the same place where He was.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "John 11:6",
+ "Slug": "raising-of-lazarus-abode-two-days",
+ "ReadingTitle": "Raising of Lazarus",
+ "ReadingLink": "#/stories/57"
+}

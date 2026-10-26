@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Last Supper Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "How many disciples gathered with Jesus in the upper room?",
+  "OptionA": "Eleven",
+  "OptionB": "Seventy",
+  "OptionC": "Seven",
+  "OptionD": "Twelve",
+  "CorrectAnswer": "D",
+  "Explanation": "All twelve of His disciples were at the table with Him.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Luke 22:14",
+  "Slug": "the-last-supper-twelve-disciples",
+  "ReadingTitle": "The Last Supper",
+  "ReadingLink": "#/stories/22"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Jonah and Nineveh Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What swallowed Jonah after he was thrown overboard?",
+  "OptionA": "A whale ship",
+  "OptionB": "A storm wave",
+  "OptionC": "A small boat",
+  "OptionD": "A great fish",
+  "CorrectAnswer": "D",
+  "Explanation": "God prepared a great fish that swallowed Jonah and kept him safe.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Jonah 1:17",
+  "Slug": "jonah-and-nineveh-great-fish",
+  "ReadingTitle": "Jonah and Nineveh",
+  "ReadingLink": "#/stories/5"
+}

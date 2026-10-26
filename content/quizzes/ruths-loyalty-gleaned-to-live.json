@@ -1,0 +1,16 @@
+{
+  "Quiz": "Ruth's Loyalty Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Why did Ruth glean in the fields?",
+  "OptionA": "To earn money for a journey",
+  "OptionB": "To find a husband",
+  "OptionC": "To buy land",
+  "OptionD": "To keep Naomi and herself alive",
+  "CorrectAnswer": "D",
+  "Explanation": "Ruth gleaned in the fields so that she and Naomi would have food to live on.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Ruth 2:2",
+  "Slug": "ruths-loyalty-gleaned-to-live",
+  "ReadingTitle": "Ruth's Loyalty",
+  "ReadingLink": "#/stories/9"
+}

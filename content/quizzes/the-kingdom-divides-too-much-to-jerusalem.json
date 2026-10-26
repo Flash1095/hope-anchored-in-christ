@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Kingdom Divides Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What reason did Jeroboam give for setting up the calves?",
+ "OptionA": "The people demanded new gods",
+ "OptionB": "It is too much for you to go up to Jerusalem",
+ "OptionC": "The temple had been destroyed",
+ "OptionD": "He had dreamed of golden calves",
+ "CorrectAnswer": "B",
+ "Explanation": "Jeroboam told the people it was too much for them to go up to Jerusalem, and pointed them to the calves instead.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "1 Kings 12:28",
+ "Slug": "the-kingdom-divides-too-much-to-jerusalem",
+ "ReadingTitle": "The Kingdom Divides",
+ "ReadingLink": "#/stories/62"
+}

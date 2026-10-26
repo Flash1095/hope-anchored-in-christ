@@ -1,0 +1,16 @@
+{
+ "Quiz": "Raising of Lazarus Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "When Lazarus came out of the tomb, what was he bound with?",
+ "OptionA": "Graveclothes, with his face bound by a napkin",
+ "OptionB": "Chains of iron",
+ "OptionC": "A purple robe",
+ "OptionD": "Linen curtains",
+ "CorrectAnswer": "A",
+ "Explanation": "He that was dead came forth, bound hand and foot with graveclothes, and his face bound about with a napkin.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "John 11:44",
+ "Slug": "raising-of-lazarus-graveclothes",
+ "ReadingTitle": "Raising of Lazarus",
+ "ReadingLink": "#/stories/57"
+}

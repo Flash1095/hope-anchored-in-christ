@@ -1,0 +1,16 @@
+{
+ "Quiz": "Crossing the Jordan Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Why were the memorial stones set up, according to Joshua 4?",
+ "OptionA": "To mark a border",
+ "OptionB": "To build an altar for burnt offerings",
+ "OptionC": "So children asking about them would hear how the waters were cut off",
+ "OptionD": "To honour Joshua's leadership",
+ "CorrectAnswer": "C",
+ "Explanation": "The stones were a sign so that when children asked what they meant, their parents could tell how the Jordan's waters were cut off before the ark.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Joshua 4:6",
+ "Slug": "crossing-the-jordan-stones-for-children",
+ "ReadingTitle": "Crossing the Jordan",
+ "ReadingLink": "#/stories/34"
+}

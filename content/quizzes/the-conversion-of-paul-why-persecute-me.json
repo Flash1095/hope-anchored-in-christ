@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Conversion of Paul Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the risen Jesus say to Saul?",
+  "OptionA": "Saul, Saul, why do you persecute me?",
+  "OptionB": "Saul, why do you doubt me?",
+  "OptionC": "Saul, will you follow me?",
+  "OptionD": "Saul, where are you going?",
+  "CorrectAnswer": "A",
+  "Explanation": "The risen Jesus spoke to Saul: “Saul, Saul, why do you persecute me?”",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Acts 9:4",
+  "Slug": "the-conversion-of-paul-why-persecute-me",
+  "ReadingTitle": "The Conversion of Paul",
+  "ReadingLink": "#/stories/16"
+}

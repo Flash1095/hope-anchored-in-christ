@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Crucifixion Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What sealed the entrance to Jesus' tomb?",
+  "OptionA": "A stone",
+  "OptionB": "A bronze gate",
+  "OptionC": "A Roman seal alone",
+  "OptionD": "A wooden door",
+  "CorrectAnswer": "A",
+  "Explanation": "Joseph laid Jesus' body in a new tomb, and a stone sealed the entrance.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Matthew 27:60",
+  "Slug": "story-the-crucifixion-stone-sealed-tomb",
+  "ReadingTitle": "The Crucifixion",
+  "ReadingLink": "#/stories/17"
+}

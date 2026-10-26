@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Last Supper Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "After Jesus spoke of betrayal, who left into the night?",
+  "OptionA": "Judas",
+  "OptionB": "Peter",
+  "OptionC": "John",
+  "OptionD": "Thomas",
+  "CorrectAnswer": "A",
+  "Explanation": "Judas, the one who would betray Him, left the table and went out into the night.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 26:25",
+  "Slug": "the-last-supper-judas-left-night",
+  "ReadingTitle": "The Last Supper",
+  "ReadingLink": "#/stories/22"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Samson and Delilah Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Samson carry off from the city of Gaza?",
+  "OptionA": "The temple treasury",
+  "OptionB": "The king's throne",
+  "OptionC": "The gates of Gaza",
+  "OptionD": "The city walls",
+  "CorrectAnswer": "C",
+  "Explanation": "Samson carried off the gates of Gaza, showing a strength no ordinary man possessed.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Judges 16:3",
+  "Slug": "samson-and-delilah-gates-of-gaza",
+  "ReadingTitle": "Samson and Delilah",
+  "ReadingLink": "#/stories/10"
+}

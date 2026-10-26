@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Fall Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What doubt did the serpent's question plant?",
+  "OptionA": "Is the garden truly yours?",
+  "OptionB": "Will God punish you?",
+  "OptionC": "Are you truly free?",
+  "OptionD": "Did God really mean what he said?",
+  "CorrectAnswer": "D",
+  "Explanation": "The serpent's question planted doubt about whether God really meant what he said.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 3:1",
+  "Slug": "story-the-fall-did-god-really-mean",
+  "ReadingTitle": "The Fall",
+  "ReadingLink": "#/stories/19"
+}

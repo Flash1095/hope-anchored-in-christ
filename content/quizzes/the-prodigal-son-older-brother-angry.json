@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Prodigal Son Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "How did the older brother react when he learned of the feast?",
+  "OptionA": "He joined the dancing at once",
+  "OptionB": "He stood outside, angry",
+  "OptionC": "He left the country in protest",
+  "OptionD": "He asked for a feast of his own",
+  "CorrectAnswer": "B",
+  "Explanation": "The older brother, who had never left home, stood outside angry at his brother's welcome.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Luke 15:28",
+  "Slug": "the-prodigal-son-older-brother-angry",
+  "ReadingTitle": "The Prodigal Son",
+  "ReadingLink": "#/stories/23"
+}

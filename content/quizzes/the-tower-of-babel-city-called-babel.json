@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Tower of Babel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What was the unfinished city called?",
+  "OptionA": "Shinar",
+  "OptionB": "Ur",
+  "OptionC": "Nineveh",
+  "OptionD": "Babel",
+  "CorrectAnswer": "D",
+  "Explanation": "The unfinished city was called Babel, because there the Lord confused the language of the whole world.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 11:9",
+  "Slug": "the-tower-of-babel-city-called-babel",
+  "ReadingTitle": "The Tower of Babel",
+  "ReadingLink": "#/stories/28"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Cain Murders Abel Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did God say the ground would no longer do for Cain?",
+ "OptionA": "Give him shade",
+ "OptionB": "Produce thorns only",
+ "OptionC": "Hide his brother's blood",
+ "OptionD": "Yield its strength to him",
+ "CorrectAnswer": "D",
+ "Explanation": "Because Abel's blood cried from the ground, the ground would no longer yield its strength to Cain, and he would be a fugitive and wanderer.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Genesis 4:12",
+ "Slug": "cain-murders-abel-ground-strength",
+ "ReadingTitle": "Cain Murders Abel",
+ "ReadingLink": "#/stories/32"
+}

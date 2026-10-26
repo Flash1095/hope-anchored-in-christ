@@ -1,0 +1,16 @@
+{
+  "Quiz": "Samson and Delilah Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Samson finally reveal as the sign of his vow?",
+  "OptionA": "His uncut hair",
+  "OptionB": "A special ring",
+  "OptionC": "A vow of silence",
+  "OptionD": "A scar on his arm",
+  "CorrectAnswer": "A",
+  "Explanation": "Samson told Delilah the truth at last: his uncut hair was the sign of his Nazirite vow.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Judges 16:17",
+  "Slug": "samson-and-delilah-uncut-hair-vow",
+  "ReadingTitle": "Samson and Delilah",
+  "ReadingLink": "#/stories/10"
+}

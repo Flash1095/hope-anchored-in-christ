@@ -1,0 +1,16 @@
+{
+ "Quiz": "David and Bathsheba Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "In Psalm 51, what does David ask God to create in him?",
+ "OptionA": "A new palace",
+ "OptionB": "A clean heart",
+ "OptionC": "A stronger army",
+ "OptionD": "A new song",
+ "CorrectAnswer": "B",
+ "Explanation": "David prayed, 'Create in me a clean heart, O God; and renew a right spirit within me.'",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Psalm 51:10",
+ "Slug": "david-and-bathsheba-clean-heart-psalm",
+ "ReadingTitle": "David and Bathsheba",
+ "ReadingLink": "#/stories/36"
+}

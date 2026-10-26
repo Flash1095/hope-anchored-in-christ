@@ -1,0 +1,16 @@
+{
+  "Quiz": "Pentecost Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What rested on each of the disciples?",
+  "OptionA": "Tongues of fire",
+  "OptionB": "Crowns of gold",
+  "OptionC": "White robes",
+  "OptionD": "Olive branches",
+  "CorrectAnswer": "A",
+  "Explanation": "Tongues of fire rested on each of them as they were filled with the Holy Spirit.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Acts 2:3",
+  "Slug": "story-pentecost-tongues-fire",
+  "ReadingTitle": "Pentecost",
+  "ReadingLink": "#/stories/8"
+}

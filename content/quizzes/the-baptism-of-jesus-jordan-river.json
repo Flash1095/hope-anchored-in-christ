@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Baptism of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "In which river was Jesus baptized?",
+  "OptionA": "The Sea of Galilee",
+  "OptionB": "The Pool of Siloam",
+  "OptionC": "The Nile River",
+  "OptionD": "The Jordan River",
+  "CorrectAnswer": "D",
+  "Explanation": "John baptized Jesus in the Jordan River, where he had been preaching repentance.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Mark 1:9",
+  "Slug": "the-baptism-of-jesus-jordan-river",
+  "ReadingTitle": "The Baptism of Jesus",
+  "ReadingLink": "#/stories/11"
+}

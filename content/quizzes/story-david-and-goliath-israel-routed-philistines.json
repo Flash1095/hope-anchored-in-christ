@@ -1,0 +1,16 @@
+{
+  "Quiz": "David and Goliath Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "After Goliath fell, what did Israel do?",
+  "OptionA": "Make peace",
+  "OptionB": "Surrender",
+  "OptionC": "Rout the Philistines",
+  "OptionD": "Return home at once",
+  "CorrectAnswer": "C",
+  "Explanation": "With their champion fallen, Israel routed the Philistine army.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "1 Samuel 17:52",
+  "Slug": "story-david-and-goliath-israel-routed-philistines",
+  "ReadingTitle": "David and Goliath",
+  "ReadingLink": "#/stories/2"
+}

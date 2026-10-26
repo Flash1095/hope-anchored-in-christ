@@ -1,0 +1,16 @@
+{
+ "Quiz": "Wilderness Wanderings Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Through what kind of wilderness did Deuteronomy say God led them, before bringing water from rock?",
+ "OptionA": "A pleasant land of rivers",
+ "OptionB": "A great and terrible wilderness, with fiery serpents, scorpions, and drought, where there was no water",
+ "OptionC": "A forest of cedars",
+ "OptionD": "A plain of wheat fields",
+ "CorrectAnswer": "B",
+ "Explanation": "Deuteronomy describes a great and terrible wilderness of fiery serpents, scorpions, and drought, where God brought water from the rock of flint.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Deuteronomy 8:15",
+ "Slug": "wilderness-wanderings-great-and-terrible-wilderness",
+ "ReadingTitle": "Wilderness Wanderings",
+ "ReadingLink": "#/stories/68"
+}

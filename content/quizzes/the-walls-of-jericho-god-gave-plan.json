@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Walls of Jericho Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who gave Joshua the battle plan for Jericho?",
+  "OptionA": "God",
+  "OptionB": "The spies",
+  "OptionC": "Rahab",
+  "OptionD": "The elders of Israel",
+  "CorrectAnswer": "A",
+  "Explanation": "The battle plan came from God, and it made no military sense at all.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Joshua 6:2",
+  "Slug": "the-walls-of-jericho-god-gave-plan",
+  "ReadingTitle": "The Walls of Jericho",
+  "ReadingLink": "#/stories/29"
+}

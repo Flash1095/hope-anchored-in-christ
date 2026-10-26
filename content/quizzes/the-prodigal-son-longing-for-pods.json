@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Prodigal Son Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the hungry younger son long to eat?",
+  "OptionA": "The pods the pigs were eating",
+  "OptionB": "Bread from his father's table",
+  "OptionC": "Fruit from the far country's trees",
+  "OptionD": "Fish from the nearby sea",
+  "CorrectAnswer": "A",
+  "Explanation": "He was so hungry that he longed for the very pods the pigs ate.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Luke 15:16",
+  "Slug": "the-prodigal-son-longing-for-pods",
+  "ReadingTitle": "The Prodigal Son",
+  "ReadingLink": "#/stories/23"
+}

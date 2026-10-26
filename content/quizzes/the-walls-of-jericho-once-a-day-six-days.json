@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Walls of Jericho Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "For the first six days, how often did Israel march around Jericho each day?",
+  "OptionA": "Twice a day",
+  "OptionB": "Seven times a day",
+  "OptionC": "Three times a day",
+  "OptionD": "Once a day",
+  "CorrectAnswer": "D",
+  "Explanation": "God's plan was simple and strange: march around the city once a day for six days.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Joshua 6:3",
+  "Slug": "the-walls-of-jericho-once-a-day-six-days",
+  "ReadingTitle": "The Walls of Jericho",
+  "ReadingLink": "#/stories/29"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jesus Turns Water into Wine at Cana Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What did Jesus tell the servants to fill the waterpots with?",
+ "OptionA": "Oil",
+ "OptionB": "Milk",
+ "OptionC": "Water",
+ "OptionD": "New wine",
+ "CorrectAnswer": "C",
+ "Explanation": "Jesus said, 'Fill the waterpots with water,' and the servants filled them right up to the brim.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "John 2:7",
+ "Slug": "jesus-turns-water-into-wine-at-cana-fill-with-water",
+ "ReadingTitle": "Jesus Turns Water into Wine at Cana",
+ "ReadingLink": "#/stories/50"
+}

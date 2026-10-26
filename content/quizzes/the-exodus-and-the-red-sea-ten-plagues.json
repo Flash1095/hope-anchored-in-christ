@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Exodus and the Red Sea Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What broke Pharaoh's grip so Israel could leave Egypt?",
+  "OptionA": "Three plagues",
+  "OptionB": "Seven plagues",
+  "OptionC": "A famine",
+  "OptionD": "Ten plagues",
+  "CorrectAnswer": "D",
+  "Explanation": "After ten plagues broke Pharaoh's grip, Israel left Egypt in the night.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Exodus 12:31",
+  "Slug": "the-exodus-and-the-red-sea-ten-plagues",
+  "ReadingTitle": "The Exodus and the Red Sea",
+  "ReadingLink": "#/stories/18"
+}

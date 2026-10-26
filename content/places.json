@@ -38,7 +38,7 @@
     "KeyScriptures": "Genesis 11:1-9; Acts 2:5-11",
     "RelatedBooks": "Genesis; Acts",
     "Slug": "babel",
-    "RelatedEvents": "Tower of Babel",
+    "RelatedEvents": "The Tower of Babel",
     "Places": "Babylon"
   },
   {
@@ -53,7 +53,7 @@
     "RelatedBooks": "Genesis; Acts",
     "RelatedPeople": "Abraham; Sarah",
     "Slug": "ur",
-    "RelatedEvents": "Call of Abraham",
+    "RelatedEvents": "The Call of Abraham",
     "Places": "Haran; Canaan"
   },
   {
@@ -68,7 +68,7 @@
     "RelatedBooks": "Genesis",
     "RelatedPeople": "Abraham; Sarah; Jacob; Rachel; Leah",
     "Slug": "haran",
-    "RelatedEvents": "Call of Abraham",
+    "RelatedEvents": "The Call of Abraham",
     "Places": "Ur; Canaan"
   },
   {
@@ -83,7 +83,7 @@
     "RelatedBooks": "Genesis; Hebrews",
     "RelatedPeople": "Abraham; Isaac; Jacob",
     "Slug": "canaan",
-    "RelatedEvents": "Call of Abraham; The Twelve Spies and Israel's Unbelief",
+    "RelatedEvents": "The Call of Abraham; The Twelve Spies and Israel's Unbelief",
     "Places": "Shechem; Bethel; Hebron"
   },
   {
@@ -156,7 +156,7 @@
     "RelatedBooks": "Genesis; Exodus",
     "RelatedPeople": "Joseph, Son of Jacob; Moses; Aaron; Miriam",
     "Slug": "egypt",
-    "RelatedEvents": "Joseph Rises to Power in Egypt; Joseph Sold into Egypt; The Passover; The Ten Plagues; The Exodus and Crossing of the Red Sea",
+    "RelatedEvents": "Joseph and His Brothers; The Passover; The Ten Plagues; The Exodus and the Red Sea",
     "Places": "Goshen; Midian; Mount Sinai"
   },
   {
@@ -201,7 +201,7 @@
     "RelatedBooks": "Exodus; Deuteronomy; Galatians",
     "RelatedPeople": "Moses; Aaron",
     "Slug": "mount-sinai",
-    "RelatedEvents": "Giving of the Law at Sinai; The Golden Calf; The Burning Bush",
+    "RelatedEvents": "The Ten Commandments; The Golden Calf; The Burning Bush",
     "Places": "Egypt; Midian; Kadesh Barnea"
   },
   {
@@ -231,7 +231,7 @@
     "RelatedBooks": "Joshua; 2 Kings; Matthew",
     "RelatedPeople": "Joshua; Elijah; Elisha; John the Baptist; Jesus",
     "Slug": "jordan-river",
-    "RelatedEvents": "Baptism of Jesus; Crossing the Jordan",
+    "RelatedEvents": "The Baptism of Jesus; Crossing the Jordan",
     "Places": "Gilgal; Jericho; Plains of Moab"
   },
   {
@@ -260,7 +260,7 @@
     "RelatedBooks": "Joshua; Hebrews; Luke",
     "RelatedPeople": "Joshua; Rahab; Jesus; Zacchaeus",
     "Slug": "jericho",
-    "RelatedEvents": "Fall of Jericho",
+    "RelatedEvents": "The Walls of Jericho",
     "Places": "Jordan River; Gilgal; Jerusalem"
   },
   {
@@ -377,7 +377,7 @@
     "RelatedBooks": "2 Samuel; Psalms; Luke; Acts",
     "RelatedPeople": "King David; King Solomon; Jesus; Simon Peter",
     "Slug": "jerusalem",
-    "RelatedEvents": "Binding of Isaac; Building of Solomon's Temple; David Becomes King; Davidic Covenant; David and Bathsheba; The Kingdom Divides; Hezekiah and Sennacherib's Invasion; Ezra Reads the Law; Fall of Jerusalem and the Exile; Cyrus's Decree and Return from Exile; Rebuilding of the Temple; Nehemiah Rebuilds the Wall; Triumphal Entry; Last Supper; Jesus Prays in Gethsemane; The Crucifixion; The Resurrection; The Ascension; Pentecost; Jerusalem Council; Martyrdom of Stephen",
+    "RelatedEvents": "The Binding of Isaac; Building of Solomon's Temple; David Becomes King; Davidic Covenant; David and Bathsheba; The Kingdom Divides; Hezekiah and Sennacherib's Invasion; Ezra Reads the Law; Fall of Jerusalem and the Exile; Cyrus's Decree and Return from Exile; Rebuilding of the Temple; Nehemiah Rebuilds the Wall; Triumphal Entry; The Last Supper; Jesus Prays in Gethsemane; The Crucifixion; The Resurrection; The Ascension; Pentecost; Jerusalem Council; Martyrdom of Stephen",
     "Places": "Bethlehem; Bethany; Golgotha; Hebron; Jericho"
   },
   {
@@ -436,7 +436,7 @@
     "RelatedBooks": "Jonah; Matthew",
     "RelatedPeople": "Jonah",
     "Slug": "nineveh",
-    "RelatedEvents": "Jonah and Nineveh; Jonah and the Great Fish",
+    "RelatedEvents": "Jonah and Nineveh",
     "Places": "Samaria"
   },
   {
@@ -451,7 +451,7 @@
     "RelatedBooks": "2 Kings; Daniel; Ezekiel",
     "RelatedPeople": "Daniel; King Nebuchadnezzar; Shadrach, Meshach, and Abednego; Ezekiel",
     "Slug": "babylon",
-    "RelatedEvents": "Tower of Babel; Daniel in the Lions' Den; Shadrach, Meshach and Abednego in the Fiery Furnace; Cyrus's Decree and Return from Exile",
+    "RelatedEvents": "The Tower of Babel; Daniel in the Lions' Den; Shadrach, Meshach and Abednego in the Fiery Furnace; Cyrus's Decree and Return from Exile",
     "Places": "Susa; Jerusalem"
   },
   {
@@ -466,7 +466,7 @@
     "RelatedBooks": "Esther; Nehemiah",
     "RelatedPeople": "Queen Esther; Mordecai; Nehemiah",
     "Slug": "susa",
-    "RelatedEvents": "Esther Saves the Jews",
+    "RelatedEvents": "Esther Saves Her People",
     "Places": "Babylon; Jerusalem"
   },
   {
@@ -495,7 +495,7 @@
     "RelatedBooks": "Ruth; 1 Samuel; Micah; Matthew; Luke",
     "RelatedPeople": "Ruth; Boaz; King David; Jesus; Mary, Mother of Jesus; Joseph, Husband of Mary",
     "Slug": "bethlehem",
-    "RelatedEvents": "Birth of Jesus; Story of Ruth",
+    "RelatedEvents": "The Birth of Jesus; Ruth's Loyalty",
     "Places": "Jerusalem; Hebron; Nazareth"
   },
   {
@@ -538,7 +538,7 @@
     "RelatedBooks": "Isaiah; Matthew",
     "RelatedPeople": "Jesus; Simon Peter; Andrew; James, Son of Zebedee; John the Apostle",
     "Slug": "galilee",
-    "RelatedEvents": "Sermon on the Mount; Jesus Calms the Storm; Feeding of the Five Thousand; Jesus Turns Water into Wine at Cana",
+    "RelatedEvents": "The Sermon on the Mount; Jesus Calms the Storm; The Feeding of the Five Thousand; Jesus Turns Water into Wine at Cana",
     "Places": "Capernaum; Nazareth"
   },
   {

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Crossing the Jordan Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did the priests carry into the river?",
+ "OptionA": "The tabernacle",
+ "OptionB": "The golden lampstand",
+ "OptionC": "The ark of the covenant",
+ "OptionD": "The stone tablets alone",
+ "CorrectAnswer": "C",
+ "Explanation": "The priests bore the ark of the covenant of the LORD, and as soon as their feet rested in the water, the river was cut off.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Joshua 3:13",
+ "Slug": "crossing-the-jordan-ark-of-covenant",
+ "ReadingTitle": "Crossing the Jordan",
+ "ReadingLink": "#/stories/34"
+}

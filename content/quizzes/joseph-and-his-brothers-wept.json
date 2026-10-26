@@ -1,0 +1,16 @@
+{
+  "Quiz": "Joseph and His Brothers Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "When his brothers stood before him, what did Joseph do before he made himself known to them?",
+  "OptionA": "Punish them",
+  "OptionB": "Weep",
+  "OptionC": "Send them away",
+  "OptionD": "Hide from them",
+  "CorrectAnswer": "B",
+  "Explanation": "Joseph wept when he saw his brothers, and then he forgave them for what they had done.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Genesis 45:2",
+  "Slug": "joseph-and-his-brothers-wept",
+  "ReadingTitle": "Joseph and His Brothers",
+  "ReadingLink": "#/stories/6"
+}

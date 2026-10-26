@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Feeding of the Five Thousand Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "After everyone had eaten their fill, how many baskets of leftovers did the disciples gather?",
+  "OptionA": "Seven baskets",
+  "OptionB": "Five baskets",
+  "OptionC": "Twelve baskets",
+  "OptionD": "Two baskets",
+  "CorrectAnswer": "C",
+  "Explanation": "There was more left over than the boy had started with, a lovely picture of God's abundance.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "John 6:13",
+  "Slug": "the-feeding-of-the-five-thousand-twelve-baskets",
+  "ReadingTitle": "The Feeding of the Five Thousand",
+  "ReadingLink": "#/stories/20"
+}

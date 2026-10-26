@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Fall Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What replaced trust after Adam and Eve ate?",
+  "OptionA": "Blame",
+  "OptionB": "Silence",
+  "OptionC": "Prayer",
+  "OptionD": "Exile",
+  "CorrectAnswer": "A",
+  "Explanation": "After they ate, shame replaced innocence and blame replaced trust.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 3:12",
+  "Slug": "story-the-fall-blame-replaced-trust",
+  "ReadingTitle": "The Fall",
+  "ReadingLink": "#/stories/19"
+}

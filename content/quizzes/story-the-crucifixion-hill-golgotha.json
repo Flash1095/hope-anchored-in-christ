@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Crucifixion Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "To what hill was Jesus led to be crucified?",
+  "OptionA": "Gethsemane",
+  "OptionB": "Golgotha",
+  "OptionC": "Bethany",
+  "OptionD": "The Mount of Olives",
+  "CorrectAnswer": "B",
+  "Explanation": "Jesus was led outside Jerusalem to a hill called Golgotha, where he was nailed to a cross.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Matthew 27:33",
+  "Slug": "story-the-crucifixion-hill-golgotha",
+  "ReadingTitle": "The Crucifixion",
+  "ReadingLink": "#/stories/17"
+}

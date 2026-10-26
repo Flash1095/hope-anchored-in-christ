@@ -1,0 +1,16 @@
+{
+ "Quiz": "Cain Murders Abel Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did God set on Cain?",
+ "OptionA": "A mark for protection",
+ "OptionB": "A crown of shame",
+ "OptionC": "A curse of blindness",
+ "OptionD": "A scarlet robe",
+ "CorrectAnswer": "A",
+ "Explanation": "God set a mark upon Cain so that anyone finding him would not kill him, and promised sevenfold vengeance on whoever slew him.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Genesis 4:15",
+ "Slug": "cain-murders-abel-mark-of-protection",
+ "ReadingTitle": "Cain Murders Abel",
+ "ReadingLink": "#/stories/32"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Conversion of Paul Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What happened to Saul's sight after the light?",
+  "OptionA": "He saw angels",
+  "OptionB": "He was blinded",
+  "OptionC": "His eyes were opened at once",
+  "OptionD": "He wept until he could not see",
+  "CorrectAnswer": "B",
+  "Explanation": "Blinded, Saul was led into the city, where Ananias would lay hands on him.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Acts 9:8",
+  "Slug": "the-conversion-of-paul-blinded-on-road",
+  "ReadingTitle": "The Conversion of Paul",
+  "ReadingLink": "#/stories/16"
+}

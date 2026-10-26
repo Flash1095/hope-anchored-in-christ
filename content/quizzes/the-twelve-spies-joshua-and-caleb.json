@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Twelve Spies and Israel's Unbelief Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Which two spies trusted God's promise and urged the people to go up and take the land?",
+ "OptionA": "Joshua and Caleb",
+ "OptionB": "Moses and Aaron",
+ "OptionC": "Eleazar and Phinehas",
+ "OptionD": "Nadab and Abihu",
+ "CorrectAnswer": "A",
+ "Explanation": "Only Joshua the son of Nun and Caleb the son of Jephunneh trusted God's promise, while the other ten spread fear.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Numbers 14:6",
+ "Slug": "the-twelve-spies-joshua-and-caleb",
+ "ReadingTitle": "The Twelve Spies and Israel's Unbelief",
+ "ReadingLink": "#/stories/65"
+}

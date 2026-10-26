@@ -1,0 +1,16 @@
+{
+ "Quiz": "Raising of Lazarus Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "Who were Lazarus' sisters?",
+ "OptionA": "Martha and Mary",
+ "OptionB": "Elizabeth and Anna",
+ "OptionC": "Salome and Joanna",
+ "OptionD": "Ruth and Naomi",
+ "CorrectAnswer": "A",
+ "Explanation": "His sisters Martha and Mary sent word to Jesus that the one He loved was sick, and they grieved at his grave.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "John 11:3",
+ "Slug": "raising-of-lazarus-martha-and-mary",
+ "ReadingTitle": "Raising of Lazarus",
+ "ReadingLink": "#/stories/57"
+}

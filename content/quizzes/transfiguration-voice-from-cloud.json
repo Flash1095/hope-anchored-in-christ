@@ -1,0 +1,16 @@
+{
+ "Quiz": "Transfiguration Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What did the voice from the bright cloud declare?",
+ "OptionA": "This is my beloved Son, in whom I am well pleased; hear ye him",
+ "OptionB": "This is the prophet of Nazareth",
+ "OptionC": "Go down and tell no one",
+ "OptionD": "Behold the Lamb of God",
+ "CorrectAnswer": "A",
+ "Explanation": "A voice out of the cloud said, This is my beloved Son, in whom I am well pleased; hear ye him.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Matthew 17:5",
+ "Slug": "transfiguration-voice-from-cloud",
+ "ReadingTitle": "Transfiguration",
+ "ReadingLink": "#/stories/66"
+}

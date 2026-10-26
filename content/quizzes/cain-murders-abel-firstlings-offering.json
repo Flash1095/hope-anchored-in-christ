@@ -1,0 +1,16 @@
+{
+ "Quiz": "Cain Murders Abel Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did Abel bring as his offering to the LORD?",
+ "OptionA": "Fruit of the ground",
+ "OptionB": "Grain from the harvest",
+ "OptionC": "Firstlings of his flock and their fat",
+ "OptionD": "Wine from the vineyard",
+ "CorrectAnswer": "C",
+ "Explanation": "Abel brought the firstlings of his flock and the fat thereof, and the LORD had respect unto Abel and his offering.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Genesis 4:4",
+ "Slug": "cain-murders-abel-firstlings-offering",
+ "ReadingTitle": "Cain Murders Abel",
+ "ReadingLink": "#/stories/32"
+}

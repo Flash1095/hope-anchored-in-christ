@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Ten Plagues Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What brought the locusts over the land of Egypt?",
+ "OptionA": "An east wind all day and all night",
+ "OptionB": "A west wind",
+ "OptionC": "A north wind",
+ "OptionD": "A whirlwind from the sea",
+ "CorrectAnswer": "A",
+ "Explanation": "Moses stretched out his rod, and the LORD brought an east wind on the land all that day and night, bringing the locusts.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Exodus 10:13",
+ "Slug": "the-ten-plagues-east-wind-locusts",
+ "ReadingTitle": "The Ten Plagues",
+ "ReadingLink": "#/stories/64"
+}

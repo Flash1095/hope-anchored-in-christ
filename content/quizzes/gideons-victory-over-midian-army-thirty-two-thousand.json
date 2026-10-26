@@ -1,0 +1,16 @@
+{
+ "Quiz": "Gideon's Victory over Midian Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How large was Gideon's army before God whittled it down?",
+ "OptionA": "Thirty-two thousand",
+ "OptionB": "Ten thousand",
+ "OptionC": "Twenty-two thousand",
+ "OptionD": "Forty thousand",
+ "CorrectAnswer": "A",
+ "Explanation": "God whittled Gideon's army from 32,000 down to 300 men, so the victory would clearly belong to God and not to numbers.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Judges 7:3",
+ "Slug": "gideons-victory-over-midian-army-thirty-two-thousand",
+ "ReadingTitle": "Gideon's Victory over Midian",
+ "ReadingLink": "#/stories/44"
+}

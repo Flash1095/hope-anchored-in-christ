@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Birth of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Who followed a star from the east, bearing gifts?",
+  "OptionA": "Wise men",
+  "OptionB": "Shepherds",
+  "OptionC": "Roman officers",
+  "OptionD": "Temple scribes",
+  "CorrectAnswer": "A",
+  "Explanation": "Wise men from the east followed a star, bearing gifts for the newborn king.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 2:2",
+  "Slug": "the-birth-of-jesus-wise-men-star",
+  "ReadingTitle": "The Birth of Jesus",
+  "ReadingLink": "#/stories/13"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Raising of Lazarus Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "In which town did Lazarus live with Martha and Mary?",
+ "OptionA": "Bethany",
+ "OptionB": "Bethlehem",
+ "OptionC": "Nazareth",
+ "OptionD": "Capernaum",
+ "CorrectAnswer": "A",
+ "Explanation": "Lazarus was of Bethany, the town of Mary and her sister Martha.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "John 11:1",
+ "Slug": "raising-of-lazarus-bethany",
+ "ReadingTitle": "Raising of Lazarus",
+ "ReadingLink": "#/stories/57"
+}

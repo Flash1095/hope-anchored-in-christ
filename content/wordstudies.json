@@ -29,7 +29,7 @@
     "RelatedBooks": "Numbers; Isaiah; Jeremiah",
     "Slug": "shalom",
     "RelatedPeople": "Jesus; Aaron",
-    "RelatedEvents": "Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus"
   },
   {
     "Word": "בְּרִית",
@@ -46,7 +46,7 @@
     "Slug": "berit",
     "RelatedPeople": "Noah; Abraham; Moses; King David; Jesus",
     "Places": "Mount Sinai",
-    "RelatedEvents": "Giving of the Law at Sinai; Davidic Covenant"
+    "RelatedEvents": "The Ten Commandments; Davidic Covenant"
   },
   {
     "Word": "אֱמוּנָה",
@@ -79,7 +79,7 @@
     "Slug": "torah",
     "RelatedPeople": "Moses; Ezra; King David",
     "Places": "Mount Sinai",
-    "RelatedEvents": "Giving of the Law at Sinai; Ezra Reads the Law"
+    "RelatedEvents": "The Ten Commandments; Ezra Reads the Law"
   },
   {
     "Word": "רוּחַ",
@@ -129,7 +129,7 @@
     "Slug": "qadosh",
     "RelatedPeople": "Moses; Isaiah",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Burning Bush; Giving of the Law at Sinai"
+    "RelatedEvents": "The Burning Bush; The Ten Commandments"
   },
   {
     "Word": "צֶדֶק",
@@ -227,7 +227,7 @@
     "Slug": "goel",
     "RelatedPeople": "Boaz; Ruth; Naomi; Job",
     "Places": "Bethlehem",
-    "RelatedEvents": "Story of Ruth"
+    "RelatedEvents": "Ruth's Loyalty"
   },
   {
     "Word": "סֶלָה",
@@ -259,7 +259,7 @@
     "Slug": "dabar",
     "RelatedPeople": "Moses; Isaiah",
     "Places": "Mount Sinai",
-    "RelatedEvents": "Giving of the Law at Sinai"
+    "RelatedEvents": "The Ten Commandments"
   },
   {
     "Word": "כָּבוֹד",
@@ -276,7 +276,7 @@
     "Slug": "kabod",
     "RelatedPeople": "Moses; Isaiah",
     "Places": "Mount Sinai",
-    "RelatedEvents": "Giving of the Law at Sinai"
+    "RelatedEvents": "The Ten Commandments"
   },
   {
     "Word": "מִשְׁפָּט",
@@ -293,7 +293,7 @@
     "Slug": "mishpat",
     "RelatedPeople": "Moses; Amos; Micah",
     "Places": "Mount Sinai",
-    "RelatedEvents": "Giving of the Law at Sinai"
+    "RelatedEvents": "The Ten Commandments"
   },
   {
     "Word": "ἐλπίς",
@@ -357,7 +357,7 @@
     "RelatedBooks": "John; Romans; Ephesians; 2 Corinthians",
     "Slug": "charis",
     "RelatedPeople": "Paul",
-    "RelatedEvents": "Conversion of Saul (Paul)"
+    "RelatedEvents": "The Conversion of Paul"
   },
   {
     "Word": "πίστις",
@@ -389,7 +389,7 @@
     "RelatedBooks": "John; Luke; Hebrews",
     "Slug": "logos",
     "RelatedPeople": "Jesus; John the Apostle",
-    "RelatedEvents": "Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus"
   },
   {
     "Word": "πνεῦμα",
@@ -473,7 +473,7 @@
     "Slug": "metanoia",
     "RelatedPeople": "John the Baptist; Jesus",
     "Places": "Jordan River",
-    "RelatedEvents": "Baptism of Jesus"
+    "RelatedEvents": "The Baptism of Jesus"
   },
   {
     "Word": "κοινωνία",
@@ -506,7 +506,7 @@
     "RelatedBooks": "John; Romans; Ephesians; Philippians",
     "Slug": "eirene",
     "RelatedPeople": "Jesus; Paul",
-    "RelatedEvents": "Last Supper"
+    "RelatedEvents": "The Last Supper"
   },
   {
     "Word": "δόξα",
@@ -523,7 +523,7 @@
     "Slug": "doxa",
     "RelatedPeople": "Jesus; Moses",
     "Places": "Mount Sinai",
-    "RelatedEvents": "Giving of the Law at Sinai; Transfiguration"
+    "RelatedEvents": "The Ten Commandments; Transfiguration"
   },
   {
     "Word": "ἁμαρτία",
@@ -557,7 +557,7 @@
     "Slug": "euangelion",
     "RelatedPeople": "Jesus; Paul",
     "Places": "Galilee",
-    "RelatedEvents": "Conversion of Saul (Paul)"
+    "RelatedEvents": "The Conversion of Paul"
   },
   {
     "Word": "κύριος",
@@ -573,7 +573,7 @@
     "RelatedBooks": "Luke; Acts; Romans; Philippians",
     "Slug": "kurios",
     "RelatedPeople": "Jesus; Paul",
-    "RelatedEvents": "The Resurrection; Conversion of Saul (Paul)"
+    "RelatedEvents": "The Resurrection; The Conversion of Paul"
   },
   {
     "Word": "Χριστός",
@@ -590,7 +590,7 @@
     "Slug": "christos",
     "RelatedPeople": "Jesus; King David",
     "Places": "Bethlehem",
-    "RelatedEvents": "Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus"
   },
   {
     "Word": "βάπτισμα",
@@ -607,7 +607,7 @@
     "Slug": "baptisma",
     "RelatedPeople": "Jesus; John the Baptist; Paul",
     "Places": "Jordan River",
-    "RelatedEvents": "Baptism of Jesus"
+    "RelatedEvents": "The Baptism of Jesus"
   },
   {
     "Word": "μάρτυς",
@@ -641,7 +641,7 @@
     "Slug": "parakletos",
     "RelatedPeople": "Jesus",
     "Places": "Jerusalem",
-    "RelatedEvents": "Last Supper; Pentecost"
+    "RelatedEvents": "The Last Supper; Pentecost"
   },
   {
     "Word": "ἀλήθεια",
@@ -704,7 +704,7 @@
     "RelatedBooks": "Psalms; John; Acts",
     "Slug": "hodos",
     "RelatedPeople": "Jesus; Paul",
-    "RelatedEvents": "Conversion of Saul (Paul)"
+    "RelatedEvents": "The Conversion of Paul"
   },
   {
     "Word": "φῶς",
@@ -753,7 +753,7 @@
     "Slug": "hagios",
     "RelatedPeople": "Paul; Moses",
     "Places": "Mount Sinai",
-    "RelatedEvents": "Giving of the Law at Sinai"
+    "RelatedEvents": "The Ten Commandments"
   },
   {
     "Word": "ψυχή",
@@ -802,7 +802,7 @@
     "Slug": "sarx",
     "RelatedPeople": "Paul; Jesus",
     "Places": "Bethlehem",
-    "RelatedEvents": "Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus"
   },
   {
     "Word": "καιρός",
@@ -819,6 +819,6 @@
     "Slug": "kairos",
     "RelatedPeople": "Jesus; Paul",
     "Places": "Galilee",
-    "RelatedEvents": "Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus"
   }
 ]

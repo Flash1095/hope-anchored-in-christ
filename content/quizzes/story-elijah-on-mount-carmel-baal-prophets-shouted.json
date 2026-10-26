@@ -1,0 +1,16 @@
+{
+  "Quiz": "Elijah on Mount Carmel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Baal's prophets do from morning until evening, with no answer?",
+  "OptionA": "Build a second altar",
+  "OptionB": "Sleep",
+  "OptionC": "Shout and cut themselves",
+  "OptionD": "Sing quietly",
+  "CorrectAnswer": "C",
+  "Explanation": "Baal's prophets shouted and cut themselves all day, but no answer came.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "1 Kings 18:28",
+  "Slug": "story-elijah-on-mount-carmel-baal-prophets-shouted",
+  "ReadingTitle": "Elijah on Mount Carmel",
+  "ReadingLink": "#/stories/3"
+}

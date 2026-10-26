@@ -1,0 +1,16 @@
+{
+  "Quiz": "Daniel in the Lions' Den Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "For how many days did the new law forbid prayer to anyone but the king?",
+  "OptionA": "Seven",
+  "OptionB": "Ten",
+  "OptionC": "Forty",
+  "OptionD": "Thirty",
+  "CorrectAnswer": "D",
+  "Explanation": "The law banned prayer to anyone but King Darius for thirty days.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Daniel 6:7",
+  "Slug": "story-daniel-in-the-lions-den-thirty-days-law",
+  "ReadingTitle": "Daniel in the Lions' Den",
+  "ReadingLink": "#/stories/1"
+}

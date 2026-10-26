@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Call of Abraham Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Abram walk by, even though he would not see the promise fulfilled in his lifetime?",
+  "OptionA": "Sight of the land",
+  "OptionB": "Advice from his father",
+  "OptionC": "Faith in God's promise",
+  "OptionD": "Signs from the stars",
+  "CorrectAnswer": "C",
+  "Explanation": "Abram walked by faith in a promise he would not see fulfilled in his lifetime.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Genesis 12:4",
+  "Slug": "the-call-of-abraham-walked-by-faith",
+  "ReadingTitle": "The Call of Abraham",
+  "ReadingLink": "#/stories/15"
+}

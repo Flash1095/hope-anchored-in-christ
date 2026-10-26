@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Prodigal Son Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the younger son demand from his father?",
+  "OptionA": "His brother's share as well",
+  "OptionB": "The family house for himself",
+  "OptionC": "A servant's wages in advance",
+  "OptionD": "His inheritance early",
+  "CorrectAnswer": "D",
+  "Explanation": "The younger son asked for his share before his father's death, in effect wishing him gone.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Luke 15:12",
+  "Slug": "the-prodigal-son-inheritance-early",
+  "ReadingTitle": "The Prodigal Son",
+  "ReadingLink": "#/stories/23"
+}

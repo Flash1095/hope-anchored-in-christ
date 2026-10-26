@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Sermon on the Mount Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Why were the crowds amazed at Jesus' teaching?",
+  "OptionA": "He taught in a new language",
+  "OptionB": "He taught with authority",
+  "OptionC": "He taught only in parables",
+  "OptionD": "He taught from a written scroll",
+  "CorrectAnswer": "B",
+  "Explanation": "The crowds were amazed because Jesus taught with authority, unlike anything they had heard.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Matthew 7:29",
+  "Slug": "the-sermon-on-the-mount-taught-with-authority",
+  "ReadingTitle": "The Sermon on the Mount",
+  "ReadingLink": "#/stories/25"
+}

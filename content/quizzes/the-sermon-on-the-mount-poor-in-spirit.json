@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Sermon on the Mount Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Which group does the retelling name first among the blessed?",
+  "OptionA": "The rich in spirit",
+  "OptionB": "The strong in battle",
+  "OptionC": "The rulers of the land",
+  "OptionD": "The poor in spirit",
+  "CorrectAnswer": "D",
+  "Explanation": "Jesus opened the Sermon by blessing the poor in spirit, the meek, the merciful, and the peacemakers.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Matthew 5:3",
+  "Slug": "the-sermon-on-the-mount-poor-in-spirit",
+  "ReadingTitle": "The Sermon on the Mount",
+  "ReadingLink": "#/stories/25"
+}

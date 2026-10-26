@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Temptation in the Wilderness Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What had Jesus just come from when He was led into the wilderness?",
+  "OptionA": "His first sermon",
+  "OptionB": "His baptism",
+  "OptionC": "His journey to Jerusalem",
+  "OptionD": "His forty days in Galilee",
+  "CorrectAnswer": "B",
+  "Explanation": "Fresh from His baptism, Jesus was led by the Spirit into the wilderness.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Matthew 4:1",
+  "Slug": "the-temptation-in-the-wilderness-fresh-from-baptism",
+  "ReadingTitle": "The Temptation in the Wilderness",
+  "ReadingLink": "#/stories/26"
+}

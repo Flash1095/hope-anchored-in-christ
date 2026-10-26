@@ -1,0 +1,16 @@
+{
+ "Quiz": "Crossing the Jordan Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Where were the twelve stones pitched?",
+ "OptionA": "Jericho",
+ "OptionB": "Shiloh",
+ "OptionC": "Mount Ebal",
+ "OptionD": "Gilgal",
+ "CorrectAnswer": "D",
+ "Explanation": "Joshua pitched in Gilgal the twelve stones that had been taken out of the Jordan.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Joshua 4:20",
+ "Slug": "crossing-the-jordan-stones-at-gilgal",
+ "ReadingTitle": "Crossing the Jordan",
+ "ReadingLink": "#/stories/34"
+}

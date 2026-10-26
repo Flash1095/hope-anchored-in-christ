@@ -1,0 +1,16 @@
+{
+  "Quiz": "Samson and Delilah Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "In his final act, what did Samson bring down on his captors and himself?",
+  "OptionA": "The palace at Gaza",
+  "OptionB": "The walls of Ashkelon",
+  "OptionC": "The prison at Timnah",
+  "OptionD": "The temple of Dagon",
+  "CorrectAnswer": "D",
+  "Explanation": "In his final act, Samson brought down the temple of Dagon on his captors and himself.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Judges 16:30",
+  "Slug": "samson-and-delilah-temple-of-dagon",
+  "ReadingTitle": "Samson and Delilah",
+  "ReadingLink": "#/stories/10"
+}

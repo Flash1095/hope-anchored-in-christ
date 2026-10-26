@@ -1,0 +1,16 @@
+{
+ "Quiz": "Fall of Samaria Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "After Israel was removed, which tribe alone was left?",
+ "OptionA": "Benjamin",
+ "OptionB": "Judah",
+ "OptionC": "Levi",
+ "OptionD": "Dan",
+ "CorrectAnswer": "B",
+ "Explanation": "The LORD was very angry with Israel and removed them out of His sight, and there was none left but the tribe of Judah only.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "2 Kings 17:18",
+ "Slug": "fall-of-samaria-only-judah-left",
+ "ReadingTitle": "Fall of Samaria",
+ "ReadingLink": "#/stories/43"
+}

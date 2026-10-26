@@ -1,0 +1,16 @@
+{
+ "Quiz": "Wilderness Wanderings Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did Moses bring forth for the people when he struck the rock?",
+ "OptionA": "Fire",
+ "OptionB": "Oil",
+ "OptionC": "Water in abundance",
+ "OptionD": "Honey",
+ "CorrectAnswer": "C",
+ "Explanation": "Moses smote the rock twice, and water came out abundantly, and the congregation and their beasts drank.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Numbers 20:11",
+ "Slug": "wilderness-wanderings-water-from-rock",
+ "ReadingTitle": "Wilderness Wanderings",
+ "ReadingLink": "#/stories/68"
+}

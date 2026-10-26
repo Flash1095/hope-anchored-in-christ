@@ -1,0 +1,16 @@
+{
+ "Quiz": "Destruction of Sodom and Gomorrah Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How many angels came to Sodom at evening, where Lot sat in the gate?",
+ "OptionA": "Two angels",
+ "OptionB": "One angel",
+ "OptionC": "Three angels",
+ "OptionD": "Four angels",
+ "CorrectAnswer": "A",
+ "Explanation": "Two angels came to Sodom at evening, and Lot rose up to meet them and bowed himself to the ground.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Genesis 19:1",
+ "Slug": "destruction-of-sodom-and-gomorrah-two-angels-came",
+ "ReadingTitle": "Destruction of Sodom and Gomorrah",
+ "ReadingLink": "#/stories/40"
+}

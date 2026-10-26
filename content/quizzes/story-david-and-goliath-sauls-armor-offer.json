@@ -1,0 +1,16 @@
+{
+  "Quiz": "David and Goliath Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who offered David his own armor for the fight?",
+  "OptionA": "Jesse",
+  "OptionB": "Jonathan",
+  "OptionC": "King Saul",
+  "OptionD": "Samuel",
+  "CorrectAnswer": "C",
+  "Explanation": "King Saul offered David his armor, but David refused it and went as he was.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "1 Samuel 17:38",
+  "Slug": "story-david-and-goliath-sauls-armor-offer",
+  "ReadingTitle": "David and Goliath",
+  "ReadingLink": "#/stories/2"
+}

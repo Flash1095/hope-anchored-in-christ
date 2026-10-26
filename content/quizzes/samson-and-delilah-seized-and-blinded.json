@@ -1,0 +1,16 @@
+{
+  "Quiz": "Samson and Delilah Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What happened to Samson after his hair was cut while he slept?",
+  "OptionA": "He fled to the hills",
+  "OptionB": "The Philistines seized and blinded him",
+  "OptionC": "He was made a Philistine king",
+  "OptionD": "He was sold into Egypt",
+  "CorrectAnswer": "B",
+  "Explanation": "While Samson slept, Delilah cut his hair, and the Philistines seized him and blinded him.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Judges 16:21",
+  "Slug": "samson-and-delilah-seized-and-blinded",
+  "ReadingTitle": "Samson and Delilah",
+  "ReadingLink": "#/stories/10"
+}

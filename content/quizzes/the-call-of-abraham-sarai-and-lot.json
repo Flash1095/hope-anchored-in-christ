@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Call of Abraham Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who traveled with Abram when he went?",
+  "OptionA": "Hagar and Ishmael",
+  "OptionB": "His father Terah alone",
+  "OptionC": "His brother Nahor",
+  "OptionD": "Sarai and his nephew Lot",
+  "CorrectAnswer": "D",
+  "Explanation": "Abram went taking Sarai, his nephew Lot, and everything he owned.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 12:5",
+  "Slug": "the-call-of-abraham-sarai-and-lot",
+  "ReadingTitle": "The Call of Abraham",
+  "ReadingLink": "#/stories/15"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Call of Abraham Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Abram build wherever he camped?",
+  "OptionA": "Wells for his flocks",
+  "OptionB": "Walls for defense",
+  "OptionC": "Altars to the Lord",
+  "OptionD": "Tents for traders",
+  "CorrectAnswer": "C",
+  "Explanation": "Abram built altars to the Lord wherever he camped as he walked by faith.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 12:8",
+  "Slug": "the-call-of-abraham-built-altars",
+  "ReadingTitle": "The Call of Abraham",
+  "ReadingLink": "#/stories/15"
+}

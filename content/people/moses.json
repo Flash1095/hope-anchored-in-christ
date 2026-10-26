@@ -1,15 +1,15 @@
 {
-  "Name": "Moses",
-  "Role": "Prophet; Lawgiver; Deliverer",
-  "Testament": "Old",
-  "TimelineEra": "Exodus and Wilderness",
-  "Summary": "Moses led Israel out of slavery in Egypt, received the Ten Commandments on Mount Sinai, and guided God's people through forty years in the wilderness. He is the great prophet and lawgiver of the Old Testament.",
-  "KeyStory": "At the burning bush, a reluctant Moses was commissioned by God, whose name is I AM, to lead Israel out of Egypt.",
-  "KeyVerses": "Exodus 3:10-14; Exodus 14:21; Deuteronomy 34:10-12; Hebrews 11:24-27",
-  "RelatedBooks": "Exodus; Leviticus; Numbers; Deuteronomy; Hebrews",
-  "RelatedPeople": "Aaron; Miriam; Joshua",
-  "LifeLesson": "Moses felt inadequate for his calling, and God answered, I will be with you. Whatever God asks of you, His presence is the anchor that makes it possible.",
-  "Slug": "moses",
-  "Places": "Egypt; Goshen; Midian; Mount Sinai; Kadesh Barnea; Plains of Moab",
-  "RelatedEvents": "The Burning Bush; The Ten Plagues; The Passover; The Exodus and the Red Sea; The Ten Commandments; Giving of the Law at Sinai; The Golden Calf; Wilderness Wanderings"
+ "Name": "Moses",
+ "Role": "Prophet; Lawgiver; Deliverer",
+ "Testament": "Old",
+ "TimelineEra": "Exodus and Wilderness",
+ "Summary": "Moses led Israel out of slavery in Egypt, received the Ten Commandments on Mount Sinai, and guided God's people through forty years in the wilderness. He is the great prophet and lawgiver of the Old Testament.",
+ "KeyStory": "At the burning bush, a reluctant Moses was commissioned by God, whose name is I AM, to lead Israel out of Egypt.",
+ "KeyVerses": "Exodus 3:10-14; Exodus 14:21; Deuteronomy 34:10-12; Hebrews 11:24-27",
+ "RelatedBooks": "Exodus; Leviticus; Numbers; Deuteronomy; Hebrews",
+ "RelatedPeople": "Aaron; Miriam; Joshua",
+ "LifeLesson": "Moses felt inadequate for his calling, and God answered, I will be with you. Whatever God asks of you, His presence is the anchor that makes it possible.",
+ "Slug": "moses",
+ "Places": "Egypt; Goshen; Midian; Mount Sinai; Kadesh Barnea; Plains of Moab",
+ "RelatedEvents": "The Burning Bush; The Ten Plagues; The Passover; The Exodus and the Red Sea; The Ten Commandments; The Golden Calf; Wilderness Wanderings"
 }

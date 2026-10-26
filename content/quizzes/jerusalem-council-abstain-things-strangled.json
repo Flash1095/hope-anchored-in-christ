@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jerusalem Council Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "Which of these abstentions did the Council's letter ask Gentile believers to keep?",
+ "OptionA": "Things strangled",
+ "OptionB": "Pork only",
+ "OptionC": "Wine at feasts",
+ "OptionD": "Work on the Sabbath",
+ "CorrectAnswer": "A",
+ "Explanation": "The letter asked them to abstain from pollutions of idols, from fornication, from things strangled, and from blood.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Acts 15:20",
+ "Slug": "jerusalem-council-abstain-things-strangled",
+ "ReadingTitle": "Jerusalem Council",
+ "ReadingLink": "#/stories/47"
+}

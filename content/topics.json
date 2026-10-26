@@ -23,7 +23,7 @@
     "RelatedBooks": "Genesis; Exodus; Jeremiah; Luke; Hebrews",
     "Slug": "covenant",
     "Places": "Mount Sinai",
-    "RelatedEvents": "Giving of the Law at Sinai; Davidic Covenant"
+    "RelatedEvents": "The Ten Commandments; Davidic Covenant"
   },
   {
     "Topic": "Redemption",
@@ -75,7 +75,7 @@
     "RelatedBooks": "Genesis; Deuteronomy; Matthew; John; 2 Corinthians",
     "Slug": "trinity",
     "Places": "Jordan River",
-    "RelatedEvents": "Baptism of Jesus"
+    "RelatedEvents": "The Baptism of Jesus"
   },
   {
     "Topic": "Resurrection",
@@ -101,7 +101,7 @@
     "RelatedBooks": "Daniel; Matthew; Mark; Luke; John; Revelation",
     "Slug": "kingdom-of-god",
     "Places": "Galilee",
-    "RelatedEvents": "Sermon on the Mount"
+    "RelatedEvents": "The Sermon on the Mount"
   },
   {
     "Topic": "Forgiveness",
@@ -163,7 +163,7 @@
     "RelatedBooks": "Matthew; Acts; Romans; Colossians; 1 Peter",
     "Slug": "baptism",
     "Places": "Jordan River",
-    "RelatedEvents": "Baptism of Jesus"
+    "RelatedEvents": "The Baptism of Jesus"
   },
   {
     "Topic": "Worship",
@@ -200,7 +200,7 @@
     "RelatedBooks": "Matthew; Luke; John; Acts; 2 Timothy",
     "Slug": "discipleship",
     "Places": "Galilee",
-    "RelatedEvents": "Sermon on the Mount"
+    "RelatedEvents": "The Sermon on the Mount"
   },
   {
     "Topic": "Creation",
@@ -239,7 +239,7 @@
     "RelatedBooks": "Exodus; Deuteronomy; 1 Corinthians",
     "Slug": "exodus",
     "Places": "Egypt; Goshen; Mount Sinai",
-    "RelatedEvents": "The Ten Plagues; The Passover; The Exodus and the Red Sea; Giving of the Law at Sinai"
+    "RelatedEvents": "The Ten Plagues; The Passover; The Exodus and the Red Sea; The Ten Commandments"
   },
   {
     "Topic": "Exile",
@@ -300,7 +300,7 @@
     "RelatedQuestions": "What is faith according to the Bible?; Can faith and doubt exist together?",
     "RelatedBooks": "Genesis; Habakkuk; Romans; Ephesians; Hebrews; James",
     "Slug": "faith",
-    "RelatedEvents": "Binding of Isaac"
+    "RelatedEvents": "The Binding of Isaac"
   },
   {
     "Topic": "Love",
@@ -326,7 +326,7 @@
     "RelatedBooks": "Leviticus; Isaiah; Matthew; Hebrews; 1 Peter",
     "Slug": "holiness",
     "Places": "Mount Sinai",
-    "RelatedEvents": "Giving of the Law at Sinai"
+    "RelatedEvents": "The Ten Commandments"
   },
   {
     "Topic": "Justice",
@@ -460,7 +460,7 @@
     "RelatedQuestions": "What does the Bible say about anxiety and worry?; Is anxiety a lack of faith?",
     "RelatedBooks": "Psalms; Proverbs; Matthew; John; Philippians; 1 Peter",
     "Slug": "anxiety",
-    "RelatedEvents": "Sermon on the Mount"
+    "RelatedEvents": "The Sermon on the Mount"
   },
   {
     "Topic": "Marriage",
@@ -697,7 +697,7 @@
     "RelatedBooks": "Exodus; Micah; Matthew; Romans",
     "Slug": "christian-ethics",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments; Sermon on the Mount"
+    "RelatedEvents": "The Ten Commandments; The Sermon on the Mount"
   },
   {
     "Topic": "Christian Life",
@@ -784,7 +784,7 @@
     "RelatedBooks": "Matthew; Luke; 1 Corinthians",
     "Slug": "communion",
     "Places": "Jerusalem",
-    "RelatedEvents": "Last Supper"
+    "RelatedEvents": "The Last Supper"
   },
   {
     "Topic": "Community",
@@ -807,7 +807,7 @@
     "RelatedPeople": "Jesus; King David",
     "RelatedBooks": "Psalms; Matthew; Luke; Colossians",
     "Slug": "compassion",
-    "RelatedEvents": "The Good Samaritan; Feeding of the Five Thousand"
+    "RelatedEvents": "The Good Samaritan; The Feeding of the Five Thousand"
   },
   {
     "Topic": "Confession",
@@ -989,7 +989,7 @@
     "RelatedBooks": "Exodus; Isaiah; John; Colossians",
     "Slug": "divinity",
     "Places": "Jordan River",
-    "RelatedEvents": "Baptism of Jesus; Transfiguration"
+    "RelatedEvents": "The Baptism of Jesus; Transfiguration"
   },
   {
     "Topic": "Doctrine",
@@ -1098,7 +1098,7 @@
     "RelatedBooks": "Exodus; Micah; Matthew; Romans",
     "Slug": "ethics",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments; Sermon on the Mount"
+    "RelatedEvents": "The Ten Commandments; The Sermon on the Mount"
   },
   {
     "Topic": "Evidence",
@@ -1331,7 +1331,7 @@
     "RelatedBooks": "Matthew; Mark; Luke; John",
     "Slug": "gospels",
     "Places": "Bethlehem; Nazareth; Galilee; Jerusalem; Golgotha",
-    "RelatedEvents": "Birth of Jesus; Baptism of Jesus; The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Birth of Jesus; The Baptism of Jesus; The Crucifixion; The Resurrection"
   },
   {
     "Topic": "Guidance",
@@ -1436,7 +1436,7 @@
     "RelatedBooks": "John; Philippians; Colossians; Hebrews",
     "Slug": "hypostatic-union",
     "Places": "Jordan River",
-    "RelatedEvents": "Baptism of Jesus; Transfiguration"
+    "RelatedEvents": "The Baptism of Jesus; Transfiguration"
   },
   {
     "Topic": "Identity",
@@ -1530,7 +1530,7 @@
     "RelatedBooks": "Isaiah; Matthew; John; Philippians; Colossians",
     "Slug": "jesus-christ",
     "Places": "Bethlehem; Nazareth; Galilee; Jerusalem; Golgotha",
-    "RelatedEvents": "Birth of Jesus; Baptism of Jesus; The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Birth of Jesus; The Baptism of Jesus; The Crucifixion; The Resurrection"
   },
   {
     "Topic": "Judgment",
@@ -1694,7 +1694,7 @@
     "RelatedBooks": "Psalms; Isaiah; Daniel; Luke; John",
     "Slug": "messiah",
     "Places": "Bethlehem; Jordan River; Golgotha",
-    "RelatedEvents": "Birth of Jesus; Baptism of Jesus; The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Birth of Jesus; The Baptism of Jesus; The Crucifixion; The Resurrection"
   },
   {
     "Topic": "Messianic Prophecies",
@@ -1707,7 +1707,7 @@
     "RelatedBooks": "Genesis; Micah; Isaiah; Zechariah; Matthew",
     "Slug": "messianic-prophecies",
     "Places": "Bethlehem",
-    "RelatedEvents": "Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus"
   },
   {
     "Topic": "Methodism",
@@ -1738,7 +1738,7 @@
     "RelatedBooks": "Exodus; 1 Kings; John; Acts",
     "Slug": "miracles",
     "Places": "Egypt; Mount Carmel; Bethany",
-    "RelatedEvents": "The Ten Plagues; Elijah on Mount Carmel; Feeding of the Five Thousand; Raising of Lazarus"
+    "RelatedEvents": "The Ten Plagues; Elijah on Mount Carmel; The Feeding of the Five Thousand; Raising of Lazarus"
   },
   {
     "Topic": "Mission",
@@ -1804,7 +1804,7 @@
     "RelatedBooks": "Exodus; Micah; Matthew; Romans",
     "Slug": "morality",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments; Sermon on the Mount"
+    "RelatedEvents": "The Ten Commandments; The Sermon on the Mount"
   },
   {
     "Topic": "Myths",
@@ -1826,7 +1826,7 @@
     "RelatedBooks": "Genesis; Psalms; Isaiah; Revelation",
     "Slug": "nations",
     "Places": "Babel; Jerusalem",
-    "RelatedEvents": "Tower of Babel; Pentecost"
+    "RelatedEvents": "The Tower of Babel; Pentecost"
   },
   {
     "Topic": "Nature and Creation",
@@ -1861,7 +1861,7 @@
     "RelatedBooks": "John; Romans; 2 Corinthians; Ephesians; 1 Peter",
     "Slug": "new-life",
     "Places": "Jordan River",
-    "RelatedEvents": "Baptism of Jesus; The Resurrection"
+    "RelatedEvents": "The Baptism of Jesus; The Resurrection"
   },
   {
     "Topic": "Nicene Creed",
@@ -1882,7 +1882,7 @@
     "RelatedDoctrines": "Sanctification",
     "RelatedBooks": "Deuteronomy; 1 Samuel; Psalms; Luke; John; Hebrews",
     "Slug": "obedience",
-    "RelatedEvents": "Binding of Isaac"
+    "RelatedEvents": "The Binding of Isaac"
   },
   {
     "Topic": "Occult",
@@ -1984,7 +1984,7 @@
     "RelatedBooks": "Exodus; Psalms; Matthew; John; Revelation",
     "Slug": "presence-of-god",
     "Places": "Midian; Mount Sinai; Jerusalem",
-    "RelatedEvents": "The Burning Bush; Giving of the Law at Sinai; Pentecost"
+    "RelatedEvents": "The Burning Bush; The Ten Commandments; Pentecost"
   },
   {
     "Topic": "Pride",
@@ -1996,7 +1996,7 @@
     "RelatedBooks": "Proverbs; Isaiah; Daniel; Luke; James; 1 Peter",
     "Slug": "pride",
     "Places": "Babel",
-    "RelatedEvents": "Tower of Babel"
+    "RelatedEvents": "The Tower of Babel"
   },
   {
     "Topic": "Promise",
@@ -2007,7 +2007,7 @@
     "RelatedBooks": "Genesis; 2 Samuel; Jeremiah; 2 Corinthians; Hebrews",
     "Slug": "promise",
     "Places": "Ur; Haran; Canaan",
-    "RelatedEvents": "Call of Abraham; Davidic Covenant"
+    "RelatedEvents": "The Call of Abraham; Davidic Covenant"
   },
   {
     "Topic": "Promises of God",
@@ -2019,7 +2019,7 @@
     "RelatedBooks": "Genesis; Deuteronomy; Isaiah; Matthew; Romans; Hebrews",
     "Slug": "promises-of-god",
     "Places": "Ur; Canaan",
-    "RelatedEvents": "Call of Abraham; Davidic Covenant"
+    "RelatedEvents": "The Call of Abraham; Davidic Covenant"
   },
   {
     "Topic": "Provision",
@@ -2031,7 +2031,7 @@
     "RelatedBooks": "Exodus; 1 Kings; Psalms; Matthew; Philippians",
     "Slug": "provision",
     "Places": "Galilee",
-    "RelatedEvents": "Wilderness Wanderings; Feeding of the Five Thousand"
+    "RelatedEvents": "Wilderness Wanderings; The Feeding of the Five Thousand"
   },
   {
     "Topic": "Psychology",
@@ -2202,7 +2202,7 @@
     "RelatedBooks": "Matthew; Luke; Acts; Romans; 1 Corinthians",
     "Slug": "sacraments-and-ordinances",
     "Places": "Jerusalem; Jordan River",
-    "RelatedEvents": "Last Supper; Baptism of Jesus"
+    "RelatedEvents": "The Last Supper; The Baptism of Jesus"
   },
   {
     "Topic": "Satan",
@@ -2214,7 +2214,7 @@
     "RelatedBooks": "Genesis; Job; Matthew; Ephesians; 1 Peter; Revelation",
     "Slug": "satan",
     "Places": "Garden of Eden",
-    "RelatedEvents": "The Fall; Temptation in the Wilderness"
+    "RelatedEvents": "The Fall; The Temptation in the Wilderness"
   },
   {
     "Topic": "Science and Faith",
@@ -2287,7 +2287,7 @@
     "RelatedDoctrines": "Demons",
     "RelatedBooks": "Daniel; Matthew; Ephesians; James; 1 Peter; Revelation",
     "Slug": "spiritual-warfare",
-    "RelatedEvents": "Temptation in the Wilderness"
+    "RelatedEvents": "The Temptation in the Wilderness"
   },
   {
     "Topic": "Stereotypes",
@@ -2309,7 +2309,7 @@
     "RelatedDoctrines": "Providence",
     "RelatedBooks": "Judges; Psalms; Isaiah; 2 Corinthians; Philippians",
     "Slug": "strength",
-    "RelatedEvents": "Samson and the Philistines"
+    "RelatedEvents": "Samson and Delilah"
   },
   {
     "Topic": "Superstition",
@@ -2341,7 +2341,7 @@
     "RelatedBooks": "Genesis; Matthew; 1 Corinthians; Hebrews; James",
     "Slug": "temptation",
     "Places": "Garden of Eden",
-    "RelatedEvents": "The Fall; Temptation in the Wilderness"
+    "RelatedEvents": "The Fall; The Temptation in the Wilderness"
   },
   {
     "Topic": "Testimony",
@@ -2451,7 +2451,7 @@
     "RelatedBooks": "Exodus; 1 Samuel; John; Romans; 1 Corinthians; 1 John",
     "Slug": "victory",
     "Places": "Jericho",
-    "RelatedEvents": "David and Goliath; Fall of Jericho; The Resurrection"
+    "RelatedEvents": "David and Goliath; The Walls of Jericho; The Resurrection"
   },
   {
     "Topic": "Violence",

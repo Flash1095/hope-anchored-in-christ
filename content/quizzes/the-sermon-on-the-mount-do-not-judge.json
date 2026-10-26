@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Sermon on the Mount Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did Jesus say about judging others?",
+  "OptionA": "Do not judge",
+  "OptionB": "Judge only strangers",
+  "OptionC": "Judge quickly and firmly",
+  "OptionD": "Judge after asking first",
+  "CorrectAnswer": "A",
+  "Explanation": "Jesus warned His listeners not to judge, a teaching that belongs to kingdom living.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Matthew 7:1",
+  "Slug": "the-sermon-on-the-mount-do-not-judge",
+  "ReadingTitle": "The Sermon on the Mount",
+  "ReadingLink": "#/stories/25"
+}

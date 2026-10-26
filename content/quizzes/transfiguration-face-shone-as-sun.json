@@ -1,0 +1,16 @@
+{
+ "Quiz": "Transfiguration Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What happened to Jesus' face as He was transfigured before them?",
+ "OptionA": "It became hidden by a cloud",
+ "OptionB": "It turned toward Jerusalem",
+ "OptionC": "It shone as the sun",
+ "OptionD": "It was covered with dust",
+ "CorrectAnswer": "C",
+ "Explanation": "He was transfigured before them, and His face did shine as the sun.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Matthew 17:2",
+ "Slug": "transfiguration-face-shone-as-sun",
+ "ReadingTitle": "Transfiguration",
+ "ReadingLink": "#/stories/66"
+}

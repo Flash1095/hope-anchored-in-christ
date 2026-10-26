@@ -20,7 +20,7 @@
     "RelatedBooks": "John; Acts; 2 Corinthians",
     "Slug": "changed-lives",
     "RelatedPeople": "Paul",
-    "RelatedEvents": "Conversion of Saul (Paul)"
+    "RelatedEvents": "The Conversion of Paul"
   },
   {
     "Argument": "Design in Biology",
@@ -57,7 +57,7 @@
     "Slug": "fulfilled-prophecy",
     "RelatedPeople": "Jesus; Isaiah; Micah",
     "Places": "Bethlehem",
-    "RelatedEvents": "Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus"
   },
   {
     "Argument": "Human Dignity",
@@ -105,7 +105,7 @@
     "RelatedBooks": "Psalms; John; Acts",
     "Slug": "religious-experience",
     "RelatedPeople": "Paul; Isaiah",
-    "RelatedEvents": "Conversion of Saul (Paul)"
+    "RelatedEvents": "The Conversion of Paul"
   },
   {
     "Argument": "The Argument from Beauty",
@@ -290,7 +290,7 @@
     "Slug": "the-moral-argument",
     "RelatedPeople": "Moses; Paul",
     "Places": "Mount Sinai",
-    "RelatedEvents": "Giving of the Law at Sinai"
+    "RelatedEvents": "The Ten Commandments"
   },
   {
     "Argument": "The Ontological Argument",

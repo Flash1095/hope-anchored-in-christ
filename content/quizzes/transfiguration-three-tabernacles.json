@@ -1,0 +1,16 @@
+{
+ "Quiz": "Transfiguration Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What did Peter propose building on the mountain?",
+ "OptionA": "An altar of twelve stones",
+ "OptionB": "A temple in Jerusalem",
+ "OptionC": "A tent for the crowds",
+ "OptionD": "Three tabernacles, one for Jesus, one for Moses, and one for Elijah",
+ "CorrectAnswer": "D",
+ "Explanation": "Peter said it was good to be there, and offered to make three tabernacles, one for each of them.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Matthew 17:4",
+ "Slug": "transfiguration-three-tabernacles",
+ "ReadingTitle": "Transfiguration",
+ "ReadingLink": "#/stories/66"
+}

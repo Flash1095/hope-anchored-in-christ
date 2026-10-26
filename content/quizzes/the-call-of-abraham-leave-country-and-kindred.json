@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Call of Abraham Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did God tell Abram to leave behind?",
+  "OptionA": "His flocks and his tents",
+  "OptionB": "His wife and his nephew",
+  "OptionC": "His wealth and his servants",
+  "OptionD": "His country, his people, and his father's household",
+  "CorrectAnswer": "D",
+  "Explanation": "God told Abram to leave his country, his people, and his father's household and go to a land God would show him.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 12:1",
+  "Slug": "the-call-of-abraham-leave-country-and-kindred",
+  "ReadingTitle": "The Call of Abraham",
+  "ReadingLink": "#/stories/15"
+}

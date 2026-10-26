@@ -1,0 +1,16 @@
+{
+  "Quiz": "Joseph and His Brothers Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Joseph's brothers come to Egypt begging for?",
+  "OptionA": "Gold",
+  "OptionB": "Land",
+  "OptionC": "Grain",
+  "OptionD": "Horses",
+  "CorrectAnswer": "C",
+  "Explanation": "In the famine, Joseph's brothers came to Egypt begging for grain.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 42:2",
+  "Slug": "joseph-and-his-brothers-begging-grain",
+  "ReadingTitle": "Joseph and His Brothers",
+  "ReadingLink": "#/stories/6"
+}

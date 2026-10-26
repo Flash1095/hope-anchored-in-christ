@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Resurrection Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "How did Mary respond when the risen Jesus called her by name?",
+  "OptionA": "She ran to tell the guards",
+  "OptionB": "She fell silent and left the garden",
+  "OptionC": "She clung to Him in joy",
+  "OptionD": "She asked Him for bread",
+  "CorrectAnswer": "C",
+  "Explanation": "Mary knew her risen Lord at once and clung to Him in joy.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "John 20:17",
+  "Slug": "story-the-resurrection-clung-in-joy",
+  "ReadingTitle": "The Resurrection",
+  "ReadingLink": "#/stories/24"
+}

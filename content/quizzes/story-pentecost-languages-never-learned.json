@@ -1,0 +1,16 @@
+{
+  "Quiz": "Pentecost Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "In what did the disciples begin to speak?",
+  "OptionA": "Their own language only",
+  "OptionB": "Languages they had never learned",
+  "OptionC": "The language of angels only",
+  "OptionD": "Secret codes",
+  "CorrectAnswer": "B",
+  "Explanation": "The disciples spoke in languages they had never learned, declaring the wonders of God.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Acts 2:4",
+  "Slug": "story-pentecost-languages-never-learned",
+  "ReadingTitle": "Pentecost",
+  "ReadingLink": "#/stories/8"
+}

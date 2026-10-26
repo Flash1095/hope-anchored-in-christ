@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Ten Commandments Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Which of these is one of the ten words God spoke?",
+  "OptionA": "Honour the king of Egypt",
+  "OptionB": "Honour the priests above all",
+  "OptionC": "Honour the mountain of Sinai",
+  "OptionD": "Honour father and mother",
+  "CorrectAnswer": "D",
+  "Explanation": "Honouring father and mother is one of the ten words God gave at Sinai.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Exodus 20:12",
+  "Slug": "the-ten-commandments-honour-father-mother",
+  "ReadingTitle": "The Ten Commandments",
+  "ReadingLink": "#/stories/27"
+}

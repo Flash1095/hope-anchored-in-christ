@@ -1,0 +1,16 @@
+{
+ "Quiz": "Paul Shipwrecked on Malta Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What was the name of the tempestuous wind that struck Paul's ship?",
+ "OptionA": "The north wind",
+ "OptionB": "The sirocco",
+ "OptionC": "Euroclydon",
+ "OptionD": "The Levant wind",
+ "CorrectAnswer": "C",
+ "Explanation": "Not long after leaving Crete, there arose a tempestuous wind called Euroclydon, which drove the ship for many days.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Acts 27:14",
+ "Slug": "paul-shipwrecked-on-malta-euroclydon",
+ "ReadingTitle": "Paul Shipwrecked on Malta",
+ "ReadingLink": "#/stories/54"
+}

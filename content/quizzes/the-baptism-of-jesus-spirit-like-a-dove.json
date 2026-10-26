@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Baptism of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What descended like a dove as Jesus came up from the water?",
+  "OptionA": "A cloud of fire",
+  "OptionB": "An angel",
+  "OptionC": "The Spirit of God",
+  "OptionD": "A white robe",
+  "CorrectAnswer": "C",
+  "Explanation": "As Jesus came up from the water, the Spirit of God descended like a dove and rested on him.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Matthew 3:16",
+  "Slug": "the-baptism-of-jesus-spirit-like-a-dove",
+  "ReadingTitle": "The Baptism of Jesus",
+  "ReadingLink": "#/stories/11"
+}

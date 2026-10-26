@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Tower of Babel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Why did the people want to build a city and a tower?",
+  "OptionA": "To make a name for themselves and avoid being scattered",
+  "OptionB": "To reach the stars and count them",
+  "OptionC": "To store grain for a famine",
+  "OptionD": "To honour the flood survivors",
+  "CorrectAnswer": "A",
+  "Explanation": "The builders wanted to make a name for themselves and avoid being scattered.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 11:4",
+  "Slug": "the-tower-of-babel-make-a-name",
+  "ReadingTitle": "The Tower of Babel",
+  "ReadingLink": "#/stories/28"
+}

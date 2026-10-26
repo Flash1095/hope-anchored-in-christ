@@ -1,15 +1,15 @@
 {
-  "Name": "Egypt",
-  "ModernLocation": "Egypt",
-  "Maps": "sinai-journeys",
-  "Testament": "Old",
-  "TimelineEra": "Exodus and Wilderness",
-  "Description": "The Nile civilization where Joseph rose from prisoner to prime minister, where Israel multiplied into a nation - and where Pharaoh enslaved them for 400 years.",
-  "BiblicalSignificance": "Egypt is Scripture's great picture of bondage - and of deliverance. The Exodus became Israel's defining story: our God hears, He comes down, and He brings out. Every redemption since echoes it.",
-  "KeyScriptures": "Genesis 41:39-43; Exodus 3:7-8; Exodus 14:13",
-  "RelatedBooks": "Genesis; Exodus",
-  "RelatedPeople": "Joseph, Son of Jacob; Moses; Aaron; Miriam",
-  "Slug": "egypt",
-  "RelatedEvents": "Joseph Rises to Power in Egypt; Joseph Sold into Egypt; The Passover; The Ten Plagues; The Exodus and Crossing of the Red Sea",
-  "Places": "Goshen; Midian; Mount Sinai"
+ "Name": "Egypt",
+ "ModernLocation": "Egypt",
+ "Maps": "sinai-journeys",
+ "Testament": "Old",
+ "TimelineEra": "Exodus and Wilderness",
+ "Description": "The Nile civilization where Joseph rose from prisoner to prime minister, where Israel multiplied into a nation - and where Pharaoh enslaved them for 400 years.",
+ "BiblicalSignificance": "Egypt is Scripture's great picture of bondage - and of deliverance. The Exodus became Israel's defining story: our God hears, He comes down, and He brings out. Every redemption since echoes it.",
+ "KeyScriptures": "Genesis 41:39-43; Exodus 3:7-8; Exodus 14:13",
+ "RelatedBooks": "Genesis; Exodus",
+ "RelatedPeople": "Joseph, Son of Jacob; Moses; Aaron; Miriam",
+ "Slug": "egypt",
+ "RelatedEvents": "Joseph and His Brothers; The Passover; The Ten Plagues; The Exodus and the Red Sea",
+ "Places": "Goshen; Midian; Mount Sinai"
 }

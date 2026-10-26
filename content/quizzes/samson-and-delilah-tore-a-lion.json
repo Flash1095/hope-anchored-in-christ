@@ -1,0 +1,16 @@
+{
+  "Quiz": "Samson and Delilah Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What animal did Samson tear apart with his great strength?",
+  "OptionA": "A bear",
+  "OptionB": "A lion",
+  "OptionC": "A bull",
+  "OptionD": "A wolf",
+  "CorrectAnswer": "B",
+  "Explanation": "Samson tore a lion apart, one of the early signs of the supernatural strength God gave him.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Judges 14:6",
+  "Slug": "samson-and-delilah-tore-a-lion",
+  "ReadingTitle": "Samson and Delilah",
+  "ReadingLink": "#/stories/10"
+}

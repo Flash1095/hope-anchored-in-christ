@@ -1,0 +1,16 @@
+{
+ "Quiz": "Rebuilding of the Temple Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "By what did the Lord say Zerubbabel's work would be accomplished?",
+ "OptionA": "By the king's army",
+ "OptionB": "By gold from Persia",
+ "OptionC": "Not by might, nor by power, but by my Spirit",
+ "OptionD": "By the people's strength",
+ "CorrectAnswer": "C",
+ "Explanation": "The word of the Lord to Zerubbabel was, 'Not by might, nor by power, but by my spirit, saith the LORD of hosts.'",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Zechariah 4:6",
+ "Slug": "rebuilding-of-the-temple-not-by-might",
+ "ReadingTitle": "Rebuilding of the Temple",
+ "ReadingLink": "#/stories/58"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "David and Goliath Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Why had David come to the army camp in the first place?",
+  "OptionA": "To join the army",
+  "OptionB": "To challenge Goliath",
+  "OptionC": "To spy on the Philistines",
+  "OptionD": "To bring his brothers food",
+  "CorrectAnswer": "D",
+  "Explanation": "David was a shepherd boy sent to bring his brothers food when he heard Goliath's taunts.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "1 Samuel 17:17",
+  "Slug": "story-david-and-goliath-brothers-food",
+  "ReadingTitle": "David and Goliath",
+  "ReadingLink": "#/stories/2"
+}

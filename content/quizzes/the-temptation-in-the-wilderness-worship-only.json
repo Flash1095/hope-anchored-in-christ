@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Temptation in the Wilderness Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "How did Jesus answer the offer of the kingdoms?",
+  "OptionA": "Worship God and the kingdoms together",
+  "OptionB": "Serve the tempter for a little while",
+  "OptionC": "Worship in the temple only",
+  "OptionD": "Worship the Lord your God and serve Him only",
+  "CorrectAnswer": "D",
+  "Explanation": "Jesus refused the kingdoms and answered that God alone is to be worshipped and served.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 4:10",
+  "Slug": "the-temptation-in-the-wilderness-worship-only",
+  "ReadingTitle": "The Temptation in the Wilderness",
+  "ReadingLink": "#/stories/26"
+}

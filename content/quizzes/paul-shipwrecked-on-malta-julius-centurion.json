@@ -1,0 +1,16 @@
+{
+ "Quiz": "Paul Shipwrecked on Malta Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "Which centurion was in charge of Paul and the other prisoners on the voyage?",
+ "OptionA": "Julius",
+ "OptionB": "Cornelius",
+ "OptionC": "Publius",
+ "OptionD": "Festus",
+ "CorrectAnswer": "A",
+ "Explanation": "Paul and certain other prisoners were delivered to Julius, a centurion of Augustus' band, for the voyage to Italy.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Acts 27:1",
+ "Slug": "paul-shipwrecked-on-malta-julius-centurion",
+ "ReadingTitle": "Paul Shipwrecked on Malta",
+ "ReadingLink": "#/stories/54"
+}

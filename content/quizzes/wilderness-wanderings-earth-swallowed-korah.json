@@ -1,0 +1,16 @@
+{
+ "Quiz": "Wilderness Wanderings Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What happened to Korah and those with him when the ground split?",
+ "OptionA": "They were driven into exile",
+ "OptionB": "They were struck with leprosy",
+ "OptionC": "They fled to Moab",
+ "OptionD": "The earth opened and swallowed them, their houses, and their goods",
+ "CorrectAnswer": "D",
+ "Explanation": "The ground split under them, and the earth opened her mouth and swallowed them up, with their houses and all their goods.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Numbers 16:32",
+ "Slug": "wilderness-wanderings-earth-swallowed-korah",
+ "ReadingTitle": "Wilderness Wanderings",
+ "ReadingLink": "#/stories/68"
+}

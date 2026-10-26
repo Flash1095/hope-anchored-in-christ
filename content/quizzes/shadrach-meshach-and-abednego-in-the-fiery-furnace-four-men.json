@@ -1,0 +1,16 @@
+{
+ "Quiz": "Shadrach, Meshach and Abednego in the Fiery Furnace Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How many figures did Nebuchadnezzar see walking in the fire?",
+ "OptionA": "Three",
+ "OptionB": "Four",
+ "OptionC": "Two",
+ "OptionD": "Seven",
+ "CorrectAnswer": "B",
+ "Explanation": "The king was astonished: he had cast in three bound men, but he saw four men loose, walking in the midst of the fire.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Daniel 3:25",
+ "Slug": "shadrach-meshach-and-abednego-in-the-fiery-furnace-four-men",
+ "ReadingTitle": "Shadrach, Meshach and Abednego in the Fiery Furnace",
+ "ReadingLink": "#/stories/59"
+}

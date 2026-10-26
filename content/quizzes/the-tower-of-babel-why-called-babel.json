@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Tower of Babel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Why was the city called Babel?",
+  "OptionA": "Because it was the tallest city on earth",
+  "OptionB": "Because its builders came from Babel",
+  "OptionC": "Because the tower was never named",
+  "OptionD": "Because there the Lord confused the language of the whole world",
+  "CorrectAnswer": "D",
+  "Explanation": "The name Babel remembers the place where the Lord confused the language of the whole world.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Genesis 11:9",
+  "Slug": "the-tower-of-babel-why-called-babel",
+  "ReadingTitle": "The Tower of Babel",
+  "ReadingLink": "#/stories/28"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Peter and Cornelius Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "In which city did Cornelius live?",
+ "OptionA": "Joppa",
+ "OptionB": "Jerusalem",
+ "OptionC": "Antioch",
+ "OptionD": "Caesarea",
+ "CorrectAnswer": "D",
+ "Explanation": "Cornelius lived in Caesarea, and God prepared him there to send for Peter.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Acts 10:1",
+ "Slug": "peter-and-cornelius-caesarea",
+ "ReadingTitle": "Peter and Cornelius",
+ "ReadingLink": "#/stories/56"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Fall Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who ate first, according to the retelling?",
+  "OptionA": "Adam",
+  "OptionB": "The serpent",
+  "OptionC": "Eve",
+  "OptionD": "Both at the same moment",
+  "CorrectAnswer": "C",
+  "Explanation": "Eve ate, Adam ate, and in that moment everything broke.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 3:6",
+  "Slug": "story-the-fall-eve-ate-first",
+  "ReadingTitle": "The Fall",
+  "ReadingLink": "#/stories/19"
+}

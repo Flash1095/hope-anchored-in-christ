@@ -1,0 +1,16 @@
+{
+  "Quiz": "Jonah and Nineveh Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who threw Jonah overboard during the storm?",
+  "OptionA": "Jonah himself",
+  "OptionB": "The Ninevites",
+  "OptionC": "The fish",
+  "OptionD": "The sailors",
+  "CorrectAnswer": "D",
+  "Explanation": "When the storm raged, the sailors threw Jonah overboard as he had told them.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Jonah 1:15",
+  "Slug": "jonah-and-nineveh-sailors-overboard",
+  "ReadingTitle": "Jonah and Nineveh",
+  "ReadingLink": "#/stories/5"
+}

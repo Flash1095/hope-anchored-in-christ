@@ -1,0 +1,16 @@
+{
+  "Quiz": "Esther Saves Her People Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who plotted to destroy all the Jews in the empire?",
+  "OptionA": "Mordecai",
+  "OptionB": "The king's guards",
+  "OptionC": "Haman",
+  "OptionD": "Esther's servants",
+  "CorrectAnswer": "C",
+  "Explanation": "The royal official Haman plotted to destroy all the Jews in the Persian empire.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Esther 3:6",
+  "Slug": "esther-saves-her-people-haman-plot",
+  "ReadingTitle": "Esther Saves Her People",
+  "ReadingLink": "#/stories/4"
+}

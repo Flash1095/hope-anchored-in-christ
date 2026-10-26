@@ -1,0 +1,16 @@
+{
+ "Quiz": "Destruction of Sodom and Gomorrah Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What happened to Lot's wife when she looked back?",
+ "OptionA": "She fell and could not rise",
+ "OptionB": "She was carried away to Zoar",
+ "OptionC": "She became a pillar of salt",
+ "OptionD": "She lost her sight",
+ "CorrectAnswer": "C",
+ "Explanation": "Lot's wife looked back from behind him, and she became a pillar of salt.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Genesis 19:26",
+ "Slug": "destruction-of-sodom-and-gomorrah-lots-wife-pillar-salt",
+ "ReadingTitle": "Destruction of Sodom and Gomorrah",
+ "ReadingLink": "#/stories/40"
+}

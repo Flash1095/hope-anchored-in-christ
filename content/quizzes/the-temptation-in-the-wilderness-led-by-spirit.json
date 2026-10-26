@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Temptation in the Wilderness Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Who led Jesus into the wilderness?",
+  "OptionA": "John the Baptist",
+  "OptionB": "The Spirit",
+  "OptionC": "The tempter",
+  "OptionD": "His disciples",
+  "CorrectAnswer": "B",
+  "Explanation": "Fresh from His baptism, Jesus was led by the Spirit into the wilderness.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 4:1",
+  "Slug": "the-temptation-in-the-wilderness-led-by-spirit",
+  "ReadingTitle": "The Temptation in the Wilderness",
+  "ReadingLink": "#/stories/26"
+}

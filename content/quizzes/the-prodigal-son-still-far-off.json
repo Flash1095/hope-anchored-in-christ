@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Prodigal Son Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "When did the father see his son returning?",
+  "OptionA": "While he was still far off",
+  "OptionB": "When he knocked at the door",
+  "OptionC": "After he had washed and changed",
+  "OptionD": "When the older brother told him",
+  "CorrectAnswer": "A",
+  "Explanation": "The father was watching for him and saw him while he was still far off.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Luke 15:20",
+  "Slug": "the-prodigal-son-still-far-off",
+  "ReadingTitle": "The Prodigal Son",
+  "ReadingLink": "#/stories/23"
+}

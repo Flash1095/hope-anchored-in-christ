@@ -1,0 +1,16 @@
+{
+ "Quiz": "Gideon's Victory over Midian Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "After Midian was subdued, how long was the country quiet in the days of Gideon?",
+ "OptionA": "Seven years",
+ "OptionB": "Twenty years",
+ "OptionC": "Seventy years",
+ "OptionD": "Forty years",
+ "CorrectAnswer": "D",
+ "Explanation": "Thus was Midian subdued before the children of Israel, and the country was in quietness forty years in the days of Gideon.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Judges 8:28",
+ "Slug": "gideons-victory-over-midian-quiet-forty-years",
+ "ReadingTitle": "Gideon's Victory over Midian",
+ "ReadingLink": "#/stories/44"
+}

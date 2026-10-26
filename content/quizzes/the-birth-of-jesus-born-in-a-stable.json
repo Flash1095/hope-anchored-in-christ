@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Birth of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Jesus was born not to a palace, but to what humble place?",
+  "OptionA": "A temple chamber",
+  "OptionB": "A stable",
+  "OptionC": "A Roman barracks",
+  "OptionD": "A governor's house",
+  "CorrectAnswer": "B",
+  "Explanation": "God sent his Son into the world not to a palace but to a stable.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Luke 2:7",
+  "Slug": "the-birth-of-jesus-born-in-a-stable",
+  "ReadingTitle": "The Birth of Jesus",
+  "ReadingLink": "#/stories/13"
+}

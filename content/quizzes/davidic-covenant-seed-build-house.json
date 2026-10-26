@@ -1,0 +1,16 @@
+{
+ "Quiz": "Davidic Covenant Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did God say David's offspring would build?",
+ "OptionA": "A palace for himself",
+ "OptionB": "A house for God's name",
+ "OptionC": "A wall around Jerusalem",
+ "OptionD": "A fleet of ships",
+ "CorrectAnswer": "B",
+ "Explanation": "God said of David's seed, 'He shall build an house for my name, and I will stablish the throne of his kingdom for ever.'",
+ "Difficulty": "Medium",
+ "ScriptureReference": "2 Samuel 7:13",
+ "Slug": "davidic-covenant-seed-build-house",
+ "ReadingTitle": "Davidic Covenant",
+ "ReadingLink": "#/stories/38"
+}

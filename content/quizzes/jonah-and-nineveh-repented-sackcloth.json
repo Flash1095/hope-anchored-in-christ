@@ -1,0 +1,16 @@
+{
+  "Quiz": "Jonah and Nineveh Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did the whole city of Nineveh do when Jonah preached?",
+  "OptionA": "Ignore him",
+  "OptionB": "Laugh at him",
+  "OptionC": "Repent in sackcloth",
+  "OptionD": "Leave the city",
+  "CorrectAnswer": "C",
+  "Explanation": "From the king down to the cattle, the whole city repented in sackcloth.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Jonah 3:5",
+  "Slug": "jonah-and-nineveh-repented-sackcloth",
+  "ReadingTitle": "Jonah and Nineveh",
+  "ReadingLink": "#/stories/5"
+}

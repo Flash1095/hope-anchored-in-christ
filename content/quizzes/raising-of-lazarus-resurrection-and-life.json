@@ -1,0 +1,16 @@
+{
+ "Quiz": "Raising of Lazarus Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What did Jesus declare to Martha before raising Lazarus?",
+ "OptionA": "I am the bread of life",
+ "OptionB": "I am the good shepherd",
+ "OptionC": "I am the resurrection, and the life",
+ "OptionD": "I am the light of the world",
+ "CorrectAnswer": "C",
+ "Explanation": "Jesus said to her, 'I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live.'",
+ "Difficulty": "Medium",
+ "ScriptureReference": "John 11:25",
+ "Slug": "raising-of-lazarus-resurrection-and-life",
+ "ReadingTitle": "Raising of Lazarus",
+ "ReadingLink": "#/stories/57"
+}

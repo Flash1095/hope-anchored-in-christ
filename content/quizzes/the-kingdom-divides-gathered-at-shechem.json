@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Kingdom Divides Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Where did all Israel gather to make Rehoboam king?",
+ "OptionA": "Jerusalem",
+ "OptionB": "Hebron",
+ "OptionC": "Bethel",
+ "OptionD": "Shechem",
+ "CorrectAnswer": "D",
+ "Explanation": "All Israel came to Shechem to make Rehoboam king, and there Jeroboam and the congregation brought their plea to him.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "1 Kings 12:1",
+ "Slug": "the-kingdom-divides-gathered-at-shechem",
+ "ReadingTitle": "The Kingdom Divides",
+ "ReadingLink": "#/stories/62"
+}

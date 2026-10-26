@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Birth of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did Mary do with all these things she heard and saw?",
+  "OptionA": "She treasured them in her heart",
+  "OptionB": "She wrote them in a scroll",
+  "OptionC": "She told them to the innkeeper",
+  "OptionD": "She sang them to the shepherds",
+  "CorrectAnswer": "A",
+  "Explanation": "Mary treasured all these things in her heart as she pondered the wonders around her son's birth.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Luke 2:19",
+  "Slug": "the-birth-of-jesus-mary-treasured",
+  "ReadingTitle": "The Birth of Jesus",
+  "ReadingLink": "#/stories/13"
+}

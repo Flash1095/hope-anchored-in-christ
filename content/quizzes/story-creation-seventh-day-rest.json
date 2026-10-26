@@ -1,0 +1,16 @@
+{
+  "Quiz": "Creation Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "On which day did God rest from His creating work?",
+  "OptionA": "The seventh day",
+  "OptionB": "The first day",
+  "OptionC": "The sixth day",
+  "OptionD": "The fifth day",
+  "CorrectAnswer": "A",
+  "Explanation": "On the seventh day God rested, setting that day apart as holy.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 2:2",
+  "Slug": "story-creation-seventh-day-rest",
+  "ReadingTitle": "Creation",
+  "ReadingLink": "#/stories/0"
+}

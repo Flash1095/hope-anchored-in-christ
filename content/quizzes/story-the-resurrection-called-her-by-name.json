@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Resurrection Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What ended Mary's weeping in the garden?",
+  "OptionA": "The risen Jesus called her by name",
+  "OptionB": "An angel told her to stop crying",
+  "OptionC": "Peter arrived and comforted her",
+  "OptionD": "She found the empty grave clothes",
+  "CorrectAnswer": "A",
+  "Explanation": "Mary wept in the garden until the risen Jesus called her by name, and she knew Him.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "John 20:16",
+  "Slug": "story-the-resurrection-called-her-by-name",
+  "ReadingTitle": "The Resurrection",
+  "ReadingLink": "#/stories/24"
+}

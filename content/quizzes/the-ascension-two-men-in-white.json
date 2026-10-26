@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Ascension Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "Who promised the watching disciples that this same Jesus would return in the same way He went?",
+ "OptionA": "The chief priests",
+ "OptionB": "The Roman soldiers",
+ "OptionC": "The women at the tomb",
+ "OptionD": "Two men in white apparel",
+ "CorrectAnswer": "D",
+ "Explanation": "Two men in white stood by the disciples and promised that this same Jesus would come again just as they had seen Him go.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Acts 1:11",
+ "Slug": "the-ascension-two-men-in-white",
+ "ReadingTitle": "The Ascension",
+ "ReadingLink": "#/stories/60"
+}

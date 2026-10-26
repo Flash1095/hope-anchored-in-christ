@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jesus Calms the Storm Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What was Jesus doing while the great tempest covered the ship with waves?",
+ "OptionA": "He was rowing",
+ "OptionB": "He was preaching",
+ "OptionC": "He was asleep",
+ "OptionD": "He was praying aloud",
+ "CorrectAnswer": "C",
+ "Explanation": "There arose a great tempest in the sea, insomuch that the ship was covered with the waves: but He was asleep.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Matthew 8:24",
+ "Slug": "jesus-calms-the-storm-jesus-was-asleep",
+ "ReadingTitle": "Jesus Calms the Storm",
+ "ReadingLink": "#/stories/48"
+}

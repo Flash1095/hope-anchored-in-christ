@@ -1,0 +1,16 @@
+{
+  "Quiz": "Ruth's Loyalty Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "In whose days did Ruth's story take place?",
+  "OptionA": "The days of the judges",
+  "OptionB": "The days of the kings",
+  "OptionC": "The days of the prophets",
+  "OptionD": "The days of the exile",
+  "CorrectAnswer": "A",
+  "Explanation": "Ruth's story took place in the days when the judges ruled Israel.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Ruth 1:1",
+  "Slug": "ruths-loyalty-days-of-judges",
+  "ReadingTitle": "Ruth's Loyalty",
+  "ReadingLink": "#/stories/9"
+}

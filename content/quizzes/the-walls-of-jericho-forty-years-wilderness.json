@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Walls of Jericho Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How long had Israel spent in the wilderness before facing Jericho?",
+  "OptionA": "Forty years",
+  "OptionB": "Four years",
+  "OptionC": "Fourteen years",
+  "OptionD": "Seven years",
+  "CorrectAnswer": "A",
+  "Explanation": "After forty years in the wilderness, Israel stood at the edge of the promised land facing Jericho.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Joshua 5:6",
+  "Slug": "the-walls-of-jericho-forty-years-wilderness",
+  "ReadingTitle": "The Walls of Jericho",
+  "ReadingLink": "#/stories/29"
+}

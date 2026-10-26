@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Birth of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the shepherds do after hearing the angels' news?",
+  "OptionA": "They told the priests first",
+  "OptionB": "They waited until morning",
+  "OptionC": "They followed the star",
+  "OptionD": "They hurried to see him",
+  "CorrectAnswer": "D",
+  "Explanation": "The shepherds hurried to see the newborn Savior, just as the angels had told them.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Luke 2:16",
+  "Slug": "the-birth-of-jesus-shepherds-hurried",
+  "ReadingTitle": "The Birth of Jesus",
+  "ReadingLink": "#/stories/13"
+}

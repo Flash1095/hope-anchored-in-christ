@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Burning Bush Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Whose suffering in Egypt had God seen?",
+  "OptionA": "His people's suffering",
+  "OptionB": "The Midianites' suffering",
+  "OptionC": "The Philistines' suffering",
+  "OptionD": "The Amalekites' suffering",
+  "CorrectAnswer": "A",
+  "Explanation": "God had seen his people's suffering in Egypt, and he was sending Moses to lead them out.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Exodus 3:7",
+  "Slug": "story-the-burning-bush-seen-peoples-suffering",
+  "ReadingTitle": "The Burning Bush",
+  "ReadingLink": "#/stories/14"
+}

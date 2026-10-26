@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Call of Abraham Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "According to the retelling, Abram went with no child and no what?",
+  "OptionA": "Money",
+  "OptionB": "Flocks",
+  "OptionC": "Servants",
+  "OptionD": "Map",
+  "CorrectAnswer": "D",
+  "Explanation": "Abram was seventy-five, with no child and no map, but he went in faith.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Genesis 12:4",
+  "Slug": "the-call-of-abraham-no-child-no-map",
+  "ReadingTitle": "The Call of Abraham",
+  "ReadingLink": "#/stories/15"
+}

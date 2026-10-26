@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Crucifixion Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the Roman centurion say after Jesus died?",
+  "OptionA": "Truly this was a righteous prophet",
+  "OptionB": "Truly this man was innocent",
+  "OptionC": "Truly this was the Son of God",
+  "OptionD": "Truly the king is dead",
+  "CorrectAnswer": "C",
+  "Explanation": "Seeing all that happened, a Roman centurion said, “Truly this was the Son of God.”",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 27:54",
+  "Slug": "story-the-crucifixion-centurion-confession",
+  "ReadingTitle": "The Crucifixion",
+  "ReadingLink": "#/stories/17"
+}

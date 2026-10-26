@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Fall Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Where did God place Adam and Eve?",
+  "OptionA": "In a garden of abundance",
+  "OptionB": "On a mountain",
+  "OptionC": "In a desert oasis",
+  "OptionD": "In a city",
+  "CorrectAnswer": "A",
+  "Explanation": "God placed Adam and Eve in a garden of abundance, with one boundary they must not cross.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 3:8",
+  "Slug": "story-the-fall-garden-of-abundance",
+  "ReadingTitle": "The Fall",
+  "ReadingLink": "#/stories/19"
+}

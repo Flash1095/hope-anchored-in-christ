@@ -1,0 +1,16 @@
+{
+ "Quiz": "Triumphal Entry Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "Into which city did Jesus ride in triumph?",
+ "OptionA": "Nazareth",
+ "OptionB": "Bethlehem",
+ "OptionC": "Jericho",
+ "OptionD": "Jerusalem",
+ "CorrectAnswer": "D",
+ "Explanation": "When Jesus came into Jerusalem, all the city was moved, asking who He was.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Matthew 21:10",
+ "Slug": "triumphal-entry-into-jerusalem",
+ "ReadingTitle": "Triumphal Entry",
+ "ReadingLink": "#/stories/67"
+}

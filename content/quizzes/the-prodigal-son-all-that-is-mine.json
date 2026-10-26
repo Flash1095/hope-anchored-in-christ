@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Prodigal Son Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the father plead to the older brother?",
+  "OptionA": "All that is mine is yours",
+  "OptionB": "All that was lost is yours to find",
+  "OptionC": "All that your brother had is yours now",
+  "OptionD": "All that I own will be divided again",
+  "CorrectAnswer": "A",
+  "Explanation": "The father went out to his older son too, reminding him that everything he had was already his.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Luke 15:31",
+  "Slug": "the-prodigal-son-all-that-is-mine",
+  "ReadingTitle": "The Prodigal Son",
+  "ReadingLink": "#/stories/23"
+}

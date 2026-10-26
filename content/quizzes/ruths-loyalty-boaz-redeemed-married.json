@@ -1,0 +1,16 @@
+{
+  "Quiz": "Ruth's Loyalty Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Boaz do for Ruth and Naomi's family?",
+  "OptionA": "Give them a house only",
+  "OptionB": "Redeem the family land and marry Ruth",
+  "OptionC": "Send them back to Moab",
+  "OptionD": "Make Ruth a servant",
+  "CorrectAnswer": "B",
+  "Explanation": "Boaz redeemed the family land and married Ruth, showing loyal kindness to both women.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Ruth 4:10",
+  "Slug": "ruths-loyalty-boaz-redeemed-married",
+  "ReadingTitle": "Ruth's Loyalty",
+  "ReadingLink": "#/stories/9"
+}

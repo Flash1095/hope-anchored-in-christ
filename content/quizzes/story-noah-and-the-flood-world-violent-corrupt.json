@@ -1,0 +1,16 @@
+{
+  "Quiz": "Noah and the Flood Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Why did God grieve over what He had made?",
+  "OptionA": "The world had grown violent and corrupt",
+  "OptionB": "The animals were few",
+  "OptionC": "The ark was unfinished",
+  "OptionD": "The rain had stopped",
+  "CorrectAnswer": "A",
+  "Explanation": "The world had grown so violent and corrupt that God grieved over what He had made.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 6:11",
+  "Slug": "story-noah-and-the-flood-world-violent-corrupt",
+  "ReadingTitle": "Noah and the Flood",
+  "ReadingLink": "#/stories/7"
+}

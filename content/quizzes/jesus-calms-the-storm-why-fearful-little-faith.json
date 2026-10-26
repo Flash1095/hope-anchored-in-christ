@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jesus Calms the Storm Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What did Jesus ask the disciples before He calmed the storm?",
+ "OptionA": "Why are ye fearful, O ye of little faith?",
+ "OptionB": "Why did ye not row harder?",
+ "OptionC": "Where is the other boat?",
+ "OptionD": "Who woke Me?",
+ "CorrectAnswer": "A",
+ "Explanation": "He saith unto them, Why are ye fearful, O ye of little faith? Then He arose, and rebuked the winds and the sea.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Matthew 8:26",
+ "Slug": "jesus-calms-the-storm-why-fearful-little-faith",
+ "ReadingTitle": "Jesus Calms the Storm",
+ "ReadingLink": "#/stories/48"
+}

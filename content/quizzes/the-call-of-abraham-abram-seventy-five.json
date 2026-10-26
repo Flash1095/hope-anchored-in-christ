@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Call of Abraham Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How old was Abram when God called him?",
+  "OptionA": "Fifty years old",
+  "OptionB": "Seventy-five years old",
+  "OptionC": "Ninety-nine years old",
+  "OptionD": "One hundred years old",
+  "CorrectAnswer": "B",
+  "Explanation": "Abram was seventy-five years old, with no child and no map, when he answered God's call.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 12:4",
+  "Slug": "the-call-of-abraham-abram-seventy-five",
+  "ReadingTitle": "The Call of Abraham",
+  "ReadingLink": "#/stories/15"
+}

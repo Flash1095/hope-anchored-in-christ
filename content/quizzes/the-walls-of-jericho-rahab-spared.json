@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Walls of Jericho Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who, with her family, was spared when Jericho was taken?",
+  "OptionA": "The king and his guards",
+  "OptionB": "The priests of Jericho",
+  "OptionC": "Rahab and her family",
+  "OptionD": "The builders of the wall",
+  "CorrectAnswer": "C",
+  "Explanation": "Only Rahab and her family were spared when Israel took the city.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Joshua 6:25",
+  "Slug": "the-walls-of-jericho-rahab-spared",
+  "ReadingTitle": "The Walls of Jericho",
+  "ReadingLink": "#/stories/29"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Golden Calf Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "About how many men fell that day when the Levites carried out Moses' command?",
+ "OptionA": "About three hundred",
+ "OptionB": "About thirty thousand",
+ "OptionC": "About three thousand",
+ "OptionD": "About seventy",
+ "CorrectAnswer": "C",
+ "Explanation": "The children of Levi did as Moses said, and about three thousand men fell that day.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Exodus 32:28",
+ "Slug": "the-golden-calf-three-thousand-fell",
+ "ReadingTitle": "The Golden Calf",
+ "ReadingLink": "#/stories/61"
+}

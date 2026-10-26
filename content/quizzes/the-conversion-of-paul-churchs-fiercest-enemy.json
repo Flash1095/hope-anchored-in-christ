@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Conversion of Paul Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What was Saul of Tarsus before his conversion?",
+  "OptionA": "The church's fiercest enemy",
+  "OptionB": "A Roman governor",
+  "OptionC": "A temple priest in Jerusalem",
+  "OptionD": "A fisherman from Galilee",
+  "CorrectAnswer": "A",
+  "Explanation": "Saul of Tarsus was the church's fiercest enemy, hunting Christians with arrest warrants.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Acts 9:1",
+  "Slug": "the-conversion-of-paul-churchs-fiercest-enemy",
+  "ReadingTitle": "The Conversion of Paul",
+  "ReadingLink": "#/stories/16"
+}

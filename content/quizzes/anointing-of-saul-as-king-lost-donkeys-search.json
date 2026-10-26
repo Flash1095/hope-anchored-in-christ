@@ -1,0 +1,16 @@
+{
+  "Quiz": "Anointing of Saul as King Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What was Saul searching for when he first met Samuel?",
+  "OptionA": "His father's lost donkeys",
+  "OptionB": "A lost flock of sheep",
+  "OptionC": "A runaway servant",
+  "OptionD": "A herd of stray oxen",
+  "CorrectAnswer": "A",
+  "Explanation": "Saul had set out with a servant to find his father Kish's lost donkeys, and that search led him to Samuel.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "1 Samuel 9:3",
+  "Slug": "anointing-of-saul-as-king-lost-donkeys-search",
+  "ReadingTitle": "Anointing of Saul as King",
+  "ReadingLink": "#/stories/30"
+}

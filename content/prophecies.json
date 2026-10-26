@@ -25,7 +25,7 @@
     "KeyPassages": "Genesis 12:3; Genesis 22:18; Galatians 3:8; Galatians 3:14-16; Acts 3:25-26",
     "RelatedBooks": "Genesis; Galatians; Acts",
     "RelatedPeople": "Abraham; Jesus; Paul",
-    "RelatedEvents": "Call of Abraham; The Crucifixion; Pentecost",
+    "RelatedEvents": "The Call of Abraham; The Crucifixion; Pentecost",
     "Slug": "blessing-to-all-nations-through-abraham",
     "Places": "Haran; Canaan"
   },
@@ -40,7 +40,7 @@
     "KeyPassages": "Genesis 22:8; Genesis 22:13-14; John 1:29; John 8:56; Hebrews 11:17-19",
     "RelatedBooks": "Genesis; John; Hebrews",
     "RelatedPeople": "Abraham; Isaac; Jesus",
-    "RelatedEvents": "Binding of Isaac; The Crucifixion",
+    "RelatedEvents": "The Binding of Isaac; The Crucifixion",
     "Slug": "sacrifice-provided-on-mount-moriah",
     "Places": "Jerusalem"
   },
@@ -55,7 +55,7 @@
     "KeyPassages": "Genesis 49:9-10; 2 Samuel 7:16; Matthew 1:1-3; Revelation 5:5",
     "RelatedBooks": "Genesis; 2 Samuel; Matthew; Revelation",
     "RelatedPeople": "Jacob; Judah; David; Jesus",
-    "RelatedEvents": "Davidic Covenant; Birth of Jesus",
+    "RelatedEvents": "Davidic Covenant; The Birth of Jesus",
     "Slug": "scepter-from-judah"
   },
   {
@@ -69,7 +69,7 @@
     "KeyPassages": "Numbers 24:17-19; Matthew 2:1-10; Revelation 22:16",
     "RelatedBooks": "Numbers; Matthew; Revelation",
     "RelatedPeople": "Balaam; Balak; Jesus",
-    "RelatedEvents": "Birth of Jesus",
+    "RelatedEvents": "The Birth of Jesus",
     "Slug": "star-out-of-jacob",
     "Places": "Plains of Moab; Bethlehem"
   },
@@ -84,7 +84,7 @@
     "KeyPassages": "Deuteronomy 18:15-19; Acts 3:22-26; Acts 7:37; Hebrews 3:1-6",
     "RelatedBooks": "Deuteronomy; Acts; Hebrews",
     "RelatedPeople": "Moses; Jesus; Peter",
-    "RelatedEvents": "Giving of the Law at Sinai; Sermon on the Mount",
+    "RelatedEvents": "The Ten Commandments; The Sermon on the Mount",
     "Slug": "prophet-like-moses",
     "Places": "Plains of Moab"
   },
@@ -99,7 +99,7 @@
     "KeyPassages": "2 Samuel 7:12-16; Luke 1:32-33; Acts 2:29-36",
     "RelatedBooks": "2 Samuel; Luke; Acts",
     "RelatedPeople": "David; Nathan; Solomon; Jesus",
-    "RelatedEvents": "Davidic Covenant; Birth of Jesus; Pentecost",
+    "RelatedEvents": "Davidic Covenant; The Birth of Jesus; Pentecost",
     "Slug": "eternal-throne-of-david",
     "Places": "Jerusalem"
   },
@@ -114,7 +114,7 @@
     "KeyPassages": "Psalm 2:6-12; Matthew 3:17; Acts 13:33; Hebrews 1:5",
     "RelatedBooks": "Psalms; Matthew; Acts; Hebrews",
     "RelatedPeople": "David; Jesus",
-    "RelatedEvents": "Baptism of Jesus; The Resurrection",
+    "RelatedEvents": "The Baptism of Jesus; The Resurrection",
     "Slug": "anointed-son-rules-the-nations",
     "Places": "Jerusalem"
   },
@@ -174,7 +174,7 @@
     "KeyPassages": "Isaiah 7:14; Matthew 1:18-23; Luke 1:26-35",
     "RelatedBooks": "Isaiah; Matthew; Luke",
     "RelatedPeople": "Isaiah; Ahaz; Mary; Jesus",
-    "RelatedEvents": "Birth of Jesus",
+    "RelatedEvents": "The Birth of Jesus",
     "Slug": "virgin-birth",
     "Places": "Bethlehem; Nazareth"
   },
@@ -189,7 +189,7 @@
     "KeyPassages": "Isaiah 9:1-7; Matthew 4:12-17; Luke 2:11-14",
     "RelatedBooks": "Isaiah; Matthew; Luke",
     "RelatedPeople": "Isaiah; Jesus",
-    "RelatedEvents": "Birth of Jesus; Sermon on the Mount",
+    "RelatedEvents": "The Birth of Jesus; The Sermon on the Mount",
     "Slug": "child-born-prince-of-peace",
     "Places": "Galilee"
   },
@@ -204,7 +204,7 @@
     "KeyPassages": "Isaiah 11:1-10; Matthew 3:16; Romans 15:12; Revelation 22:16",
     "RelatedBooks": "Isaiah; Matthew; Romans; Revelation",
     "RelatedPeople": "Isaiah; Jesse; David; Jesus",
-    "RelatedEvents": "Baptism of Jesus; Birth of Jesus",
+    "RelatedEvents": "The Baptism of Jesus; The Birth of Jesus",
     "Slug": "branch-from-jesse"
   },
   {
@@ -218,7 +218,7 @@
     "KeyPassages": "Isaiah 35:4-6; Matthew 11:2-6; Luke 7:20-22",
     "RelatedBooks": "Isaiah; Matthew; Luke",
     "RelatedPeople": "Isaiah; Jesus; John the Baptist",
-    "RelatedEvents": "Baptism of Jesus",
+    "RelatedEvents": "The Baptism of Jesus",
     "Slug": "blind-see-lame-leap"
   },
   {
@@ -232,7 +232,7 @@
     "KeyPassages": "Isaiah 40:3-5; Matthew 3:1-3; Mark 1:2-4; Luke 3:4-6; John 1:23",
     "RelatedBooks": "Isaiah; Matthew; Mark; Luke; John",
     "RelatedPeople": "Isaiah; John the Baptist; Jesus",
-    "RelatedEvents": "Baptism of Jesus",
+    "RelatedEvents": "The Baptism of Jesus",
     "Slug": "voice-in-the-wilderness",
     "Places": "Jordan River; Jerusalem"
   },
@@ -247,7 +247,7 @@
     "KeyPassages": "Isaiah 42:1-4; Matthew 12:15-21",
     "RelatedBooks": "Isaiah; Matthew",
     "RelatedPeople": "Isaiah; Jesus",
-    "RelatedEvents": "Baptism of Jesus",
+    "RelatedEvents": "The Baptism of Jesus",
     "Slug": "servant-brings-justice"
   },
   {
@@ -261,7 +261,7 @@
     "KeyPassages": "Isaiah 49:6; Luke 2:28-32; Acts 13:47",
     "RelatedBooks": "Isaiah; Luke; Acts",
     "RelatedPeople": "Isaiah; Jesus; Simeon; Paul",
-    "RelatedEvents": "Birth of Jesus; Paul's Missionary Journeys",
+    "RelatedEvents": "The Birth of Jesus; Paul's Missionary Journeys",
     "Slug": "light-to-the-gentiles"
   },
   {
@@ -290,7 +290,7 @@
     "KeyPassages": "Isaiah 61:1-3; Luke 4:16-21; Matthew 11:5",
     "RelatedBooks": "Isaiah; Luke; Matthew",
     "RelatedPeople": "Isaiah; Jesus",
-    "RelatedEvents": "Sermon on the Mount",
+    "RelatedEvents": "The Sermon on the Mount",
     "Slug": "good-news-to-the-poor",
     "Places": "Nazareth"
   },
@@ -319,7 +319,7 @@
     "KeyPassages": "Jeremiah 23:5-6; Jeremiah 33:14-16; 1 Corinthians 1:30",
     "RelatedBooks": "Jeremiah; 1 Corinthians",
     "RelatedPeople": "Jeremiah; David; Jesus; Paul",
-    "RelatedEvents": "Birth of Jesus",
+    "RelatedEvents": "The Birth of Jesus",
     "Slug": "righteous-branch",
     "Places": "Jerusalem"
   },
@@ -334,7 +334,7 @@
     "KeyPassages": "Jeremiah 31:31-34; Luke 22:20; Hebrews 8:6-13; Hebrews 10:16-17",
     "RelatedBooks": "Jeremiah; Luke; Hebrews",
     "RelatedPeople": "Jeremiah; Jesus",
-    "RelatedEvents": "Last Supper; The Crucifixion",
+    "RelatedEvents": "The Last Supper; The Crucifixion",
     "Slug": "new-covenant",
     "Places": "Jerusalem"
   },
@@ -378,7 +378,7 @@
     "KeyPassages": "Daniel 2:31-45; Luke 1:32-33; Matthew 21:44",
     "RelatedBooks": "Daniel; Luke; Matthew",
     "RelatedPeople": "Daniel; Nebuchadnezzar; Jesus",
-    "RelatedEvents": "Daniel in the Lions' Den; Birth of Jesus",
+    "RelatedEvents": "Daniel in the Lions' Den; The Birth of Jesus",
     "Slug": "statue-of-kingdoms",
     "Places": "Babylon"
   },
@@ -437,7 +437,7 @@
     "KeyPassages": "Hosea 11:1; Matthew 2:13-15",
     "RelatedBooks": "Hosea; Matthew",
     "RelatedPeople": "Hosea; Jesus; Mary; Joseph",
-    "RelatedEvents": "The Exodus and Crossing of the Red Sea; Birth of Jesus",
+    "RelatedEvents": "The Exodus and the Red Sea; The Birth of Jesus",
     "Slug": "out-of-egypt-called-my-son",
     "Places": "Egypt"
   },
@@ -482,7 +482,7 @@
     "KeyPassages": "Micah 5:2-4; Matthew 2:1-6; Luke 2:4-7; John 7:42",
     "RelatedBooks": "Micah; Matthew; Luke; John",
     "RelatedPeople": "Micah; David; Mary; Jesus",
-    "RelatedEvents": "Birth of Jesus",
+    "RelatedEvents": "The Birth of Jesus",
     "Slug": "born-in-bethlehem",
     "Places": "Bethlehem"
   },
@@ -512,7 +512,7 @@
     "KeyPassages": "Zechariah 11:12-13; Matthew 26:14-16; Matthew 27:3-10",
     "RelatedBooks": "Zechariah; Matthew",
     "RelatedPeople": "Zechariah; Judas Iscariot; Jesus",
-    "RelatedEvents": "Last Supper; The Crucifixion",
+    "RelatedEvents": "The Last Supper; The Crucifixion",
     "Slug": "thirty-pieces-of-silver",
     "Places": "Jerusalem"
   },
@@ -572,7 +572,7 @@
     "KeyPassages": "Malachi 3:1; Malachi 4:5-6; Matthew 11:10-14; Mark 1:2-3",
     "RelatedBooks": "Malachi; Matthew; Mark",
     "RelatedPeople": "Malachi; John the Baptist; Jesus",
-    "RelatedEvents": "Baptism of Jesus",
+    "RelatedEvents": "The Baptism of Jesus",
     "Slug": "messenger-before-the-lord",
     "Places": "Jordan River; Jerusalem"
   },
@@ -587,7 +587,7 @@
     "KeyPassages": "Haggai 2:6-9; Luke 2:25-32; John 2:21",
     "RelatedBooks": "Haggai; Luke; John",
     "RelatedPeople": "Haggai; Zerubbabel; Jesus",
-    "RelatedEvents": "Rebuilding of the Temple; Birth of Jesus",
+    "RelatedEvents": "Rebuilding of the Temple; The Birth of Jesus",
     "Slug": "glory-of-second-temple",
     "Places": "Jerusalem"
   },

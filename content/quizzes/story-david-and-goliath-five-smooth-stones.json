@@ -1,0 +1,16 @@
+{
+  "Quiz": "David and Goliath Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How many smooth stones did David take with him into the valley?",
+  "OptionA": "Three",
+  "OptionB": "Four",
+  "OptionC": "Seven",
+  "OptionD": "Five",
+  "CorrectAnswer": "D",
+  "Explanation": "David walked into the valley with his sling and five smooth stones.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "1 Samuel 17:40",
+  "Slug": "story-david-and-goliath-five-smooth-stones",
+  "ReadingTitle": "David and Goliath",
+  "ReadingLink": "#/stories/2"
+}

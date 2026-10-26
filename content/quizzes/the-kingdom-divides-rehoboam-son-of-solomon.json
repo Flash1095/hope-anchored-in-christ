@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Kingdom Divides Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Whose son went to Shechem, where all Israel had come to make him king?",
+ "OptionA": "Jeroboam, son of Nebat",
+ "OptionB": "Abijam, son of Rehoboam",
+ "OptionC": "Rehoboam, son of Solomon",
+ "OptionD": "Josiah, son of Amon",
+ "CorrectAnswer": "C",
+ "Explanation": "Rehoboam went to Shechem, for all Israel had come there to make him king after Solomon.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "1 Kings 12:1",
+ "Slug": "the-kingdom-divides-rehoboam-son-of-solomon",
+ "ReadingTitle": "The Kingdom Divides",
+ "ReadingLink": "#/stories/62"
+}

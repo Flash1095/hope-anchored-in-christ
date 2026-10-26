@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Exodus and the Red Sea Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did the people walk through on as they crossed the sea?",
+  "OptionA": "A sandy beach",
+  "OptionB": "A stone causeway",
+  "OptionC": "Shallow water",
+  "OptionD": "Dry ground",
+  "CorrectAnswer": "D",
+  "Explanation": "The people walked through on dry ground, with walls of water on either side.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Exodus 14:22",
+  "Slug": "the-exodus-and-the-red-sea-walked-on-dry-ground",
+  "ReadingTitle": "The Exodus and the Red Sea",
+  "ReadingLink": "#/stories/18"
+}

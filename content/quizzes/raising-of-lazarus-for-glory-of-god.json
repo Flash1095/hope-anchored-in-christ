@@ -1,0 +1,16 @@
+{
+ "Quiz": "Raising of Lazarus Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What did Jesus say Lazarus' sickness was for?",
+ "OptionA": "A punishment for his sins",
+ "OptionB": "The glory of God, that the Son of God might be glorified",
+ "OptionC": "A test for the disciples only",
+ "OptionD": "A warning to Bethany",
+ "CorrectAnswer": "B",
+ "Explanation": "When Jesus heard Lazarus was sick, He said, 'This sickness is not unto death, but for the glory of God.'",
+ "Difficulty": "Hard",
+ "ScriptureReference": "John 11:4",
+ "Slug": "raising-of-lazarus-for-glory-of-god",
+ "ReadingTitle": "Raising of Lazarus",
+ "ReadingLink": "#/stories/57"
+}

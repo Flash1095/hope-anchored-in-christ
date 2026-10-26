@@ -1,0 +1,16 @@
+{
+  "Quiz": "Pentecost Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "How many people were baptized that day?",
+  "OptionA": "One thousand",
+  "OptionB": "Five hundred",
+  "OptionC": "Three thousand",
+  "OptionD": "Five thousand",
+  "CorrectAnswer": "C",
+  "Explanation": "Three thousand people were baptized that day, and the church was born.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Acts 2:41",
+  "Slug": "story-pentecost-three-thousand-baptized",
+  "ReadingTitle": "Pentecost",
+  "ReadingLink": "#/stories/8"
+}

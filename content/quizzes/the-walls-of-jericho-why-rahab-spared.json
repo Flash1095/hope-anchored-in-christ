@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Walls of Jericho Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Why was Rahab spared?",
+  "OptionA": "She was the daughter of the king",
+  "OptionB": "She had built houses into the wall",
+  "OptionC": "She opened the city gates herself",
+  "OptionD": "She had hidden Israel's spies and believed Israel's God was the true God",
+  "CorrectAnswer": "D",
+  "Explanation": "Rahab was spared because she had hidden Israel's spies and believed Israel's God was the true God.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Joshua 6:25",
+  "Slug": "the-walls-of-jericho-why-rahab-spared",
+  "ReadingTitle": "The Walls of Jericho",
+  "ReadingLink": "#/stories/29"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Daniel in the Lions' Den Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Toward which city did Daniel open his windows when he prayed?",
+  "OptionA": "Jerusalem",
+  "OptionB": "Babylon",
+  "OptionC": "Persia",
+  "OptionD": "Egypt",
+  "CorrectAnswer": "A",
+  "Explanation": "Daniel opened his windows toward Jerusalem as he prayed to God.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Daniel 6:10",
+  "Slug": "story-daniel-in-the-lions-den-windows-jerusalem",
+  "ReadingTitle": "Daniel in the Lions' Den",
+  "ReadingLink": "#/stories/1"
+}

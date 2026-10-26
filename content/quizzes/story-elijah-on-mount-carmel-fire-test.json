@@ -1,0 +1,16 @@
+{
+  "Quiz": "Elijah on Mount Carmel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What was the test on Mount Carmel?",
+  "OptionA": "The god who answered with fire is the true God",
+  "OptionB": "Whose altar was tallest",
+  "OptionC": "Who could pray longest",
+  "OptionD": "Whose sacrifice was largest",
+  "CorrectAnswer": "A",
+  "Explanation": "Each side would call on their god to send fire, and the god who answered would be the true God.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "1 Kings 18:24",
+  "Slug": "story-elijah-on-mount-carmel-fire-test",
+  "ReadingTitle": "Elijah on Mount Carmel",
+  "ReadingLink": "#/stories/3"
+}

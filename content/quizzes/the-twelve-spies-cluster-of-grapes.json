@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Twelve Spies and Israel's Unbelief Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What famous fruit did the spies bring back from the brook of Eshcol?",
+ "OptionA": "A branch with one cluster of grapes, carried between two men on a staff",
+ "OptionB": "A basket of figs only",
+ "OptionC": "A jar of olives",
+ "OptionD": "A sheaf of wheat",
+ "CorrectAnswer": "A",
+ "Explanation": "At Eshcol they cut down a branch with one cluster of grapes and carried it between two men on a staff, along with pomegranates and figs.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Numbers 13:23",
+ "Slug": "the-twelve-spies-cluster-of-grapes",
+ "ReadingTitle": "The Twelve Spies and Israel's Unbelief",
+ "ReadingLink": "#/stories/65"
+}

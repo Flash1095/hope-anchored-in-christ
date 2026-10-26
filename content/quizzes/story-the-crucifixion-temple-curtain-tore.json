@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Crucifixion Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What tore from top to bottom when Jesus died?",
+  "OptionA": "The sign above the cross",
+  "OptionB": "The soldiers' banner",
+  "OptionC": "The tomb's seal",
+  "OptionD": "The temple curtain",
+  "CorrectAnswer": "D",
+  "Explanation": "The temple curtain tore from top to bottom, the earth shook, and the centurion confessed who Jesus was.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 27:51",
+  "Slug": "story-the-crucifixion-temple-curtain-tore",
+  "ReadingTitle": "The Crucifixion",
+  "ReadingLink": "#/stories/17"
+}

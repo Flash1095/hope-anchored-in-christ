@@ -1,0 +1,16 @@
+{
+  "Quiz": "Esther Saves Her People Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What had Esther kept hidden about herself when she became queen?",
+  "OptionA": "Her age",
+  "OptionB": "That she was Jewish, one of her people",
+  "OptionC": "Her wealth",
+  "OptionD": "Her birthplace",
+  "CorrectAnswer": "B",
+  "Explanation": "Esther became queen without anyone knowing she was one of the Jewish people.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Esther 2:10",
+  "Slug": "esther-saves-her-people-hidden-people",
+  "ReadingTitle": "Esther Saves Her People",
+  "ReadingLink": "#/stories/4"
+}

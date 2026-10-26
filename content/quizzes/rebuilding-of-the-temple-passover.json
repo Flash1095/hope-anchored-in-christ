@@ -1,0 +1,16 @@
+{
+ "Quiz": "Rebuilding of the Temple Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What feast did the restored community keep after dedicating the Temple?",
+ "OptionA": "Passover",
+ "OptionB": "Tabernacles",
+ "OptionC": "Pentecost",
+ "OptionD": "Purim",
+ "CorrectAnswer": "A",
+ "Explanation": "The children of the captivity kept the Passover on the fourteenth day of the first month, with great joy.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Ezra 6:19",
+ "Slug": "rebuilding-of-the-temple-passover",
+ "ReadingTitle": "Rebuilding of the Temple",
+ "ReadingLink": "#/stories/58"
+}

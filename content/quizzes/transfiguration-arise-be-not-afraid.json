@@ -1,0 +1,16 @@
+{
+ "Quiz": "Transfiguration Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What did Jesus then do and say to comfort them?",
+ "OptionA": "He left them alone",
+ "OptionB": "He sent them back to the village",
+ "OptionC": "He told them to build the tabernacles",
+ "OptionD": "He came and touched them, saying, Arise, and be not afraid",
+ "CorrectAnswer": "D",
+ "Explanation": "Jesus came and touched them and said, Arise, and be not afraid.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Matthew 17:7",
+ "Slug": "transfiguration-arise-be-not-afraid",
+ "ReadingTitle": "Transfiguration",
+ "ReadingLink": "#/stories/66"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jacob Wrestles with God Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What mark did Jacob carry away from the wrestling?",
+ "OptionA": "A scar on his face",
+ "OptionB": "A withered hand",
+ "OptionC": "He halted upon his thigh",
+ "OptionD": "A torn garment",
+ "CorrectAnswer": "C",
+ "Explanation": "As he passed over Penuel the sun rose upon him, and he halted upon his thigh, so he left limping.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Genesis 32:31",
+ "Slug": "jacob-wrestles-with-god-halted-upon-thigh",
+ "ReadingTitle": "Jacob Wrestles with God",
+ "ReadingLink": "#/stories/46"
+}

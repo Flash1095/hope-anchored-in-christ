@@ -1,0 +1,16 @@
+{
+  "Quiz": "Jonah and Nineveh Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Where was Jonah fleeing when he boarded the ship?",
+  "OptionA": "Jerusalem",
+  "OptionB": "Nineveh",
+  "OptionC": "Joppa",
+  "OptionD": "Tarshish",
+  "CorrectAnswer": "D",
+  "Explanation": "Jonah ran the other way from Nineveh and boarded a ship bound for Tarshish.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Jonah 1:3",
+  "Slug": "jonah-and-nineveh-fleeing-tarshish",
+  "ReadingTitle": "Jonah and Nineveh",
+  "ReadingLink": "#/stories/5"
+}

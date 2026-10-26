@@ -1,0 +1,16 @@
+{
+  "Quiz": "Anointing of Saul as King Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Samuel pour on Saul's head to anoint him?",
+  "OptionA": "Water",
+  "OptionB": "Wine",
+  "OptionC": "Oil",
+  "OptionD": "Perfume",
+  "CorrectAnswer": "C",
+  "Explanation": "Samuel took a vial of oil, poured it on Saul's head, and told him the LORD had anointed him captain over His people.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "1 Samuel 10:1",
+  "Slug": "anointing-of-saul-as-king-oil-anointing",
+  "ReadingTitle": "Anointing of Saul as King",
+  "ReadingLink": "#/stories/30"
+}

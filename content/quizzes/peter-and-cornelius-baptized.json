@@ -1,0 +1,16 @@
+{
+ "Quiz": "Peter and Cornelius Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "After the Holy Spirit fell on them, what did Peter command for the Gentile believers?",
+ "OptionA": "That they travel to Jerusalem",
+ "OptionB": "That they be baptized in the name of the Lord",
+ "OptionC": "That they keep the food laws first",
+ "OptionD": "That they learn Hebrew",
+ "CorrectAnswer": "B",
+ "Explanation": "Peter commanded them to be baptized in the name of the Lord, and they asked him to stay for some days.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Acts 10:48",
+ "Slug": "peter-and-cornelius-baptized",
+ "ReadingTitle": "Peter and Cornelius",
+ "ReadingLink": "#/stories/56"
+}

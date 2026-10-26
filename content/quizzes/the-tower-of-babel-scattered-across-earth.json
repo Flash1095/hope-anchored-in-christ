@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Tower of Babel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Where were the people scattered?",
+  "OptionA": "Back to the ark",
+  "OptionB": "Into the city alone",
+  "OptionC": "Across the earth",
+  "OptionD": "Across the sea to Egypt",
+  "CorrectAnswer": "C",
+  "Explanation": "The people scattered across the earth, the very thing they had tried to avoid.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 11:8",
+  "Slug": "the-tower-of-babel-scattered-across-earth",
+  "ReadingTitle": "The Tower of Babel",
+  "ReadingLink": "#/stories/28"
+}

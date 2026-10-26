@@ -1,0 +1,16 @@
+{
+ "Quiz": "David Becomes King Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How long did David reign over Judah in Hebron?",
+ "OptionA": "Three years",
+ "OptionB": "Five years",
+ "OptionC": "Seven years and six months",
+ "OptionD": "Ten years",
+ "CorrectAnswer": "C",
+ "Explanation": "In Hebron David reigned over Judah seven years and six months, before reigning in Jerusalem over all Israel and Judah.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "2 Samuel 5:5",
+ "Slug": "david-becomes-king-seven-years-six-months",
+ "ReadingTitle": "David Becomes King",
+ "ReadingLink": "#/stories/37"
+}

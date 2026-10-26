@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Passover Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Until which day were they to keep the lamb before killing it in the evening?",
+ "OptionA": "The twelfth day",
+ "OptionB": "The fifteenth day",
+ "OptionC": "The twenty-first day",
+ "OptionD": "The fourteenth day",
+ "CorrectAnswer": "D",
+ "Explanation": "They were to keep the lamb until the fourteenth day of the month, when the whole assembly would kill it in the evening.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Exodus 12:6",
+ "Slug": "the-passover-lamb-fourteenth-day",
+ "ReadingTitle": "The Passover",
+ "ReadingLink": "#/stories/63"
+}

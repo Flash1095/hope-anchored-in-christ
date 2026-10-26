@@ -1,0 +1,16 @@
+{
+  "Quiz": "Noah and the Flood Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did God set in the sky as the sign of His promise?",
+  "OptionA": "A star",
+  "OptionB": "A cloud",
+  "OptionC": "A pillar of fire",
+  "OptionD": "A rainbow",
+  "CorrectAnswer": "D",
+  "Explanation": "God set a rainbow in the sky as the sign of His promise never again to flood the whole earth.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 9:13",
+  "Slug": "story-noah-and-the-flood-rainbow-sign",
+  "ReadingTitle": "Noah and the Flood",
+  "ReadingLink": "#/stories/7"
+}

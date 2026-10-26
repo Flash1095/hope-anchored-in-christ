@@ -1,0 +1,16 @@
+{
+ "Quiz": "Peter and Cornelius Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What did Peter declare about God when he preached to Cornelius' household?",
+ "OptionA": "God favours only Jews",
+ "OptionB": "God is no respecter of persons",
+ "OptionC": "God dwells only in temples",
+ "OptionD": "God speaks only through prophets",
+ "CorrectAnswer": "B",
+ "Explanation": "Peter opened his mouth and said, 'Of a truth I perceive that God is no respecter of persons.'",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Acts 10:34",
+ "Slug": "peter-and-cornelius-no-respecter-of-persons",
+ "ReadingTitle": "Peter and Cornelius",
+ "ReadingLink": "#/stories/56"
+}

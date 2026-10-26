@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Binding of Isaac Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Abraham see caught by its horns in a thicket?",
+  "OptionA": "A lamb by its leg",
+  "OptionB": "A goat by its beard",
+  "OptionC": "A young bull",
+  "OptionD": "A ram",
+  "CorrectAnswer": "D",
+  "Explanation": "Abraham saw a ram caught by its horns in a thicket, provided by God in Isaac's place.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 22:13",
+  "Slug": "the-binding-of-isaac-ram-in-thicket",
+  "ReadingTitle": "The Binding of Isaac",
+  "ReadingLink": "#/stories/12"
+}

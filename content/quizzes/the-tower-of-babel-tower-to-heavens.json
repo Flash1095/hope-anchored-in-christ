@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Tower of Babel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How high did the people plan to build their tower?",
+  "OptionA": "Reaching to the heavens",
+  "OptionB": "As high as the mountains",
+  "OptionC": "Above the clouds of Shinar",
+  "OptionD": "To the top of the plain",
+  "CorrectAnswer": "A",
+  "Explanation": "They planned a tower reaching to the heavens, to make a name for themselves.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 11:4",
+  "Slug": "the-tower-of-babel-tower-to-heavens",
+  "ReadingTitle": "The Tower of Babel",
+  "ReadingLink": "#/stories/28"
+}

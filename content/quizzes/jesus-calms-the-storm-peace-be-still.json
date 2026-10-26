@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jesus Calms the Storm Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What words did Jesus speak to the sea in Mark's account?",
+ "OptionA": "Peace, be still",
+ "OptionB": "Go back to your place",
+ "OptionC": "Be silent forever",
+ "OptionD": "Rise and follow Me",
+ "CorrectAnswer": "A",
+ "Explanation": "He arose, and rebuked the wind, and said unto the sea, Peace, be still. And the wind ceased, and there was a great calm.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Mark 4:39",
+ "Slug": "jesus-calms-the-storm-peace-be-still",
+ "ReadingTitle": "Jesus Calms the Storm",
+ "ReadingLink": "#/stories/48"
+}

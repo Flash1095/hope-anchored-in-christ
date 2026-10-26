@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Twelve Spies and Israel's Unbelief Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How many spies were sent to explore the land of Canaan?",
+ "OptionA": "Ten",
+ "OptionB": "Forty",
+ "OptionC": "Twelve",
+ "OptionD": "Seven",
+ "CorrectAnswer": "C",
+ "Explanation": "The LORD told Moses to send one man from each tribe, twelve men in all, to search the land of Canaan.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Numbers 13:2",
+ "Slug": "the-twelve-spies-twelve-spies-sent",
+ "ReadingTitle": "The Twelve Spies and Israel's Unbelief",
+ "ReadingLink": "#/stories/65"
+}

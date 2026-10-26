@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Birth of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "To which town did Mary and Joseph travel for the census?",
+  "OptionA": "Nazareth",
+  "OptionB": "Jerusalem",
+  "OptionC": "Jericho",
+  "OptionD": "Bethlehem",
+  "CorrectAnswer": "D",
+  "Explanation": "Mary and Joseph traveled to Bethlehem for a census, and there Jesus was born.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Luke 2:4",
+  "Slug": "the-birth-of-jesus-traveled-to-bethlehem",
+  "ReadingTitle": "The Birth of Jesus",
+  "ReadingLink": "#/stories/13"
+}

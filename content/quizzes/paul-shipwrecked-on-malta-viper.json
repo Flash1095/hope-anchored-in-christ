@@ -1,0 +1,16 @@
+{
+ "Quiz": "Paul Shipwrecked on Malta Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What fastened on Paul's hand as he laid sticks on the fire in Malta?",
+ "OptionA": "A scorpion",
+ "OptionB": "A lizard",
+ "OptionC": "A viper",
+ "OptionD": "A thorn branch",
+ "CorrectAnswer": "C",
+ "Explanation": "A viper came out of the heat and fastened on Paul's hand, yet he shook it off into the fire and felt no harm.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Acts 28:3",
+ "Slug": "paul-shipwrecked-on-malta-viper",
+ "ReadingTitle": "Paul Shipwrecked on Malta",
+ "ReadingLink": "#/stories/54"
+}

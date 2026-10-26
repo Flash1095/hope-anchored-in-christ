@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Golden Calf Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Who was up on the mountain with God while the people grew impatient below?",
+ "OptionA": "Aaron",
+ "OptionB": "Joshua",
+ "OptionC": "Caleb",
+ "OptionD": "Moses",
+ "CorrectAnswer": "D",
+ "Explanation": "The people saw that Moses delayed coming down from the mount, so they gathered to Aaron with their impatient demand.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Exodus 32:1",
+ "Slug": "the-golden-calf-moses-on-mountain",
+ "ReadingTitle": "The Golden Calf",
+ "ReadingLink": "#/stories/61"
+}

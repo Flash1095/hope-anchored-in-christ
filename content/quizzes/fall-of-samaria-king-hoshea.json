@@ -1,0 +1,16 @@
+{
+ "Quiz": "Fall of Samaria Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Who was king of Israel when Samaria was taken?",
+ "OptionA": "Hoshea",
+ "OptionB": "Jeroboam",
+ "OptionC": "Ahab",
+ "OptionD": "Hezekiah",
+ "CorrectAnswer": "A",
+ "Explanation": "In the ninth year of Hoshea the king of Assyria took Samaria, and carried Israel away into Assyria.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "2 Kings 17:6",
+ "Slug": "fall-of-samaria-king-hoshea",
+ "ReadingTitle": "Fall of Samaria",
+ "ReadingLink": "#/stories/43"
+}

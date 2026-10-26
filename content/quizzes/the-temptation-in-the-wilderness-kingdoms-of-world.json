@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Temptation in the Wilderness Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the tempter offer in exchange for Jesus bowing down?",
+  "OptionA": "All the gold of the temple",
+  "OptionB": "Rule over the wilderness alone",
+  "OptionC": "All the kingdoms of the world",
+  "OptionD": "A crown in Jerusalem only",
+  "CorrectAnswer": "C",
+  "Explanation": "The tempter offered all the kingdoms of the world if Jesus would bow down to him.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Matthew 4:9",
+  "Slug": "the-temptation-in-the-wilderness-kingdoms-of-world",
+  "ReadingTitle": "The Temptation in the Wilderness",
+  "ReadingLink": "#/stories/26"
+}

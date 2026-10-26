@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Passover Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What happened to the houses marked by the blood on that night?",
+ "OptionA": "They were filled with light",
+ "OptionB": "They were sealed until morning",
+ "OptionC": "They were spared the hail only",
+ "OptionD": "The destroyer passed over them",
+ "CorrectAnswer": "D",
+ "Explanation": "God promised that when He saw the blood, He would pass over those houses, and the plague would not destroy them.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Exodus 12:13",
+ "Slug": "the-passover-passed-over-homes",
+ "ReadingTitle": "The Passover",
+ "ReadingLink": "#/stories/63"
+}

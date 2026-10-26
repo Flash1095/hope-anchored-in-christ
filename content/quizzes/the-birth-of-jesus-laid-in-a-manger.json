@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Birth of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Where did Mary lay her firstborn son?",
+  "OptionA": "In a palace cradle",
+  "OptionB": "In a temple basket",
+  "OptionC": "In a manger",
+  "OptionD": "In a shepherd's tent",
+  "CorrectAnswer": "C",
+  "Explanation": "With no room in the inn, Mary laid her firstborn in a manger.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Luke 2:7",
+  "Slug": "the-birth-of-jesus-laid-in-a-manger",
+  "ReadingTitle": "The Birth of Jesus",
+  "ReadingLink": "#/stories/13"
+}

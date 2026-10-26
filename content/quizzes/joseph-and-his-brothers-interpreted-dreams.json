@@ -1,0 +1,16 @@
+{
+  "Quiz": "Joseph and His Brothers Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Joseph do with Pharaoh's dreams?",
+  "OptionA": "Ignore them",
+  "OptionB": "Write them down only",
+  "OptionC": "Forget them",
+  "OptionD": "Interpret them",
+  "CorrectAnswer": "D",
+  "Explanation": "God gave Joseph the gift of interpreting Pharaoh's dreams, and Pharaoh raised him up.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 41:25",
+  "Slug": "joseph-and-his-brothers-interpreted-dreams",
+  "ReadingTitle": "Joseph and His Brothers",
+  "ReadingLink": "#/stories/6"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Daniel in the Lions' Den Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did God do for Daniel in the lions' den?",
+  "OptionA": "Gave him a sword",
+  "OptionB": "Shut the lions' mouths",
+  "OptionC": "Put the lions to sleep forever",
+  "OptionD": "Sent an army",
+  "CorrectAnswer": "B",
+  "Explanation": "God shut the lions' mouths, and Daniel spent the night unharmed.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Daniel 6:22",
+  "Slug": "story-daniel-in-the-lions-den-lions-mouths-shut",
+  "ReadingTitle": "Daniel in the Lions' Den",
+  "ReadingLink": "#/stories/1"
+}

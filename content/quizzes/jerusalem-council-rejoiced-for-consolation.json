@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jerusalem Council Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "How did the believers in Antioch respond when the Council's letter was read?",
+ "OptionA": "They disputed for many days",
+ "OptionB": "They rejoiced for the consolation",
+ "OptionC": "They tore up the letter",
+ "OptionD": "They sent it back unopened",
+ "CorrectAnswer": "B",
+ "Explanation": "When they had read the epistle, they rejoiced for the consolation it brought.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Acts 15:31",
+ "Slug": "jerusalem-council-rejoiced-for-consolation",
+ "ReadingTitle": "Jerusalem Council",
+ "ReadingLink": "#/stories/47"
+}

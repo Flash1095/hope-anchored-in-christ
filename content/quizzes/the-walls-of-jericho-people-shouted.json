@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Walls of Jericho Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did the people do when the trumpets sounded on the seventh day?",
+  "OptionA": "Shouted",
+  "OptionB": "Stood in silence",
+  "OptionC": "Ran at the walls",
+  "OptionD": "Fell to the ground",
+  "CorrectAnswer": "A",
+  "Explanation": "On the seventh day, with the trumpets sounding, the people shouted.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Joshua 6:20",
+  "Slug": "the-walls-of-jericho-people-shouted",
+  "ReadingTitle": "The Walls of Jericho",
+  "ReadingLink": "#/stories/29"
+}

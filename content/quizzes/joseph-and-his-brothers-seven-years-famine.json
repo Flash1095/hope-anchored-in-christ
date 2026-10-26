@@ -1,0 +1,16 @@
+{
+  "Quiz": "Joseph and His Brothers Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How many years of famine did Joseph help Egypt prepare for?",
+  "OptionA": "Three",
+  "OptionB": "Five",
+  "OptionC": "Nine",
+  "OptionD": "Seven",
+  "CorrectAnswer": "D",
+  "Explanation": "God raised Joseph up to govern Egypt through seven years of famine.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 41:27",
+  "Slug": "joseph-and-his-brothers-seven-years-famine",
+  "ReadingTitle": "Joseph and His Brothers",
+  "ReadingLink": "#/stories/6"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Golden Calf Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "According to Psalm 106, who stood before God in the breach to turn away His wrath?",
+ "OptionA": "Aaron",
+ "OptionB": "Joshua",
+ "OptionC": "Moses His chosen",
+ "OptionD": "Caleb",
+ "CorrectAnswer": "C",
+ "Explanation": "God said He would destroy them, had not Moses His chosen stood before Him in the breach to turn away His wrath.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Psalms 106:23",
+ "Slug": "the-golden-calf-moses-in-the-breach",
+ "ReadingTitle": "The Golden Calf",
+ "ReadingLink": "#/stories/61"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Pentecost Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Who stood up and preached to the crowd?",
+  "OptionA": "Peter",
+  "OptionB": "John",
+  "OptionC": "James",
+  "OptionD": "Thomas",
+  "CorrectAnswer": "A",
+  "Explanation": "Peter stood and preached that Jesus, crucified and risen, was Lord and Christ.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Acts 2:14",
+  "Slug": "story-pentecost-peter-preached",
+  "ReadingTitle": "Pentecost",
+  "ReadingLink": "#/stories/8"
+}

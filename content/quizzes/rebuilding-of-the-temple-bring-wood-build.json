@@ -1,0 +1,16 @@
+{
+ "Quiz": "Rebuilding of the Temple Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did Haggai tell the people to do to build the Lord's house?",
+ "OptionA": "Wait for a new king",
+ "OptionB": "Bring gold from Babylon",
+ "OptionC": "Tear down their own houses",
+ "OptionD": "Go up to the mountain, bring wood, and build the house",
+ "CorrectAnswer": "D",
+ "Explanation": "Haggai said, 'Go up to the mountain, and bring wood, and build the house; and I will take pleasure in it.'",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Haggai 1:8",
+ "Slug": "rebuilding-of-the-temple-bring-wood-build",
+ "ReadingTitle": "Rebuilding of the Temple",
+ "ReadingLink": "#/stories/58"
+}

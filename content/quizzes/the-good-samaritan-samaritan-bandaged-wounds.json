@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Good Samaritan Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the Samaritan do for the wounded man's wounds?",
+  "OptionA": "He covered them with his cloak",
+  "OptionB": "He bandaged them",
+  "OptionC": "He told the man to bind them himself",
+  "OptionD": "He waited for the innkeeper to tend them",
+  "CorrectAnswer": "B",
+  "Explanation": "The Samaritan stopped, tended the man's wounds, and bandaged them with care.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Luke 10:34",
+  "Slug": "the-good-samaritan-samaritan-bandaged-wounds",
+  "ReadingTitle": "The Good Samaritan",
+  "ReadingLink": "#/stories/21"
+}

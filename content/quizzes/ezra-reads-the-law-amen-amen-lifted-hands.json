@@ -1,0 +1,16 @@
+{
+ "Quiz": "Ezra Reads the Law Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How did the people answer when Ezra blessed the LORD, the great God?",
+ "OptionA": "Amen, Amen, with lifting up their hands",
+ "OptionB": "Silence, with bowed heads only",
+ "OptionC": "A shout of war",
+ "OptionD": "A song of Moses",
+ "CorrectAnswer": "A",
+ "Explanation": "All the people answered, Amen, Amen, with lifting up their hands, and they bowed their heads and worshipped.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Nehemiah 8:6",
+ "Slug": "ezra-reads-the-law-amen-amen-lifted-hands",
+ "ReadingTitle": "Ezra Reads the Law",
+ "ReadingLink": "#/stories/41"
+}

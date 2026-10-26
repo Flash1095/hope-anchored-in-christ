@@ -1,0 +1,16 @@
+{
+  "Quiz": "Elijah on Mount Carmel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What fell from heaven when Elijah prayed?",
+  "OptionA": "Rain",
+  "OptionB": "Fire",
+  "OptionC": "Hail",
+  "OptionD": "Lightning that missed",
+  "CorrectAnswer": "B",
+  "Explanation": "Fire fell from heaven when Elijah prayed his simple prayer.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "1 Kings 18:38",
+  "Slug": "story-elijah-on-mount-carmel-fire-fell",
+  "ReadingTitle": "Elijah on Mount Carmel",
+  "ReadingLink": "#/stories/3"
+}

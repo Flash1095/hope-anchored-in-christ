@@ -1,0 +1,16 @@
+{
+ "Quiz": "Davidic Covenant Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "In Psalm 132, from what did God promise to set someone upon David's throne?",
+ "OptionA": "The fruit of the field",
+ "OptionB": "The fruit of David's body",
+ "OptionC": "The elders of Israel",
+ "OptionD": "The sons of Levi",
+ "CorrectAnswer": "B",
+ "Explanation": "The LORD swore in truth unto David: 'Of the fruit of thy body will I set upon thy throne.'",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Psalm 132:11",
+ "Slug": "davidic-covenant-fruit-of-body",
+ "ReadingTitle": "Davidic Covenant",
+ "ReadingLink": "#/stories/38"
+}

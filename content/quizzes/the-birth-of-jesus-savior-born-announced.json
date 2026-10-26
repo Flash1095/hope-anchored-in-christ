@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Birth of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the angels announce had happened?",
+  "OptionA": "A Savior had been born",
+  "OptionB": "A new king had been crowned in Rome",
+  "OptionC": "The census had ended",
+  "OptionD": "A star had fallen from the sky",
+  "CorrectAnswer": "A",
+  "Explanation": "The angels announced good news of great joy: a Savior had been born.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Luke 2:11",
+  "Slug": "the-birth-of-jesus-savior-born-announced",
+  "ReadingTitle": "The Birth of Jesus",
+  "ReadingLink": "#/stories/13"
+}

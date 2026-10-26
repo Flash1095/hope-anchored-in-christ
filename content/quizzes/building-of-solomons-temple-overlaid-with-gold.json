@@ -1,0 +1,16 @@
+{
+ "Quiz": "Building of Solomon's Temple Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did Solomon overlay the inside of the house with?",
+ "OptionA": "Silver",
+ "OptionB": "Bronze",
+ "OptionC": "Pure gold",
+ "OptionD": "Ivory",
+ "CorrectAnswer": "C",
+ "Explanation": "Solomon overlaid the house within with pure gold, including the innermost room, just as God's pattern directed.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "1 Kings 6:21",
+ "Slug": "building-of-solomons-temple-overlaid-with-gold",
+ "ReadingTitle": "Building of Solomon's Temple",
+ "ReadingLink": "#/stories/31"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Noah and the Flood Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did the dove return with?",
+  "OptionA": "A twig of cedar",
+  "OptionB": "A stone",
+  "OptionC": "An olive leaf",
+  "OptionD": "A flower",
+  "CorrectAnswer": "C",
+  "Explanation": "Noah sent out a dove, and it returned with an olive leaf, a sign the waters were going down.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 8:11",
+  "Slug": "story-noah-and-the-flood-dove-olive-leaf",
+  "ReadingTitle": "Noah and the Flood",
+  "ReadingLink": "#/stories/7"
+}

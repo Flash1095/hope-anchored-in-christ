@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Good Samaritan Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Who also passed by on the other side, after the priest?",
+  "OptionA": "A Samaritan",
+  "OptionB": "An innkeeper",
+  "OptionC": "A lawyer",
+  "OptionD": "A Levite",
+  "CorrectAnswer": "D",
+  "Explanation": "The Levite did the same as the priest and kept on walking.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Luke 10:32",
+  "Slug": "the-good-samaritan-levite-passed-by",
+  "ReadingTitle": "The Good Samaritan",
+  "ReadingLink": "#/stories/21"
+}

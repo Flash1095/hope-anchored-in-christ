@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Temptation in the Wilderness Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the tempter urge Jesus to do from the temple?",
+  "OptionA": "Call down fire on the city",
+  "OptionB": "Preach to the crowds below",
+  "OptionC": "Build a new altar there",
+  "OptionD": "Throw Himself down and let angels catch Him",
+  "CorrectAnswer": "D",
+  "Explanation": "The tempter urged Jesus to throw Himself from the temple, trusting angels to catch Him.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Matthew 4:6",
+  "Slug": "the-temptation-in-the-wilderness-temple-angels-catch",
+  "ReadingTitle": "The Temptation in the Wilderness",
+  "ReadingLink": "#/stories/26"
+}

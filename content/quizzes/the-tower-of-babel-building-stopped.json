@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Tower of Babel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What happened to the building when the people could no longer understand one another?",
+  "OptionA": "The tower grew taller",
+  "OptionB": "The building stopped",
+  "OptionC": "The people built faster",
+  "OptionD": "The city was finished",
+  "CorrectAnswer": "B",
+  "Explanation": "Once their language was confused, the people could no longer work together, and the building stopped.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 11:8",
+  "Slug": "the-tower-of-babel-building-stopped",
+  "ReadingTitle": "The Tower of Babel",
+  "ReadingLink": "#/stories/28"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Pentecost Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "How did the crowd respond to Peter's preaching?",
+  "OptionA": "They laughed",
+  "OptionB": "They were cut to the heart",
+  "OptionC": "They walked away",
+  "OptionD": "They arrested him",
+  "CorrectAnswer": "B",
+  "Explanation": "The crowd was cut to the heart by Peter's preaching and asked what they should do.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Acts 2:37",
+  "Slug": "story-pentecost-cut-to-heart",
+  "ReadingTitle": "Pentecost",
+  "ReadingLink": "#/stories/8"
+}

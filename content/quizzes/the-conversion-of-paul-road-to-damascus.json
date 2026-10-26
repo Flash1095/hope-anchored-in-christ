@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Conversion of Paul Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "On which road did the risen Jesus meet Saul?",
+  "OptionA": "The road to Jericho",
+  "OptionB": "The road to Emmaus",
+  "OptionC": "The road to Antioch",
+  "OptionD": "The road to Damascus",
+  "CorrectAnswer": "D",
+  "Explanation": "On the road to Damascus, a light from heaven knocked Saul to the ground and Jesus spoke to him.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Acts 9:3",
+  "Slug": "the-conversion-of-paul-road-to-damascus",
+  "ReadingTitle": "The Conversion of Paul",
+  "ReadingLink": "#/stories/16"
+}

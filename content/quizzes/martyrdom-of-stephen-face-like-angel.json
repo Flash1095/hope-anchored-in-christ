@@ -1,0 +1,16 @@
+{
+ "Quiz": "Martyrdom of Stephen Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What did the council see when they looked at Stephen's face?",
+ "OptionA": "That it was as the face of an angel",
+ "OptionB": "That he was weeping",
+ "OptionC": "That he was angry",
+ "OptionD": "That he had fallen asleep",
+ "CorrectAnswer": "A",
+ "Explanation": "All who sat in the council, looking steadfastly on him, saw his face as it had been the face of an angel.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Acts 6:15",
+ "Slug": "martyrdom-of-stephen-face-like-angel",
+ "ReadingTitle": "Martyrdom of Stephen",
+ "ReadingLink": "#/stories/51"
+}

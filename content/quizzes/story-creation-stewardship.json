@@ -1,0 +1,16 @@
+{
+  "Quiz": "Creation Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did God give human beings over the world He had made?",
+  "OptionA": "Stewardship over it",
+  "OptionB": "Leave to use it up",
+  "OptionC": "Fear of it",
+  "OptionD": "Rule over plants only",
+  "CorrectAnswer": "A",
+  "Explanation": "God entrusted the world He had made to human care and stewardship.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 1:28",
+  "Slug": "story-creation-stewardship",
+  "ReadingTitle": "Creation",
+  "ReadingLink": "#/stories/0"
+}

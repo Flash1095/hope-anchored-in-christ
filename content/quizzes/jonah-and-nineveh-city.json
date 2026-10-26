@@ -1,0 +1,16 @@
+{
+  "Quiz": "Jonah and Nineveh Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "To which city did God send Jonah to preach?",
+  "OptionA": "Nineveh",
+  "OptionB": "Tarshish",
+  "OptionC": "Jerusalem",
+  "OptionD": "Joppa",
+  "CorrectAnswer": "A",
+  "Explanation": "God told Jonah to go and preach to Nineveh, the capital of Assyria.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Jonah 1:2",
+  "Slug": "jonah-and-nineveh-city",
+  "ReadingTitle": "Jonah and Nineveh",
+  "ReadingLink": "#/stories/5"
+}

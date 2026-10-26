@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jesus Prays in Gethsemane Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What question did Jesus ask Peter about watching with Him?",
+ "OptionA": "Why did ye follow Me here?",
+ "OptionB": "Could ye not watch with Me one hour?",
+ "OptionC": "Where is your faith?",
+ "OptionD": "Will ye also go away?",
+ "CorrectAnswer": "B",
+ "Explanation": "He saith unto Peter, What, could ye not watch with Me one hour?",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Matthew 26:40",
+ "Slug": "jesus-prays-in-gethsemane-watch-one-hour",
+ "ReadingTitle": "Jesus Prays in Gethsemane",
+ "ReadingLink": "#/stories/49"
+}

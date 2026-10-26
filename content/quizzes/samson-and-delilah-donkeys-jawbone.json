@@ -1,0 +1,16 @@
+{
+  "Quiz": "Samson and Delilah Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Samson use to kill a thousand men?",
+  "OptionA": "A bronze sword",
+  "OptionB": "A Philistine spear",
+  "OptionC": "A donkey's jawbone",
+  "OptionD": "A shepherd's staff",
+  "CorrectAnswer": "C",
+  "Explanation": "Samson killed a thousand men with a donkey's jawbone, a plain weapon made mighty by God's strength.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Judges 15:15",
+  "Slug": "samson-and-delilah-donkeys-jawbone",
+  "ReadingTitle": "Samson and Delilah",
+  "ReadingLink": "#/stories/10"
+}

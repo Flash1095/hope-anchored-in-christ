@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Exodus and the Red Sea Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What protected Israel on the night they left Egypt?",
+  "OptionA": "The blood of the Passover lamb",
+  "OptionB": "The walls of Goshen",
+  "OptionC": "Moses' staff",
+  "OptionD": "A cloud by day",
+  "CorrectAnswer": "A",
+  "Explanation": "Israel left Egypt protected by the blood of the Passover lamb.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Exodus 12:13",
+  "Slug": "the-exodus-and-the-red-sea-passover-lamb-blood",
+  "ReadingTitle": "The Exodus and the Red Sea",
+  "ReadingLink": "#/stories/18"
+}

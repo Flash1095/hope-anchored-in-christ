@@ -1,0 +1,16 @@
+{
+ "Quiz": "Rebuilding of the Temple Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Which two leaders rose up to build the house of God at Jerusalem?",
+ "OptionA": "Nehemiah and Ezra",
+ "OptionB": "Zerubbabel and Joshua the high priest",
+ "OptionC": "Cyrus and Darius",
+ "OptionD": "Sanballat and Tobiah",
+ "CorrectAnswer": "B",
+ "Explanation": "Zerubbabel son of Shealtiel and Jeshua son of Jozadak began to build the house of God, with the prophets of God helping them.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Ezra 5:2",
+ "Slug": "rebuilding-of-the-temple-zerubbabel-and-joshua",
+ "ReadingTitle": "Rebuilding of the Temple",
+ "ReadingLink": "#/stories/58"
+}

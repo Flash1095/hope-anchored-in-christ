@@ -1,0 +1,16 @@
+{
+  "Quiz": "Jonah and Nineveh Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What sent the storm that threatened the ship Jonah was on?",
+  "OptionA": "God",
+  "OptionB": "The sailors",
+  "OptionC": "A passing army",
+  "OptionD": "The wind alone",
+  "CorrectAnswer": "A",
+  "Explanation": "God sent a great storm because Jonah was running from the task God had given him.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Jonah 1:4",
+  "Slug": "jonah-and-nineveh-god-sent-storm",
+  "ReadingTitle": "Jonah and Nineveh",
+  "ReadingLink": "#/stories/5"
+}

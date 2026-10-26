@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Crucifixion Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What covered the land at midday during the crucifixion?",
+  "OptionA": "A thick fog",
+  "OptionB": "Darkness",
+  "OptionC": "A hailstorm",
+  "OptionD": "A swarm of locusts",
+  "CorrectAnswer": "B",
+  "Explanation": "Darkness covered the land at midday, and at three in the afternoon Jesus cried out and gave up his spirit.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 27:45",
+  "Slug": "story-the-crucifixion-darkness-at-midday",
+  "ReadingTitle": "The Crucifixion",
+  "ReadingLink": "#/stories/17"
+}

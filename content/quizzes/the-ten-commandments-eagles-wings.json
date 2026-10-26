@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Ten Commandments Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How did God say He had carried Israel out of Egypt?",
+  "OptionA": "On chariots of fire",
+  "OptionB": "On eagles' wings",
+  "OptionC": "On the backs of camels",
+  "OptionD": "On ships across the sea",
+  "CorrectAnswer": "B",
+  "Explanation": "God reminded Israel that He had carried them out of Egypt on eagles' wings.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Exodus 19:4",
+  "Slug": "the-ten-commandments-eagles-wings",
+  "ReadingTitle": "The Ten Commandments",
+  "ReadingLink": "#/stories/27"
+}

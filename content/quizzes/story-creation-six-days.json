@@ -1,0 +1,16 @@
+{
+  "Quiz": "Creation Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Over how many days did God do His creating work before He rested?",
+  "OptionA": "Three",
+  "OptionB": "Five",
+  "OptionC": "Seven",
+  "OptionD": "Six",
+  "CorrectAnswer": "D",
+  "Explanation": "God worked for six days and rested on the seventh, blessing it as holy.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 2:2",
+  "Slug": "story-creation-six-days",
+  "ReadingTitle": "Creation",
+  "ReadingLink": "#/stories/0"
+}

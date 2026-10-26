@@ -1,0 +1,16 @@
+{
+  "Quiz": "Ruth's Loyalty Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Whom did Naomi lose in Moab?",
+  "OptionA": "Her husband and both sons",
+  "OptionB": "Her daughters only",
+  "OptionC": "Her brothers",
+  "OptionD": "Her father",
+  "CorrectAnswer": "A",
+  "Explanation": "In Moab, Naomi lost her husband and then both of her sons, leaving her broken and bitter.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Ruth 1:5",
+  "Slug": "ruths-loyalty-lost-husband-sons",
+  "ReadingTitle": "Ruth's Loyalty",
+  "ReadingLink": "#/stories/9"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Fall Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What was the one boundary God gave Adam and Eve?",
+  "OptionA": "They must not eat from the tree of the knowledge of good and evil",
+  "OptionB": "They must not eat from the tree of life",
+  "OptionC": "They must not drink from the river",
+  "OptionD": "They must not touch the serpent's tree",
+  "CorrectAnswer": "A",
+  "Explanation": "God gave one boundary: they must not eat from the tree of the knowledge of good and evil.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 3:3",
+  "Slug": "story-the-fall-one-boundary-tree",
+  "ReadingTitle": "The Fall",
+  "ReadingLink": "#/stories/19"
+}

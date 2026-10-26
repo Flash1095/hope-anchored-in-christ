@@ -1,0 +1,16 @@
+{
+ "Quiz": "Building of Solomon's Temple Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "In Solomon's dedication prayer, whom else did he ask God to hear when they prayed toward the Temple?",
+ "OptionA": "Only the priests",
+ "OptionB": "Only the kings",
+ "OptionC": "Only the Israelites",
+ "OptionD": "A stranger from a far country",
+ "CorrectAnswer": "D",
+ "Explanation": "Solomon prayed that even a stranger who came from a far country for God's name's sake would be heard from heaven.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "1 Kings 8:41",
+ "Slug": "building-of-solomons-temple-stranger-prayer",
+ "ReadingTitle": "Building of Solomon's Temple",
+ "ReadingLink": "#/stories/31"
+}

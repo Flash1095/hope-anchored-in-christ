@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Tower of Babel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "When did the story of Babel take place?",
+  "OptionA": "After the flood",
+  "OptionB": "Before the flood",
+  "OptionC": "During the Exodus",
+  "OptionD": "After the Exile",
+  "CorrectAnswer": "A",
+  "Explanation": "Babel comes after the flood, when humanity once again shared one language.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Genesis 11:1",
+  "Slug": "the-tower-of-babel-after-the-flood",
+  "ReadingTitle": "The Tower of Babel",
+  "ReadingLink": "#/stories/28"
+}

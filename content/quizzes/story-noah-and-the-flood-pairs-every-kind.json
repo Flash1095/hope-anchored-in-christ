@@ -1,0 +1,16 @@
+{
+  "Quiz": "Noah and the Flood Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What kind of animals did Noah gather into the ark?",
+  "OptionA": "Only clean animals",
+  "OptionB": "Only birds",
+  "OptionC": "Pairs of every kind",
+  "OptionD": "Only his own flocks",
+  "CorrectAnswer": "C",
+  "Explanation": "Noah obeyed God, gathering his family and pairs of every kind of animal into the ark.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 6:19",
+  "Slug": "story-noah-and-the-flood-pairs-every-kind",
+  "ReadingTitle": "Noah and the Flood",
+  "ReadingLink": "#/stories/7"
+}

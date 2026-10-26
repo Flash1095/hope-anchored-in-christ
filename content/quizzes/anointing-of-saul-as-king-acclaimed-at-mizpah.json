@@ -1,0 +1,16 @@
+{
+  "Quiz": "Anointing of Saul as King Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "At which place was Saul acclaimed king by the people?",
+  "OptionA": "Hebron",
+  "OptionB": "Bethel",
+  "OptionC": "Gilgal",
+  "OptionD": "Mizpah",
+  "CorrectAnswer": "D",
+  "Explanation": "Samuel called the people together to Mizpah, presented Saul as the LORD's chosen, and the people shouted, 'God save the king.'",
+  "Difficulty": "Easy",
+  "ScriptureReference": "1 Samuel 10:17",
+  "Slug": "anointing-of-saul-as-king-acclaimed-at-mizpah",
+  "ReadingTitle": "Anointing of Saul as King",
+  "ReadingLink": "#/stories/30"
+}

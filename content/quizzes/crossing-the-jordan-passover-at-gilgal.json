@@ -1,0 +1,16 @@
+{
+ "Quiz": "Crossing the Jordan Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What feast did Israel keep at Gilgal after crossing?",
+ "OptionA": "Passover",
+ "OptionB": "Tabernacles",
+ "OptionC": "Pentecost",
+ "OptionD": "Day of Atonement",
+ "CorrectAnswer": "A",
+ "Explanation": "Israel encamped in Gilgal and kept the Passover on the fourteenth day of the month, in the plains of Jericho.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Joshua 5:10",
+ "Slug": "crossing-the-jordan-passover-at-gilgal",
+ "ReadingTitle": "Crossing the Jordan",
+ "ReadingLink": "#/stories/34"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Deborah and Barak Defeat Sisera Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Toward which mountain did Deborah tell Barak to draw his forces?",
+ "OptionA": "Mount Carmel",
+ "OptionB": "Mount Tabor",
+ "OptionC": "Mount Sinai",
+ "OptionD": "Mount Gilboa",
+ "CorrectAnswer": "B",
+ "Explanation": "Deborah told Barak to go and draw toward Mount Tabor, taking ten thousand men with him.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Judges 4:6",
+ "Slug": "deborah-and-barak-defeat-sisera-mount-tabor",
+ "ReadingTitle": "Deborah and Barak Defeat Sisera",
+ "ReadingLink": "#/stories/39"
+}

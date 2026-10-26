@@ -1,0 +1,16 @@
+{
+ "Quiz": "Ezra Reads the Law Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How long did Ezra read the Law aloud to the people?",
+ "OptionA": "From morning until midday",
+ "OptionB": "From noon until evening",
+ "OptionC": "For one hour",
+ "OptionD": "For three days",
+ "CorrectAnswer": "A",
+ "Explanation": "He read before the street before the Water Gate from the morning until midday, and the ears of all the people were attentive.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Nehemiah 8:3",
+ "Slug": "ezra-reads-the-law-morning-until-midday",
+ "ReadingTitle": "Ezra Reads the Law",
+ "ReadingLink": "#/stories/41"
+}

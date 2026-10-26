@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Burning Bush Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How old was Moses when he saw the burning bush?",
+  "OptionA": "Forty years old",
+  "OptionB": "Sixty years old",
+  "OptionC": "Eighty years old",
+  "OptionD": "One hundred years old",
+  "CorrectAnswer": "C",
+  "Explanation": "Moses was eighty years old, tending sheep in the wilderness, when God called him from the burning bush.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Acts 7:30",
+  "Slug": "story-the-burning-bush-moses-eighty-years-old",
+  "ReadingTitle": "The Burning Bush",
+  "ReadingLink": "#/stories/14"
+}

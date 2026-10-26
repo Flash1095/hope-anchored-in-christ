@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Conversion of Paul Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What fell from Saul's eyes when Ananias laid hands on him?",
+  "OptionA": "Dust",
+  "OptionB": "Tears of blood",
+  "OptionC": "A veil",
+  "OptionD": "Scales",
+  "CorrectAnswer": "D",
+  "Explanation": "Scales fell from Saul's eyes, he was baptized, and within days he was preaching Jesus.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Acts 9:18",
+  "Slug": "the-conversion-of-paul-scales-fell",
+  "ReadingTitle": "The Conversion of Paul",
+  "ReadingLink": "#/stories/16"
+}

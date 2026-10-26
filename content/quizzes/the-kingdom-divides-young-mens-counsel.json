@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Kingdom Divides Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "Whose counsel did Rehoboam follow in his answer to the people?",
+ "OptionA": "The old men who had stood before Solomon",
+ "OptionB": "The prophets",
+ "OptionC": "The priests of the temple",
+ "OptionD": "The young men who had grown up with him",
+ "CorrectAnswer": "D",
+ "Explanation": "Rehoboam rejected the old men's counsel and answered the people after the counsel of the young men who had grown up with him.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "1 Kings 12:10",
+ "Slug": "the-kingdom-divides-young-mens-counsel",
+ "ReadingTitle": "The Kingdom Divides",
+ "ReadingLink": "#/stories/62"
+}

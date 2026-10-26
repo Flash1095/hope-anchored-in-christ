@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Crucifixion Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the sign above Jesus' head read?",
+  "OptionA": "Jesus of Nazareth, King of the Jews",
+  "OptionB": "Jesus, Prophet of Galilee",
+  "OptionC": "King of Israel, Son of David",
+  "OptionD": "This is the Messiah",
+  "CorrectAnswer": "A",
+  "Explanation": "The sign above his head read, “Jesus of Nazareth, King of the Jews.”",
+  "Difficulty": "Easy",
+  "ScriptureReference": "John 19:19",
+  "Slug": "story-the-crucifixion-sign-above-head",
+  "ReadingTitle": "The Crucifixion",
+  "ReadingLink": "#/stories/17"
+}

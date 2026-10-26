@@ -1,0 +1,16 @@
+{
+  "Quiz": "Esther Saves Her People Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What was Esther before she became queen?",
+  "OptionA": "A Persian princess",
+  "OptionB": "A Jewish orphan",
+  "OptionC": "A royal guard",
+  "OptionD": "A merchant's daughter",
+  "CorrectAnswer": "B",
+  "Explanation": "Esther was a Jewish orphan who became queen of Persia.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Esther 2:7",
+  "Slug": "esther-saves-her-people-jewish-orphan",
+  "ReadingTitle": "Esther Saves Her People",
+  "ReadingLink": "#/stories/4"
+}

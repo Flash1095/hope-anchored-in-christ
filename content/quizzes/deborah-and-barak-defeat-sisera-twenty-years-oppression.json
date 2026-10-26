@@ -1,0 +1,16 @@
+{
+ "Quiz": "Deborah and Barak Defeat Sisera Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "For how many years had Sisera's army oppressed Israel?",
+ "OptionA": "Seven",
+ "OptionB": "Ten",
+ "OptionC": "Eighteen",
+ "OptionD": "Twenty",
+ "CorrectAnswer": "D",
+ "Explanation": "The children of Israel cried unto the LORD, for Sisera with his nine hundred iron chariots had oppressed them twenty years.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Judges 4:3",
+ "Slug": "deborah-and-barak-defeat-sisera-twenty-years-oppression",
+ "ReadingTitle": "Deborah and Barak Defeat Sisera",
+ "ReadingLink": "#/stories/39"
+}

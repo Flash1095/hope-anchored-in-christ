@@ -1,0 +1,16 @@
+{
+ "Quiz": "Shadrach, Meshach and Abednego in the Fiery Furnace Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How much hotter than usual was the furnace heated for the three men?",
+ "OptionA": "Twice as hot",
+ "OptionB": "Three times hotter",
+ "OptionC": "Seven times hotter",
+ "OptionD": "Ten times hotter",
+ "CorrectAnswer": "C",
+ "Explanation": "In fury, Nebuchadnezzar commanded the furnace be heated seven times more than it was wont to be heated.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Daniel 3:19",
+ "Slug": "shadrach-meshach-and-abednego-in-the-fiery-furnace-seven-times-hotter",
+ "ReadingTitle": "Shadrach, Meshach and Abednego in the Fiery Furnace",
+ "ReadingLink": "#/stories/59"
+}

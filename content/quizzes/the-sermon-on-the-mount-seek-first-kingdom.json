@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Sermon on the Mount Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did Jesus tell His listeners to seek first?",
+  "OptionA": "Treasure on earth",
+  "OptionB": "The kingdom",
+  "OptionC": "The approval of others",
+  "OptionD": "A house on the rock",
+  "CorrectAnswer": "B",
+  "Explanation": "Before worrying about earthly things, Jesus said to seek first the kingdom.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 6:33",
+  "Slug": "the-sermon-on-the-mount-seek-first-kingdom",
+  "ReadingTitle": "The Sermon on the Mount",
+  "ReadingLink": "#/stories/25"
+}

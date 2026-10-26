@@ -1,0 +1,16 @@
+{
+ "Quiz": "Ezra Reads the Law Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How did the Levites help the people as the Law was read?",
+ "OptionA": "They sang while Ezra read silently",
+ "OptionB": "They translated it into Greek",
+ "OptionC": "They read only the first chapter",
+ "OptionD": "They read distinctly and gave the sense, so the people understood",
+ "CorrectAnswer": "D",
+ "Explanation": "They read in the book of the law of God distinctly, and gave the sense, and caused the people to understand the reading.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Nehemiah 8:8",
+ "Slug": "ezra-reads-the-law-read-distinctly-understood",
+ "ReadingTitle": "Ezra Reads the Law",
+ "ReadingLink": "#/stories/41"
+}

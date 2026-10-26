@@ -1,0 +1,16 @@
+{
+ "Quiz": "Shadrach, Meshach and Abednego in the Fiery Furnace Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "In which plain did Nebuchadnezzar set up his golden image?",
+ "OptionA": "The plain of Dura, in the province of Babylon",
+ "OptionB": "The plain of Jericho",
+ "OptionC": "The plain of Shinar",
+ "OptionD": "The plain of Ono",
+ "CorrectAnswer": "A",
+ "Explanation": "The king set the golden image up in the plain of Dura, in the province of Babylon.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Daniel 3:1",
+ "Slug": "shadrach-meshach-and-abednego-in-the-fiery-furnace-plain-of-dura",
+ "ReadingTitle": "Shadrach, Meshach and Abednego in the Fiery Furnace",
+ "ReadingLink": "#/stories/59"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Ezra Reads the Law Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What had Ezra prepared his heart to do first, according to Ezra 7:10?",
+ "OptionA": "Build a new temple",
+ "OptionB": "Count the returning exiles",
+ "OptionC": "Seek the law of the LORD",
+ "OptionD": "Write a song of praise",
+ "CorrectAnswer": "C",
+ "Explanation": "Ezra had prepared his heart to seek the law of the LORD, and to do it, and to teach statutes and judgments in Israel.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Ezra 7:10",
+ "Slug": "ezra-reads-the-law-prepared-heart-seek-law",
+ "ReadingTitle": "Ezra Reads the Law",
+ "ReadingLink": "#/stories/41"
+}

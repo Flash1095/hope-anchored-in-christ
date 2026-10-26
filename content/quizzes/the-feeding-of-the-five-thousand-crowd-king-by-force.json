@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Feeding of the Five Thousand Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "After the miracle, what did the crowd want to do to Jesus?",
+  "OptionA": "Send Him away from Galilee",
+  "OptionB": "Make Him king by force",
+  "OptionC": "Ask Him to stay and feed them daily",
+  "OptionD": "Make Him a tax collector",
+  "CorrectAnswer": "B",
+  "Explanation": "The crowd saw the miracle and wanted a king who would feed them, but Jesus withdrew.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "John 6:15",
+  "Slug": "the-feeding-of-the-five-thousand-crowd-king-by-force",
+  "ReadingTitle": "The Feeding of the Five Thousand",
+  "ReadingLink": "#/stories/20"
+}

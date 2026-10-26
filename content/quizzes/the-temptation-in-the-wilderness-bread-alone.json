@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Temptation in the Wilderness Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "How did Jesus answer the temptation about bread?",
+  "OptionA": "Man shall live by bread and water",
+  "OptionB": "Bread alone is enough for the hungry",
+  "OptionC": "Man shall not live by bread alone",
+  "OptionD": "Man shall not eat in the wilderness",
+  "CorrectAnswer": "C",
+  "Explanation": "Jesus answered not with argument but with Scripture, even in His hunger.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 4:4",
+  "Slug": "the-temptation-in-the-wilderness-bread-alone",
+  "ReadingTitle": "The Temptation in the Wilderness",
+  "ReadingLink": "#/stories/26"
+}

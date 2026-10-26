@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Good Samaritan Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "How did the Samaritan carry the wounded man to the inn?",
+  "OptionA": "He carried him on his shoulders",
+  "OptionB": "He set him on his own animal",
+  "OptionC": "He sent him in a cart",
+  "OptionD": "He led him there on foot",
+  "CorrectAnswer": "B",
+  "Explanation": "The Samaritan gave up his own animal so the wounded man could ride.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Luke 10:34",
+  "Slug": "the-good-samaritan-samaritans-own-animal",
+  "ReadingTitle": "The Good Samaritan",
+  "ReadingLink": "#/stories/21"
+}

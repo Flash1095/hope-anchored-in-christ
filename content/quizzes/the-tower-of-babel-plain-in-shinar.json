@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Tower of Babel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Where did humanity settle together?",
+  "OptionA": "On a mountain in Sinai",
+  "OptionB": "Beside the river Jordan",
+  "OptionC": "On a plain in Shinar",
+  "OptionD": "In the hills of Galilee",
+  "CorrectAnswer": "C",
+  "Explanation": "Humanity settled together on a plain in Shinar.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 11:2",
+  "Slug": "the-tower-of-babel-plain-in-shinar",
+  "ReadingTitle": "The Tower of Babel",
+  "ReadingLink": "#/stories/28"
+}

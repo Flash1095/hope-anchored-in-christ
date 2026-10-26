@@ -1,0 +1,16 @@
+{
+  "Quiz": "Creation Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did God bless as holy?",
+  "OptionA": "The seventh day",
+  "OptionB": "The first morning",
+  "OptionC": "The garden only",
+  "OptionD": "The stars",
+  "CorrectAnswer": "A",
+  "Explanation": "God blessed the seventh day and made it holy, because on it He rested from His work.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Genesis 2:3",
+  "Slug": "story-creation-holy-seventh-day",
+  "ReadingTitle": "Creation",
+  "ReadingLink": "#/stories/0"
+}

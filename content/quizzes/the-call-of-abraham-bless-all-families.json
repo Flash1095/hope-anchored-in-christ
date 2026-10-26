@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Call of Abraham Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who would be blessed through Abram?",
+  "OptionA": "All the families of the earth",
+  "OptionB": "Only his own household",
+  "OptionC": "Only the people of Canaan",
+  "OptionD": "Only the kings of the east",
+  "CorrectAnswer": "A",
+  "Explanation": "God promised that all the families of the earth would be blessed through Abram.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 12:3",
+  "Slug": "the-call-of-abraham-bless-all-families",
+  "ReadingTitle": "The Call of Abraham",
+  "ReadingLink": "#/stories/15"
+}

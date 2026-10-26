@@ -1,0 +1,16 @@
+{
+ "Quiz": "Transfiguration Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "Which two Old Testament figures appeared, talking with Jesus?",
+ "OptionA": "Abraham and Isaac",
+ "OptionB": "Moses and Elijah",
+ "OptionC": "David and Samuel",
+ "OptionD": "Isaiah and Jeremiah",
+ "CorrectAnswer": "B",
+ "Explanation": "Behold, there appeared unto them Moses and Elijah talking with Jesus.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Matthew 17:3",
+ "Slug": "transfiguration-moses-and-elijah",
+ "ReadingTitle": "Transfiguration",
+ "ReadingLink": "#/stories/66"
+}

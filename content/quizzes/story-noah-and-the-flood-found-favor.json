@@ -1,0 +1,16 @@
+{
+  "Quiz": "Noah and the Flood Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who found favor with God when the world had grown corrupt?",
+  "OptionA": "Shem",
+  "OptionB": "Noah",
+  "OptionC": "Ham",
+  "OptionD": "Japheth",
+  "CorrectAnswer": "B",
+  "Explanation": "But Noah found favor with God, even when the world around him had grown violent and corrupt.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 6:8",
+  "Slug": "story-noah-and-the-flood-found-favor",
+  "ReadingTitle": "Noah and the Flood",
+  "ReadingLink": "#/stories/7"
+}

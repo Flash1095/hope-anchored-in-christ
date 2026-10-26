@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jesus Turns Water into Wine at Cana Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What did Jesus' mother say to the servants at Cana?",
+ "OptionA": "Do not trouble Him",
+ "OptionB": "Wait until the feast ends",
+ "OptionC": "Buy more wine at once",
+ "OptionD": "Whatsoever He saith unto you, do it",
+ "CorrectAnswer": "D",
+ "Explanation": "Her simple advice is a lovely pattern for us all: whatever Jesus says, do it. The servants did, and the miracle followed.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "John 2:5",
+ "Slug": "jesus-turns-water-into-wine-at-cana-do-whatever-he-says",
+ "ReadingTitle": "Jesus Turns Water into Wine at Cana",
+ "ReadingLink": "#/stories/50"
+}

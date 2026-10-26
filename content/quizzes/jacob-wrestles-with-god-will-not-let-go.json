@@ -1,0 +1,16 @@
+{
+ "Quiz": "Jacob Wrestles with God Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did Jacob say he would not do without a blessing?",
+ "OptionA": "Cross the river",
+ "OptionB": "Let thee go",
+ "OptionC": "Return to his tents",
+ "OptionD": "Sleep",
+ "CorrectAnswer": "B",
+ "Explanation": "He said, I will not let thee go, except thou bless me.",
+ "Difficulty": "Easy",
+ "ScriptureReference": "Genesis 32:26",
+ "Slug": "jacob-wrestles-with-god-will-not-let-go",
+ "ReadingTitle": "Jacob Wrestles with God",
+ "ReadingLink": "#/stories/46"
+}

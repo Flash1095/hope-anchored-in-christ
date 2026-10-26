@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Burning Bush Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did God say about the ground where Moses stood?",
+  "OptionA": "It was Pharaoh's land",
+  "OptionB": "It was cursed ground",
+  "OptionC": "It belonged to Midian",
+  "OptionD": "It was holy ground",
+  "CorrectAnswer": "D",
+  "Explanation": "God told Moses he stood on holy ground, and Moses took off his sandals.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Exodus 3:5",
+  "Slug": "story-the-burning-bush-holy-ground",
+  "ReadingTitle": "The Burning Bush",
+  "ReadingLink": "#/stories/14"
+}

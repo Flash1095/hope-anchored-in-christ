@@ -1,0 +1,16 @@
+{
+  "Quiz": "Ruth's Loyalty Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Ruth say to Naomi about where she would go?",
+  "OptionA": "I will return home",
+  "OptionB": "I will stay in Moab",
+  "OptionC": "Where you go I will go",
+  "OptionD": "I will visit sometimes",
+  "CorrectAnswer": "C",
+  "Explanation": "Ruth clung to Naomi and said, where you go I will go, and where you stay I will stay.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Ruth 1:16",
+  "Slug": "ruths-loyalty-where-you-go",
+  "ReadingTitle": "Ruth's Loyalty",
+  "ReadingLink": "#/stories/9"
+}

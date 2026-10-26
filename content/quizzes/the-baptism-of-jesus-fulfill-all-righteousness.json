@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Baptism of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did Jesus say about being baptized by John?",
+  "OptionA": "It would wash away his sins",
+  "OptionB": "It was only a symbol for the crowds",
+  "OptionC": "It was John's idea alone",
+  "OptionD": "It was fitting to fulfill all righteousness",
+  "CorrectAnswer": "D",
+  "Explanation": "Jesus told John it was fitting to fulfill all righteousness, so John baptized him.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 3:15",
+  "Slug": "the-baptism-of-jesus-fulfill-all-righteousness",
+  "ReadingTitle": "The Baptism of Jesus",
+  "ReadingLink": "#/stories/11"
+}

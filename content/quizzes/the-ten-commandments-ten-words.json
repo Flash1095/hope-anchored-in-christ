@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Ten Commandments Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How many words did God speak to shape His covenant people?",
+  "OptionA": "Ten",
+  "OptionB": "Seven",
+  "OptionC": "Twelve",
+  "OptionD": "Forty",
+  "CorrectAnswer": "A",
+  "Explanation": "God spoke ten words that would shape His covenant people, and Moses received them on tablets of stone.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Exodus 20:1",
+  "Slug": "the-ten-commandments-ten-words",
+  "ReadingTitle": "The Ten Commandments",
+  "ReadingLink": "#/stories/27"
+}

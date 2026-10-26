@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Temptation in the Wilderness Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "How long did Jesus fast in the wilderness?",
+  "OptionA": "Forty days and nights",
+  "OptionB": "Seven days and nights",
+  "OptionC": "Thirty days and nights",
+  "OptionD": "Twelve days and nights",
+  "CorrectAnswer": "A",
+  "Explanation": "Jesus fasted forty days and nights before the tempter came to Him.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Matthew 4:2",
+  "Slug": "the-temptation-in-the-wilderness-forty-days-nights",
+  "ReadingTitle": "The Temptation in the Wilderness",
+  "ReadingLink": "#/stories/26"
+}

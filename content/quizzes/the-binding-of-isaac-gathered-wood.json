@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Binding of Isaac Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Abraham rise early and prepare for the journey?",
+  "OptionA": "Wood for the offering",
+  "OptionB": "Stones for an altar",
+  "OptionC": "Water for the journey",
+  "OptionD": "Gold for the offering",
+  "CorrectAnswer": "A",
+  "Explanation": "Abraham rose early, gathered wood, and set out with Isaac toward Mount Moriah.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 22:3",
+  "Slug": "the-binding-of-isaac-gathered-wood",
+  "ReadingTitle": "The Binding of Isaac",
+  "ReadingLink": "#/stories/12"
+}

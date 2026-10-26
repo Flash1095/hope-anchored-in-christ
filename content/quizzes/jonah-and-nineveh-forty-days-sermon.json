@@ -1,0 +1,16 @@
+{
+  "Quiz": "Jonah and Nineveh Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How many more days did Jonah say Nineveh had before it would be overthrown?",
+  "OptionA": "Thirty",
+  "OptionB": "Forty",
+  "OptionC": "Fifty",
+  "OptionD": "Ninety",
+  "CorrectAnswer": "B",
+  "Explanation": "Jonah preached the shortest of sermons: forty more days and Nineveh will be overthrown.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Jonah 3:4",
+  "Slug": "jonah-and-nineveh-forty-days-sermon",
+  "ReadingTitle": "Jonah and Nineveh",
+  "ReadingLink": "#/stories/5"
+}

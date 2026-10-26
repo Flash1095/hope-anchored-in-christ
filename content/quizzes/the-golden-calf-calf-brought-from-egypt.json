@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Golden Calf Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did the people claim the calf had done for them?",
+ "OptionA": "Given them manna",
+ "OptionB": "Brought them up out of the land of Egypt",
+ "OptionC": "Parted the Red Sea",
+ "OptionD": "Spoken the Ten Commandments",
+ "CorrectAnswer": "B",
+ "Explanation": "When the calf was made, the people said these were their gods who had brought them up out of Egypt.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Exodus 32:4",
+ "Slug": "the-golden-calf-calf-brought-from-egypt",
+ "ReadingTitle": "The Golden Calf",
+ "ReadingLink": "#/stories/61"
+}

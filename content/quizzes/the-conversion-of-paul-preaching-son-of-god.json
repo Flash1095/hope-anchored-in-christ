@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Conversion of Paul Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Within days of his baptism, what was Saul preaching?",
+  "OptionA": "That the law must be kept perfectly",
+  "OptionB": "That Rome would fall",
+  "OptionC": "That Jesus is the Son of God",
+  "OptionD": "That Stephen had been avenged",
+  "CorrectAnswer": "C",
+  "Explanation": "Within days, the man who came to destroy the church was preaching that Jesus is the Son of God.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Acts 9:20",
+  "Slug": "the-conversion-of-paul-preaching-son-of-god",
+  "ReadingTitle": "The Conversion of Paul",
+  "ReadingLink": "#/stories/16"
+}

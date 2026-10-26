@@ -1,0 +1,16 @@
+{
+ "Quiz": "Shadrach, Meshach and Abednego in the Fiery Furnace Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What was the fourth figure in the fire said to be like?",
+ "OptionA": "An angel with a sword",
+ "OptionB": "A prophet of Israel",
+ "OptionC": "The king's own son",
+ "OptionD": "The Son of God",
+ "CorrectAnswer": "D",
+ "Explanation": "Nebuchadnezzar said the form of the fourth was like the Son of God, and the three men had no hurt.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Daniel 3:25",
+ "Slug": "shadrach-meshach-and-abednego-in-the-fiery-furnace-like-son-of-god",
+ "ReadingTitle": "Shadrach, Meshach and Abednego in the Fiery Furnace",
+ "ReadingLink": "#/stories/59"
+}

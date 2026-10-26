@@ -1,15 +1,15 @@
 {
-  "Name": "Galilee",
-  "ModernLocation": "Northern Israel",
-  "Maps": "palestine-time-of-christ",
-  "Testament": "New",
-  "TimelineEra": "Life of Christ",
-  "Description": "The northern region - 'Galilee of the Gentiles' - where Jesus grew up, called His disciples, preached the Sermon on the Mount, and walked on water. After the resurrection He met them here again.",
-  "BiblicalSignificance": "Galilee was the despised north, far from Jerusalem's power - exactly where Jesus chose to begin. God still starts His greatest works in overlooked places.",
-  "KeyScriptures": "Isaiah 9:1-2; Matthew 4:12-17; Matthew 28:16-20",
-  "RelatedBooks": "Isaiah; Matthew",
-  "RelatedPeople": "Jesus; Simon Peter; Andrew; James, Son of Zebedee; John the Apostle",
-  "Slug": "galilee",
-  "RelatedEvents": "Sermon on the Mount; Jesus Calms the Storm; Feeding of the Five Thousand; Jesus Turns Water into Wine at Cana",
-  "Places": "Capernaum; Nazareth"
+ "Name": "Galilee",
+ "ModernLocation": "Northern Israel",
+ "Maps": "palestine-time-of-christ",
+ "Testament": "New",
+ "TimelineEra": "Life of Christ",
+ "Description": "The northern region - 'Galilee of the Gentiles' - where Jesus grew up, called His disciples, preached the Sermon on the Mount, and walked on water. After the resurrection He met them here again.",
+ "BiblicalSignificance": "Galilee was the despised north, far from Jerusalem's power - exactly where Jesus chose to begin. God still starts His greatest works in overlooked places.",
+ "KeyScriptures": "Isaiah 9:1-2; Matthew 4:12-17; Matthew 28:16-20",
+ "RelatedBooks": "Isaiah; Matthew",
+ "RelatedPeople": "Jesus; Simon Peter; Andrew; James, Son of Zebedee; John the Apostle",
+ "Slug": "galilee",
+ "RelatedEvents": "The Sermon on the Mount; Jesus Calms the Storm; The Feeding of the Five Thousand; Jesus Turns Water into Wine at Cana",
+ "Places": "Capernaum; Nazareth"
 }

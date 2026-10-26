@@ -1,0 +1,16 @@
+{
+ "Quiz": "Raising of Lazarus Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "What kind of tomb was Lazarus buried in?",
+ "OptionA": "A tomb carved in a cliff with a wooden door",
+ "OptionB": "A grave dug in a field",
+ "OptionC": "A stone coffin in the temple",
+ "OptionD": "A cave with a stone lying upon it",
+ "CorrectAnswer": "D",
+ "Explanation": "The grave was a cave, and a stone lay upon it, which Jesus told them to take away.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "John 11:38",
+ "Slug": "raising-of-lazarus-cave-and-stone",
+ "ReadingTitle": "Raising of Lazarus",
+ "ReadingLink": "#/stories/57"
+}

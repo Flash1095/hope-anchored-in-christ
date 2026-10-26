@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Binding of Isaac Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Abraham name the place where God provided the ram?",
+  "OptionA": "The Lord Will Provide",
+  "OptionB": "The Hill of Sacrifice",
+  "OptionC": "The Gate of Heaven",
+  "OptionD": "The Altar of Abraham",
+  "CorrectAnswer": "A",
+  "Explanation": "After offering the ram, Abraham named the place “The Lord Will Provide.”",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Genesis 22:14",
+  "Slug": "the-binding-of-isaac-lord-will-provide",
+  "ReadingTitle": "The Binding of Isaac",
+  "ReadingLink": "#/stories/12"
+}

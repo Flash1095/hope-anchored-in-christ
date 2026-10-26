@@ -1,0 +1,16 @@
+{
+  "Quiz": "Elijah on Mount Carmel Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Under which king and queen had Israel turned to Baal?",
+  "OptionA": "David and Bathsheba",
+  "OptionB": "Solomon and Pharaoh's daughter",
+  "OptionC": "Josiah and Jedidah",
+  "OptionD": "Ahab and Jezebel",
+  "CorrectAnswer": "D",
+  "Explanation": "Under King Ahab and Queen Jezebel, Israel had turned away to worship Baal.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "1 Kings 18:19",
+  "Slug": "story-elijah-on-mount-carmel-ahab-jezebel",
+  "ReadingTitle": "Elijah on Mount Carmel",
+  "ReadingLink": "#/stories/3"
+}

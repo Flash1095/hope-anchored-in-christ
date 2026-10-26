@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Fall Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What happened to humanity after the Fall?",
+  "OptionA": "They were turned to dust at once",
+  "OptionB": "They were sent from the garden",
+  "OptionC": "They lost their names",
+  "OptionD": "They were locked in the garden",
+  "CorrectAnswer": "B",
+  "Explanation": "Humanity was sent from the garden, yet even in judgment God promised rescue.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Genesis 3:23",
+  "Slug": "story-the-fall-sent-from-garden",
+  "ReadingTitle": "The Fall",
+  "ReadingLink": "#/stories/19"
+}

@@ -1,0 +1,16 @@
+{
+ "Quiz": "Rebuilding of the Temple Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "On what day was the Temple finished, in the reign of Darius?",
+ "OptionA": "The third day of the month Adar, in the sixth year of Darius",
+ "OptionB": "The first day of Nisan, in the first year of Cyrus",
+ "OptionC": "The tenth day of Elul, in the twentieth year of Artaxerxes",
+ "OptionD": "The fourteenth day of the first month",
+ "CorrectAnswer": "A",
+ "Explanation": "Scripture records the house was finished on the third day of Adar, in the sixth year of the reign of Darius the king.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Ezra 6:15",
+ "Slug": "rebuilding-of-the-temple-third-day-adar",
+ "ReadingTitle": "Rebuilding of the Temple",
+ "ReadingLink": "#/stories/58"
+}

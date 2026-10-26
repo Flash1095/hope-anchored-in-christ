@@ -1,0 +1,16 @@
+{
+ "Quiz": "The Ten Plagues Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How long did the thick darkness last over Egypt?",
+ "OptionA": "One day",
+ "OptionB": "Three days",
+ "OptionC": "Seven days",
+ "OptionD": "Forty days",
+ "CorrectAnswer": "B",
+ "Explanation": "Moses stretched out his hand toward heaven, and there was a thick darkness in all the land of Egypt for three days.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Exodus 10:22",
+ "Slug": "the-ten-plagues-darkness-three-days",
+ "ReadingTitle": "The Ten Plagues",
+ "ReadingLink": "#/stories/64"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Resurrection Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "What did the angels announce at the tomb?",
+  "OptionA": "Jesus had been taken to Galilee",
+  "OptionB": "The tomb was never used at all",
+  "OptionC": "Jesus, who was crucified, had risen just as He said",
+  "OptionD": "The women should return on the Sabbath",
+  "CorrectAnswer": "C",
+  "Explanation": "The angels announced the good news: Jesus had risen, just as He had said He would.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Matthew 28:6",
+  "Slug": "story-the-resurrection-angels-announced-risen",
+  "ReadingTitle": "The Resurrection",
+  "ReadingLink": "#/stories/24"
+}

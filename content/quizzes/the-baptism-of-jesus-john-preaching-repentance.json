@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Baptism of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Who was preaching repentance at the Jordan River when Jesus came to be baptized?",
+  "OptionA": "Peter",
+  "OptionB": "John the Baptist",
+  "OptionC": "James",
+  "OptionD": "Andrew",
+  "CorrectAnswer": "B",
+  "Explanation": "John the Baptist was preaching repentance at the Jordan River when Jesus came from Galilee to be baptized by him.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Matthew 3:1",
+  "Slug": "the-baptism-of-jesus-john-preaching-repentance",
+  "ReadingTitle": "The Baptism of Jesus",
+  "ReadingLink": "#/stories/11"
+}

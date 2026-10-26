@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Binding of Isaac Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who stopped Abraham at the very last moment as he raised the knife?",
+  "OptionA": "Sarah",
+  "OptionB": "The angel of the Lord",
+  "OptionC": "Isaac",
+  "OptionD": "A priest of Salem",
+  "CorrectAnswer": "B",
+  "Explanation": "At the very last moment, as Abraham raised the knife, the angel of the Lord stopped him.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 22:11",
+  "Slug": "the-binding-of-isaac-angel-stopped-him",
+  "ReadingTitle": "The Binding of Isaac",
+  "ReadingLink": "#/stories/12"
+}

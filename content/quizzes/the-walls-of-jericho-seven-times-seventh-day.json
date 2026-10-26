@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Walls of Jericho Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "On the seventh day, how many times did Israel march around the city?",
+  "OptionA": "Once",
+  "OptionB": "Seven times",
+  "OptionC": "Three times",
+  "OptionD": "Twelve times",
+  "CorrectAnswer": "B",
+  "Explanation": "On the seventh day they were to march around the city seven times.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Joshua 6:4",
+  "Slug": "the-walls-of-jericho-seven-times-seventh-day",
+  "ReadingTitle": "The Walls of Jericho",
+  "ReadingLink": "#/stories/29"
+}

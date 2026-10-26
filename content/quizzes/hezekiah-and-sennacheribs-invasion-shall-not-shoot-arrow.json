@@ -1,0 +1,16 @@
+{
+ "Quiz": "Hezekiah and Sennacherib's Invasion Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "What did God say the king of Assyria would NOT do to Jerusalem?",
+ "OptionA": "Send messengers to it",
+ "OptionB": "Look toward it",
+ "OptionC": "Speak against it",
+ "OptionD": "Come into the city, nor shoot an arrow there",
+ "CorrectAnswer": "D",
+ "Explanation": "Thus saith the LORD concerning the king of Assyria: He shall not come into this city, nor shoot an arrow there, nor come before it with shield.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "2 Kings 19:32",
+ "Slug": "hezekiah-and-sennacheribs-invasion-shall-not-shoot-arrow",
+ "ReadingTitle": "Hezekiah and Sennacherib's Invasion",
+ "ReadingLink": "#/stories/45"
+}

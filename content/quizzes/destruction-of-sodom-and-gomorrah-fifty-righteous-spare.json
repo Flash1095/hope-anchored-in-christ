@@ -1,0 +1,16 @@
+{
+ "Quiz": "Destruction of Sodom and Gomorrah Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "God said He would spare Sodom if He found how many righteous people within the city?",
+ "OptionA": "Ten righteous",
+ "OptionB": "Twenty righteous",
+ "OptionC": "Fifty righteous",
+ "OptionD": "Forty righteous",
+ "CorrectAnswer": "C",
+ "Explanation": "God told Abraham that if He found fifty righteous in Sodom, He would spare the whole place for their sakes.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Genesis 18:26",
+ "Slug": "destruction-of-sodom-and-gomorrah-fifty-righteous-spare",
+ "ReadingTitle": "Destruction of Sodom and Gomorrah",
+ "ReadingLink": "#/stories/40"
+}

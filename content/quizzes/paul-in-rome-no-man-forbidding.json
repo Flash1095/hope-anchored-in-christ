@@ -1,0 +1,16 @@
+{
+ "Quiz": "Paul in Rome Story Quiz",
+ "Course": "New Testament Survey",
+ "Question": "How does the book of Acts end its account of Paul in Rome?",
+ "OptionA": "With Paul condemned to death",
+ "OptionB": "With Paul sailing home",
+ "OptionC": "With Paul silent in prison",
+ "OptionD": "With Paul preaching with all confidence, no man forbidding him",
+ "CorrectAnswer": "D",
+ "Explanation": "Acts closes with Paul preaching the kingdom of God and teaching concerning Christ with all confidence, no man forbidding him.",
+ "Difficulty": "Hard",
+ "ScriptureReference": "Acts 28:31",
+ "Slug": "paul-in-rome-no-man-forbidding",
+ "ReadingTitle": "Paul in Rome",
+ "ReadingLink": "#/stories/53"
+}

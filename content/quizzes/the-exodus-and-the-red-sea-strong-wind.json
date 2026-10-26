@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Exodus and the Red Sea Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did God use to drive the sea back?",
+  "OptionA": "An earthquake",
+  "OptionB": "A wall of fire",
+  "OptionC": "A strong wind",
+  "OptionD": "A great frost",
+  "CorrectAnswer": "C",
+  "Explanation": "God drove the sea back with a strong wind, and the people walked through on dry ground.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Exodus 14:21",
+  "Slug": "the-exodus-and-the-red-sea-strong-wind",
+  "ReadingTitle": "The Exodus and the Red Sea",
+  "ReadingLink": "#/stories/18"
+}

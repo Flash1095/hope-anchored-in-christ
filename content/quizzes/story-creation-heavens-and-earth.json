@@ -1,0 +1,16 @@
+{
+  "Quiz": "Creation Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "Who created the heavens and the earth in the beginning?",
+  "OptionA": "The angels",
+  "OptionB": "God",
+  "OptionC": "Adam",
+  "OptionD": "The stars",
+  "CorrectAnswer": "B",
+  "Explanation": "God alone is the Creator of all things, and the story begins with Him.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 1:1",
+  "Slug": "story-creation-heavens-and-earth",
+  "ReadingTitle": "Creation",
+  "ReadingLink": "#/stories/0"
+}

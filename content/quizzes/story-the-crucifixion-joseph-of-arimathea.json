@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Crucifixion Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Who laid Jesus' body in a new tomb?",
+  "OptionA": "Nicodemus",
+  "OptionB": "John",
+  "OptionC": "Simon of Cyrene",
+  "OptionD": "Joseph of Arimathea",
+  "CorrectAnswer": "D",
+  "Explanation": "Joseph of Arimathea laid Jesus' body in a new tomb, and a stone sealed the entrance.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Matthew 27:59",
+  "Slug": "story-the-crucifixion-joseph-of-arimathea",
+  "ReadingTitle": "The Crucifixion",
+  "ReadingLink": "#/stories/17"
+}

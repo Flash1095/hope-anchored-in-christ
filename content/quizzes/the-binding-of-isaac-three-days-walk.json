@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Binding of Isaac Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "How long did Abraham and Isaac walk before they reached the place?",
+  "OptionA": "One day",
+  "OptionB": "Seven days",
+  "OptionC": "Three days",
+  "OptionD": "Forty days",
+  "CorrectAnswer": "C",
+  "Explanation": "Abraham walked with his son for three days on the way to Mount Moriah.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 22:4",
+  "Slug": "the-binding-of-isaac-three-days-walk",
+  "ReadingTitle": "The Binding of Isaac",
+  "ReadingLink": "#/stories/12"
+}

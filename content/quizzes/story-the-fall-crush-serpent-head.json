@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Fall Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What promise did God give even in judgment?",
+  "OptionA": "A new garden would be planted",
+  "OptionB": "The serpent would be forgiven",
+  "OptionC": "Adam would return one day",
+  "OptionD": "The offspring of the woman would crush the serpent's head",
+  "CorrectAnswer": "D",
+  "Explanation": "Even in judgment, God promised that the offspring of the woman would one day crush the serpent's head.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Genesis 3:15",
+  "Slug": "story-the-fall-crush-serpent-head",
+  "ReadingTitle": "The Fall",
+  "ReadingLink": "#/stories/19"
+}

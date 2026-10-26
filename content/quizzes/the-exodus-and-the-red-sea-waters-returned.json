@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Exodus and the Red Sea Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What happened when the Egyptians followed Israel into the sea?",
+  "OptionA": "The wind stopped them",
+  "OptionB": "The waters returned",
+  "OptionC": "The ground swallowed them",
+  "OptionD": "Fire fell from heaven",
+  "CorrectAnswer": "B",
+  "Explanation": "When the Egyptians followed, the waters returned, and the Lord hurled horse and rider into the sea.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Exodus 14:28",
+  "Slug": "the-exodus-and-the-red-sea-waters-returned",
+  "ReadingTitle": "The Exodus and the Red Sea",
+  "ReadingLink": "#/stories/18"
+}

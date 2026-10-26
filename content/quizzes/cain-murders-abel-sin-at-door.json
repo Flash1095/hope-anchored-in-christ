@@ -1,0 +1,16 @@
+{
+ "Quiz": "Cain Murders Abel Story Quiz",
+ "Course": "Old Testament Survey",
+ "Question": "How did God describe sin's position as He warned Cain?",
+ "OptionA": "Far away from him",
+ "OptionB": "Lying at the door",
+ "OptionC": "Hidden in the field",
+ "OptionD": "Buried in the ground",
+ "CorrectAnswer": "B",
+ "Explanation": "God told Cain that if he did not do well, sin lay at the door, waiting to master him, but he could rule over it.",
+ "Difficulty": "Medium",
+ "ScriptureReference": "Genesis 4:7",
+ "Slug": "cain-murders-abel-sin-at-door",
+ "ReadingTitle": "Cain Murders Abel",
+ "ReadingLink": "#/stories/32"
+}

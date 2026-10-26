@@ -1,0 +1,16 @@
+{
+  "Quiz": "Joseph and His Brothers Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "To whom did Joseph's brothers sell him?",
+  "OptionA": "Egyptian soldiers",
+  "OptionB": "Traders bound for Egypt",
+  "OptionC": "Philistine merchants",
+  "OptionD": "The king's guards",
+  "CorrectAnswer": "B",
+  "Explanation": "His brothers sold Joseph to traders bound for Egypt and told their father he was dead.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 37:28",
+  "Slug": "joseph-and-his-brothers-sold-traders",
+  "ReadingTitle": "Joseph and His Brothers",
+  "ReadingLink": "#/stories/6"
+}

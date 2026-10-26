@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Crucifixion Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "At what time did Jesus cry out and give up his spirit?",
+  "OptionA": "At dawn",
+  "OptionB": "At midnight",
+  "OptionC": "Three in the afternoon",
+  "OptionD": "At sunset",
+  "CorrectAnswer": "C",
+  "Explanation": "At three in the afternoon Jesus cried out and gave up his spirit.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 27:46",
+  "Slug": "story-the-crucifixion-three-in-afternoon",
+  "ReadingTitle": "The Crucifixion",
+  "ReadingLink": "#/stories/17"
+}

@@ -1,0 +1,16 @@
+{
+  "Quiz": "Joseph and His Brothers Story Quiz",
+  "Course": "Old Testament Survey",
+  "Question": "What did Joseph's brothers tell their father Jacob?",
+  "OptionA": "Joseph was dead",
+  "OptionB": "Joseph had run away",
+  "OptionC": "Joseph was king",
+  "OptionD": "Joseph was lost at sea",
+  "CorrectAnswer": "A",
+  "Explanation": "His brothers told Jacob that Joseph was dead, though they had sold him into Egypt.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Genesis 37:33",
+  "Slug": "joseph-and-his-brothers-told-father-dead",
+  "ReadingTitle": "Joseph and His Brothers",
+  "ReadingLink": "#/stories/6"
+}

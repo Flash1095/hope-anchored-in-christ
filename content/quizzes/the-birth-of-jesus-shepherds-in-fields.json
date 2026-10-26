@@ -1,0 +1,16 @@
+{
+  "Quiz": "The Birth of Jesus Story Quiz",
+  "Course": "New Testament Survey",
+  "Question": "Who first heard the angels' announcement in the fields at night?",
+  "OptionA": "Wise men",
+  "OptionB": "Priests in the temple",
+  "OptionC": "Roman soldiers",
+  "OptionD": "Shepherds",
+  "CorrectAnswer": "D",
+  "Explanation": "That night angels filled the sky over shepherds in the fields, announcing good news of great joy.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Luke 2:8",
+  "Slug": "the-birth-of-jesus-shepherds-in-fields",
+  "ReadingTitle": "The Birth of Jesus",
+  "ReadingLink": "#/stories/13"
+}
