@@ -1,0 +1,597 @@
+# Decap CMS configuration for Hope Anchored in Christ.
+# Edit content at /admin after this repo is pushed to GitHub.
+# Repo: Flash1095/hope-anchored-in-christ (see README for the login setup).
+backend:
+  name: git-gateway
+  branch: main
+  identity_url: https://hope-anchored-in-christ.netlify.app/.netlify/identity
+  gateway_url: https://hope-anchored-in-christ.netlify.app/.netlify/git/github
+  repo: Flash1095/hope-anchored-in-christ
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "title"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Scripture", name: "scripture", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "timeline"
+    label: "Timeline"
+    folder: "content/timeline"
+    create: true
+    slug: "{{fields.Title}}"
+    identifier_field: "Title"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Title", name: "Title", widget: "string"}
+      - {label: "Era", name: "Era", widget: "string"}
+      - {label: "Date Approx", name: "DateApprox", widget: "string"}
+      - {label: "Key Persons", name: "KeyPersons", widget: "list"}
+      - {label: "Bible Books", name: "BibleBooks", widget: "list"}
+      - {label: "Places", name: "Places", widget: "list"}
+      - {label: "Events", name: "Events", widget: "list"}
+      - {label: "Archaeological Finds", name: "ArchaeologicalFinds", widget: "list"}
+      - {label: "Scripture Reference", name: "ScriptureReference", widget: "list"}
+      - {label: "Blog Post Link", name: "BlogPostLink", widget: "string"}
+  - name: "books"
+    label: "Books of the Bible"
+    folder: "content/books"
+    create: true
+    slug: "{{fields.Book}}"
+    identifier_field: "Book"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Book", name: "Book", widget: "string"}
+      - {label: "Testament", name: "Testament", widget: "string"}
+      - {label: "Category", name: "Category", widget: "string"}
+      - {label: "Traditional Author", name: "TraditionalAuthor", widget: "string"}
+      - {label: "Date Approx", name: "DateApprox", widget: "string"}
+      - {label: "Timeline Era", name: "TimelineEra", widget: "string"}
+      - {label: "Key Theme", name: "KeyTheme", widget: "string"}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Key Verses", name: "KeyVerses", widget: "list"}
+      - {label: "Key People", name: "KeyPeople", widget: "list"}
+      - {label: "Themes", name: "Themes", widget: "list"}
+      - {label: "Purpose", name: "Purpose", widget: "string"}
+      - {label: "Outline", name: "Outline", widget: "list"}
+      - {label: "Historical Context", name: "HistoricalContext", widget: "text"}
+  - name: "questions"
+    label: "Questions and Answers"
+    folder: "content/questions"
+    create: true
+    slug: "{{fields.Question}}"
+    identifier_field: "Question"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Question", name: "Question", widget: "string"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Short Answer", name: "ShortAnswer", widget: "text"}
+      - {label: "Detailed Answer", name: "DetailedAnswer", widget: "text"}
+      - {label: "Category", name: "Category", widget: "string"}
+      - {label: "Subcategory", name: "Subcategory", widget: "string"}
+      - {label: "Bible References", name: "BibleReferences", widget: "list"}
+      - {label: "Biblical Context", name: "BiblicalContext", widget: "string"}
+      - {label: "Original Language", name: "OriginalLanguage", widget: "string"}
+      - {label: "Historical Evidence", name: "HistoricalEvidence", widget: "string"}
+      - {label: "Common Objections", name: "CommonObjections", widget: "string"}
+      - {label: "Related Questions", name: "RelatedQuestions", widget: "list"}
+      - {label: "Related Book", name: "RelatedBook", widget: "list"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Timeline Era", name: "TimelineEra", widget: "string"}
+      - {label: "Sources", name: "Sources", widget: "string"}
+      - {label: "SEO Title", name: "SEOTitle", widget: "string"}
+      - {label: "Meta Description", name: "MetaDescription", widget: "text"}
+      - {label: "Tags", name: "Tags", widget: "list"}
+      - {label: "Status", name: "Status", widget: "string"}
+      - {label: "Last Updated", name: "LastUpdated", widget: "string"}
+  - name: "people"
+    label: "Biblical People"
+    folder: "content/people"
+    create: true
+    slug: "{{fields.Name}}"
+    identifier_field: "Name"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Name", name: "Name", widget: "string"}
+      - {label: "Role", name: "Role", widget: "list"}
+      - {label: "Testament", name: "Testament", widget: "string"}
+      - {label: "Timeline Era", name: "TimelineEra", widget: "string"}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Key Story", name: "KeyStory", widget: "text"}
+      - {label: "Key Verses", name: "KeyVerses", widget: "list"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Related People", name: "RelatedPeople", widget: "list"}
+      - {label: "Life Lesson", name: "LifeLesson", widget: "text"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "finds"
+    label: "Ancient Discoveries"
+    folder: "content/finds"
+    create: true
+    slug: "{{fields.FindName}}"
+    identifier_field: "FindName"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Find Name", name: "FindName", widget: "string"}
+      - {label: "Date Discovered", name: "DateDiscovered", widget: "string"}
+      - {label: "Artifact Date", name: "ArtifactDate", widget: "string"}
+      - {label: "Discovery Location", name: "DiscoveryLocation", widget: "string"}
+      - {label: "Current Location", name: "CurrentLocation", widget: "string"}
+      - {label: "Timeline Era", name: "TimelineEra", widget: "string"}
+      - {label: "Description", name: "Description", widget: "text"}
+      - {label: "Biblical Significance", name: "BiblicalSignificance", widget: "text"}
+      - {label: "Scripture Illuminated", name: "ScriptureIlluminated", widget: "list"}
+      - {label: "Related People", name: "RelatedPeople", widget: "list"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "places"
+    label: "Biblical Places"
+    folder: "content/places"
+    create: true
+    slug: "{{fields.Name}}"
+    identifier_field: "Name"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Name", name: "Name", widget: "string"}
+      - {label: "Modern Location", name: "ModernLocation", widget: "string"}
+      - {label: "Maps", name: "Maps", widget: "string"}
+      - {label: "Testament", name: "Testament", widget: "string"}
+      - {label: "Timeline Era", name: "TimelineEra", widget: "string"}
+      - {label: "Description", name: "Description", widget: "text"}
+      - {label: "Biblical Significance", name: "BiblicalSignificance", widget: "text"}
+      - {label: "Key Scriptures", name: "KeyScriptures", widget: "list"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Related People", name: "RelatedPeople", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "topics"
+    label: "Topics"
+    folder: "content/topics"
+    create: true
+    slug: "{{fields.Topic}}"
+    identifier_field: "Topic"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Topic", name: "Topic", widget: "string"}
+      - {label: "Category", name: "Category", widget: "string"}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Key Passages", name: "KeyPassages", widget: "list"}
+      - {label: "Related People", name: "RelatedPeople", widget: "list"}
+      - {label: "Related Doctrines", name: "RelatedDoctrines", widget: "list"}
+      - {label: "Related Questions", name: "RelatedQuestions", widget: "list"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "themes"
+    label: "Themes"
+    folder: "content/themes"
+    create: true
+    slug: "{{fields.Theme}}"
+    identifier_field: "Theme"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Theme", name: "Theme", widget: "string"}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Key Passages", name: "KeyPassages", widget: "list"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Related People", name: "RelatedPeople", widget: "list"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "doctrines"
+    label: "Doctrines"
+    folder: "content/doctrines"
+    create: true
+    slug: "{{fields.Doctrine}}"
+    identifier_field: "Doctrine"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Doctrine", name: "Doctrine", widget: "string"}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Biblical Support", name: "BiblicalSupport", widget: "list"}
+      - {label: "Historical Development", name: "HistoricalDevelopment", widget: "text"}
+      - {label: "Interpretations", name: "Interpretations", widget: "text"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Related People", name: "RelatedPeople", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "heresies"
+    label: "Heresies"
+    folder: "content/heresies"
+    create: true
+    slug: "{{fields.Heresy}}"
+    identifier_field: "Heresy"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Heresy", name: "Heresy", widget: "string"}
+      - {label: "Founder", name: "Founder", widget: "string"}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Beliefs", name: "Beliefs", widget: "list"}
+      - {label: "Controversy", name: "Controversy", widget: "text"}
+      - {label: "Christian Response", name: "ChristianResponse", widget: "text"}
+      - {label: "Related People", name: "RelatedPeople", widget: "list"}
+      - {label: "Related Doctrines", name: "RelatedDoctrines", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "wordstudies"
+    label: "Word Studies"
+    folder: "content/wordstudies"
+    create: true
+    slug: "{{fields.Transliteration}}"
+    identifier_field: "Transliteration"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Word", name: "Word", widget: "string"}
+      - {label: "Language", name: "Language", widget: "string"}
+      - {label: "Transliteration", name: "Transliteration", widget: "string"}
+      - {label: "Strongs Number", name: "StrongsNumber", widget: "string"}
+      - {label: "Definition", name: "Definition", widget: "string"}
+      - {label: "Part Of Speech", name: "PartOfSpeech", widget: "string"}
+      - {label: "Key Passages", name: "KeyPassages", widget: "list"}
+      - {label: "Biblical Usage", name: "BiblicalUsage", widget: "text"}
+      - {label: "Theological Significance", name: "TheologicalSignificance", widget: "text"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "prophecies"
+    label: "Prophecies"
+    folder: "content/prophecies"
+    create: true
+    slug: "{{fields.Prophecy}}"
+    identifier_field: "Prophecy"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Prophecy", name: "Prophecy", widget: "string"}
+      - {label: "Prophet", name: "Prophet", widget: "string"}
+      - {label: "Date Approx", name: "DateApprox", widget: "string"}
+      - {label: "Timeline Era", name: "TimelineEra", widget: "string"}
+      - {label: "Prophecy Summary", name: "ProphecySummary", widget: "text"}
+      - {label: "Fulfillment", name: "Fulfillment", widget: "text"}
+      - {label: "Fulfillment Status", name: "FulfillmentStatus", widget: "string"}
+      - {label: "Key Passages", name: "KeyPassages", widget: "list"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Related People", name: "RelatedPeople", widget: "list"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "typology"
+    label: "Typology"
+    folder: "content/typology"
+    create: true
+    slug: "{{fields.Type}}"
+    identifier_field: "Type"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Type", name: "Type", widget: "string"}
+      - {label: "Category", name: "Category", widget: "string"}
+      - {label: "Old Testament Passage", name: "OldTestamentPassage", widget: "list"}
+      - {label: "Fulfillment", name: "Fulfillment", widget: "text"}
+      - {label: "Fulfillment Passage", name: "FulfillmentPassage", widget: "list"}
+      - {label: "Explanation", name: "Explanation", widget: "text"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Related People", name: "RelatedPeople", widget: "list"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "fallacies"
+    label: "Fallacies"
+    folder: "content/fallacies"
+    create: true
+    slug: "{{fields.Fallacy}}"
+    identifier_field: "Fallacy"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Fallacy", name: "Fallacy", widget: "string"}
+      - {label: "Category", name: "Category", widget: "string"}
+      - {label: "Definition", name: "Definition", widget: "text"}
+      - {label: "Example", name: "Example", widget: "text"}
+      - {label: "Faith Discussion Example", name: "FaithDiscussionExample", widget: "text"}
+      - {label: "How To Respond", name: "HowToRespond", widget: "text"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "courses"
+    label: "Courses"
+    folder: "content/courses"
+    create: true
+    slug: "{{fields.Course}}"
+    identifier_field: "Course"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Course", name: "Course", widget: "string"}
+      - {label: "Level", name: "Level", widget: "string"}
+      - {label: "Duration", name: "Duration", widget: "string"}
+      - {label: "Lessons", name: "Lessons", widget: "list"}
+      - {label: "Description", name: "Description", widget: "text"}
+      - {label: "Key Topics", name: "KeyTopics", widget: "list"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "quizzes"
+    label: "Quizzes"
+    folder: "content/quizzes"
+    create: true
+    slug: "{{fields.Slug}}"
+    identifier_field: "Question"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Quiz", name: "Quiz", widget: "string", hint: "Use the exact same quiz name on every question in that quiz — questions group into a quiz by this name."}
+      - {label: "Course", name: "Course", widget: "string"}
+      - {label: "Question", name: "Question", widget: "text"}
+      - {label: "Option A", name: "OptionA", widget: "string"}
+      - {label: "Option B", name: "OptionB", widget: "string"}
+      - {label: "Option C", name: "OptionC", widget: "string"}
+      - {label: "Option D", name: "OptionD", widget: "string"}
+      - {label: "Correct Answer", name: "CorrectAnswer", widget: "select", options: ["A", "B", "C", "D"]}
+      - {label: "Explanation", name: "Explanation", widget: "text"}
+      - {label: "Difficulty", name: "Difficulty", widget: "select", options: ["Easy", "Medium", "Hard"]}
+      - {label: "Scripture Reference", name: "ScriptureReference", widget: "string"}
+      - {label: "Reading Title", name: "ReadingTitle", widget: "string"}
+      - {label: "Reading Link", name: "ReadingLink", widget: "string"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "hymns"
+    label: "Hymns"
+    folder: "content/hymns"
+    create: true
+    slug: "{{fields.Hymn}}"
+    identifier_field: "Hymn"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Hymn", name: "Hymn", widget: "string"}
+      - {label: "Author", name: "Author", widget: "string"}
+      - {label: "Year", name: "Year", widget: "string"}
+      - {label: "Tune", name: "Tune", widget: "string"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Story", name: "Story", widget: "text"}
+      - {label: "Themes", name: "Themes", widget: "list"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "nature"
+    label: "Nature & Creation"
+    folder: "content/nature"
+    create: true
+    slug: "{{fields.Name}}"
+    identifier_field: "Name"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Name", name: "Name", widget: "string"}
+      - {label: "Category", name: "Category", widget: "select", options: ["Bird", "Plant", "Animal"]}
+      - {label: "Description", name: "Description", widget: "text"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Creation Reflection", name: "CreationReflection", widget: "text"}
+      - {label: "Habitat", name: "Habitat", widget: "string"}
+      - {label: "Image", name: "Image", widget: "image"}
+      - {label: "Image Credit", name: "ImageCredit", widget: "string"}
+      - {label: "Image Source", name: "ImageSource", widget: "string"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "apologetics"
+    label: "Apologetics"
+    folder: "content/apologetics"
+    create: true
+    slug: "{{fields.Argument}}"
+    identifier_field: "Argument"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Argument", name: "Argument", widget: "string"}
+      - {label: "Category", name: "Category", widget: "select", options: ["Philosophy", "Science", "History", "Experience"]}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Key Points", name: "KeyPoints", widget: "list"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "objections"
+    label: "Objections & Answers"
+    folder: "content/objections"
+    create: true
+    slug: "{{fields.Objection}}"
+    identifier_field: "Objection"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Objection", name: "Objection", widget: "string"}
+      - {label: "Worldview", name: "Worldview", widget: "select", options: ["Atheism", "Islam", "Judaism", "Hinduism", "Buddhism", "Skepticism", "Other"]}
+      - {label: "Objection Summary", name: "ObjectionSummary", widget: "text"}
+      - {label: "Response", name: "Response", widget: "text"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "perspectives"
+    label: "Perspectives"
+    folder: "content/perspectives"
+    create: true
+    slug: "{{fields.Profession}}"
+    identifier_field: "Profession"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Profession", name: "Profession", widget: "string"}
+      - {label: "Exemplar", name: "Exemplar", widget: "string"}
+      - {label: "Method", name: "Method", widget: "text"}
+      - {label: "Biblical Insight", name: "BiblicalInsight", widget: "text"}
+      - {label: "Key Work", name: "KeyWork", widget: "string"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "heritage"
+    label: "Christian Heritage"
+    folder: "content/heritage"
+    create: true
+    slug: "{{fields.Name}}"
+    identifier_field: "Name"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Name", name: "Name", widget: "string"}
+      - {label: "Type", name: "Type", widget: "select", options: ["Figure", "Writing", "Event", "Movement"]}
+      - {label: "Era", name: "Era", widget: "string"}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Contribution", name: "Contribution", widget: "text"}
+      - {label: "Key Works", name: "KeyWorks", widget: "list"}
+      - {label: "Testimony", name: "Testimony", widget: "text"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "politics"
+    label: "Faith & Politics"
+    folder: "content/politics"
+    create: true
+    slug: "{{fields.Issue}}"
+    identifier_field: "Issue"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Issue", name: "Issue", widget: "string"}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Biblical Principles", name: "BiblicalPrinciples", widget: "text"}
+      - {label: "Biblical Response", name: "BiblicalResponse", widget: "text"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Pitfalls", name: "Pitfalls", widget: "text"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "socialmedia"
+    label: "Social Media Responses"
+    folder: "content/socialmedia"
+    create: true
+    slug: "{{fields.Post}}"
+    identifier_field: "Post"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Post", name: "Post", widget: "string"}
+      - {label: "Platform", name: "Platform", widget: "select", options: ["TikTok", "X", "Facebook", "Instagram", "YouTube", "Other"]}
+      - {label: "Post Summary", name: "PostSummary", widget: "text"}
+      - {label: "Biblical Response", name: "BiblicalResponse", widget: "text"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "stories"
+    label: "Biblical Stories & Events"
+    folder: "content/stories"
+    create: true
+    slug: "{{fields.Story}}"
+    identifier_field: "Story"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Story", name: "Story", widget: "string"}
+      - {label: "Testament", name: "Testament", widget: "select", options: ["Old Testament", "New Testament"]}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Retelling", name: "Retelling", widget: "text"}
+      - {label: "Discussion", name: "Discussion", widget: "text"}
+      - {label: "Significance", name: "Significance", widget: "text"}
+      - {label: "Themes", name: "Themes", widget: "list"}
+      - {label: "Date Approx", name: "DateApprox", widget: "string"}
+      - {label: "Timeline Era", name: "TimelineEra", widget: "string"}
+      - {label: "Place", name: "Place", widget: "string"}
+      - {label: "Key People", name: "KeyPeople", widget: "list"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Related Finds", name: "RelatedFinds", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "hermeneutics"
+    label: "Biblical Hermeneutics"
+    folder: "content/hermeneutics"
+    create: true
+    slug: "{{fields.Principle}}"
+    identifier_field: "Principle"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Principle", name: "Principle", widget: "string"}
+      - {label: "Category", name: "Category", widget: "select", options: ["Context", "Genre", "Device", "Principle"]}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "How to Apply", name: "HowToApply", widget: "text"}
+      - {label: "Scripture Example", name: "ScriptureExample", widget: "text"}
+      - {label: "Common Mistake", name: "CommonMistake", widget: "text"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "jewishculture"
+    label: "Jewish Culture & the Messiah"
+    folder: "content/jewishculture"
+    create: true
+    slug: "{{fields.Topic}}"
+    identifier_field: "Topic"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Topic", name: "Topic", widget: "string"}
+      - {label: "Category", name: "Category", widget: "select", options: ["Feast", "Custom", "Language", "History", "Messianic Reading"]}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Jewish Background", name: "JewishBackground", widget: "text"}
+      - {label: "Points to Christ", name: "PointsToChrist", widget: "text"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "comicstories"
+    label: "Comic Stories"
+    folder: "content/comicstories"
+    create: true
+    slug: "{{fields.Slug}}"
+    identifier_field: "Slug"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Story", name: "Story", widget: "string", hint: "Use the exact same story name on every panel of that story — panels group into a story by this name."}
+      - {label: "Story Description", name: "StoryDescription", widget: "text", hint: "Repeat the same description on every panel of the story."}
+      - {label: "Panel Number", name: "PanelNumber", widget: "number", hint: "Panels read in this order, lowest first."}
+      - {label: "Panel Image", name: "PanelImage", widget: "image"}
+      - {label: "Panel Background (parallax layer)", name: "PanelBackground", widget: "image", required: false, hint: "Optional slow-moving background layer behind the panel art, for the parallax depth effect. Leave empty to use the default soft backdrop."}
+      - {label: "Panel Image Credit", name: "PanelImageCredit", widget: "string"}
+      - {label: "Panel Text", name: "PanelText", widget: "text"}
+      - {label: "Character", name: "Character", widget: "string"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "studyguides"
+    label: "Bible Study Guides"
+    folder: "content/studyguides"
+    create: true
+    slug: "{{fields.Slug}}"
+    identifier_field: "Slug"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Guide", name: "Guide", widget: "string"}
+      - {label: "Category", name: "Category", widget: "select", options: ["Book Study", "Topical Study", "Character Study", "Passage Study", "Study Method"]}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Scripture", name: "Scripture", widget: "string"}
+      - {label: "Steps", name: "Steps", widget: "list"}
+      - {label: "Questions", name: "Questions", widget: "list"}
+      - {label: "Application", name: "Application", widget: "text"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+  - name: "pages"
+    label: "Site Pages"
+    files:
+      - name: "explore"
+        label: "Explore Page"
+        file: "content/pages/explore.json"
+        fields:
+          - {label: "Page Heading", name: "heading", widget: "string"}
+          - {label: "Intro Text", name: "intro", widget: "text"}
+          - label: "Collection Descriptions"
+            name: "blurbs"
+            widget: "list"
+            fields:
+              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "places", "topics", "themes", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories", "hermeneutics", "jewishculture", "comicstories", "studyguides"]}
+              - {label: "Description", name: "blurb", widget: "text"}

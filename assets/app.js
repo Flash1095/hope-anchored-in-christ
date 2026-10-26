@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "42";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "43";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 

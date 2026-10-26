@@ -87,6 +87,7 @@ collections:
       - {label: "Common Objections", name: "CommonObjections", widget: "string"}
       - {label: "Related Questions", name: "RelatedQuestions", widget: "list"}
       - {label: "Related Book", name: "RelatedBook", widget: "list"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Timeline Era", name: "TimelineEra", widget: "string"}
       - {label: "Sources", name: "Sources", widget: "string"}
       - {label: "SEO Title", name: "SEOTitle", widget: "string"}
