@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "84";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "85";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1151,19 +1151,68 @@
   }
   function escapeRegExp(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
   var bibleLinkCache = null;
+  /* Words that must never link on their own in verse text, even if some
+     title proposes them: generic role nouns and function words. A primary
+     article name is never stopped — only these bare words are. This is
+     what kept "people" linking to "Esther Saves Her People" and
+     "Canaanite" linking to "Shuah the Canaanite": both came from
+     first/last-word fragments of titles, not from articles about them. */
+  var BIBLE_STOP = { "no": true, "people": true, "woman": true, "women": true,
+    "man": true, "men": true, "child": true, "children": true, "son": true,
+    "daughter": true, "father": true, "mother": true, "brother": true,
+    "sister": true, "servant": true, "king": true, "queen": true,
+    "her": true, "his": true, "him": true, "he": true, "she": true,
+    "it": true, "they": true, "them": true, "we": true, "us": true,
+    "you": true, "the": true, "and": true, "for": true, "with": true,
+    "from": true, "that": true, "this": true, "saves": true, "seed": true };
   function bibleLinkData() {
     if (bibleLinkCache) return bibleLinkCache;
+    /* Only words with a corresponding article link: a person, story,
+       theme, topic, event (timeline), place, or word study. The map is
+       built from the loaded aggregates every page load, so a new entry
+       links automatically the moment its collection data ships — nothing
+       is hand-listed here. Keys are exact article names, plus the
+       first part of a comma-qualified name ("Jabin, King of Hazor" ->
+       "Jabin") when exactly one entry proposes it. Title fragments
+       ("People" from "Esther Saves Her People") never become keys. */
+    var allowed = { people: true, places: true, stories: true, themes: true,
+      topics: true, timeline: true, wordstudies: true };
     var map = {};
-    Object.keys(linkIndex).forEach(function (key) {
-      var hit = linkIndex[key];
-      if (hit.coll !== "people" && hit.coll !== "places" && hit.coll !== "stories") return;
-      if (!map[key]) map[key] = hit;
+    COLLECTIONS.forEach(function (c) {
+      if (!allowed[c.id]) return;
+      (data[c.id] || []).forEach(function (row, idx) {
+        var p = val(row, c.primary);
+        if (!isEmpty(p) && !map[p]) map[p] = { coll: c.id, idx: idx };
+        if (c.id === "wordstudies") {
+          var w = val(row, "Word");
+          if (!isEmpty(w) && !map[w]) map[w] = { coll: c.id, idx: idx };
+        }
+      });
     });
-    var terms = Object.keys(map).sort(function (a, b) { return b.length - a.length; });
+    var proposed = {};
+    COLLECTIONS.forEach(function (c) {
+      if (!allowed[c.id]) return;
+      (data[c.id] || []).forEach(function (row, idx) {
+        var p = val(row, c.primary);
+        if (isEmpty(p) || p.indexOf(",") === -1) return;
+        var a = p.split(",")[0].trim();
+        if (!a || a.length < 2) return;
+        if (!proposed[a]) proposed[a] = {};
+        proposed[a][p] = { coll: c.id, idx: idx };
+      });
+    });
+    Object.keys(proposed).forEach(function (a) {
+      var owners = Object.keys(proposed[a]);
+      if (owners.length !== 1 || map[a]) return;
+      if (BIBLE_STOP[a.toLowerCase()]) return;
+      map[a] = proposed[a][owners[0]];
+    });
+    var keys = Object.keys(map).filter(function (k) { return !BIBLE_STOP[k.toLowerCase()]; });
+    var terms = keys.sort(function (a, b) { return b.length - a.length; });
     var multi = terms.filter(function (t) { return t.indexOf(" ") !== -1; });
     var single = terms.filter(function (t) { return t.indexOf(" ") === -1; });
     var lower = {};
-    Object.keys(map).forEach(function (key) {
+    keys.forEach(function (key) {
       var lk = key.toLowerCase();
       if (!lower[lk]) lower[lk] = map[key];
     });
@@ -1190,6 +1239,77 @@
       return '<a href="#/' + hit.coll + '/' + hit.idx + '">' + esc(term) + '</a>';
     });
     return safe;
+  }
+  /* Cross references for a chapter, drawn from the site's own articles:
+     every passage that an article cites alongside this chapter. An
+     article citing "Numbers 21" and "John 3" links those two chapters
+     to each other, so the bronze serpent chapter points at John 3:14
+     without anyone hand-writing a cross-reference list. Ranges expand
+     up to ten chapters ("Numbers 22-24" counts for 22, 23, and 24). */
+  function refsInValue(value) {
+    var out = [];
+    var lastBook = null;
+    String(value).split(";").forEach(function (part) {
+      var p = part.trim();
+      if (!p) return;
+      var found = bibleBookByNameStart(p);
+      var book = found ? found.book : lastBook;
+      var rest = found ? found.rest : p;
+      if (found) lastBook = book;
+      if (!book || !rest) return;
+      rest.split(",").forEach(function (item) {
+        var it = item.trim();
+        var m = it.match(/^(\d+)(?::(\d+))?/);
+        if (!m) return;
+        var ch = +m[1];
+        if (ch < 1 || ch > book.chapters) return;
+        out.push({ slug: book.slug, name: book.name, chapter: ch });
+        var rm = it.match(/^(\d+)\s*-\s*(\d+)/);
+        if (rm) {
+          var a = +rm[1], b = +rm[2];
+          if (b > a && b - a <= 10) {
+            for (var k = a + 1; k <= b && k <= book.chapters; k++) {
+              out.push({ slug: book.slug, name: book.name, chapter: k });
+            }
+          }
+        }
+      });
+    });
+    return out;
+  }
+  function crossRefsForChapter(bookName, chapter) {
+    var bookSlug = null;
+    BIBLE_BOOKS.forEach(function (b) { if (b.name === bookName) bookSlug = b.slug; });
+    var seen = {}, list = [];
+    COLLECTIONS.forEach(function (c) {
+      if (c.id === "quizzes" || c.id === "comicstories") return;
+      (data[c.id] || []).forEach(function (row) {
+        var refs = [];
+        SCRIPTURE_FIELDS.forEach(function (f) {
+          var v = val(row, f);
+          if (!isEmpty(v)) refs = refs.concat(refsInValue(v));
+        });
+        var citesHere = refs.some(function (r) { return r.slug === bookSlug && r.chapter === chapter; });
+        if (!citesHere) return;
+        var added = {};
+        refs.forEach(function (r) {
+          if (r.slug === bookSlug && r.chapter === chapter) return;
+          var key = r.slug + "/" + r.chapter;
+          if (added[key]) return;
+          added[key] = true;
+          if (!seen[key]) { seen[key] = { ref: r, count: 0 }; list.push(seen[key]); }
+          seen[key].count++;
+        });
+      });
+    });
+    var order = {};
+    BIBLE_BOOKS.forEach(function (b, i) { order[b.slug] = i; });
+    list.sort(function (a, b) {
+      return (b.count - a.count) ||
+        (order[a.ref.slug] - order[b.ref.slug]) ||
+        (a.ref.chapter - b.ref.chapter);
+    });
+    return list.slice(0, 24).map(function (x) { return x.ref; });
   }
   function parseBibleRef(q) {
     var low = q.toLowerCase();
@@ -1308,6 +1428,13 @@
         html += "<h3>Articles about this chapter</h3><div class='card-grid'>" + arts.map(function (a) {
           return "<a class='card' href='#/" + a.c.id + "/" + a.idx + "'><h3>" + esc(val(a.row, a.c.primary)) + "</h3><p class='meta'>" + esc(a.c.label) + "</p></a>";
         }).join("") + "</div>";
+      }
+      var xrefs = crossRefsForChapter(book.name, +chapter);
+      if (xrefs.length) {
+        html += "<h3>Cross references</h3><p class='page-intro'>Other passages the site's articles cite alongside this chapter.</p><p>" +
+          xrefs.map(function (r) {
+            return "<a href='#/bible/" + r.slug + "/" + r.chapter + "'>" + esc(r.name) + " " + r.chapter + "</a>";
+          }).join(" &middot; ") + "</p>";
       }
       html += "</div>";
       app.innerHTML = html;
