@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "52";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "53";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1235,6 +1235,69 @@
       app.innerHTML = "<h2>" + esc(book.name) + " " + esc(chapter) + "</h2><p class='empty'>This chapter could not be loaded. Please try again.</p>";
     });
   }
+  /* ---------- terms, privacy, FAQ ---------- */
+  /* These pages are written in code, like the About page — they are not
+     Decap-editable. Wording changes go through chat. */
+  function viewTerms() {
+    var html = "<h2>Terms &amp; Conditions</h2><div class='post-body'>" +
+      "<p class='page-intro'>Last updated: October 25, 2026.</p>" +
+      "<h3>About this site</h3>" +
+      "<p>Hope Anchored in Christ is an independent Bible study ministry website. By using this site, you agree to these terms. If you do not agree, please do not use the site.</p>" +
+      "<h3>What this site is for</h3>" +
+      "<p>Everything here is offered freely for Bible study, encouragement, and learning. The content is prepared carefully, but it is study material, not pastoral counseling, and not medical, legal, or financial advice.</p>" +
+      "<h3>Using the content</h3>" +
+      "<p>You are welcome to read everything on the site, share links to any page, and quote brief passages with credit to Hope Anchored in Christ. Please do not republish whole articles, copy the artwork, or present the site's content as your own. The King James Bible text in the Bible reader is in the public domain; other Bible translations are not reproduced here — the reader links to them on BibleGateway, where they are licensed.</p>" +
+      "<h3>Store and giving</h3>" +
+      "<p>When products or donations are offered, buying and giving happen on third-party providers' websites (for example, a print-on-demand store or a giving platform). Those purchases and donations are governed by the provider's own terms, and the provider handles payment, shipping, and support for its own service.</p>" +
+      "<h3>Links to other sites</h3>" +
+      "<p>This site links to outside websites, including BibleGateway and any future store or giving providers. We are not responsible for the content, policies, or practices of those sites.</p>" +
+      "<h3>No warranties</h3>" +
+      "<p>This site is provided as-is. We do not guarantee that it will always be available or free of errors, and we are not liable for any loss arising from your use of it.</p>" +
+      "<h3>Changes to these terms</h3>" +
+      "<p>These terms may be updated from time to time. Continued use of the site after an update means you accept the updated terms.</p>" +
+      "</div>";
+    app.innerHTML = html;
+    window.scrollTo(0, 0);
+  }
+  function viewPrivacy() {
+    var html = "<h2>Privacy Policy</h2><div class='post-body'>" +
+      "<p class='page-intro'>Last updated: October 25, 2026. The short version: this site does not run accounts, does not ask for your email, and does not set its own tracking cookies.</p>" +
+      "<h3>What we do not collect</h3>" +
+      "<p>There is no sign-up, no comment form, and no newsletter on this site, so we do not collect your name, email address, or any other information from you directly. The site sets no cookies of its own and stores nothing in your browser.</p>" +
+      "<h3>What happens automatically</h3>" +
+      "<p>This site is hosted on GitHub Pages. Like most web hosts, GitHub may collect standard server logs when you visit (such as your IP address, browser type, and the pages you view) under GitHub's own privacy statement. The blog list is loaded from GitHub's public system, which also involves a request to GitHub when you open the blog. The editor sign-in tool (Netlify Identity) loads on the site so the site's editor can sign in; it only handles sign-in details when someone actually signs in as an editor — ordinary readers are never signed in.</p>" +
+      "<h3>No analytics or advertising</h3>" +
+      "<p>We do not currently run analytics, advertising, or third-party trackers on this site.</p>" +
+      "<h3>Links to other sites</h3>" +
+      "<p>Clicking a link to another site — such as BibleGateway, a store, or a giving provider — takes you under that site's privacy policy, not this one.</p>" +
+      "<h3>Children</h3>" +
+      "<p>This site collects no information from anyone, including children.</p>" +
+      "<h3>Changes to this policy</h3>" +
+      "<p>This policy may be updated from time to time. The date at the top shows when it was last updated.</p>" +
+      "</div>";
+    app.innerHTML = html;
+    window.scrollTo(0, 0);
+  }
+  function viewFaq() {
+    var faqs = [
+      ["What is Hope Anchored in Christ?", "An independent Bible study blog built around Hebrews 6:19 — \u201CWe have this hope as an anchor for the soul, firm and secure.\u201D It offers Bible studies, articles, and reference collections to help readers know Scripture and hold fast to hope in Christ."],
+      ["What Bible translation does the Bible reader use?", "The on-site reader uses the King James Version, which is in the public domain, so the full text can live here freely. The NIV and ESV are copyrighted, so every chapter page also links to the same passage on BibleGateway in NIV and ESV."],
+      ["Is everything on the site free?", "Yes — everything you can read here is free. If paid courses or products appear later, they will be clearly marked and sold through their own checkout, separate from the free reading."],
+      ["How do the links inside the Bible text work?", "Names in the Bible text link to the site's own articles: tap a person, place, or event and you land on that article. Below each chapter, \u201CArticles about this chapter\u201D lists questions, word studies, topics, and other entries that point at that chapter."],
+      ["Can I share or reprint something from the site?", "Please do share links to any page. You may also quote brief passages with credit to Hope Anchored in Christ. Whole articles and the artwork should not be republished without permission."],
+      ["How can I support the ministry?", "The Give page explains giving, and the Store page will list products when they launch. Both stay honestly marked as coming soon until their links are connected."],
+      ["Do you have social media or a podcast?", "Not yet. The Connect page will list them as soon as they launch."],
+      ["Can I suggest a topic or ask a question?", "Not yet — there is no contact form on the site right now. Contact options will come with the social pages on the Connect page."],
+      ["Where do the maps and artwork come from?", "The Bible maps are public-domain maps from 1888. The artwork, including the banner and collection tiles, is made by Lorraine herself — no stock photos are used."],
+      ["Is this site connected to a church or denomination?", "No. It is an independent, Bible-centered ministry, not affiliated with a particular church or denomination."],
+      ["Is there an app?", "There is no app. The site works in any browser on a phone, tablet, or computer, and you can add it to your home screen for app-like access."]
+    ];
+    var html = "<h2>Frequently Asked Questions</h2><div class='post-body'>" +
+      faqs.map(function (f) { return "<h3>" + esc(f[0]) + "</h3><p>" + esc(f[1]) + "</p>"; }).join("") +
+      "</div>";
+    app.innerHTML = html;
+    window.scrollTo(0, 0);
+  }
   /* ---------- comic stories ---------- */
   /* Panels group into stories by Story name, exactly like quiz questions group by Quiz name. */
   function comicStoryKey(name) {
@@ -1483,6 +1546,9 @@
       if (!path[2]) return viewBibleBook(path[1]);
       return viewBibleChapter(path[1], path[2], params);
     }
+    if (path[0] === "terms") return viewTerms();
+    if (path[0] === "privacy") return viewPrivacy();
+    if (path[0] === "faq") return viewFaq();
     if (path[0] === "search") return viewSearch(params);
     if (path[0] === "quizzes" && path[1] === "play") return viewQuizPlay(path[2] ? decodeURIComponent(path[2]) : "", params);
     if (path[0] === "comicstories") {

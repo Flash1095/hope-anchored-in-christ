@@ -231,6 +231,8 @@ a:hover { color: var(--gold-dark); }
 .site-footer strong { color: #fff; }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; justify-content: center; margin: 0.8rem 0; }
 .footer-nav a { color: var(--gold); text-decoration: none; font-size: 0.9rem; }
+.footer-legal { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; justify-content: center; margin: 0.8rem 0; padding-top: 0.8rem; border-top: 1px solid rgba(233, 226, 200, 0.25); }
+.footer-legal a { color: var(--gold); text-decoration: none; font-size: 0.9rem; }
 .footer-note { font-size: 0.85rem; opacity: 0.8; }
 .empty, .loading { color: var(--muted); padding: 2rem 0; text-align: center; }
 
