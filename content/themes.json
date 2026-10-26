@@ -304,5 +304,1441 @@
     "RelatedPeople": "Isaiah; Jesus; Moses; Paul; Peter",
     "RelatedEvents": "The Exodus and Crossing of the Red Sea; Last Supper; The Crucifixion",
     "Slug": "servanthood"
+  },
+  {
+    "Theme": "Abundance",
+    "Summary": "God does not give sparingly. From manna in the wilderness to loaves multiplied for a crowd, Scripture shows a Father who provides more than enough, and His generosity is meant to overflow into generosity toward others. Abundance is never about storing up for ourselves, but about trusting the Giver and sharing what He has given.",
+    "KeyPassages": "Deuteronomy 28:11; Psalm 23:5; John 10:10; 2 Corinthians 9:8; Philippians 4:19",
+    "RelatedBooks": "Deuteronomy; Psalms; John; 2 Corinthians; Philippians",
+    "RelatedPeople": "Moses; King David; Jesus; Paul",
+    "RelatedEvents": "Wilderness Wanderings; The Feeding of the Five Thousand",
+    "Slug": "abundance"
+  },
+  {
+    "Theme": "Acceptance",
+    "Summary": "To be accepted is to be welcomed as you are, and that is exactly how God receives those who come to Him through Christ. Jesus welcomed sinners, outcasts, and strangers, and Paul urges believers to accept one another just as Christ accepted them. Christian acceptance never means approving everything, but it does mean no one is beyond the reach of God's welcome.",
+    "KeyPassages": "Romans 15:7; Ephesians 1:6; Luke 15:20; John 6:37",
+    "RelatedBooks": "Romans; Ephesians; Luke; John",
+    "RelatedPeople": "Jesus; Paul; Mary Magdalene",
+    "RelatedEvents": "The Prodigal Son; Peter and Cornelius",
+    "Slug": "acceptance"
+  },
+  {
+    "Theme": "Apostasy",
+    "Summary": "Apostasy is the sober reality of turning away from the faith once embraced. Scripture warns plainly that some will abandon the truth, exchanging it for error or for the world's approval, and it calls believers to hold fast and to watch over one another. The warnings are given not to frighten the faithful, but to keep them faithful.",
+    "KeyPassages": "Hebrews 6:4-6; 2 Peter 2:20-22; 1 Timothy 4:1; Jude 17-23",
+    "RelatedBooks": "Hebrews; 2 Peter; 1 Timothy; Jude",
+    "RelatedPeople": "Paul; John the Apostle; Judas Iscariot",
+    "RelatedEvents": "The Golden Calf; The Kingdom Divides",
+    "Slug": "apostasy"
+  },
+  {
+    "Theme": "Belief",
+    "Summary": "Belief is more than agreeing with an idea; it is trusting a Person. Scripture calls us to believe that Jesus is the Christ, the Son of God, and to stake our lives on that truth. Such belief receives forgiveness, gives new life, and shows itself in obedience.",
+    "KeyPassages": "John 3:16; Romans 10:9-10; Hebrews 11:6; James 2:19",
+    "RelatedBooks": "John; Romans; Hebrews; James",
+    "RelatedPeople": "Jesus; Paul; Abraham; Thomas",
+    "RelatedEvents": "The Resurrection; Conversion of Saul (Paul)",
+    "Slug": "belief"
+  },
+  {
+    "Theme": "Bethlehem ruler",
+    "Summary": "Long before Jesus was born, Micah promised that a ruler would come from little Bethlehem, one whose origins are from ancient days. Matthew sees that promise fulfilled when Jesus is born in David's town, the shepherd-king who would rule not by force but by laying down His life. The smallness of Bethlehem is the point: God's greatest King came in the humblest way.",
+    "KeyPassages": "Micah 5:2; Matthew 2:1-6; Luke 2:4-7; John 7:42",
+    "RelatedBooks": "Micah; Matthew; Luke; John",
+    "RelatedPeople": "Jesus; Mary, Mother of Jesus; Joseph, Husband of Mary",
+    "RelatedEvents": "The Birth of Jesus",
+    "Slug": "bethlehem-ruler"
+  },
+  {
+    "Theme": "Blessing and curse",
+    "Summary": "At the threshold of the Promised Land, Moses set before Israel two paths: blessing for obedience and curse for rebellion. The choice was stark because the covenant was serious — God's people could not drift into faithfulness. Yet the story does not end with curse, for Christ bore the curse so that the blessing of Abraham might come to all who believe.",
+    "KeyPassages": "Deuteronomy 28; Deuteronomy 30:19-20; Joshua 24:15; Galatians 3:13-14",
+    "RelatedBooks": "Deuteronomy; Joshua; Galatians",
+    "RelatedPeople": "Moses; Joshua; Paul",
+    "RelatedEvents": "Giving of the Law at Sinai; Crossing the Jordan",
+    "Slug": "blessing-and-curse"
+  },
+  {
+    "Theme": "Blessing",
+    "Summary": "Blessing is God's favor resting on His people, spoken over Abraham and extended to every nation through Christ. In the Old Testament it meant land, children, and God's presence; in the New Testament it reaches its fullness as every spiritual blessing in Christ. To be blessed is to live under God's kind hand, and to become a blessing to others.",
+    "KeyPassages": "Genesis 12:2-3; Numbers 6:24-26; Deuteronomy 28:1-6; Ephesians 1:3; Matthew 5:3-12",
+    "RelatedBooks": "Genesis; Numbers; Deuteronomy; Ephesians; Matthew",
+    "RelatedPeople": "Abraham; Moses; Jesus",
+    "RelatedEvents": "The Call of Abraham; The Sermon on the Mount",
+    "Slug": "blessing"
+  },
+  {
+    "Theme": "Brotherhood",
+    "Summary": "Believers are not merely like-minded individuals; they are brothers and sisters, bound together as one family in Christ. Scripture urges them to love one another warmly, carry one another's burdens, and live at peace. True brotherhood shows the world what the Father's household looks like.",
+    "KeyPassages": "Psalm 133:1; Romans 12:10; 1 John 3:16-18; Hebrews 13:1",
+    "RelatedBooks": "Psalms; Romans; 1 John; Hebrews",
+    "RelatedPeople": "Jesus; Paul; John the Apostle; Joseph, Son of Jacob",
+    "RelatedEvents": "Joseph and His Brothers; Pentecost",
+    "Slug": "brotherhood"
+  },
+  {
+    "Theme": "Character",
+    "Summary": "Character is who you are when no one is watching, and God shapes it slowly through trials, obedience, and time. Scripture links suffering to endurance, endurance to character, and character to hope. The goal is not a polished reputation but a life that quietly resembles Christ.",
+    "KeyPassages": "Romans 5:3-4; Galatians 5:22-23; 2 Peter 1:5-8; Philippians 4:8",
+    "RelatedBooks": "Romans; Galatians; 2 Peter; Philippians",
+    "RelatedPeople": "Paul; Simon Peter; Joseph, Son of Jacob",
+    "RelatedEvents": "Joseph Rises to Power in Egypt; The Temptation in the Wilderness",
+    "Slug": "character"
+  },
+  {
+    "Theme": "Christ Alone",
+    "Summary": "Christ alone saves, because He alone is both God and man, both priest and sacrifice. No teacher, ritual, or good deed can stand beside Him; to add anything to Christ is to lose Christ. The church confesses Him as the only mediator between God and humanity, and the only name by which we are saved.",
+    "KeyPassages": "John 14:6; Acts 4:12; 1 Timothy 2:5; Colossians 1:15-20",
+    "RelatedBooks": "John; Acts; 1 Timothy; Colossians",
+    "RelatedPeople": "Jesus; Paul; Simon Peter",
+    "RelatedEvents": "The Crucifixion; The Resurrection",
+    "Slug": "christ-alone"
+  },
+  {
+    "Theme": "Christ's example",
+    "Summary": "Jesus did not only teach the way; He walked it. He washed feet, welcomed children, forgave enemies, and laid down His life, leaving His followers a pattern to follow. To follow His example is not to earn salvation but to live out the salvation He has given.",
+    "KeyPassages": "John 13:15; 1 Peter 2:21; Philippians 2:5-8; 1 John 2:6",
+    "RelatedBooks": "John; 1 Peter; Philippians; 1 John",
+    "RelatedPeople": "Jesus; Simon Peter; Paul",
+    "RelatedEvents": "The Last Supper; The Crucifixion",
+    "Slug": "christ-s-example"
+  },
+  {
+    "Theme": "Christ's return",
+    "Summary": "The New Testament ends with a promise: Jesus will return, visibly and gloriously, to judge the world and make all things new. His first coming was in humility; His second will be in power, and every believer is called to live ready — watchful, faithful, and full of hope.",
+    "KeyPassages": "Matthew 24:30; Acts 1:11; 1 Thessalonians 4:16-17; Revelation 22:20",
+    "RelatedBooks": "Matthew; Acts; 1 Thessalonians; Revelation",
+    "RelatedPeople": "Jesus; Paul; John the Apostle",
+    "RelatedEvents": "The Ascension; Transfiguration",
+    "Slug": "christ-s-return"
+  },
+  {
+    "Theme": "Christian living",
+    "Summary": "Christian living is ordinary life offered to God: work, family, neighbors, and rest all shaped by the gospel. Paul sums it up as presenting our bodies as living sacrifices and being transformed by renewed minds. It is not perfection but direction — a life increasingly conformed to Christ.",
+    "KeyPassages": "Romans 12:1-2; Colossians 3:12-17; Galatians 5:16; Micah 6:8",
+    "RelatedBooks": "Romans; Colossians; Galatians; Micah",
+    "RelatedPeople": "Paul; Jesus",
+    "RelatedEvents": "The Sermon on the Mount; Pentecost",
+    "Slug": "christian-living"
+  },
+  {
+    "Theme": "Church growth",
+    "Summary": "The church grows as the gospel spreads and believers are added to the fellowship. Acts shows growth through preaching, prayer, shared life, and suffering, never through human technique alone. Healthy growth is both numerical and spiritual: more disciples, and deeper ones.",
+    "KeyPassages": "Acts 2:41-47; Acts 6:7; Acts 9:31; Ephesians 4:11-16",
+    "RelatedBooks": "Acts; Ephesians",
+    "RelatedPeople": "Simon Peter; Paul; Barnabas",
+    "RelatedEvents": "Pentecost; Jerusalem Council",
+    "Slug": "church-growth"
+  },
+  {
+    "Theme": "Church order",
+    "Summary": "God is a God of order, and the church reflects His character when its life is ordered well — leaders qualified, worship decent, disputes handled with wisdom. Order is not cold bureaucracy; it is love given structure, so that the whole body can flourish and the gospel is not hindered.",
+    "KeyPassages": "1 Corinthians 14:40; 1 Timothy 3:1-13; Titus 1:5-9; Acts 6:1-7",
+    "RelatedBooks": "1 Corinthians; 1 Timothy; Titus; Acts",
+    "RelatedPeople": "Paul; Timothy; Stephen",
+    "RelatedEvents": "Jerusalem Council; Pentecost",
+    "Slug": "church-order"
+  },
+  {
+    "Theme": "Comfort for Judah",
+    "Summary": "When Judah faced exile, Isaiah spoke comfort: her warfare is ended, her iniquity pardoned, and her God is coming. Comfort for Judah was never mere sympathy; it was the promise that God had not abandoned His people and would bring them home. That same comfort reaches all who mourn under judgment, pointing to Christ who bears our sorrows.",
+    "KeyPassages": "Isaiah 40:1-2; Isaiah 51:3; Isaiah 61:1-3; Jeremiah 29:11",
+    "RelatedBooks": "Isaiah; Jeremiah",
+    "RelatedPeople": "Isaiah; Jeremiah",
+    "RelatedEvents": "Fall of Jerusalem and the Exile; Cyrus's Decree and Return from Exile",
+    "Slug": "comfort-for-judah"
+  },
+  {
+    "Theme": "Coming King",
+    "Summary": "Israel waited for a King who would reign in righteousness, and the prophets pictured Him riding humbly into Jerusalem. Jesus entered the city to acclaim, yet His crown would be thorns before it was glory. He is the Coming King who will return to reign forever, and His kingdom is already breaking into the world.",
+    "KeyPassages": "Zechariah 9:9; Psalm 2:6-9; Revelation 19:11-16; Matthew 21:1-11",
+    "RelatedBooks": "Zechariah; Psalms; Revelation; Matthew",
+    "RelatedPeople": "Jesus; King David; Zechariah the Prophet",
+    "RelatedEvents": "Triumphal Entry; David Becomes King",
+    "Slug": "coming-king"
+  },
+  {
+    "Theme": "Compassion for nations",
+    "Summary": "God's compassion does not stop at Israel's borders. Jonah learned this reluctantly when God spared Nineveh, and Isaiah foresaw a Servant who would be a light to the nations. In Christ, that compassion reaches every tribe and tongue, and the church carries it to the ends of the earth.",
+    "KeyPassages": "Jonah 4:10-11; Isaiah 49:6; Matthew 28:19-20; Revelation 7:9",
+    "RelatedBooks": "Jonah; Isaiah; Matthew; Revelation",
+    "RelatedPeople": "Jonah; Jesus; Paul",
+    "RelatedEvents": "Jonah and Nineveh; Pentecost",
+    "Slug": "compassion-for-nations"
+  },
+  {
+    "Theme": "Conquest",
+    "Summary": "The conquest of Canaan was God's gift of the land He had promised, won not by Israel's strength but by His presence. Yet the conquest was incomplete, and the land itself pointed forward to a greater rest. The battles remind us that God's promises are sure, and that victory belongs to the Lord.",
+    "KeyPassages": "Joshua 1:6-9; Joshua 6:16-20; Judges 2:16-19; Hebrews 11:30",
+    "RelatedBooks": "Joshua; Judges; Hebrews",
+    "RelatedPeople": "Joshua; Caleb; Rahab",
+    "RelatedEvents": "Crossing the Jordan; Fall of Jericho",
+    "Slug": "conquest"
+  },
+  {
+    "Theme": "Consecration",
+    "Summary": "To be consecrated is to be set apart for God's purposes, as Israel was called a holy nation and believers are called a holy priesthood. Consecration touches every part of life — body, work, worship — offered wholly to God. It is not withdrawal from the world but dedication within it.",
+    "KeyPassages": "Exodus 19:5-6; Leviticus 20:26; Romans 12:1; 1 Peter 2:9",
+    "RelatedBooks": "Exodus; Leviticus; Romans; 1 Peter",
+    "RelatedPeople": "Moses; Aaron; Simon Peter",
+    "RelatedEvents": "Giving of the Law at Sinai; The Ten Commandments",
+    "Slug": "consecration"
+  },
+  {
+    "Theme": "Contending for the faith",
+    "Summary": "Jude urges believers to contend for the faith once delivered, not with cruelty but with conviction. False teaching spreads quietly, so the church must know the truth well enough to recognize its counterfeits. Contending is an act of love: for God, for the church, and for those being led astray.",
+    "KeyPassages": "Jude 3; Philippians 1:27; 1 Peter 3:15; 2 Timothy 1:13-14",
+    "RelatedBooks": "Jude; Philippians; 1 Peter; 2 Timothy",
+    "RelatedPeople": "Paul; Simon Peter; John the Apostle",
+    "RelatedEvents": "Jerusalem Council; Martyrdom of Stephen",
+    "Slug": "contending-for-the-faith"
+  },
+  {
+    "Theme": "Covenant love",
+    "Summary": "Covenant love is God's steadfast, loyal love — the Hebrew hesed — that keeps His promises even when His people break theirs. It is love bound by oath, shown at Sinai, renewed through the prophets, and poured out fully in Christ. To know covenant love is to rest in a faithfulness that never lets go.",
+    "KeyPassages": "Exodus 34:6-7; Deuteronomy 7:9; Hosea 2:19-20; 1 John 4:9-10",
+    "RelatedBooks": "Exodus; Deuteronomy; Hosea; 1 John",
+    "RelatedPeople": "Moses; Hosea; John the Apostle",
+    "RelatedEvents": "The Golden Calf; The Exodus and the Red Sea",
+    "Slug": "covenant-love"
+  },
+  {
+    "Theme": "Covenant renewal",
+    "Summary": "Again and again God's people returned to renew their covenant: at Shechem under Joshua, under Josiah after the Law was found, and under Nehemiah after exile. Renewal meant hearing God's word, confessing failure, and recommitting to obey. Every generation needs its own renewal, for faith is never inherited automatically.",
+    "KeyPassages": "Joshua 24:14-25; Nehemiah 8-10; 2 Kings 23:1-3; 2 Chronicles 34:29-33",
+    "RelatedBooks": "Joshua; Nehemiah; 2 Kings; 2 Chronicles",
+    "RelatedPeople": "Joshua; Nehemiah; Ezra; King Josiah",
+    "RelatedEvents": "Ezra Reads the Law; Nehemiah Rebuilds the Wall",
+    "Slug": "covenant-renewal"
+  },
+  {
+    "Theme": "Covenant unfaithfulness",
+    "Summary": "Israel's story is shadowed by unfaithfulness — idols, injustice, and forgotten vows. The prophets name it plainly: the people broke the covenant their God had kept. Yet even unfaithfulness becomes a stage for grace, as God disciplines, restores, and finally keeps the covenant Himself in Christ.",
+    "KeyPassages": "Judges 2:11-15; Hosea 4:1-6; Jeremiah 11:10; Ezekiel 16:59",
+    "RelatedBooks": "Judges; Hosea; Jeremiah; Ezekiel",
+    "RelatedPeople": "Hosea; Jeremiah; Ezekiel",
+    "RelatedEvents": "The Golden Calf; The Kingdom Divides",
+    "Slug": "covenant-unfaithfulness"
+  },
+  {
+    "Theme": "Cycles of sin",
+    "Summary": "Judges tells a grim cycle: sin, oppression, crying out, deliverance, and sin again. Each round shows that Israel's problem was not bad leaders but a wandering heart. The cycle only breaks when a true King comes who can change hearts from within.",
+    "KeyPassages": "Judges 2:16-19; Judges 21:25; Psalm 106:34-46; Romans 7:15-20",
+    "RelatedBooks": "Judges; Psalms; Romans",
+    "RelatedPeople": "Deborah; Gideon; Samson",
+    "RelatedEvents": "Deborah and Barak Defeat Sisera; Gideon's Victory over Midian",
+    "Slug": "cycles-of-sin"
+  },
+  {
+    "Theme": "Daily Faith",
+    "Summary": "Faith is not only for crises; it is for Tuesday mornings. Daily faith means trusting God for today's bread, today's work, and today's obedience, one day at a time. The manna principle still holds: God gives enough for today, and tomorrow's grace arrives tomorrow.",
+    "KeyPassages": "Lamentations 3:22-23; Matthew 6:11; Luke 9:23; Hebrews 10:23-25",
+    "RelatedBooks": "Lamentations; Matthew; Luke; Hebrews",
+    "RelatedPeople": "Jesus; Jeremiah; Paul",
+    "RelatedEvents": "The Sermon on the Mount; Wilderness Wanderings",
+    "Slug": "daily-faith"
+  },
+  {
+    "Theme": "David's lineage",
+    "Summary": "From Ruth and Boaz through Jesse to David, and from David to Jesus, Scripture traces a family line held together by God's promise. The lineage includes outsiders, failures, and kings, showing that God's plan runs through real human history. Matthew opens his Gospel with this genealogy to announce: the promised King has arrived.",
+    "KeyPassages": "Ruth 4:17-22; 2 Samuel 7:12-16; Matthew 1:1-17; Luke 3:23-38",
+    "RelatedBooks": "Ruth; 2 Samuel; Matthew; Luke",
+    "RelatedPeople": "King David; Ruth; Boaz; Jesus",
+    "RelatedEvents": "Story of Ruth; David Becomes King",
+    "Slug": "david-s-lineage"
+  },
+  {
+    "Theme": "Davidic covenant",
+    "Summary": "God promised David a house, a throne, and a kingdom that would last forever. David's sons failed, but the promise did not, for it pointed beyond them to a Son of David who would reign eternally. In Jesus, the Davidic covenant finds its fulfillment and its King.",
+    "KeyPassages": "2 Samuel 7:8-16; Psalm 89:3-4; Isaiah 9:6-7; Luke 1:32-33",
+    "RelatedBooks": "2 Samuel; Psalms; Isaiah; Luke",
+    "RelatedPeople": "King David; Nathan; Jesus",
+    "RelatedEvents": "Davidic Covenant; David Becomes King",
+    "Slug": "davidic-covenant"
+  },
+  {
+    "Theme": "Day of the Lord",
+    "Summary": "The Day of the Lord is the day God steps in decisively — to judge evil, rescue His people, and set the world right. The prophets warned that it would be darkness for the proud and light for the humble, and the New Testament ties it to Christ's return. It is both a warning to the complacent and a hope for the oppressed.",
+    "KeyPassages": "Joel 2:28-32; Amos 5:18-24; Zephaniah 1:14-18; 2 Peter 3:10-13",
+    "RelatedBooks": "Joel; Amos; Zephaniah; 2 Peter",
+    "RelatedPeople": "Amos; Isaiah; Simon Peter",
+    "Slug": "day-of-the-lord"
+  },
+  {
+    "Theme": "Dependence",
+    "Summary": "Dependence is not weakness to be outgrown but the truth of the Christian life: apart from Christ we can do nothing. Like branches on a vine, believers draw every good thing from Him — strength, wisdom, and fruit. To depend on God is to live honestly, admitting need and receiving grace.",
+    "KeyPassages": "John 15:5; Psalm 121:1-2; Proverbs 3:5-6; 2 Corinthians 12:9-10",
+    "RelatedBooks": "John; Psalms; Proverbs; 2 Corinthians",
+    "RelatedPeople": "Jesus; Paul; King David",
+    "RelatedEvents": "The Temptation in the Wilderness; Jesus Prays in Gethsemane",
+    "Slug": "dependence"
+  },
+  {
+    "Theme": "Diligence",
+    "Summary": "Diligence is steady, faithful effort over the long haul — the ant's wisdom, the athlete's discipline, the farmer's patience. Scripture warns against laziness and praises the worker who keeps at the task God has given. Diligence trusts that small, faithful acts compound into a life well lived.",
+    "KeyPassages": "Proverbs 6:6-11; Colossians 3:23; Hebrews 6:11-12; 2 Peter 1:5-8",
+    "RelatedBooks": "Proverbs; Colossians; Hebrews; 2 Peter",
+    "RelatedPeople": "Paul; Simon Peter; Nehemiah",
+    "RelatedEvents": "Nehemiah Rebuilds the Wall; Rebuilding of the Temple",
+    "Slug": "diligence"
+  },
+  {
+    "Theme": "Diligent work",
+    "Summary": "Work was given before the Fall, not as punishment but as purpose: to tend, build, and create. Scripture calls believers to work heartily, as for the Lord, whether in fields, workshops, or homes. Diligent work honors God, serves neighbors, and witnesses to a faith that takes ordinary life seriously.",
+    "KeyPassages": "Genesis 2:15; Ecclesiastes 9:10; Colossians 3:23-24; 2 Thessalonians 3:10-12",
+    "RelatedBooks": "Genesis; Ecclesiastes; Colossians; 2 Thessalonians",
+    "RelatedPeople": "Adam; Paul; Joseph, Son of Jacob",
+    "RelatedEvents": "Creation; Joseph Rises to Power in Egypt",
+    "Slug": "diligent-work"
+  },
+  {
+    "Theme": "Dreams",
+    "Summary": "God sometimes spoke through dreams — to Joseph in Egypt, to Daniel in Babylon, to Joseph the carpenter in Bethlehem. Dreams in Scripture are never treated as private horoscopes; they are tested by God's word and often carry His guidance for others. They remind us that God speaks in ways we do not control, and His messages always serve His purposes.",
+    "KeyPassages": "Genesis 37:5-11; Genesis 41:1-36; Daniel 2:1-23; Matthew 1:20-24; Matthew 2:13-15",
+    "RelatedBooks": "Genesis; Daniel; Matthew",
+    "RelatedPeople": "Joseph, Son of Jacob; Daniel; Joseph, Husband of Mary",
+    "RelatedEvents": "Joseph Sold into Egypt; Joseph Rises to Power in Egypt",
+    "Slug": "dreams"
+  },
+  {
+    "Theme": "Dry bones revived",
+    "Summary": "In a valley of dry bones, God asked Ezekiel whether they could live, then breathed life into them by His Spirit. The vision promised Israel's restoration from exile, and it points further to resurrection itself: the God who revives the dead can revive any hopeless situation. No valley is too dry for His breath.",
+    "KeyPassages": "Ezekiel 37:1-14; Isaiah 26:19; John 11:25-26; Romans 8:11",
+    "RelatedBooks": "Ezekiel; Isaiah; John; Romans",
+    "RelatedPeople": "Ezekiel; Jesus; Paul",
+    "RelatedEvents": "Raising of Lazarus; The Resurrection",
+    "Slug": "dry-bones-revived"
+  },
+  {
+    "Theme": "Encouragement",
+    "Summary": "Encouragement is a ministry every believer can practice: strengthening hearts, cheering the weary, and reminding one another of God's promises. Barnabas earned the name 'son of encouragement' by standing with new believers and vouching for the unlikely. A word of encouragement can be the difference between quitting and enduring.",
+    "KeyPassages": "1 Thessalonians 5:11; Hebrews 10:24-25; Acts 4:36-37; Romans 15:5",
+    "RelatedBooks": "1 Thessalonians; Hebrews; Acts; Romans",
+    "RelatedPeople": "Barnabas; Paul; Timothy",
+    "RelatedEvents": "Pentecost; Paul's Missionary Journeys",
+    "Slug": "encouragement"
+  },
+  {
+    "Theme": "Endurance",
+    "Summary": "Endurance is staying faithful when faith is costly — under trial, persecution, or long waiting. Hebrews pictures believers surrounded by witnesses, laying aside weights and looking to Jesus, who endured the cross. Endurance is not grim stoicism but hope-fueled perseverance to the finish.",
+    "KeyPassages": "Hebrews 12:1-3; James 1:2-4; Romans 5:3-5; Revelation 2:10",
+    "RelatedBooks": "Hebrews; James; Romans; Revelation",
+    "RelatedPeople": "Paul; James, Son of Zebedee; Stephen",
+    "RelatedEvents": "Martyrdom of Stephen; The Crucifixion",
+    "Slug": "endurance"
+  },
+  {
+    "Theme": "Enjoying God's gifts",
+    "Summary": "God's gifts are meant to be enjoyed, not merely endured: food, friendship, beauty, rest, and laughter are given by a generous Father. Scripture warns against both idolatry and ingratitude, teaching us to receive good things with thanks and open hands. Enjoyment with thanksgiving is itself a form of worship.",
+    "KeyPassages": "Ecclesiastes 3:12-13; 1 Timothy 4:4-5; James 1:17; Psalm 104:14-15",
+    "RelatedBooks": "Ecclesiastes; 1 Timothy; James; Psalms",
+    "RelatedPeople": "King David; Paul; King Solomon",
+    "RelatedEvents": "Creation; The Feeding of the Five Thousand",
+    "Slug": "enjoying-god-s-gifts"
+  },
+  {
+    "Theme": "Faithfulness in exile",
+    "Summary": "Exile tests faith: far from home, temple, and familiar worship, God's people had to decide whether to compromise or remain faithful. Daniel, Esther, and Mordecai show different faces of that faithfulness — quiet integrity, courageous risk, and prayerful trust. Their stories teach believers living as strangers in a foreign culture how to stand firm without losing love.",
+    "KeyPassages": "Daniel 1:8-17; Daniel 6:10-23; Jeremiah 29:4-7; Esther 4:14-16",
+    "RelatedBooks": "Daniel; Jeremiah; Esther",
+    "RelatedPeople": "Daniel; Queen Esther; Mordecai",
+    "RelatedEvents": "Daniel in the Lions' Den; Esther Saves Her People",
+    "Slug": "faithfulness-in-exile"
+  },
+  {
+    "Theme": "Faithfulness",
+    "Summary": "Faithfulness is loyalty over time — keeping promises when it costs, trusting God when He seems silent, and doing the next right thing. Scripture celebrates it in Daniel, Joseph, and countless unnamed saints, and above all in God Himself, whose faithfulness never fails. To be faithful is to mirror the character of the God we serve.",
+    "KeyPassages": "Lamentations 3:22-23; Matthew 25:21; 1 Corinthians 4:2; Revelation 2:10",
+    "RelatedBooks": "Lamentations; Matthew; 1 Corinthians; Revelation",
+    "RelatedPeople": "Daniel; Joseph, Son of Jacob; Paul",
+    "RelatedEvents": "Daniel in the Lions' Den; Joseph Rises to Power in Egypt",
+    "Slug": "faithfulness"
+  },
+  {
+    "Theme": "False teachers",
+    "Summary": "False teachers are an old danger: voices within the church who twist truth for influence, money, or novelty. Scripture tells believers to test every teaching against the apostles' word and to watch the teacher's life as well as their lips. The best defense against false teaching is knowing the true one deeply.",
+    "KeyPassages": "Matthew 7:15-20; 2 Peter 2:1-3; 1 John 4:1-3; Jude 4",
+    "RelatedBooks": "Matthew; 2 Peter; 1 John; Jude",
+    "RelatedPeople": "Jesus; Simon Peter; John the Apostle",
+    "RelatedEvents": "Jerusalem Council",
+    "Slug": "false-teachers"
+  },
+  {
+    "Theme": "False teaching refuted",
+    "Summary": "Error is best refuted not by anger but by truth clearly spoken. Paul answered the Galatian agitators with the gospel itself, and the Jerusalem council settled dispute by Scripture and testimony. Refuting false teaching protects the flock and frees those being misled to return to grace.",
+    "KeyPassages": "Colossians 2:8-10; 1 Timothy 6:3-5; Titus 1:10-16; Galatians 1:6-9",
+    "RelatedBooks": "Colossians; 1 Timothy; Titus; Galatians",
+    "RelatedPeople": "Paul; Timothy; John the Apostle",
+    "RelatedEvents": "Jerusalem Council; Conversion of Saul (Paul)",
+    "Slug": "false-teaching-refuted"
+  },
+  {
+    "Theme": "Fear of God",
+    "Summary": "The fear of God is reverent awe before His holiness, majesty, and power — the beginning of wisdom. It is not cringing terror, for the same God who thunders at Sinai invites His people to draw near. Right fear produces obedience, humility, and freedom from every lesser fear.",
+    "KeyPassages": "Proverbs 9:10; Ecclesiastes 12:13; Psalm 111:10; 1 Peter 1:17",
+    "RelatedBooks": "Proverbs; Ecclesiastes; Psalms; 1 Peter",
+    "RelatedPeople": "King Solomon; Simon Peter; Moses",
+    "RelatedEvents": "Giving of the Law at Sinai; The Ten Commandments",
+    "Slug": "fear-of-god"
+  },
+  {
+    "Theme": "Fear of the Lord",
+    "Summary": "To fear the Lord is to live with a constant awareness that God is holy, near, and worthy of obedience. Scripture makes it the foundation of wisdom, the motive for integrity, and the antidote to fearing people. Those who fear the Lord need fear nothing else.",
+    "KeyPassages": "Deuteronomy 10:12-13; Psalm 34:9-11; Proverbs 1:7; Isaiah 11:2-3",
+    "RelatedBooks": "Deuteronomy; Psalms; Proverbs; Isaiah",
+    "RelatedPeople": "Moses; King David; Isaiah",
+    "RelatedEvents": "The Burning Bush; Giving of the Law at Sinai",
+    "Slug": "fear-of-the-lord"
+  },
+  {
+    "Theme": "Finishing well",
+    "Summary": "A good start does not guarantee a good finish, and Scripture honors those who endure to the end. Paul, near death, could say he had fought the good fight and kept the faith — not because he was flawless, but because he stayed the course. Finishing well means holding fast to Christ through every season, including the last.",
+    "KeyPassages": "2 Timothy 4:7-8; Philippians 3:13-14; Hebrews 12:1-2; Acts 20:24",
+    "RelatedBooks": "2 Timothy; Philippians; Hebrews; Acts",
+    "RelatedPeople": "Paul; Timothy; King David",
+    "RelatedEvents": "Paul in Rome; Paul Shipwrecked on Malta",
+    "Slug": "finishing-well"
+  },
+  {
+    "Theme": "Foundation",
+    "Summary": "Every life is built on something, and Scripture insists the only sure foundation is Christ. Houses built on sand collapse when storms come; those built on His word stand. The church itself rests on the apostles and prophets with Christ as cornerstone, a foundation no flood can move.",
+    "KeyPassages": "1 Corinthians 3:11; Matthew 7:24-27; Ephesians 2:19-22; Isaiah 28:16",
+    "RelatedBooks": "1 Corinthians; Matthew; Ephesians; Isaiah",
+    "RelatedPeople": "Jesus; Paul; Simon Peter",
+    "RelatedEvents": "The Sermon on the Mount; Rebuilding of the Temple",
+    "Slug": "foundation"
+  },
+  {
+    "Theme": "Freedom",
+    "Summary": "Freedom in Scripture begins with liberation: Israel freed from Egypt, sinners freed from sin's power. Christ sets people free not to live for themselves but to live for God and neighbor in love. True freedom is not doing whatever we want, but being free at last to do what is right.",
+    "KeyPassages": "John 8:31-36; Galatians 5:1; Romans 8:1-2; Exodus 14:13-14",
+    "RelatedBooks": "John; Galatians; Romans; Exodus",
+    "RelatedPeople": "Jesus; Paul; Moses",
+    "RelatedEvents": "The Exodus and the Red Sea; The Passover",
+    "Slug": "freedom"
+  },
+  {
+    "Theme": "Friendship with Christ",
+    "Summary": "Jesus startled His disciples by calling them friends, not merely servants. Friendship with Christ means knowing His mind, sharing His purposes, and enjoying His presence — a relationship of love, not just duty. He proved that friendship by laying down His life for His friends.",
+    "KeyPassages": "John 15:13-15; Proverbs 18:24; James 2:23; Exodus 33:11",
+    "RelatedBooks": "John; Proverbs; James; Exodus",
+    "RelatedPeople": "Jesus; Abraham; Moses",
+    "RelatedEvents": "The Last Supper; The Burning Bush",
+    "Slug": "friendship-with-christ"
+  },
+  {
+    "Theme": "Fruit of the Spirit",
+    "Summary": "The fruit of the Spirit is the character Jesus produces in those who walk with Him: love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, and self-control. It cannot be manufactured by effort alone; it grows as believers abide in Christ. Where the Spirit rules, the fruit appears.",
+    "KeyPassages": "Galatians 5:22-25; John 15:4-5; Romans 8:5-6; Ephesians 5:8-10",
+    "RelatedBooks": "Galatians; John; Romans; Ephesians",
+    "RelatedPeople": "Paul; Jesus",
+    "RelatedEvents": "Pentecost; The Sermon on the Mount",
+    "Slug": "fruit-of-the-spirit"
+  },
+  {
+    "Theme": "Fulfillment",
+    "Summary": "Fulfillment is what happens when God's promises land: the Law fulfilled in Christ, the prophets' hopes realized in His coming, death, and resurrection. Jesus did not discard the old story but brought it to its destination. Every promise of God finds its yes in Him.",
+    "KeyPassages": "Matthew 5:17; Luke 24:44; 2 Corinthians 1:20; Hebrews 1:1-2",
+    "RelatedBooks": "Matthew; Luke; 2 Corinthians; Hebrews",
+    "RelatedPeople": "Jesus; Paul; John the Apostle",
+    "RelatedEvents": "The Resurrection; The Birth of Jesus",
+    "Slug": "fulfillment"
+  },
+  {
+    "Theme": "Full Payment",
+    "Summary": "The cross was full payment for sin — not a deposit, not a partial settlement, but a complete satisfaction of God's justice. Hebrews stresses that Christ's one offering perfected forever those being made holy. Because the debt is fully paid, believers stand before God without condemnation and without fear.",
+    "KeyPassages": "Romans 3:24-25; Colossians 2:13-14; Hebrews 10:10-14; 1 Peter 1:18-19",
+    "RelatedBooks": "Romans; Colossians; Hebrews; 1 Peter",
+    "RelatedPeople": "Jesus; Paul; Simon Peter",
+    "RelatedEvents": "The Crucifixion; The Passover",
+    "Slug": "full-payment"
+  },
+  {
+    "Theme": "Genealogy",
+    "Summary": "Genealogies are more than lists of names; they are the Bible's way of saying God works through generations. They connect promise to fulfillment, Abraham to David to Jesus, and they include the unexpected — foreigners, failures, and the overlooked. In a genealogy, every name matters because every life is part of the story.",
+    "KeyPassages": "Genesis 5:1-32; Ruth 4:18-22; Matthew 1:1-17; Luke 3:23-38",
+    "RelatedBooks": "Genesis; Ruth; Matthew; Luke",
+    "RelatedPeople": "Adam; Noah; Abraham; Jesus",
+    "RelatedEvents": "Creation; The Call of Abraham",
+    "Slug": "genealogy"
+  },
+  {
+    "Theme": "God Fights for Us",
+    "Summary": "When Israel stood trapped at the Red Sea, Moses told them to stand still and watch the Lord fight for them. Again and again Scripture shows God as warrior on behalf of His helpless people, winning battles they could never win. The Christian's confidence is the same: the battle belongs to the Lord.",
+    "KeyPassages": "Exodus 14:14; Deuteronomy 20:4; Joshua 10:14; 2 Chronicles 20:15",
+    "RelatedBooks": "Exodus; Deuteronomy; Joshua; 2 Chronicles",
+    "RelatedPeople": "Moses; Joshua; King Jehoshaphat",
+    "RelatedEvents": "The Exodus and the Red Sea; Crossing the Jordan",
+    "Slug": "god-fights-for-us"
+  },
+  {
+    "Theme": "God's choice",
+    "Summary": "God's choice — His election — is His free, gracious decision to set His love on a people who did not earn it. Israel was chosen not for greatness but by grace, and believers are chosen in Christ before the foundation of the world. Election humbles pride and anchors assurance: salvation rests on God's choice, not ours.",
+    "KeyPassages": "Deuteronomy 7:6-8; Ephesians 1:4-5; Romans 9:15-16; 1 Peter 2:9",
+    "RelatedBooks": "Deuteronomy; Ephesians; Romans; 1 Peter",
+    "RelatedPeople": "Moses; Paul; Simon Peter",
+    "RelatedEvents": "The Call of Abraham; The Exodus and the Red Sea",
+    "Slug": "god-s-choice"
+  },
+  {
+    "Theme": "God's faithfulness",
+    "Summary": "God's faithfulness is the bedrock of every promise: what He says, He does, across centuries and despite human failure. From the exodus to the return from exile to the coming of Christ, His people learned that His word never returns empty. When everything else shifts, His faithfulness holds.",
+    "KeyPassages": "Lamentations 3:22-23; Deuteronomy 7:9; 1 Corinthians 1:9; 2 Timothy 2:13",
+    "RelatedBooks": "Lamentations; Deuteronomy; 1 Corinthians; 2 Timothy",
+    "RelatedPeople": "Moses; Paul; Jeremiah",
+    "RelatedEvents": "The Exodus and the Red Sea; Wilderness Wanderings",
+    "Slug": "god-s-faithfulness"
+  },
+  {
+    "Theme": "God's glory",
+    "Summary": "God's glory is the radiant weight of who He is — His holiness, power, and beauty made visible. Moses glimpsed it on the mountain, Isaiah saw it fill the temple, and John saw it made flesh in Jesus. The whole creation exists to display it, and the believer's destiny is to share in it.",
+    "KeyPassages": "Exodus 33:18-19; Isaiah 6:3; John 1:14; Romans 11:36",
+    "RelatedBooks": "Exodus; Isaiah; John; Romans",
+    "RelatedPeople": "Moses; Isaiah; Jesus",
+    "RelatedEvents": "The Burning Bush; Transfiguration",
+    "Slug": "god-s-glory"
+  },
+  {
+    "Theme": "God's joy over His people",
+    "Summary": "Zephaniah dares to say God rejoices over His people with singing. This is not a distant, reluctant love but a Father's delight in His restored children. Even after exile and failure, God celebrates His people's return — a joy the prodigal's father echoes when his lost son comes home.",
+    "KeyPassages": "Zephaniah 3:17; Luke 15:7; Isaiah 62:5; Nehemiah 8:10",
+    "RelatedBooks": "Zephaniah; Luke; Isaiah; Nehemiah",
+    "RelatedPeople": "Jesus; Nehemiah; Isaiah",
+    "RelatedEvents": "The Prodigal Son; Nehemiah Rebuilds the Wall",
+    "Slug": "god-s-joy-over-his-people"
+  },
+  {
+    "Theme": "God's justice",
+    "Summary": "God's justice means He always does what is right: defending the oppressed, judging the wicked, and keeping His world moral. It is good news for victims and a warning for oppressors, for no wrong escapes His notice forever. At the cross, justice and mercy meet: sin is judged, and sinners are saved.",
+    "KeyPassages": "Deuteronomy 32:4; Psalm 9:7-8; Isaiah 30:18; Romans 2:5-11",
+    "RelatedBooks": "Deuteronomy; Psalms; Isaiah; Romans",
+    "RelatedPeople": "Moses; King David; Paul",
+    "RelatedEvents": "Destruction of Sodom and Gomorrah; The Fall",
+    "Slug": "god-s-justice"
+  },
+  {
+    "Theme": "God's mercy",
+    "Summary": "Mercy is God's compassion toward those who deserve judgment — His steady refusal to give us what our sins have earned. From the golden calf to the prodigal son, Scripture shows mercy triumphing again and again. Those who receive mercy are called to show it.",
+    "KeyPassages": "Exodus 34:6; Psalm 103:8-12; Ephesians 2:4-5; Luke 15:20-24",
+    "RelatedBooks": "Exodus; Psalms; Ephesians; Luke",
+    "RelatedPeople": "Moses; King David; Jesus",
+    "RelatedEvents": "The Golden Calf; The Prodigal Son",
+    "Slug": "god-s-mercy"
+  },
+  {
+    "Theme": "God's presence",
+    "Summary": "God's presence is His nearness to His people: in the burning bush, in the tabernacle, in Christ Immanuel, and now by His Spirit. It is both comfort and challenge — the presence that guides, corrects, and never leaves. Heaven itself is described as God dwelling with His people forever.",
+    "KeyPassages": "Exodus 33:14-15; Psalm 139:7-10; Matthew 28:20; Revelation 21:3",
+    "RelatedBooks": "Exodus; Psalms; Matthew; Revelation",
+    "RelatedPeople": "Moses; King David; Jesus",
+    "RelatedEvents": "The Burning Bush; Pentecost",
+    "Slug": "god-s-presence"
+  },
+  {
+    "Theme": "God's promises",
+    "Summary": "God's promises are His word staked on His character, from Abraham's offspring to David's throne to the new covenant. They are not wishes but certainties, kept across generations and fulfilled in Christ. Believers live by trusting promises they have not yet seen fulfilled.",
+    "KeyPassages": "Genesis 12:2-3; 2 Samuel 7:12-16; Jeremiah 31:31-34; 2 Corinthians 1:20",
+    "RelatedBooks": "Genesis; 2 Samuel; Jeremiah; 2 Corinthians",
+    "RelatedPeople": "Abraham; King David; Jeremiah",
+    "RelatedEvents": "The Call of Abraham; Davidic Covenant",
+    "Slug": "god-s-promises"
+  },
+  {
+    "Theme": "God's wrath and refuge",
+    "Summary": "Scripture holds two truths together: God is wrathful toward evil, and He is a refuge for those who flee to Him. The flood, the Passover, and the cross all show the same pattern — judgment falls, and a shelter is provided. To take refuge in God is to be safe from the very wrath He pours out.",
+    "KeyPassages": "Psalm 46:1-3; Nahum 1:7; Romans 1:18; John 3:36",
+    "RelatedBooks": "Psalms; Nahum; Romans; John",
+    "RelatedPeople": "King David; Paul; Noah",
+    "RelatedEvents": "Noah and the Flood; The Passover",
+    "Slug": "god-s-wrath-and-refuge"
+  },
+  {
+    "Theme": "Godliness",
+    "Summary": "Godliness is a life shaped by God — reverent, disciplined, and good, trained by grace rather than by rules alone. Paul tells Timothy to train for it like an athlete, because it holds promise for this life and the next. True godliness is visible: it changes how we speak, spend, work, and love.",
+    "KeyPassages": "1 Timothy 4:7-8; 2 Peter 1:3-8; Titus 2:11-12; Micah 6:8",
+    "RelatedBooks": "1 Timothy; 2 Peter; Titus; Micah",
+    "RelatedPeople": "Paul; Simon Peter; Timothy",
+    "RelatedEvents": "The Sermon on the Mount; Pentecost",
+    "Slug": "godliness"
+  },
+  {
+    "Theme": "Godly leadership",
+    "Summary": "Godly leadership is shepherding, not dominating: feeding, guiding, and protecting those entrusted to your care. Scripture warns leaders against pride and greed, and holds up Moses, Nehemiah, and above all Christ, who led by serving. The measure of a leader is the flourishing of those led.",
+    "KeyPassages": "1 Peter 5:2-3; Nehemiah 5:14-19; Mark 10:42-45; Exodus 18:21",
+    "RelatedBooks": "1 Peter; Nehemiah; Mark; Exodus",
+    "RelatedPeople": "Simon Peter; Nehemiah; Moses",
+    "RelatedEvents": "Nehemiah Rebuilds the Wall; The Burning Bush",
+    "Slug": "godly-leadership"
+  },
+  {
+    "Theme": "Good works",
+    "Summary": "Good works do not save, but the saved do good works: they are the fruit of faith, prepared by God for His people to walk in. From the Good Samaritan's mercy to simple daily kindness, good works make the gospel visible. Faith without works is dead; works without faith are empty.",
+    "KeyPassages": "Ephesians 2:10; Matthew 5:16; James 2:17; Titus 3:8",
+    "RelatedBooks": "Ephesians; Matthew; James; Titus",
+    "RelatedPeople": "Jesus; Paul; Timothy",
+    "RelatedEvents": "The Good Samaritan; The Sermon on the Mount",
+    "Slug": "good-works"
+  },
+  {
+    "Theme": "Goodness of Creation",
+    "Summary": "Creation is good because its Maker is good: light, land, sea, and creatures were declared good before humanity arrived. The psalms invite us to delight in that goodness, and Paul argues creation itself reveals God's power. Caring for creation and enjoying it are both acts of worship.",
+    "KeyPassages": "Genesis 1:31; Psalm 19:1; Psalm 104:24; Romans 1:20",
+    "RelatedBooks": "Genesis; Psalms; Romans",
+    "RelatedPeople": "Adam; King David; Paul",
+    "RelatedEvents": "Creation; Noah and the Flood",
+    "Slug": "goodness-of-creation"
+  },
+  {
+    "Theme": "Gospel in relationships",
+    "Summary": "The gospel remakes relationships: enemies reconciled, masters and servants redefined as brothers, marriages and friendships reshaped by grace. Paul's letter to Philemon shows it in miniature — a runaway slave returned as a beloved brother. Where the gospel takes root, relationships change.",
+    "KeyPassages": "Ephesians 4:32; Colossians 3:12-14; Philemon 15-17; Romans 12:10",
+    "RelatedBooks": "Ephesians; Colossians; Philemon; Romans",
+    "RelatedPeople": "Paul; Timothy; Barnabas",
+    "RelatedEvents": "Jerusalem Council; Pentecost",
+    "Slug": "gospel-in-relationships"
+  },
+  {
+    "Theme": "Gospel purity",
+    "Summary": "Gospel purity means keeping the good news unmixed: Christ plus nothing, grace without add-ons. Paul was fierce on this point, warning that a different gospel is no gospel at all. Purity protects freedom, for anything added to grace becomes a burden.",
+    "KeyPassages": "Galatians 1:6-9; 2 Corinthians 11:3-4; Philippians 3:8-9; Jude 3",
+    "RelatedBooks": "Galatians; 2 Corinthians; Philippians; Jude",
+    "RelatedPeople": "Paul; John the Apostle",
+    "RelatedEvents": "Jerusalem Council; Conversion of Saul (Paul)",
+    "Slug": "gospel-purity"
+  },
+  {
+    "Theme": "Gratitude",
+    "Summary": "Gratitude is the fitting response to grace: recognizing every good gift as from God's hand and saying so. Scripture commands thanksgiving in all circumstances, not because every circumstance is good, but because God is good in every circumstance. A grateful heart is a worshiping heart.",
+    "KeyPassages": "Psalm 100:4; Colossians 3:17; 1 Thessalonians 5:18; Luke 17:15-19",
+    "RelatedBooks": "Psalms; Colossians; 1 Thessalonians; Luke",
+    "RelatedPeople": "Jesus; Paul; King David",
+    "RelatedEvents": "The Last Supper; The Feeding of the Five Thousand",
+    "Slug": "gratitude"
+  },
+  {
+    "Theme": "Grief",
+    "Summary": "Grief is honored in Scripture, not hurried past: psalms of lament, Jesus weeping at Lazarus's tomb, and the promise that God will wipe away every tear. Christian grief is real sorrow held alongside real hope — we grieve, but not as those who have no hope. God is near to the brokenhearted.",
+    "KeyPassages": "Psalm 34:18; John 11:35; 2 Samuel 12:16-23; Revelation 21:4",
+    "RelatedBooks": "Psalms; John; 2 Samuel; Revelation",
+    "RelatedPeople": "Jesus; King David; Mary of Bethany",
+    "RelatedEvents": "Raising of Lazarus; The Crucifixion",
+    "Slug": "grief"
+  },
+  {
+    "Theme": "Growth",
+    "Summary": "Growth is the normal Christian life: from milk to solid food, from seed to harvest, from new birth to maturity. It comes through God's word, prayer, community, and trials, and it is measured less by speed than by direction. The call is simple: keep growing up into Christ.",
+    "KeyPassages": "2 Peter 3:18; Ephesians 4:15; Colossians 2:6-7; Hebrews 6:1",
+    "RelatedBooks": "2 Peter; Ephesians; Colossians; Hebrews",
+    "RelatedPeople": "Simon Peter; Paul; Timothy",
+    "RelatedEvents": "Pentecost; Paul's Missionary Journeys",
+    "Slug": "growth"
+  },
+  {
+    "Theme": "Homecoming",
+    "Summary": "Homecoming is the Bible's great arc: exiles returning, prodigals embraced, a people brought back to their God. Ezra's generation rebuilt what was ruined, and Jesus told of a Father who runs to meet a returning son. Every homecoming whispers of the final one, when God brings His people home forever.",
+    "KeyPassages": "Luke 15:20-24; Ezra 1:1-4; Jeremiah 29:10-14; Ruth 1:16-17",
+    "RelatedBooks": "Luke; Ezra; Jeremiah; Ruth",
+    "RelatedPeople": "Jesus; Ezra; Ruth",
+    "RelatedEvents": "The Prodigal Son; Cyrus's Decree and Return from Exile",
+    "Slug": "homecoming"
+  },
+  {
+    "Theme": "Hope in suffering",
+    "Summary": "Hope in suffering is not denial but defiance: the conviction that present pain is not the whole story. Paul argues that suffering produces endurance, endurance character, and character hope — a hope that does not disappoint. The resurrection guarantees that suffering has an end and a purpose.",
+    "KeyPassages": "Romans 5:3-5; 1 Peter 1:6-7; Romans 8:18; Job 19:25-27",
+    "RelatedBooks": "Romans; 1 Peter; Job",
+    "RelatedPeople": "Paul; Simon Peter; Job",
+    "RelatedEvents": "The Resurrection; The Crucifixion",
+    "Slug": "hope-in-suffering"
+  },
+  {
+    "Theme": "Hospitality guarded",
+    "Summary": "Hospitality must be guarded as well as generous: Scripture warns against welcoming deceivers and false teachers into the church's trust. Discernment is not the opposite of love but its protection — testing what is taught while keeping the door open to genuine need. Wise welcome loves both truth and neighbor.",
+    "KeyPassages": "2 John 10-11; 1 John 4:1; Matthew 10:14-16; Galatians 2:4-5",
+    "RelatedBooks": "2 John; 1 John; Matthew; Galatians",
+    "RelatedPeople": "John the Apostle; Jesus; Paul",
+    "RelatedEvents": "Jerusalem Council; Peter and Cornelius",
+    "Slug": "hospitality-guarded"
+  },
+  {
+    "Theme": "Hospitality",
+    "Summary": "Hospitality is welcoming the stranger as Abraham welcomed travelers and as God welcomed us. It is not about impressive homes but open hearts, tables, and lives. In a world of closed doors, Christian hospitality makes the gospel visible before a word is spoken.",
+    "KeyPassages": "Hebrews 13:2; Romans 12:13; Genesis 18:1-8; 1 Peter 4:9",
+    "RelatedBooks": "Hebrews; Romans; Genesis; 1 Peter",
+    "RelatedPeople": "Abraham; Simon Peter; Martha",
+    "RelatedEvents": "The Call of Abraham; Peter and Cornelius",
+    "Slug": "hospitality"
+  },
+  {
+    "Theme": "Humble remnant",
+    "Summary": "When the nation fell, God preserved a humble remnant — a small, faithful few who still trusted Him. Elijah thought he was alone; God reminded him of seven thousand who had not bowed. The remnant principle runs through Scripture: God often works through the small and the overlooked.",
+    "KeyPassages": "1 Kings 19:18; Isaiah 10:20-22; Romans 11:5; Micah 5:7-8",
+    "RelatedBooks": "1 Kings; Isaiah; Romans; Micah",
+    "RelatedPeople": "Elijah; Isaiah; Paul",
+    "RelatedEvents": "Elijah on Mount Carmel; Fall of Jerusalem and the Exile",
+    "Slug": "humble-remnant"
+  },
+  {
+    "Theme": "Identity in Christ",
+    "Summary": "Identity in Christ answers the question of who we are: new creations, children of God, members of His body, citizens of heaven. It replaces identities built on achievement, ancestry, or approval with one given by grace. To know who you are in Christ is to know what you are for.",
+    "KeyPassages": "2 Corinthians 5:17; Galatians 2:20; Ephesians 1:5; 1 Peter 2:9",
+    "RelatedBooks": "2 Corinthians; Galatians; Ephesians; 1 Peter",
+    "RelatedPeople": "Paul; Simon Peter; Jesus",
+    "RelatedEvents": "Conversion of Saul (Paul); The Baptism of Jesus",
+    "Slug": "identity-in-christ"
+  },
+  {
+    "Theme": "Inheritance",
+    "Summary": "Inheritance is what God's children receive as His heirs: a kingdom, a new creation, and God Himself as their portion. Israel's land was a down payment; the full inheritance awaits Christ's return, incorruptible and unfading. Believers live now as heirs, already rich and not yet home.",
+    "KeyPassages": "Ephesians 1:11; 1 Peter 1:3-4; Romans 8:17; Colossians 1:12",
+    "RelatedBooks": "Ephesians; 1 Peter; Romans; Colossians",
+    "RelatedPeople": "Paul; Simon Peter; Joshua",
+    "RelatedEvents": "Crossing the Jordan; The Resurrection",
+    "Slug": "inheritance"
+  },
+  {
+    "Theme": "Invitation",
+    "Summary": "The gospel is an invitation, not an ultimatum: come, all who are thirsty; come to the feast; come to Me, all who labor. Isaiah, Jesus, and Revelation all sound the same open call to anyone who will hear. The church's task is to keep issuing that invitation with warmth and urgency.",
+    "KeyPassages": "Matthew 11:28; Isaiah 55:1; Revelation 22:17; Luke 14:16-24",
+    "RelatedBooks": "Matthew; Isaiah; Revelation; Luke",
+    "RelatedPeople": "Jesus; Isaiah; John the Apostle",
+    "RelatedEvents": "The Sermon on the Mount; The Feeding of the Five Thousand",
+    "Slug": "invitation"
+  },
+  {
+    "Theme": "Israel's identity",
+    "Summary": "Israel's identity was given, not earned: chosen by God, set apart as His treasured possession, and called to be a light to the nations. That identity survived slavery, wilderness, and exile because it rested on God's choice, not Israel's performance. In Christ, the church inherits that calling as God's people.",
+    "KeyPassages": "Exodus 19:5-6; Deuteronomy 7:6; Isaiah 43:1; Romans 11:1-2",
+    "RelatedBooks": "Exodus; Deuteronomy; Isaiah; Romans",
+    "RelatedPeople": "Moses; Abraham; Paul",
+    "RelatedEvents": "The Exodus and the Red Sea; Giving of the Law at Sinai",
+    "Slug": "israel-s-identity"
+  },
+  {
+    "Theme": "Israel's restoration",
+    "Summary": "After judgment came restoration: dry bones lived, exiles returned, and the temple rose again. Restoration was never merely political; it was God renewing His covenant and His people from within. The prophets' vision points beyond return from Babylon to the new covenant and the new creation.",
+    "KeyPassages": "Ezekiel 37:1-14; Jeremiah 31:31-34; Isaiah 44:26-28; Ezra 1:1-4",
+    "RelatedBooks": "Ezekiel; Jeremiah; Isaiah; Ezra",
+    "RelatedPeople": "Ezekiel; Jeremiah; Ezra",
+    "RelatedEvents": "Cyrus's Decree and Return from Exile; Rebuilding of the Temple",
+    "Slug": "israel-s-restoration"
+  },
+  {
+    "Theme": "Joy in hardship",
+    "Summary": "Joy in hardship sounds impossible until you see Paul singing in prison or Habakkuk rejoicing with no harvest in sight. Christian joy does not depend on circumstances but on Christ, who is present in them. It is a stubborn gladness that suffering cannot cancel.",
+    "KeyPassages": "James 1:2-4; Philippians 4:4; Habakkuk 3:17-18; Acts 16:25",
+    "RelatedBooks": "James; Philippians; Habakkuk; Acts",
+    "RelatedPeople": "Paul; Stephen; Barnabas",
+    "RelatedEvents": "Paul Shipwrecked on Malta; Martyrdom of Stephen",
+    "Slug": "joy-in-hardship"
+  },
+  {
+    "Theme": "Judgment and mercy",
+    "Summary": "Judgment and mercy meet in God's character: He judges sin truly and forgives sinners freely. The psalmist says mercy and truth meet together, and James warns that mercy triumphs over judgment for the merciful. At the cross both are fully satisfied — sin condemned, sinners welcomed.",
+    "KeyPassages": "Psalm 85:10; Micah 6:8; James 2:13; Exodus 34:6-7",
+    "RelatedBooks": "Psalms; Micah; James; Exodus",
+    "RelatedPeople": "Moses; Micah; Paul",
+    "RelatedEvents": "The Golden Calf; Destruction of Sodom and Gomorrah",
+    "Slug": "judgment-and-mercy"
+  },
+  {
+    "Theme": "Judgment on false teachers",
+    "Summary": "False teachers face a severe judgment, Scripture warns, because they lead others astray while claiming God's name. Peter and Jude describe their end soberly, not gleefully — as a warning to the church to guard the truth. The severity of the judgment matches the seriousness of the trust betrayed.",
+    "KeyPassages": "2 Peter 2:1-3; Jude 14-15; Matthew 7:21-23; Revelation 19:20",
+    "RelatedBooks": "2 Peter; Jude; Matthew; Revelation",
+    "RelatedPeople": "Simon Peter; John the Apostle; Jesus",
+    "RelatedEvents": "Jerusalem Council",
+    "Slug": "judgment-on-false-teachers"
+  },
+  {
+    "Theme": "Judgment on Nineveh",
+    "Summary": "Nineveh repented at Jonah's preaching, but a century later Nahum announced its fall: a city that returned to violence would face God's judgment. Nineveh's story warns that repentance must be real and lasting, and that no empire, however great, stands outside God's justice.",
+    "KeyPassages": "Nahum 1:1-3; Nahum 3:1-7; Jonah 3:10; Jonah 4:11",
+    "RelatedBooks": "Nahum; Jonah",
+    "RelatedPeople": "Jonah; Jesus",
+    "RelatedEvents": "Jonah and Nineveh; Jonah and the Great Fish",
+    "Slug": "judgment-on-nineveh"
+  },
+  {
+    "Theme": "Judgment on pride",
+    "Summary": "Pride invites judgment because it claims God's place: Babel's tower, Nebuchadnezzar's boast, and every heart that exalts itself. God humbles the proud not out of cruelty but to restore truth — that He alone is great. The humbled, by contrast, are lifted up.",
+    "KeyPassages": "Daniel 4:28-37; Isaiah 2:11-12; James 4:6; Obadiah 1:3-4",
+    "RelatedBooks": "Daniel; Isaiah; James; Obadiah",
+    "RelatedPeople": "Daniel; King Nebuchadnezzar; Paul",
+    "RelatedEvents": "The Tower of Babel",
+    "Slug": "judgment-on-pride"
+  },
+  {
+    "Theme": "Justification by faith",
+    "Summary": "Justification by faith is the heart of the gospel: sinners are declared righteous before God not by works but by trusting Christ. Abraham believed and it was credited to him as righteousness, and the same faith credits righteousness to all who believe. Justification is a gift received, never a wage earned.",
+    "KeyPassages": "Romans 3:28; Romans 5:1; Galatians 2:16; Philippians 3:9",
+    "RelatedBooks": "Romans; Galatians; Philippians",
+    "RelatedPeople": "Paul; Abraham; Jesus",
+    "RelatedEvents": "The Call of Abraham; The Crucifixion",
+    "Slug": "justification-by-faith"
+  },
+  {
+    "Theme": "Kingdom Living",
+    "Summary": "Kingdom living is life under God's reign here and now: seeking His kingdom first, practicing its values of mercy, purity, and peacemaking. It is not waiting for heaven but inhabiting heaven's rule on earth, in homes, workplaces, and neighborhoods. The Sermon on the Mount is its charter.",
+    "KeyPassages": "Matthew 6:33; Romans 14:17; Colossians 1:13; Luke 17:20-21",
+    "RelatedBooks": "Matthew; Romans; Colossians; Luke",
+    "RelatedPeople": "Jesus; Paul",
+    "RelatedEvents": "The Sermon on the Mount; Pentecost",
+    "Slug": "kingdom-living"
+  },
+  {
+    "Theme": "Kingdom of heaven",
+    "Summary": "Matthew's phrase 'kingdom of heaven' describes God's reign breaking into the world through Jesus. It arrives quietly — like seed, yeast, and treasure — yet it overturns every other allegiance. To enter it is to submit to the King and receive a citizenship that outlasts every earthly kingdom.",
+    "KeyPassages": "Matthew 4:17; Matthew 13:31-33; Matthew 25:34; Daniel 2:44",
+    "RelatedBooks": "Matthew; Daniel",
+    "RelatedPeople": "Jesus; Daniel",
+    "RelatedEvents": "The Baptism of Jesus; The Sermon on the Mount",
+    "Slug": "kingdom-of-heaven"
+  },
+  {
+    "Theme": "Kingdoms",
+    "Summary": "Scripture contrasts the kingdoms of this world — built on power, wealth, and pride — with the kingdom of God, which lasts forever. Empires rise and fall, from Babel to Rome, but Daniel saw a kingdom that would never be destroyed. Believers live as citizens of the lasting kingdom while sojourning in temporary ones.",
+    "KeyPassages": "Daniel 2:44; Daniel 7:13-14; Revelation 11:15; John 18:36",
+    "RelatedBooks": "Daniel; Revelation; John",
+    "RelatedPeople": "Daniel; Jesus; King Nebuchadnezzar",
+    "RelatedEvents": "The Tower of Babel; Daniel in the Lions' Den",
+    "Slug": "kingdoms"
+  },
+  {
+    "Theme": "Kingship of Christ",
+    "Summary": "Christ's kingship was proclaimed at His birth, mocked at His trial, and vindicated at His resurrection. He reigns now from heaven, and He will return to reign openly, every knee bowing before Him. To confess Jesus as Lord is to pledge allegiance to the true King.",
+    "KeyPassages": "Psalm 2:6-9; John 18:36-37; Philippians 2:9-11; Revelation 19:16",
+    "RelatedBooks": "Psalms; John; Philippians; Revelation",
+    "RelatedPeople": "Jesus; King David; Simon Peter",
+    "RelatedEvents": "Triumphal Entry; The Resurrection",
+    "Slug": "kingship-of-christ"
+  },
+  {
+    "Theme": "Kingship",
+    "Summary": "Kingship belongs to God: the psalms call Him King over all the earth, and Israel's kings were meant to rule as His deputies. Human kingship failed again and again, which is why the promise of a perfect King mattered so much. All authority is borrowed; only God's kingship is absolute.",
+    "KeyPassages": "Psalm 47:7-8; 1 Timothy 6:15; Revelation 19:16; Isaiah 33:22",
+    "RelatedBooks": "Psalms; 1 Timothy; Revelation; Isaiah",
+    "RelatedPeople": "King David; Paul; Isaiah",
+    "RelatedEvents": "David Becomes King; Triumphal Entry",
+    "Slug": "kingship"
+  },
+  {
+    "Theme": "Knowledge of Christ",
+    "Summary": "Knowledge of Christ is not mere information about Him but a living acquaintance that transforms. Paul counted everything loss beside knowing Christ, and Peter urges believers to grow in that knowledge. To know Him is eternal life, and it deepens through Scripture, prayer, and obedience.",
+    "KeyPassages": "Philippians 3:8-10; John 17:3; 2 Peter 1:2-3; Ephesians 3:18-19",
+    "RelatedBooks": "Philippians; John; 2 Peter; Ephesians",
+    "RelatedPeople": "Paul; Jesus; Simon Peter",
+    "RelatedEvents": "Transfiguration; Conversion of Saul (Paul)",
+    "Slug": "knowledge-of-christ"
+  },
+  {
+    "Theme": "Language",
+    "Summary": "Language is a gift that builds and breaks: it confused Babel, united Pentecost, and daily shapes communities. Scripture warns that the tongue is a small fire with great power, and calls believers to speak truth with grace. How we use words reveals what rules our hearts.",
+    "KeyPassages": "Genesis 11:1-9; Acts 2:5-11; 1 Corinthians 14:9; James 3:5-6",
+    "RelatedBooks": "Genesis; Acts; 1 Corinthians; James",
+    "RelatedPeople": "Paul; Simon Peter; Moses",
+    "RelatedEvents": "The Tower of Babel; Pentecost",
+    "Slug": "language"
+  },
+  {
+    "Theme": "Living faith",
+    "Summary": "Living faith is faith with hands and feet: trusting God and acting on that trust, as Abraham did when he left home and Rahab did when she hid the spies. James insists that faith without works is dead — not because works save, but because real trust always moves. Living faith obeys, gives, forgives, and goes.",
+    "KeyPassages": "James 2:17-18; Hebrews 11:1; Galatians 5:6; Matthew 7:21",
+    "RelatedBooks": "James; Hebrews; Galatians; Matthew",
+    "RelatedPeople": "Paul; Abraham; Rahab",
+    "RelatedEvents": "The Call of Abraham; The Walls of Jericho",
+    "Slug": "living-faith"
+  },
+  {
+    "Theme": "Living hope",
+    "Summary": "Living hope is hope made alive by Christ's resurrection — not wishful thinking but confident expectation of an inheritance kept in heaven. Peter writes to suffering believers that this hope guards them through trials and purifies them for glory. It is called living because it grows, endures, and changes how we live today.",
+    "KeyPassages": "1 Peter 1:3-5; Romans 15:13; Titus 2:13; Hebrews 6:19-20",
+    "RelatedBooks": "1 Peter; Romans; Titus; Hebrews",
+    "RelatedPeople": "Simon Peter; Paul; Jesus",
+    "RelatedEvents": "The Resurrection; Pentecost",
+    "Slug": "living-hope"
+  },
+  {
+    "Theme": "Love for God",
+    "Summary": "Love for God is the first and greatest commandment: to love Him with all heart, soul, mind, and strength. It is not sentiment alone but loyalty shown in obedience, worship, and trust. We love because He first loved us, and that love spills over to every neighbor.",
+    "KeyPassages": "Deuteronomy 6:5; Matthew 22:37-38; John 14:15; 1 John 4:19",
+    "RelatedBooks": "Deuteronomy; Matthew; John; 1 John",
+    "RelatedPeople": "Jesus; Moses; John the Apostle",
+    "RelatedEvents": "The Sermon on the Mount; The Last Supper",
+    "Slug": "love-for-god"
+  },
+  {
+    "Theme": "Majesty of God",
+    "Summary": "God's majesty is his royal splendor: the weight of glory that makes mountains tremble and angels cover their faces. Scripture clothes him in light, seats him above the flood, and crowns him with honor no creature can rival. To behold his majesty is both to tremble and to trust, for the majestic God is also the shepherd who carries his lambs close to his heart.",
+    "KeyPassages": "Psalm 93:1-5; Psalm 104:1-2; Isaiah 6:1-5; Revelation 4:9-11",
+    "RelatedBooks": "Psalms; Isaiah; Revelation",
+    "RelatedPeople": "Isaiah; John the Apostle",
+    "RelatedEvents": "Transfiguration",
+    "Slug": "majesty-of-god"
+  },
+  {
+    "Theme": "Marriage covenant",
+    "Summary": "Marriage in Scripture is a covenant, not merely a contract: a solemn, lifelong bond in which husband and wife become one flesh and mirror God's faithful love for his people. Genesis gives its pattern, the prophets use it to picture God's covenant with Israel, and Paul lifts it higher still as a picture of Christ and the church. Guarding marriage therefore guards a living sermon about God's keeping love.",
+    "KeyPassages": "Genesis 2:24; Malachi 2:14-15; Matthew 19:3-9; Ephesians 5:25-33",
+    "RelatedBooks": "Genesis; Malachi; Matthew; Ephesians",
+    "RelatedPeople": "Adam; Eve; Jesus; Paul",
+    "Slug": "marriage-covenant"
+  },
+  {
+    "Theme": "Meaning",
+    "Summary": "Life's meaning is the question Ecclesiastes presses hardest: what lasts, what satisfies, what makes the brief years under the sun worth living? Apart from God, even wisdom, wealth, and work turn to vapor; with him, ordinary days gain weight and purpose. Scripture's answer is not a technique but a Person: we are made by God, for God, and find our meaning in fearing him, keeping his commandments, and enjoying his gifts as from his hand.",
+    "KeyPassages": "Ecclesiastes 3:11; Ecclesiastes 12:13-14; Matthew 22:37-40; Colossians 3:23-24",
+    "RelatedBooks": "Ecclesiastes; Matthew; Colossians",
+    "RelatedPeople": "King Solomon; Jesus; Paul",
+    "Slug": "meaning"
+  },
+  {
+    "Theme": "Messiah and King",
+    "Summary": "Israel waited for a Messiah: an anointed king from David's line who would defeat God's enemies and reign in righteousness. Jesus is that King, though his crown came by a cross and his throne by resurrection. He reigns now over all things for the good of his church, and one day every knee will bow to him.",
+    "KeyPassages": "2 Samuel 7:12-16; Psalm 2:1-12; Isaiah 9:6-7; Philippians 2:9-11",
+    "RelatedBooks": "2 Samuel; Psalms; Isaiah; Philippians",
+    "RelatedPeople": "King David; Jesus; Paul",
+    "RelatedEvents": "Triumphal Entry; The Crucifixion; The Resurrection",
+    "Slug": "messiah-and-king"
+  },
+  {
+    "Theme": "Messianic hope",
+    "Summary": "Long before Jesus came, God's people lived on promises: a seed who would crush the serpent, a son of David whose kingdom would never end, a suffering servant who would bear our griefs. That hope sustained exiles, prophets, and ordinary families through centuries of waiting. In Jesus the hope arrived, and because he rose, our hope now looks forward to his return and the renewal of all things.",
+    "KeyPassages": "Genesis 3:15; Isaiah 53:4-6; Luke 2:25-32; Revelation 22:20",
+    "RelatedBooks": "Genesis; Isaiah; Luke; Revelation",
+    "RelatedPeople": "Isaiah; Simeon; Jesus",
+    "RelatedEvents": "The Birth of Jesus; The Resurrection",
+    "Slug": "messianic-hope"
+  },
+  {
+    "Theme": "Nearness to God",
+    "Summary": "God is not far off: he draws near to the brokenhearted, dwells with the humble, and invites his people to draw near in return. The tabernacle, the temple, and finally the incarnation all tell one story: God closing the distance sin created. James promises simply that if we draw near to God, he will draw near to us, and Psalm 73 confesses that the nearness of God is our good.",
+    "KeyPassages": "Psalm 73:28; James 4:8; Hebrews 10:19-22; John 1:14",
+    "RelatedBooks": "Psalms; James; Hebrews; John",
+    "RelatedPeople": "Jesus; Moses",
+    "RelatedEvents": "The Burning Bush",
+    "Slug": "nearness-to-god"
+  },
+  {
+    "Theme": "Need for a king",
+    "Summary": "After the judges' cycles of failure, Israel cried out for a king, and God gave them first Saul, then David, teaching them that no human king could finally save. The longing itself was right: God's people need a righteous ruler to lead them in God's ways and defend them from their enemies. That need is answered only in Jesus, the King whose reign brings justice without tyranny and victory without violence.",
+    "KeyPassages": "Judges 21:25; 1 Samuel 8:4-9; 1 Samuel 16:1-13; Matthew 2:1-2",
+    "RelatedBooks": "Judges; 1 Samuel; Matthew",
+    "RelatedPeople": "Samuel; King Saul; King David; Jesus",
+    "RelatedEvents": "Anointing of Saul as King; David Becomes King",
+    "Slug": "need-for-a-king"
+  },
+  {
+    "Theme": "New covenant",
+    "Summary": "God promised through Jeremiah a covenant written on hearts, not stone, with sins forgiven and God known personally. Jesus inaugurated it at the Last Supper, saying the cup is the new covenant in his blood. We live under it now: forgiven, indwelt by the Spirit, and called to a new life of obedience from the inside out.",
+    "KeyPassages": "Jeremiah 31:31-34; Luke 22:20; Hebrews 8:6-13; 2 Corinthians 3:6",
+    "RelatedBooks": "Jeremiah; Luke; Hebrews; 2 Corinthians",
+    "RelatedPeople": "Jeremiah; Jesus; Paul",
+    "RelatedEvents": "Last Supper; The Crucifixion; Pentecost",
+    "Slug": "new-covenant"
+  },
+  {
+    "Theme": "New heart",
+    "Summary": "God promised through Ezekiel to remove hearts of stone and give hearts of flesh, writing his law within and putting his Spirit in his people. A new heart is not self-improvement but resurrection: God replaces rebellion with responsiveness, so that we love what he loves and turn from what we once loved. This is the inward miracle behind every true conversion and every lasting change.",
+    "KeyPassages": "Ezekiel 36:26-27; Jeremiah 31:33; 2 Corinthians 3:3; Psalm 51:10",
+    "RelatedBooks": "Ezekiel; Jeremiah; 2 Corinthians; Psalms",
+    "RelatedPeople": "Ezekiel; Jeremiah; King David; Paul",
+    "RelatedEvents": "Pentecost; The Conversion of Paul",
+    "Slug": "new-heart"
+  },
+  {
+    "Theme": "Opposition",
+    "Summary": "Faithfulness in Scripture almost always meets opposition: Nehemiah's wall-builders held a trowel in one hand and a sword in the other, Daniel's enemies plotted against his prayers, and the apostles were ordered to stop speaking in Jesus' name. Opposition is not a sign that God has abandoned his work; often it is the sign that the work matters. God's people answer it with prayer, courage, and steady obedience, trusting the Lord who builds what no enemy can tear down.",
+    "KeyPassages": "Nehemiah 4:9; Daniel 6:10; Acts 4:29-31; 1 Peter 5:8-9",
+    "RelatedBooks": "Nehemiah; Daniel; Acts; 1 Peter",
+    "RelatedPeople": "Nehemiah; Daniel; Simon Peter; Paul",
+    "RelatedEvents": "Nehemiah Rebuilds the Wall; Martyrdom of Stephen",
+    "Slug": "opposition"
+  },
+  {
+    "Theme": "Outpouring of the Spirit",
+    "Summary": "At Pentecost the promised Spirit fell like wind and fire, filling ordinary disciples with boldness to speak of Jesus in every tongue. The outpouring Joel foresaw had come: sons and daughters prophesying, old men dreaming dreams, God's presence poured out on all flesh. The same Spirit still fills the church today, giving gifts for service and power for witness until Christ returns.",
+    "KeyPassages": "Joel 2:28-29; Acts 2:1-4; Acts 2:17-18; Acts 10:44-46",
+    "RelatedBooks": "Joel; Acts",
+    "RelatedPeople": "Simon Peter; Paul",
+    "RelatedEvents": "Pentecost",
+    "Slug": "outpouring-of-the-spirit"
+  },
+  {
+    "Theme": "Partnership",
+    "Summary": "God's work has always been shared work: Paul and Barnabas, Priscilla and Aquila, Paul and Timothy, partners in the gospel bound by affection, trust, and a common mission. Partnership is more than efficiency; it is the shape of the body of Christ, where gifts differ and burdens are carried together. Even the strongest leaders in Scripture leaned on companions, reminding us that ministry done alone is ministry done wrong.",
+    "KeyPassages": "Ecclesiastes 4:9-12; Philippians 1:3-5; Philippians 2:25; 2 Timothy 4:11",
+    "RelatedBooks": "Ecclesiastes; Philippians; 2 Timothy",
+    "RelatedPeople": "Paul; Barnabas; Timothy; Priscilla; Aquila",
+    "RelatedEvents": "Paul's Missionary Journeys",
+    "Slug": "partnership"
+  },
+  {
+    "Theme": "Plea",
+    "Summary": "A plea is prayer at its most honest: an urgent cry for mercy, help, or deliverance when we have nothing left to offer. The psalms are full of pleas: How long, O Lord? And Jesus honored the blind beggar's plea, Son of David, have mercy on me. God does not despise a pleading heart; he bends his ear to it, and often the plea itself is the beginning of faith.",
+    "KeyPassages": "Psalm 13:1-2; Psalm 130:1-2; Mark 10:46-52; Luke 18:1-8",
+    "RelatedBooks": "Psalms; Mark; Luke",
+    "RelatedPeople": "King David; Jesus",
+    "RelatedEvents": "Jesus Calms the Storm",
+    "Slug": "plea"
+  },
+  {
+    "Theme": "Praise",
+    "Summary": "Praise is God's people answering his goodness with song, speech, and shouting joy. The Psalms model it in every season: praise rises from deliverance, from creation's beauty, and even from the depths. Praise is both a gift we offer and a weapon against despair, because it fixes our eyes on who God is rather than on what we fear.",
+    "KeyPassages": "Psalm 100:1-5; Psalm 150:1-6; Acts 16:25-26; Revelation 5:9-14",
+    "RelatedBooks": "Psalms; Acts; Revelation",
+    "RelatedPeople": "King David; Paul",
+    "Slug": "praise"
+  },
+  {
+    "Theme": "Preservation",
+    "Summary": "God's preservation is his keeping power: he guarded Noah through the flood, kept a remnant in exile, and preserves his people to the end. Jude calls believers kept for Jesus Christ, and Jesus promised that no one can snatch his sheep from his hand. Preservation is not immunity from hardship but security through it: God keeps what is his, and he will finish what he began.",
+    "KeyPassages": "Genesis 8:1; Psalm 121:7-8; John 10:27-29; Jude 1:24-25",
+    "RelatedBooks": "Genesis; Psalms; John; Jude",
+    "RelatedPeople": "Noah; Jesus",
+    "RelatedEvents": "Noah and the Flood",
+    "Slug": "preservation"
+  },
+  {
+    "Theme": "Priesthood",
+    "Summary": "In the Old Testament, priests stood between God and his people, offering sacrifices and blessing in God's name; Aaron and his sons carried this holy, costly calling. The New Testament announces a better priesthood: Jesus, our great high priest, offered himself once for all, and now all believers are a royal priesthood with direct access to God. We no longer need a human mediator, because the Mediator lives forever to intercede for us.",
+    "KeyPassages": "Exodus 28:1; Leviticus 16:15-17; Hebrews 4:14-16; 1 Peter 2:9",
+    "RelatedBooks": "Exodus; Leviticus; Hebrews; 1 Peter",
+    "RelatedPeople": "Aaron; Moses; Jesus; Simon Peter",
+    "RelatedEvents": "The Crucifixion",
+    "Slug": "priesthood"
+  },
+  {
+    "Theme": "Priorities",
+    "Summary": "Life is short and demands are endless, so Scripture urges us to choose what matters first: God's kingdom, his people, and the work he has actually given us. Martha learned that one thing is necessary; Mary chose the good portion at Jesus' feet. Right priorities are not found by doing more but by seeking first what God seeks, and letting the rest find its place beneath it.",
+    "KeyPassages": "Matthew 6:33; Luke 10:38-42; Philippians 1:9-11; Ephesians 5:15-17",
+    "RelatedBooks": "Matthew; Luke; Philippians; Ephesians",
+    "RelatedPeople": "Jesus; Martha; Mary of Bethany; Paul",
+    "Slug": "priorities"
+  },
+  {
+    "Theme": "Prophetic witness",
+    "Summary": "Prophets were God's mouthpieces, speaking his word to kings and crowds whether they wanted to hear it or not. Their witness combined courage and compassion: denouncing injustice and idolatry while holding out mercy to all who would turn. The church inherits that calling: to speak truth in love, to name sin honestly, and to testify to Jesus, for the testimony of Jesus is the spirit of prophecy.",
+    "KeyPassages": "Jeremiah 1:7-10; Amos 5:24; Micah 6:8; Revelation 19:10",
+    "RelatedBooks": "Jeremiah; Amos; Micah; Revelation",
+    "RelatedPeople": "Jeremiah; Amos; Micah; John the Apostle",
+    "RelatedEvents": "Elijah on Mount Carmel; Jonah and Nineveh",
+    "Slug": "prophetic-witness"
+  },
+  {
+    "Theme": "Prophets",
+    "Summary": "The prophets were men and women God called to speak his word into their times: Moses the lawgiver, Samuel the kingmaker, Elijah the firebrand, Isaiah the seer, and John the Baptist, the last and greatest of the old order. They comforted the afflicted and afflicted the comfortable, always pointing beyond themselves to the coming Messiah. Their books still preach, because the God who spoke through them has not stopped speaking.",
+    "KeyPassages": "Deuteronomy 18:15; 1 Kings 18:36-39; Isaiah 6:8; Hebrews 1:1-2",
+    "RelatedBooks": "Deuteronomy; 1 Kings; Isaiah; Hebrews",
+    "RelatedPeople": "Moses; Samuel; Elijah; Isaiah; John the Baptist",
+    "RelatedEvents": "Elijah on Mount Carmel; The Burning Bush",
+    "Slug": "prophets"
+  },
+  {
+    "Theme": "Purity",
+    "Summary": "Purity is singleness of heart: a life unmixed, undivided, and set apart for God. Jesus promised that the pure in heart will see God, and the New Testament calls believers to flee impurity and to wash in the truth that makes us clean. Purity is not prudishness but wholeness: the same God who made our bodies calls us to honor him in them, by the power of the Spirit who dwells within.",
+    "KeyPassages": "Psalm 24:3-4; Matthew 5:8; 1 Thessalonians 4:3-5; 1 John 3:2-3",
+    "RelatedBooks": "Psalms; Matthew; 1 Thessalonians; 1 John",
+    "RelatedPeople": "Jesus; Paul; John the Apostle",
+    "Slug": "purity"
+  },
+  {
+    "Theme": "Rebellion",
+    "Summary": "Rebellion is the old human story: creatures shaking their fists at the Creator, from Eden's forbidden tree to Israel's golden calf to our own daily refusals. Scripture never softens it: rebellion brings ruin. Yet it never leaves it hopeless, for God answers rebellion with mercy, pursuing rebels until they come home. Every story of rebellion in the Bible is therefore also a story about grace that is greater than our defiance.",
+    "KeyPassages": "Genesis 3:1-7; Exodus 32:1-6; Isaiah 1:2; Romans 5:8-10",
+    "RelatedBooks": "Genesis; Exodus; Isaiah; Romans",
+    "RelatedPeople": "Adam; Eve; Moses; Aaron",
+    "RelatedEvents": "The Fall; The Golden Calf",
+    "Slug": "rebellion"
+  },
+  {
+    "Theme": "Rebuilding",
+    "Summary": "Rebuilding is God's repeated work among ruins: after judgment, after exile, after failure, he gathers what is broken and builds again. Nehemiah rebuilt a wall, Zerubbabel a temple, and God himself rebuilds ruined lives, raising them into a holy temple in the Lord. The Bible's rebuilding stories teach us not to despise small beginnings, for God delights to start again with what the world calls wreckage.",
+    "KeyPassages": "Nehemiah 2:17-18; Ezra 3:8-11; Isaiah 61:4; Ephesians 2:19-22",
+    "RelatedBooks": "Nehemiah; Ezra; Isaiah; Ephesians",
+    "RelatedPeople": "Nehemiah; Zerubbabel; Ezra",
+    "RelatedEvents": "Nehemiah Rebuilds the Wall; Rebuilding of the Temple",
+    "Slug": "rebuilding"
+  },
+  {
+    "Theme": "Refuge",
+    "Summary": "When trouble comes, Scripture invites us to run to God as to a fortress, a shelter, a hiding place. The psalmists call him refuge in war, in grief, in guilt, and in old age: not a distant idea but a present help. To take refuge in God is to trust his character more than our circumstances, and to hide in him until the storm passes.",
+    "KeyPassages": "Psalm 46:1-3; Psalm 91:1-4; Proverbs 18:10; Hebrews 6:19-20",
+    "RelatedBooks": "Psalms; Proverbs; Hebrews",
+    "RelatedPeople": "King David; Jesus",
+    "Slug": "refuge"
+  },
+  {
+    "Theme": "Remembering",
+    "Summary": "Remembering is a spiritual discipline in Scripture, not mere nostalgia: Israel was commanded to remember the Exodus, to retell it to their children, and to set up stones so they would not forget. Forgetting God is the first step toward idolatry; remembering his deeds is the anchor of faith in every new crisis. The Lord's Supper is remembering made tangible: bread and cup that preach the gospel to our forgetful hearts.",
+    "KeyPassages": "Deuteronomy 6:12; Deuteronomy 8:2; Psalm 77:11-12; Luke 22:19",
+    "RelatedBooks": "Deuteronomy; Psalms; Luke",
+    "RelatedPeople": "Moses; Jesus",
+    "RelatedEvents": "The Passover; Last Supper; The Exodus and Crossing of the Red Sea",
+    "Slug": "remembering"
+  },
+  {
+    "Theme": "Remembrance",
+    "Summary": "Remembrance in the Bible is active: God remembers his covenant, and his people are called to remember his works, his words, and his warnings. Memorials: Passover, the stones at Gilgal, the Lord's Supper, were given because human hearts drift. To remember rightly is to live gratefully and obediently, letting yesterday's deliverances fuel today's trust.",
+    "KeyPassages": "Exodus 12:14; Joshua 4:6-7; Psalm 105:5; 1 Corinthians 11:24-26",
+    "RelatedBooks": "Exodus; Joshua; Psalms; 1 Corinthians",
+    "RelatedPeople": "Moses; Joshua; Jesus; Paul",
+    "RelatedEvents": "The Passover; Crossing the Jordan; Last Supper",
+    "Slug": "remembrance"
+  },
+  {
+    "Theme": "Remnant",
+    "Summary": "Again and again God preserves a remnant: a faithful few kept through judgment: Noah's family, the seven thousand who never bowed to Baal, the exiles who returned. The remnant is proof that God's purposes never depend on majorities, and that his grace always keeps a people for himself. In the New Testament the remnant widens: Jews and Gentiles together, chosen by grace, become the one people of God.",
+    "KeyPassages": "1 Kings 19:18; Isaiah 10:20-22; Romans 11:5; Revelation 7:9-10",
+    "RelatedBooks": "1 Kings; Isaiah; Romans; Revelation",
+    "RelatedPeople": "Elijah; Isaiah; Paul",
+    "RelatedEvents": "Elijah on Mount Carmel; Cyrus's Decree and Return from Exile",
+    "Slug": "remnant"
+  },
+  {
+    "Theme": "Return from exile",
+    "Summary": "After seventy years in Babylon, God kept his promise and brought his people home: Cyrus decreed it, Zerubbabel led it, and Ezra and Nehemiah rebuilt what exile had broken. The return was joyful yet incomplete: the people were home but still waiting for a greater deliverance. That longing points to Christ, whose return from the grave and promised return in glory will end every exile for good.",
+    "KeyPassages": "Ezra 1:1-4; Nehemiah 8:1-3; Jeremiah 29:10-14; Isaiah 40:1-5",
+    "RelatedBooks": "Ezra; Nehemiah; Jeremiah; Isaiah",
+    "RelatedPeople": "Cyrus the Great; Zerubbabel; Ezra; Nehemiah",
+    "RelatedEvents": "Cyrus's Decree and Return from Exile; Ezra Reads the Law; Nehemiah Rebuilds the Wall",
+    "Slug": "return-from-exile"
+  },
+  {
+    "Theme": "Return of Christ",
+    "Summary": "The New Testament ends as it begins its hope: Jesus, who ascended, will return in glory to judge the living and the dead and to make all things new. His return is not a puzzle to solve but a promise to live by: it calls us to readiness, to holiness, and to hope that no suffering is final. Every Maranatha since the apostles has been the church's way of saying: come, Lord Jesus.",
+    "KeyPassages": "Acts 1:11; Matthew 24:30-31; 1 Thessalonians 4:16-17; Revelation 22:20",
+    "RelatedBooks": "Acts; Matthew; 1 Thessalonians; Revelation",
+    "RelatedPeople": "Jesus; Paul; John the Apostle",
+    "RelatedEvents": "The Ascension; The Resurrection",
+    "Slug": "return-of-christ"
+  },
+  {
+    "Theme": "Return",
+    "Summary": "Return is the Bible's word for repentance: turning back from the far country to the Father, from idols to the living God. The prodigal's return is the pattern: a long walk home met by a running father. God does not merely permit return; he pleads for it, promises to receive it, and rejoices over every sinner who turns.",
+    "KeyPassages": "Deuteronomy 30:2-3; Luke 15:20-24; James 4:8; Acts 3:19",
+    "RelatedBooks": "Deuteronomy; Luke; James; Acts",
+    "RelatedPeople": "Jesus; Simon Peter",
+    "RelatedEvents": "The Prodigal Son; The Conversion of Paul",
+    "Slug": "return"
+  },
+  {
+    "Theme": "Reunion",
+    "Summary": "The Bible is full of reunions that picture God's heart: Jacob embracing Esau, Joseph revealing himself to his brothers, the father running to his prodigal son. Each reunion is a small resurrection: what was lost is found, what was dead is alive. The greatest reunion is still to come, when God's scattered people are gathered from every nation to one table with the Lamb.",
+    "KeyPassages": "Genesis 33:4; Genesis 45:14-15; Luke 15:20; Revelation 7:9-10",
+    "RelatedBooks": "Genesis; Luke; Revelation",
+    "RelatedPeople": "Jacob; Esau; Joseph, Son of Jacob; Jesus",
+    "RelatedEvents": "Joseph and His Brothers; The Prodigal Son",
+    "Slug": "reunion"
+  },
+  {
+    "Theme": "Reversal",
+    "Summary": "God delights in reversals: the last become first, the proud are scattered, the humble lifted, the cross becomes a throne. Hannah sang it, Mary sang it, and Jesus lived it: the stone the builders rejected became the cornerstone. Reversal is the gospel's logic: God saves by turning the world's values upside down, so that no one can boast except in the Lord.",
+    "KeyPassages": "1 Samuel 2:7-8; Luke 1:51-53; Luke 14:11; 1 Corinthians 1:27-29",
+    "RelatedBooks": "1 Samuel; Luke; 1 Corinthians",
+    "RelatedPeople": "Hannah; Mary, Mother of Jesus; Jesus; Paul",
+    "RelatedEvents": "The Crucifixion; The Resurrection",
+    "Slug": "reversal"
+  },
+  {
+    "Theme": "Righteousness of God",
+    "Summary": "The righteousness of God is both who he is and what he does: he is perfectly just, and he acts to make things right, vindicating the oppressed and judging the wicked. In the gospel, Paul announces something astonishing: God's righteousness is given to sinners through faith in Christ, so that the unjust are declared just. To trust in God's righteousness is to stop building our own and to rest in his finished work.",
+    "KeyPassages": "Psalm 71:19; Romans 1:16-17; Romans 3:21-26; 2 Corinthians 5:21",
+    "RelatedBooks": "Psalms; Romans; 2 Corinthians",
+    "RelatedPeople": "Paul; Jesus",
+    "RelatedEvents": "The Crucifixion; The Resurrection",
+    "Slug": "righteousness-of-god"
+  },
+  {
+    "Theme": "Rise of David",
+    "Summary": "David rose from shepherd boy to king: anointed in obscurity, tested in the wilderness, crowned after years of waiting and war. His rise shows God's pattern of choosing the overlooked and preparing leaders in hidden places. Yet David's story also warns us: the king after God's own heart fell grievously, and his greater Son would be the King who never falls.",
+    "KeyPassages": "1 Samuel 16:11-13; 1 Samuel 17:45-47; 2 Samuel 5:1-4; Psalm 78:70-72",
+    "RelatedBooks": "1 Samuel; 2 Samuel; Psalms",
+    "RelatedPeople": "Samuel; King David; King Saul; Jonathan",
+    "RelatedEvents": "David Becomes King; David and Goliath",
+    "Slug": "rise-of-david"
+  },
+  {
+    "Theme": "Savior for all",
+    "Summary": "The good news is not for one tribe or nation: Simeon called Jesus a light for the Gentiles, the angels announced joy for all people, and Revelation pictures a multitude from every nation before the throne. God desires all people to be saved, and the church's mission flows from that breadth: a Savior for all means a gospel for all.",
+    "KeyPassages": "Luke 2:29-32; John 3:16-17; 1 Timothy 2:3-6; Revelation 7:9-10",
+    "RelatedBooks": "Luke; John; 1 Timothy; Revelation",
+    "RelatedPeople": "Simeon; Jesus; Paul",
+    "RelatedEvents": "The Birth of Jesus; Pentecost",
+    "Slug": "savior-for-all"
+  },
+  {
+    "Theme": "Servant",
+    "Summary": "The servant theme runs from Joseph and Moses through Isaiah's suffering servant to Jesus, who came not to be served but to serve and give his life as a ransom. True greatness in God's kingdom is measured by towel and basin, not throne and title. To follow the Servant is to take the lowest place gladly, trusting that the Father sees and rewards what the world overlooks.",
+    "KeyPassages": "Isaiah 42:1-4; Isaiah 53:11; Mark 10:42-45; Philippians 2:5-8",
+    "RelatedBooks": "Isaiah; Mark; Philippians",
+    "RelatedPeople": "Isaiah; Jesus; Paul",
+    "RelatedEvents": "Last Supper; The Crucifixion",
+    "Slug": "servant"
+  },
+  {
+    "Theme": "Service",
+    "Summary": "Service is worship with its sleeves rolled up: the church's gifts are given not for display but for building others up, and Jesus made himself the model by washing feet. From deacons to door-keepers, from hosts to helpers, every act of service in Christ's name is sacred work. The New Testament measures spiritual maturity not by knowledge alone but by love that stoops to serve.",
+    "KeyPassages": "Galatians 5:13; Mark 10:43-44; 1 Peter 4:10-11; John 13:12-15",
+    "RelatedBooks": "Galatians; Mark; 1 Peter; John",
+    "RelatedPeople": "Jesus; Simon Peter; Paul",
+    "RelatedEvents": "Last Supper",
+    "Slug": "service"
+  },
+  {
+    "Theme": "Shelter in Christ",
+    "Summary": "To shelter in Christ is to hide in the safest place in the universe: united to him, we are covered by his righteousness, kept by his power, and held through every storm. The psalmist's fortress and the hen's wings both point here: to a refuge that is a person, not a place. Whatever threatens, the believer can say with Paul that nothing can separate us from the love of God in Christ Jesus our Lord.",
+    "KeyPassages": "Psalm 91:1-2; Colossians 3:3; Romans 8:38-39; John 10:28-29",
+    "RelatedBooks": "Psalms; Colossians; Romans; John",
+    "RelatedPeople": "King David; Paul; Jesus",
+    "RelatedEvents": "The Crucifixion; The Resurrection",
+    "Slug": "shelter-in-christ"
+  },
+  {
+    "Theme": "Sin and repentance",
+    "Summary": "Sin is missing God's mark, in thought, word, and deed, and repentance is turning from it back to him, with sorrow for the sin and trust in his mercy. Scripture never separates the two: conviction without repentance hardens, and repentance without conviction is shallow. The good news is that God grants repentance as a gift, and every turning sinner finds a Father ready to forgive.",
+    "KeyPassages": "Psalm 51:1-4; Luke 15:17-20; Acts 2:38; 1 John 1:9",
+    "RelatedBooks": "Psalms; Luke; Acts; 1 John",
+    "RelatedPeople": "King David; Simon Peter; Jesus",
+    "RelatedEvents": "The Prodigal Son; The Crucifixion",
+    "Slug": "sin-and-repentance"
+  },
+  {
+    "Theme": "Social righteousness",
+    "Summary": "Social righteousness is God's justice lived out in public: defending the widow, feeding the hungry, freeing the oppressed, and ordering society by mercy and truth. The prophets thundered against courts that favored the rich and worship that ignored the poor, because God cares how neighbors treat neighbors. The church practices social righteousness when it serves its city, advocates for the vulnerable, and shows the world what God's kingdom looks like.",
+    "KeyPassages": "Micah 6:8; Amos 5:24; Isaiah 58:6-7; Matthew 25:35-40",
+    "RelatedBooks": "Micah; Amos; Isaiah; Matthew",
+    "RelatedPeople": "Amos; Micah; Isaiah; Jesus",
+    "RelatedEvents": "The Good Samaritan; The Sermon on the Mount",
+    "Slug": "social-righteousness"
+  },
+  {
+    "Theme": "Son of God",
+    "Summary": "Son of God is the New Testament's great confession about Jesus: he is not merely a prophet or teacher but God's own Son, sharing the Father's nature and authority. The title rings out at his baptism, in Peter's confession, on the cross from a Roman centurion, and in John's Gospel from first verse to last. To call Jesus the Son of God is to worship him and to trust that in him we meet God himself.",
+    "KeyPassages": "Matthew 3:16-17; Matthew 16:15-17; Mark 15:39; John 1:1-18",
+    "RelatedBooks": "Matthew; Mark; John",
+    "RelatedPeople": "Jesus; Simon Peter; John the Baptist",
+    "RelatedEvents": "The Baptism of Jesus; The Crucifixion",
+    "Slug": "son-of-god"
+  },
+  {
+    "Theme": "Son of Man",
+    "Summary": "Son of Man was Jesus' favorite name for himself, drawn from Daniel's vision of one like a son of man coming with the clouds to receive an everlasting kingdom. In Jesus the title holds both glory and suffering together: the Son of Man has authority to forgive sins, came to seek and save the lost, and must be lifted up like the serpent in the wilderness. To confess him as Son of Man is to confess a King who rules by laying down his life.",
+    "KeyPassages": "Daniel 7:13-14; Mark 2:10; Luke 19:10; Mark 14:61-62",
+    "RelatedBooks": "Daniel; Mark; Luke",
+    "RelatedPeople": "Daniel; Jesus",
+    "RelatedEvents": "The Crucifixion; Transfiguration",
+    "Slug": "son-of-man"
+  },
+  {
+    "Theme": "Sound doctrine",
+    "Summary": "Sound doctrine is teaching that is healthy: true to Scripture, centered on Christ, and producing godly lives. Paul urged Timothy to hold the pattern of sound words and to guard the deposit, because what we believe shapes how we live and whom we trust. False teaching spreads like disease; sound doctrine nourishes, steadies, and protects the church.",
+    "KeyPassages": "1 Timothy 4:6; 2 Timothy 1:13-14; Titus 2:1; 2 Timothy 3:16-17",
+    "RelatedBooks": "1 Timothy; 2 Timothy; Titus",
+    "RelatedPeople": "Paul; Timothy",
+    "Slug": "sound-doctrine"
+  },
+  {
+    "Theme": "Speech",
+    "Summary": "Our words reveal our hearts: Scripture warns that the tongue is a small fire able to bless or burn, and it calls us to speech that is truthful, gracious, and seasonable. James pictures the tongue as a rudder steering a whole life, while Proverbs treasures the apt word spoken at the right time. Guarding our speech is therefore not politeness but discipleship: learning to speak as people who will answer to God for every careless word.",
+    "KeyPassages": "Proverbs 15:1; Proverbs 18:21; James 3:1-12; Ephesians 4:29",
+    "RelatedBooks": "Proverbs; James; Ephesians",
+    "RelatedPeople": "Paul; Jesus",
+    "Slug": "speech"
+  },
+  {
+    "Theme": "Spiritual gifts",
+    "Summary": "The Holy Spirit gives every believer gifts for the common good: wisdom, teaching, encouragement, generosity, leadership, mercy, and more. Paul insists these gifts differ by design, like parts of one body, and that the greatest gift of all is love, without which every other gift is noise. Gifts are not badges of importance but tools of service, to be used humbly, eagerly, and for the building up of the church.",
+    "KeyPassages": "Romans 12:6-8; 1 Corinthians 12:4-7; 1 Corinthians 13:1-3; 1 Peter 4:10-11",
+    "RelatedBooks": "Romans; 1 Corinthians; 1 Peter",
+    "RelatedPeople": "Paul; Simon Peter",
+    "RelatedEvents": "Pentecost",
+    "Slug": "spiritual-gifts"
+  },
+  {
+    "Theme": "Standing firm",
+    "Summary": "Standing firm is holding your ground when faith is pressured: Paul told the Ephesians to put on God's armor and stand, and told the Corinthians to stand firm in the faith and be strong. Firmness is not stubbornness but rootedness: planted deep in truth, steadied by prayer, and supported by brothers and sisters who stand beside you. The one who stands firm to the end, Jesus promised, will be saved.",
+    "KeyPassages": "Ephesians 6:13-14; 1 Corinthians 16:13; Philippians 4:1; Matthew 24:13",
+    "RelatedBooks": "Ephesians; 1 Corinthians; Philippians; Matthew",
+    "RelatedPeople": "Paul; Jesus",
+    "RelatedEvents": "Martyrdom of Stephen; Daniel in the Lions' Den",
+    "Slug": "standing-firm"
+  },
+  {
+    "Theme": "Strength in weakness",
+    "Summary": "God's strength shows up most clearly where ours runs out: Paul pleaded three times for his thorn to go, and heard, My grace is sufficient for you, for my power is made perfect in weakness. Weakness is therefore not the enemy of ministry but its doorway, because it forces us to lean on Christ instead of ourselves. The cross is the pattern: apparent defeat that became the world's salvation.",
+    "KeyPassages": "2 Corinthians 12:9-10; Isaiah 40:29-31; Hebrews 11:34; Philippians 4:13",
+    "RelatedBooks": "2 Corinthians; Isaiah; Hebrews; Philippians",
+    "RelatedPeople": "Paul; Jesus",
+    "RelatedEvents": "The Crucifixion; The Resurrection",
+    "Slug": "strength-in-weakness"
+  },
+  {
+    "Theme": "Sufficiency",
+    "Summary": "God's sufficiency is his all-enough-ness: he is enough for every need, every trial, and every calling, and his grace never runs short. Paul learned contentment in plenty and in want because he knew the God who supplies; the psalmist found that the Lord is his shepherd and therefore he lacks nothing. Sufficiency does not mean we never feel need: it means our need drives us to the One who is more than enough.",
+    "KeyPassages": "Psalm 23:1; 2 Corinthians 3:5; 2 Corinthians 9:8; Philippians 4:19",
+    "RelatedBooks": "Psalms; 2 Corinthians; Philippians",
+    "RelatedPeople": "King David; Paul",
+    "RelatedEvents": "Feeding of the Five Thousand",
+    "Slug": "sufficiency"
+  },
+  {
+    "Theme": "Superiority of Christ",
+    "Summary": "Hebrews argues from first to last that Jesus is superior: superior to angels, to Moses, to Aaron's priesthood, and to every sacrifice that came before. He is the radiance of God's glory and the exact imprint of his nature, the mediator of a better covenant with better promises. To see Christ's superiority is to stop drifting back to shadows and to hold fast to the substance who is Christ himself.",
+    "KeyPassages": "Hebrews 1:3-4; Hebrews 3:3; Hebrews 7:26-27; Hebrews 8:6",
+    "RelatedBooks": "Hebrews",
+    "RelatedPeople": "Jesus; Moses; Aaron",
+    "RelatedEvents": "The Crucifixion; Transfiguration",
+    "Slug": "superiority-of-christ"
+  },
+  {
+    "Theme": "Support for ministry",
+    "Summary": "Ministry has always depended on supporters: the women who funded Jesus' travels from their own means, the Philippians who partnered with Paul again and again, the churches that sent and sustained missionaries. Support, in prayer, in money, in hospitality, in encouragement, is not secondary to ministry; it IS ministry, sharing in the work and its reward. To support gospel work generously is to invest in treasure that outlasts every market.",
+    "KeyPassages": "Luke 8:1-3; Philippians 4:15-17; 3 John 1:5-8; 2 Corinthians 8:1-5",
+    "RelatedBooks": "Luke; Philippians; 3 John; 2 Corinthians",
+    "RelatedPeople": "Jesus; Paul; Lydia; Phoebe",
+    "RelatedEvents": "Paul's Missionary Journeys",
+    "Slug": "support-for-ministry"
+  },
+  {
+    "Theme": "Supremacy of Christ",
+    "Summary": "Christ is supreme over all things: the firstborn of creation, the head of the church, the one in whom all things hold together and through whom all things will be reconciled. Colossians answers every rival power, philosophy, angel-worship, religious rules, with a single word: Christ is enough, and Christ is first. To live under his supremacy is to give him first place in everything, from our calendars to our ambitions.",
+    "KeyPassages": "Colossians 1:15-20; Philippians 2:9-11; Ephesians 1:20-23; Revelation 5:12-13",
+    "RelatedBooks": "Colossians; Philippians; Ephesians; Revelation",
+    "RelatedPeople": "Paul; Jesus; John the Apostle",
+    "RelatedEvents": "The Resurrection; The Ascension",
+    "Slug": "supremacy-of-christ"
+  },
+  {
+    "Theme": "Surrender",
+    "Summary": "Surrender is yielding our wills, plans, and very lives to God, trusting that his wisdom is better than our control. Mary answered the angel, Let it be to me according to your word; Jesus prayed in Gethsemane, Not my will, but yours. Surrender is not defeat but freedom: the daily laying down of our crowns before the King who gave himself for us.",
+    "KeyPassages": "Luke 1:38; Luke 22:42; Romans 12:1-2; Matthew 16:24-25",
+    "RelatedBooks": "Luke; Romans; Matthew",
+    "RelatedPeople": "Mary, Mother of Jesus; Jesus",
+    "RelatedEvents": "Jesus Prays in Gethsemane; The Crucifixion",
+    "Slug": "surrender"
+  },
+  {
+    "Theme": "Temple rebuilding",
+    "Summary": "After exile, God stirred Zerubbabel, Joshua, and the returned remnant to rebuild his house in Jerusalem, and later Nehemiah to rebuild its wall. The work faced opposition, delay, and discouragement, yet God promised that the glory of the latter house would be greater than the former. The rebuilt temple pointed forward to Christ, in whom God dwells with his people, and to the church as his living temple.",
+    "KeyPassages": "Ezra 3:10-13; Ezra 6:14-16; Haggai 2:1-9; Nehemiah 6:15-16",
+    "RelatedBooks": "Ezra; Nehemiah; Haggai",
+    "RelatedPeople": "Zerubbabel; Ezra; Nehemiah",
+    "RelatedEvents": "Rebuilding of the Temple; Nehemiah Rebuilds the Wall; Cyrus's Decree and Return from Exile",
+    "Slug": "temple-rebuilding"
+  },
+  {
+    "Theme": "Time",
+    "Summary": "Time is God's gift and God's stewardship: brief as a breath, yet long enough to know him, love our neighbors, and finish the work he gives. Scripture urges us to number our days, to redeem the time, and to remember that there is a season for everything under heaven. Eternity gives time its weight: because forever is real, today matters more, not less.",
+    "KeyPassages": "Psalm 90:12; Ecclesiastes 3:1-8; Ephesians 5:15-16; James 4:14",
+    "RelatedBooks": "Psalms; Ecclesiastes; Ephesians; James",
+    "RelatedPeople": "Moses; King Solomon; Paul",
+    "Slug": "time"
+  },
+  {
+    "Theme": "Tithing",
+    "Summary": "Tithing is giving the first tenth to God, a practice that taught Israel to trust the Lord as provider and to fund the work of worship and the care of the poor. Abraham gave a tenth to Melchizedek and Jacob vowed one long before the law commanded it. Under the new covenant, the tenth remains a wise starting point, but the deeper principle is larger still: generous, cheerful, firstfruits giving from hearts that know everything belongs to God.",
+    "KeyPassages": "Genesis 14:20; Genesis 28:22; Malachi 3:10; 2 Corinthians 9:7",
+    "RelatedBooks": "Genesis; Malachi; 2 Corinthians",
+    "RelatedPeople": "Abraham; Melchizedek; Jacob; Paul",
+    "Slug": "tithing"
+  },
+  {
+    "Theme": "Unfaithfulness",
+    "Summary": "Unfaithfulness is breaking trust with God: Israel's idolatry is pictured as adultery, and Hosea's marriage became a living parable of a people who kept wandering from their faithful Husband. Scripture names unfaithfulness plainly because it wounds real relationship. Yet it never ends there, for God remains faithful even when we are faithless, and calls his people back with cords of love.",
+    "KeyPassages": "Hosea 1:2; Hosea 2:19-20; Jeremiah 3:12-14; 2 Timothy 2:13",
+    "RelatedBooks": "Hosea; Jeremiah; 2 Timothy",
+    "RelatedPeople": "Hosea; Jeremiah; Paul",
+    "RelatedEvents": "The Golden Calf",
+    "Slug": "unfaithfulness"
+  },
+  {
+    "Theme": "Unity in Christ",
+    "Summary": "Unity in Christ is deeper than agreement: in him, Jew and Gentile, slave and free, male and female are one people, reconciled to God and to each other by one cross. The dividing wall is broken down, and former strangers become fellow citizens and members of God's household. To live this unity is to refuse every identity that competes with Christ and to love across every line the world draws.",
+    "KeyPassages": "Galatians 3:28; Ephesians 2:14-18; Colossians 3:11; Romans 15:5-7",
+    "RelatedBooks": "Galatians; Ephesians; Colossians; Romans",
+    "RelatedPeople": "Paul; Jesus",
+    "RelatedEvents": "Pentecost; Peter and Cornelius",
+    "Slug": "unity-in-christ"
+  },
+  {
+    "Theme": "Unity",
+    "Summary": "Unity is the church's witness: Jesus prayed that his people would be one as he and the Father are one, so that the world would believe. Paul pleaded for one mind, one Spirit, one body: not uniformity, for gifts differ, but a deep oneness rooted in one Lord, one faith, one baptism. Unity is kept by humility, gentleness, and forgiveness, and it is broken most often by pride.",
+    "KeyPassages": "John 17:21-23; Ephesians 4:1-6; 1 Corinthians 1:10; Psalm 133:1",
+    "RelatedBooks": "John; Ephesians; 1 Corinthians; Psalms",
+    "RelatedPeople": "Jesus; Paul",
+    "RelatedEvents": "Pentecost; Jerusalem Council",
+    "Slug": "unity"
+  },
+  {
+    "Theme": "Urgency",
+    "Summary": "Urgency runs through the gospel: now is the day of salvation, the night is far gone, the harvest is plentiful and the workers are few. Jesus warned against the rich fool who planned for tomorrow and lost today, and Paul pleaded with people to be reconciled to God without delay. Urgency is not panic but holy seriousness: living as people who know time is short and eternity is long.",
+    "KeyPassages": "2 Corinthians 6:2; Luke 12:16-21; Matthew 9:37-38; Romans 13:11-12",
+    "RelatedBooks": "2 Corinthians; Luke; Matthew; Romans",
+    "RelatedPeople": "Jesus; Paul",
+    "Slug": "urgency"
+  },
+  {
+    "Theme": "Vanity",
+    "Summary": "Vanity is the emptiness Ecclesiastes names: chasing wealth, pleasure, wisdom, or fame apart from God leaves the hands full of wind. The Preacher tried everything and found it vapor: beautiful, brief, and unable to satisfy. Vanity is not a counsel of despair but a diagnosis: only when we stop expecting the world to give us meaning can we receive life as God's gift and enjoy it without worshipping it.",
+    "KeyPassages": "Ecclesiastes 1:2; Ecclesiastes 2:11; Ecclesiastes 12:13; Matthew 6:19-21",
+    "RelatedBooks": "Ecclesiastes; Matthew",
+    "RelatedPeople": "King Solomon; Jesus",
+    "Slug": "vanity"
+  },
+  {
+    "Theme": "Victory of Christ",
+    "Summary": "Christ's victory was won where defeat seemed certain: on the cross he disarmed the powers, in the tomb he broke death's grip, and in his resurrection he announced that the war is over even while battles remain. Believers share that victory now, over sin, over fear, over the accuser, and will see it complete when he returns. To live in his victory is to fight from triumph, not for it.",
+    "KeyPassages": "Colossians 2:15; 1 Corinthians 15:54-57; John 16:33; Revelation 19:11-16",
+    "RelatedBooks": "Colossians; 1 Corinthians; John; Revelation",
+    "RelatedPeople": "Jesus; Paul; John the Apostle",
+    "RelatedEvents": "The Crucifixion; The Resurrection",
+    "Slug": "victory-of-christ"
+  },
+  {
+    "Theme": "Visions",
+    "Summary": "Visions are one way God has spoken: Jacob's ladder, Isaiah's throne room, Ezekiel's valley of dry bones, John's apocalypse. They come in pictures because some truths are too large for plain prose, and they always serve God's purposes: calling, comforting, or commissioning his people. Visions must be tested by Scripture and by their fruit, for not every dazzling sight is from God, but the true ones have steadied his people for millennia.",
+    "KeyPassages": "Genesis 28:12-15; Isaiah 6:1-8; Ezekiel 37:1-14; Revelation 1:12-18",
+    "RelatedBooks": "Genesis; Isaiah; Ezekiel; Revelation",
+    "RelatedPeople": "Jacob; Isaiah; Ezekiel; John the Apostle",
+    "RelatedEvents": "Transfiguration",
+    "Slug": "visions"
+  },
+  {
+    "Theme": "Waiting on God",
+    "Summary": "Waiting on God is active trust, not passive resignation: the psalmist waits more than watchmen for the morning, Isaiah promises new strength to those who wait, and the church waited ten days in prayer before Pentecost. Waiting purifies our motives, deepens our dependence, and teaches us that God's timing is part of his goodness. Those who wait on the Lord will not be put to shame.",
+    "KeyPassages": "Psalm 27:14; Psalm 130:5-6; Isaiah 40:31; Acts 1:4-5",
+    "RelatedBooks": "Psalms; Isaiah; Acts",
+    "RelatedPeople": "King David; Isaiah; Jesus",
+    "RelatedEvents": "Pentecost",
+    "Slug": "waiting-on-god"
+  },
+  {
+    "Theme": "Wandering and Return",
+    "Summary": "Wandering and return is the shape of Israel's story and of every human heart: God's people strayed into the wilderness, into exile, into idolatry, and God kept bringing them back. The wilderness wanderings taught dependence, the exile taught humility, and every return taught grace. Our own wanderings need not end in ruin, because the God who sought Israel still seeks wanderers today.",
+    "KeyPassages": "Deuteronomy 8:2; Hosea 14:1-2; Luke 15:11-24; James 5:19-20",
+    "RelatedBooks": "Deuteronomy; Hosea; Luke; James",
+    "RelatedPeople": "Moses; Jesus",
+    "RelatedEvents": "Wilderness Wanderings; The Prodigal Son; Cyrus's Decree and Return from Exile",
+    "Slug": "wandering-and-return"
+  },
+  {
+    "Theme": "Wilderness",
+    "Summary": "The wilderness is where God forms his people: Israel wandered there forty years, Elijah fled there in despair, and Jesus was tested there before his ministry began. It is a place of hunger and danger, but also of manna, of water from the rock, and of God's voice in the silence. No one chooses the wilderness, yet Scripture insists that God meets us there, and leads us out, humbled, fed, and ready.",
+    "KeyPassages": "Deuteronomy 8:2-3; 1 Kings 19:4-8; Matthew 4:1-4; Hosea 2:14-15",
+    "RelatedBooks": "Deuteronomy; 1 Kings; Matthew; Hosea",
+    "RelatedPeople": "Moses; Elijah; Jesus",
+    "RelatedEvents": "Wilderness Wanderings; The Temptation in the Wilderness",
+    "Slug": "wilderness"
+  },
+  {
+    "Theme": "Works",
+    "Summary": "Works in Scripture are both warned against and commanded: we are not saved by works, yet we are saved for good works, created in Christ Jesus to walk in them. Paul and James agree: faith without works is dead, and works without faith are empty. Good works are therefore not the price of salvation but its fruit: the visible life of a people already loved, already forgiven, already free.",
+    "KeyPassages": "Ephesians 2:8-10; James 2:17; Matthew 5:16; Titus 3:5",
+    "RelatedBooks": "Ephesians; James; Matthew; Titus",
+    "RelatedPeople": "Paul; Jesus",
+    "RelatedEvents": "The Sermon on the Mount",
+    "Slug": "works"
   }
 ]

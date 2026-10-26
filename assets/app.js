@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "43";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "44";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -246,7 +246,10 @@
   function linkifyField(field, value) {
     if (REL_FIELDS.indexOf(field) === -1) return esc(value);
     return splitList(value).map(function (token) {
-      var hit = linkIndex[token];
+      // Exact match first; then the lowercase alias, so a token that differs
+      // from its entry only by capitalisation ("New life" vs "New Life")
+      // still links instead of staying plain.
+      var hit = linkIndex[token] || linkIndex[token.toLowerCase()];
       if (hit) return '<a href="#/' + hit.coll + "/" + hit.idx + '">' + esc(hit.display || token) + "</a>";
       return esc(token);
     }).join("; ");
