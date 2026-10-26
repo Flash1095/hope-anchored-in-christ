@@ -5,5 +5,7 @@
   "KeyPassages": "Matthew 1:1; Mark 1:1; Luke 1:1-4; John 20:30-31",
   "RelatedPeople": "Jesus; Matthew",
   "RelatedBooks": "Matthew; Mark; Luke; John",
-  "Slug": "gospels"
+  "Slug": "gospels",
+  "Places": "Bethlehem; Nazareth; Galilee; Jerusalem; Golgotha",
+  "RelatedEvents": "Birth of Jesus; Baptism of Jesus; The Crucifixion; The Resurrection"
 }

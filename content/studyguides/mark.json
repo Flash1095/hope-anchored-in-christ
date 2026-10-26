@@ -8,5 +8,8 @@
   "Application": "Tell one person this week, in your own words, who Jesus is according to Mark — not a rehearsed answer, but the one you actually believe.",
   "RelatedBooks": "Mark",
   "RelatedTopics": "Faith; Discipleship; Kingdom of God",
-  "Slug": "mark"
+  "Slug": "mark",
+  "RelatedPeople": "Simon Peter; Jesus",
+  "Places": "Galilee; Jerusalem; Capernaum",
+  "RelatedEvents": "Baptism of Jesus; The Crucifixion; The Resurrection"
 }

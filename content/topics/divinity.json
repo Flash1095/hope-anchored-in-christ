@@ -6,5 +6,7 @@
   "RelatedPeople": "Moses; Isaiah; Jesus; Paul",
   "RelatedDoctrines": "Trinity; Incarnation",
   "RelatedBooks": "Exodus; Isaiah; John; Colossians",
-  "Slug": "divinity"
+  "Slug": "divinity",
+  "Places": "Jordan River",
+  "RelatedEvents": "Baptism of Jesus; Transfiguration"
 }

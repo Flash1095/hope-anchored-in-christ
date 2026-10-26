@@ -6,5 +6,7 @@
   "RelatedPeople": "Adam; Eve; Jesus",
   "RelatedDoctrines": "Original Sin",
   "RelatedBooks": "Genesis; Romans; 1 Corinthians",
-  "Slug": "adam-and-eve"
+  "Slug": "adam-and-eve",
+  "Places": "Garden of Eden",
+  "RelatedEvents": "Creation; The Fall"
 }

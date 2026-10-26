@@ -5,5 +5,7 @@
   "KeyPassages": "Genesis 1:1-2:3; Genesis 6:5-8:22; Exodus 14:21-31; 2 Timothy 4:3-4; 2 Peter 1:16",
   "RelatedPeople": "Moses; Noah",
   "RelatedBooks": "Genesis; Exodus; 2 Timothy; 2 Peter",
-  "Slug": "myths"
+  "Slug": "myths",
+  "Places": "Mount Ararat",
+  "RelatedEvents": "Noah and the Flood; Creation"
 }

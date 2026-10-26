@@ -9,5 +9,7 @@
   "RelatedBooks": "Luke; John",
   "RelatedPeople": "Mary of Bethany; Lazarus; Jesus",
   "LifeLesson": "Martha's story holds both service and faith: Jesus invites busy hearts to sit, listen, and believe. At a graveside she confessed hope — and then watched her brother walk out alive.",
-  "Slug": "martha"
+  "Slug": "martha",
+  "Places": "Bethany",
+  "RelatedEvents": "Raising of Lazarus"
 }

@@ -6,5 +6,7 @@
   "RelatedPeople": "Adam; Eve; Jesus",
   "RelatedDoctrines": "Demons; Hell",
   "RelatedBooks": "Genesis; Job; Matthew; Ephesians; 1 Peter; Revelation",
-  "Slug": "satan"
+  "Slug": "satan",
+  "Places": "Garden of Eden",
+  "RelatedEvents": "The Fall; Temptation in the Wilderness"
 }

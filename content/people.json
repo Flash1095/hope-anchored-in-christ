@@ -10,7 +10,9 @@
     "RelatedBooks": "Genesis; Romans; 1 Corinthians",
     "RelatedPeople": "Eve; Abel; Cain; Seth",
     "LifeLesson": "Our story begins with a Creator who made us in His image and for His fellowship. Even after the Fall, God pursued Adam — and He still pursues us with redeeming love.",
-    "Slug": "adam"
+    "Slug": "adam",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "Creation; The Fall"
   },
   {
     "Name": "Eve",
@@ -23,7 +25,9 @@
     "RelatedBooks": "Genesis",
     "RelatedPeople": "Adam; Cain; Abel; Seth",
     "LifeLesson": "God did not abandon Eve after her failure; He clothed her in grace and spoke hope over her future. Your mistakes are not the end of your story either.",
-    "Slug": "eve"
+    "Slug": "eve",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "Creation; The Fall"
   },
   {
     "Name": "Abel",
@@ -36,7 +40,8 @@
     "RelatedBooks": "Genesis; Hebrews",
     "RelatedPeople": "Adam; Eve; Cain",
     "LifeLesson": "Abel still speaks through his faith, long after his life was cut short. A life offered to God in faith is never wasted and never truly silenced.",
-    "Slug": "abel"
+    "Slug": "abel",
+    "RelatedEvents": "Cain Murders Abel"
   },
   {
     "Name": "Enoch",
@@ -62,7 +67,9 @@
     "RelatedBooks": "Genesis; Hebrews; 1 Peter",
     "RelatedPeople": "Shem; Ham; Japheth; Adam",
     "LifeLesson": "Noah obeyed God when obedience looked foolish to everyone around him. Hope anchors us to obey today what God has promised for tomorrow.",
-    "Slug": "noah"
+    "Slug": "noah",
+    "Places": "Mount Ararat",
+    "RelatedEvents": "Noah and the Flood"
   },
   {
     "Name": "Melchizedek",
@@ -75,7 +82,8 @@
     "RelatedBooks": "Genesis; Psalms; Hebrews",
     "RelatedPeople": "Abraham; Jesus",
     "LifeLesson": "Long before the Law, God was already pointing to Jesus, our perfect and eternal High Priest. In Christ we have a priest who never leaves His post.",
-    "Slug": "melchizedek"
+    "Slug": "melchizedek",
+    "Places": "Jerusalem"
   },
   {
     "Name": "Abraham",
@@ -88,7 +96,9 @@
     "RelatedBooks": "Genesis; Romans; Galatians; Hebrews",
     "RelatedPeople": "Sarah; Isaac; Hagar; Jacob",
     "LifeLesson": "Abraham believed God against all visible evidence, and God counted it as righteousness. Hold on — the God who kept His promise to Abraham will keep His promises to you.",
-    "Slug": "abraham"
+    "Slug": "abraham",
+    "Places": "Ur; Haran; Canaan; Shechem; Bethel; Hebron; Beersheba; Egypt",
+    "RelatedEvents": "The Call of Abraham; The Binding of Isaac; Destruction of Sodom and Gomorrah"
   },
   {
     "Name": "Sarah",
@@ -101,7 +111,9 @@
     "RelatedBooks": "Genesis; Hebrews; 1 Peter",
     "RelatedPeople": "Abraham; Isaac; Hagar",
     "LifeLesson": "Sarah waited a lifetime for her promise, and God was not late. The season of waiting is not a season of being forgotten.",
-    "Slug": "sarah"
+    "Slug": "sarah",
+    "Places": "Ur; Haran; Canaan; Hebron; Beersheba",
+    "RelatedEvents": "The Call of Abraham"
   },
   {
     "Name": "Hagar",
@@ -114,7 +126,8 @@
     "RelatedBooks": "Genesis; Galatians",
     "RelatedPeople": "Abraham; Sarah; Ishmael",
     "LifeLesson": "Hagar named God El Roi — the God who sees me. When you feel overlooked or driven into a wilderness, He sees you too, and He has not looked away.",
-    "Slug": "hagar"
+    "Slug": "hagar",
+    "Places": "Egypt; Beersheba"
   },
   {
     "Name": "Lot",
@@ -127,7 +140,9 @@
     "RelatedBooks": "Genesis; 2 Peter",
     "RelatedPeople": "Abraham; Sarah",
     "LifeLesson": "Lot shows how compromise slowly pulls us toward danger, yet God's mercy still reached for him. Mercy can take your hand today and lead you out, too.",
-    "Slug": "lot"
+    "Slug": "lot",
+    "Places": "Canaan",
+    "RelatedEvents": "Destruction of Sodom and Gomorrah"
   },
   {
     "Name": "Ishmael",
@@ -140,7 +155,8 @@
     "RelatedBooks": "Genesis",
     "RelatedPeople": "Abraham; Hagar; Isaac",
     "LifeLesson": "God heard the cry of a boy the world had cast aside. No one is outside the hearing of God, and no child of yours is beyond His care.",
-    "Slug": "ishmael"
+    "Slug": "ishmael",
+    "Places": "Canaan; Beersheba"
   },
   {
     "Name": "Isaac",
@@ -153,7 +169,9 @@
     "RelatedBooks": "Genesis; Hebrews",
     "RelatedPeople": "Abraham; Sarah; Rebekah; Jacob",
     "LifeLesson": "Isaac's life shows that the promise can pass quietly from one generation to the next. Faithfulness in ordinary seasons still carries God's extraordinary purposes.",
-    "Slug": "isaac"
+    "Slug": "isaac",
+    "Places": "Beersheba; Hebron; Canaan",
+    "RelatedEvents": "The Binding of Isaac"
   },
   {
     "Name": "Rebekah",
@@ -166,7 +184,8 @@
     "RelatedBooks": "Genesis; Romans",
     "RelatedPeople": "Isaac; Jacob; Esau; Abraham",
     "LifeLesson": "Rebekah's simple act of kindness at a well changed her whole future. God often opens His biggest doors through ordinary, generous obedience.",
-    "Slug": "rebekah"
+    "Slug": "rebekah",
+    "Places": "Haran; Canaan; Beersheba"
   },
   {
     "Name": "Esau",
@@ -179,7 +198,8 @@
     "RelatedBooks": "Genesis; Hebrews; Obadiah",
     "RelatedPeople": "Isaac; Rebekah; Jacob",
     "LifeLesson": "Esau traded the lasting for the immediate — a warning we all need. Do not let a moment of appetite cost you what God meant for your future.",
-    "Slug": "esau"
+    "Slug": "esau",
+    "Places": "Canaan"
   },
   {
     "Name": "Jacob",
@@ -192,7 +212,9 @@
     "RelatedBooks": "Genesis; Hosea; Hebrews",
     "RelatedPeople": "Isaac; Rebekah; Rachel; Joseph, Son of Jacob",
     "LifeLesson": "God took a deceiver and made him Israel, the father of a nation. He is still in the business of giving strugglers a new name and a new future.",
-    "Slug": "jacob"
+    "Slug": "jacob",
+    "Places": "Haran; Canaan; Shechem; Bethel; Hebron; Beersheba; Egypt",
+    "RelatedEvents": "Jacob Wrestles with God; Joseph and His Brothers"
   },
   {
     "Name": "Rachel",
@@ -205,7 +227,8 @@
     "RelatedBooks": "Genesis; Jeremiah",
     "RelatedPeople": "Jacob; Leah; Joseph, Son of Jacob; Benjamin",
     "LifeLesson": "Rachel waited and wept, and Scripture says God remembered Rachel. Being remembered by God changes everything — He has not forgotten you in your waiting.",
-    "Slug": "rachel"
+    "Slug": "rachel",
+    "Places": "Haran; Canaan; Bethlehem"
   },
   {
     "Name": "Leah",
@@ -218,7 +241,8 @@
     "RelatedBooks": "Genesis",
     "RelatedPeople": "Jacob; Rachel; Judah",
     "LifeLesson": "Leah praised God in the middle of a painful marriage, and from her line came the Messiah. God sees the overlooked, and He writes them into His greatest story.",
-    "Slug": "leah"
+    "Slug": "leah",
+    "Places": "Haran; Canaan; Hebron"
   },
   {
     "Name": "Judah",
@@ -231,7 +255,9 @@
     "RelatedBooks": "Genesis; Matthew; Revelation",
     "RelatedPeople": "Jacob; Joseph, Son of Jacob; Tamar; King David",
     "LifeLesson": "Judah proves a person can change — from selling a brother to saving one. God's grace can rewrite the worst chapters of a life into a royal lineage.",
-    "Slug": "judah"
+    "Slug": "judah",
+    "Places": "Canaan; Egypt",
+    "RelatedEvents": "Joseph and His Brothers"
   },
   {
     "Name": "Tamar",
@@ -244,7 +270,8 @@
     "RelatedBooks": "Genesis; Matthew",
     "RelatedPeople": "Judah; Jacob",
     "LifeLesson": "Tamar refused to let injustice erase her from God's story, and God honoured her in the Messiah's family tree. Your painful chapter can become part of His redemption story.",
-    "Slug": "tamar"
+    "Slug": "tamar",
+    "Places": "Canaan"
   },
   {
     "Name": "Joseph, Son of Jacob",
@@ -257,7 +284,9 @@
     "RelatedBooks": "Genesis; Acts; Hebrews",
     "RelatedPeople": "Jacob; Rachel; Judah; Benjamin",
     "LifeLesson": "What Joseph's brothers meant for evil, God meant for good. The pit and the prison were not detours — they were the road to the palace and the saving of many lives.",
-    "Slug": "joseph-son-of-jacob"
+    "Slug": "joseph-son-of-jacob",
+    "Places": "Canaan; Egypt; Goshen",
+    "RelatedEvents": "Joseph and His Brothers; Joseph Sold into Egypt; Joseph Rises to Power in Egypt"
   },
   {
     "Name": "Job",
@@ -283,7 +312,9 @@
     "RelatedBooks": "Exodus; Leviticus; Numbers; Deuteronomy; Hebrews",
     "RelatedPeople": "Aaron; Miriam; Joshua",
     "LifeLesson": "Moses felt inadequate for his calling, and God answered, I will be with you. Whatever God asks of you, His presence is the anchor that makes it possible.",
-    "Slug": "moses"
+    "Slug": "moses",
+    "Places": "Egypt; Goshen; Midian; Mount Sinai; Kadesh Barnea; Plains of Moab",
+    "RelatedEvents": "The Burning Bush; The Ten Plagues; The Passover; The Exodus and the Red Sea; The Ten Commandments; Giving of the Law at Sinai; The Golden Calf; Wilderness Wanderings"
   },
   {
     "Name": "Aaron",
@@ -296,7 +327,9 @@
     "RelatedBooks": "Exodus; Leviticus; Numbers; Hebrews",
     "RelatedPeople": "Moses; Miriam; Joshua",
     "LifeLesson": "Aaron failed with the golden calf yet was restored to serve as high priest. God restores fallen servants who return to Him — failure need not be the final word.",
-    "Slug": "aaron"
+    "Slug": "aaron",
+    "Places": "Egypt; Mount Sinai; Kadesh Barnea",
+    "RelatedEvents": "The Ten Plagues; The Passover; The Exodus and the Red Sea; The Golden Calf; Wilderness Wanderings"
   },
   {
     "Name": "Miriam",
@@ -309,7 +342,9 @@
     "RelatedBooks": "Exodus; Numbers; Micah",
     "RelatedPeople": "Moses; Aaron",
     "LifeLesson": "Miriam's song was Israel's first worship chorus after deliverance. When God brings you through your Red Sea, let your first response be praise that leads others to sing too.",
-    "Slug": "miriam"
+    "Slug": "miriam",
+    "Places": "Egypt; Mount Sinai; Kadesh Barnea",
+    "RelatedEvents": "The Exodus and the Red Sea; Wilderness Wanderings"
   },
   {
     "Name": "Joshua",
@@ -322,7 +357,9 @@
     "RelatedBooks": "Joshua; Deuteronomy; Hebrews",
     "RelatedPeople": "Moses; Caleb; Rahab",
     "LifeLesson": "Joshua stepped into enormous shoes with one repeated promise: I will be with you. Courage is not the absence of fear but confidence that God goes with you.",
-    "Slug": "joshua"
+    "Slug": "joshua",
+    "Places": "Jordan River; Jericho; Gilgal; Ai; Shechem; Shiloh; Canaan",
+    "RelatedEvents": "Crossing the Jordan; The Walls of Jericho"
   },
   {
     "Name": "Caleb",
@@ -335,7 +372,9 @@
     "RelatedBooks": "Numbers; Joshua",
     "RelatedPeople": "Joshua; Moses",
     "LifeLesson": "Caleb waited forty-five years for his promise and never let go of it. It is never too late, and you are never too old, for God to fulfil what He spoke over you.",
-    "Slug": "caleb"
+    "Slug": "caleb",
+    "Places": "Kadesh Barnea; Hebron; Jordan River",
+    "RelatedEvents": "The Twelve Spies and Israel's Unbelief; Crossing the Jordan; The Walls of Jericho"
   },
   {
     "Name": "Rahab",
@@ -348,7 +387,9 @@
     "RelatedBooks": "Joshua; Hebrews; James; Matthew",
     "RelatedPeople": "Joshua; Boaz; King David",
     "LifeLesson": "Rahab's past did not disqualify her from God's future — she is in the family line of Jesus. No history is too broken for God to weave into redemption.",
-    "Slug": "rahab"
+    "Slug": "rahab",
+    "Places": "Jericho",
+    "RelatedEvents": "The Walls of Jericho"
   },
   {
     "Name": "Deborah",
@@ -361,7 +402,9 @@
     "RelatedBooks": "Judges",
     "RelatedPeople": "Barak; Jael; Gideon",
     "LifeLesson": "Deborah rose as a mother in Israel when leaders hesitated. God raises up whoever will trust Him — step into the place He is calling you to fill.",
-    "Slug": "deborah"
+    "Slug": "deborah",
+    "Places": "Ramah; Bethel",
+    "RelatedEvents": "Deborah and Barak Defeat Sisera"
   },
   {
     "Name": "Gideon",
@@ -374,7 +417,8 @@
     "RelatedBooks": "Judges; Hebrews",
     "RelatedPeople": "Deborah; Samuel",
     "LifeLesson": "God called Gideon mighty while Gideon felt weakest — God names us by what He will make us, not by what we feel. Your small army is enough when God fights for you.",
-    "Slug": "gideon"
+    "Slug": "gideon",
+    "RelatedEvents": "Gideon's Victory over Midian"
   },
   {
     "Name": "Samson",
@@ -387,7 +431,8 @@
     "RelatedBooks": "Judges; Hebrews",
     "RelatedPeople": "Delilah; Samuel",
     "LifeLesson": "Samson's hair grew back in prison — a quiet sign that grace was returning. Even after our worst compromises, a repentant prayer can still move the hand of God.",
-    "Slug": "samson"
+    "Slug": "samson",
+    "RelatedEvents": "Samson and Delilah; Samson and the Philistines"
   },
   {
     "Name": "Ruth",
@@ -400,7 +445,9 @@
     "RelatedBooks": "Ruth; Matthew",
     "RelatedPeople": "Naomi; Boaz; King David",
     "LifeLesson": "Ruth gleaned in obscurity before she was honoured in the city gate. Stay faithful in the field you are in — God is writing a redemption story bigger than you can see.",
-    "Slug": "ruth"
+    "Slug": "ruth",
+    "Places": "Bethlehem",
+    "RelatedEvents": "Ruth's Loyalty"
   },
   {
     "Name": "Naomi",
@@ -413,7 +460,9 @@
     "RelatedBooks": "Ruth",
     "RelatedPeople": "Ruth; Boaz; Elimelech",
     "LifeLesson": "Naomi thought her story had ended in bitterness, but God was holding a baby-sized new beginning. Do not name your life by its hardest season — God is not finished.",
-    "Slug": "naomi"
+    "Slug": "naomi",
+    "Places": "Bethlehem",
+    "RelatedEvents": "Ruth's Loyalty"
   },
   {
     "Name": "Boaz",
@@ -426,7 +475,9 @@
     "RelatedBooks": "Ruth",
     "RelatedPeople": "Ruth; Naomi; King David",
     "LifeLesson": "Boaz shows us a Redeemer who notices, protects, and pays the full price. That is exactly what Jesus has done for you — you are redeemed, wanted, and covered.",
-    "Slug": "boaz"
+    "Slug": "boaz",
+    "Places": "Bethlehem",
+    "RelatedEvents": "Ruth's Loyalty"
   },
   {
     "Name": "Hannah",
@@ -439,7 +490,8 @@
     "RelatedBooks": "1 Samuel",
     "RelatedPeople": "Samuel; Eli; Elkanah",
     "LifeLesson": "Hannah poured out her sorrow before God and left the altar with a lifted face before anything had changed. Prayer anchors hope long before the answer arrives.",
-    "Slug": "hannah"
+    "Slug": "hannah",
+    "Places": "Shiloh; Ramah"
   },
   {
     "Name": "Eli",
@@ -452,7 +504,9 @@
     "RelatedBooks": "1 Samuel",
     "RelatedPeople": "Samuel; Hannah",
     "LifeLesson": "Eli's story warns us to honour God in our own homes first. It is never too late to say, like Eli finally did, He is the Lord; let Him do what is good.",
-    "Slug": "eli"
+    "Slug": "eli",
+    "Places": "Shiloh",
+    "RelatedEvents": "Calling of Samuel"
   },
   {
     "Name": "Samuel",
@@ -465,7 +519,9 @@
     "RelatedBooks": "1 Samuel; Hebrews",
     "RelatedPeople": "Hannah; Eli; King Saul; King David",
     "LifeLesson": "Samuel set up a stone and called it Ebenezer — thus far the Lord has helped us. Remembering God's past help is how we anchor hope for what lies ahead.",
-    "Slug": "samuel"
+    "Slug": "samuel",
+    "Places": "Shiloh; Ramah; Mizpah; Gilgal; Bethlehem",
+    "RelatedEvents": "Calling of Samuel; Anointing of Saul as King"
   },
   {
     "Name": "King Saul",
@@ -478,7 +534,9 @@
     "RelatedBooks": "1 Samuel",
     "RelatedPeople": "Samuel; Jonathan; King David",
     "LifeLesson": "Saul shows that starting well is not enough — obedience keeps us anchored. The good news is that God delights to restore those who, unlike Saul, truly turn back to Him.",
-    "Slug": "king-saul"
+    "Slug": "king-saul",
+    "Places": "Gibeah; Ramah; Mizpah; Gilgal",
+    "RelatedEvents": "Anointing of Saul as King; David and Goliath"
   },
   {
     "Name": "Jonathan",
@@ -491,7 +549,8 @@
     "RelatedBooks": "1 Samuel; 2 Samuel",
     "RelatedPeople": "King Saul; King David",
     "LifeLesson": "Jonathan loved God's purpose more than his own position. True friendship cheers another's calling even at cost to itself — and God honours that kind of heart.",
-    "Slug": "jonathan"
+    "Slug": "jonathan",
+    "Places": "Gibeah"
   },
   {
     "Name": "King David",
@@ -504,7 +563,9 @@
     "RelatedBooks": "1 Samuel; 2 Samuel; Psalms; Acts",
     "RelatedPeople": "Samuel; Jonathan; Bathsheba; King Solomon",
     "LifeLesson": "David sinned greatly and repented deeply, and God still called him a man after His own heart. Your anchor is not your perfection but a God who forgives and restores.",
-    "Slug": "king-david"
+    "Slug": "king-david",
+    "Places": "Bethlehem; Hebron; Jerusalem",
+    "RelatedEvents": "David and Goliath; David Becomes King; David and Bathsheba; Davidic Covenant"
   },
   {
     "Name": "Abigail",
@@ -530,7 +591,9 @@
     "RelatedBooks": "2 Samuel; 1 Kings; Matthew",
     "RelatedPeople": "King David; King Solomon; Nathan",
     "LifeLesson": "God brought Solomon — whose name is linked to peace — from Bathsheba's sorrow, and placed her in the Messiah's line. God can bring peace and purpose from your most painful chapter.",
-    "Slug": "bathsheba"
+    "Slug": "bathsheba",
+    "Places": "Jerusalem",
+    "RelatedEvents": "David and Bathsheba"
   },
   {
     "Name": "Nathan",
@@ -543,7 +606,9 @@
     "RelatedBooks": "2 Samuel; 1 Kings; Psalms",
     "RelatedPeople": "King David; Bathsheba; King Solomon",
     "LifeLesson": "Nathan loved David enough to tell him the hard truth. Real hope sometimes begins with honest conviction — and God meets the repentant with mercy, not rejection.",
-    "Slug": "nathan"
+    "Slug": "nathan",
+    "Places": "Jerusalem",
+    "RelatedEvents": "David and Bathsheba; Davidic Covenant"
   },
   {
     "Name": "King Solomon",
@@ -556,7 +621,9 @@
     "RelatedBooks": "1 Kings; Proverbs; Ecclesiastes; Song of Solomon",
     "RelatedPeople": "King David; Bathsheba",
     "LifeLesson": "Solomon's wisdom began with asking God — and we are invited to do the same. If any of you lacks wisdom, ask God, who gives generously without finding fault.",
-    "Slug": "king-solomon"
+    "Slug": "king-solomon",
+    "Places": "Jerusalem; Gibeon",
+    "RelatedEvents": "Building of Solomon's Temple"
   },
   {
     "Name": "Absalom",
@@ -569,7 +636,8 @@
     "RelatedBooks": "2 Samuel",
     "RelatedPeople": "King David; King Solomon",
     "LifeLesson": "Absalom warns us how unchecked bitterness grows into rebellion. Guard your heart, seek reconciliation early, and let God heal wounds before they harden.",
-    "Slug": "absalom"
+    "Slug": "absalom",
+    "Places": "Jerusalem; Hebron"
   },
   {
     "Name": "Rehoboam",
@@ -582,7 +650,9 @@
     "RelatedBooks": "1 Kings; 2 Chronicles",
     "RelatedPeople": "King Solomon; Jeroboam",
     "LifeLesson": "Rehoboam lost a kingdom by refusing humble counsel. Seeking wise, godly advice — and listening to it — can spare us losses pride would cause.",
-    "Slug": "rehoboam"
+    "Slug": "rehoboam",
+    "Places": "Jerusalem; Shechem",
+    "RelatedEvents": "The Kingdom Divides"
   },
   {
     "Name": "Jeroboam",
@@ -595,7 +665,9 @@
     "RelatedBooks": "1 Kings; 2 Kings",
     "RelatedPeople": "Rehoboam; King Solomon",
     "LifeLesson": "Jeroboam traded God's promise for political security and built idols instead. Trust God's promises rather than securing yourself with substitutes that lead you away from Him.",
-    "Slug": "jeroboam"
+    "Slug": "jeroboam",
+    "Places": "Shechem; Bethel",
+    "RelatedEvents": "The Kingdom Divides"
   },
   {
     "Name": "King Ahab",
@@ -608,7 +680,9 @@
     "RelatedBooks": "1 Kings",
     "RelatedPeople": "Jezebel; Elijah",
     "LifeLesson": "When Ahab humbled himself, God noticed and delayed judgment. If God responded to even Ahab's partial humility, He will surely respond to your sincere turning toward Him.",
-    "Slug": "king-ahab"
+    "Slug": "king-ahab",
+    "Places": "Samaria; Mount Carmel",
+    "RelatedEvents": "Elijah on Mount Carmel"
   },
   {
     "Name": "Jezebel",
@@ -621,7 +695,9 @@
     "RelatedBooks": "1 Kings; 2 Kings",
     "RelatedPeople": "King Ahab; Elijah; Elisha",
     "LifeLesson": "Jezebel was given space to repent and refused it. God's patience is real, but so is the wisdom of repenting today rather than hardening our hearts.",
-    "Slug": "jezebel"
+    "Slug": "jezebel",
+    "Places": "Samaria",
+    "RelatedEvents": "Elijah on Mount Carmel"
   },
   {
     "Name": "Elijah",
@@ -634,7 +710,9 @@
     "RelatedBooks": "1 Kings; 2 Kings; Malachi; James",
     "RelatedPeople": "Elisha; King Ahab; Jezebel",
     "LifeLesson": "Elijah was a human being just like us, yet his prayers moved heaven — and after Carmel he battled despair and met God's gentle whisper. Both your boldness and your burnout are known to God.",
-    "Slug": "elijah"
+    "Slug": "elijah",
+    "Places": "Mount Carmel; Mount Sinai",
+    "RelatedEvents": "Elijah on Mount Carmel"
   },
   {
     "Name": "Elisha",
@@ -647,7 +725,8 @@
     "RelatedBooks": "2 Kings; Luke",
     "RelatedPeople": "Elijah; The Shunammite Woman",
     "LifeLesson": "Elisha asked for a double portion and then simply got to work serving people. Ask God boldly, then spend that blessing on compassion for those around you.",
-    "Slug": "elisha"
+    "Slug": "elisha",
+    "Places": "Samaria; Jericho; Gilgal; Mount Carmel"
   },
   {
     "Name": "The Shunammite Woman",
@@ -673,7 +752,8 @@
     "RelatedBooks": "1 Kings; 2 Chronicles",
     "RelatedPeople": "King Jehoshaphat",
     "LifeLesson": "Asa's cry is a perfect prayer for the overwhelmed: Lord, help the powerless. Bring Him your impossible odds — He specialises in battles you cannot win alone.",
-    "Slug": "king-asa"
+    "Slug": "king-asa",
+    "Places": "Jerusalem"
   },
   {
     "Name": "King Jehoshaphat",
@@ -686,7 +766,8 @@
     "RelatedBooks": "2 Chronicles; 1 Kings",
     "RelatedPeople": "King Asa; Elijah",
     "LifeLesson": "'We do not know what to do, but our eyes are on You' is enough. When you run out of answers, fix your eyes on God and let worship lead the way into battle.",
-    "Slug": "king-jehoshaphat"
+    "Slug": "king-jehoshaphat",
+    "Places": "Jerusalem"
   },
   {
     "Name": "Athaliah",
@@ -699,7 +780,8 @@
     "RelatedBooks": "2 Kings; 2 Chronicles",
     "RelatedPeople": "Jezebel; King Ahab",
     "LifeLesson": "Athaliah nearly erased David's line, but a hidden baby in the temple kept God's promise alive. God's purposes can survive in a single protected life — He guards what He has promised.",
-    "Slug": "athaliah"
+    "Slug": "athaliah",
+    "Places": "Jerusalem"
   },
   {
     "Name": "King Hezekiah",
@@ -712,7 +794,9 @@
     "RelatedBooks": "2 Kings; 2 Chronicles; Isaiah",
     "RelatedPeople": "Isaiah; King Josiah",
     "LifeLesson": "Hezekiah spread his threatening letter before the Lord — do the same with your diagnosis, bill, or bad news. Lay it out before God; He still delivers those who trust Him.",
-    "Slug": "king-hezekiah"
+    "Slug": "king-hezekiah",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Hezekiah and Sennacherib's Invasion"
   },
   {
     "Name": "Isaiah",
@@ -725,7 +809,9 @@
     "RelatedBooks": "Isaiah",
     "RelatedPeople": "King Hezekiah; King Ahab; Jesus",
     "LifeLesson": "Isaiah promises that those who hope in the Lord will renew their strength and soar on wings like eagles. The hope he preached points straight to Jesus, wounded for our healing.",
-    "Slug": "isaiah"
+    "Slug": "isaiah",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Hezekiah and Sennacherib's Invasion"
   },
   {
     "Name": "Micah",
@@ -738,7 +824,8 @@
     "RelatedBooks": "Micah; Matthew",
     "RelatedPeople": "Isaiah; King Hezekiah",
     "LifeLesson": "Do justice, love mercy, walk humbly — Micah keeps faith beautifully simple. And his God delights to pardon, hurling our sins into the depths of the sea.",
-    "Slug": "micah"
+    "Slug": "micah",
+    "Places": "Jerusalem"
   },
   {
     "Name": "Amos",
@@ -751,7 +838,8 @@
     "RelatedBooks": "Amos",
     "RelatedPeople": "Hosea; Isaiah",
     "LifeLesson": "God used a farmer with no credentials to speak truth to a nation — He can use you right where you are. Let justice roll like a river, starting with your own life.",
-    "Slug": "amos"
+    "Slug": "amos",
+    "Places": "Samaria; Bethel"
   },
   {
     "Name": "Hosea",
@@ -764,7 +852,8 @@
     "RelatedBooks": "Hosea; Romans",
     "RelatedPeople": "Amos; Isaiah",
     "LifeLesson": "Hosea shows a God whose heart cries, How can I give you up? If you have wandered, His love is actively pursuing you — come home, and He will heal your waywardness.",
-    "Slug": "hosea"
+    "Slug": "hosea",
+    "Places": "Samaria"
   },
   {
     "Name": "Jonah",
@@ -777,7 +866,9 @@
     "RelatedBooks": "Jonah; Matthew",
     "RelatedPeople": "Amos; Jesus",
     "LifeLesson": "You can run from God, but you cannot outrun His mercy — for you or for the people you'd rather He skip. The God of second chances gave Jonah one, and He gives them still.",
-    "Slug": "jonah"
+    "Slug": "jonah",
+    "Places": "Nineveh",
+    "RelatedEvents": "Jonah and Nineveh; Jonah and the Great Fish"
   },
   {
     "Name": "King Josiah",
@@ -790,7 +881,8 @@
     "RelatedBooks": "2 Kings; 2 Chronicles",
     "RelatedPeople": "Jeremiah; King Hezekiah",
     "LifeLesson": "Josiah let God's Word break his heart and change his nation. Open the Book with a tender heart, whatever your age — revival can begin with one humble reader.",
-    "Slug": "king-josiah"
+    "Slug": "king-josiah",
+    "Places": "Jerusalem"
   },
   {
     "Name": "Jeremiah",
@@ -803,7 +895,9 @@
     "RelatedBooks": "Jeremiah; Lamentations",
     "RelatedPeople": "King Josiah; Ezekiel; Daniel",
     "LifeLesson": "Jeremiah's God declares, I know the plans I have for you — spoken to exiles, not the comfortable. Even in a season that feels like exile, His plans for you are good and full of hope.",
-    "Slug": "jeremiah"
+    "Slug": "jeremiah",
+    "Places": "Jerusalem; Egypt",
+    "RelatedEvents": "Fall of Jerusalem and the Exile"
   },
   {
     "Name": "Ezekiel",
@@ -816,7 +910,9 @@
     "RelatedBooks": "Ezekiel",
     "RelatedPeople": "Jeremiah; Daniel",
     "LifeLesson": "Ezekiel proves God can breathe life into what looks utterly dead — a hope, a family, a future. If He can raise an army from bones, He can revive what you have given up on.",
-    "Slug": "ezekiel"
+    "Slug": "ezekiel",
+    "Places": "Babylon; River Chebar; Jerusalem",
+    "RelatedEvents": "Fall of Jerusalem and the Exile"
   },
   {
     "Name": "Daniel",
@@ -829,7 +925,9 @@
     "RelatedBooks": "Daniel",
     "RelatedPeople": "Ezekiel; King Nebuchadnezzar",
     "LifeLesson": "Daniel thrived in a culture hostile to his faith without surrendering his convictions. You can stand firm in your Babylon too — God honours those who honour Him.",
-    "Slug": "daniel"
+    "Slug": "daniel",
+    "Places": "Babylon; Susa",
+    "RelatedEvents": "Daniel in the Lions' Den"
   },
   {
     "Name": "King Nebuchadnezzar",
@@ -842,7 +940,9 @@
     "RelatedBooks": "Daniel; Jeremiah",
     "RelatedPeople": "Daniel; Ezekiel",
     "LifeLesson": "If God could reach the proudest king on earth, He can reach anyone you are praying for. No heart is too hard and no throne too high for heaven to humble and heal.",
-    "Slug": "king-nebuchadnezzar"
+    "Slug": "king-nebuchadnezzar",
+    "Places": "Babylon; Jerusalem",
+    "RelatedEvents": "Fall of Jerusalem and the Exile; Shadrach, Meshach and Abednego in the Fiery Furnace"
   },
   {
     "Name": "Shadrach, Meshach, and Abednego",
@@ -855,7 +955,9 @@
     "RelatedBooks": "Daniel",
     "RelatedPeople": "Daniel; King Nebuchadnezzar",
     "LifeLesson": "Their words still steady us: our God is able — but even if He does not, we will not bow. Anchor your hope in who God is, not only in the outcome you want.",
-    "Slug": "shadrach-meshach-and-abednego"
+    "Slug": "shadrach-meshach-and-abednego",
+    "Places": "Babylon",
+    "RelatedEvents": "Shadrach, Meshach and Abednego in the Fiery Furnace"
   },
   {
     "Name": "Cyrus the Great",
@@ -868,7 +970,9 @@
     "RelatedBooks": "Ezra; Isaiah; 2 Chronicles",
     "RelatedPeople": "Ezra; Zerubbabel",
     "LifeLesson": "God can move the heart of a king who does not even know Him to open doors for His people. The hearts of decision-makers are in His hand — pray with hope.",
-    "Slug": "cyrus-the-great"
+    "Slug": "cyrus-the-great",
+    "Places": "Babylon; Jerusalem",
+    "RelatedEvents": "Cyrus's Decree and Return from Exile"
   },
   {
     "Name": "Zerubbabel",
@@ -881,7 +985,9 @@
     "RelatedBooks": "Ezra; Haggai; Zechariah",
     "RelatedPeople": "Ezra; Haggai; Nehemiah",
     "LifeLesson": "Do not despise the day of small beginnings. The hands that start God's work in faith, sustained by His Spirit, are the hands He promises will finish it.",
-    "Slug": "zerubbabel"
+    "Slug": "zerubbabel",
+    "Places": "Babylon; Jerusalem",
+    "RelatedEvents": "Rebuilding of the Temple; Cyrus's Decree and Return from Exile"
   },
   {
     "Name": "Haggai",
@@ -894,7 +1000,9 @@
     "RelatedBooks": "Haggai; Ezra",
     "RelatedPeople": "Zerubbabel; Zechariah the Prophet",
     "LifeLesson": "Haggai reminds us to put first things first — consider your ways and start building again. God promises His presence: I am with you, declares the Lord.",
-    "Slug": "haggai"
+    "Slug": "haggai",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Rebuilding of the Temple"
   },
   {
     "Name": "Zechariah the Prophet",
@@ -907,7 +1015,9 @@
     "RelatedBooks": "Zechariah; Ezra",
     "RelatedPeople": "Haggai; Zerubbabel",
     "LifeLesson": "Zechariah's promise still stands: Return to Me, and I will return to you. However far the drift, the distance home is one honest turn toward a waiting God.",
-    "Slug": "zechariah-the-prophet"
+    "Slug": "zechariah-the-prophet",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Rebuilding of the Temple"
   },
   {
     "Name": "Queen Esther",
@@ -920,7 +1030,9 @@
     "RelatedBooks": "Esther",
     "RelatedPeople": "Mordecai; Ezra",
     "LifeLesson": "You may be in your position for such a time as this. God works behind the scenes in ordinary placements to deliver His people at the decisive moment.",
-    "Slug": "queen-esther"
+    "Slug": "queen-esther",
+    "Places": "Susa",
+    "RelatedEvents": "Esther Saves Her People"
   },
   {
     "Name": "Mordecai",
@@ -933,7 +1045,9 @@
     "RelatedBooks": "Esther",
     "RelatedPeople": "Queen Esther",
     "LifeLesson": "Mordecai did the right thing quietly for years before honour came. Keep doing good in obscurity — God keeps the records, and His timing for recognition is perfect.",
-    "Slug": "mordecai"
+    "Slug": "mordecai",
+    "Places": "Susa",
+    "RelatedEvents": "Esther Saves Her People"
   },
   {
     "Name": "Ezra",
@@ -946,7 +1060,9 @@
     "RelatedBooks": "Ezra; Nehemiah",
     "RelatedPeople": "Nehemiah; Zerubbabel",
     "LifeLesson": "Ezra's pattern still builds strong lives: study the Word, do it, then teach it. And his day of tears ended in feasting, for the joy of the Lord is your strength.",
-    "Slug": "ezra"
+    "Slug": "ezra",
+    "Places": "Babylon; Jerusalem",
+    "RelatedEvents": "Cyrus's Decree and Return from Exile; Rebuilding of the Temple; Ezra Reads the Law"
   },
   {
     "Name": "Nehemiah",
@@ -959,7 +1075,9 @@
     "RelatedBooks": "Nehemiah; Ezra",
     "RelatedPeople": "Ezra; Zerubbabel",
     "LifeLesson": "Nehemiah began on his knees weeping over broken walls before he ever lifted a stone. Bring God your broken places — prayer, courage, and steady work rebuild what seemed ruined.",
-    "Slug": "nehemiah"
+    "Slug": "nehemiah",
+    "Places": "Susa; Jerusalem",
+    "RelatedEvents": "Nehemiah Rebuilds the Wall"
   },
   {
     "Name": "Jesus",
@@ -972,7 +1090,9 @@
     "RelatedBooks": "Matthew; Mark; Luke; John; Hebrews",
     "RelatedPeople": "Mary, Mother of Jesus; John the Baptist; Simon Peter; Paul",
     "LifeLesson": "We have this hope as an anchor for the soul, firm and secure — and that hope has a name: Jesus. Whatever storm you face, an anchor holds because He holds.",
-    "Slug": "jesus"
+    "Slug": "jesus",
+    "Places": "Bethlehem; Nazareth; Galilee; Capernaum; Jerusalem; Bethany; Golgotha; Jordan River",
+    "RelatedEvents": "The Birth of Jesus; The Baptism of Jesus; The Temptation in the Wilderness; The Sermon on the Mount; Transfiguration; Triumphal Entry; The Last Supper; Jesus Prays in Gethsemane; The Crucifixion; The Resurrection; The Ascension; Jesus Calms the Storm; Jesus Turns Water into Wine at Cana; Raising of Lazarus"
   },
   {
     "Name": "Mary, Mother of Jesus",
@@ -985,7 +1105,9 @@
     "RelatedBooks": "Luke; Matthew; John",
     "RelatedPeople": "Jesus; Joseph, Husband of Mary; Elizabeth",
     "LifeLesson": "Mary treasured and pondered God's work even when a sword pierced her own soul. Say yes to God, treasure His word, and trust Him through both wonder and pain.",
-    "Slug": "mary-mother-of-jesus"
+    "Slug": "mary-mother-of-jesus",
+    "Places": "Nazareth; Bethlehem; Egypt; Jerusalem",
+    "RelatedEvents": "The Birth of Jesus; The Crucifixion"
   },
   {
     "Name": "Joseph, Husband of Mary",
@@ -998,7 +1120,9 @@
     "RelatedBooks": "Matthew; Luke",
     "RelatedPeople": "Mary, Mother of Jesus; Jesus",
     "LifeLesson": "Joseph never speaks a recorded word in Scripture, yet his obedience protected God's greatest gift. Faithful, quiet obedience matters enormously in God's story.",
-    "Slug": "joseph-husband-of-mary"
+    "Slug": "joseph-husband-of-mary",
+    "Places": "Nazareth; Bethlehem; Egypt",
+    "RelatedEvents": "The Birth of Jesus"
   },
   {
     "Name": "Elizabeth",
@@ -1024,7 +1148,8 @@
     "RelatedBooks": "Luke",
     "RelatedPeople": "Elizabeth; John the Baptist",
     "LifeLesson": "Zechariah's season of silence ended in song. If God seems silent in your waiting, He is still working — and your voice of praise will return.",
-    "Slug": "zechariah-father-of-john-the-baptist"
+    "Slug": "zechariah-father-of-john-the-baptist",
+    "Places": "Jerusalem"
   },
   {
     "Name": "John the Baptist",
@@ -1037,7 +1162,9 @@
     "RelatedBooks": "Matthew; Mark; Luke; John",
     "RelatedPeople": "Jesus; Elizabeth; Zechariah, Father of John the Baptist",
     "LifeLesson": "John's joy was to point away from himself: He must increase, I must decrease. A life that points others to Jesus is a life well spent, whatever its size.",
-    "Slug": "john-the-baptist"
+    "Slug": "john-the-baptist",
+    "Places": "Jordan River",
+    "RelatedEvents": "The Baptism of Jesus"
   },
   {
     "Name": "Simeon",
@@ -1050,7 +1177,9 @@
     "RelatedBooks": "Luke",
     "RelatedPeople": "Jesus; Anna the Prophetess; Mary, Mother of Jesus",
     "LifeLesson": "Simeon waited a lifetime and held his promise in his arms. Keep waiting on God in His house — the promise-keeper lets His faithful see His salvation.",
-    "Slug": "simeon"
+    "Slug": "simeon",
+    "Places": "Jerusalem",
+    "RelatedEvents": "The Birth of Jesus"
   },
   {
     "Name": "Anna the Prophetess",
@@ -1063,7 +1192,9 @@
     "RelatedBooks": "Luke",
     "RelatedPeople": "Simeon; Jesus",
     "LifeLesson": "Anna turned decades of widowhood into decades of worship. Your long, faithful prayers in obscurity are seen by God — and one day you will see what you have prayed for.",
-    "Slug": "anna-the-prophetess"
+    "Slug": "anna-the-prophetess",
+    "Places": "Jerusalem",
+    "RelatedEvents": "The Birth of Jesus"
   },
   {
     "Name": "Andrew",
@@ -1076,7 +1207,9 @@
     "RelatedBooks": "Matthew; Mark; Luke; John",
     "RelatedPeople": "Simon Peter; Jesus; Philip",
     "LifeLesson": "Andrew's ministry was bringing one person at a time to Jesus. Never underestimate the eternal weight of a single introduction — your brother, neighbour, or friend could be next.",
-    "Slug": "andrew"
+    "Slug": "andrew",
+    "Places": "Galilee; Capernaum",
+    "RelatedEvents": "The Feeding of the Five Thousand"
   },
   {
     "Name": "Simon Peter",
@@ -1089,7 +1222,9 @@
     "RelatedBooks": "Matthew; Acts; 1 Peter; 2 Peter",
     "RelatedPeople": "Jesus; Andrew; John the Apostle",
     "LifeLesson": "Peter's worst failure became the doorway to his greatest ministry because Jesus pursued him. The God of all grace Himself will restore you after you have suffered a little while.",
-    "Slug": "simon-peter"
+    "Slug": "simon-peter",
+    "Places": "Galilee; Capernaum; Jerusalem; Antioch; Rome",
+    "RelatedEvents": "Transfiguration; Jesus Prays in Gethsemane; The Last Supper; The Resurrection; Pentecost; Peter and Cornelius"
   },
   {
     "Name": "James, Son of Zebedee",
@@ -1102,7 +1237,9 @@
     "RelatedBooks": "Matthew; Mark; Acts",
     "RelatedPeople": "John the Apostle; Simon Peter; Jesus",
     "LifeLesson": "James drank the cup of suffering he had once claimed so confidently. Faithfulness to Jesus may cost us dearly, but those who lose their lives for Him find them forever.",
-    "Slug": "james-son-of-zebedee"
+    "Slug": "james-son-of-zebedee",
+    "Places": "Galilee; Capernaum; Jerusalem",
+    "RelatedEvents": "Transfiguration; Jesus Prays in Gethsemane"
   },
   {
     "Name": "John the Apostle",
@@ -1115,7 +1252,9 @@
     "RelatedBooks": "John; 1 John; 2 John; 3 John; Revelation",
     "RelatedPeople": "James, Son of Zebedee; Jesus; Simon Peter",
     "LifeLesson": "John's long life shows the fruit of abiding close to Jesus' heart. Stay near Him, beloved — love is both the message and the method of a life that lasts.",
-    "Slug": "john-the-apostle"
+    "Slug": "john-the-apostle",
+    "Places": "Galilee; Capernaum; Jerusalem; Patmos; Ephesus",
+    "RelatedEvents": "Transfiguration; Jesus Prays in Gethsemane; The Last Supper; The Crucifixion; The Resurrection"
   },
   {
     "Name": "Philip",
@@ -1128,7 +1267,8 @@
     "RelatedBooks": "John; Acts",
     "RelatedPeople": "Andrew; Bartholomew; Jesus",
     "LifeLesson": "'Come and see' is an invitation anyone can offer. You do not need all the answers to bring someone to Jesus — just bring them to Him.",
-    "Slug": "philip"
+    "Slug": "philip",
+    "Places": "Galilee; Samaria"
   },
   {
     "Name": "Bartholomew",
@@ -1141,7 +1281,8 @@
     "RelatedBooks": "Matthew; Mark; Luke; John",
     "RelatedPeople": "Philip; Jesus",
     "LifeLesson": "Jesus saw Nathanael in his private place under the fig tree before anyone called him. You are seen and known by Jesus in your unseen places today.",
-    "Slug": "bartholomew"
+    "Slug": "bartholomew",
+    "Places": "Galilee"
   },
   {
     "Name": "Matthew",
@@ -1154,7 +1295,8 @@
     "RelatedBooks": "Matthew",
     "RelatedPeople": "Jesus; Simon Peter",
     "LifeLesson": "If Jesus could call a tax collector to write a Gospel, no one is too far gone or too compromised to be called. Follow Me can rewrite a life in a single step of obedience.",
-    "Slug": "matthew"
+    "Slug": "matthew",
+    "Places": "Galilee; Capernaum"
   },
   {
     "Name": "Thomas",
@@ -1167,7 +1309,9 @@
     "RelatedBooks": "John",
     "RelatedPeople": "Jesus; Simon Peter",
     "LifeLesson": "Jesus did not shame Thomas for his questions; He showed him His wounds. Bring your honest doubts to the risen Jesus — He meets questioners with evidence and grace.",
-    "Slug": "thomas"
+    "Slug": "thomas",
+    "Places": "Galilee; Jerusalem",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Name": "James, Son of Alphaeus",
@@ -1180,7 +1324,8 @@
     "RelatedBooks": "Matthew; Mark; Luke; Acts",
     "RelatedPeople": "Jesus; Thaddaeus",
     "LifeLesson": "James the Less reminds us that God honours faithful people whose names history barely records. You do not need a spotlight to have a significant place in Jesus' mission.",
-    "Slug": "james-son-of-alphaeus"
+    "Slug": "james-son-of-alphaeus",
+    "Places": "Galilee"
   },
   {
     "Name": "Thaddaeus",
@@ -1193,7 +1338,8 @@
     "RelatedBooks": "Matthew; Mark; John",
     "RelatedPeople": "Jesus; James, Son of Alphaeus",
     "LifeLesson": "Thaddaeus's single recorded question unlocked a beautiful promise: God makes His home with those who love Him. Ask your questions — Jesus answers seekers generously.",
-    "Slug": "thaddaeus"
+    "Slug": "thaddaeus",
+    "Places": "Galilee"
   },
   {
     "Name": "Simon the Zealot",
@@ -1206,7 +1352,8 @@
     "RelatedBooks": "Matthew; Mark; Luke; Acts",
     "RelatedPeople": "Jesus; Matthew",
     "LifeLesson": "Jesus put a Zealot and a tax collector on the same team and made them brothers. The gospel still reconciles people who would never choose each other.",
-    "Slug": "simon-the-zealot"
+    "Slug": "simon-the-zealot",
+    "Places": "Galilee"
   },
   {
     "Name": "Judas Iscariot",
@@ -1219,7 +1366,9 @@
     "RelatedBooks": "Matthew; Mark; Luke; John",
     "RelatedPeople": "Jesus; Simon Peter",
     "LifeLesson": "Judas walked with Jesus yet let greed and despair close his heart — while Peter, who also failed, ran back to mercy. When you fail, run to Jesus like Peter, not away like Judas.",
-    "Slug": "judas-iscariot"
+    "Slug": "judas-iscariot",
+    "Places": "Jerusalem",
+    "RelatedEvents": "The Last Supper; Jesus Prays in Gethsemane"
   },
   {
     "Name": "Mary Magdalene",
@@ -1232,7 +1381,9 @@
     "RelatedBooks": "Luke; John; Mark",
     "RelatedPeople": "Jesus; Martha; Mary of Bethany",
     "LifeLesson": "Jesus called Mary by name, and grief turned to mission in a moment. He still calls His weeping ones by name — and sends them out as witnesses.",
-    "Slug": "mary-magdalene"
+    "Slug": "mary-magdalene",
+    "Places": "Galilee; Jerusalem; Golgotha",
+    "RelatedEvents": "The Crucifixion; The Resurrection"
   },
   {
     "Name": "Martha",
@@ -1245,7 +1396,9 @@
     "RelatedBooks": "Luke; John",
     "RelatedPeople": "Mary of Bethany; Lazarus; Jesus",
     "LifeLesson": "Martha's story holds both service and faith: Jesus invites busy hearts to sit, listen, and believe. At a graveside she confessed hope — and then watched her brother walk out alive.",
-    "Slug": "martha"
+    "Slug": "martha",
+    "Places": "Bethany",
+    "RelatedEvents": "Raising of Lazarus"
   },
   {
     "Name": "Mary of Bethany",
@@ -1258,7 +1411,9 @@
     "RelatedBooks": "Luke; John; Matthew",
     "RelatedPeople": "Martha; Lazarus; Jesus",
     "LifeLesson": "What others called waste, Jesus called beautiful. Pour out your love on Jesus without calculating — devotion to Him is never wasted.",
-    "Slug": "mary-of-bethany"
+    "Slug": "mary-of-bethany",
+    "Places": "Bethany",
+    "RelatedEvents": "Raising of Lazarus"
   },
   {
     "Name": "Lazarus",
@@ -1271,7 +1426,9 @@
     "RelatedBooks": "John",
     "RelatedPeople": "Martha; Mary of Bethany; Jesus",
     "LifeLesson": "Jesus wept even knowing resurrection was minutes away — He enters our grief before He overturns it. If He called Lazarus out of four days dead, no situation of yours is beyond His voice.",
-    "Slug": "lazarus"
+    "Slug": "lazarus",
+    "Places": "Bethany",
+    "RelatedEvents": "Raising of Lazarus"
   },
   {
     "Name": "Nicodemus",
@@ -1284,7 +1441,9 @@
     "RelatedBooks": "John",
     "RelatedPeople": "Jesus; Joseph of Arimathea",
     "LifeLesson": "Nicodemus moved from night-time questions to public devotion at the cross. It is never too late to step out of the shadows and stand openly with Jesus.",
-    "Slug": "nicodemus"
+    "Slug": "nicodemus",
+    "Places": "Jerusalem",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Name": "The Samaritan Woman",
@@ -1297,7 +1456,8 @@
     "RelatedBooks": "John",
     "RelatedPeople": "Jesus; Jacob",
     "LifeLesson": "Jesus crossed every barrier to offer one thirsty woman living water, and she became a town's witness. He will meet you at your well today — and your story will bring others to Him.",
-    "Slug": "the-samaritan-woman"
+    "Slug": "the-samaritan-woman",
+    "Places": "Shechem"
   },
   {
     "Name": "Zacchaeus",
@@ -1310,7 +1470,8 @@
     "RelatedBooks": "Luke",
     "RelatedPeople": "Jesus",
     "LifeLesson": "Jesus said salvation had come to Zacchaeus's house because the Son of Man came to seek and save the lost. If you feel small, hidden, or far off, Jesus is calling you by name to come down and come home.",
-    "Slug": "zacchaeus"
+    "Slug": "zacchaeus",
+    "Places": "Jericho"
   },
   {
     "Name": "Joseph of Arimathea",
@@ -1323,7 +1484,9 @@
     "RelatedBooks": "Matthew; Mark; Luke; John",
     "RelatedPeople": "Jesus; Nicodemus",
     "LifeLesson": "Joseph's courage came at the darkest hour, when following Jesus looked finished. God honours quiet disciples who step forward when it costs the most.",
-    "Slug": "joseph-of-arimathea"
+    "Slug": "joseph-of-arimathea",
+    "Places": "Jerusalem; Golgotha",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Name": "Matthias",
@@ -1336,7 +1499,8 @@
     "RelatedBooks": "Acts",
     "RelatedPeople": "Simon Peter; Judas Iscariot; Jesus",
     "LifeLesson": "Matthias was faithful for years in the background before being chosen. Keep following Jesus faithfully where you are — God sees the whole journey, not just the moment of recognition.",
-    "Slug": "matthias"
+    "Slug": "matthias",
+    "Places": "Jerusalem"
   },
   {
     "Name": "Stephen",
@@ -1349,7 +1513,9 @@
     "RelatedBooks": "Acts",
     "RelatedPeople": "Paul; Simon Peter",
     "LifeLesson": "Stephen's dying prayer echoed Jesus' own and helped prepare the heart of a watching Pharisee named Saul. Your faithful witness, even in suffering, may change someone you will meet in heaven.",
-    "Slug": "stephen"
+    "Slug": "stephen",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Martyrdom of Stephen"
   },
   {
     "Name": "Paul",
@@ -1362,7 +1528,9 @@
     "RelatedBooks": "Acts; Romans; Galatians; Philippians",
     "RelatedPeople": "Barnabas; Timothy; Stephen; Jesus",
     "LifeLesson": "If God could turn the church's fiercest enemy into its greatest missionary, no one you love is beyond His reach — and neither is your own past. Grace really is amazing.",
-    "Slug": "paul"
+    "Slug": "paul",
+    "Places": "Jerusalem; Antioch; Ephesus; Corinth; Philippi; Thessalonica; Rome",
+    "RelatedEvents": "The Conversion of Paul; Paul's Missionary Journeys; Jerusalem Council; Paul in Rome; Paul Shipwrecked on Malta; Martyrdom of Stephen"
   },
   {
     "Name": "Barnabas",
@@ -1375,7 +1543,9 @@
     "RelatedBooks": "Acts",
     "RelatedPeople": "Paul; Timothy",
     "LifeLesson": "Barnabas used his credibility to open doors for people others distrusted. Be an encourager who vouches for the redeemed — someone may flourish because you believed God's grace in them.",
-    "Slug": "barnabas"
+    "Slug": "barnabas",
+    "Places": "Antioch",
+    "RelatedEvents": "Paul's Missionary Journeys; Jerusalem Council"
   },
   {
     "Name": "Timothy",
@@ -1388,7 +1558,9 @@
     "RelatedBooks": "Acts; 1 Timothy; 2 Timothy",
     "RelatedPeople": "Paul; Barnabas",
     "LifeLesson": "Timothy's sincere faith was planted at a grandmother's and mother's knees. The Scripture and prayers you invest in the young may shepherd churches you will never see.",
-    "Slug": "timothy"
+    "Slug": "timothy",
+    "Places": "Ephesus",
+    "RelatedEvents": "Paul's Missionary Journeys"
   },
   {
     "Name": "Priscilla",
@@ -1401,7 +1573,9 @@
     "RelatedBooks": "Acts; Romans; 1 Corinthians",
     "RelatedPeople": "Aquila; Paul",
     "LifeLesson": "Priscilla's living room became a classroom and a church. God uses open homes and well-taught hearts to shape the next generation of leaders — yours included.",
-    "Slug": "priscilla"
+    "Slug": "priscilla",
+    "Places": "Corinth; Ephesus; Rome",
+    "RelatedEvents": "Paul's Missionary Journeys"
   },
   {
     "Name": "Aquila",
@@ -1414,7 +1588,9 @@
     "RelatedBooks": "Acts; Romans; 1 Corinthians",
     "RelatedPeople": "Priscilla; Paul",
     "LifeLesson": "Aquila shows that ordinary work and an open home can carry an extraordinary ministry. Your trade and your table are sacred ground when offered to God.",
-    "Slug": "aquila"
+    "Slug": "aquila",
+    "Places": "Corinth; Ephesus; Rome",
+    "RelatedEvents": "Paul's Missionary Journeys"
   },
   {
     "Name": "Lydia",
@@ -1427,7 +1603,9 @@
     "RelatedBooks": "Acts; Philippians",
     "RelatedPeople": "Paul; Timothy",
     "LifeLesson": "God opened Lydia's heart by a riverside, and she opened her home to a continent's first church. An opened heart and an opened home can change a city's spiritual future.",
-    "Slug": "lydia"
+    "Slug": "lydia",
+    "Places": "Philippi",
+    "RelatedEvents": "Paul's Missionary Journeys"
   },
   {
     "Name": "Phoebe",
@@ -1440,7 +1618,8 @@
     "RelatedBooks": "Romans",
     "RelatedPeople": "Paul; Priscilla",
     "LifeLesson": "Phoebe carried the greatest letter ever written in her hands, entrusted because she had served so faithfully. Faithful service in small things qualifies us for sacred trusts.",
-    "Slug": "phoebe"
+    "Slug": "phoebe",
+    "Places": "Rome"
   },
   {
     "Name": "Cain",
@@ -1453,7 +1632,8 @@
     "RelatedBooks": "Genesis; 1 John",
     "RelatedPeople": "Adam; Eve; Abel; Seth",
     "LifeLesson": "Cain's story is a warning to deal with anger before it deals with us. God still speaks before we fall — and even after failure, He sets limits on vengeance and leaves room to turn.",
-    "Slug": "cain"
+    "Slug": "cain",
+    "RelatedEvents": "Cain Murders Abel"
   },
   {
     "Name": "Seth",
@@ -1479,7 +1659,9 @@
     "RelatedBooks": "Genesis; Luke",
     "RelatedPeople": "Noah; Ham; Japheth; Abraham",
     "LifeLesson": "Shem honoured his father when it cost him dignity to do so. Quiet, honouring choices in private moments are often the ones God weaves into His largest promises.",
-    "Slug": "shem"
+    "Slug": "shem",
+    "Places": "Mount Ararat",
+    "RelatedEvents": "Noah and the Flood"
   },
   {
     "Name": "Ham",
@@ -1492,7 +1674,9 @@
     "RelatedBooks": "Genesis",
     "RelatedPeople": "Noah; Shem; Japheth",
     "LifeLesson": "Ham's failure shows how a careless moment can echo through a family. Honour protects dignity — our own and others' — even when someone we love has fallen short.",
-    "Slug": "ham"
+    "Slug": "ham",
+    "Places": "Mount Ararat",
+    "RelatedEvents": "Noah and the Flood"
   },
   {
     "Name": "Japheth",
@@ -1505,7 +1689,9 @@
     "RelatedBooks": "Genesis",
     "RelatedPeople": "Noah; Shem; Ham",
     "LifeLesson": "Japheth's blessing points to a God whose family keeps widening. The story that began with one family was always heading toward every nation — and it still is.",
-    "Slug": "japheth"
+    "Slug": "japheth",
+    "Places": "Mount Ararat",
+    "RelatedEvents": "Noah and the Flood"
   },
   {
     "Name": "Methuselah",
@@ -1570,7 +1756,8 @@
     "RelatedBooks": "Judges; Hebrews",
     "RelatedPeople": "Deborah; Jael",
     "LifeLesson": "Barak made it into Hebrews' hall of faith not because he was fearless, but because he went anyway. God honours obedient steps taken with trembling knees — courage grows on the road.",
-    "Slug": "barak"
+    "Slug": "barak",
+    "RelatedEvents": "Deborah and Barak Defeat Sisera"
   },
   {
     "Name": "Jael",
@@ -1583,7 +1770,8 @@
     "RelatedBooks": "Judges",
     "RelatedPeople": "Deborah; Barak",
     "LifeLesson": "Jael's courage came in an ordinary tent, with ordinary tools, in a moment she did not plan. God can use whoever is willing, right where they are, to break a long oppression.",
-    "Slug": "jael"
+    "Slug": "jael",
+    "RelatedEvents": "Deborah and Barak Defeat Sisera"
   },
   {
     "Name": "Delilah",
@@ -1596,7 +1784,8 @@
     "RelatedBooks": "Judges; Hebrews",
     "RelatedPeople": "Samson",
     "LifeLesson": "Delilah is a sober warning about love that is bought and trust given away piece by piece. Guard what God has set apart in you — and notice when affection keeps asking you to surrender it.",
-    "Slug": "delilah"
+    "Slug": "delilah",
+    "RelatedEvents": "Samson and Delilah"
   },
   {
     "Name": "Elimelech",
@@ -1609,7 +1798,9 @@
     "RelatedBooks": "Ruth",
     "RelatedPeople": "Naomi; Ruth; Boaz",
     "LifeLesson": "Elimelech's story begins with a desperate move for survival and ends in grief — yet God was already preparing Ruth and Boaz. Even our most fearful decisions cannot outrun God's redemption.",
-    "Slug": "elimelech"
+    "Slug": "elimelech",
+    "Places": "Bethlehem",
+    "RelatedEvents": "Ruth's Loyalty"
   },
   {
     "Name": "Elkanah",
@@ -1622,7 +1813,8 @@
     "RelatedBooks": "1 Samuel",
     "RelatedPeople": "Hannah; Samuel; Eli",
     "LifeLesson": "Elkanah could not fix Hannah's sorrow, but he stayed, loved her, and worshipped alongside her. Sometimes the most faithful thing we can do is keep showing up and keep pointing to God.",
-    "Slug": "elkanah"
+    "Slug": "elkanah",
+    "Places": "Shiloh; Ramah"
   },
   {
     "Name": "Nabal",
@@ -1648,6 +1840,8 @@
     "RelatedBooks": "Genesis; Deuteronomy",
     "RelatedPeople": "Jacob; Rachel; Joseph, Son of Jacob; Judah",
     "LifeLesson": "Benjamin was the child of both sorrow and belovedness — his mother died naming him pain, his father renamed him son of my right hand. God can rename what grief first called us.",
-    "Slug": "benjamin"
+    "Slug": "benjamin",
+    "Places": "Bethlehem; Canaan; Egypt",
+    "RelatedEvents": "Joseph and His Brothers"
   }
 ]

@@ -5,5 +5,6 @@
   "RelatedBooks": "Genesis; Psalms; John; Romans; Revelation",
   "RelatedPeople": "Abraham; David; Jesus; Paul; John",
   "RelatedEvents": "Binding of Isaac; Building of Solomon's Temple; Pentecost",
-  "Slug": "worship"
+  "Slug": "worship",
+  "Places": "Jerusalem"
 }

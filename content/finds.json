@@ -25,7 +25,8 @@
     "ScriptureIlluminated": "2 Samuel 7; 1 Kings 15:16-22; 2 Kings 8:28-29",
     "RelatedPeople": "King David; Hazael; Jehu; Ahaziah",
     "RelatedBooks": "2 Samuel; 1 Kings; 2 Kings",
-    "Slug": "tel-dan-stele"
+    "Slug": "tel-dan-stele",
+    "RelatedEvents": "David Becomes King"
   },
   {
     "FindName": "Mesha Stele (Moabite Stone)",
@@ -39,7 +40,9 @@
     "ScriptureIlluminated": "2 Kings 3; Numbers 21:26-30; Isaiah 15-16",
     "RelatedPeople": "Mesha; Omri; Ahab; Jehoram",
     "RelatedBooks": "2 Kings; Numbers; Isaiah",
-    "Slug": "mesha-stele"
+    "Slug": "mesha-stele",
+    "Places": "Plains of Moab",
+    "RelatedEvents": "The Kingdom Divides"
   },
   {
     "FindName": "Merneptah Stele",
@@ -53,7 +56,9 @@
     "ScriptureIlluminated": "Joshua 11; Judges 1; Exodus 12:40-41",
     "RelatedPeople": "Joshua; Pharaoh Merneptah",
     "RelatedBooks": "Joshua; Judges; Exodus",
-    "Slug": "merneptah-stele"
+    "Slug": "merneptah-stele",
+    "Places": "Egypt",
+    "RelatedEvents": "Crossing the Jordan; Fall of Jericho"
   },
   {
     "FindName": "Cyrus Cylinder",
@@ -67,7 +72,9 @@
     "ScriptureIlluminated": "Ezra 1:1-4; 2 Chronicles 36:22-23; Isaiah 44:28; Isaiah 45:1",
     "RelatedPeople": "Cyrus the Great; Zerubbabel; Ezra",
     "RelatedBooks": "Ezra; 2 Chronicles; Isaiah",
-    "Slug": "cyrus-cylinder"
+    "Slug": "cyrus-cylinder",
+    "Places": "Babylon",
+    "RelatedEvents": "Cyrus's Decree and Return from Exile"
   },
   {
     "FindName": "Ketef Hinnom Silver Scrolls",
@@ -81,7 +88,9 @@
     "ScriptureIlluminated": "Numbers 6:24-26; Psalm 121:7-8",
     "RelatedPeople": "Aaron; Moses",
     "RelatedBooks": "Numbers; Psalms",
-    "Slug": "ketef-hinnom-silver-scrolls"
+    "Slug": "ketef-hinnom-silver-scrolls",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Giving of the Law at Sinai"
   },
   {
     "FindName": "Hezekiah's Tunnel and Siloam Inscription",
@@ -95,7 +104,9 @@
     "ScriptureIlluminated": "2 Kings 20:20; 2 Chronicles 32:2-4; 2 Chronicles 32:30; John 9:7",
     "RelatedPeople": "Hezekiah; Isaiah",
     "RelatedBooks": "2 Kings; 2 Chronicles; John",
-    "Slug": "hezekiahs-tunnel-and-siloam-inscription"
+    "Slug": "hezekiahs-tunnel-and-siloam-inscription",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Hezekiah and Sennacherib's Invasion"
   },
   {
     "FindName": "Sennacherib Prism (Taylor Prism)",
@@ -109,7 +120,9 @@
     "ScriptureIlluminated": "2 Kings 18-19; Isaiah 36-37; 2 Chronicles 32",
     "RelatedPeople": "Sennacherib; Hezekiah; Isaiah",
     "RelatedBooks": "2 Kings; Isaiah; 2 Chronicles",
-    "Slug": "sennacherib-prism"
+    "Slug": "sennacherib-prism",
+    "Places": "Nineveh; Jerusalem",
+    "RelatedEvents": "Hezekiah and Sennacherib's Invasion"
   },
   {
     "FindName": "Lachish Reliefs",
@@ -123,7 +136,9 @@
     "ScriptureIlluminated": "2 Kings 18:13-17; 2 Chronicles 32:9; Micah 1:13",
     "RelatedPeople": "Sennacherib; Hezekiah; Micah",
     "RelatedBooks": "2 Kings; 2 Chronicles; Micah",
-    "Slug": "lachish-reliefs"
+    "Slug": "lachish-reliefs",
+    "Places": "Nineveh",
+    "RelatedEvents": "Hezekiah and Sennacherib's Invasion"
   },
   {
     "FindName": "Lachish Letters",
@@ -137,7 +152,9 @@
     "ScriptureIlluminated": "Jeremiah 34:7; Jeremiah 38:4",
     "RelatedPeople": "Jeremiah; Nebuchadnezzar; Zedekiah",
     "RelatedBooks": "Jeremiah; 2 Kings",
-    "Slug": "lachish-letters"
+    "Slug": "lachish-letters",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Fall of Jerusalem and the Exile"
   },
   {
     "FindName": "Black Obelisk of Shalmaneser III",
@@ -151,7 +168,9 @@
     "ScriptureIlluminated": "2 Kings 9-10; 2 Kings 8:18",
     "RelatedPeople": "Jehu; Shalmaneser III; Ahab",
     "RelatedBooks": "2 Kings",
-    "Slug": "black-obelisk-of-shalmaneser-iii"
+    "Slug": "black-obelisk-of-shalmaneser-iii",
+    "Places": "Samaria",
+    "RelatedEvents": "The Kingdom Divides"
   },
   {
     "FindName": "Babylonian Chronicle (Nebuchadnezzar's Chronicle)",
@@ -165,7 +184,9 @@
     "ScriptureIlluminated": "2 Kings 24:10-17; 2 Kings 25; Jeremiah 52",
     "RelatedPeople": "Nebuchadnezzar; Jehoiachin; Zedekiah; Jeremiah",
     "RelatedBooks": "2 Kings; Jeremiah; 2 Chronicles",
-    "Slug": "babylonian-chronicle-nebuchadnezzar"
+    "Slug": "babylonian-chronicle-nebuchadnezzar",
+    "Places": "Babylon; Jerusalem",
+    "RelatedEvents": "Fall of Jerusalem and the Exile"
   },
   {
     "FindName": "Pilate Stone",
@@ -179,7 +200,9 @@
     "ScriptureIlluminated": "Matthew 27:2; Luke 3:1; John 19:13-16; Acts 4:27",
     "RelatedPeople": "Pontius Pilate; Jesus",
     "RelatedBooks": "Matthew; Luke; John; Acts",
-    "Slug": "pilate-stone"
+    "Slug": "pilate-stone",
+    "Places": "Jerusalem",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "FindName": "Gallio Inscription",
@@ -193,7 +216,9 @@
     "ScriptureIlluminated": "Acts 18:12-17",
     "RelatedPeople": "Paul; Gallio; Aquila; Priscilla",
     "RelatedBooks": "Acts; 1 Corinthians; 2 Corinthians",
-    "Slug": "gallio-inscription"
+    "Slug": "gallio-inscription",
+    "Places": "Corinth",
+    "RelatedEvents": "Paul's Missionary Journeys"
   },
   {
     "FindName": "Erastus Inscription",
@@ -207,7 +232,9 @@
     "ScriptureIlluminated": "Romans 16:23; Acts 19:22; 2 Timothy 4:20",
     "RelatedPeople": "Paul; Erastus; Timothy",
     "RelatedBooks": "Romans; Acts; 2 Timothy",
-    "Slug": "erastus-inscription"
+    "Slug": "erastus-inscription",
+    "Places": "Corinth",
+    "RelatedEvents": "Paul's Missionary Journeys"
   },
   {
     "FindName": "Caiaphas Ossuary",
@@ -221,7 +248,9 @@
     "ScriptureIlluminated": "Matthew 26:57-68; John 11:49-53; John 18:13-14",
     "RelatedPeople": "Caiaphas; Jesus; Joseph of Arimathea",
     "RelatedBooks": "Matthew; John; Luke",
-    "Slug": "caiaphas-ossuary"
+    "Slug": "caiaphas-ossuary",
+    "Places": "Jerusalem",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "FindName": "Crucified Man of Giv'at ha-Mivtar (Yehohanan)",
@@ -235,7 +264,9 @@
     "ScriptureIlluminated": "John 19:31-42; John 20:25; Matthew 27:57-60",
     "RelatedPeople": "Jesus; Yehohanan; Joseph of Arimathea",
     "RelatedBooks": "John; Matthew; Mark; Luke",
-    "Slug": "crucified-man-of-givat-ha-mivtar-yehohanan"
+    "Slug": "crucified-man-of-givat-ha-mivtar-yehohanan",
+    "Places": "Jerusalem",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "FindName": "Hezekiah's Royal Seal (Bulla)",
@@ -249,7 +280,9 @@
     "ScriptureIlluminated": "2 Kings 18:1-7; Isaiah 37:14-20; 2 Chronicles 32:17-19",
     "RelatedPeople": "Hezekiah; Ahaz; Isaiah",
     "RelatedBooks": "2 Kings; Isaiah; 2 Chronicles",
-    "Slug": "hezekiahs-royal-seal-bulla"
+    "Slug": "hezekiahs-royal-seal-bulla",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Hezekiah and Sennacherib's Invasion"
   },
   {
     "FindName": "Seal of Isaiah",
@@ -263,7 +296,9 @@
     "ScriptureIlluminated": "Isaiah 1:1; Isaiah 37:1-7; 2 Kings 19:1-7",
     "RelatedPeople": "Isaiah; Hezekiah",
     "RelatedBooks": "Isaiah; 2 Kings; 2 Chronicles",
-    "Slug": "seal-of-isaiah"
+    "Slug": "seal-of-isaiah",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Hezekiah and Sennacherib's Invasion"
   },
   {
     "FindName": "Uzziah Tablet",
@@ -277,7 +312,8 @@
     "ScriptureIlluminated": "2 Kings 15:1-7; 2 Chronicles 26:16-23; Isaiah 6:1",
     "RelatedPeople": "Uzziah (Azariah); Isaiah; Jotham",
     "RelatedBooks": "2 Kings; 2 Chronicles; Isaiah",
-    "Slug": "uzziah-tablet"
+    "Slug": "uzziah-tablet",
+    "Places": "Jerusalem"
   },
   {
     "FindName": "Ekron Temple Inscription",
@@ -291,7 +327,8 @@
     "ScriptureIlluminated": "1 Samuel 5:8; 1 Samuel 21:10; Jeremiah 25:20; Zephaniah 2:4",
     "RelatedPeople": "Achish; Goliath; Samuel",
     "RelatedBooks": "1 Samuel; Jeremiah; Zephaniah",
-    "Slug": "ekron-temple-inscription"
+    "Slug": "ekron-temple-inscription",
+    "RelatedEvents": "David and Goliath"
   },
   {
     "FindName": "Temple Warning Inscription",
@@ -305,7 +342,9 @@
     "ScriptureIlluminated": "Acts 21:27-31; Ephesians 2:14",
     "RelatedPeople": "Paul; Jesus; Trophimus",
     "RelatedBooks": "Acts; Ephesians",
-    "Slug": "temple-warning-inscription"
+    "Slug": "temple-warning-inscription",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Rebuilding of the Temple"
   },
   {
     "FindName": "Trumpeting Place Inscription",
@@ -319,7 +358,9 @@
     "ScriptureIlluminated": "Leviticus 23:3; Acts 3:1; Luke 24:53",
     "RelatedPeople": "Jesus; Peter; John",
     "RelatedBooks": "Acts; Luke; Leviticus",
-    "Slug": "trumpeting-place-inscription"
+    "Slug": "trumpeting-place-inscription",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Rebuilding of the Temple"
   },
   {
     "FindName": "Theodotus Synagogue Inscription",
@@ -333,7 +374,9 @@
     "ScriptureIlluminated": "Acts 6:9; Luke 4:16-20; Acts 15:21",
     "RelatedPeople": "Jesus; Paul; Stephen",
     "RelatedBooks": "Acts; Luke",
-    "Slug": "theodotus-synagogue-inscription"
+    "Slug": "theodotus-synagogue-inscription",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Martyrdom of Stephen"
   },
   {
     "FindName": "Pool of Siloam",
@@ -347,7 +390,8 @@
     "ScriptureIlluminated": "John 9:1-11; Isaiah 8:6; Nehemiah 3:15",
     "RelatedPeople": "Jesus; Hezekiah",
     "RelatedBooks": "John; Isaiah; Nehemiah",
-    "Slug": "pool-of-siloam"
+    "Slug": "pool-of-siloam",
+    "Places": "Jerusalem"
   },
   {
     "FindName": "Pool of Bethesda",
@@ -361,7 +405,8 @@
     "ScriptureIlluminated": "John 5:1-15",
     "RelatedPeople": "Jesus",
     "RelatedBooks": "John",
-    "Slug": "pool-of-bethesda"
+    "Slug": "pool-of-bethesda",
+    "Places": "Jerusalem"
   },
   {
     "FindName": "Capernaum - Peter's House and Synagogue",
@@ -375,7 +420,9 @@
     "ScriptureIlluminated": "Matthew 4:13; Mark 1:21-34; Luke 7:1-10; John 6:59",
     "RelatedPeople": "Jesus; Peter; Andrew; James; John",
     "RelatedBooks": "Matthew; Mark; Luke; John",
-    "Slug": "capernaum-peters-house-and-synagogue"
+    "Slug": "capernaum-peters-house-and-synagogue",
+    "Places": "Capernaum",
+    "RelatedEvents": "Jesus Calms the Storm"
   },
   {
     "FindName": "Megiddo Gates",
@@ -403,7 +450,8 @@
     "ScriptureIlluminated": "Joshua 11:10-13; Judges 4:2; 1 Kings 9:15",
     "RelatedPeople": "Joshua; Deborah; Barak; Solomon; Jabin",
     "RelatedBooks": "Joshua; Judges; 1 Kings",
-    "Slug": "hazor"
+    "Slug": "hazor",
+    "RelatedEvents": "Crossing the Jordan"
   },
   {
     "FindName": "Gezer Calendar",
@@ -431,7 +479,9 @@
     "ScriptureIlluminated": "Joshua 10:3; Joshua 12; Judges 1:19-21",
     "RelatedPeople": "Joshua; Pharaoh Akhenaten",
     "RelatedBooks": "Joshua; Judges",
-    "Slug": "amarna-letters"
+    "Slug": "amarna-letters",
+    "Places": "Canaan; Jerusalem; Shechem",
+    "RelatedEvents": "Crossing the Jordan; Fall of Jericho"
   },
   {
     "FindName": "Code of Hammurabi",
@@ -445,7 +495,9 @@
     "ScriptureIlluminated": "Exodus 21:23-25; Deuteronomy 19:21; Leviticus 24:19-20",
     "RelatedPeople": "Hammurabi; Moses",
     "RelatedBooks": "Exodus; Leviticus; Deuteronomy",
-    "Slug": "code-of-hammurabi"
+    "Slug": "code-of-hammurabi",
+    "Places": "Babylon",
+    "RelatedEvents": "Giving of the Law at Sinai; The Ten Commandments"
   },
   {
     "FindName": "Nabonidus Cylinder",
@@ -459,7 +511,8 @@
     "ScriptureIlluminated": "Daniel 5:1-30; Daniel 7:1; Daniel 8:1",
     "RelatedPeople": "Belshazzar; Nabonidus; Daniel; Nebuchadnezzar",
     "RelatedBooks": "Daniel",
-    "Slug": "nabonidus-cylinder"
+    "Slug": "nabonidus-cylinder",
+    "Places": "Babylon; Ur"
   },
   {
     "FindName": "Balaam Inscription (Deir Alla Inscription)",
@@ -473,7 +526,8 @@
     "ScriptureIlluminated": "Numbers 22:5-6; Numbers 24:15-17; Deuteronomy 23:4-5",
     "RelatedPeople": "Balaam; Balak; Moses",
     "RelatedBooks": "Numbers; Deuteronomy; Joshua",
-    "Slug": "balaam-inscription-deir-alla"
+    "Slug": "balaam-inscription-deir-alla",
+    "Places": "Plains of Moab"
   },
   {
     "FindName": "Kurkh Monolith of Shalmaneser III",
@@ -487,7 +541,9 @@
     "ScriptureIlluminated": "1 Kings 16:29; 1 Kings 20; 1 Kings 22:1",
     "RelatedPeople": "Ahab; Shalmaneser III; Ben-Hadad",
     "RelatedBooks": "1 Kings; 2 Chronicles",
-    "Slug": "kurkh-monolith-of-shalmaneser-iii"
+    "Slug": "kurkh-monolith-of-shalmaneser-iii",
+    "Places": "Samaria",
+    "RelatedEvents": "The Kingdom Divides"
   },
   {
     "FindName": "Rylands Library Papyrus P52",
@@ -501,7 +557,9 @@
     "ScriptureIlluminated": "John 18:31-38",
     "RelatedPeople": "John; Jesus; Pontius Pilate",
     "RelatedBooks": "John",
-    "Slug": "rylands-library-papyrus-p52"
+    "Slug": "rylands-library-papyrus-p52",
+    "Places": "Egypt",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "FindName": "James Ossuary",
@@ -515,7 +573,8 @@
     "ScriptureIlluminated": "Matthew 13:55; Galatians 1:19; James 1:1; 1 Corinthians 15:7",
     "RelatedPeople": "James; Jesus; Joseph",
     "RelatedBooks": "Matthew; Galatians; James; Acts",
-    "Slug": "james-ossuary"
+    "Slug": "james-ossuary",
+    "Places": "Jerusalem"
   },
   {
     "FindName": "Ebla Tablets",
@@ -529,6 +588,7 @@
     "ScriptureIlluminated": "Genesis 11:27-32; Genesis 14:1-3; Genesis 23",
     "RelatedPeople": "Abraham; Sarah",
     "RelatedBooks": "Genesis",
-    "Slug": "ebla-tablets"
+    "Slug": "ebla-tablets",
+    "RelatedEvents": "Call of Abraham"
   }
 ]

@@ -17,7 +17,9 @@
     "Interpretations": "Christians agree on the Chalcedonian confession, while differing in the language they use to describe how Christ's divine and human natures relate, a discussion continued in Miaphysite and Reformed traditions.",
     "RelatedTopics": "Jesus Christ; Virgin Birth; Hypostatic Union; Salvation",
     "RelatedPeople": "Athanasius; Cyril of Alexandria; Leo the Great; Augustine",
-    "Slug": "incarnation"
+    "Slug": "incarnation",
+    "Places": "Bethlehem; Nazareth",
+    "RelatedEvents": "Birth of Jesus"
   },
   {
     "Doctrine": "Atonement",
@@ -27,7 +29,9 @@
     "Interpretations": "Christians explain the cross in complementary ways, including penal substitution, Christus Victor, satisfaction, moral influence, and governmental views, differing on which image should be primary.",
     "RelatedTopics": "Salvation; Cross; Sacrifice; Reconciliation; Redemption",
     "RelatedPeople": "Irenaeus; Anselm; Aquinas; Calvin; Luther",
-    "Slug": "atonement"
+    "Slug": "atonement",
+    "Places": "Golgotha",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Doctrine": "Justification",
@@ -37,7 +41,8 @@
     "Interpretations": "Protestants generally teach justification by faith alone as a declaration, while Roman Catholics and Eastern Orthodox understand it as also including inner renewal, though all agree it rests on God's grace in Christ.",
     "RelatedTopics": "Salvation; Faith; Grace; Righteousness; Sanctification",
     "RelatedPeople": "Augustine; Luther; Calvin; Council of Trent",
-    "Slug": "justification"
+    "Slug": "justification",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Doctrine": "Sanctification",
@@ -57,7 +62,9 @@
     "Interpretations": "Christians differ on how Adam's guilt and corruption are passed on, with Eastern Orthodoxy speaking more of ancestral sin and mortality, and Pelagian and some Arminian views placing greater stress on personal choice.",
     "RelatedTopics": "Sin; The Fall; Adam and Eve; Salvation; Pelagianism",
     "RelatedPeople": "Augustine; Pelagius; Aquinas; Calvin",
-    "Slug": "original-sin"
+    "Slug": "original-sin",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "The Fall"
   },
   {
     "Doctrine": "Total Depravity",
@@ -67,7 +74,9 @@
     "Interpretations": "Reformed Christians stress total inability apart from effectual grace, while Arminian and Wesleyan Christians teach depravity is real but can be responded to through prevenient grace given to all.",
     "RelatedTopics": "Sin; Original Sin; Grace; Free Will; Salvation",
     "RelatedPeople": "Augustine; Calvin; Dort Synod; John Wesley",
-    "Slug": "total-depravity"
+    "Slug": "total-depravity",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "The Fall"
   },
   {
     "Doctrine": "Election",
@@ -97,7 +106,9 @@
     "Interpretations": "Historic Christians agree on Christ's bodily resurrection and a future bodily resurrection, while differing on details of timing, the millennium, and the nature of the intermediate state.",
     "RelatedTopics": "Jesus Christ; Eternal Life; Heaven; Hope; Second Coming",
     "RelatedPeople": "Irenaeus; Tertullian; Augustine; Aquinas",
-    "Slug": "resurrection"
+    "Slug": "resurrection",
+    "Places": "Jerusalem",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Doctrine": "Second Coming",
@@ -117,7 +128,9 @@
     "Interpretations": "Christians differ on subjects and mode: Baptist and many evangelical churches baptize professing believers by immersion, while Presbyterian, Methodist, Lutheran, Catholic, and Orthodox churches also baptize infants, by pouring, sprinkling, or immersion.",
     "RelatedTopics": "The Church; Sacraments and Ordinances; Covenant; Christian Life",
     "RelatedPeople": "Zwingli; Luther; Calvin; Menno Simons",
-    "Slug": "baptism"
+    "Slug": "baptism",
+    "Places": "Jordan River",
+    "RelatedEvents": "Baptism of Jesus"
   },
   {
     "Doctrine": "Lord's Supper",
@@ -127,7 +140,9 @@
     "Interpretations": "Christians differ on Christ's presence in the elements: Roman Catholics teach transubstantiation, Lutherans teach sacramental union, Reformed Christians teach a spiritual presence, and many Baptists and evangelicals teach a memorial view.",
     "RelatedTopics": "Worship; The Church; Sacraments and Ordinances; Atonement",
     "RelatedPeople": "Justin Martyr; Aquinas; Luther; Zwingli; Calvin",
-    "Slug": "lords-supper"
+    "Slug": "lords-supper",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Last Supper"
   },
   {
     "Doctrine": "Inspiration of Scripture",
@@ -157,7 +172,9 @@
     "Interpretations": "Christians differ on church government — episcopal, presbyterian, or congregational — and on the relationship between the universal church and local churches and denominations.",
     "RelatedTopics": "Worship; Baptism; Lord's Supper; Mission; Priesthood of Believers",
     "RelatedPeople": "Ignatius of Antioch; Cyprian; Augustine; Calvin",
-    "Slug": "the-church"
+    "Slug": "the-church",
+    "Places": "Jerusalem; Antioch",
+    "RelatedEvents": "Pentecost; Jerusalem Council"
   },
   {
     "Doctrine": "Angels",
@@ -207,7 +224,9 @@
     "Interpretations": "Christians agree God created all things, while differing on the age of the earth, the interpretation of the days of Genesis 1, and the relationship between biblical teaching and scientific accounts of origins.",
     "RelatedTopics": "God; Providence; Humanity; Nature and Creation; Genesis",
     "RelatedPeople": "Irenaeus; Augustine; Aquinas; Calvin",
-    "Slug": "creation"
+    "Slug": "creation",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "Creation"
   },
   {
     "Doctrine": "Providence",
@@ -217,7 +236,9 @@
     "Interpretations": "Christians agree God sovereignly cares for creation, while differing on how divine sovereignty and human responsibility relate, and on whether providence should be explained in more Calvinistic, Arminian, or open-theist terms.",
     "RelatedTopics": "God; Sovereignty; Prayer; Suffering; Free Will",
     "RelatedPeople": "Augustine; Aquinas; Calvin; John Wesley",
-    "Slug": "providence"
+    "Slug": "providence",
+    "Places": "Egypt",
+    "RelatedEvents": "Joseph Sold into Egypt"
   },
   {
     "Doctrine": "Virgin Birth",
@@ -227,7 +248,9 @@
     "Interpretations": "Historic Christian traditions — Catholic, Orthodox, and Protestant — affirm the Virgin Birth, while Christians discuss the precise prophetic use of Isaiah 7:14 and the doctrine's relationship to teachings about Mary.",
     "RelatedTopics": "Incarnation; Jesus Christ; Mary; Miracles",
     "RelatedPeople": "Ignatius of Antioch; Irenaeus; Athanasius; Augustine",
-    "Slug": "virgin-birth"
+    "Slug": "virgin-birth",
+    "Places": "Bethlehem; Nazareth",
+    "RelatedEvents": "Birth of Jesus"
   },
   {
     "Doctrine": "Ascension",
@@ -237,7 +260,9 @@
     "Interpretations": "Christians across traditions affirm the Ascension, while differing mainly in emphasis: some stress Christ's ongoing heavenly ministry and intercession, others His kingly reign and the church's mission until His return.",
     "RelatedTopics": "Resurrection; Jesus Christ; Holy Spirit; Second Coming",
     "RelatedPeople": "Irenaeus; Augustine; Calvin; Aquinas",
-    "Slug": "ascension"
+    "Slug": "ascension",
+    "Places": "Jerusalem",
+    "RelatedEvents": "The Ascension"
   },
   {
     "Doctrine": "Priesthood of Believers",
@@ -257,7 +282,9 @@
     "Interpretations": "Christians differ on whether certain miraculous gifts ceased with the apostolic age (cessationism) or continue today (continuationism), and on how gifts such as tongues and prophecy should be practiced and tested in the church.",
     "RelatedTopics": "Holy Spirit; The Church; Ministry; Worship",
     "RelatedPeople": "Irenaeus; Augustine; Calvin; John Wesley",
-    "Slug": "spiritual-gifts"
+    "Slug": "spiritual-gifts",
+    "Places": "Corinth",
+    "RelatedEvents": "Pentecost"
   },
   {
     "Doctrine": "Millennial Views",
@@ -287,7 +314,9 @@
     "Interpretations": "Reformed Christians teach the will is bound by sin until freed by effectual grace, Arminian and Wesleyan Christians teach grace enables a genuine response, and Molinist and other views seek middle positions.",
     "RelatedTopics": "Original Sin; Total Depravity; Predestination; Grace; Salvation",
     "RelatedPeople": "Pelagius; Augustine; Erasmus; Luther; John Wesley",
-    "Slug": "free-will"
+    "Slug": "free-will",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "The Fall"
   },
   {
     "Doctrine": "Holy Spirit",
@@ -297,6 +326,8 @@
     "Interpretations": "Christians agree the Spirit is fully God and active today, while differing on the baptism in the Spirit, the continuation of miraculous gifts, and the language used for the Spirit's fullness and filling.",
     "RelatedTopics": "Trinity; Sanctification; Spiritual Gifts; Regeneration",
     "RelatedPeople": "Basil of Caesarea; Augustine; Calvin; John Wesley",
-    "Slug": "holy-spirit"
+    "Slug": "holy-spirit",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Pentecost"
   }
 ]

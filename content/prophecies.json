@@ -11,7 +11,8 @@
     "RelatedBooks": "Genesis; Galatians; Romans; Revelation",
     "RelatedPeople": "Eve; Adam; Jesus",
     "RelatedEvents": "The Fall; The Crucifixion; The Resurrection",
-    "Slug": "seed-of-the-woman"
+    "Slug": "seed-of-the-woman",
+    "Places": "Garden of Eden"
   },
   {
     "Prophecy": "Blessing to All Nations Through Abraham",
@@ -25,7 +26,8 @@
     "RelatedBooks": "Genesis; Galatians; Acts",
     "RelatedPeople": "Abraham; Jesus; Paul",
     "RelatedEvents": "Call of Abraham; The Crucifixion; Pentecost",
-    "Slug": "blessing-to-all-nations-through-abraham"
+    "Slug": "blessing-to-all-nations-through-abraham",
+    "Places": "Haran; Canaan"
   },
   {
     "Prophecy": "Sacrifice Provided on Mount Moriah",
@@ -39,7 +41,8 @@
     "RelatedBooks": "Genesis; John; Hebrews",
     "RelatedPeople": "Abraham; Isaac; Jesus",
     "RelatedEvents": "Binding of Isaac; The Crucifixion",
-    "Slug": "sacrifice-provided-on-mount-moriah"
+    "Slug": "sacrifice-provided-on-mount-moriah",
+    "Places": "Jerusalem"
   },
   {
     "Prophecy": "The Scepter Will Not Depart from Judah",
@@ -67,7 +70,8 @@
     "RelatedBooks": "Numbers; Matthew; Revelation",
     "RelatedPeople": "Balaam; Balak; Jesus",
     "RelatedEvents": "Birth of Jesus",
-    "Slug": "star-out-of-jacob"
+    "Slug": "star-out-of-jacob",
+    "Places": "Plains of Moab; Bethlehem"
   },
   {
     "Prophecy": "A Prophet Like Moses",
@@ -81,7 +85,8 @@
     "RelatedBooks": "Deuteronomy; Acts; Hebrews",
     "RelatedPeople": "Moses; Jesus; Peter",
     "RelatedEvents": "Giving of the Law at Sinai; Sermon on the Mount",
-    "Slug": "prophet-like-moses"
+    "Slug": "prophet-like-moses",
+    "Places": "Plains of Moab"
   },
   {
     "Prophecy": "The Eternal Throne of David",
@@ -95,7 +100,8 @@
     "RelatedBooks": "2 Samuel; Luke; Acts",
     "RelatedPeople": "David; Nathan; Solomon; Jesus",
     "RelatedEvents": "Davidic Covenant; Birth of Jesus; Pentecost",
-    "Slug": "eternal-throne-of-david"
+    "Slug": "eternal-throne-of-david",
+    "Places": "Jerusalem"
   },
   {
     "Prophecy": "God's Anointed Son Rules the Nations",
@@ -109,7 +115,8 @@
     "RelatedBooks": "Psalms; Matthew; Acts; Hebrews",
     "RelatedPeople": "David; Jesus",
     "RelatedEvents": "Baptism of Jesus; The Resurrection",
-    "Slug": "anointed-son-rules-the-nations"
+    "Slug": "anointed-son-rules-the-nations",
+    "Places": "Jerusalem"
   },
   {
     "Prophecy": "The Holy One Will Not See Decay",
@@ -123,7 +130,8 @@
     "RelatedBooks": "Psalms; Acts",
     "RelatedPeople": "David; Jesus; Peter; Paul",
     "RelatedEvents": "The Resurrection",
-    "Slug": "holy-one-will-not-see-decay"
+    "Slug": "holy-one-will-not-see-decay",
+    "Places": "Jerusalem"
   },
   {
     "Prophecy": "The Crucifixion Foretold",
@@ -137,7 +145,8 @@
     "RelatedBooks": "Psalms; Matthew; John",
     "RelatedPeople": "David; Jesus",
     "RelatedEvents": "The Crucifixion",
-    "Slug": "crucifixion-foretold-psalm-22"
+    "Slug": "crucifixion-foretold-psalm-22",
+    "Places": "Golgotha; Jerusalem"
   },
   {
     "Prophecy": "A Priest Forever After Melchizedek",
@@ -151,7 +160,8 @@
     "RelatedBooks": "Psalms; Matthew; Hebrews",
     "RelatedPeople": "David; Melchizedek; Jesus",
     "RelatedEvents": "The Resurrection; The Ascension",
-    "Slug": "priest-forever-melchizedek"
+    "Slug": "priest-forever-melchizedek",
+    "Places": "Jerusalem"
   },
   {
     "Prophecy": "The Virgin Birth",
@@ -165,7 +175,8 @@
     "RelatedBooks": "Isaiah; Matthew; Luke",
     "RelatedPeople": "Isaiah; Ahaz; Mary; Jesus",
     "RelatedEvents": "Birth of Jesus",
-    "Slug": "virgin-birth"
+    "Slug": "virgin-birth",
+    "Places": "Bethlehem; Nazareth"
   },
   {
     "Prophecy": "A Child Born, the Prince of Peace",
@@ -179,7 +190,8 @@
     "RelatedBooks": "Isaiah; Matthew; Luke",
     "RelatedPeople": "Isaiah; Jesus",
     "RelatedEvents": "Birth of Jesus; Sermon on the Mount",
-    "Slug": "child-born-prince-of-peace"
+    "Slug": "child-born-prince-of-peace",
+    "Places": "Galilee"
   },
   {
     "Prophecy": "The Branch from Jesse",
@@ -221,7 +233,8 @@
     "RelatedBooks": "Isaiah; Matthew; Mark; Luke; John",
     "RelatedPeople": "Isaiah; John the Baptist; Jesus",
     "RelatedEvents": "Baptism of Jesus",
-    "Slug": "voice-in-the-wilderness"
+    "Slug": "voice-in-the-wilderness",
+    "Places": "Jordan River; Jerusalem"
   },
   {
     "Prophecy": "The Servant Brings Justice to the Nations",
@@ -263,7 +276,8 @@
     "RelatedBooks": "Isaiah; Matthew; Acts; 1 Peter",
     "RelatedPeople": "Isaiah; Jesus; Philip",
     "RelatedEvents": "The Crucifixion",
-    "Slug": "suffering-servant"
+    "Slug": "suffering-servant",
+    "Places": "Golgotha; Jerusalem"
   },
   {
     "Prophecy": "Good News to the Poor",
@@ -277,7 +291,8 @@
     "RelatedBooks": "Isaiah; Luke; Matthew",
     "RelatedPeople": "Isaiah; Jesus",
     "RelatedEvents": "Sermon on the Mount",
-    "Slug": "good-news-to-the-poor"
+    "Slug": "good-news-to-the-poor",
+    "Places": "Nazareth"
   },
   {
     "Prophecy": "New Heavens and a New Earth",
@@ -305,7 +320,8 @@
     "RelatedBooks": "Jeremiah; 1 Corinthians",
     "RelatedPeople": "Jeremiah; David; Jesus; Paul",
     "RelatedEvents": "Birth of Jesus",
-    "Slug": "righteous-branch"
+    "Slug": "righteous-branch",
+    "Places": "Jerusalem"
   },
   {
     "Prophecy": "The New Covenant",
@@ -319,7 +335,8 @@
     "RelatedBooks": "Jeremiah; Luke; Hebrews",
     "RelatedPeople": "Jeremiah; Jesus",
     "RelatedEvents": "Last Supper; The Crucifixion",
-    "Slug": "new-covenant"
+    "Slug": "new-covenant",
+    "Places": "Jerusalem"
   },
   {
     "Prophecy": "God the Shepherd, David the King",
@@ -347,7 +364,8 @@
     "RelatedBooks": "Ezekiel; John; Romans",
     "RelatedPeople": "Ezekiel; Jesus; Paul",
     "RelatedEvents": "Cyrus's Decree and Return from Exile; Pentecost",
-    "Slug": "valley-of-dry-bones"
+    "Slug": "valley-of-dry-bones",
+    "Places": "Babylon; Jerusalem"
   },
   {
     "Prophecy": "The Statue of Kingdoms",
@@ -361,7 +379,8 @@
     "RelatedBooks": "Daniel; Luke; Matthew",
     "RelatedPeople": "Daniel; Nebuchadnezzar; Jesus",
     "RelatedEvents": "Daniel in the Lions' Den; Birth of Jesus",
-    "Slug": "statue-of-kingdoms"
+    "Slug": "statue-of-kingdoms",
+    "Places": "Babylon"
   },
   {
     "Prophecy": "The Son of Man Receives the Kingdom",
@@ -375,7 +394,8 @@
     "RelatedBooks": "Daniel; Mark; Matthew; Revelation",
     "RelatedPeople": "Daniel; Jesus",
     "RelatedEvents": "The Ascension; The Crucifixion",
-    "Slug": "son-of-man-kingdom"
+    "Slug": "son-of-man-kingdom",
+    "Places": "Jerusalem"
   },
   {
     "Prophecy": "The Seventy Weeks",
@@ -389,7 +409,8 @@
     "RelatedBooks": "Daniel; Luke; Matthew",
     "RelatedPeople": "Daniel; Gabriel; Jesus",
     "RelatedEvents": "The Crucifixion; Fall of Jerusalem and the Exile",
-    "Slug": "seventy-weeks"
+    "Slug": "seventy-weeks",
+    "Places": "Jerusalem; Babylon"
   },
   {
     "Prophecy": "Resurrection and Final Judgment",
@@ -417,7 +438,8 @@
     "RelatedBooks": "Hosea; Matthew",
     "RelatedPeople": "Hosea; Jesus; Mary; Joseph",
     "RelatedEvents": "The Exodus and Crossing of the Red Sea; Birth of Jesus",
-    "Slug": "out-of-egypt-called-my-son"
+    "Slug": "out-of-egypt-called-my-son",
+    "Places": "Egypt"
   },
   {
     "Prophecy": "The Spirit Poured Out on All Flesh",
@@ -431,7 +453,8 @@
     "RelatedBooks": "Joel; Acts; Romans",
     "RelatedPeople": "Joel; Peter; Jesus",
     "RelatedEvents": "Pentecost",
-    "Slug": "spirit-poured-out"
+    "Slug": "spirit-poured-out",
+    "Places": "Jerusalem"
   },
   {
     "Prophecy": "Restoration of the Booth of David",
@@ -445,7 +468,8 @@
     "RelatedBooks": "Amos; Acts",
     "RelatedPeople": "Amos; David; James",
     "RelatedEvents": "Jerusalem Council",
-    "Slug": "restoration-booth-of-david"
+    "Slug": "restoration-booth-of-david",
+    "Places": "Jerusalem"
   },
   {
     "Prophecy": "Born in Bethlehem",
@@ -459,7 +483,8 @@
     "RelatedBooks": "Micah; Matthew; Luke; John",
     "RelatedPeople": "Micah; David; Mary; Jesus",
     "RelatedEvents": "Birth of Jesus",
-    "Slug": "born-in-bethlehem"
+    "Slug": "born-in-bethlehem",
+    "Places": "Bethlehem"
   },
   {
     "Prophecy": "The King Comes on a Donkey",
@@ -473,7 +498,8 @@
     "RelatedBooks": "Zechariah; Matthew; John",
     "RelatedPeople": "Zechariah; Jesus",
     "RelatedEvents": "Triumphal Entry",
-    "Slug": "king-on-a-donkey"
+    "Slug": "king-on-a-donkey",
+    "Places": "Jerusalem"
   },
   {
     "Prophecy": "Thirty Pieces of Silver",
@@ -487,7 +513,8 @@
     "RelatedBooks": "Zechariah; Matthew",
     "RelatedPeople": "Zechariah; Judas Iscariot; Jesus",
     "RelatedEvents": "Last Supper; The Crucifixion",
-    "Slug": "thirty-pieces-of-silver"
+    "Slug": "thirty-pieces-of-silver",
+    "Places": "Jerusalem"
   },
   {
     "Prophecy": "The Pierced One",
@@ -501,7 +528,8 @@
     "RelatedBooks": "Zechariah; John; Revelation",
     "RelatedPeople": "Zechariah; Jesus; John the Apostle",
     "RelatedEvents": "The Crucifixion",
-    "Slug": "the-pierced-one"
+    "Slug": "the-pierced-one",
+    "Places": "Golgotha; Jerusalem"
   },
   {
     "Prophecy": "Strike the Shepherd, Scatter the Sheep",
@@ -515,7 +543,8 @@
     "RelatedBooks": "Zechariah; Matthew; Mark",
     "RelatedPeople": "Zechariah; Jesus; Peter",
     "RelatedEvents": "Jesus Prays in Gethsemane; The Crucifixion",
-    "Slug": "strike-the-shepherd"
+    "Slug": "strike-the-shepherd",
+    "Places": "Jerusalem"
   },
   {
     "Prophecy": "The Day of the Lord on the Mount of Olives",
@@ -529,7 +558,8 @@
     "RelatedBooks": "Zechariah; Acts; Revelation",
     "RelatedPeople": "Zechariah; Jesus",
     "RelatedEvents": "The Ascension",
-    "Slug": "day-of-the-lord-mount-of-olives"
+    "Slug": "day-of-the-lord-mount-of-olives",
+    "Places": "Jerusalem"
   },
   {
     "Prophecy": "The Messenger Before the Lord",
@@ -543,7 +573,8 @@
     "RelatedBooks": "Malachi; Matthew; Mark",
     "RelatedPeople": "Malachi; John the Baptist; Jesus",
     "RelatedEvents": "Baptism of Jesus",
-    "Slug": "messenger-before-the-lord"
+    "Slug": "messenger-before-the-lord",
+    "Places": "Jordan River; Jerusalem"
   },
   {
     "Prophecy": "The Glory of the Second Temple",
@@ -557,7 +588,8 @@
     "RelatedBooks": "Haggai; Luke; John",
     "RelatedPeople": "Haggai; Zerubbabel; Jesus",
     "RelatedEvents": "Rebuilding of the Temple; Birth of Jesus",
-    "Slug": "glory-of-second-temple"
+    "Slug": "glory-of-second-temple",
+    "Places": "Jerusalem"
   },
   {
     "Prophecy": "The Olivet Discourse",
@@ -571,7 +603,8 @@
     "RelatedBooks": "Matthew; Mark; Luke",
     "RelatedPeople": "Jesus; Peter; Andrew",
     "RelatedEvents": "Fall of Jerusalem and the Exile; Triumphal Entry",
-    "Slug": "olivet-discourse"
+    "Slug": "olivet-discourse",
+    "Places": "Jerusalem"
   },
   {
     "Prophecy": "The Second Coming and New Creation",
@@ -585,6 +618,7 @@
     "RelatedBooks": "Revelation; Hebrews",
     "RelatedPeople": "John the Apostle; Jesus",
     "RelatedEvents": "The Resurrection; The Ascension",
-    "Slug": "second-coming-and-new-creation"
+    "Slug": "second-coming-and-new-creation",
+    "Places": "Patmos"
   }
 ]

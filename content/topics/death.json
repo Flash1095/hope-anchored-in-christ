@@ -6,5 +6,7 @@
   "RelatedPeople": "Jesus; Paul",
   "RelatedDoctrines": "Resurrection",
   "RelatedBooks": "Genesis; Psalms; John; 1 Corinthians",
-  "Slug": "death"
+  "Slug": "death",
+  "Places": "Golgotha",
+  "RelatedEvents": "The Crucifixion; The Resurrection"
 }

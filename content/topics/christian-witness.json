@@ -6,5 +6,7 @@
   "RelatedPeople": "Simon Peter; Paul; Stephen",
   "RelatedQuestions": "How can I share my faith with others?",
   "RelatedBooks": "Matthew; Acts; 1 Peter; Colossians",
-  "Slug": "christian-witness"
+  "Slug": "christian-witness",
+  "Places": "Jerusalem",
+  "RelatedEvents": "Pentecost"
 }

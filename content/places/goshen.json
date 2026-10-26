@@ -9,5 +9,7 @@
   "KeyScriptures": "Genesis 45:10; Genesis 47:27; Exodus 8:22",
   "RelatedBooks": "Genesis; Exodus",
   "RelatedPeople": "Joseph, Son of Jacob; Moses",
-  "Slug": "goshen"
+  "Slug": "goshen",
+  "RelatedEvents": "The Passover",
+  "Places": "Egypt"
 }

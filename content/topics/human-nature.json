@@ -6,5 +6,7 @@
   "RelatedPeople": "Adam; Paul",
   "RelatedDoctrines": "Original Sin; Total Depravity",
   "RelatedBooks": "Genesis; Romans; Ephesians",
-  "Slug": "human-nature"
+  "Slug": "human-nature",
+  "Places": "Garden of Eden",
+  "RelatedEvents": "Creation; The Fall"
 }

@@ -7,5 +7,7 @@
   "RelatedDoctrines": "Incarnation; Trinity; Atonement",
   "RelatedQuestions": "Who is Jesus Christ?; Why did Jesus have to die on the cross?; Did Jesus really rise from the dead?",
   "RelatedBooks": "Isaiah; Matthew; John; Philippians; Colossians",
-  "Slug": "jesus-christ"
+  "Slug": "jesus-christ",
+  "Places": "Bethlehem; Nazareth; Galilee; Jerusalem; Golgotha",
+  "RelatedEvents": "Birth of Jesus; Baptism of Jesus; The Crucifixion; The Resurrection"
 }

@@ -9,5 +9,7 @@
   "RelatedBooks": "Genesis; Romans; 1 Corinthians",
   "RelatedPeople": "Eve; Abel; Cain; Seth",
   "LifeLesson": "Our story begins with a Creator who made us in His image and for His fellowship. Even after the Fall, God pursued Adam — and He still pursues us with redeeming love.",
-  "Slug": "adam"
+  "Slug": "adam",
+  "Places": "Garden of Eden",
+  "RelatedEvents": "Creation; The Fall"
 }

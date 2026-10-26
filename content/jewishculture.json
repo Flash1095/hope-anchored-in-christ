@@ -7,7 +7,10 @@
     "PointsToChrist": "The apostles wrestled with what circumcision meant for Gentile believers, and the Jerusalem council decided Gentiles need not be circumcised. Paul then points to the deeper reality: true circumcision is of the heart, by the Spirit, a mark every believer in Christ carries.",
     "Scripture": "Genesis 17:9-14; Romans 2:28-29; Galatians 5:1-6; Acts 15:1-29",
     "RelatedTopics": "Covenant; Grace; Church",
-    "Slug": "circumcision"
+    "Slug": "circumcision",
+    "RelatedPeople": "Abraham; Paul",
+    "Places": "Canaan",
+    "RelatedEvents": "The Call of Abraham"
   },
   {
     "Topic": "Day of Atonement",
@@ -17,7 +20,10 @@
     "PointsToChrist": "The letter to the Hebrews reads this day as a shadow of Christ: he entered the true Holy Place once for all, not with the blood of goats but with his own blood, securing an eternal redemption that yearly sacrifices could only picture.",
     "Scripture": "Leviticus 16; Leviticus 23:26-32; Hebrews 9:11-14; Hebrews 10:1-14",
     "RelatedTopics": "Atonement; Forgiveness; Holiness",
-    "Slug": "day-of-atonement"
+    "Slug": "day-of-atonement",
+    "RelatedPeople": "Aaron; Moses",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Giving of the Law at Sinai; The Crucifixion"
   },
   {
     "Topic": "Feast of Tabernacles",
@@ -27,7 +33,10 @@
     "PointsToChrist": "John places two of Jesus' great claims at this feast: during the water ceremony he cries out that whoever thirsts should come to him for living water, and he declares himself the light of the world. And John opens his Gospel saying the Word became flesh and tabernacled among us.",
     "Scripture": "Leviticus 23:33-43; John 1:14; John 7:37-38; John 8:12",
     "RelatedTopics": "Worship; Hope; Kingdom of God",
-    "Slug": "feast-of-tabernacles"
+    "Slug": "feast-of-tabernacles",
+    "RelatedPeople": "Moses; Nehemiah",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Wilderness Wanderings"
   },
   {
     "Topic": "Feast of Trumpets",
@@ -37,7 +46,10 @@
     "PointsToChrist": "For Messianic readers, the trumpet blast also sounds the future: Paul writes that at the last trumpet the dead will be raised, and that the Lord himself will descend with the sound of God's trumpet. The shofar that wakes a people to repentance points to the day the King returns.",
     "Scripture": "Leviticus 23:23-25; Numbers 29:1-6; 1 Corinthians 15:52; 1 Thessalonians 4:16",
     "RelatedTopics": "Second Coming; Resurrection; Worship",
-    "Slug": "feast-of-trumpets"
+    "Slug": "feast-of-trumpets",
+    "RelatedPeople": "Moses",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "Giving of the Law at Sinai"
   },
   {
     "Topic": "Firstfruits",
@@ -47,7 +59,10 @@
     "PointsToChrist": "Paul calls the risen Christ the firstfruits of those who have fallen asleep: his resurrection is the first sheaf, guaranteeing the resurrection of all who belong to him. The feast's timing, in Passover week, matches the weekend of his death and resurrection.",
     "Scripture": "Leviticus 23:9-14; 1 Corinthians 15:20-23",
     "RelatedTopics": "Resurrection; Hope; Grace",
-    "Slug": "firstfruits"
+    "Slug": "firstfruits",
+    "RelatedPeople": "Jesus; Paul",
+    "Places": "Canaan",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Topic": "Hanukkah",
@@ -57,7 +72,8 @@
     "PointsToChrist": "John's Gospel notes that Jesus himself was in Jerusalem for the Feast of Dedication, walking in the Temple courts. The feast of light points naturally to the one who called himself the light of the world, rededicating not a building of stone but his own people.",
     "Scripture": "1 Maccabees 4:36-59; John 10:22-23; John 8:12",
     "RelatedTopics": "Worship; Hope; Suffering",
-    "Slug": "hanukkah"
+    "Slug": "hanukkah",
+    "Places": "Jerusalem"
   },
   {
     "Topic": "Hebrew Language",
@@ -67,7 +83,9 @@
     "PointsToChrist": "The New Testament preserves the Hebrew world even in Greek: Jesus is Yeshua, a name meaning salvation, and Matthew ties that name to his mission, for he will save his people from their sins. Reading the Old Testament with Hebrew ears lets the Messiah's story sound in its original key.",
     "Scripture": "Genesis 2:7; Matthew 1:21; John 1:1",
     "RelatedTopics": "Wisdom; Prophecy; Faith",
-    "Slug": "hebrew-language"
+    "Slug": "hebrew-language",
+    "RelatedPeople": "Moses; Ezra",
+    "RelatedEvents": "Giving of the Law at Sinai; Ezra Reads the Law"
   },
   {
     "Topic": "Isaiah 53: The Suffering Servant",
@@ -77,7 +95,10 @@
     "PointsToChrist": "Messianic readers hear the servant as the Messiah: despised and rejected, wounded for transgressions, silent before shearers, assigned a grave with the rich — every detail fulfilled in Jesus' crucifixion. Philip used this very chapter to lead an Ethiopian official to faith in Jesus.",
     "Scripture": "Isaiah 52:13-53:12; Acts 8:32-35; 1 Peter 2:24",
     "RelatedTopics": "Suffering; Prophecy; Redemption",
-    "Slug": "isaiah-53-the-suffering-servant"
+    "Slug": "isaiah-53-the-suffering-servant",
+    "RelatedPeople": "Isaiah; Jesus",
+    "Places": "Jerusalem",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Topic": "Jewish Wedding Customs",
@@ -87,7 +108,9 @@
     "PointsToChrist": "Jesus borrowed this pattern for his own promises: he goes to prepare a place and will return to take his people to himself, at an hour no one knows, like a bridegroom coming for his bride. Paul calls marriage itself a mystery pointing to Christ and the church, and Revelation ends with the marriage supper of the Lamb. This is a Messianic reading of the customs, offered as illustration, not as a claim about what every Jewish wedding meant.",
     "Scripture": "Matthew 25:1-13; John 14:2-3; Ephesians 5:25-32; Revelation 19:6-9",
     "RelatedTopics": "Marriage; Second Coming; Church",
-    "Slug": "jewish-wedding-customs"
+    "Slug": "jewish-wedding-customs",
+    "RelatedPeople": "Jesus; John the Baptist",
+    "RelatedEvents": "Jesus Turns Water into Wine at Cana"
   },
   {
     "Topic": "Kosher",
@@ -97,7 +120,9 @@
     "PointsToChrist": "The New Testament records Peter's vision of unclean animals with the command not to call unclean what God has made clean — a vision chiefly about welcoming Gentiles into the people of God. Many Messianic Jews continue to keep kosher as a matter of identity and witness, not as a means of salvation.",
     "Scripture": "Leviticus 11; Deuteronomy 14; Acts 10:9-16; Mark 7:18-19",
     "RelatedTopics": "Holiness; Covenant; Church",
-    "Slug": "kosher"
+    "Slug": "kosher",
+    "RelatedPeople": "Moses; Daniel",
+    "Places": "Babylon"
   },
   {
     "Topic": "Mezuzah",
@@ -107,7 +132,8 @@
     "PointsToChrist": "For Messianic readers, the mezuzah's Word on the doorway echoes the Word who became flesh and dwelt among us — the one who stands at the door and knocks. The practice turns an ordinary doorway into a daily confession of whose house this is.",
     "Scripture": "Deuteronomy 6:4-9; Deuteronomy 11:20; John 1:14",
     "RelatedTopics": "Covenant; Worship; Faith",
-    "Slug": "mezuzah"
+    "Slug": "mezuzah",
+    "RelatedPeople": "Moses"
   },
   {
     "Topic": "Micah 5:2: Born in Bethlehem",
@@ -117,7 +143,10 @@
     "PointsToChrist": "Matthew records Jesus' birth in Bethlehem as the fulfillment of Micah's words, and John records the debate it caused — some dismissed Jesus because they thought he came from Galilee, missing the Bethlehem birth. The small town's small promise carries the weight of eternity: a ruler from ancient days, born in time.",
     "Scripture": "Micah 5:2; Matthew 2:1-6; John 7:40-42",
     "RelatedTopics": "Prophecy; Hope; Kingdom of God",
-    "Slug": "micah-5-2-born-in-bethlehem"
+    "Slug": "micah-5-2-born-in-bethlehem",
+    "RelatedPeople": "Micah; Jesus; King David",
+    "Places": "Bethlehem",
+    "RelatedEvents": "Birth of Jesus"
   },
   {
     "Topic": "Mikveh",
@@ -127,7 +156,10 @@
     "PointsToChrist": "John the Baptist's immersions in the Jordan drew on this world, and Christian baptism carries the same shape deeper: buried with Christ and raised to new life. The mikveh's picture of washing and new beginning is fulfilled in the baptism of believers into Jesus.",
     "Scripture": "Leviticus 14-15; Matthew 3:1-6; Romans 6:3-4; 1 Peter 3:21",
     "RelatedTopics": "Baptism; Holiness; Grace",
-    "Slug": "mikveh"
+    "Slug": "mikveh",
+    "RelatedPeople": "John the Baptist; Jesus",
+    "Places": "Jordan River",
+    "RelatedEvents": "Baptism of Jesus"
   },
   {
     "Topic": "Passover Seder",
@@ -137,7 +169,10 @@
     "PointsToChrist": "Messianic readers see the Seder's symbols fulfilled at the Last Supper: Jesus took bread, broke it, and called it his body, and took the cup after supper, the cup of redemption, as the new covenant in his blood. The hidden afikoman, broken and brought back, pictures the buried and risen Messiah — a Messianic reading, not the mainstream Jewish understanding of the custom.",
     "Scripture": "Exodus 12; Luke 22:14-20; 1 Corinthians 11:23-26",
     "RelatedTopics": "Exodus; Redemption; Covenant",
-    "Slug": "passover-seder"
+    "Slug": "passover-seder",
+    "RelatedPeople": "Moses; Jesus",
+    "Places": "Egypt; Jerusalem",
+    "RelatedEvents": "The Passover; Last Supper"
   },
   {
     "Topic": "Passover",
@@ -147,7 +182,10 @@
     "PointsToChrist": "The New Testament presents Jesus as our Passover: John the Baptist calls him the Lamb of God, Paul writes that Christ our Passover lamb has been sacrificed, and the Last Supper takes place within a Passover meal, where the bread and cup are given new meaning.",
     "Scripture": "Exodus 12:1-30; Leviticus 23:4-8; John 1:29; 1 Corinthians 5:7",
     "RelatedTopics": "Exodus; Redemption; Covenant; Grace",
-    "Slug": "passover"
+    "Slug": "passover",
+    "RelatedPeople": "Moses; Aaron",
+    "Places": "Egypt",
+    "RelatedEvents": "The Passover; The Ten Plagues"
   },
   {
     "Topic": "Pharisees",
@@ -157,7 +195,10 @@
     "PointsToChrist": "The Pharisees must not be caricatured: Nicodemus sought Jesus by night and defended him, Gamaliel urged restraint toward the apostles, and Paul proudly called himself a Pharisee. Jesus debated them fiercely precisely because they were serious about God — and because he claimed an authority greater than their tradition.",
     "Scripture": "Matthew 23:1-3; John 3:1-2; Acts 5:34-39; Philippians 3:5",
     "RelatedTopics": "Discipleship; Church; Doubt",
-    "Slug": "pharisees"
+    "Slug": "pharisees",
+    "RelatedPeople": "Paul; Nicodemus; Jesus",
+    "Places": "Jerusalem",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Topic": "Psalm 22",
@@ -167,7 +208,10 @@
     "PointsToChrist": "On the cross, Jesus quoted its first line, and the Gospel writers let its details tell the story: the mockery, the lots cast for his clothing, the thirst. The psalm does not end at the cross — it ends with all the ends of the earth turning to the Lord, which is exactly where the Gospel goes.",
     "Scripture": "Psalm 22; Matthew 27:35-46; Hebrews 2:10-12",
     "RelatedTopics": "Suffering; Prophecy; Hope",
-    "Slug": "psalm-22"
+    "Slug": "psalm-22",
+    "RelatedPeople": "King David; Jesus",
+    "Places": "Jerusalem",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Topic": "Purim",
@@ -177,7 +221,10 @@
     "PointsToChrist": "Purim's hidden God who overturns gallows and thrones points to the same providence that preserved the people from whom the Messiah would come. The feast reminds believers that God is at work even when he is not named, and that deliverance often arrives through unlikely hands.",
     "Scripture": "Esther 1-10; Esther 4:14",
     "RelatedTopics": "Providence; Hope; Suffering",
-    "Slug": "purim"
+    "Slug": "purim",
+    "RelatedPeople": "Queen Esther; Mordecai",
+    "Places": "Susa",
+    "RelatedEvents": "Esther Saves the Jews"
   },
   {
     "Topic": "Sadducees",
@@ -187,7 +234,9 @@
     "PointsToChrist": "The Sadducees questioned Jesus with a riddle about resurrection, and he answered from the Torah itself: God is the God of the living. Their power faded with the Temple's destruction in AD 70, but their question remains the question at the heart of the Gospel — is there life beyond death, and has God answered it?",
     "Scripture": "Matthew 22:23-33; Acts 23:6-8",
     "RelatedTopics": "Resurrection; Church; Doubt",
-    "Slug": "sadducees"
+    "Slug": "sadducees",
+    "Places": "Jerusalem",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Topic": "Second Temple Judaism",
@@ -197,7 +246,10 @@
     "PointsToChrist": "The Gospels cannot be understood apart from this world: its festivals set Jesus' calendar, its synagogues hosted his teaching, its Temple framed his death, and its Messianic hopes explain both the crowds that hailed him and the leaders who rejected him. He came, Paul writes, in the fullness of time.",
     "Scripture": "Ezra 1-6; Luke 2:1-7; Galatians 4:4",
     "RelatedTopics": "Exile; Prophecy; Church",
-    "Slug": "second-temple-judaism"
+    "Slug": "second-temple-judaism",
+    "RelatedPeople": "Jesus; Ezra; Nehemiah",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Rebuilding of the Temple; The Crucifixion"
   },
   {
     "Topic": "Shabbat",
@@ -207,7 +259,10 @@
     "PointsToChrist": "Jesus called himself Lord of the Sabbath and taught that the Sabbath was made for people, not people for the Sabbath. Hebrews then holds out a deeper rest: the Sabbath rest that remains for God's people is found in Christ, in whom striving ceases.",
     "Scripture": "Genesis 2:2-3; Exodus 20:8-11; Deuteronomy 5:12-15; Mark 2:27-28; Hebrews 4:9-10",
     "RelatedTopics": "Creation; Worship; Prayer",
-    "Slug": "shabbat"
+    "Slug": "shabbat",
+    "RelatedPeople": "Moses; Jesus",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "Creation; Giving of the Law at Sinai"
   },
   {
     "Topic": "Shavuot",
@@ -217,7 +272,10 @@
     "PointsToChrist": "On Shavuot the Holy Spirit fell on the first believers in Jerusalem, and about three thousand were added to the church in one day. What began at Sinai with law written on stone continued at Pentecost with the Spirit writing on hearts.",
     "Scripture": "Leviticus 23:15-22; Exodus 19-20; Acts 2:1-41",
     "RelatedTopics": "Covenant; Church; Prophecy",
-    "Slug": "shavuot"
+    "Slug": "shavuot",
+    "RelatedPeople": "Moses; Simon Peter",
+    "Places": "Mount Sinai; Jerusalem",
+    "RelatedEvents": "Giving of the Law at Sinai; Pentecost"
   },
   {
     "Topic": "Synagogue",
@@ -227,7 +285,9 @@
     "PointsToChrist": "Jesus' own ministry moved through synagogues: he taught in them, read Isaiah in Nazareth's synagogue and announced its fulfillment, and his followers carried the same pattern to synagogues across the Roman world, where the message of the Messiah was first preached.",
     "Scripture": "Luke 4:16-21; Acts 13:14-15; Acts 17:1-4",
     "RelatedTopics": "Worship; Church; Discipleship",
-    "Slug": "synagogue"
+    "Slug": "synagogue",
+    "RelatedPeople": "Jesus; Paul",
+    "Places": "Nazareth; Capernaum"
   },
   {
     "Topic": "Temple and Sacrifices",
@@ -237,7 +297,10 @@
     "PointsToChrist": "Jesus called his own body the temple and presented himself as the final sacrifice: the Lamb who takes away sin, the great high priest who mediates a new covenant. With his death, the sacrificial system found its completion, and his people became the temple of the living God.",
     "Scripture": "Leviticus 1-7; John 2:19-21; Hebrews 8-10; 1 Corinthians 3:16",
     "RelatedTopics": "Atonement; Worship; Holiness",
-    "Slug": "temple-and-sacrifices"
+    "Slug": "temple-and-sacrifices",
+    "RelatedPeople": "King Solomon; Aaron",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Building of Solomon's Temple; The Crucifixion"
   },
   {
     "Topic": "The Menorah",
@@ -247,7 +310,10 @@
     "PointsToChrist": "Jesus declared himself the light of the world, and Revelation pictures the risen Christ standing among seven golden lampstands, the churches. The Temple lamp that never went out points to the one whose light darkness cannot overcome.",
     "Scripture": "Exodus 25:31-40; John 8:12; Revelation 1:12-13",
     "RelatedTopics": "Worship; Hope; Kingdom of God",
-    "Slug": "the-menorah"
+    "Slug": "the-menorah",
+    "RelatedPeople": "Moses; Aaron",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "Giving of the Law at Sinai"
   },
   {
     "Topic": "The Passover Lamb",
@@ -257,7 +323,10 @@
     "PointsToChrist": "John the Baptist pointed at Jesus and said, Behold, the Lamb of God, who takes away the sin of the world. John notes that Jesus' legs were not broken on the cross, like the Passover lamb's bones, and Paul states it plainly: Christ, our Passover lamb, has been sacrificed.",
     "Scripture": "Exodus 12:1-13; Exodus 12:46; John 1:29; John 19:31-36; 1 Corinthians 5:7",
     "RelatedTopics": "Redemption; Atonement; Grace",
-    "Slug": "the-passover-lamb"
+    "Slug": "the-passover-lamb",
+    "RelatedPeople": "Moses; Jesus",
+    "Places": "Egypt",
+    "RelatedEvents": "The Passover; The Crucifixion"
   },
   {
     "Topic": "The Scapegoat",
@@ -267,7 +336,9 @@
     "PointsToChrist": "Messianic readers see both goats fulfilled in Jesus: he died as the sacrifice for sin, and he carried our sins away — outside the camp, as Hebrews puts it, bearing our shame. The scapegoat's journey into the wilderness is the picture of sins remembered no more.",
     "Scripture": "Leviticus 16:20-22; Isaiah 53:6; Hebrews 13:11-13; 1 Peter 2:24",
     "RelatedTopics": "Atonement; Forgiveness; Holiness",
-    "Slug": "the-scapegoat"
+    "Slug": "the-scapegoat",
+    "RelatedPeople": "Aaron; Jesus",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Topic": "The Shema",
@@ -277,7 +348,9 @@
     "PointsToChrist": "Jesus himself affirmed the Shema as the first and greatest commandment. Mainstream Jewish tradition holds God's oneness in a way that excludes the Trinity, while Messianic readers confess the same one God, revealed in the Messiah Jesus. The difference is stated here plainly, not as a point of mockery: the Shema is holy ground for both.",
     "Scripture": "Deuteronomy 6:4-9; Mark 12:28-31",
     "RelatedTopics": "Covenant; Faith; Prayer",
-    "Slug": "the-shema"
+    "Slug": "the-shema",
+    "RelatedPeople": "Moses; Jesus",
+    "Places": "Plains of Moab"
   },
   {
     "Topic": "Torah",
@@ -287,7 +360,10 @@
     "PointsToChrist": "Jesus said he came not to abolish the Torah but to fulfill it, and on the road to Emmaus he showed how Moses and all the Prophets spoke of him. For Messianic readers, the Torah is not a ladder to climb to God but a signpost pointing to the one who climbed down to us.",
     "Scripture": "Genesis 1:1; Deuteronomy 6:4; Luke 24:27; Matthew 5:17",
     "RelatedTopics": "Covenant; Prophecy; Discipleship",
-    "Slug": "torah-the-five-books-of-moses"
+    "Slug": "torah-the-five-books-of-moses",
+    "RelatedPeople": "Moses; Ezra",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "Giving of the Law at Sinai; Ezra Reads the Law"
   },
   {
     "Topic": "Zechariah 12:10: The Pierced One",
@@ -297,6 +373,9 @@
     "PointsToChrist": "The New Testament applies the verse directly to Jesus: John records the soldier piercing his side and cites Zechariah, and Revelation pictures every eye seeing him, even those who pierced him. For Messianic readers, the mourning Zechariah foresaw begins at the cross and continues until the day of his return.",
     "Scripture": "Zechariah 12:10; John 19:34-37; Revelation 1:7",
     "RelatedTopics": "Prophecy; Suffering; Second Coming",
-    "Slug": "zechariah-12-10-the-pierced-one"
+    "Slug": "zechariah-12-10-the-pierced-one",
+    "RelatedPeople": "Zechariah the Prophet; Jesus",
+    "Places": "Jerusalem",
+    "RelatedEvents": "The Crucifixion"
   }
 ]

@@ -7,5 +7,7 @@
   "RelatedDoctrines": "Church; Body of Christ; Ecclesiology",
   "RelatedQuestions": "Why do I need to go to church if I believe in Jesus?; What is the church supposed to do?",
   "RelatedBooks": "Matthew; Acts; 1 Corinthians; Ephesians; 1 Peter",
-  "Slug": "church"
+  "Slug": "church",
+  "Places": "Jerusalem",
+  "RelatedEvents": "Pentecost"
 }

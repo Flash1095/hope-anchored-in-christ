@@ -9,7 +9,8 @@
     "RelatedBooks": "Genesis; Romans; 1 Corinthians",
     "RelatedPeople": "Adam; Eve; Jesus; Paul",
     "RelatedEvents": "Creation; The Fall; The Crucifixion; The Resurrection",
-    "Slug": "adam"
+    "Slug": "adam",
+    "Places": "Garden of Eden"
   },
   {
     "Type": "Noah's Ark",
@@ -21,7 +22,8 @@
     "RelatedBooks": "Genesis; Matthew; Hebrews; 1 Peter",
     "RelatedPeople": "Noah; Jesus; Simon Peter",
     "RelatedEvents": "Noah and the Flood; The Resurrection",
-    "Slug": "noahs-ark"
+    "Slug": "noahs-ark",
+    "Places": "Mount Ararat"
   },
   {
     "Type": "Isaac's Near-Sacrifice",
@@ -33,7 +35,8 @@
     "RelatedBooks": "Genesis; John; Romans; Hebrews",
     "RelatedPeople": "Abraham; Isaac; Jesus",
     "RelatedEvents": "Binding of Isaac; The Crucifixion",
-    "Slug": "isaacs-near-sacrifice"
+    "Slug": "isaacs-near-sacrifice",
+    "Places": "Jerusalem"
   },
   {
     "Type": "Joseph",
@@ -45,7 +48,8 @@
     "RelatedBooks": "Genesis; Matthew; Acts; Philippians",
     "RelatedPeople": "Joseph, Son of Jacob; Jesus; Stephen",
     "RelatedEvents": "Joseph Sold into Egypt; Joseph Rises to Power in Egypt; The Crucifixion",
-    "Slug": "joseph"
+    "Slug": "joseph",
+    "Places": "Egypt"
   },
   {
     "Type": "Moses",
@@ -57,7 +61,8 @@
     "RelatedBooks": "Exodus; Numbers; Deuteronomy; Matthew; John; Acts; Hebrews",
     "RelatedPeople": "Moses; Aaron; Jesus",
     "RelatedEvents": "The Burning Bush; The Exodus and Crossing of the Red Sea; Giving of the Law at Sinai; Transfiguration",
-    "Slug": "moses"
+    "Slug": "moses",
+    "Places": "Egypt; Midian; Mount Sinai"
   },
   {
     "Type": "The Passover Lamb",
@@ -69,7 +74,8 @@
     "RelatedBooks": "Exodus; John; 1 Corinthians",
     "RelatedPeople": "Moses; Jesus; John the Baptist",
     "RelatedEvents": "The Passover; The Exodus and Crossing of the Red Sea; The Crucifixion; Last Supper",
-    "Slug": "passover-lamb"
+    "Slug": "passover-lamb",
+    "Places": "Egypt"
   },
   {
     "Type": "Manna from Heaven",
@@ -105,7 +111,8 @@
     "RelatedBooks": "Exodus; John; Colossians; Hebrews; Revelation",
     "RelatedPeople": "Moses; Aaron; Jesus",
     "RelatedEvents": "Wilderness Wanderings; Birth of Jesus",
-    "Slug": "tabernacle"
+    "Slug": "tabernacle",
+    "Places": "Mount Sinai"
   },
   {
     "Type": "The Mercy Seat",
@@ -117,7 +124,8 @@
     "RelatedBooks": "Exodus; Leviticus; Romans; Hebrews; 1 John",
     "RelatedPeople": "Aaron; Moses; Jesus; Paul",
     "RelatedEvents": "Giving of the Law at Sinai; The Crucifixion",
-    "Slug": "mercy-seat"
+    "Slug": "mercy-seat",
+    "Places": "Jerusalem"
   },
   {
     "Type": "The High Priest",
@@ -129,7 +137,8 @@
     "RelatedBooks": "Exodus; Leviticus; Psalms; Hebrews",
     "RelatedPeople": "Aaron; Moses; Jesus",
     "RelatedEvents": "The Crucifixion; The Ascension",
-    "Slug": "high-priest"
+    "Slug": "high-priest",
+    "Places": "Jerusalem"
   },
   {
     "Type": "The Sacrificial System",
@@ -141,7 +150,8 @@
     "RelatedBooks": "Leviticus; Hebrews; 1 Peter; 1 John",
     "RelatedPeople": "Aaron; Moses; Jesus",
     "RelatedEvents": "Giving of the Law at Sinai; The Crucifixion",
-    "Slug": "sacrificial-system"
+    "Slug": "sacrificial-system",
+    "Places": "Mount Sinai; Jerusalem"
   },
   {
     "Type": "The Scapegoat",
@@ -153,7 +163,8 @@
     "RelatedBooks": "Leviticus; Psalms; Isaiah; Hebrews; 1 Peter",
     "RelatedPeople": "Aaron; Moses; Isaiah; Jesus",
     "RelatedEvents": "The Crucifixion",
-    "Slug": "scapegoat"
+    "Slug": "scapegoat",
+    "Places": "Mount Sinai"
   },
   {
     "Type": "Jonah",
@@ -165,7 +176,8 @@
     "RelatedBooks": "Jonah; Matthew; Luke",
     "RelatedPeople": "Jonah; Jesus",
     "RelatedEvents": "Jonah and the Great Fish; The Resurrection",
-    "Slug": "jonah"
+    "Slug": "jonah",
+    "Places": "Nineveh"
   },
   {
     "Type": "King David",
@@ -177,7 +189,8 @@
     "RelatedBooks": "1 Samuel; 2 Samuel; Psalms; Matthew; Luke; Acts; Romans",
     "RelatedPeople": "King David; Jesus; Nathan",
     "RelatedEvents": "David Becomes King; Davidic Covenant; Birth of Jesus; The Crucifixion; The Resurrection",
-    "Slug": "king-david"
+    "Slug": "king-david",
+    "Places": "Bethlehem; Jerusalem"
   },
   {
     "Type": "Solomon's Temple",
@@ -189,7 +202,8 @@
     "RelatedBooks": "1 Kings; 2 Chronicles; Matthew; John; Ephesians; 1 Peter",
     "RelatedPeople": "King Solomon; King David; Jesus",
     "RelatedEvents": "Building of Solomon's Temple; Binding of Isaac; The Resurrection",
-    "Slug": "solomons-temple"
+    "Slug": "solomons-temple",
+    "Places": "Jerusalem"
   },
   {
     "Type": "Melchizedek",
@@ -201,7 +215,8 @@
     "RelatedBooks": "Genesis; Psalms; Hebrews",
     "RelatedPeople": "Melchizedek; Abraham; Jesus",
     "RelatedEvents": "Call of Abraham; Last Supper",
-    "Slug": "melchizedek"
+    "Slug": "melchizedek",
+    "Places": "Jerusalem"
   },
   {
     "Type": "Boaz the Kinsman-Redeemer",
@@ -213,7 +228,8 @@
     "RelatedBooks": "Ruth; Leviticus; Titus; 1 Peter; Revelation",
     "RelatedPeople": "Ruth; Naomi; Boaz; King David; Jesus",
     "RelatedEvents": "Story of Ruth; The Crucifixion",
-    "Slug": "boaz-kinsman-redeemer"
+    "Slug": "boaz-kinsman-redeemer",
+    "Places": "Bethlehem"
   },
   {
     "Type": "The Rock in the Wilderness",
@@ -225,7 +241,8 @@
     "RelatedBooks": "Exodus; Numbers; John; 1 Corinthians",
     "RelatedPeople": "Moses; Aaron; Jesus; Paul",
     "RelatedEvents": "Wilderness Wanderings",
-    "Slug": "rock-in-the-wilderness"
+    "Slug": "rock-in-the-wilderness",
+    "Places": "Kadesh Barnea"
   },
   {
     "Type": "The Red Sea Crossing",
@@ -237,7 +254,8 @@
     "RelatedBooks": "Exodus; Romans; 1 Corinthians; Colossians",
     "RelatedPeople": "Moses; Aaron; Jesus; Paul",
     "RelatedEvents": "The Exodus and Crossing of the Red Sea; The Ten Plagues; Baptism of Jesus; The Resurrection",
-    "Slug": "red-sea-crossing"
+    "Slug": "red-sea-crossing",
+    "Places": "Egypt"
   },
   {
     "Type": "Joshua",
@@ -249,7 +267,8 @@
     "RelatedBooks": "Joshua; Numbers; Matthew; Hebrews; Acts",
     "RelatedPeople": "Joshua; Moses; Caleb; Jesus",
     "RelatedEvents": "Crossing the Jordan; Fall of Jericho",
-    "Slug": "joshua"
+    "Slug": "joshua",
+    "Places": "Jericho; Jordan River"
   },
   {
     "Type": "The Suffering Servant",
@@ -261,7 +280,8 @@
     "RelatedBooks": "Isaiah; Matthew; Luke; Acts; 1 Peter",
     "RelatedPeople": "Isaiah; Joseph, Son of Jacob; Jesus; Philip",
     "RelatedEvents": "Joseph Sold into Egypt; The Crucifixion; The Resurrection",
-    "Slug": "suffering-servant"
+    "Slug": "suffering-servant",
+    "Places": "Golgotha; Jerusalem"
   },
   {
     "Type": "The Ram in the Thicket",
@@ -273,7 +293,8 @@
     "RelatedBooks": "Genesis; John; Romans; 2 Corinthians",
     "RelatedPeople": "Abraham; Isaac; Jesus",
     "RelatedEvents": "Binding of Isaac; The Crucifixion",
-    "Slug": "ram-in-the-thicket"
+    "Slug": "ram-in-the-thicket",
+    "Places": "Jerusalem"
   },
   {
     "Type": "The Veil of the Temple",
@@ -285,7 +306,8 @@
     "RelatedBooks": "Exodus; Leviticus; Matthew; Hebrews",
     "RelatedPeople": "Aaron; Jesus",
     "RelatedEvents": "The Crucifixion",
-    "Slug": "veil-of-the-temple"
+    "Slug": "veil-of-the-temple",
+    "Places": "Jerusalem"
   },
   {
     "Type": "The Cities of Refuge",
@@ -309,7 +331,8 @@
     "RelatedBooks": "Leviticus; Isaiah; Luke",
     "RelatedPeople": "Moses; Isaiah; Jesus",
     "RelatedEvents": "Giving of the Law at Sinai; Sermon on the Mount",
-    "Slug": "year-of-jubilee"
+    "Slug": "year-of-jubilee",
+    "Places": "Mount Sinai; Nazareth"
   },
   {
     "Type": "The Star out of Jacob",
@@ -321,7 +344,8 @@
     "RelatedBooks": "Numbers; Matthew; Revelation",
     "RelatedPeople": "Jacob; Jesus",
     "RelatedEvents": "Wilderness Wanderings; Birth of Jesus",
-    "Slug": "star-out-of-jacob"
+    "Slug": "star-out-of-jacob",
+    "Places": "Plains of Moab; Bethlehem"
   },
   {
     "Type": "The Ark of the Covenant",
@@ -333,7 +357,8 @@
     "RelatedBooks": "Exodus; Joshua; John; Romans; Hebrews; Revelation",
     "RelatedPeople": "Moses; Aaron; Joshua; Jesus",
     "RelatedEvents": "Crossing the Jordan; Building of Solomon's Temple",
-    "Slug": "ark-of-the-covenant"
+    "Slug": "ark-of-the-covenant",
+    "Places": "Jordan River; Jerusalem"
   },
   {
     "Type": "Jacob's Ladder",
@@ -345,7 +370,8 @@
     "RelatedBooks": "Genesis; John",
     "RelatedPeople": "Jacob; Jesus",
     "RelatedEvents": "Jacob Wrestles with God; Birth of Jesus",
-    "Slug": "jacobs-ladder"
+    "Slug": "jacobs-ladder",
+    "Places": "Bethel"
   },
   {
     "Type": "The Tree of Life",
@@ -357,7 +383,8 @@
     "RelatedBooks": "Genesis; Proverbs; Galatians; Revelation",
     "RelatedPeople": "Adam; Eve; Jesus",
     "RelatedEvents": "Creation; The Fall; The Crucifixion",
-    "Slug": "tree-of-life"
+    "Slug": "tree-of-life",
+    "Places": "Garden of Eden"
   },
   {
     "Type": "The Prophet Like Moses",
@@ -369,6 +396,7 @@
     "RelatedBooks": "Deuteronomy; John; Acts; Hebrews",
     "RelatedPeople": "Moses; Jesus; Simon Peter; Stephen",
     "RelatedEvents": "Giving of the Law at Sinai; Feeding of the Five Thousand; Transfiguration",
-    "Slug": "prophet-like-moses"
+    "Slug": "prophet-like-moses",
+    "Places": "Mount Sinai; Plains of Moab"
   }
 ]

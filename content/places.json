@@ -10,7 +10,8 @@
     "KeyScriptures": "Genesis 2:8-17; Genesis 3:15; Revelation 22:1-3",
     "RelatedBooks": "Genesis; Revelation",
     "RelatedPeople": "Adam; Eve",
-    "Slug": "garden-of-eden"
+    "Slug": "garden-of-eden",
+    "RelatedEvents": "Creation; The Fall; Cain Murders Abel"
   },
   {
     "Name": "Mount Ararat",
@@ -23,7 +24,8 @@
     "KeyScriptures": "Genesis 8:4; Genesis 9:12-16; Isaiah 54:9",
     "RelatedBooks": "Genesis; Isaiah",
     "RelatedPeople": "Noah",
-    "Slug": "mount-ararat"
+    "Slug": "mount-ararat",
+    "RelatedEvents": "Noah and the Flood"
   },
   {
     "Name": "Babel",
@@ -35,8 +37,9 @@
     "BiblicalSignificance": "Babel shows what happens when people chase greatness without God: confusion and scattering. At Pentecost God reversed Babel, uniting every language in one gospel.",
     "KeyScriptures": "Genesis 11:1-9; Acts 2:5-11",
     "RelatedBooks": "Genesis; Acts",
-    "RelatedPeople": "",
-    "Slug": "babel"
+    "Slug": "babel",
+    "RelatedEvents": "Tower of Babel",
+    "Places": "Babylon"
   },
   {
     "Name": "Ur",
@@ -49,7 +52,9 @@
     "KeyScriptures": "Genesis 11:28-31; Genesis 12:1-4; Acts 7:2-4",
     "RelatedBooks": "Genesis; Acts",
     "RelatedPeople": "Abraham; Sarah",
-    "Slug": "ur"
+    "Slug": "ur",
+    "RelatedEvents": "Call of Abraham",
+    "Places": "Haran; Canaan"
   },
   {
     "Name": "Haran",
@@ -62,7 +67,9 @@
     "KeyScriptures": "Genesis 11:31-32; Genesis 12:4-5; Genesis 29:1-12",
     "RelatedBooks": "Genesis",
     "RelatedPeople": "Abraham; Sarah; Jacob; Rachel; Leah",
-    "Slug": "haran"
+    "Slug": "haran",
+    "RelatedEvents": "Call of Abraham",
+    "Places": "Ur; Canaan"
   },
   {
     "Name": "Canaan",
@@ -75,7 +82,9 @@
     "KeyScriptures": "Genesis 12:7; Genesis 17:8; Hebrews 11:9-10",
     "RelatedBooks": "Genesis; Hebrews",
     "RelatedPeople": "Abraham; Isaac; Jacob",
-    "Slug": "canaan"
+    "Slug": "canaan",
+    "RelatedEvents": "Call of Abraham; The Twelve Spies and Israel's Unbelief",
+    "Places": "Shechem; Bethel; Hebron"
   },
   {
     "Name": "Shechem",
@@ -88,7 +97,9 @@
     "KeyScriptures": "Genesis 12:6-7; Genesis 35:2-4; Joshua 24:14-15",
     "RelatedBooks": "Genesis; Joshua",
     "RelatedPeople": "Abraham; Jacob; Joshua; Joseph, Son of Jacob",
-    "Slug": "shechem"
+    "Slug": "shechem",
+    "RelatedEvents": "The Kingdom Divides",
+    "Places": "Jerusalem; Bethel"
   },
   {
     "Name": "Bethel",
@@ -101,7 +112,8 @@
     "KeyScriptures": "Genesis 28:10-19; John 1:51",
     "RelatedBooks": "Genesis; John",
     "RelatedPeople": "Jacob; Abraham",
-    "Slug": "bethel"
+    "Slug": "bethel",
+    "Places": "Shechem; Samaria"
   },
   {
     "Name": "Hebron",
@@ -114,7 +126,9 @@
     "KeyScriptures": "Genesis 23:17-20; 2 Samuel 2:4; 2 Samuel 5:3",
     "RelatedBooks": "Genesis; 2 Samuel",
     "RelatedPeople": "Abraham; Sarah; King David",
-    "Slug": "hebron"
+    "Slug": "hebron",
+    "RelatedEvents": "David Becomes King",
+    "Places": "Jerusalem; Beersheba"
   },
   {
     "Name": "Beersheba",
@@ -127,7 +141,8 @@
     "KeyScriptures": "Genesis 21:30-33; Genesis 26:23-25; 1 Kings 19:3-8",
     "RelatedBooks": "Genesis; 1 Kings",
     "RelatedPeople": "Abraham; Isaac",
-    "Slug": "beersheba"
+    "Slug": "beersheba",
+    "Places": "Hebron"
   },
   {
     "Name": "Egypt",
@@ -140,7 +155,9 @@
     "KeyScriptures": "Genesis 41:39-43; Exodus 3:7-8; Exodus 14:13",
     "RelatedBooks": "Genesis; Exodus",
     "RelatedPeople": "Joseph, Son of Jacob; Moses; Aaron; Miriam",
-    "Slug": "egypt"
+    "Slug": "egypt",
+    "RelatedEvents": "Joseph Rises to Power in Egypt; Joseph Sold into Egypt; The Passover; The Ten Plagues; The Exodus and Crossing of the Red Sea",
+    "Places": "Goshen; Midian; Mount Sinai"
   },
   {
     "Name": "Goshen",
@@ -153,7 +170,9 @@
     "KeyScriptures": "Genesis 45:10; Genesis 47:27; Exodus 8:22",
     "RelatedBooks": "Genesis; Exodus",
     "RelatedPeople": "Joseph, Son of Jacob; Moses",
-    "Slug": "goshen"
+    "Slug": "goshen",
+    "RelatedEvents": "The Passover",
+    "Places": "Egypt"
   },
   {
     "Name": "Midian",
@@ -166,7 +185,9 @@
     "KeyScriptures": "Exodus 2:15-22; Exodus 3:1-6; Acts 7:29-30",
     "RelatedBooks": "Exodus; Acts",
     "RelatedPeople": "Moses",
-    "Slug": "midian"
+    "Slug": "midian",
+    "RelatedEvents": "The Burning Bush; Gideon's Victory over Midian",
+    "Places": "Egypt; Mount Sinai"
   },
   {
     "Name": "Mount Sinai",
@@ -179,7 +200,9 @@
     "KeyScriptures": "Exodus 19:16-20; Exodus 20:1-17; Galatians 3:24",
     "RelatedBooks": "Exodus; Deuteronomy; Galatians",
     "RelatedPeople": "Moses; Aaron",
-    "Slug": "mount-sinai"
+    "Slug": "mount-sinai",
+    "RelatedEvents": "Giving of the Law at Sinai; The Golden Calf; The Burning Bush",
+    "Places": "Egypt; Midian; Kadesh Barnea"
   },
   {
     "Name": "Kadesh Barnea",
@@ -192,7 +215,9 @@
     "KeyScriptures": "Numbers 13:26-33; Numbers 14:22-23; Hebrews 3:16-19",
     "RelatedBooks": "Numbers; Hebrews",
     "RelatedPeople": "Moses; Caleb; Joshua",
-    "Slug": "kadesh-barnea"
+    "Slug": "kadesh-barnea",
+    "RelatedEvents": "The Twelve Spies and Israel's Unbelief; Wilderness Wanderings",
+    "Places": "Mount Sinai; Plains of Moab"
   },
   {
     "Name": "Jordan River",
@@ -205,7 +230,9 @@
     "KeyScriptures": "Joshua 3:14-17; 2 Kings 5:14; Matthew 3:13-16",
     "RelatedBooks": "Joshua; 2 Kings; Matthew",
     "RelatedPeople": "Joshua; Elijah; Elisha; John the Baptist; Jesus",
-    "Slug": "jordan-river"
+    "Slug": "jordan-river",
+    "RelatedEvents": "Baptism of Jesus; Crossing the Jordan",
+    "Places": "Gilgal; Jericho; Plains of Moab"
   },
   {
     "Name": "Plains of Moab",
@@ -218,7 +245,8 @@
     "KeyScriptures": "Deuteronomy 1:1-5; Deuteronomy 34:1-5; Numbers 22:1",
     "RelatedBooks": "Numbers; Deuteronomy",
     "RelatedPeople": "Moses; Joshua",
-    "Slug": "plains-of-moab"
+    "Slug": "plains-of-moab",
+    "Places": "Jordan River; Jericho"
   },
   {
     "Name": "Jericho",
@@ -231,7 +259,9 @@
     "KeyScriptures": "Joshua 6:20; Hebrews 11:30; Luke 19:1-10",
     "RelatedBooks": "Joshua; Hebrews; Luke",
     "RelatedPeople": "Joshua; Rahab; Jesus; Zacchaeus",
-    "Slug": "jericho"
+    "Slug": "jericho",
+    "RelatedEvents": "Fall of Jericho",
+    "Places": "Jordan River; Gilgal; Jerusalem"
   },
   {
     "Name": "Gilgal",
@@ -244,7 +274,9 @@
     "KeyScriptures": "Joshua 4:19-24; Joshua 5:9-12",
     "RelatedBooks": "Joshua",
     "RelatedPeople": "Joshua",
-    "Slug": "gilgal"
+    "Slug": "gilgal",
+    "RelatedEvents": "Crossing the Jordan",
+    "Places": "Jordan River; Jericho"
   },
   {
     "Name": "Ai",
@@ -257,7 +289,8 @@
     "KeyScriptures": "Joshua 7:1-12; Joshua 8:1-2",
     "RelatedBooks": "Joshua",
     "RelatedPeople": "Joshua",
-    "Slug": "ai"
+    "Slug": "ai",
+    "Places": "Jericho; Bethel"
   },
   {
     "Name": "Shiloh",
@@ -270,7 +303,9 @@
     "KeyScriptures": "Joshua 18:1; 1 Samuel 1:9-20; 1 Samuel 3:1-10",
     "RelatedBooks": "Joshua; 1 Samuel",
     "RelatedPeople": "Hannah; Eli; Samuel",
-    "Slug": "shiloh"
+    "Slug": "shiloh",
+    "RelatedEvents": "Calling of Samuel",
+    "Places": "Jerusalem; Ramah"
   },
   {
     "Name": "Gibeon",
@@ -283,7 +318,8 @@
     "KeyScriptures": "Joshua 9:14-15; Joshua 10:12-13; 1 Kings 3:5-9",
     "RelatedBooks": "Joshua; 1 Kings",
     "RelatedPeople": "Joshua; King Solomon",
-    "Slug": "gibeon"
+    "Slug": "gibeon",
+    "Places": "Jerusalem"
   },
   {
     "Name": "Gibeah",
@@ -296,7 +332,8 @@
     "KeyScriptures": "Judges 19:22-30; 1 Samuel 10:26; 1 Samuel 11:4",
     "RelatedBooks": "Judges; 1 Samuel",
     "RelatedPeople": "King Saul; Jonathan",
-    "Slug": "gibeah"
+    "Slug": "gibeah",
+    "Places": "Ramah; Mizpah"
   },
   {
     "Name": "Mizpah",
@@ -309,7 +346,9 @@
     "KeyScriptures": "1 Samuel 7:5-12; Judges 20:1",
     "RelatedBooks": "Judges; 1 Samuel",
     "RelatedPeople": "Samuel",
-    "Slug": "mizpah"
+    "Slug": "mizpah",
+    "RelatedEvents": "Anointing of Saul as King",
+    "Places": "Ramah; Gibeah"
   },
   {
     "Name": "Ramah",
@@ -322,7 +361,9 @@
     "KeyScriptures": "1 Samuel 7:17; 1 Samuel 8:4-7; Judges 4:5",
     "RelatedBooks": "Judges; 1 Samuel",
     "RelatedPeople": "Samuel; Deborah",
-    "Slug": "ramah"
+    "Slug": "ramah",
+    "RelatedEvents": "Anointing of Saul as King",
+    "Places": "Mizpah; Gibeah; Shiloh"
   },
   {
     "Name": "Jerusalem",
@@ -335,7 +376,9 @@
     "KeyScriptures": "2 Samuel 5:6-9; Psalm 122:6; Luke 24:46-49",
     "RelatedBooks": "2 Samuel; Psalms; Luke; Acts",
     "RelatedPeople": "King David; King Solomon; Jesus; Simon Peter",
-    "Slug": "jerusalem"
+    "Slug": "jerusalem",
+    "RelatedEvents": "Binding of Isaac; Building of Solomon's Temple; David Becomes King; Davidic Covenant; David and Bathsheba; The Kingdom Divides; Hezekiah and Sennacherib's Invasion; Ezra Reads the Law; Fall of Jerusalem and the Exile; Cyrus's Decree and Return from Exile; Rebuilding of the Temple; Nehemiah Rebuilds the Wall; Triumphal Entry; Last Supper; Jesus Prays in Gethsemane; The Crucifixion; The Resurrection; The Ascension; Pentecost; Jerusalem Council; Martyrdom of Stephen",
+    "Places": "Bethlehem; Bethany; Golgotha; Hebron; Jericho"
   },
   {
     "Name": "Mount Carmel",
@@ -348,7 +391,9 @@
     "KeyScriptures": "1 Kings 18:19-39",
     "RelatedBooks": "1 Kings",
     "RelatedPeople": "Elijah",
-    "Slug": "mount-carmel"
+    "Slug": "mount-carmel",
+    "RelatedEvents": "Elijah on Mount Carmel",
+    "Places": "Samaria"
   },
   {
     "Name": "Tyre",
@@ -361,7 +406,8 @@
     "KeyScriptures": "1 Kings 5:1-6; 1 Kings 16:31; Matthew 15:21-28",
     "RelatedBooks": "1 Kings; Matthew",
     "RelatedPeople": "King Solomon; King Ahab; Jezebel; Jesus",
-    "Slug": "tyre"
+    "Slug": "tyre",
+    "Places": "Jerusalem"
   },
   {
     "Name": "Samaria",
@@ -374,7 +420,9 @@
     "KeyScriptures": "1 Kings 16:24; 2 Kings 17:6; John 4:4-26; Acts 8:5-8",
     "RelatedBooks": "1 Kings; 2 Kings; John; Acts",
     "RelatedPeople": "King Ahab; Elijah; Elisha; Jesus; The Samaritan Woman; Philip",
-    "Slug": "samaria"
+    "Slug": "samaria",
+    "RelatedEvents": "Fall of Samaria",
+    "Places": "Jerusalem; Shechem; Mount Carmel"
   },
   {
     "Name": "Nineveh",
@@ -387,7 +435,9 @@
     "KeyScriptures": "Jonah 3:1-10; Jonah 4:10-11; Matthew 12:41",
     "RelatedBooks": "Jonah; Matthew",
     "RelatedPeople": "Jonah",
-    "Slug": "nineveh"
+    "Slug": "nineveh",
+    "RelatedEvents": "Jonah and Nineveh; Jonah and the Great Fish",
+    "Places": "Samaria"
   },
   {
     "Name": "Babylon",
@@ -400,7 +450,9 @@
     "KeyScriptures": "2 Kings 25:8-11; Daniel 2:47; Daniel 3:28-29",
     "RelatedBooks": "2 Kings; Daniel; Ezekiel",
     "RelatedPeople": "Daniel; King Nebuchadnezzar; Shadrach, Meshach, and Abednego; Ezekiel",
-    "Slug": "babylon"
+    "Slug": "babylon",
+    "RelatedEvents": "Tower of Babel; Daniel in the Lions' Den; Shadrach, Meshach and Abednego in the Fiery Furnace; Cyrus's Decree and Return from Exile",
+    "Places": "Susa; Jerusalem"
   },
   {
     "Name": "Susa",
@@ -413,7 +465,9 @@
     "KeyScriptures": "Esther 4:14; Nehemiah 1:1-4; Nehemiah 2:17-18",
     "RelatedBooks": "Esther; Nehemiah",
     "RelatedPeople": "Queen Esther; Mordecai; Nehemiah",
-    "Slug": "susa"
+    "Slug": "susa",
+    "RelatedEvents": "Esther Saves the Jews",
+    "Places": "Babylon; Jerusalem"
   },
   {
     "Name": "River Chebar",
@@ -426,7 +480,8 @@
     "KeyScriptures": "Ezekiel 1:1-3; Ezekiel 3:15; Psalm 137:1",
     "RelatedBooks": "Ezekiel; Psalms",
     "RelatedPeople": "Ezekiel",
-    "Slug": "river-chebar"
+    "Slug": "river-chebar",
+    "Places": "Babylon"
   },
   {
     "Name": "Bethlehem",
@@ -439,7 +494,9 @@
     "KeyScriptures": "Ruth 4:11; Micah 5:2; Matthew 2:1-6; Luke 2:4-7",
     "RelatedBooks": "Ruth; 1 Samuel; Micah; Matthew; Luke",
     "RelatedPeople": "Ruth; Boaz; King David; Jesus; Mary, Mother of Jesus; Joseph, Husband of Mary",
-    "Slug": "bethlehem"
+    "Slug": "bethlehem",
+    "RelatedEvents": "Birth of Jesus; Story of Ruth",
+    "Places": "Jerusalem; Hebron; Nazareth"
   },
   {
     "Name": "Nazareth",
@@ -452,7 +509,8 @@
     "KeyScriptures": "Matthew 2:23; Luke 4:16-24; John 1:46",
     "RelatedBooks": "Matthew; Luke; John",
     "RelatedPeople": "Jesus; Mary, Mother of Jesus; Joseph, Husband of Mary",
-    "Slug": "nazareth"
+    "Slug": "nazareth",
+    "Places": "Bethlehem; Capernaum"
   },
   {
     "Name": "Capernaum",
@@ -465,7 +523,8 @@
     "KeyScriptures": "Matthew 4:13; Matthew 9:1; Matthew 11:23",
     "RelatedBooks": "Matthew; Mark",
     "RelatedPeople": "Jesus; Simon Peter; Andrew; Matthew",
-    "Slug": "capernaum"
+    "Slug": "capernaum",
+    "Places": "Galilee; Nazareth"
   },
   {
     "Name": "Galilee",
@@ -478,7 +537,9 @@
     "KeyScriptures": "Isaiah 9:1-2; Matthew 4:12-17; Matthew 28:16-20",
     "RelatedBooks": "Isaiah; Matthew",
     "RelatedPeople": "Jesus; Simon Peter; Andrew; James, Son of Zebedee; John the Apostle",
-    "Slug": "galilee"
+    "Slug": "galilee",
+    "RelatedEvents": "Sermon on the Mount; Jesus Calms the Storm; Feeding of the Five Thousand; Jesus Turns Water into Wine at Cana",
+    "Places": "Capernaum; Nazareth"
   },
   {
     "Name": "Bethany",
@@ -491,7 +552,9 @@
     "KeyScriptures": "Luke 10:38-42; John 11:1-44; John 12:1-8",
     "RelatedBooks": "Luke; John",
     "RelatedPeople": "Jesus; Mary of Bethany; Martha; Lazarus",
-    "Slug": "bethany"
+    "Slug": "bethany",
+    "RelatedEvents": "Raising of Lazarus; The Ascension",
+    "Places": "Jerusalem; Golgotha"
   },
   {
     "Name": "Golgotha",
@@ -504,7 +567,9 @@
     "KeyScriptures": "Matthew 27:33-35; John 19:17-18; Hebrews 13:12",
     "RelatedBooks": "Matthew; John; Hebrews",
     "RelatedPeople": "Jesus; Mary, Mother of Jesus; John the Apostle; Joseph of Arimathea",
-    "Slug": "golgotha"
+    "Slug": "golgotha",
+    "RelatedEvents": "The Crucifixion",
+    "Places": "Jerusalem; Bethany"
   },
   {
     "Name": "Antioch",
@@ -517,7 +582,9 @@
     "KeyScriptures": "Acts 11:25-26; Acts 13:1-3",
     "RelatedBooks": "Acts",
     "RelatedPeople": "Paul; Barnabas",
-    "Slug": "antioch"
+    "Slug": "antioch",
+    "RelatedEvents": "Paul's Missionary Journeys",
+    "Places": "Corinth; Ephesus"
   },
   {
     "Name": "Ephesus",
@@ -530,7 +597,9 @@
     "KeyScriptures": "Acts 19:8-10; Ephesians 1:3; Revelation 2:1-5",
     "RelatedBooks": "Acts; Ephesians; Revelation",
     "RelatedPeople": "Paul; Priscilla; Aquila; Timothy",
-    "Slug": "ephesus"
+    "Slug": "ephesus",
+    "RelatedEvents": "Paul's Missionary Journeys",
+    "Places": "Corinth; Antioch"
   },
   {
     "Name": "Corinth",
@@ -543,7 +612,9 @@
     "KeyScriptures": "Acts 18:1-11; 1 Corinthians 13:4-7; 1 Corinthians 15:3-4",
     "RelatedBooks": "Acts; 1 Corinthians; 2 Corinthians",
     "RelatedPeople": "Paul; Priscilla; Aquila",
-    "Slug": "corinth"
+    "Slug": "corinth",
+    "RelatedEvents": "Paul's Missionary Journeys",
+    "Places": "Ephesus; Antioch"
   },
   {
     "Name": "Philippi",
@@ -556,7 +627,9 @@
     "KeyScriptures": "Acts 16:11-15; Acts 16:25-34; Philippians 1:3-6",
     "RelatedBooks": "Acts; Philippians",
     "RelatedPeople": "Paul; Timothy; Lydia",
-    "Slug": "philippi"
+    "Slug": "philippi",
+    "RelatedEvents": "Paul's Missionary Journeys",
+    "Places": "Corinth; Ephesus"
   },
   {
     "Name": "Thessalonica",
@@ -569,7 +642,9 @@
     "KeyScriptures": "Acts 17:1-4; 1 Thessalonians 1:9-10; 1 Thessalonians 4:16-17",
     "RelatedBooks": "Acts; 1 Thessalonians; 2 Thessalonians",
     "RelatedPeople": "Paul; Timothy",
-    "Slug": "thessalonica"
+    "Slug": "thessalonica",
+    "RelatedEvents": "Paul's Missionary Journeys",
+    "Places": "Philippi; Corinth"
   },
   {
     "Name": "Colossae",
@@ -582,7 +657,8 @@
     "KeyScriptures": "Colossians 1:15-18; Colossians 2:8-10",
     "RelatedBooks": "Colossians",
     "RelatedPeople": "Paul",
-    "Slug": "colossae"
+    "Slug": "colossae",
+    "Places": "Ephesus"
   },
   {
     "Name": "Patmos",
@@ -595,7 +671,8 @@
     "KeyScriptures": "Revelation 1:9-11; Revelation 21:1-4",
     "RelatedBooks": "Revelation",
     "RelatedPeople": "John the Apostle",
-    "Slug": "patmos"
+    "Slug": "patmos",
+    "Places": "Ephesus"
   },
   {
     "Name": "Rome",
@@ -608,6 +685,8 @@
     "KeyScriptures": "Acts 28:30-31; Romans 1:16; 2 Timothy 4:6-8",
     "RelatedBooks": "Acts; Romans; 2 Timothy",
     "RelatedPeople": "Paul; Priscilla; Aquila",
-    "Slug": "rome"
+    "Slug": "rome",
+    "RelatedEvents": "Paul in Rome",
+    "Places": "Corinth; Philippi"
   }
 ]

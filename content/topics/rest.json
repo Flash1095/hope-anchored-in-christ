@@ -6,5 +6,6 @@
   "RelatedPeople": "Moses; King David; Jesus",
   "RelatedDoctrines": "Creation",
   "RelatedBooks": "Genesis; Exodus; Psalms; Matthew; Hebrews",
-  "Slug": "rest"
+  "Slug": "rest",
+  "RelatedEvents": "Creation"
 }

@@ -8,7 +8,9 @@
     "RelatedDoctrines": "Original Sin; Total Depravity",
     "RelatedQuestions": "Is original sin unjust?; Are we guilty for Adam's sin?",
     "RelatedBooks": "Genesis; Psalms; Romans",
-    "Slug": "original-sin"
+    "Slug": "original-sin",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "The Fall"
   },
   {
     "Topic": "Covenant",
@@ -19,7 +21,9 @@
     "RelatedDoctrines": "Covenant; New Covenant; Faithfulness of God",
     "RelatedQuestions": "What is a covenant in the Bible?; How is the new covenant different from the old?",
     "RelatedBooks": "Genesis; Exodus; Jeremiah; Luke; Hebrews",
-    "Slug": "covenant"
+    "Slug": "covenant",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "Giving of the Law at Sinai; Davidic Covenant"
   },
   {
     "Topic": "Redemption",
@@ -30,7 +34,9 @@
     "RelatedDoctrines": "Redemption; Atonement; Salvation",
     "RelatedQuestions": "What does it mean that Jesus redeemed us?; What are we redeemed from?",
     "RelatedBooks": "Exodus; Ruth; Mark; Ephesians; 1 Peter",
-    "Slug": "redemption"
+    "Slug": "redemption",
+    "Places": "Egypt; Golgotha",
+    "RelatedEvents": "The Exodus and the Red Sea; The Crucifixion"
   },
   {
     "Topic": "Grace",
@@ -41,7 +47,9 @@
     "RelatedDoctrines": "Grace; Salvation by Grace; Common Grace",
     "RelatedQuestions": "What is grace and how is it different from mercy?; Can we earn God's grace?",
     "RelatedBooks": "John; Romans; Ephesians; 2 Corinthians; Hebrews",
-    "Slug": "grace"
+    "Slug": "grace",
+    "Places": "Golgotha",
+    "RelatedEvents": "The Prodigal Son; The Crucifixion"
   },
   {
     "Topic": "Atonement",
@@ -52,7 +60,9 @@
     "RelatedDoctrines": "Atonement; Propitiation; Substitution; Reconciliation",
     "RelatedQuestions": "Why did Jesus have to die for our sins?; What does atonement mean?",
     "RelatedBooks": "Leviticus; Isaiah; Romans; Hebrews; 1 John",
-    "Slug": "atonement"
+    "Slug": "atonement",
+    "Places": "Golgotha; Jerusalem",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Topic": "Trinity",
@@ -63,7 +73,9 @@
     "RelatedDoctrines": "Trinity; God the Father; Christology; Holy Spirit",
     "RelatedQuestions": "Is the Trinity taught in the Bible?; How can God be three and one at the same time?",
     "RelatedBooks": "Genesis; Deuteronomy; Matthew; John; 2 Corinthians",
-    "Slug": "trinity"
+    "Slug": "trinity",
+    "Places": "Jordan River",
+    "RelatedEvents": "Baptism of Jesus"
   },
   {
     "Topic": "Resurrection",
@@ -74,7 +86,9 @@
     "RelatedDoctrines": "Resurrection; Bodily Resurrection; New Creation",
     "RelatedQuestions": "What evidence is there for the resurrection?; Why does the resurrection matter if Jesus already died for sins?",
     "RelatedBooks": "Matthew; John; Romans; 1 Corinthians; 1 Peter",
-    "Slug": "resurrection"
+    "Slug": "resurrection",
+    "Places": "Bethany; Jerusalem",
+    "RelatedEvents": "The Resurrection; Raising of Lazarus"
   },
   {
     "Topic": "Kingdom of God",
@@ -85,7 +99,9 @@
     "RelatedDoctrines": "Kingdom of God; Eschatology; Lordship of Christ",
     "RelatedQuestions": "What is the kingdom of God?; Is the kingdom of God already here or still coming?",
     "RelatedBooks": "Daniel; Matthew; Mark; Luke; John; Revelation",
-    "Slug": "kingdom-of-god"
+    "Slug": "kingdom-of-god",
+    "Places": "Galilee",
+    "RelatedEvents": "Sermon on the Mount"
   },
   {
     "Topic": "Forgiveness",
@@ -96,7 +112,9 @@
     "RelatedDoctrines": "Forgiveness; Reconciliation; Grace",
     "RelatedQuestions": "How can I forgive someone who hurt me deeply?; Does forgiving mean I have to trust them again?",
     "RelatedBooks": "Psalms; Matthew; Luke; Ephesians; Colossians",
-    "Slug": "forgiveness"
+    "Slug": "forgiveness",
+    "Places": "Golgotha",
+    "RelatedEvents": "The Prodigal Son; The Crucifixion"
   },
   {
     "Topic": "Justification",
@@ -107,7 +125,9 @@
     "RelatedDoctrines": "Justification; Imputed Righteousness; Faith Alone",
     "RelatedQuestions": "What does it mean to be justified by faith?; How can God declare sinners righteous and still be just?",
     "RelatedBooks": "Genesis; Romans; Galatians; Philippians",
-    "Slug": "justification"
+    "Slug": "justification",
+    "Places": "Golgotha",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Topic": "Sanctification",
@@ -129,7 +149,8 @@
     "RelatedDoctrines": "Second Coming; Eschatology; Resurrection of the Dead; Final Judgment",
     "RelatedQuestions": "When will Jesus return?; What will happen when Jesus comes back?",
     "RelatedBooks": "Matthew; John; Acts; 1 Thessalonians; Revelation",
-    "Slug": "second-coming"
+    "Slug": "second-coming",
+    "RelatedEvents": "The Ascension"
   },
   {
     "Topic": "Baptism",
@@ -140,7 +161,9 @@
     "RelatedDoctrines": "Baptism; New Birth; Church Ordinances",
     "RelatedQuestions": "Why do Christians get baptized?; Should babies be baptized?",
     "RelatedBooks": "Matthew; Acts; Romans; Colossians; 1 Peter",
-    "Slug": "baptism"
+    "Slug": "baptism",
+    "Places": "Jordan River",
+    "RelatedEvents": "Baptism of Jesus"
   },
   {
     "Topic": "Worship",
@@ -162,7 +185,9 @@
     "RelatedDoctrines": "Prayer; Intercession; Providence",
     "RelatedQuestions": "Does prayer change God's mind?; Why does God seem not to answer some prayers?",
     "RelatedBooks": "Psalms; Matthew; Luke; Philippians; James",
-    "Slug": "prayer"
+    "Slug": "prayer",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Jesus Prays in Gethsemane"
   },
   {
     "Topic": "Discipleship",
@@ -173,7 +198,9 @@
     "RelatedDoctrines": "Discipleship; Great Commission; Spiritual Growth",
     "RelatedQuestions": "What does it mean to be a disciple of Jesus?; How do I disciple someone else?",
     "RelatedBooks": "Matthew; Luke; John; Acts; 2 Timothy",
-    "Slug": "discipleship"
+    "Slug": "discipleship",
+    "Places": "Galilee",
+    "RelatedEvents": "Sermon on the Mount"
   },
   {
     "Topic": "Creation",
@@ -184,7 +211,9 @@
     "RelatedDoctrines": "Creation; Image of God; Providence",
     "RelatedQuestions": "Did God create the world in six literal days?; What does it mean to be made in the image of God?",
     "RelatedBooks": "Genesis; Psalms; John; Colossians; Hebrews",
-    "Slug": "creation"
+    "Slug": "creation",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "Creation"
   },
   {
     "Topic": "The Fall",
@@ -195,7 +224,9 @@
     "RelatedDoctrines": "The Fall; Original Sin; Curse",
     "RelatedQuestions": "What happened at the Fall?; Why did God allow Adam and Eve to sin?",
     "RelatedBooks": "Genesis; Romans; 1 Corinthians",
-    "Slug": "the-fall"
+    "Slug": "the-fall",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "The Fall"
   },
   {
     "Topic": "Exodus",
@@ -206,7 +237,9 @@
     "RelatedDoctrines": "Redemption; Passover; Covenant",
     "RelatedQuestions": "Did the Exodus really happen?; How does the Exodus point to Jesus?",
     "RelatedBooks": "Exodus; Deuteronomy; 1 Corinthians",
-    "Slug": "exodus"
+    "Slug": "exodus",
+    "Places": "Egypt; Goshen; Mount Sinai",
+    "RelatedEvents": "The Ten Plagues; The Passover; The Exodus and the Red Sea; Giving of the Law at Sinai"
   },
   {
     "Topic": "Exile",
@@ -217,7 +250,9 @@
     "RelatedDoctrines": "Exile; Remnant; Restoration; Judgment",
     "RelatedQuestions": "Why did God send Israel into exile?; What can Christians learn from the exile?",
     "RelatedBooks": "2 Kings; Psalms; Jeremiah; Ezekiel; Daniel; Ezra",
-    "Slug": "exile"
+    "Slug": "exile",
+    "Places": "Babylon; Jerusalem; River Chebar",
+    "RelatedEvents": "Fall of Jerusalem and the Exile; Cyrus's Decree and Return from Exile"
   },
   {
     "Topic": "Prophecy",
@@ -228,7 +263,9 @@
     "RelatedDoctrines": "Prophecy; Inspiration of Scripture; Messianic Prophecy",
     "RelatedQuestions": "How can we tell true prophecy from false prophecy?; Which prophecies did Jesus fulfill?",
     "RelatedBooks": "Deuteronomy; Isaiah; Micah; Luke; 2 Peter",
-    "Slug": "prophecy"
+    "Slug": "prophecy",
+    "Places": "Mount Carmel; Nineveh",
+    "RelatedEvents": "Elijah on Mount Carmel; Jonah and Nineveh"
   },
   {
     "Topic": "Wisdom",
@@ -250,7 +287,8 @@
     "RelatedDoctrines": "Hope; Perseverance; Resurrection",
     "RelatedQuestions": "How is Christian hope different from wishful thinking?; How can I hold onto hope when life is hard?",
     "RelatedBooks": "Psalms; Lamentations; Romans; Hebrews; 1 Peter",
-    "Slug": "hope"
+    "Slug": "hope",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Topic": "Faith",
@@ -261,7 +299,8 @@
     "RelatedDoctrines": "Faith; Justification by Faith; Perseverance",
     "RelatedQuestions": "What is faith according to the Bible?; Can faith and doubt exist together?",
     "RelatedBooks": "Genesis; Habakkuk; Romans; Ephesians; Hebrews; James",
-    "Slug": "faith"
+    "Slug": "faith",
+    "RelatedEvents": "Binding of Isaac"
   },
   {
     "Topic": "Love",
@@ -272,7 +311,9 @@
     "RelatedDoctrines": "Love of God; Agape; Greatest Commandment",
     "RelatedQuestions": "What does the Bible mean by love?; How can I love difficult people?",
     "RelatedBooks": "Deuteronomy; Matthew; John; Romans; 1 Corinthians; 1 John",
-    "Slug": "love"
+    "Slug": "love",
+    "Places": "Golgotha",
+    "RelatedEvents": "The Good Samaritan; The Crucifixion"
   },
   {
     "Topic": "Holiness",
@@ -283,7 +324,9 @@
     "RelatedDoctrines": "Holiness; Sanctification; Attributes of God",
     "RelatedQuestions": "What does it mean that God is holy?; Why does holiness matter for ordinary Christians?",
     "RelatedBooks": "Leviticus; Isaiah; Matthew; Hebrews; 1 Peter",
-    "Slug": "holiness"
+    "Slug": "holiness",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "Giving of the Law at Sinai"
   },
   {
     "Topic": "Justice",
@@ -294,7 +337,9 @@
     "RelatedDoctrines": "Justice; Righteousness of God; Judgment",
     "RelatedQuestions": "How can a loving God also be just?; What does the Bible say about doing justice today?",
     "RelatedBooks": "Genesis; Deuteronomy; Psalms; Micah; Amos; Romans",
-    "Slug": "justice"
+    "Slug": "justice",
+    "Places": "Golgotha",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Topic": "Mercy",
@@ -305,7 +350,8 @@
     "RelatedDoctrines": "Mercy; Grace; Compassion of God",
     "RelatedQuestions": "What is the difference between mercy and grace?; How can I show mercy without excusing sin?",
     "RelatedBooks": "Exodus; Psalms; Lamentations; Micah; Matthew; Titus",
-    "Slug": "mercy"
+    "Slug": "mercy",
+    "RelatedEvents": "The Prodigal Son; The Good Samaritan"
   },
   {
     "Topic": "Heaven",
@@ -316,7 +362,8 @@
     "RelatedDoctrines": "Heaven; New Creation; Eternal Life",
     "RelatedQuestions": "What will heaven be like?; Will we recognize loved ones in heaven?",
     "RelatedBooks": "John; Philippians; 2 Peter; Revelation",
-    "Slug": "heaven"
+    "Slug": "heaven",
+    "RelatedEvents": "The Ascension"
   },
   {
     "Topic": "Hell",
@@ -349,7 +396,9 @@
     "RelatedDoctrines": "Church; Body of Christ; Ecclesiology",
     "RelatedQuestions": "Why do I need to go to church if I believe in Jesus?; What is the church supposed to do?",
     "RelatedBooks": "Matthew; Acts; 1 Corinthians; Ephesians; 1 Peter",
-    "Slug": "church"
+    "Slug": "church",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Pentecost"
   },
   {
     "Topic": "Evangelism",
@@ -360,7 +409,9 @@
     "RelatedDoctrines": "Evangelism; Great Commission; Gospel",
     "RelatedQuestions": "How do I share my faith without being pushy?; What exactly is the gospel I should share?",
     "RelatedBooks": "Matthew; Acts; Romans; 2 Corinthians; 1 Peter",
-    "Slug": "evangelism"
+    "Slug": "evangelism",
+    "Places": "Jerusalem; Antioch",
+    "RelatedEvents": "Pentecost; Paul's Missionary Journeys"
   },
   {
     "Topic": "Suffering",
@@ -371,7 +422,9 @@
     "RelatedDoctrines": "Suffering; Problem of Evil; Providence; Perseverance",
     "RelatedQuestions": "If God is good and powerful, why is there so much suffering?; Does suffering mean God is punishing me?",
     "RelatedBooks": "Job; Psalms; John; Romans; 2 Corinthians; 1 Peter",
-    "Slug": "suffering"
+    "Slug": "suffering",
+    "Places": "Golgotha",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Topic": "Doubt",
@@ -393,7 +446,9 @@
     "RelatedDoctrines": "Fear; Fear of the Lord; Trust in God",
     "RelatedQuestions": "What does the Bible say about fear?; How can I stop being afraid when I cannot control the future?",
     "RelatedBooks": "Genesis; Psalms; Isaiah; Matthew; 2 Timothy; 1 John",
-    "Slug": "fear"
+    "Slug": "fear",
+    "Places": "Galilee",
+    "RelatedEvents": "Jesus Calms the Storm"
   },
   {
     "Topic": "Anxiety",
@@ -404,7 +459,8 @@
     "RelatedDoctrines": "Anxiety; Peace of God; Providence",
     "RelatedQuestions": "What does the Bible say about anxiety and worry?; Is anxiety a lack of faith?",
     "RelatedBooks": "Psalms; Proverbs; Matthew; John; Philippians; 1 Peter",
-    "Slug": "anxiety"
+    "Slug": "anxiety",
+    "RelatedEvents": "Sermon on the Mount"
   },
   {
     "Topic": "Marriage",
@@ -415,7 +471,9 @@
     "RelatedDoctrines": "Marriage; Covenant; Family",
     "RelatedQuestions": "What does the Bible say about marriage?; How can a Christian marriage survive hard seasons?",
     "RelatedBooks": "Genesis; Proverbs; Malachi; Matthew; Ephesians",
-    "Slug": "marriage"
+    "Slug": "marriage",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "Creation"
   },
   {
     "Topic": "Parenting",
@@ -437,7 +495,9 @@
     "RelatedDoctrines": "Leadership; Servanthood; Eldership",
     "RelatedQuestions": "What makes a good leader according to the Bible?; How should Christians respond to flawed leaders?",
     "RelatedBooks": "Joshua; Mark; 1 Timothy; 1 Peter",
-    "Slug": "leadership"
+    "Slug": "leadership",
+    "Places": "Hebron",
+    "RelatedEvents": "David Becomes King"
   },
   {
     "Topic": "Abolition",
@@ -456,7 +516,9 @@
     "RelatedPeople": "Adam; Eve; Jesus",
     "RelatedDoctrines": "Original Sin",
     "RelatedBooks": "Genesis; Romans; 1 Corinthians",
-    "Slug": "adam-and-eve"
+    "Slug": "adam-and-eve",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "Creation; The Fall"
   },
   {
     "Topic": "Allegory",
@@ -476,7 +538,9 @@
     "RelatedPeople": "Moses; King David; Isaiah",
     "RelatedDoctrines": "Election",
     "RelatedBooks": "Exodus; Deuteronomy; 1 Kings; Isaiah",
-    "Slug": "ancient-israel"
+    "Slug": "ancient-israel",
+    "Places": "Canaan; Jerusalem",
+    "RelatedEvents": "The Exodus and the Red Sea; Fall of Jerusalem and the Exile"
   },
   {
     "Topic": "Apologetics",
@@ -527,7 +591,8 @@
     "RelatedPeople": "King David; John the Apostle",
     "RelatedDoctrines": "Creation",
     "RelatedBooks": "Genesis; Psalms; Revelation",
-    "Slug": "beauty"
+    "Slug": "beauty",
+    "RelatedEvents": "Creation"
   },
   {
     "Topic": "Bible History",
@@ -589,7 +654,9 @@
     "RelatedPeople": "Simon Peter; John the Apostle; Paul",
     "RelatedDoctrines": "Holy Spirit",
     "RelatedBooks": "Acts; Ephesians; Proverbs",
-    "Slug": "boldness"
+    "Slug": "boldness",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Pentecost"
   },
   {
     "Topic": "Buddhism",
@@ -607,7 +674,9 @@
     "KeyPassages": "Exodus 3:1-12; Isaiah 6:8; Matthew 4:18-22; Ephesians 4:1; 1 Peter 2:9",
     "RelatedPeople": "Moses; Isaiah; Simon Peter",
     "RelatedBooks": "Exodus; Isaiah; Matthew; Ephesians; 1 Peter",
-    "Slug": "calling"
+    "Slug": "calling",
+    "Places": "Midian",
+    "RelatedEvents": "The Burning Bush"
   },
   {
     "Topic": "Canon",
@@ -626,7 +695,9 @@
     "KeyPassages": "Exodus 20:1-17; Micah 6:8; Matthew 5:1-12; Romans 12:1-2",
     "RelatedPeople": "Moses; Jesus; Paul",
     "RelatedBooks": "Exodus; Micah; Matthew; Romans",
-    "Slug": "christian-ethics"
+    "Slug": "christian-ethics",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "The Ten Commandments; Sermon on the Mount"
   },
   {
     "Topic": "Christian Life",
@@ -647,7 +718,9 @@
     "RelatedPeople": "Simon Peter; Paul; Stephen",
     "RelatedQuestions": "How can I share my faith with others?",
     "RelatedBooks": "Matthew; Acts; 1 Peter; Colossians",
-    "Slug": "christian-witness"
+    "Slug": "christian-witness",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Pentecost"
   },
   {
     "Topic": "Christology",
@@ -658,7 +731,8 @@
     "RelatedDoctrines": "Incarnation; Trinity; Atonement",
     "RelatedQuestions": "Who is Jesus Christ?",
     "RelatedBooks": "John; Philippians; Colossians; Hebrews",
-    "Slug": "christology"
+    "Slug": "christology",
+    "RelatedEvents": "Transfiguration; The Resurrection"
   },
   {
     "Topic": "Church Councils",
@@ -677,7 +751,9 @@
     "RelatedPeople": "Simon Peter; Paul; Stephen",
     "RelatedDoctrines": "The Church",
     "RelatedBooks": "Acts; Revelation",
-    "Slug": "church-history"
+    "Slug": "church-history",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Pentecost"
   },
   {
     "Topic": "Church Hurt",
@@ -706,7 +782,9 @@
     "RelatedDoctrines": "Lord's Supper; Atonement",
     "RelatedQuestions": "What is baptism and should I be baptized?",
     "RelatedBooks": "Matthew; Luke; 1 Corinthians",
-    "Slug": "communion"
+    "Slug": "communion",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Last Supper"
   },
   {
     "Topic": "Community",
@@ -717,7 +795,9 @@
     "RelatedDoctrines": "The Church",
     "RelatedQuestions": "Why should I go to church?",
     "RelatedBooks": "Acts; Romans; Hebrews; 1 John",
-    "Slug": "community"
+    "Slug": "community",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Pentecost"
   },
   {
     "Topic": "Compassion",
@@ -726,7 +806,8 @@
     "KeyPassages": "Psalm 103:13; Matthew 9:36; Luke 10:30-37; Colossians 3:12",
     "RelatedPeople": "Jesus; King David",
     "RelatedBooks": "Psalms; Matthew; Luke; Colossians",
-    "Slug": "compassion"
+    "Slug": "compassion",
+    "RelatedEvents": "The Good Samaritan; Feeding of the Five Thousand"
   },
   {
     "Topic": "Confession",
@@ -735,7 +816,8 @@
     "KeyPassages": "Psalm 32:1-5; Proverbs 28:13; 1 John 1:9; James 5:16",
     "RelatedPeople": "King David; John the Apostle",
     "RelatedBooks": "Psalms; Proverbs; 1 John; James",
-    "Slug": "confession"
+    "Slug": "confession",
+    "RelatedEvents": "David and Bathsheba"
   },
   {
     "Topic": "Conscience",
@@ -773,7 +855,8 @@
     "RelatedPeople": "Paul; Ezekiel",
     "RelatedDoctrines": "Justification",
     "RelatedBooks": "Ezekiel; Acts; 2 Corinthians",
-    "Slug": "conversion"
+    "Slug": "conversion",
+    "RelatedEvents": "The Conversion of Paul"
   },
   {
     "Topic": "Courage",
@@ -782,7 +865,9 @@
     "KeyPassages": "Joshua 1:9; Esther 4:14-16; Daniel 6:10-23; Acts 4:13",
     "RelatedPeople": "Joshua; Queen Esther; Daniel; Simon Peter",
     "RelatedBooks": "Joshua; Esther; Daniel; Acts",
-    "Slug": "courage"
+    "Slug": "courage",
+    "Places": "Susa",
+    "RelatedEvents": "Esther Saves Her People; David and Goliath"
   },
   {
     "Topic": "Creeds",
@@ -803,7 +888,9 @@
     "RelatedDoctrines": "Atonement",
     "RelatedQuestions": "Why did Jesus have to die on the cross?",
     "RelatedBooks": "Psalms; Isaiah; Mark; John",
-    "Slug": "crucifixion"
+    "Slug": "crucifixion",
+    "Places": "Golgotha; Jerusalem",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Topic": "Culture",
@@ -831,7 +918,9 @@
     "RelatedPeople": "Jesus; Paul",
     "RelatedDoctrines": "Resurrection",
     "RelatedBooks": "Genesis; Psalms; John; 1 Corinthians",
-    "Slug": "death"
+    "Slug": "death",
+    "Places": "Golgotha",
+    "RelatedEvents": "The Crucifixion; The Resurrection"
   },
   {
     "Topic": "Definitions",
@@ -849,7 +938,9 @@
     "KeyPassages": "Exodus 14:13-31; Psalm 34:17-19; Colossians 1:13-14; Galatians 5:1",
     "RelatedPeople": "Moses; King David; Paul",
     "RelatedBooks": "Exodus; Psalms; Colossians; Galatians",
-    "Slug": "deliverance"
+    "Slug": "deliverance",
+    "Places": "Egypt",
+    "RelatedEvents": "The Exodus and the Red Sea"
   },
   {
     "Topic": "Desire",
@@ -896,7 +987,9 @@
     "RelatedPeople": "Moses; Isaiah; Jesus; Paul",
     "RelatedDoctrines": "Trinity; Incarnation",
     "RelatedBooks": "Exodus; Isaiah; John; Colossians",
-    "Slug": "divinity"
+    "Slug": "divinity",
+    "Places": "Jordan River",
+    "RelatedEvents": "Baptism of Jesus; Transfiguration"
   },
   {
     "Topic": "Doctrine",
@@ -915,7 +1008,9 @@
     "RelatedPeople": "Simon Peter; Paul; Stephen; Barnabas",
     "RelatedDoctrines": "The Church; Holy Spirit",
     "RelatedBooks": "Acts",
-    "Slug": "early-church"
+    "Slug": "early-church",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Pentecost"
   },
   {
     "Topic": "Easter",
@@ -926,7 +1021,9 @@
     "RelatedDoctrines": "Resurrection",
     "RelatedQuestions": "Did Jesus really rise from the dead?",
     "RelatedBooks": "Matthew; Mark; Luke; John; 1 Corinthians",
-    "Slug": "easter"
+    "Slug": "easter",
+    "Places": "Jerusalem; Golgotha",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Topic": "Emotions",
@@ -946,7 +1043,8 @@
     "RelatedDoctrines": "Second Coming; Resurrection; Heaven; Hell",
     "RelatedQuestions": "Will Jesus come back?; What are the signs of the end times?",
     "RelatedBooks": "Daniel; Matthew; 1 Thessalonians; Revelation",
-    "Slug": "end-times"
+    "Slug": "end-times",
+    "RelatedEvents": "The Ascension"
   },
   {
     "Topic": "Eschatology",
@@ -956,7 +1054,8 @@
     "RelatedPeople": "Isaiah; Paul; Simon Peter; John the Apostle",
     "RelatedDoctrines": "Second Coming; Resurrection; Heaven",
     "RelatedBooks": "Isaiah; Romans; 2 Peter; Revelation",
-    "Slug": "eschatology"
+    "Slug": "eschatology",
+    "RelatedEvents": "The Ascension"
   },
   {
     "Topic": "Eternal Life",
@@ -966,7 +1065,9 @@
     "RelatedPeople": "Jesus; Paul; John the Apostle",
     "RelatedDoctrines": "Resurrection; Heaven",
     "RelatedBooks": "John; Romans; 1 John",
-    "Slug": "eternal-life"
+    "Slug": "eternal-life",
+    "Places": "Bethany",
+    "RelatedEvents": "The Resurrection; Raising of Lazarus"
   },
   {
     "Topic": "Eternal Security",
@@ -995,7 +1096,9 @@
     "KeyPassages": "Exodus 20:1-17; Micah 6:8; Matthew 22:37-40; Romans 13:8-10",
     "RelatedPeople": "Moses; Jesus; Paul",
     "RelatedBooks": "Exodus; Micah; Matthew; Romans",
-    "Slug": "ethics"
+    "Slug": "ethics",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "The Ten Commandments; Sermon on the Mount"
   },
   {
     "Topic": "Evidence",
@@ -1015,7 +1118,9 @@
     "RelatedPeople": "Job; Jesus; Paul",
     "RelatedQuestions": "Why does God allow suffering?; Why does God seem silent in my hardest seasons?",
     "RelatedBooks": "Genesis; Job; Isaiah; Romans; Revelation",
-    "Slug": "evil-and-suffering"
+    "Slug": "evil-and-suffering",
+    "Places": "Golgotha",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Topic": "Evolution",
@@ -1045,7 +1150,9 @@
     "RelatedPeople": "Simon Peter; Paul; John the Apostle",
     "RelatedQuestions": "Did Jesus really rise from the dead?",
     "RelatedBooks": "Luke; John; Acts; 1 Corinthians; 1 John",
-    "Slug": "eyewitnesses"
+    "Slug": "eyewitnesses",
+    "Places": "Jerusalem",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Topic": "Faith and Reason",
@@ -1063,7 +1170,9 @@
     "KeyPassages": "Deuteronomy 7:9; Lamentations 3:22-23; 1 Corinthians 1:9; 2 Timothy 2:13; Hebrews 10:23",
     "RelatedPeople": "Moses; Jeremiah; Paul",
     "RelatedBooks": "Deuteronomy; Lamentations; 1 Corinthians; 2 Timothy; Hebrews",
-    "Slug": "faithfulness-of-god"
+    "Slug": "faithfulness-of-god",
+    "Places": "Egypt; Golgotha",
+    "RelatedEvents": "The Exodus and the Red Sea; The Crucifixion"
   },
   {
     "Topic": "False Teaching",
@@ -1092,7 +1201,9 @@
     "RelatedDoctrines": "The Church",
     "RelatedQuestions": "Why should I go to church?",
     "RelatedBooks": "Acts; 1 Corinthians; 1 John; Hebrews",
-    "Slug": "fellowship"
+    "Slug": "fellowship",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Pentecost"
   },
   {
     "Topic": "Generosity",
@@ -1111,7 +1222,8 @@
     "KeyPassages": "Exodus 33:18-23; Psalm 19:1; John 1:14; Romans 3:23; Revelation 21:23",
     "RelatedPeople": "Moses; Jesus; Paul",
     "RelatedBooks": "Exodus; Psalms; John; Romans; Revelation",
-    "Slug": "glory"
+    "Slug": "glory",
+    "RelatedEvents": "Transfiguration"
   },
   {
     "Topic": "God's Holiness",
@@ -1121,7 +1233,9 @@
     "RelatedPeople": "Moses; Isaiah; Simon Peter; John the Apostle",
     "RelatedQuestions": "What does holy mean and why does it matter?",
     "RelatedBooks": "Exodus; Isaiah; 1 Peter; Revelation",
-    "Slug": "god-s-holiness"
+    "Slug": "god-s-holiness",
+    "Places": "Midian",
+    "RelatedEvents": "The Burning Bush"
   },
   {
     "Topic": "God's Power",
@@ -1130,7 +1244,9 @@
     "KeyPassages": "Genesis 1:1-3; Exodus 14:13-31; Psalm 115:3; Ephesians 1:19-20; Jeremiah 32:17",
     "RelatedPeople": "Moses; Paul; Jeremiah",
     "RelatedBooks": "Genesis; Exodus; Psalms; Ephesians; Jeremiah",
-    "Slug": "god-s-power"
+    "Slug": "god-s-power",
+    "Places": "Egypt; Golgotha",
+    "RelatedEvents": "Creation; The Exodus and the Red Sea; The Resurrection"
   },
   {
     "Topic": "God's Protection",
@@ -1139,7 +1255,9 @@
     "KeyPassages": "Psalm 91:1-4; Psalm 121:1-8; Isaiah 43:1-2; John 10:27-29; Romans 8:38-39",
     "RelatedPeople": "King David; Jesus; Paul",
     "RelatedBooks": "Psalms; Isaiah; John; Romans",
-    "Slug": "god-s-protection"
+    "Slug": "god-s-protection",
+    "Places": "Babylon",
+    "RelatedEvents": "Daniel in the Lions' Den"
   },
   {
     "Topic": "God's Providence",
@@ -1149,7 +1267,9 @@
     "RelatedPeople": "Joseph, Son of Jacob; Paul",
     "RelatedDoctrines": "Providence",
     "RelatedBooks": "Genesis; Psalms; Proverbs; Romans; Ephesians",
-    "Slug": "god-s-providence"
+    "Slug": "god-s-providence",
+    "Places": "Egypt; Susa",
+    "RelatedEvents": "Joseph and His Brothers; Esther Saves Her People"
   },
   {
     "Topic": "God's Provision",
@@ -1158,7 +1278,8 @@
     "KeyPassages": "Exodus 16:4-18; Psalm 23:1; Matthew 6:25-34; Philippians 4:19",
     "RelatedPeople": "Moses; Jesus; Paul",
     "RelatedBooks": "Exodus; Psalms; Matthew; Philippians",
-    "Slug": "god-s-provision"
+    "Slug": "god-s-provision",
+    "RelatedEvents": "Wilderness Wanderings"
   },
   {
     "Topic": "God's Sovereignty",
@@ -1168,7 +1289,9 @@
     "RelatedPeople": "Daniel; Paul",
     "RelatedQuestions": "What does it mean that God is sovereign?",
     "RelatedBooks": "Psalms; Isaiah; Daniel; Romans; Ephesians",
-    "Slug": "god-s-sovereignty"
+    "Slug": "god-s-sovereignty",
+    "Places": "Babylon",
+    "RelatedEvents": "Cyrus's Decree and Return from Exile"
   },
   {
     "Topic": "God's Will",
@@ -1206,7 +1329,9 @@
     "KeyPassages": "Matthew 1:1; Mark 1:1; Luke 1:1-4; John 20:30-31",
     "RelatedPeople": "Jesus; Matthew",
     "RelatedBooks": "Matthew; Mark; Luke; John",
-    "Slug": "gospels"
+    "Slug": "gospels",
+    "Places": "Bethlehem; Nazareth; Galilee; Jerusalem; Golgotha",
+    "RelatedEvents": "Birth of Jesus; Baptism of Jesus; The Crucifixion; The Resurrection"
   },
   {
     "Topic": "Guidance",
@@ -1244,7 +1369,9 @@
     "RelatedPeople": "Job; King David; Jesus; Isaiah",
     "RelatedQuestions": "Why does God seem silent in my hardest seasons?",
     "RelatedBooks": "Job; Psalms; Isaiah; Matthew",
-    "Slug": "hiddenness"
+    "Slug": "hiddenness",
+    "Places": "Golgotha",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Topic": "History",
@@ -1263,7 +1390,9 @@
     "RelatedPeople": "Adam; Paul",
     "RelatedDoctrines": "Original Sin; Total Depravity",
     "RelatedBooks": "Genesis; Romans; Ephesians",
-    "Slug": "human-nature"
+    "Slug": "human-nature",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "Creation; The Fall"
   },
   {
     "Topic": "Humanity",
@@ -1273,7 +1402,9 @@
     "RelatedPeople": "Adam; Jesus",
     "RelatedDoctrines": "Creation",
     "RelatedBooks": "Genesis; Psalms; Hebrews; Revelation",
-    "Slug": "humanity"
+    "Slug": "humanity",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "Creation; The Fall"
   },
   {
     "Topic": "Humility",
@@ -1282,7 +1413,9 @@
     "KeyPassages": "Proverbs 11:2; Micah 6:8; Philippians 2:3-11; 1 Peter 5:5-6; James 4:6",
     "RelatedPeople": "Jesus; Paul; Simon Peter",
     "RelatedBooks": "Proverbs; Micah; Philippians; 1 Peter; James",
-    "Slug": "humility"
+    "Slug": "humility",
+    "Places": "Golgotha",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Topic": "Hypocrisy",
@@ -1301,7 +1434,9 @@
     "RelatedPeople": "Jesus; Paul; John the Apostle",
     "RelatedDoctrines": "Incarnation; Trinity",
     "RelatedBooks": "John; Philippians; Colossians; Hebrews",
-    "Slug": "hypostatic-union"
+    "Slug": "hypostatic-union",
+    "Places": "Jordan River",
+    "RelatedEvents": "Baptism of Jesus; Transfiguration"
   },
   {
     "Topic": "Identity",
@@ -1319,7 +1454,9 @@
     "KeyPassages": "Exodus 20:3-6; Psalm 115:4-8; Isaiah 44:9-20; 1 Corinthians 10:14; 1 John 5:21",
     "RelatedPeople": "Moses; Paul; John the Apostle",
     "RelatedBooks": "Exodus; Psalms; Isaiah; 1 Corinthians; 1 John",
-    "Slug": "idolatry"
+    "Slug": "idolatry",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "The Golden Calf"
   },
   {
     "Topic": "Image of God",
@@ -1330,7 +1467,9 @@
     "RelatedDoctrines": "Creation",
     "RelatedQuestions": "What does it mean to be made in the image of God?",
     "RelatedBooks": "Genesis; Colossians; James",
-    "Slug": "image-of-god"
+    "Slug": "image-of-god",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "Creation"
   },
   {
     "Topic": "Imagination",
@@ -1389,7 +1528,9 @@
     "RelatedDoctrines": "Incarnation; Trinity; Atonement",
     "RelatedQuestions": "Who is Jesus Christ?; Why did Jesus have to die on the cross?; Did Jesus really rise from the dead?",
     "RelatedBooks": "Isaiah; Matthew; John; Philippians; Colossians",
-    "Slug": "jesus-christ"
+    "Slug": "jesus-christ",
+    "Places": "Bethlehem; Nazareth; Galilee; Jerusalem; Golgotha",
+    "RelatedEvents": "Birth of Jesus; Baptism of Jesus; The Crucifixion; The Resurrection"
   },
   {
     "Topic": "Judgment",
@@ -1400,7 +1541,9 @@
     "RelatedDoctrines": "Heaven; Hell; Second Coming",
     "RelatedQuestions": "How can a loving God send people to hell?; What does the Bible say about hell?",
     "RelatedBooks": "Ecclesiastes; Matthew; Romans; 2 Corinthians; Revelation",
-    "Slug": "judgment"
+    "Slug": "judgment",
+    "Places": "Jerusalem; Mount Ararat",
+    "RelatedEvents": "Noah and the Flood; Fall of Jerusalem and the Exile"
   },
   {
     "Topic": "Karma",
@@ -1418,7 +1561,8 @@
     "KeyPassages": "Ruth 2:8-13; Proverbs 11:17; Luke 6:35-36; Galatians 5:22; Ephesians 4:32; Titus 3:4-5",
     "RelatedPeople": "Ruth; Boaz; Jesus; Paul",
     "RelatedBooks": "Ruth; Proverbs; Luke; Galatians; Ephesians; Titus",
-    "Slug": "kindness"
+    "Slug": "kindness",
+    "RelatedEvents": "The Good Samaritan"
   },
   {
     "Topic": "Knowledge of God",
@@ -1446,7 +1590,9 @@
     "RelatedPeople": "Moses; Jesus; Paul",
     "RelatedDoctrines": "Resurrection",
     "RelatedBooks": "Genesis; Deuteronomy; John; Romans",
-    "Slug": "life"
+    "Slug": "life",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "Creation; The Resurrection"
   },
   {
     "Topic": "Listening Well",
@@ -1482,7 +1628,8 @@
     "KeyPassages": "Psalm 110:1; Matthew 28:18; Romans 10:9; Philippians 2:9-11; Colossians 3:17",
     "RelatedPeople": "King David; Jesus; Paul",
     "RelatedBooks": "Psalms; Matthew; Romans; Philippians; Colossians",
-    "Slug": "lordship"
+    "Slug": "lordship",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Topic": "Love of God",
@@ -1491,7 +1638,9 @@
     "KeyPassages": "Deuteronomy 7:7-9; Psalm 136:1; John 3:16; Romans 5:8; 1 John 4:9-10",
     "RelatedPeople": "Moses; Jesus; Paul; John the Apostle",
     "RelatedBooks": "Deuteronomy; Psalms; John; Romans; 1 John",
-    "Slug": "love-of-god"
+    "Slug": "love-of-god",
+    "Places": "Golgotha",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Topic": "Loyalty",
@@ -1500,7 +1649,9 @@
     "KeyPassages": "Ruth 1:16-17; 1 Samuel 20:14-17; Proverbs 17:17; John 15:13; Revelation 2:10",
     "RelatedPeople": "Ruth; Naomi; Jonathan; Jesus",
     "RelatedBooks": "Ruth; 1 Samuel; Proverbs; John; Revelation",
-    "Slug": "loyalty"
+    "Slug": "loyalty",
+    "Places": "Bethlehem",
+    "RelatedEvents": "Ruth's Loyalty"
   },
   {
     "Topic": "Manipulation",
@@ -1528,7 +1679,9 @@
     "KeyPassages": "Acts 7:54-60; Revelation 6:9-11; Revelation 12:11; Hebrews 11:35-38",
     "RelatedPeople": "Stephen",
     "RelatedBooks": "Acts; Revelation; Hebrews",
-    "Slug": "martyrdom"
+    "Slug": "martyrdom",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Martyrdom of Stephen"
   },
   {
     "Topic": "Messiah",
@@ -1539,7 +1692,9 @@
     "RelatedDoctrines": "Incarnation; Atonement",
     "RelatedQuestions": "Which prophecies did Jesus fulfill?",
     "RelatedBooks": "Psalms; Isaiah; Daniel; Luke; John",
-    "Slug": "messiah"
+    "Slug": "messiah",
+    "Places": "Bethlehem; Jordan River; Golgotha",
+    "RelatedEvents": "Birth of Jesus; Baptism of Jesus; The Crucifixion; The Resurrection"
   },
   {
     "Topic": "Messianic Prophecies",
@@ -1550,7 +1705,9 @@
     "RelatedDoctrines": "Incarnation",
     "RelatedQuestions": "Which prophecies did Jesus fulfill?",
     "RelatedBooks": "Genesis; Micah; Isaiah; Zechariah; Matthew",
-    "Slug": "messianic-prophecies"
+    "Slug": "messianic-prophecies",
+    "Places": "Bethlehem",
+    "RelatedEvents": "Birth of Jesus"
   },
   {
     "Topic": "Methodism",
@@ -1579,7 +1736,9 @@
     "KeyPassages": "Exodus 14:21-31; 1 Kings 17:17-24; John 2:1-11; John 20:30-31; Acts 3:1-10",
     "RelatedPeople": "Moses; Elijah; Jesus; Paul",
     "RelatedBooks": "Exodus; 1 Kings; John; Acts",
-    "Slug": "miracles"
+    "Slug": "miracles",
+    "Places": "Egypt; Mount Carmel; Bethany",
+    "RelatedEvents": "The Ten Plagues; Elijah on Mount Carmel; Feeding of the Five Thousand; Raising of Lazarus"
   },
   {
     "Topic": "Mission",
@@ -1589,7 +1748,9 @@
     "RelatedPeople": "Paul; Jesus",
     "RelatedQuestions": "What exactly is the gospel I should share?",
     "RelatedBooks": "Matthew; Luke; John; Acts; Romans",
-    "Slug": "mission"
+    "Slug": "mission",
+    "Places": "Jerusalem; Antioch",
+    "RelatedEvents": "Pentecost; Paul's Missionary Journeys"
   },
   {
     "Topic": "Missions",
@@ -1599,7 +1760,9 @@
     "RelatedPeople": "Abraham; Jonah; Paul",
     "RelatedQuestions": "How do I share my faith without being pushy?",
     "RelatedBooks": "Genesis; Jonah; Matthew; Acts; Revelation",
-    "Slug": "missions"
+    "Slug": "missions",
+    "Places": "Antioch; Corinth; Ephesus; Rome",
+    "RelatedEvents": "The Conversion of Paul; Paul's Missionary Journeys"
   },
   {
     "Topic": "Money",
@@ -1618,7 +1781,9 @@
     "RelatedPeople": "Moses; Paul",
     "RelatedDoctrines": "Trinity",
     "RelatedBooks": "Deuteronomy; Isaiah; 1 Corinthians; Ephesians; James",
-    "Slug": "monotheism"
+    "Slug": "monotheism",
+    "Places": "Mount Carmel",
+    "RelatedEvents": "Elijah on Mount Carmel"
   },
   {
     "Topic": "Moral Responsibility",
@@ -1637,7 +1802,9 @@
     "KeyPassages": "Exodus 20:1-17; Micah 6:8; Matthew 5:17-20; Matthew 22:37-40; Romans 2:14-16",
     "RelatedPeople": "Moses; Jesus",
     "RelatedBooks": "Exodus; Micah; Matthew; Romans",
-    "Slug": "morality"
+    "Slug": "morality",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "The Ten Commandments; Sermon on the Mount"
   },
   {
     "Topic": "Myths",
@@ -1646,7 +1813,9 @@
     "KeyPassages": "Genesis 1:1-2:3; Genesis 6:5-8:22; Exodus 14:21-31; 2 Timothy 4:3-4; 2 Peter 1:16",
     "RelatedPeople": "Moses; Noah",
     "RelatedBooks": "Genesis; Exodus; 2 Timothy; 2 Peter",
-    "Slug": "myths"
+    "Slug": "myths",
+    "Places": "Mount Ararat",
+    "RelatedEvents": "Noah and the Flood; Creation"
   },
   {
     "Topic": "Nations",
@@ -1655,7 +1824,9 @@
     "KeyPassages": "Genesis 10:32; Genesis 12:1-3; Psalm 2:1-12; Isaiah 2:2-4; Revelation 7:9-10",
     "RelatedPeople": "Abraham",
     "RelatedBooks": "Genesis; Psalms; Isaiah; Revelation",
-    "Slug": "nations"
+    "Slug": "nations",
+    "Places": "Babel; Jerusalem",
+    "RelatedEvents": "Tower of Babel; Pentecost"
   },
   {
     "Topic": "Nature and Creation",
@@ -1665,7 +1836,9 @@
     "RelatedPeople": "Adam; King David; Paul",
     "RelatedDoctrines": "Creation; Providence",
     "RelatedBooks": "Genesis; Psalms; Romans",
-    "Slug": "nature-and-creation"
+    "Slug": "nature-and-creation",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "Creation"
   },
   {
     "Topic": "Neighbor",
@@ -1675,7 +1848,8 @@
     "RelatedPeople": "Jesus",
     "RelatedQuestions": "How can I love difficult people?",
     "RelatedBooks": "Leviticus; Luke; Matthew; Galatians; James",
-    "Slug": "neighbor"
+    "Slug": "neighbor",
+    "RelatedEvents": "The Good Samaritan"
   },
   {
     "Topic": "New Life",
@@ -1685,7 +1859,9 @@
     "RelatedPeople": "Paul; Jesus",
     "RelatedDoctrines": "Sanctification",
     "RelatedBooks": "John; Romans; 2 Corinthians; Ephesians; 1 Peter",
-    "Slug": "new-life"
+    "Slug": "new-life",
+    "Places": "Jordan River",
+    "RelatedEvents": "Baptism of Jesus; The Resurrection"
   },
   {
     "Topic": "Nicene Creed",
@@ -1705,7 +1881,8 @@
     "RelatedPeople": "Abraham; Moses; Jesus",
     "RelatedDoctrines": "Sanctification",
     "RelatedBooks": "Deuteronomy; 1 Samuel; Psalms; Luke; John; Hebrews",
-    "Slug": "obedience"
+    "Slug": "obedience",
+    "RelatedEvents": "Binding of Isaac"
   },
   {
     "Topic": "Occult",
@@ -1725,7 +1902,9 @@
     "RelatedPeople": "Moses; King David; Isaiah",
     "RelatedDoctrines": "Inspiration of Scripture",
     "RelatedBooks": "Exodus; Psalms; Isaiah; Luke; 2 Timothy",
-    "Slug": "old-testament"
+    "Slug": "old-testament",
+    "Places": "Canaan; Jerusalem; Babylon",
+    "RelatedEvents": "The Exodus and the Red Sea; Fall of Jerusalem and the Exile"
   },
   {
     "Topic": "Origins",
@@ -1736,7 +1915,9 @@
     "RelatedDoctrines": "Creation",
     "RelatedQuestions": "Did God create the world in six literal days?",
     "RelatedBooks": "Genesis; Psalms; John; Colossians; Hebrews",
-    "Slug": "origins"
+    "Slug": "origins",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "Creation"
   },
   {
     "Topic": "Persecution",
@@ -1745,7 +1926,9 @@
     "KeyPassages": "Matthew 5:10-12; John 15:18-21; Acts 4:1-21; 2 Timothy 3:10-12; 1 Peter 4:12-16",
     "RelatedPeople": "Paul; Jesus",
     "RelatedBooks": "Matthew; John; Acts; 2 Timothy; 1 Peter",
-    "Slug": "persecution"
+    "Slug": "persecution",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Martyrdom of Stephen"
   },
   {
     "Topic": "Perseverance",
@@ -1756,7 +1939,9 @@
     "RelatedDoctrines": "Perseverance of the Saints; Sanctification",
     "RelatedQuestions": "Can a Christian be sanctified and still struggle with sin?",
     "RelatedBooks": "John; Romans; Philippians; Hebrews; James; Revelation",
-    "Slug": "perseverance"
+    "Slug": "perseverance",
+    "Places": "Egypt",
+    "RelatedEvents": "Joseph and His Brothers"
   },
   {
     "Topic": "Philosophy",
@@ -1774,7 +1959,8 @@
     "KeyPassages": "Psalm 84:1-12; Psalm 122:1-9; Hebrews 11:13-16; 1 Peter 2:9-12",
     "RelatedPeople": "Abraham; King David",
     "RelatedBooks": "Psalms; Hebrews; 1 Peter",
-    "Slug": "pilgrimage"
+    "Slug": "pilgrimage",
+    "Places": "Jerusalem"
   },
   {
     "Topic": "Preaching",
@@ -1784,7 +1970,9 @@
     "RelatedPeople": "Paul; Jesus",
     "RelatedDoctrines": "Inspiration of Scripture",
     "RelatedBooks": "Nehemiah; Luke; Acts; Romans; 2 Timothy",
-    "Slug": "preaching"
+    "Slug": "preaching",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Pentecost; Ezra Reads the Law"
   },
   {
     "Topic": "Presence of God",
@@ -1794,7 +1982,9 @@
     "RelatedPeople": "Moses; King David",
     "RelatedDoctrines": "Holy Spirit",
     "RelatedBooks": "Exodus; Psalms; Matthew; John; Revelation",
-    "Slug": "presence-of-god"
+    "Slug": "presence-of-god",
+    "Places": "Midian; Mount Sinai; Jerusalem",
+    "RelatedEvents": "The Burning Bush; Giving of the Law at Sinai; Pentecost"
   },
   {
     "Topic": "Pride",
@@ -1804,7 +1994,9 @@
     "RelatedPeople": "King David; Jesus",
     "RelatedDoctrines": "Original Sin",
     "RelatedBooks": "Proverbs; Isaiah; Daniel; Luke; James; 1 Peter",
-    "Slug": "pride"
+    "Slug": "pride",
+    "Places": "Babel",
+    "RelatedEvents": "Tower of Babel"
   },
   {
     "Topic": "Promise",
@@ -1813,7 +2005,9 @@
     "KeyPassages": "Genesis 12:1-3; 2 Samuel 7:12-16; Jeremiah 31:31-34; 2 Corinthians 1:20; Hebrews 6:13-20",
     "RelatedPeople": "Abraham; King David",
     "RelatedBooks": "Genesis; 2 Samuel; Jeremiah; 2 Corinthians; Hebrews",
-    "Slug": "promise"
+    "Slug": "promise",
+    "Places": "Ur; Haran; Canaan",
+    "RelatedEvents": "Call of Abraham; Davidic Covenant"
   },
   {
     "Topic": "Promises of God",
@@ -1823,7 +2017,9 @@
     "RelatedPeople": "Abraham; Moses; Paul",
     "RelatedDoctrines": "Providence",
     "RelatedBooks": "Genesis; Deuteronomy; Isaiah; Matthew; Romans; Hebrews",
-    "Slug": "promises-of-god"
+    "Slug": "promises-of-god",
+    "Places": "Ur; Canaan",
+    "RelatedEvents": "Call of Abraham; Davidic Covenant"
   },
   {
     "Topic": "Provision",
@@ -1833,7 +2029,9 @@
     "RelatedPeople": "Moses; Elijah; King David; Paul",
     "RelatedDoctrines": "Providence",
     "RelatedBooks": "Exodus; 1 Kings; Psalms; Matthew; Philippians",
-    "Slug": "provision"
+    "Slug": "provision",
+    "Places": "Galilee",
+    "RelatedEvents": "Wilderness Wanderings; Feeding of the Five Thousand"
   },
   {
     "Topic": "Psychology",
@@ -1870,7 +2068,9 @@
     "RelatedPeople": "Paul",
     "RelatedDoctrines": "Atonement; Justification",
     "RelatedBooks": "Romans; 2 Corinthians; Ephesians; Colossians",
-    "Slug": "reconciliation"
+    "Slug": "reconciliation",
+    "Places": "Egypt",
+    "RelatedEvents": "Joseph and His Brothers; The Prodigal Son"
   },
   {
     "Topic": "Reform",
@@ -1880,7 +2080,9 @@
     "RelatedPeople": "King Josiah; Paul",
     "RelatedDoctrines": "Justification",
     "RelatedBooks": "2 Kings; Nehemiah; Matthew; Romans; Revelation",
-    "Slug": "reform"
+    "Slug": "reform",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Ezra Reads the Law"
   },
   {
     "Topic": "Reformation",
@@ -1929,7 +2131,9 @@
     "RelatedPeople": "King David; Paul; Jesus",
     "RelatedDoctrines": "Sanctification; Justification",
     "RelatedBooks": "Psalms; Isaiah; Luke; Acts; 2 Corinthians",
-    "Slug": "repentance"
+    "Slug": "repentance",
+    "Places": "Nineveh",
+    "RelatedEvents": "Jonah and Nineveh; The Prodigal Son; David and Bathsheba"
   },
   {
     "Topic": "Respectful Dialogue",
@@ -1938,7 +2142,8 @@
     "KeyPassages": "Proverbs 18:13; Colossians 4:5-6; 1 Peter 3:15-16; James 1:19; Titus 3:2",
     "RelatedPeople": "Paul; Jesus",
     "RelatedBooks": "Proverbs; Colossians; 1 Peter; James; Titus",
-    "Slug": "respectful-dialogue"
+    "Slug": "respectful-dialogue",
+    "RelatedEvents": "Peter and Cornelius"
   },
   {
     "Topic": "Rest",
@@ -1948,7 +2153,8 @@
     "RelatedPeople": "Moses; King David; Jesus",
     "RelatedDoctrines": "Creation",
     "RelatedBooks": "Genesis; Exodus; Psalms; Matthew; Hebrews",
-    "Slug": "rest"
+    "Slug": "rest",
+    "RelatedEvents": "Creation"
   },
   {
     "Topic": "Restoration",
@@ -1958,7 +2164,9 @@
     "RelatedPeople": "Jesus",
     "RelatedDoctrines": "Resurrection",
     "RelatedBooks": "Joel; Ezekiel; Luke; Acts; Revelation",
-    "Slug": "restoration"
+    "Slug": "restoration",
+    "Places": "Jerusalem; Babylon",
+    "RelatedEvents": "Cyrus's Decree and Return from Exile; Nehemiah Rebuilds the Wall"
   },
   {
     "Topic": "Revival",
@@ -1968,7 +2176,9 @@
     "RelatedPeople": "Paul",
     "RelatedDoctrines": "Holy Spirit",
     "RelatedBooks": "2 Chronicles; Nehemiah; Psalms; Acts; Habakkuk",
-    "Slug": "revival"
+    "Slug": "revival",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Ezra Reads the Law"
   },
   {
     "Topic": "Righteousness",
@@ -1978,7 +2188,9 @@
     "RelatedPeople": "Abraham; Paul",
     "RelatedDoctrines": "Justification; Sanctification",
     "RelatedBooks": "Genesis; Psalms; Isaiah; Romans; Philippians",
-    "Slug": "righteousness"
+    "Slug": "righteousness",
+    "Places": "Golgotha",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Topic": "Sacraments and Ordinances",
@@ -1988,7 +2200,9 @@
     "RelatedPeople": "Paul; Jesus",
     "RelatedDoctrines": "Baptism; Lord's Supper",
     "RelatedBooks": "Matthew; Luke; Acts; Romans; 1 Corinthians",
-    "Slug": "sacraments-and-ordinances"
+    "Slug": "sacraments-and-ordinances",
+    "Places": "Jerusalem; Jordan River",
+    "RelatedEvents": "Last Supper; Baptism of Jesus"
   },
   {
     "Topic": "Satan",
@@ -1998,7 +2212,9 @@
     "RelatedPeople": "Adam; Eve; Jesus",
     "RelatedDoctrines": "Demons; Hell",
     "RelatedBooks": "Genesis; Job; Matthew; Ephesians; 1 Peter; Revelation",
-    "Slug": "satan"
+    "Slug": "satan",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "The Fall; Temptation in the Wilderness"
   },
   {
     "Topic": "Science and Faith",
@@ -2058,7 +2274,9 @@
     "RelatedPeople": "King David; Paul",
     "RelatedDoctrines": "Providence; Predestination",
     "RelatedBooks": "Psalms; Isaiah; Daniel; Romans; Ephesians",
-    "Slug": "sovereignty"
+    "Slug": "sovereignty",
+    "Places": "Babylon",
+    "RelatedEvents": "Cyrus's Decree and Return from Exile"
   },
   {
     "Topic": "Spiritual Warfare",
@@ -2068,7 +2286,8 @@
     "RelatedPeople": "Daniel; Jesus; Paul",
     "RelatedDoctrines": "Demons",
     "RelatedBooks": "Daniel; Matthew; Ephesians; James; 1 Peter; Revelation",
-    "Slug": "spiritual-warfare"
+    "Slug": "spiritual-warfare",
+    "RelatedEvents": "Temptation in the Wilderness"
   },
   {
     "Topic": "Stereotypes",
@@ -2077,7 +2296,9 @@
     "KeyPassages": "Jonah 4:1-11; Luke 10:25-37; John 4:1-42; James 2:1-9; Galatians 3:28",
     "RelatedPeople": "Jonah; Jesus",
     "RelatedBooks": "Jonah; Luke; John; James; Galatians",
-    "Slug": "stereotypes"
+    "Slug": "stereotypes",
+    "Places": "Nineveh",
+    "RelatedEvents": "Jonah and Nineveh; The Good Samaritan; Peter and Cornelius"
   },
   {
     "Topic": "Strength",
@@ -2087,7 +2308,8 @@
     "RelatedPeople": "Samson; King David; Paul",
     "RelatedDoctrines": "Providence",
     "RelatedBooks": "Judges; Psalms; Isaiah; 2 Corinthians; Philippians",
-    "Slug": "strength"
+    "Slug": "strength",
+    "RelatedEvents": "Samson and the Philistines"
   },
   {
     "Topic": "Superstition",
@@ -2117,7 +2339,9 @@
     "RelatedPeople": "Adam; Eve; Jesus",
     "RelatedDoctrines": "Original Sin",
     "RelatedBooks": "Genesis; Matthew; 1 Corinthians; Hebrews; James",
-    "Slug": "temptation"
+    "Slug": "temptation",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "The Fall; Temptation in the Wilderness"
   },
   {
     "Topic": "Testimony",
@@ -2127,7 +2351,9 @@
     "RelatedPeople": "Paul; Jesus",
     "RelatedQuestions": "How do I share my faith without being pushy?",
     "RelatedBooks": "Mark; John; Acts; 1 John; Revelation",
-    "Slug": "testimony"
+    "Slug": "testimony",
+    "Places": "Jerusalem",
+    "RelatedEvents": "The Resurrection; Pentecost"
   },
   {
     "Topic": "The Universe",
@@ -2137,7 +2363,8 @@
     "RelatedPeople": "King David",
     "RelatedDoctrines": "Creation",
     "RelatedBooks": "Genesis; Psalms; Isaiah; Hebrews",
-    "Slug": "the-universe"
+    "Slug": "the-universe",
+    "RelatedEvents": "Creation"
   },
   {
     "Topic": "Theology",
@@ -2167,7 +2394,8 @@
     "RelatedPeople": "Paul",
     "RelatedDoctrines": "Sanctification",
     "RelatedBooks": "Romans; 2 Corinthians; Galatians; Ephesians; Philippians",
-    "Slug": "transformation"
+    "Slug": "transformation",
+    "RelatedEvents": "The Conversion of Paul"
   },
   {
     "Topic": "Translation",
@@ -2187,7 +2415,9 @@
     "RelatedPeople": "King David; Jesus",
     "RelatedQuestions": "What is true worship according to the Bible?",
     "RelatedBooks": "Psalms; Isaiah; John; Romans; Hebrews",
-    "Slug": "true-worship"
+    "Slug": "true-worship",
+    "Places": "Mount Carmel",
+    "RelatedEvents": "Elijah on Mount Carmel"
   },
   {
     "Topic": "Trust",
@@ -2197,7 +2427,9 @@
     "RelatedPeople": "King David; Jesus",
     "RelatedQuestions": "What should I do when my faith feels weak?",
     "RelatedBooks": "Psalms; Proverbs; Isaiah; Mark",
-    "Slug": "trust"
+    "Slug": "trust",
+    "Places": "Galilee",
+    "RelatedEvents": "Jesus Calms the Storm"
   },
   {
     "Topic": "Truth",
@@ -2217,7 +2449,9 @@
     "RelatedPeople": "Moses; King David; Paul",
     "RelatedDoctrines": "Resurrection",
     "RelatedBooks": "Exodus; 1 Samuel; John; Romans; 1 Corinthians; 1 John",
-    "Slug": "victory"
+    "Slug": "victory",
+    "Places": "Jericho",
+    "RelatedEvents": "David and Goliath; Fall of Jericho; The Resurrection"
   },
   {
     "Topic": "Violence",
@@ -2226,7 +2460,9 @@
     "KeyPassages": "Genesis 6:11-13; Joshua 6:1-27; Psalm 46:8-10; Matthew 5:38-48; Isaiah 2:2-4; Revelation 21:1-4",
     "RelatedPeople": "Joshua; Jesus",
     "RelatedBooks": "Genesis; Joshua; Psalms; Matthew; Isaiah; Revelation",
-    "Slug": "violence"
+    "Slug": "violence",
+    "Places": "Golgotha",
+    "RelatedEvents": "Cain Murders Abel; The Crucifixion"
   },
   {
     "Topic": "Weakness",
@@ -2245,7 +2481,9 @@
     "RelatedPeople": "Paul; Jesus",
     "RelatedQuestions": "How do I share my faith without being pushy?",
     "RelatedBooks": "Isaiah; Acts; 1 Peter; Revelation",
-    "Slug": "witness"
+    "Slug": "witness",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Pentecost; The Resurrection"
   },
   {
     "Topic": "Word of God",
@@ -2284,6 +2522,8 @@
     "RelatedPeople": "Paul",
     "RelatedDoctrines": "Creation",
     "RelatedBooks": "Genesis; Romans; Colossians; 1 Peter; 2 Corinthians",
-    "Slug": "worldviews"
+    "Slug": "worldviews",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "Creation; The Fall"
   }
 ]

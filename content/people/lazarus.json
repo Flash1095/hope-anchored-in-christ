@@ -9,5 +9,7 @@
   "RelatedBooks": "John",
   "RelatedPeople": "Martha; Mary of Bethany; Jesus",
   "LifeLesson": "Jesus wept even knowing resurrection was minutes away — He enters our grief before He overturns it. If He called Lazarus out of four days dead, no situation of yours is beyond His voice.",
-  "Slug": "lazarus"
+  "Slug": "lazarus",
+  "Places": "Bethany",
+  "RelatedEvents": "Raising of Lazarus"
 }

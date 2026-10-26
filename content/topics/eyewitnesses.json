@@ -6,5 +6,7 @@
   "RelatedPeople": "Simon Peter; Paul; John the Apostle",
   "RelatedQuestions": "Did Jesus really rise from the dead?",
   "RelatedBooks": "Luke; John; Acts; 1 Corinthians; 1 John",
-  "Slug": "eyewitnesses"
+  "Slug": "eyewitnesses",
+  "Places": "Jerusalem",
+  "RelatedEvents": "The Resurrection"
 }

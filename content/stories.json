@@ -14,7 +14,8 @@
     "RelatedBooks": "Genesis; Psalms; John",
     "RelatedTopics": "Creation; God; Humanity",
     "RelatedFinds": "—",
-    "Slug": "story-creation"
+    "Slug": "story-creation",
+    "RelatedEvents": "The Fall; Noah and the Flood"
   },
   {
     "Story": "Daniel in the Lions' Den",
@@ -31,7 +32,8 @@
     "RelatedBooks": "Daniel; Psalms",
     "RelatedTopics": "Integrity; Prayer; God's Protection",
     "RelatedFinds": "Babylonian Chronicle",
-    "Slug": "story-daniel-in-the-lions-den"
+    "Slug": "story-daniel-in-the-lions-den",
+    "RelatedEvents": "Shadrach, Meshach and Abednego in the Fiery Furnace"
   },
   {
     "Story": "David and Goliath",
@@ -48,7 +50,8 @@
     "RelatedBooks": "1 Samuel; Psalms",
     "RelatedTopics": "Courage; Faith; Victory",
     "RelatedFinds": "Tel Dan Stele",
-    "Slug": "story-david-and-goliath"
+    "Slug": "story-david-and-goliath",
+    "RelatedEvents": "David Becomes King"
   },
   {
     "Story": "Elijah on Mount Carmel",
@@ -65,7 +68,8 @@
     "RelatedBooks": "1 Kings; James",
     "RelatedTopics": "True Worship; Prayer; God's Power",
     "RelatedFinds": "Black Obelisk",
-    "Slug": "story-elijah-on-mount-carmel"
+    "Slug": "story-elijah-on-mount-carmel",
+    "RelatedEvents": "Transfiguration"
   },
   {
     "Story": "Esther Saves Her People",
@@ -77,7 +81,9 @@
     "Discussion": "Esther reminds us that God works through ordinary people in their ordinary positions — and that courage often means risking comfort for others. You may be exactly where you are 'for such a time as this.' Reflect: 1) Where has God placed you that you might be underestimating? 2) What would courage cost you right now? 3) How do you see God's hidden hand in your life, even when He seems silent?",
     "RelatedBooks": "Esther",
     "RelatedTopics": "Courage; Providence; Deliverance",
-    "Slug": "esther-saves-her-people"
+    "Slug": "esther-saves-her-people",
+    "RelatedEvents": "Esther Saves the Jews",
+    "Place": "Susa"
   },
   {
     "Story": "Jonah and Nineveh",
@@ -89,7 +95,9 @@
     "Discussion": "Jonah is the prophet who hated his own message succeeding. God's mercy is wider than our comfort — it extends even to people we consider enemies. Reflect: 1) Who are you tempted to believe is beyond God's mercy? 2) What are you running from that God has asked you to do? 3) How does Jonah's story confront your own desire for judgment over grace?",
     "RelatedBooks": "Jonah; Matthew; Luke",
     "RelatedTopics": "Mercy; Repentance; Obedience",
-    "Slug": "jonah-and-nineveh"
+    "Slug": "jonah-and-nineveh",
+    "RelatedEvents": "Jonah and the Great Fish",
+    "Place": "Nineveh"
   },
   {
     "Story": "Joseph and His Brothers",
@@ -101,7 +109,9 @@
     "Discussion": "Joseph's life is the long proof that God works through betrayal, delay, and injustice without ever endorsing them. Forgiveness is not pretending the harm did not happen; it is trusting God's larger purpose while releasing revenge. Reflect: 1) Who do you need to forgive, and what makes that hard? 2) How has God used a painful season in your life for good? 3) Where do you need to trust God's providence when you cannot see the ending?",
     "RelatedBooks": "Genesis",
     "RelatedTopics": "Forgiveness; God's Providence; Suffering",
-    "Slug": "joseph-and-his-brothers"
+    "Slug": "joseph-and-his-brothers",
+    "RelatedEvents": "Joseph Sold into Egypt; Joseph Rises to Power in Egypt",
+    "Place": "Canaan"
   },
   {
     "Story": "Noah and the Flood",
@@ -118,7 +128,8 @@
     "RelatedBooks": "Genesis; Hebrews; 1 Peter",
     "RelatedTopics": "Judgment; Obedience; Covenant",
     "RelatedFinds": "—",
-    "Slug": "story-noah-and-the-flood"
+    "Slug": "story-noah-and-the-flood",
+    "RelatedEvents": "Creation; Tower of Babel"
   },
   {
     "Story": "Pentecost",
@@ -135,7 +146,8 @@
     "RelatedBooks": "Acts; Joel",
     "RelatedTopics": "Holy Spirit; Church; Boldness",
     "RelatedFinds": "Dead Sea Scrolls",
-    "Slug": "story-pentecost"
+    "Slug": "story-pentecost",
+    "RelatedEvents": "The Ascension; Martyrdom of Stephen"
   },
   {
     "Story": "Ruth's Loyalty",
@@ -147,7 +159,9 @@
     "Discussion": "Ruth's story is small and quiet — no battles, no miracles, just loyalty, hard work, and kindness — and God weaves it into the lineage of the Messiah. Faithfulness in ordinary life is never wasted. Reflect: 1) Who has shown you Ruth-like loyalty? 2) How has God provided for you through ordinary people? 3) What does Ruth teach about belonging to God's people?",
     "RelatedBooks": "Ruth; Matthew",
     "RelatedTopics": "Loyalty; Redemption; Kindness",
-    "Slug": "ruths-loyalty"
+    "Slug": "ruths-loyalty",
+    "RelatedEvents": "Story of Ruth",
+    "Place": "Bethlehem"
   },
   {
     "Story": "Samson and Delilah",
@@ -159,7 +173,8 @@
     "Discussion": "Samson's strength was never really his; it was God's gift, and he treated it as a toy until it was gone. Yet even after failure, God heard his final prayer. No one is beyond the reach of repentance. Reflect: 1) What gift or calling are you toying with? 2) Where does small compromise lead in your life? 3) How does Samson's ending give hope to someone who has failed badly?",
     "RelatedBooks": "Judges; Hebrews",
     "RelatedTopics": "Strength; Weakness; Repentance",
-    "Slug": "samson-and-delilah"
+    "Slug": "samson-and-delilah",
+    "RelatedEvents": "Samson and the Philistines"
   },
   {
     "Story": "The Baptism of Jesus",
@@ -171,7 +186,9 @@
     "Discussion": "Before Jesus did a single miracle, the Father declared who He was: beloved Son. Your identity is not earned by performance; in Christ, it is declared before you do anything. Reflect: 1) How does Jesus' baptism shape your understanding of your own baptism? 2) What does the Father's declaration over Jesus say about your identity in Him? 3) How does obedience open the door to ministry?",
     "RelatedBooks": "Matthew; Mark; Luke; John",
     "RelatedTopics": "Identity; Trinity; Obedience",
-    "Slug": "the-baptism-of-jesus"
+    "Slug": "the-baptism-of-jesus",
+    "RelatedEvents": "Baptism of Jesus; Temptation in the Wilderness; Transfiguration",
+    "Place": "Jordan River"
   },
   {
     "Story": "The Binding of Isaac",
@@ -183,7 +200,8 @@
     "Discussion": "This is one of the hardest stories in Scripture, and it only makes sense in light of what God did later: He did not spare His own Son. Abraham's trust teaches us that God can be trusted with what we love most — even when we cannot see how. Reflect: 1) What is hardest for you to entrust to God? 2) How does God's provision of the ram point to Jesus? 3) What does it mean to worship God when you do not understand His command?",
     "RelatedBooks": "Genesis; Hebrews",
     "RelatedTopics": "Trust; Sacrifice; God's Provision",
-    "Slug": "the-binding-of-isaac"
+    "Slug": "the-binding-of-isaac",
+    "RelatedEvents": "Binding of Isaac; The Call of Abraham"
   },
   {
     "Story": "The Birth of Jesus",
@@ -195,7 +213,9 @@
     "Discussion": "God did not save us from a distance; He entered our world in the most humble way possible. The manger means God meets you in low places, not only in high ones. Reflect: 1) How does Jesus' humble birth reshape your idea of power? 2) Why did God announce the birth to shepherds first? 3) What does it mean that the Word became flesh for you personally?",
     "RelatedBooks": "Matthew; Luke",
     "RelatedTopics": "Incarnation; Humility; Joy",
-    "Slug": "the-birth-of-jesus"
+    "Slug": "the-birth-of-jesus",
+    "RelatedEvents": "Birth of Jesus; Baptism of Jesus",
+    "Place": "Bethlehem"
   },
   {
     "Story": "The Burning Bush",
@@ -212,7 +232,8 @@
     "RelatedBooks": "Exodus; Acts",
     "RelatedTopics": "Calling; God's Holiness; Deliverance",
     "RelatedFinds": "—",
-    "Slug": "story-the-burning-bush"
+    "Slug": "story-the-burning-bush",
+    "RelatedEvents": "The Ten Plagues; The Exodus and Crossing of the Red Sea"
   },
   {
     "Story": "The Call of Abraham",
@@ -224,7 +245,9 @@
     "Discussion": "Abraham's story begins with a call to leave the familiar before he knew the destination. Faith is not certainty about the road; it is trust in the One who calls. Reflect: 1) What 'familiar' thing might God be asking you to leave behind? 2) How do you trust a promise you cannot yet see fulfilled? 3) How does Abraham's story point forward to blessing for all nations?",
     "RelatedBooks": "Genesis; Romans; Hebrews",
     "RelatedTopics": "Faith; Promise; Obedience",
-    "Slug": "the-call-of-abraham"
+    "Slug": "the-call-of-abraham",
+    "RelatedEvents": "Call of Abraham; Binding of Isaac; Destruction of Sodom and Gomorrah",
+    "Place": "Ur"
   },
   {
     "Story": "The Conversion of Paul",
@@ -236,7 +259,8 @@
     "Discussion": "Paul's conversion proves that no one is too far gone — not the zealous opponent, not the person who has done the worst. Grace does not improve the old life; it raises a new one. Reflect: 1) Who in your life seems 'too far gone,' and how does Paul challenge that? 2) How has Christ transformed you, and where is He still transforming you? 3) What does Ananias' obedience teach about welcoming unlikely converts?",
     "RelatedBooks": "Acts; Galatians; Philippians",
     "RelatedTopics": "Grace; Transformation; Calling",
-    "Slug": "the-conversion-of-paul"
+    "Slug": "the-conversion-of-paul",
+    "RelatedEvents": "Conversion of Saul (Paul); Martyrdom of Stephen; Paul's Missionary Journeys"
   },
   {
     "Story": "The Crucifixion",
@@ -253,7 +277,8 @@
     "RelatedBooks": "Matthew; Mark; Luke; John",
     "RelatedTopics": "Sacrifice; Love; Atonement",
     "RelatedFinds": "Pilate Stone; Caiaphas Ossuary",
-    "Slug": "story-the-crucifixion"
+    "Slug": "story-the-crucifixion",
+    "RelatedEvents": "Last Supper; Jesus Prays in Gethsemane; The Resurrection"
   },
   {
     "Story": "The Exodus and the Red Sea",
@@ -265,7 +290,9 @@
     "Discussion": "The Exodus is the Bible's great picture of salvation: people who could not free themselves, rescued entirely by God's power, through water, into freedom. When you feel trapped between an army and a sea, the way forward is God's to open. Reflect: 1) What 'Egypt' do you need deliverance from? 2) How does the Passover lamb help you understand Jesus? 3) What song of deliverance could you sing today?",
     "RelatedBooks": "Exodus; Psalms; Hebrews",
     "RelatedTopics": "Deliverance; Salvation; God's Power",
-    "Slug": "the-exodus-and-the-red-sea"
+    "Slug": "the-exodus-and-the-red-sea",
+    "RelatedEvents": "The Burning Bush; The Ten Plagues; The Passover; Wilderness Wanderings",
+    "Place": "Egypt"
   },
   {
     "Story": "The Fall",
@@ -282,7 +309,8 @@
     "RelatedBooks": "Genesis; Romans",
     "RelatedTopics": "Sin; Temptation; Grace",
     "RelatedFinds": "—",
-    "Slug": "story-the-fall"
+    "Slug": "story-the-fall",
+    "RelatedEvents": "Creation; Cain Murders Abel"
   },
   {
     "Story": "The Feeding of the Five Thousand",
@@ -294,7 +322,9 @@
     "Discussion": "Jesus took a child's small lunch and fed a multitude — and then pointed beyond full stomachs to Himself as the bread of life. What you offer God, however small, is never too small in His hands. Reflect: 1) What 'five loaves' do you have to offer God? 2) Where do you need to trust His provision instead of your calculations? 3) How does this miracle point to Jesus as more than a provider of things?",
     "RelatedBooks": "Matthew; Mark; Luke; John",
     "RelatedTopics": "Provision; Compassion; Miracles",
-    "Slug": "the-feeding-of-the-five-thousand"
+    "Slug": "the-feeding-of-the-five-thousand",
+    "RelatedEvents": "Feeding of the Five Thousand; Jesus Calms the Storm",
+    "Place": "Galilee"
   },
   {
     "Story": "The Good Samaritan",
@@ -306,7 +336,9 @@
     "Discussion": "The parable refuses to let us define 'neighbor' by tribe, religion, or convenience — the neighbor is the one who shows mercy, even across enemy lines. And it quietly points to Jesus, the true Samaritan who stopped for us when we were left for dead. Reflect: 1) Who is the 'Samaritan' in your life — someone you overlook or avoid? 2) What does mercy cost, and are you willing to pay it? 3) How has Jesus been a neighbor to you?",
     "RelatedBooks": "Luke",
     "RelatedTopics": "Compassion; Neighbor; Mercy",
-    "Slug": "the-good-samaritan"
+    "Slug": "the-good-samaritan",
+    "RelatedEvents": "The Prodigal Son; Sermon on the Mount",
+    "Place": "Jericho"
   },
   {
     "Story": "The Last Supper",
@@ -318,7 +350,9 @@
     "Discussion": "At the table, Jesus gave His friends a meal to remember Him by — bread and cup that still anchor Christian worship today. Every communion is a return to that upper room and to the cross it anticipated. Reflect: 1) What does it mean to you that Jesus shared this meal knowing betrayal was coming? 2) How does the Lord's Supper strengthen your faith? 3) What does the new covenant promise you personally?",
     "RelatedBooks": "Matthew; Mark; Luke; John; 1 Corinthians",
     "RelatedTopics": "Covenant; Sacrifice; Communion",
-    "Slug": "the-last-supper"
+    "Slug": "the-last-supper",
+    "RelatedEvents": "Last Supper; Jesus Prays in Gethsemane; The Crucifixion",
+    "Place": "Jerusalem"
   },
   {
     "Story": "The Prodigal Son",
@@ -330,7 +364,8 @@
     "Discussion": "This is the gospel in one story: a Father who runs toward rebels and pleads with the self-righteous alike. Whether you are the younger son or the older brother, the feast is open and the Father is waiting. Reflect: 1) Which brother do you relate to more, and why? 2) What keeps you from 'coming home' to God? 3) How does the Father's welcome change the way you welcome others?",
     "RelatedBooks": "Luke",
     "RelatedTopics": "Grace; Repentance; Forgiveness",
-    "Slug": "the-prodigal-son"
+    "Slug": "the-prodigal-son",
+    "RelatedEvents": "The Good Samaritan; Sermon on the Mount"
   },
   {
     "Story": "The Resurrection",
@@ -347,7 +382,8 @@
     "RelatedBooks": "Matthew; Mark; Luke; John; 1 Corinthians",
     "RelatedTopics": "Victory; Hope; New Life",
     "RelatedFinds": "Pilate Stone; Caiaphas Ossuary",
-    "Slug": "story-the-resurrection"
+    "Slug": "story-the-resurrection",
+    "RelatedEvents": "The Crucifixion; The Ascension; Pentecost"
   },
   {
     "Story": "The Sermon on the Mount",
@@ -359,7 +395,9 @@
     "Discussion": "The Sermon is not a list of rules to earn God's favor; it is a portrait of life under a new King, lived by grace. It is meant to be practiced, not just admired. Reflect: 1) Which teaching in the Sermon most challenges you right now? 2) What would 'seek first the kingdom' look like in your week? 3) Are you building on rock or sand — and how can you tell?",
     "RelatedBooks": "Matthew; Luke",
     "RelatedTopics": "Kingdom of God; Righteousness; Mercy",
-    "Slug": "the-sermon-on-the-mount"
+    "Slug": "the-sermon-on-the-mount",
+    "RelatedEvents": "Sermon on the Mount; The Good Samaritan; The Prodigal Son",
+    "Place": "Galilee"
   },
   {
     "Story": "The Temptation in the Wilderness",
@@ -371,7 +409,8 @@
     "Discussion": "Jesus fought temptation the way you can: with God's Word, wielded precisely, in the moment of weakness. Temptation itself is not sin — even Jesus was tempted — but it must be answered. Reflect: 1) Which of the three temptations — appetite, spectacle, or power — tempts you most? 2) What Scripture do you have ready for your weakest moments? 3) How does Jesus' victory give you hope in your own struggles?",
     "RelatedBooks": "Matthew; Luke; Hebrews",
     "RelatedTopics": "Temptation; Scripture; Victory",
-    "Slug": "the-temptation-in-the-wilderness"
+    "Slug": "the-temptation-in-the-wilderness",
+    "RelatedEvents": "Temptation in the Wilderness; Baptism of Jesus; Sermon on the Mount"
   },
   {
     "Story": "The Ten Commandments",
@@ -383,7 +422,9 @@
     "Discussion": "The commandments are not the price of God's love; they are the shape of life for people already rescued. They show us God's character, expose our need, and point us to the One who kept them perfectly. Reflect: 1) Which commandment most convicts you, and why? 2) How does the law as a gift differ from the law as a burden? 3) How does Jesus fulfill the law rather than abolish it?",
     "RelatedBooks": "Exodus; Deuteronomy; Romans",
     "RelatedTopics": "Covenant; Law; Holiness",
-    "Slug": "the-ten-commandments"
+    "Slug": "the-ten-commandments",
+    "RelatedEvents": "Giving of the Law at Sinai; The Golden Calf",
+    "Place": "Mount Sinai"
   },
   {
     "Story": "The Tower of Babel",
@@ -395,7 +436,9 @@
     "Discussion": "Babel is what happens when human ambition tries to reach heaven on its own terms — impressive, united, and entirely God-less. God scatters what pride builds, but He does not abandon the nations; at Pentecost He begins gathering them back. Reflect: 1) Where do you see 'make a name for ourselves' ambition in your own goals? 2) How does God humble proud projects today? 3) What does Babel teach about unity without God?",
     "RelatedBooks": "Genesis; Acts",
     "RelatedTopics": "Pride; Nations; God's Sovereignty",
-    "Slug": "the-tower-of-babel"
+    "Slug": "the-tower-of-babel",
+    "RelatedEvents": "Tower of Babel; Noah and the Flood; The Call of Abraham",
+    "Place": "Babel"
   },
   {
     "Story": "The Walls of Jericho",
@@ -407,7 +450,9 @@
     "Discussion": "Jericho fell to a strategy that looked foolish — because the battle belonged to the Lord, not to Israel's army. Obedience that looks strange is often the very thing God uses. Reflect: 1) What 'strange' obedience might God be asking of you? 2) How does Rahab's story show that no one is beyond God's mercy? 3) Where are you trusting your own strength instead of God's plan?",
     "RelatedBooks": "Joshua; Hebrews",
     "RelatedTopics": "Obedience; Faith; Victory",
-    "Slug": "the-walls-of-jericho"
+    "Slug": "the-walls-of-jericho",
+    "RelatedEvents": "Fall of Jericho; Crossing the Jordan",
+    "Place": "Jericho"
   },
   {
     "Story": "Anointing of Saul as King",
@@ -421,7 +466,8 @@
     "KeyPeople": "Samuel; Saul; Kish",
     "RelatedBooks": "1 Samuel",
     "RelatedFinds": "—",
-    "Slug": "anointing-of-saul-as-king"
+    "Slug": "anointing-of-saul-as-king",
+    "RelatedEvents": "Calling of Samuel; David Becomes King"
   },
   {
     "Story": "Baptism of Jesus",
@@ -435,7 +481,8 @@
     "KeyPeople": "Jesus; John the Baptist",
     "RelatedBooks": "Matthew; Mark; Luke; John",
     "RelatedFinds": "Dead Sea Scrolls",
-    "Slug": "baptism-of-jesus"
+    "Slug": "baptism-of-jesus",
+    "RelatedEvents": "The Baptism of Jesus; Temptation in the Wilderness; Transfiguration"
   },
   {
     "Story": "Binding of Isaac",
@@ -449,7 +496,8 @@
     "KeyPeople": "Abraham; Isaac; Sarah",
     "RelatedBooks": "Genesis",
     "RelatedFinds": "—",
-    "Slug": "binding-of-isaac"
+    "Slug": "binding-of-isaac",
+    "RelatedEvents": "The Binding of Isaac; The Call of Abraham"
   },
   {
     "Story": "Birth of Jesus",
@@ -463,7 +511,8 @@
     "KeyPeople": "Jesus; Mary; Joseph; Shepherds; Magi",
     "RelatedBooks": "Matthew; Luke",
     "RelatedFinds": "Dead Sea Scrolls",
-    "Slug": "birth-of-jesus"
+    "Slug": "birth-of-jesus",
+    "RelatedEvents": "The Birth of Jesus; Baptism of Jesus"
   },
   {
     "Story": "Building of Solomon's Temple",
@@ -477,7 +526,8 @@
     "KeyPeople": "Solomon; Hiram of Tyre; David",
     "RelatedBooks": "1 Kings; 2 Chronicles",
     "RelatedFinds": "Megiddo; Hazor; Gezer Calendar",
-    "Slug": "building-of-solomons-temple"
+    "Slug": "building-of-solomons-temple",
+    "RelatedEvents": "Davidic Covenant; The Kingdom Divides"
   },
   {
     "Story": "Cain Murders Abel",
@@ -491,7 +541,8 @@
     "KeyPeople": "Cain; Abel; Adam; Eve",
     "RelatedBooks": "Genesis",
     "RelatedFinds": "—",
-    "Slug": "cain-murders-abel"
+    "Slug": "cain-murders-abel",
+    "RelatedEvents": "The Fall"
   },
   {
     "Story": "Call of Abraham",
@@ -505,7 +556,8 @@
     "KeyPeople": "Abraham; Sarah; Lot",
     "RelatedBooks": "Genesis",
     "RelatedFinds": "Amarna Letters",
-    "Slug": "call-of-abraham"
+    "Slug": "call-of-abraham",
+    "RelatedEvents": "The Call of Abraham; Binding of Isaac; Destruction of Sodom and Gomorrah"
   },
   {
     "Story": "Calling of Samuel",
@@ -519,7 +571,8 @@
     "KeyPeople": "Samuel; Eli; Hannah",
     "RelatedBooks": "1 Samuel",
     "RelatedFinds": "—",
-    "Slug": "calling-of-samuel"
+    "Slug": "calling-of-samuel",
+    "RelatedEvents": "Anointing of Saul as King"
   },
   {
     "Story": "Conversion of Saul (Paul)",
@@ -533,7 +586,8 @@
     "KeyPeople": "Saul (Paul); Ananias; Jesus",
     "RelatedBooks": "Acts; Galatians",
     "RelatedFinds": "—",
-    "Slug": "conversion-of-saul-paul"
+    "Slug": "conversion-of-saul-paul",
+    "RelatedEvents": "The Conversion of Paul; Martyrdom of Stephen; Paul's Missionary Journeys"
   },
   {
     "Story": "Crossing the Jordan",
@@ -547,7 +601,8 @@
     "KeyPeople": "Joshua; Eleazar",
     "RelatedBooks": "Joshua",
     "RelatedFinds": "Amarna Letters",
-    "Slug": "crossing-the-jordan"
+    "Slug": "crossing-the-jordan",
+    "RelatedEvents": "Wilderness Wanderings; Fall of Jericho"
   },
   {
     "Story": "Cyrus's Decree and Return from Exile",
@@ -561,7 +616,8 @@
     "KeyPeople": "Cyrus the Great; Zerubbabel; Sheshbazzar",
     "RelatedBooks": "Ezra; Isaiah; 2 Chronicles",
     "RelatedFinds": "Cyrus Cylinder",
-    "Slug": "cyruss-decree-and-return-from-exile"
+    "Slug": "cyruss-decree-and-return-from-exile",
+    "RelatedEvents": "Fall of Jerusalem and the Exile; Rebuilding of the Temple; Ezra Reads the Law"
   },
   {
     "Story": "David and Bathsheba",
@@ -575,7 +631,8 @@
     "KeyPeople": "David; Bathsheba; Nathan; Uriah",
     "RelatedBooks": "2 Samuel; Psalms",
     "RelatedFinds": "Tel Dan Stele",
-    "Slug": "david-and-bathsheba"
+    "Slug": "david-and-bathsheba",
+    "RelatedEvents": "David Becomes King; Davidic Covenant"
   },
   {
     "Story": "David Becomes King",
@@ -589,7 +646,8 @@
     "KeyPeople": "David; Joab; Abner",
     "RelatedBooks": "2 Samuel; 1 Chronicles",
     "RelatedFinds": "Tel Dan Stele",
-    "Slug": "david-becomes-king"
+    "Slug": "david-becomes-king",
+    "RelatedEvents": "David and Goliath; David and Bathsheba; Davidic Covenant"
   },
   {
     "Story": "Davidic Covenant",
@@ -603,7 +661,8 @@
     "KeyPeople": "David; Nathan",
     "RelatedBooks": "2 Samuel; Psalms",
     "RelatedFinds": "Tel Dan Stele",
-    "Slug": "davidic-covenant"
+    "Slug": "davidic-covenant",
+    "RelatedEvents": "David Becomes King; Building of Solomon's Temple"
   },
   {
     "Story": "Deborah and Barak Defeat Sisera",
@@ -617,7 +676,8 @@
     "KeyPeople": "Deborah; Barak; Jael",
     "RelatedBooks": "Judges",
     "RelatedFinds": "Megiddo; Hazor",
-    "Slug": "deborah-and-barak-defeat-sisera"
+    "Slug": "deborah-and-barak-defeat-sisera",
+    "RelatedEvents": "Gideon's Victory over Midian"
   },
   {
     "Story": "Destruction of Sodom and Gomorrah",
@@ -631,7 +691,8 @@
     "KeyPeople": "Lot; Abraham",
     "RelatedBooks": "Genesis",
     "RelatedFinds": "—",
-    "Slug": "destruction-of-sodom-and-gomorrah"
+    "Slug": "destruction-of-sodom-and-gomorrah",
+    "RelatedEvents": "The Call of Abraham; Call of Abraham"
   },
   {
     "Story": "Esther Saves the Jews",
@@ -645,7 +706,8 @@
     "KeyPeople": "Esther; Mordecai; Ahasuerus (Xerxes); Haman",
     "RelatedBooks": "Esther",
     "RelatedFinds": "—",
-    "Slug": "esther-saves-the-jews"
+    "Slug": "esther-saves-the-jews",
+    "RelatedEvents": "Esther Saves Her People"
   },
   {
     "Story": "Ezra Reads the Law",
@@ -659,7 +721,8 @@
     "KeyPeople": "Ezra; Nehemiah",
     "RelatedBooks": "Ezra; Nehemiah",
     "RelatedFinds": "Ketef Hinnom scrolls",
-    "Slug": "ezra-reads-the-law"
+    "Slug": "ezra-reads-the-law",
+    "RelatedEvents": "Cyrus's Decree and Return from Exile; Nehemiah Rebuilds the Wall"
   },
   {
     "Story": "Fall of Jericho",
@@ -673,7 +736,8 @@
     "KeyPeople": "Joshua; Rahab",
     "RelatedBooks": "Joshua; Hebrews",
     "RelatedFinds": "Hazor; Amarna Letters",
-    "Slug": "fall-of-jericho"
+    "Slug": "fall-of-jericho",
+    "RelatedEvents": "Crossing the Jordan; The Walls of Jericho"
   },
   {
     "Story": "Fall of Jerusalem and the Exile",
@@ -687,7 +751,8 @@
     "KeyPeople": "Nebuchadnezzar; Zedekiah; Jeremiah",
     "RelatedBooks": "2 Kings; Jeremiah; Lamentations",
     "RelatedFinds": "Babylonian Chronicle",
-    "Slug": "fall-of-jerusalem-and-the-exile"
+    "Slug": "fall-of-jerusalem-and-the-exile",
+    "RelatedEvents": "Fall of Samaria; Cyrus's Decree and Return from Exile"
   },
   {
     "Story": "Fall of Samaria",
@@ -701,7 +766,8 @@
     "KeyPeople": "Hoshea; Shalmaneser V; Sargon II",
     "RelatedBooks": "2 Kings; Isaiah",
     "RelatedFinds": "Black Obelisk",
-    "Slug": "fall-of-samaria"
+    "Slug": "fall-of-samaria",
+    "RelatedEvents": "The Kingdom Divides; Fall of Jerusalem and the Exile"
   },
   {
     "Story": "Feeding of the Five Thousand",
@@ -715,7 +781,8 @@
     "KeyPeople": "Jesus; Andrew; Philip; Disciples",
     "RelatedBooks": "Matthew; Mark; Luke; John",
     "RelatedFinds": "Capernaum",
-    "Slug": "feeding-of-the-five-thousand"
+    "Slug": "feeding-of-the-five-thousand",
+    "RelatedEvents": "The Feeding of the Five Thousand; Jesus Calms the Storm"
   },
   {
     "Story": "Gideon's Victory over Midian",
@@ -729,7 +796,8 @@
     "KeyPeople": "Gideon; Joash",
     "RelatedBooks": "Judges",
     "RelatedFinds": "Megiddo",
-    "Slug": "gideons-victory-over-midian"
+    "Slug": "gideons-victory-over-midian",
+    "RelatedEvents": "Deborah and Barak Defeat Sisera"
   },
   {
     "Story": "Giving of the Law at Sinai",
@@ -743,7 +811,8 @@
     "KeyPeople": "Moses; Aaron; Joshua",
     "RelatedBooks": "Exodus; Deuteronomy",
     "RelatedFinds": "—",
-    "Slug": "giving-of-the-law-at-sinai"
+    "Slug": "giving-of-the-law-at-sinai",
+    "RelatedEvents": "The Ten Commandments; The Golden Calf"
   },
   {
     "Story": "Hezekiah and Sennacherib's Invasion",
@@ -757,7 +826,8 @@
     "KeyPeople": "Hezekiah; Sennacherib; Isaiah",
     "RelatedBooks": "2 Kings; 2 Chronicles; Isaiah",
     "RelatedFinds": "Hezekiah's Tunnel; Sennacherib Prism; Lachish Reliefs",
-    "Slug": "hezekiah-and-sennacheribs-invasion"
+    "Slug": "hezekiah-and-sennacheribs-invasion",
+    "RelatedEvents": "Fall of Jerusalem and the Exile"
   },
   {
     "Story": "Jacob Wrestles with God",
@@ -771,7 +841,8 @@
     "KeyPeople": "Jacob; Esau",
     "RelatedBooks": "Genesis",
     "RelatedFinds": "—",
-    "Slug": "jacob-wrestles-with-god"
+    "Slug": "jacob-wrestles-with-god",
+    "RelatedEvents": "Joseph and His Brothers"
   },
   {
     "Story": "Jerusalem Council",
@@ -785,7 +856,8 @@
     "KeyPeople": "James; Peter; Paul; Barnabas",
     "RelatedBooks": "Acts; Galatians",
     "RelatedFinds": "Dead Sea Scrolls",
-    "Slug": "jerusalem-council"
+    "Slug": "jerusalem-council",
+    "RelatedEvents": "Paul's Missionary Journeys; Peter and Cornelius"
   },
   {
     "Story": "Jesus Calms the Storm",
@@ -799,7 +871,8 @@
     "KeyPeople": "Jesus; Peter; Disciples",
     "RelatedBooks": "Matthew; Mark; Luke",
     "RelatedFinds": "Capernaum",
-    "Slug": "jesus-calms-the-storm"
+    "Slug": "jesus-calms-the-storm",
+    "RelatedEvents": "Feeding of the Five Thousand"
   },
   {
     "Story": "Jesus Prays in Gethsemane",
@@ -813,7 +886,8 @@
     "KeyPeople": "Jesus; Peter; James; John; Judas Iscariot",
     "RelatedBooks": "Matthew; Mark; Luke",
     "RelatedFinds": "—",
-    "Slug": "jesus-prays-in-gethsemane"
+    "Slug": "jesus-prays-in-gethsemane",
+    "RelatedEvents": "Last Supper; The Crucifixion"
   },
   {
     "Story": "Jesus Turns Water into Wine at Cana",
@@ -827,7 +901,8 @@
     "KeyPeople": "Jesus; Mary; Disciples",
     "RelatedBooks": "John",
     "RelatedFinds": "Capernaum",
-    "Slug": "jesus-turns-water-into-wine-at-cana"
+    "Slug": "jesus-turns-water-into-wine-at-cana",
+    "RelatedEvents": "Baptism of Jesus"
   },
   {
     "Story": "Jonah and the Great Fish",
@@ -841,7 +916,8 @@
     "KeyPeople": "Jonah; King of Nineveh",
     "RelatedBooks": "Jonah; Matthew",
     "RelatedFinds": "—",
-    "Slug": "jonah-and-the-great-fish"
+    "Slug": "jonah-and-the-great-fish",
+    "RelatedEvents": "Jonah and Nineveh"
   },
   {
     "Story": "Joseph Rises to Power in Egypt",
@@ -855,7 +931,8 @@
     "KeyPeople": "Joseph; Pharaoh; Jacob",
     "RelatedBooks": "Genesis",
     "RelatedFinds": "—",
-    "Slug": "joseph-rises-to-power-in-egypt"
+    "Slug": "joseph-rises-to-power-in-egypt",
+    "RelatedEvents": "Joseph Sold into Egypt; Joseph and His Brothers"
   },
   {
     "Story": "Joseph Sold into Egypt",
@@ -869,7 +946,8 @@
     "KeyPeople": "Joseph; Jacob; Judah; Reuben",
     "RelatedBooks": "Genesis",
     "RelatedFinds": "—",
-    "Slug": "joseph-sold-into-egypt"
+    "Slug": "joseph-sold-into-egypt",
+    "RelatedEvents": "Joseph and His Brothers; Joseph Rises to Power in Egypt"
   },
   {
     "Story": "Last Supper",
@@ -883,7 +961,8 @@
     "KeyPeople": "Jesus; Peter; John; Judas Iscariot",
     "RelatedBooks": "Matthew; Mark; Luke; John; 1 Corinthians",
     "RelatedFinds": "—",
-    "Slug": "last-supper"
+    "Slug": "last-supper",
+    "RelatedEvents": "The Last Supper; Jesus Prays in Gethsemane; The Crucifixion"
   },
   {
     "Story": "Martyrdom of Stephen",
@@ -897,7 +976,8 @@
     "KeyPeople": "Stephen; Saul (Paul)",
     "RelatedBooks": "Acts",
     "RelatedFinds": "—",
-    "Slug": "martyrdom-of-stephen"
+    "Slug": "martyrdom-of-stephen",
+    "RelatedEvents": "Pentecost; Conversion of Saul (Paul)"
   },
   {
     "Story": "Nehemiah Rebuilds the Wall",
@@ -911,7 +991,8 @@
     "KeyPeople": "Nehemiah; Sanballat; Tobiah; Ezra",
     "RelatedBooks": "Nehemiah",
     "RelatedFinds": "—",
-    "Slug": "nehemiah-rebuilds-the-wall"
+    "Slug": "nehemiah-rebuilds-the-wall",
+    "RelatedEvents": "Ezra Reads the Law; Rebuilding of the Temple"
   },
   {
     "Story": "Paul in Rome",
@@ -925,7 +1006,8 @@
     "KeyPeople": "Paul; Luke; Timothy",
     "RelatedBooks": "Acts; Philippians; Philemon",
     "RelatedFinds": "Gallio Inscription; Erastus Inscription",
-    "Slug": "paul-in-rome"
+    "Slug": "paul-in-rome",
+    "RelatedEvents": "Paul's Missionary Journeys; Paul Shipwrecked on Malta"
   },
   {
     "Story": "Paul Shipwrecked on Malta",
@@ -939,7 +1021,8 @@
     "KeyPeople": "Paul; Luke; Julius the Centurion",
     "RelatedBooks": "Acts",
     "RelatedFinds": "—",
-    "Slug": "paul-shipwrecked-on-malta"
+    "Slug": "paul-shipwrecked-on-malta",
+    "RelatedEvents": "Paul's Missionary Journeys; Paul in Rome"
   },
   {
     "Story": "Paul's Missionary Journeys",
@@ -953,7 +1036,8 @@
     "KeyPeople": "Paul; Barnabas; Silas; Timothy; Luke",
     "RelatedBooks": "Acts",
     "RelatedFinds": "Gallio Inscription; Erastus Inscription",
-    "Slug": "pauls-missionary-journeys"
+    "Slug": "pauls-missionary-journeys",
+    "RelatedEvents": "Conversion of Saul (Paul); Jerusalem Council; Paul in Rome"
   },
   {
     "Story": "Peter and Cornelius",
@@ -967,7 +1051,8 @@
     "KeyPeople": "Peter; Cornelius",
     "RelatedBooks": "Acts",
     "RelatedFinds": "Pilate Stone",
-    "Slug": "peter-and-cornelius"
+    "Slug": "peter-and-cornelius",
+    "RelatedEvents": "Jerusalem Council; Pentecost"
   },
   {
     "Story": "Raising of Lazarus",
@@ -981,7 +1066,8 @@
     "KeyPeople": "Jesus; Lazarus; Martha; Mary",
     "RelatedBooks": "John",
     "RelatedFinds": "—",
-    "Slug": "raising-of-lazarus"
+    "Slug": "raising-of-lazarus",
+    "RelatedEvents": "Triumphal Entry"
   },
   {
     "Story": "Rebuilding of the Temple",
@@ -995,7 +1081,8 @@
     "KeyPeople": "Zerubbabel; Joshua the High Priest; Haggai; Zechariah",
     "RelatedBooks": "Ezra; Haggai; Zechariah",
     "RelatedFinds": "Cyrus Cylinder",
-    "Slug": "rebuilding-of-the-temple"
+    "Slug": "rebuilding-of-the-temple",
+    "RelatedEvents": "Cyrus's Decree and Return from Exile; Nehemiah Rebuilds the Wall"
   },
   {
     "Story": "Samson and the Philistines",
@@ -1009,7 +1096,8 @@
     "KeyPeople": "Samson; Delilah; Manoah",
     "RelatedBooks": "Judges",
     "RelatedFinds": "—",
-    "Slug": "samson-and-the-philistines"
+    "Slug": "samson-and-the-philistines",
+    "RelatedEvents": "Samson and Delilah"
   },
   {
     "Story": "Sermon on the Mount",
@@ -1023,7 +1111,8 @@
     "KeyPeople": "Jesus; Disciples",
     "RelatedBooks": "Matthew; Luke",
     "RelatedFinds": "Capernaum",
-    "Slug": "sermon-on-the-mount"
+    "Slug": "sermon-on-the-mount",
+    "RelatedEvents": "The Sermon on the Mount; The Good Samaritan; The Prodigal Son"
   },
   {
     "Story": "Shadrach, Meshach and Abednego in the Fiery Furnace",
@@ -1037,7 +1126,8 @@
     "KeyPeople": "Shadrach; Meshach; Abednego; Nebuchadnezzar; Daniel",
     "RelatedBooks": "Daniel",
     "RelatedFinds": "Babylonian Chronicle",
-    "Slug": "shadrach-meshach-and-abednego-in-the-fiery-furnace"
+    "Slug": "shadrach-meshach-and-abednego-in-the-fiery-furnace",
+    "RelatedEvents": "Daniel in the Lions' Den"
   },
   {
     "Story": "Story of Ruth",
@@ -1051,7 +1141,8 @@
     "KeyPeople": "Ruth; Naomi; Boaz",
     "RelatedBooks": "Ruth",
     "RelatedFinds": "Mesha Stele",
-    "Slug": "story-of-ruth"
+    "Slug": "story-of-ruth",
+    "RelatedEvents": "Ruth's Loyalty"
   },
   {
     "Story": "Temptation in the Wilderness",
@@ -1065,7 +1156,8 @@
     "KeyPeople": "Jesus; Satan",
     "RelatedBooks": "Matthew; Mark; Luke",
     "RelatedFinds": "—",
-    "Slug": "temptation-in-the-wilderness"
+    "Slug": "temptation-in-the-wilderness",
+    "RelatedEvents": "The Temptation in the Wilderness; Baptism of Jesus; Sermon on the Mount"
   },
   {
     "Story": "The Ascension",
@@ -1079,7 +1171,8 @@
     "KeyPeople": "Jesus; Disciples",
     "RelatedBooks": "Luke; Acts",
     "RelatedFinds": "—",
-    "Slug": "the-ascension"
+    "Slug": "the-ascension",
+    "RelatedEvents": "The Resurrection; Pentecost"
   },
   {
     "Story": "The Exodus and Crossing of the Red Sea",
@@ -1093,7 +1186,8 @@
     "KeyPeople": "Moses; Aaron; Miriam; Pharaoh",
     "RelatedBooks": "Exodus",
     "RelatedFinds": "Merneptah Stele",
-    "Slug": "the-exodus-and-crossing-of-the-red-sea"
+    "Slug": "the-exodus-and-crossing-of-the-red-sea",
+    "RelatedEvents": "The Burning Bush; The Ten Plagues; The Passover; Wilderness Wanderings"
   },
   {
     "Story": "The Golden Calf",
@@ -1107,7 +1201,8 @@
     "KeyPeople": "Moses; Aaron; Joshua",
     "RelatedBooks": "Exodus",
     "RelatedFinds": "—",
-    "Slug": "the-golden-calf"
+    "Slug": "the-golden-calf",
+    "RelatedEvents": "Giving of the Law at Sinai; The Ten Commandments; Wilderness Wanderings"
   },
   {
     "Story": "The Kingdom Divides",
@@ -1121,7 +1216,8 @@
     "KeyPeople": "Rehoboam; Jeroboam; Solomon",
     "RelatedBooks": "1 Kings; 2 Chronicles",
     "RelatedFinds": "Megiddo; Hazor",
-    "Slug": "the-kingdom-divides"
+    "Slug": "the-kingdom-divides",
+    "RelatedEvents": "Building of Solomon's Temple; Fall of Samaria; Fall of Jerusalem and the Exile"
   },
   {
     "Story": "The Passover",
@@ -1135,7 +1231,8 @@
     "KeyPeople": "Moses; Aaron",
     "RelatedBooks": "Exodus; Leviticus",
     "RelatedFinds": "—",
-    "Slug": "the-passover"
+    "Slug": "the-passover",
+    "RelatedEvents": "The Ten Plagues; The Exodus and Crossing of the Red Sea"
   },
   {
     "Story": "The Ten Plagues",
@@ -1149,7 +1246,8 @@
     "KeyPeople": "Moses; Aaron; Pharaoh",
     "RelatedBooks": "Exodus",
     "RelatedFinds": "Merneptah Stele",
-    "Slug": "the-ten-plagues"
+    "Slug": "the-ten-plagues",
+    "RelatedEvents": "The Passover; The Exodus and Crossing of the Red Sea; The Burning Bush"
   },
   {
     "Story": "The Twelve Spies and Israel's Unbelief",
@@ -1163,7 +1261,8 @@
     "KeyPeople": "Moses; Joshua; Caleb",
     "RelatedBooks": "Numbers; Deuteronomy",
     "RelatedFinds": "—",
-    "Slug": "the-twelve-spies"
+    "Slug": "the-twelve-spies",
+    "RelatedEvents": "Wilderness Wanderings; Crossing the Jordan"
   },
   {
     "Story": "Tower of Babel",
@@ -1177,7 +1276,8 @@
     "KeyPeople": "Nimrod",
     "RelatedBooks": "Genesis",
     "RelatedFinds": "—",
-    "Slug": "tower-of-babel"
+    "Slug": "tower-of-babel",
+    "RelatedEvents": "The Tower of Babel; Noah and the Flood"
   },
   {
     "Story": "Transfiguration",
@@ -1191,7 +1291,8 @@
     "KeyPeople": "Jesus; Peter; James; John; Moses; Elijah",
     "RelatedBooks": "Matthew; Mark; Luke",
     "RelatedFinds": "—",
-    "Slug": "transfiguration"
+    "Slug": "transfiguration",
+    "RelatedEvents": "Elijah on Mount Carmel; Baptism of Jesus"
   },
   {
     "Story": "Triumphal Entry",
@@ -1205,7 +1306,8 @@
     "KeyPeople": "Jesus; Disciples",
     "RelatedBooks": "Matthew; Mark; Luke; John",
     "RelatedFinds": "Pool of Siloam",
-    "Slug": "triumphal-entry"
+    "Slug": "triumphal-entry",
+    "RelatedEvents": "Raising of Lazarus; Last Supper"
   },
   {
     "Story": "Wilderness Wanderings",
@@ -1219,6 +1321,7 @@
     "KeyPeople": "Moses; Aaron; Miriam; Joshua; Caleb",
     "RelatedBooks": "Numbers; Deuteronomy",
     "RelatedFinds": "Merneptah Stele",
-    "Slug": "wilderness-wanderings"
+    "Slug": "wilderness-wanderings",
+    "RelatedEvents": "The Exodus and Crossing of the Red Sea; Crossing the Jordan; The Twelve Spies and Israel's Unbelief; The Golden Calf"
   }
 ]

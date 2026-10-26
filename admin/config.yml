@@ -65,6 +65,8 @@ collections:
       - {label: "Purpose", name: "Purpose", widget: "string"}
       - {label: "Outline", name: "Outline", widget: "list"}
       - {label: "Historical Context", name: "HistoricalContext", widget: "text"}
+      - {label: "Related Places", name: "Places", widget: "list"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
   - name: "questions"
     label: "Questions and Answers"
     folder: "content/questions"
@@ -95,6 +97,9 @@ collections:
       - {label: "Tags", name: "Tags", widget: "list"}
       - {label: "Status", name: "Status", widget: "string"}
       - {label: "Last Updated", name: "LastUpdated", widget: "string"}
+      - {label: "Related People", name: "RelatedPeople", widget: "list"}
+      - {label: "Related Places", name: "Places", widget: "list"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
   - name: "people"
     label: "Biblical People"
     folder: "content/people"
@@ -115,6 +120,8 @@ collections:
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Life Lesson", name: "LifeLesson", widget: "text"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Related Places", name: "Places", widget: "list"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
   - name: "finds"
     label: "Ancient Discoveries"
     folder: "content/finds"
@@ -136,6 +143,8 @@ collections:
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Related Books", name: "RelatedBooks", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Related Places", name: "Places", widget: "list"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
   - name: "places"
     label: "Biblical Places"
     folder: "content/places"
@@ -156,6 +165,8 @@ collections:
       - {label: "Related Books", name: "RelatedBooks", widget: "list"}
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Related Places", name: "Places", widget: "list"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
   - name: "topics"
     label: "Topics"
     folder: "content/topics"
@@ -174,6 +185,8 @@ collections:
       - {label: "Related Questions", name: "RelatedQuestions", widget: "list"}
       - {label: "Related Books", name: "RelatedBooks", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Related Places", name: "Places", widget: "list"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
   - name: "themes"
     label: "Themes"
     folder: "content/themes"
@@ -190,6 +203,7 @@ collections:
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Related Places", name: "Places", widget: "list"}
   - name: "doctrines"
     label: "Doctrines"
     folder: "content/doctrines"
@@ -207,6 +221,8 @@ collections:
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Related Places", name: "Places", widget: "list"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
   - name: "heresies"
     label: "Heresies"
     folder: "content/heresies"
@@ -225,6 +241,8 @@ collections:
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Related Doctrines", name: "RelatedDoctrines", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Related Places", name: "Places", widget: "list"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
   - name: "wordstudies"
     label: "Word Studies"
     folder: "content/wordstudies"
@@ -246,6 +264,9 @@ collections:
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Related Books", name: "RelatedBooks", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Related People", name: "RelatedPeople", widget: "list"}
+      - {label: "Related Places", name: "Places", widget: "list"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
   - name: "prophecies"
     label: "Prophecies"
     folder: "content/prophecies"
@@ -267,6 +288,7 @@ collections:
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Related Places", name: "Places", widget: "list"}
   - name: "typology"
     label: "Typology"
     folder: "content/typology"
@@ -286,6 +308,7 @@ collections:
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Related Places", name: "Places", widget: "list"}
   - name: "fallacies"
     label: "Fallacies"
     folder: "content/fallacies"
@@ -399,6 +422,9 @@ collections:
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Related Books", name: "RelatedBooks", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Related People", name: "RelatedPeople", widget: "list"}
+      - {label: "Related Places", name: "Places", widget: "list"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
   - name: "objections"
     label: "Objections & Answers"
     folder: "content/objections"
@@ -415,6 +441,9 @@ collections:
       - {label: "Scripture", name: "Scripture", widget: "string"}
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Related People", name: "RelatedPeople", widget: "list"}
+      - {label: "Related Places", name: "Places", widget: "list"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
   - name: "perspectives"
     label: "Perspectives"
     folder: "content/perspectives"
@@ -508,6 +537,7 @@ collections:
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Related Finds", name: "RelatedFinds", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
   - name: "hermeneutics"
     label: "Biblical Hermeneutics"
     folder: "content/hermeneutics"
@@ -543,6 +573,9 @@ collections:
       - {label: "Scripture", name: "Scripture", widget: "string"}
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Related People", name: "RelatedPeople", widget: "list"}
+      - {label: "Related Places", name: "Places", widget: "list"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
   - name: "comicstories"
     label: "Comic Stories"
     folder: "content/comicstories"
@@ -580,6 +613,9 @@ collections:
       - {label: "Related Books", name: "RelatedBooks", widget: "list"}
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Related People", name: "RelatedPeople", widget: "list"}
+      - {label: "Related Places", name: "Places", widget: "list"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
   - name: "pages"
     label: "Site Pages"
     files:

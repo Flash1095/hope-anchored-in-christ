@@ -10,5 +10,6 @@
   "RelatedBooks": "Micah; Matthew; Luke; John",
   "RelatedPeople": "Micah; David; Mary; Jesus",
   "RelatedEvents": "Birth of Jesus",
-  "Slug": "born-in-bethlehem"
+  "Slug": "born-in-bethlehem",
+  "Places": "Bethlehem"
 }

@@ -8,7 +8,9 @@
     "ChristianResponse": "The church affirmed that all people need God's grace because of a fallen nature, citing passages such as Romans 5 and Ephesians 2 on sin and grace.",
     "RelatedPeople": "Pelagius; Augustine",
     "RelatedDoctrines": "Original Sin; Grace",
-    "Slug": "pelagianism"
+    "Slug": "pelagianism",
+    "Places": "Ephesus",
+    "RelatedEvents": "The Fall"
   },
   {
     "Heresy": "Semi-Pelagianism",
@@ -52,7 +54,8 @@
     "ChristianResponse": "The church affirmed that Jesus came truly in the flesh and truly died and rose bodily, citing 1 John 4:2-3 and Luke 24:39.",
     "RelatedPeople": "Ignatius of Antioch; John the Apostle",
     "RelatedDoctrines": "Incarnation; Atonement; Resurrection",
-    "Slug": "docetism"
+    "Slug": "docetism",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Heresy": "Marcionism",
@@ -63,7 +66,8 @@
     "ChristianResponse": "The church affirmed one God revealed in both Testaments and preserved the Old Testament as Scripture, citing Luke 24:27 and 2 Timothy 3:16.",
     "RelatedPeople": "Marcion; Tertullian; Irenaeus",
     "RelatedDoctrines": "Canon of Scripture; Nature of God; Old Testament",
-    "Slug": "marcionism"
+    "Slug": "marcionism",
+    "Places": "Rome"
   },
   {
     "Heresy": "Montanism",
@@ -85,7 +89,9 @@
     "ChristianResponse": "The church affirmed one God in three distinct persons who coexist eternally, citing Matthew 28:19 and the baptism of Jesus in Matthew 3.",
     "RelatedPeople": "Sabellius; Tertullian; Hippolytus",
     "RelatedDoctrines": "Trinity; Nature of God",
-    "Slug": "sabellianism-modalism"
+    "Slug": "sabellianism-modalism",
+    "Places": "Rome",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Heresy": "Nestorianism",
@@ -96,7 +102,8 @@
     "ChristianResponse": "The church affirmed that Jesus is one person with two natures, fully God and fully man, citing John 1:14 and Philippians 2.",
     "RelatedPeople": "Nestorius; Cyril of Alexandria",
     "RelatedDoctrines": "Incarnation; Deity of Christ; Hypostatic Union",
-    "Slug": "nestorianism"
+    "Slug": "nestorianism",
+    "Places": "Ephesus"
   },
   {
     "Heresy": "Monophysitism (Eutychianism)",
@@ -250,7 +257,9 @@
     "ChristianResponse": "The church affirmed that Jesus is God's Son by nature from eternity, citing John 1:1-14 and Romans 1:3-4.",
     "RelatedPeople": "Theodotus of Byzantium; Elipandus; Alcuin",
     "RelatedDoctrines": "Deity of Christ; Incarnation; Sonship",
-    "Slug": "adoptionism"
+    "Slug": "adoptionism",
+    "Places": "Rome",
+    "RelatedEvents": "Baptism of Jesus"
   },
   {
     "Heresy": "Monothelitism",

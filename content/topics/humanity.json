@@ -6,5 +6,7 @@
   "RelatedPeople": "Adam; Jesus",
   "RelatedDoctrines": "Creation",
   "RelatedBooks": "Genesis; Psalms; Hebrews; Revelation",
-  "Slug": "humanity"
+  "Slug": "humanity",
+  "Places": "Garden of Eden",
+  "RelatedEvents": "Creation; The Fall"
 }

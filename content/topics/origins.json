@@ -7,5 +7,7 @@
   "RelatedDoctrines": "Creation",
   "RelatedQuestions": "Did God create the world in six literal days?",
   "RelatedBooks": "Genesis; Psalms; John; Colossians; Hebrews",
-  "Slug": "origins"
+  "Slug": "origins",
+  "Places": "Garden of Eden",
+  "RelatedEvents": "Creation"
 }

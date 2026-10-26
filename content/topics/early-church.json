@@ -6,5 +6,7 @@
   "RelatedPeople": "Simon Peter; Paul; Stephen; Barnabas",
   "RelatedDoctrines": "The Church; Holy Spirit",
   "RelatedBooks": "Acts",
-  "Slug": "early-church"
+  "Slug": "early-church",
+  "Places": "Jerusalem",
+  "RelatedEvents": "Pentecost"
 }

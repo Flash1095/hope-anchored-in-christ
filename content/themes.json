@@ -6,7 +6,8 @@
     "RelatedBooks": "Genesis; Exodus; 2 Samuel; Jeremiah; Luke; Hebrews",
     "RelatedPeople": "Abraham; Noah; Moses; David; Jesus",
     "RelatedEvents": "The Exodus and Crossing of the Red Sea; Last Supper; The Crucifixion",
-    "Slug": "covenant"
+    "Slug": "covenant",
+    "Places": "Egypt; Jerusalem; Golgotha"
   },
   {
     "Theme": "Redemption",
@@ -15,7 +16,8 @@
     "RelatedBooks": "Exodus; Ruth; Psalms; Mark; Ephesians; Romans",
     "RelatedPeople": "Moses; Ruth; Boaz; Jesus; Paul",
     "RelatedEvents": "The Exodus and Crossing of the Red Sea; The Crucifixion; The Resurrection",
-    "Slug": "redemption"
+    "Slug": "redemption",
+    "Places": "Egypt; Golgotha; Jerusalem"
   },
   {
     "Theme": "Sacrifice",
@@ -24,7 +26,8 @@
     "RelatedBooks": "Genesis; Leviticus; Isaiah; John; Hebrews",
     "RelatedPeople": "Abraham; Isaac; Aaron; Jesus; John the Baptist",
     "RelatedEvents": "Binding of Isaac; The Passover; The Crucifixion",
-    "Slug": "sacrifice"
+    "Slug": "sacrifice",
+    "Places": "Jerusalem; Egypt; Golgotha"
   },
   {
     "Theme": "Holiness",
@@ -33,7 +36,8 @@
     "RelatedBooks": "Exodus; Leviticus; Isaiah; 1 Peter; Hebrews",
     "RelatedPeople": "Moses; Isaiah; Aaron; Peter; Jesus",
     "RelatedEvents": "Giving of the Law at Sinai; Pentecost",
-    "Slug": "holiness"
+    "Slug": "holiness",
+    "Places": "Mount Sinai; Jerusalem"
   },
   {
     "Theme": "Sin",
@@ -42,7 +46,8 @@
     "RelatedBooks": "Genesis; Psalms; Isaiah; Romans; 1 John",
     "RelatedPeople": "Adam; Eve; David; Paul; Jesus",
     "RelatedEvents": "The Fall; David and Bathsheba; The Crucifixion",
-    "Slug": "sin"
+    "Slug": "sin",
+    "Places": "Garden of Eden; Jerusalem; Golgotha"
   },
   {
     "Theme": "Justice",
@@ -51,7 +56,8 @@
     "RelatedBooks": "Deuteronomy; Psalms; Isaiah; Amos; Micah; Romans",
     "RelatedPeople": "Moses; Amos; Micah; Jesus; Paul",
     "RelatedEvents": "Giving of the Law at Sinai; The Crucifixion",
-    "Slug": "justice"
+    "Slug": "justice",
+    "Places": "Mount Sinai; Golgotha; Jerusalem"
   },
   {
     "Theme": "Mercy",
@@ -60,7 +66,8 @@
     "RelatedBooks": "Exodus; Psalms; Micah; Luke; Ephesians; Titus",
     "RelatedPeople": "Moses; David; Jonah; Jesus; Paul",
     "RelatedEvents": "The Exodus and Crossing of the Red Sea; Jonah and the Great Fish; The Crucifixion",
-    "Slug": "mercy"
+    "Slug": "mercy",
+    "Places": "Egypt; Nineveh; Golgotha; Jerusalem"
   },
   {
     "Theme": "Salvation",
@@ -69,7 +76,8 @@
     "RelatedBooks": "Exodus; Psalms; Isaiah; Luke; Acts; Ephesians",
     "RelatedPeople": "Moses; Isaiah; Jesus; Peter; Paul",
     "RelatedEvents": "The Exodus and Crossing of the Red Sea; The Crucifixion; The Resurrection; Pentecost",
-    "Slug": "salvation"
+    "Slug": "salvation",
+    "Places": "Egypt; Golgotha; Jerusalem"
   },
   {
     "Theme": "Faith",
@@ -78,7 +86,8 @@
     "RelatedBooks": "Genesis; Habakkuk; Hebrews; Romans; James",
     "RelatedPeople": "Abraham; Noah; Moses; Rahab; Mary",
     "RelatedEvents": "Binding of Isaac; Noah and the Flood; The Resurrection",
-    "Slug": "faith"
+    "Slug": "faith",
+    "Places": "Mount Ararat; Jerusalem"
   },
   {
     "Theme": "Grace",
@@ -87,7 +96,8 @@
     "RelatedBooks": "Genesis; Psalms; John; Romans; Ephesians; Titus",
     "RelatedPeople": "Noah; David; Mary; Jesus; Paul",
     "RelatedEvents": "The Crucifixion; Conversion of Saul (Paul); Pentecost",
-    "Slug": "grace"
+    "Slug": "grace",
+    "Places": "Golgotha; Jerusalem"
   },
   {
     "Theme": "Love",
@@ -96,7 +106,8 @@
     "RelatedBooks": "Deuteronomy; Psalms; John; Romans; 1 Corinthians; 1 John",
     "RelatedPeople": "Moses; David; Jesus; Paul; John",
     "RelatedEvents": "The Crucifixion; Last Supper; Creation",
-    "Slug": "love"
+    "Slug": "love",
+    "Places": "Golgotha; Jerusalem; Garden of Eden"
   },
   {
     "Theme": "Hope",
@@ -105,7 +116,8 @@
     "RelatedBooks": "Psalms; Jeremiah; Romans; Hebrews; 1 Peter",
     "RelatedPeople": "Abraham; Jeremiah; Paul; Peter; Jesus",
     "RelatedEvents": "Fall of Jerusalem and the Exile; The Resurrection; Cyrus's Decree and Return from Exile",
-    "Slug": "hope"
+    "Slug": "hope",
+    "Places": "Jerusalem; Babylon"
   },
   {
     "Theme": "Kingdom of God",
@@ -114,7 +126,8 @@
     "RelatedBooks": "Daniel; Mark; Matthew; Luke; Revelation",
     "RelatedPeople": "Daniel; Jesus; John the Baptist; Paul",
     "RelatedEvents": "Birth of Jesus; The Crucifixion; The Resurrection; Pentecost",
-    "Slug": "kingdom-of-god"
+    "Slug": "kingdom-of-god",
+    "Places": "Bethlehem; Golgotha; Jerusalem"
   },
   {
     "Theme": "Light and Darkness",
@@ -123,7 +136,8 @@
     "RelatedBooks": "Genesis; Psalms; Isaiah; John; Ephesians; Revelation",
     "RelatedPeople": "Jesus; Isaiah; Paul; John",
     "RelatedEvents": "Creation; Birth of Jesus; The Crucifixion; The Resurrection",
-    "Slug": "light-and-darkness"
+    "Slug": "light-and-darkness",
+    "Places": "Garden of Eden; Bethlehem; Golgotha; Jerusalem"
   },
   {
     "Theme": "Shepherd",
@@ -132,7 +146,8 @@
     "RelatedBooks": "Genesis; Psalms; Ezekiel; John; 1 Peter",
     "RelatedPeople": "David; Ezekiel; Jesus; Peter",
     "RelatedEvents": "David Becomes King; Birth of Jesus; The Crucifixion",
-    "Slug": "shepherd"
+    "Slug": "shepherd",
+    "Places": "Bethlehem; Hebron; Jerusalem; Golgotha"
   },
   {
     "Theme": "Vine and Branches",
@@ -141,7 +156,8 @@
     "RelatedBooks": "Psalms; Isaiah; John; Romans",
     "RelatedPeople": "Isaiah; Jesus; Paul",
     "RelatedEvents": "The Exodus and Crossing of the Red Sea; Last Supper; Pentecost",
-    "Slug": "vine-and-branches"
+    "Slug": "vine-and-branches",
+    "Places": "Egypt; Jerusalem"
   },
   {
     "Theme": "Temple",
@@ -150,7 +166,8 @@
     "RelatedBooks": "Exodus; 1 Kings; Psalms; John; 1 Corinthians; Revelation",
     "RelatedPeople": "Moses; Solomon; Jesus; Paul",
     "RelatedEvents": "Building of Solomon's Temple; Pentecost; Rebuilding of the Temple",
-    "Slug": "temple"
+    "Slug": "temple",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Deliverance (Exodus)",
@@ -159,7 +176,8 @@
     "RelatedBooks": "Exodus; Deuteronomy; Luke; 1 Corinthians",
     "RelatedPeople": "Moses; Aaron; Jesus",
     "RelatedEvents": "The Exodus and Crossing of the Red Sea; The Passover; The Crucifixion",
-    "Slug": "deliverance-exodus"
+    "Slug": "deliverance-exodus",
+    "Places": "Egypt; Goshen; Golgotha; Jerusalem"
   },
   {
     "Theme": "Exile and Return",
@@ -168,7 +186,8 @@
     "RelatedBooks": "2 Kings; Jeremiah; Ezekiel; Ezra; Psalms; Isaiah",
     "RelatedPeople": "Jeremiah; Ezekiel; Daniel; Ezra; Nehemiah; Cyrus the Great",
     "RelatedEvents": "Fall of Jerusalem and the Exile; Cyrus's Decree and Return from Exile; Rebuilding of the Temple",
-    "Slug": "exile-and-return"
+    "Slug": "exile-and-return",
+    "Places": "Jerusalem; Babylon; Susa"
   },
   {
     "Theme": "Wisdom",
@@ -177,7 +196,8 @@
     "RelatedBooks": "Proverbs; Job; Ecclesiastes; James; 1 Corinthians",
     "RelatedPeople": "Solomon; Job; Jesus; James; Paul",
     "RelatedEvents": "Building of Solomon's Temple; Birth of Jesus",
-    "Slug": "wisdom"
+    "Slug": "wisdom",
+    "Places": "Jerusalem; Bethlehem"
   },
   {
     "Theme": "Worship",
@@ -186,7 +206,8 @@
     "RelatedBooks": "Genesis; Psalms; John; Romans; Revelation",
     "RelatedPeople": "Abraham; David; Jesus; Paul; John",
     "RelatedEvents": "Binding of Isaac; Building of Solomon's Temple; Pentecost",
-    "Slug": "worship"
+    "Slug": "worship",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Prayer",
@@ -195,7 +216,8 @@
     "RelatedBooks": "Genesis; 1 Samuel; Psalms; Daniel; Matthew; Hebrews",
     "RelatedPeople": "Abraham; Hannah; Daniel; Jesus; Paul",
     "RelatedEvents": "Destruction of Sodom and Gomorrah; Daniel in the Lions' Den; The Crucifixion; Pentecost",
-    "Slug": "prayer"
+    "Slug": "prayer",
+    "Places": "Babylon; Golgotha; Jerusalem"
   },
   {
     "Theme": "Forgiveness",
@@ -204,7 +226,8 @@
     "RelatedBooks": "Genesis; Psalms; Matthew; Luke; Ephesians; Colossians",
     "RelatedPeople": "Joseph; David; Jesus; Stephen; Paul",
     "RelatedEvents": "Joseph Rises to Power in Egypt; The Crucifixion; Martyrdom of Stephen",
-    "Slug": "forgiveness"
+    "Slug": "forgiveness",
+    "Places": "Egypt; Golgotha; Jerusalem"
   },
   {
     "Theme": "New Creation",
@@ -213,7 +236,8 @@
     "RelatedBooks": "Genesis; Isaiah; 2 Corinthians; Galatians; Revelation; Romans",
     "RelatedPeople": "Isaiah; Jesus; Paul; John",
     "RelatedEvents": "Creation; The Resurrection; Pentecost",
-    "Slug": "new-creation"
+    "Slug": "new-creation",
+    "Places": "Garden of Eden; Jerusalem"
   },
   {
     "Theme": "Light",
@@ -222,7 +246,8 @@
     "RelatedBooks": "Genesis; Psalms; Isaiah; Matthew; John; 1 John",
     "RelatedPeople": "Jesus; Isaiah; Paul; John",
     "RelatedEvents": "Creation; Birth of Jesus; Transfiguration",
-    "Slug": "light"
+    "Slug": "light",
+    "Places": "Garden of Eden; Bethlehem"
   },
   {
     "Theme": "Water",
@@ -231,7 +256,8 @@
     "RelatedBooks": "Genesis; Exodus; Ezekiel; John; Revelation",
     "RelatedPeople": "Moses; Noah; Jesus; The Samaritan Woman",
     "RelatedEvents": "Creation; Noah and the Flood; The Exodus and Crossing of the Red Sea; Baptism of Jesus",
-    "Slug": "water"
+    "Slug": "water",
+    "Places": "Garden of Eden; Mount Ararat; Egypt; Jordan River"
   },
   {
     "Theme": "Bread",
@@ -240,7 +266,8 @@
     "RelatedBooks": "Exodus; Deuteronomy; Matthew; John; 1 Corinthians",
     "RelatedPeople": "Moses; Elijah; Jesus; Paul",
     "RelatedEvents": "Wilderness Wanderings; Feeding of the Five Thousand; Last Supper",
-    "Slug": "bread"
+    "Slug": "bread",
+    "Places": "Galilee; Jerusalem"
   },
   {
     "Theme": "Lamb",
@@ -249,7 +276,8 @@
     "RelatedBooks": "Genesis; Exodus; Isaiah; John; 1 Peter; Revelation",
     "RelatedPeople": "Abraham; Isaac; Moses; Isaiah; Jesus; John the Baptist",
     "RelatedEvents": "Binding of Isaac; The Passover; The Crucifixion; The Resurrection",
-    "Slug": "lamb"
+    "Slug": "lamb",
+    "Places": "Jerusalem; Egypt; Golgotha"
   },
   {
     "Theme": "Cross",
@@ -258,7 +286,8 @@
     "RelatedBooks": "Isaiah; Matthew; John; 1 Corinthians; Galatians; Colossians",
     "RelatedPeople": "Jesus; Mary, Mother of Jesus; Paul",
     "RelatedEvents": "The Crucifixion; Last Supper",
-    "Slug": "cross"
+    "Slug": "cross",
+    "Places": "Golgotha; Jerusalem"
   },
   {
     "Theme": "Resurrection Life",
@@ -267,7 +296,8 @@
     "RelatedBooks": "John; Romans; 1 Corinthians; Philippians; Colossians; 1 Peter",
     "RelatedPeople": "Jesus; Lazarus; Mary Magdalene; Paul; Peter",
     "RelatedEvents": "The Resurrection; Raising of Lazarus; Pentecost",
-    "Slug": "resurrection-life"
+    "Slug": "resurrection-life",
+    "Places": "Jerusalem; Bethany"
   },
   {
     "Theme": "Peace",
@@ -276,7 +306,8 @@
     "RelatedBooks": "Numbers; Isaiah; John; Romans; Ephesians; Philippians",
     "RelatedPeople": "Isaiah; Jesus; Paul",
     "RelatedEvents": "Birth of Jesus; The Crucifixion; The Resurrection",
-    "Slug": "peace"
+    "Slug": "peace",
+    "Places": "Bethlehem; Golgotha; Jerusalem"
   },
   {
     "Theme": "Joy",
@@ -285,7 +316,8 @@
     "RelatedBooks": "Nehemiah; Psalms; Habakkuk; John; Philippians; Galatians",
     "RelatedPeople": "Nehemiah; David; Jesus; Paul",
     "RelatedEvents": "Cyrus's Decree and Return from Exile; Birth of Jesus; The Resurrection; Pentecost",
-    "Slug": "joy"
+    "Slug": "joy",
+    "Places": "Babylon; Bethlehem; Jerusalem"
   },
   {
     "Theme": "Patience",
@@ -294,7 +326,8 @@
     "RelatedBooks": "Exodus; Psalms; Romans; Galatians; James; 2 Peter",
     "RelatedPeople": "Abraham; Joseph; Job; Jesus; Paul",
     "RelatedEvents": "Binding of Isaac; Joseph Sold into Egypt; Birth of Jesus",
-    "Slug": "patience"
+    "Slug": "patience",
+    "Places": "Jerusalem; Egypt; Bethlehem"
   },
   {
     "Theme": "Servanthood",
@@ -303,7 +336,8 @@
     "RelatedBooks": "Isaiah; Mark; John; Philippians; 1 Peter",
     "RelatedPeople": "Isaiah; Jesus; Moses; Paul; Peter",
     "RelatedEvents": "The Exodus and Crossing of the Red Sea; Last Supper; The Crucifixion",
-    "Slug": "servanthood"
+    "Slug": "servanthood",
+    "Places": "Egypt; Jerusalem; Golgotha"
   },
   {
     "Theme": "Abundance",
@@ -312,7 +346,8 @@
     "RelatedBooks": "Deuteronomy; Psalms; John; 2 Corinthians; Philippians",
     "RelatedPeople": "Moses; King David; Jesus; Paul",
     "RelatedEvents": "Wilderness Wanderings; The Feeding of the Five Thousand",
-    "Slug": "abundance"
+    "Slug": "abundance",
+    "Places": "Galilee"
   },
   {
     "Theme": "Acceptance",
@@ -330,7 +365,8 @@
     "RelatedBooks": "Hebrews; 2 Peter; 1 Timothy; Jude",
     "RelatedPeople": "Paul; John the Apostle; Judas Iscariot",
     "RelatedEvents": "The Golden Calf; The Kingdom Divides",
-    "Slug": "apostasy"
+    "Slug": "apostasy",
+    "Places": "Mount Sinai; Samaria"
   },
   {
     "Theme": "Belief",
@@ -339,7 +375,8 @@
     "RelatedBooks": "John; Romans; Hebrews; James",
     "RelatedPeople": "Jesus; Paul; Abraham; Thomas",
     "RelatedEvents": "The Resurrection; Conversion of Saul (Paul)",
-    "Slug": "belief"
+    "Slug": "belief",
+    "Places": "Jerusalem; Golgotha"
   },
   {
     "Theme": "Bethlehem ruler",
@@ -348,7 +385,8 @@
     "RelatedBooks": "Micah; Matthew; Luke; John",
     "RelatedPeople": "Jesus; Mary, Mother of Jesus; Joseph, Husband of Mary",
     "RelatedEvents": "The Birth of Jesus",
-    "Slug": "bethlehem-ruler"
+    "Slug": "bethlehem-ruler",
+    "Places": "Bethlehem"
   },
   {
     "Theme": "Blessing and curse",
@@ -357,7 +395,8 @@
     "RelatedBooks": "Deuteronomy; Joshua; Galatians",
     "RelatedPeople": "Moses; Joshua; Paul",
     "RelatedEvents": "Giving of the Law at Sinai; Crossing the Jordan",
-    "Slug": "blessing-and-curse"
+    "Slug": "blessing-and-curse",
+    "Places": "Mount Sinai; Plains of Moab"
   },
   {
     "Theme": "Blessing",
@@ -366,7 +405,8 @@
     "RelatedBooks": "Genesis; Numbers; Deuteronomy; Ephesians; Matthew",
     "RelatedPeople": "Abraham; Moses; Jesus",
     "RelatedEvents": "The Call of Abraham; The Sermon on the Mount",
-    "Slug": "blessing"
+    "Slug": "blessing",
+    "Places": "Canaan; Galilee"
   },
   {
     "Theme": "Brotherhood",
@@ -375,7 +415,8 @@
     "RelatedBooks": "Psalms; Romans; 1 John; Hebrews",
     "RelatedPeople": "Jesus; Paul; John the Apostle; Joseph, Son of Jacob",
     "RelatedEvents": "Joseph and His Brothers; Pentecost",
-    "Slug": "brotherhood"
+    "Slug": "brotherhood",
+    "Places": "Canaan; Egypt; Jerusalem"
   },
   {
     "Theme": "Character",
@@ -384,7 +425,8 @@
     "RelatedBooks": "Romans; Galatians; 2 Peter; Philippians",
     "RelatedPeople": "Paul; Simon Peter; Joseph, Son of Jacob",
     "RelatedEvents": "Joseph Rises to Power in Egypt; The Temptation in the Wilderness",
-    "Slug": "character"
+    "Slug": "character",
+    "Places": "Egypt"
   },
   {
     "Theme": "Christ Alone",
@@ -393,7 +435,8 @@
     "RelatedBooks": "John; Acts; 1 Timothy; Colossians",
     "RelatedPeople": "Jesus; Paul; Simon Peter",
     "RelatedEvents": "The Crucifixion; The Resurrection",
-    "Slug": "christ-alone"
+    "Slug": "christ-alone",
+    "Places": "Golgotha; Jerusalem"
   },
   {
     "Theme": "Christ's example",
@@ -402,7 +445,8 @@
     "RelatedBooks": "John; 1 Peter; Philippians; 1 John",
     "RelatedPeople": "Jesus; Simon Peter; Paul",
     "RelatedEvents": "The Last Supper; The Crucifixion",
-    "Slug": "christ-s-example"
+    "Slug": "christ-s-example",
+    "Places": "Jerusalem; Golgotha"
   },
   {
     "Theme": "Christ's return",
@@ -411,7 +455,8 @@
     "RelatedBooks": "Matthew; Acts; 1 Thessalonians; Revelation",
     "RelatedPeople": "Jesus; Paul; John the Apostle",
     "RelatedEvents": "The Ascension; Transfiguration",
-    "Slug": "christ-s-return"
+    "Slug": "christ-s-return",
+    "Places": "Jerusalem; Bethany"
   },
   {
     "Theme": "Christian living",
@@ -420,7 +465,8 @@
     "RelatedBooks": "Romans; Colossians; Galatians; Micah",
     "RelatedPeople": "Paul; Jesus",
     "RelatedEvents": "The Sermon on the Mount; Pentecost",
-    "Slug": "christian-living"
+    "Slug": "christian-living",
+    "Places": "Galilee; Jerusalem"
   },
   {
     "Theme": "Church growth",
@@ -429,7 +475,8 @@
     "RelatedBooks": "Acts; Ephesians",
     "RelatedPeople": "Simon Peter; Paul; Barnabas",
     "RelatedEvents": "Pentecost; Jerusalem Council",
-    "Slug": "church-growth"
+    "Slug": "church-growth",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Church order",
@@ -438,7 +485,8 @@
     "RelatedBooks": "1 Corinthians; 1 Timothy; Titus; Acts",
     "RelatedPeople": "Paul; Timothy; Stephen",
     "RelatedEvents": "Jerusalem Council; Pentecost",
-    "Slug": "church-order"
+    "Slug": "church-order",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Comfort for Judah",
@@ -447,7 +495,8 @@
     "RelatedBooks": "Isaiah; Jeremiah",
     "RelatedPeople": "Isaiah; Jeremiah",
     "RelatedEvents": "Fall of Jerusalem and the Exile; Cyrus's Decree and Return from Exile",
-    "Slug": "comfort-for-judah"
+    "Slug": "comfort-for-judah",
+    "Places": "Jerusalem; Babylon"
   },
   {
     "Theme": "Coming King",
@@ -456,7 +505,8 @@
     "RelatedBooks": "Zechariah; Psalms; Revelation; Matthew",
     "RelatedPeople": "Jesus; King David; Zechariah the Prophet",
     "RelatedEvents": "Triumphal Entry; David Becomes King",
-    "Slug": "coming-king"
+    "Slug": "coming-king",
+    "Places": "Bethany; Hebron; Jerusalem"
   },
   {
     "Theme": "Compassion for nations",
@@ -465,7 +515,8 @@
     "RelatedBooks": "Jonah; Isaiah; Matthew; Revelation",
     "RelatedPeople": "Jonah; Jesus; Paul",
     "RelatedEvents": "Jonah and Nineveh; Pentecost",
-    "Slug": "compassion-for-nations"
+    "Slug": "compassion-for-nations",
+    "Places": "Nineveh; Jerusalem"
   },
   {
     "Theme": "Conquest",
@@ -474,7 +525,8 @@
     "RelatedBooks": "Joshua; Judges; Hebrews",
     "RelatedPeople": "Joshua; Caleb; Rahab",
     "RelatedEvents": "Crossing the Jordan; Fall of Jericho",
-    "Slug": "conquest"
+    "Slug": "conquest",
+    "Places": "Jordan River; Gilgal; Jericho"
   },
   {
     "Theme": "Consecration",
@@ -483,7 +535,8 @@
     "RelatedBooks": "Exodus; Leviticus; Romans; 1 Peter",
     "RelatedPeople": "Moses; Aaron; Simon Peter",
     "RelatedEvents": "Giving of the Law at Sinai; The Ten Commandments",
-    "Slug": "consecration"
+    "Slug": "consecration",
+    "Places": "Mount Sinai"
   },
   {
     "Theme": "Contending for the faith",
@@ -492,7 +545,8 @@
     "RelatedBooks": "Jude; Philippians; 1 Peter; 2 Timothy",
     "RelatedPeople": "Paul; Simon Peter; John the Apostle",
     "RelatedEvents": "Jerusalem Council; Martyrdom of Stephen",
-    "Slug": "contending-for-the-faith"
+    "Slug": "contending-for-the-faith",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Covenant love",
@@ -501,7 +555,8 @@
     "RelatedBooks": "Exodus; Deuteronomy; Hosea; 1 John",
     "RelatedPeople": "Moses; Hosea; John the Apostle",
     "RelatedEvents": "The Golden Calf; The Exodus and the Red Sea",
-    "Slug": "covenant-love"
+    "Slug": "covenant-love",
+    "Places": "Mount Sinai; Egypt"
   },
   {
     "Theme": "Covenant renewal",
@@ -510,7 +565,8 @@
     "RelatedBooks": "Joshua; Nehemiah; 2 Kings; 2 Chronicles",
     "RelatedPeople": "Joshua; Nehemiah; Ezra; King Josiah",
     "RelatedEvents": "Ezra Reads the Law; Nehemiah Rebuilds the Wall",
-    "Slug": "covenant-renewal"
+    "Slug": "covenant-renewal",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Covenant unfaithfulness",
@@ -519,7 +575,8 @@
     "RelatedBooks": "Judges; Hosea; Jeremiah; Ezekiel",
     "RelatedPeople": "Hosea; Jeremiah; Ezekiel",
     "RelatedEvents": "The Golden Calf; The Kingdom Divides",
-    "Slug": "covenant-unfaithfulness"
+    "Slug": "covenant-unfaithfulness",
+    "Places": "Mount Sinai; Samaria; Jerusalem"
   },
   {
     "Theme": "Cycles of sin",
@@ -528,7 +585,8 @@
     "RelatedBooks": "Judges; Psalms; Romans",
     "RelatedPeople": "Deborah; Gideon; Samson",
     "RelatedEvents": "Deborah and Barak Defeat Sisera; Gideon's Victory over Midian",
-    "Slug": "cycles-of-sin"
+    "Slug": "cycles-of-sin",
+    "Places": "Ramah; Bethel; Midian"
   },
   {
     "Theme": "Daily Faith",
@@ -537,7 +595,8 @@
     "RelatedBooks": "Lamentations; Matthew; Luke; Hebrews",
     "RelatedPeople": "Jesus; Jeremiah; Paul",
     "RelatedEvents": "The Sermon on the Mount; Wilderness Wanderings",
-    "Slug": "daily-faith"
+    "Slug": "daily-faith",
+    "Places": "Galilee; Mount Sinai"
   },
   {
     "Theme": "David's lineage",
@@ -546,7 +605,8 @@
     "RelatedBooks": "Ruth; 2 Samuel; Matthew; Luke",
     "RelatedPeople": "King David; Ruth; Boaz; Jesus",
     "RelatedEvents": "Story of Ruth; David Becomes King",
-    "Slug": "david-s-lineage"
+    "Slug": "david-s-lineage",
+    "Places": "Bethlehem; Hebron; Jerusalem"
   },
   {
     "Theme": "Davidic covenant",
@@ -555,7 +615,8 @@
     "RelatedBooks": "2 Samuel; Psalms; Isaiah; Luke",
     "RelatedPeople": "King David; Nathan; Jesus",
     "RelatedEvents": "Davidic Covenant; David Becomes King",
-    "Slug": "davidic-covenant"
+    "Slug": "davidic-covenant",
+    "Places": "Hebron; Jerusalem"
   },
   {
     "Theme": "Day of the Lord",
@@ -563,7 +624,8 @@
     "KeyPassages": "Joel 2:28-32; Amos 5:18-24; Zephaniah 1:14-18; 2 Peter 3:10-13",
     "RelatedBooks": "Joel; Amos; Zephaniah; 2 Peter",
     "RelatedPeople": "Amos; Isaiah; Simon Peter",
-    "Slug": "day-of-the-lord"
+    "Slug": "day-of-the-lord",
+    "RelatedEvents": "The Ascension"
   },
   {
     "Theme": "Dependence",
@@ -572,7 +634,8 @@
     "RelatedBooks": "John; Psalms; Proverbs; 2 Corinthians",
     "RelatedPeople": "Jesus; Paul; King David",
     "RelatedEvents": "The Temptation in the Wilderness; Jesus Prays in Gethsemane",
-    "Slug": "dependence"
+    "Slug": "dependence",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Diligence",
@@ -581,7 +644,8 @@
     "RelatedBooks": "Proverbs; Colossians; Hebrews; 2 Peter",
     "RelatedPeople": "Paul; Simon Peter; Nehemiah",
     "RelatedEvents": "Nehemiah Rebuilds the Wall; Rebuilding of the Temple",
-    "Slug": "diligence"
+    "Slug": "diligence",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Diligent work",
@@ -590,7 +654,8 @@
     "RelatedBooks": "Genesis; Ecclesiastes; Colossians; 2 Thessalonians",
     "RelatedPeople": "Adam; Paul; Joseph, Son of Jacob",
     "RelatedEvents": "Creation; Joseph Rises to Power in Egypt",
-    "Slug": "diligent-work"
+    "Slug": "diligent-work",
+    "Places": "Garden of Eden; Egypt"
   },
   {
     "Theme": "Dreams",
@@ -599,7 +664,8 @@
     "RelatedBooks": "Genesis; Daniel; Matthew",
     "RelatedPeople": "Joseph, Son of Jacob; Daniel; Joseph, Husband of Mary",
     "RelatedEvents": "Joseph Sold into Egypt; Joseph Rises to Power in Egypt",
-    "Slug": "dreams"
+    "Slug": "dreams",
+    "Places": "Canaan; Egypt"
   },
   {
     "Theme": "Dry bones revived",
@@ -608,7 +674,8 @@
     "RelatedBooks": "Ezekiel; Isaiah; John; Romans",
     "RelatedPeople": "Ezekiel; Jesus; Paul",
     "RelatedEvents": "Raising of Lazarus; The Resurrection",
-    "Slug": "dry-bones-revived"
+    "Slug": "dry-bones-revived",
+    "Places": "Bethany; Jerusalem"
   },
   {
     "Theme": "Encouragement",
@@ -617,7 +684,8 @@
     "RelatedBooks": "1 Thessalonians; Hebrews; Acts; Romans",
     "RelatedPeople": "Barnabas; Paul; Timothy",
     "RelatedEvents": "Pentecost; Paul's Missionary Journeys",
-    "Slug": "encouragement"
+    "Slug": "encouragement",
+    "Places": "Jerusalem; Antioch"
   },
   {
     "Theme": "Endurance",
@@ -626,7 +694,8 @@
     "RelatedBooks": "Hebrews; James; Romans; Revelation",
     "RelatedPeople": "Paul; James, Son of Zebedee; Stephen",
     "RelatedEvents": "Martyrdom of Stephen; The Crucifixion",
-    "Slug": "endurance"
+    "Slug": "endurance",
+    "Places": "Jerusalem; Golgotha"
   },
   {
     "Theme": "Enjoying God's gifts",
@@ -635,7 +704,8 @@
     "RelatedBooks": "Ecclesiastes; 1 Timothy; James; Psalms",
     "RelatedPeople": "King David; Paul; King Solomon",
     "RelatedEvents": "Creation; The Feeding of the Five Thousand",
-    "Slug": "enjoying-god-s-gifts"
+    "Slug": "enjoying-god-s-gifts",
+    "Places": "Garden of Eden; Galilee"
   },
   {
     "Theme": "Faithfulness in exile",
@@ -644,7 +714,8 @@
     "RelatedBooks": "Daniel; Jeremiah; Esther",
     "RelatedPeople": "Daniel; Queen Esther; Mordecai",
     "RelatedEvents": "Daniel in the Lions' Den; Esther Saves Her People",
-    "Slug": "faithfulness-in-exile"
+    "Slug": "faithfulness-in-exile",
+    "Places": "Babylon; Susa"
   },
   {
     "Theme": "Faithfulness",
@@ -653,7 +724,8 @@
     "RelatedBooks": "Lamentations; Matthew; 1 Corinthians; Revelation",
     "RelatedPeople": "Daniel; Joseph, Son of Jacob; Paul",
     "RelatedEvents": "Daniel in the Lions' Den; Joseph Rises to Power in Egypt",
-    "Slug": "faithfulness"
+    "Slug": "faithfulness",
+    "Places": "Babylon; Egypt"
   },
   {
     "Theme": "False teachers",
@@ -662,7 +734,8 @@
     "RelatedBooks": "Matthew; 2 Peter; 1 John; Jude",
     "RelatedPeople": "Jesus; Simon Peter; John the Apostle",
     "RelatedEvents": "Jerusalem Council",
-    "Slug": "false-teachers"
+    "Slug": "false-teachers",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "False teaching refuted",
@@ -671,7 +744,8 @@
     "RelatedBooks": "Colossians; 1 Timothy; Titus; Galatians",
     "RelatedPeople": "Paul; Timothy; John the Apostle",
     "RelatedEvents": "Jerusalem Council; Conversion of Saul (Paul)",
-    "Slug": "false-teaching-refuted"
+    "Slug": "false-teaching-refuted",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Fear of God",
@@ -680,7 +754,8 @@
     "RelatedBooks": "Proverbs; Ecclesiastes; Psalms; 1 Peter",
     "RelatedPeople": "King Solomon; Simon Peter; Moses",
     "RelatedEvents": "Giving of the Law at Sinai; The Ten Commandments",
-    "Slug": "fear-of-god"
+    "Slug": "fear-of-god",
+    "Places": "Mount Sinai"
   },
   {
     "Theme": "Fear of the Lord",
@@ -689,7 +764,8 @@
     "RelatedBooks": "Deuteronomy; Psalms; Proverbs; Isaiah",
     "RelatedPeople": "Moses; King David; Isaiah",
     "RelatedEvents": "The Burning Bush; Giving of the Law at Sinai",
-    "Slug": "fear-of-the-lord"
+    "Slug": "fear-of-the-lord",
+    "Places": "Midian; Mount Sinai"
   },
   {
     "Theme": "Finishing well",
@@ -698,7 +774,8 @@
     "RelatedBooks": "2 Timothy; Philippians; Hebrews; Acts",
     "RelatedPeople": "Paul; Timothy; King David",
     "RelatedEvents": "Paul in Rome; Paul Shipwrecked on Malta",
-    "Slug": "finishing-well"
+    "Slug": "finishing-well",
+    "Places": "Rome"
   },
   {
     "Theme": "Foundation",
@@ -707,7 +784,8 @@
     "RelatedBooks": "1 Corinthians; Matthew; Ephesians; Isaiah",
     "RelatedPeople": "Jesus; Paul; Simon Peter",
     "RelatedEvents": "The Sermon on the Mount; Rebuilding of the Temple",
-    "Slug": "foundation"
+    "Slug": "foundation",
+    "Places": "Galilee; Jerusalem"
   },
   {
     "Theme": "Freedom",
@@ -716,7 +794,8 @@
     "RelatedBooks": "John; Galatians; Romans; Exodus",
     "RelatedPeople": "Jesus; Paul; Moses",
     "RelatedEvents": "The Exodus and the Red Sea; The Passover",
-    "Slug": "freedom"
+    "Slug": "freedom",
+    "Places": "Egypt; Goshen"
   },
   {
     "Theme": "Friendship with Christ",
@@ -725,7 +804,8 @@
     "RelatedBooks": "John; Proverbs; James; Exodus",
     "RelatedPeople": "Jesus; Abraham; Moses",
     "RelatedEvents": "The Last Supper; The Burning Bush",
-    "Slug": "friendship-with-christ"
+    "Slug": "friendship-with-christ",
+    "Places": "Jerusalem; Midian; Mount Sinai"
   },
   {
     "Theme": "Fruit of the Spirit",
@@ -734,7 +814,8 @@
     "RelatedBooks": "Galatians; John; Romans; Ephesians",
     "RelatedPeople": "Paul; Jesus",
     "RelatedEvents": "Pentecost; The Sermon on the Mount",
-    "Slug": "fruit-of-the-spirit"
+    "Slug": "fruit-of-the-spirit",
+    "Places": "Jerusalem; Galilee"
   },
   {
     "Theme": "Fulfillment",
@@ -743,7 +824,8 @@
     "RelatedBooks": "Matthew; Luke; 2 Corinthians; Hebrews",
     "RelatedPeople": "Jesus; Paul; John the Apostle",
     "RelatedEvents": "The Resurrection; The Birth of Jesus",
-    "Slug": "fulfillment"
+    "Slug": "fulfillment",
+    "Places": "Jerusalem; Bethlehem"
   },
   {
     "Theme": "Full Payment",
@@ -752,7 +834,8 @@
     "RelatedBooks": "Romans; Colossians; Hebrews; 1 Peter",
     "RelatedPeople": "Jesus; Paul; Simon Peter",
     "RelatedEvents": "The Crucifixion; The Passover",
-    "Slug": "full-payment"
+    "Slug": "full-payment",
+    "Places": "Golgotha; Jerusalem; Egypt"
   },
   {
     "Theme": "Genealogy",
@@ -761,7 +844,8 @@
     "RelatedBooks": "Genesis; Ruth; Matthew; Luke",
     "RelatedPeople": "Adam; Noah; Abraham; Jesus",
     "RelatedEvents": "Creation; The Call of Abraham",
-    "Slug": "genealogy"
+    "Slug": "genealogy",
+    "Places": "Garden of Eden; Ur; Canaan"
   },
   {
     "Theme": "God Fights for Us",
@@ -770,7 +854,8 @@
     "RelatedBooks": "Exodus; Deuteronomy; Joshua; 2 Chronicles",
     "RelatedPeople": "Moses; Joshua; King Jehoshaphat",
     "RelatedEvents": "The Exodus and the Red Sea; Crossing the Jordan",
-    "Slug": "god-fights-for-us"
+    "Slug": "god-fights-for-us",
+    "Places": "Egypt; Jordan River; Gilgal"
   },
   {
     "Theme": "God's choice",
@@ -779,7 +864,8 @@
     "RelatedBooks": "Deuteronomy; Ephesians; Romans; 1 Peter",
     "RelatedPeople": "Moses; Paul; Simon Peter",
     "RelatedEvents": "The Call of Abraham; The Exodus and the Red Sea",
-    "Slug": "god-s-choice"
+    "Slug": "god-s-choice",
+    "Places": "Ur; Canaan; Egypt"
   },
   {
     "Theme": "God's faithfulness",
@@ -788,7 +874,8 @@
     "RelatedBooks": "Lamentations; Deuteronomy; 1 Corinthians; 2 Timothy",
     "RelatedPeople": "Moses; Paul; Jeremiah",
     "RelatedEvents": "The Exodus and the Red Sea; Wilderness Wanderings",
-    "Slug": "god-s-faithfulness"
+    "Slug": "god-s-faithfulness",
+    "Places": "Egypt; Mount Sinai"
   },
   {
     "Theme": "God's glory",
@@ -797,7 +884,8 @@
     "RelatedBooks": "Exodus; Isaiah; John; Romans",
     "RelatedPeople": "Moses; Isaiah; Jesus",
     "RelatedEvents": "The Burning Bush; Transfiguration",
-    "Slug": "god-s-glory"
+    "Slug": "god-s-glory",
+    "Places": "Midian; Mount Sinai"
   },
   {
     "Theme": "God's joy over His people",
@@ -806,7 +894,8 @@
     "RelatedBooks": "Zephaniah; Luke; Isaiah; Nehemiah",
     "RelatedPeople": "Jesus; Nehemiah; Isaiah",
     "RelatedEvents": "The Prodigal Son; Nehemiah Rebuilds the Wall",
-    "Slug": "god-s-joy-over-his-people"
+    "Slug": "god-s-joy-over-his-people",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "God's justice",
@@ -815,7 +904,8 @@
     "RelatedBooks": "Deuteronomy; Psalms; Isaiah; Romans",
     "RelatedPeople": "Moses; King David; Paul",
     "RelatedEvents": "Destruction of Sodom and Gomorrah; The Fall",
-    "Slug": "god-s-justice"
+    "Slug": "god-s-justice",
+    "Places": "Garden of Eden"
   },
   {
     "Theme": "God's mercy",
@@ -824,7 +914,8 @@
     "RelatedBooks": "Exodus; Psalms; Ephesians; Luke",
     "RelatedPeople": "Moses; King David; Jesus",
     "RelatedEvents": "The Golden Calf; The Prodigal Son",
-    "Slug": "god-s-mercy"
+    "Slug": "god-s-mercy",
+    "Places": "Mount Sinai"
   },
   {
     "Theme": "God's presence",
@@ -833,7 +924,8 @@
     "RelatedBooks": "Exodus; Psalms; Matthew; Revelation",
     "RelatedPeople": "Moses; King David; Jesus",
     "RelatedEvents": "The Burning Bush; Pentecost",
-    "Slug": "god-s-presence"
+    "Slug": "god-s-presence",
+    "Places": "Midian; Mount Sinai; Jerusalem"
   },
   {
     "Theme": "God's promises",
@@ -842,7 +934,8 @@
     "RelatedBooks": "Genesis; 2 Samuel; Jeremiah; 2 Corinthians",
     "RelatedPeople": "Abraham; King David; Jeremiah",
     "RelatedEvents": "The Call of Abraham; Davidic Covenant",
-    "Slug": "god-s-promises"
+    "Slug": "god-s-promises",
+    "Places": "Ur; Canaan; Jerusalem"
   },
   {
     "Theme": "God's wrath and refuge",
@@ -851,7 +944,8 @@
     "RelatedBooks": "Psalms; Nahum; Romans; John",
     "RelatedPeople": "King David; Paul; Noah",
     "RelatedEvents": "Noah and the Flood; The Passover",
-    "Slug": "god-s-wrath-and-refuge"
+    "Slug": "god-s-wrath-and-refuge",
+    "Places": "Mount Ararat; Egypt; Goshen"
   },
   {
     "Theme": "Godliness",
@@ -860,7 +954,8 @@
     "RelatedBooks": "1 Timothy; 2 Peter; Titus; Micah",
     "RelatedPeople": "Paul; Simon Peter; Timothy",
     "RelatedEvents": "The Sermon on the Mount; Pentecost",
-    "Slug": "godliness"
+    "Slug": "godliness",
+    "Places": "Galilee; Jerusalem"
   },
   {
     "Theme": "Godly leadership",
@@ -869,7 +964,8 @@
     "RelatedBooks": "1 Peter; Nehemiah; Mark; Exodus",
     "RelatedPeople": "Simon Peter; Nehemiah; Moses",
     "RelatedEvents": "Nehemiah Rebuilds the Wall; The Burning Bush",
-    "Slug": "godly-leadership"
+    "Slug": "godly-leadership",
+    "Places": "Jerusalem; Midian; Mount Sinai"
   },
   {
     "Theme": "Good works",
@@ -878,7 +974,8 @@
     "RelatedBooks": "Ephesians; Matthew; James; Titus",
     "RelatedPeople": "Jesus; Paul; Timothy",
     "RelatedEvents": "The Good Samaritan; The Sermon on the Mount",
-    "Slug": "good-works"
+    "Slug": "good-works",
+    "Places": "Jericho; Jerusalem; Galilee"
   },
   {
     "Theme": "Goodness of Creation",
@@ -887,7 +984,8 @@
     "RelatedBooks": "Genesis; Psalms; Romans",
     "RelatedPeople": "Adam; King David; Paul",
     "RelatedEvents": "Creation; Noah and the Flood",
-    "Slug": "goodness-of-creation"
+    "Slug": "goodness-of-creation",
+    "Places": "Garden of Eden; Mount Ararat"
   },
   {
     "Theme": "Gospel in relationships",
@@ -896,7 +994,8 @@
     "RelatedBooks": "Ephesians; Colossians; Philemon; Romans",
     "RelatedPeople": "Paul; Timothy; Barnabas",
     "RelatedEvents": "Jerusalem Council; Pentecost",
-    "Slug": "gospel-in-relationships"
+    "Slug": "gospel-in-relationships",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Gospel purity",
@@ -905,7 +1004,8 @@
     "RelatedBooks": "Galatians; 2 Corinthians; Philippians; Jude",
     "RelatedPeople": "Paul; John the Apostle",
     "RelatedEvents": "Jerusalem Council; Conversion of Saul (Paul)",
-    "Slug": "gospel-purity"
+    "Slug": "gospel-purity",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Gratitude",
@@ -914,7 +1014,8 @@
     "RelatedBooks": "Psalms; Colossians; 1 Thessalonians; Luke",
     "RelatedPeople": "Jesus; Paul; King David",
     "RelatedEvents": "The Last Supper; The Feeding of the Five Thousand",
-    "Slug": "gratitude"
+    "Slug": "gratitude",
+    "Places": "Jerusalem; Galilee"
   },
   {
     "Theme": "Grief",
@@ -923,7 +1024,8 @@
     "RelatedBooks": "Psalms; John; 2 Samuel; Revelation",
     "RelatedPeople": "Jesus; King David; Mary of Bethany",
     "RelatedEvents": "Raising of Lazarus; The Crucifixion",
-    "Slug": "grief"
+    "Slug": "grief",
+    "Places": "Bethany; Golgotha; Jerusalem"
   },
   {
     "Theme": "Growth",
@@ -932,7 +1034,8 @@
     "RelatedBooks": "2 Peter; Ephesians; Colossians; Hebrews",
     "RelatedPeople": "Simon Peter; Paul; Timothy",
     "RelatedEvents": "Pentecost; Paul's Missionary Journeys",
-    "Slug": "growth"
+    "Slug": "growth",
+    "Places": "Jerusalem; Antioch"
   },
   {
     "Theme": "Homecoming",
@@ -941,7 +1044,8 @@
     "RelatedBooks": "Luke; Ezra; Jeremiah; Ruth",
     "RelatedPeople": "Jesus; Ezra; Ruth",
     "RelatedEvents": "The Prodigal Son; Cyrus's Decree and Return from Exile",
-    "Slug": "homecoming"
+    "Slug": "homecoming",
+    "Places": "Babylon; Jerusalem"
   },
   {
     "Theme": "Hope in suffering",
@@ -950,7 +1054,8 @@
     "RelatedBooks": "Romans; 1 Peter; Job",
     "RelatedPeople": "Paul; Simon Peter; Job",
     "RelatedEvents": "The Resurrection; The Crucifixion",
-    "Slug": "hope-in-suffering"
+    "Slug": "hope-in-suffering",
+    "Places": "Jerusalem; Golgotha"
   },
   {
     "Theme": "Hospitality guarded",
@@ -959,7 +1064,8 @@
     "RelatedBooks": "2 John; 1 John; Matthew; Galatians",
     "RelatedPeople": "John the Apostle; Jesus; Paul",
     "RelatedEvents": "Jerusalem Council; Peter and Cornelius",
-    "Slug": "hospitality-guarded"
+    "Slug": "hospitality-guarded",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Hospitality",
@@ -968,7 +1074,8 @@
     "RelatedBooks": "Hebrews; Romans; Genesis; 1 Peter",
     "RelatedPeople": "Abraham; Simon Peter; Martha",
     "RelatedEvents": "The Call of Abraham; Peter and Cornelius",
-    "Slug": "hospitality"
+    "Slug": "hospitality",
+    "Places": "Hebron"
   },
   {
     "Theme": "Humble remnant",
@@ -977,7 +1084,8 @@
     "RelatedBooks": "1 Kings; Isaiah; Romans; Micah",
     "RelatedPeople": "Elijah; Isaiah; Paul",
     "RelatedEvents": "Elijah on Mount Carmel; Fall of Jerusalem and the Exile",
-    "Slug": "humble-remnant"
+    "Slug": "humble-remnant",
+    "Places": "Mount Carmel; Jerusalem"
   },
   {
     "Theme": "Identity in Christ",
@@ -986,7 +1094,8 @@
     "RelatedBooks": "2 Corinthians; Galatians; Ephesians; 1 Peter",
     "RelatedPeople": "Paul; Simon Peter; Jesus",
     "RelatedEvents": "Conversion of Saul (Paul); The Baptism of Jesus",
-    "Slug": "identity-in-christ"
+    "Slug": "identity-in-christ",
+    "Places": "Jordan River"
   },
   {
     "Theme": "Inheritance",
@@ -995,7 +1104,8 @@
     "RelatedBooks": "Ephesians; 1 Peter; Romans; Colossians",
     "RelatedPeople": "Paul; Simon Peter; Joshua",
     "RelatedEvents": "Crossing the Jordan; The Resurrection",
-    "Slug": "inheritance"
+    "Slug": "inheritance",
+    "Places": "Jordan River; Gilgal; Jerusalem"
   },
   {
     "Theme": "Invitation",
@@ -1004,7 +1114,8 @@
     "RelatedBooks": "Matthew; Isaiah; Revelation; Luke",
     "RelatedPeople": "Jesus; Isaiah; John the Apostle",
     "RelatedEvents": "The Sermon on the Mount; The Feeding of the Five Thousand",
-    "Slug": "invitation"
+    "Slug": "invitation",
+    "Places": "Galilee"
   },
   {
     "Theme": "Israel's identity",
@@ -1013,7 +1124,8 @@
     "RelatedBooks": "Exodus; Deuteronomy; Isaiah; Romans",
     "RelatedPeople": "Moses; Abraham; Paul",
     "RelatedEvents": "The Exodus and the Red Sea; Giving of the Law at Sinai",
-    "Slug": "israel-s-identity"
+    "Slug": "israel-s-identity",
+    "Places": "Egypt; Mount Sinai"
   },
   {
     "Theme": "Israel's restoration",
@@ -1022,7 +1134,8 @@
     "RelatedBooks": "Ezekiel; Jeremiah; Isaiah; Ezra",
     "RelatedPeople": "Ezekiel; Jeremiah; Ezra",
     "RelatedEvents": "Cyrus's Decree and Return from Exile; Rebuilding of the Temple",
-    "Slug": "israel-s-restoration"
+    "Slug": "israel-s-restoration",
+    "Places": "Babylon; Jerusalem"
   },
   {
     "Theme": "Joy in hardship",
@@ -1031,7 +1144,8 @@
     "RelatedBooks": "James; Philippians; Habakkuk; Acts",
     "RelatedPeople": "Paul; Stephen; Barnabas",
     "RelatedEvents": "Paul Shipwrecked on Malta; Martyrdom of Stephen",
-    "Slug": "joy-in-hardship"
+    "Slug": "joy-in-hardship",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Judgment and mercy",
@@ -1040,7 +1154,8 @@
     "RelatedBooks": "Psalms; Micah; James; Exodus",
     "RelatedPeople": "Moses; Micah; Paul",
     "RelatedEvents": "The Golden Calf; Destruction of Sodom and Gomorrah",
-    "Slug": "judgment-and-mercy"
+    "Slug": "judgment-and-mercy",
+    "Places": "Mount Sinai"
   },
   {
     "Theme": "Judgment on false teachers",
@@ -1049,7 +1164,8 @@
     "RelatedBooks": "2 Peter; Jude; Matthew; Revelation",
     "RelatedPeople": "Simon Peter; John the Apostle; Jesus",
     "RelatedEvents": "Jerusalem Council",
-    "Slug": "judgment-on-false-teachers"
+    "Slug": "judgment-on-false-teachers",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Judgment on Nineveh",
@@ -1058,7 +1174,8 @@
     "RelatedBooks": "Nahum; Jonah",
     "RelatedPeople": "Jonah; Jesus",
     "RelatedEvents": "Jonah and Nineveh; Jonah and the Great Fish",
-    "Slug": "judgment-on-nineveh"
+    "Slug": "judgment-on-nineveh",
+    "Places": "Nineveh"
   },
   {
     "Theme": "Judgment on pride",
@@ -1067,7 +1184,8 @@
     "RelatedBooks": "Daniel; Isaiah; James; Obadiah",
     "RelatedPeople": "Daniel; King Nebuchadnezzar; Paul",
     "RelatedEvents": "The Tower of Babel",
-    "Slug": "judgment-on-pride"
+    "Slug": "judgment-on-pride",
+    "Places": "Babel"
   },
   {
     "Theme": "Justification by faith",
@@ -1076,7 +1194,8 @@
     "RelatedBooks": "Romans; Galatians; Philippians",
     "RelatedPeople": "Paul; Abraham; Jesus",
     "RelatedEvents": "The Call of Abraham; The Crucifixion",
-    "Slug": "justification-by-faith"
+    "Slug": "justification-by-faith",
+    "Places": "Canaan; Golgotha; Jerusalem"
   },
   {
     "Theme": "Kingdom Living",
@@ -1085,7 +1204,8 @@
     "RelatedBooks": "Matthew; Romans; Colossians; Luke",
     "RelatedPeople": "Jesus; Paul",
     "RelatedEvents": "The Sermon on the Mount; Pentecost",
-    "Slug": "kingdom-living"
+    "Slug": "kingdom-living",
+    "Places": "Galilee; Jerusalem"
   },
   {
     "Theme": "Kingdom of heaven",
@@ -1094,7 +1214,8 @@
     "RelatedBooks": "Matthew; Daniel",
     "RelatedPeople": "Jesus; Daniel",
     "RelatedEvents": "The Baptism of Jesus; The Sermon on the Mount",
-    "Slug": "kingdom-of-heaven"
+    "Slug": "kingdom-of-heaven",
+    "Places": "Jordan River; Galilee"
   },
   {
     "Theme": "Kingdoms",
@@ -1103,7 +1224,8 @@
     "RelatedBooks": "Daniel; Revelation; John",
     "RelatedPeople": "Daniel; Jesus; King Nebuchadnezzar",
     "RelatedEvents": "The Tower of Babel; Daniel in the Lions' Den",
-    "Slug": "kingdoms"
+    "Slug": "kingdoms",
+    "Places": "Babel; Babylon"
   },
   {
     "Theme": "Kingship of Christ",
@@ -1112,7 +1234,8 @@
     "RelatedBooks": "Psalms; John; Philippians; Revelation",
     "RelatedPeople": "Jesus; King David; Simon Peter",
     "RelatedEvents": "Triumphal Entry; The Resurrection",
-    "Slug": "kingship-of-christ"
+    "Slug": "kingship-of-christ",
+    "Places": "Bethany; Jerusalem"
   },
   {
     "Theme": "Kingship",
@@ -1121,7 +1244,8 @@
     "RelatedBooks": "Psalms; 1 Timothy; Revelation; Isaiah",
     "RelatedPeople": "King David; Paul; Isaiah",
     "RelatedEvents": "David Becomes King; Triumphal Entry",
-    "Slug": "kingship"
+    "Slug": "kingship",
+    "Places": "Hebron; Bethany; Jerusalem"
   },
   {
     "Theme": "Knowledge of Christ",
@@ -1139,7 +1263,8 @@
     "RelatedBooks": "Genesis; Acts; 1 Corinthians; James",
     "RelatedPeople": "Paul; Simon Peter; Moses",
     "RelatedEvents": "The Tower of Babel; Pentecost",
-    "Slug": "language"
+    "Slug": "language",
+    "Places": "Babel; Jerusalem"
   },
   {
     "Theme": "Living faith",
@@ -1148,7 +1273,8 @@
     "RelatedBooks": "James; Hebrews; Galatians; Matthew",
     "RelatedPeople": "Paul; Abraham; Rahab",
     "RelatedEvents": "The Call of Abraham; The Walls of Jericho",
-    "Slug": "living-faith"
+    "Slug": "living-faith",
+    "Places": "Ur; Canaan; Jericho"
   },
   {
     "Theme": "Living hope",
@@ -1157,7 +1283,8 @@
     "RelatedBooks": "1 Peter; Romans; Titus; Hebrews",
     "RelatedPeople": "Simon Peter; Paul; Jesus",
     "RelatedEvents": "The Resurrection; Pentecost",
-    "Slug": "living-hope"
+    "Slug": "living-hope",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Love for God",
@@ -1166,7 +1293,8 @@
     "RelatedBooks": "Deuteronomy; Matthew; John; 1 John",
     "RelatedPeople": "Jesus; Moses; John the Apostle",
     "RelatedEvents": "The Sermon on the Mount; The Last Supper",
-    "Slug": "love-for-god"
+    "Slug": "love-for-god",
+    "Places": "Galilee; Jerusalem"
   },
   {
     "Theme": "Majesty of God",
@@ -1183,7 +1311,9 @@
     "KeyPassages": "Genesis 2:24; Malachi 2:14-15; Matthew 19:3-9; Ephesians 5:25-33",
     "RelatedBooks": "Genesis; Malachi; Matthew; Ephesians",
     "RelatedPeople": "Adam; Eve; Jesus; Paul",
-    "Slug": "marriage-covenant"
+    "Slug": "marriage-covenant",
+    "Places": "Garden of Eden; Jerusalem; Ephesus",
+    "RelatedEvents": "Creation; Story of Ruth"
   },
   {
     "Theme": "Meaning",
@@ -1191,7 +1321,9 @@
     "KeyPassages": "Ecclesiastes 3:11; Ecclesiastes 12:13-14; Matthew 22:37-40; Colossians 3:23-24",
     "RelatedBooks": "Ecclesiastes; Matthew; Colossians",
     "RelatedPeople": "King Solomon; Jesus; Paul",
-    "Slug": "meaning"
+    "Slug": "meaning",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Creation"
   },
   {
     "Theme": "Messiah and King",
@@ -1200,7 +1332,8 @@
     "RelatedBooks": "2 Samuel; Psalms; Isaiah; Philippians",
     "RelatedPeople": "King David; Jesus; Paul",
     "RelatedEvents": "Triumphal Entry; The Crucifixion; The Resurrection",
-    "Slug": "messiah-and-king"
+    "Slug": "messiah-and-king",
+    "Places": "Bethany; Golgotha; Jerusalem"
   },
   {
     "Theme": "Messianic hope",
@@ -1209,7 +1342,8 @@
     "RelatedBooks": "Genesis; Isaiah; Luke; Revelation",
     "RelatedPeople": "Isaiah; Simeon; Jesus",
     "RelatedEvents": "The Birth of Jesus; The Resurrection",
-    "Slug": "messianic-hope"
+    "Slug": "messianic-hope",
+    "Places": "Bethlehem; Jerusalem"
   },
   {
     "Theme": "Nearness to God",
@@ -1218,7 +1352,8 @@
     "RelatedBooks": "Psalms; James; Hebrews; John",
     "RelatedPeople": "Jesus; Moses",
     "RelatedEvents": "The Burning Bush",
-    "Slug": "nearness-to-god"
+    "Slug": "nearness-to-god",
+    "Places": "Midian; Mount Sinai"
   },
   {
     "Theme": "Need for a king",
@@ -1227,7 +1362,8 @@
     "RelatedBooks": "Judges; 1 Samuel; Matthew",
     "RelatedPeople": "Samuel; King Saul; King David; Jesus",
     "RelatedEvents": "Anointing of Saul as King; David Becomes King",
-    "Slug": "need-for-a-king"
+    "Slug": "need-for-a-king",
+    "Places": "Ramah; Mizpah; Hebron; Jerusalem"
   },
   {
     "Theme": "New covenant",
@@ -1236,7 +1372,8 @@
     "RelatedBooks": "Jeremiah; Luke; Hebrews; 2 Corinthians",
     "RelatedPeople": "Jeremiah; Jesus; Paul",
     "RelatedEvents": "Last Supper; The Crucifixion; Pentecost",
-    "Slug": "new-covenant"
+    "Slug": "new-covenant",
+    "Places": "Jerusalem; Golgotha"
   },
   {
     "Theme": "New heart",
@@ -1245,7 +1382,8 @@
     "RelatedBooks": "Ezekiel; Jeremiah; 2 Corinthians; Psalms",
     "RelatedPeople": "Ezekiel; Jeremiah; King David; Paul",
     "RelatedEvents": "Pentecost; The Conversion of Paul",
-    "Slug": "new-heart"
+    "Slug": "new-heart",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Opposition",
@@ -1254,7 +1392,8 @@
     "RelatedBooks": "Nehemiah; Daniel; Acts; 1 Peter",
     "RelatedPeople": "Nehemiah; Daniel; Simon Peter; Paul",
     "RelatedEvents": "Nehemiah Rebuilds the Wall; Martyrdom of Stephen",
-    "Slug": "opposition"
+    "Slug": "opposition",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Outpouring of the Spirit",
@@ -1263,7 +1402,8 @@
     "RelatedBooks": "Joel; Acts",
     "RelatedPeople": "Simon Peter; Paul",
     "RelatedEvents": "Pentecost",
-    "Slug": "outpouring-of-the-spirit"
+    "Slug": "outpouring-of-the-spirit",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Partnership",
@@ -1272,7 +1412,8 @@
     "RelatedBooks": "Ecclesiastes; Philippians; 2 Timothy",
     "RelatedPeople": "Paul; Barnabas; Timothy; Priscilla; Aquila",
     "RelatedEvents": "Paul's Missionary Journeys",
-    "Slug": "partnership"
+    "Slug": "partnership",
+    "Places": "Antioch; Corinth; Ephesus"
   },
   {
     "Theme": "Plea",
@@ -1281,7 +1422,8 @@
     "RelatedBooks": "Psalms; Mark; Luke",
     "RelatedPeople": "King David; Jesus",
     "RelatedEvents": "Jesus Calms the Storm",
-    "Slug": "plea"
+    "Slug": "plea",
+    "Places": "Galilee"
   },
   {
     "Theme": "Praise",
@@ -1289,7 +1431,9 @@
     "KeyPassages": "Psalm 100:1-5; Psalm 150:1-6; Acts 16:25-26; Revelation 5:9-14",
     "RelatedBooks": "Psalms; Acts; Revelation",
     "RelatedPeople": "King David; Paul",
-    "Slug": "praise"
+    "Slug": "praise",
+    "Places": "Jerusalem; Philippi; Patmos",
+    "RelatedEvents": "Birth of Jesus"
   },
   {
     "Theme": "Preservation",
@@ -1298,7 +1442,8 @@
     "RelatedBooks": "Genesis; Psalms; John; Jude",
     "RelatedPeople": "Noah; Jesus",
     "RelatedEvents": "Noah and the Flood",
-    "Slug": "preservation"
+    "Slug": "preservation",
+    "Places": "Mount Ararat"
   },
   {
     "Theme": "Priesthood",
@@ -1307,7 +1452,8 @@
     "RelatedBooks": "Exodus; Leviticus; Hebrews; 1 Peter",
     "RelatedPeople": "Aaron; Moses; Jesus; Simon Peter",
     "RelatedEvents": "The Crucifixion",
-    "Slug": "priesthood"
+    "Slug": "priesthood",
+    "Places": "Mount Sinai; Golgotha; Jerusalem"
   },
   {
     "Theme": "Priorities",
@@ -1315,7 +1461,9 @@
     "KeyPassages": "Matthew 6:33; Luke 10:38-42; Philippians 1:9-11; Ephesians 5:15-17",
     "RelatedBooks": "Matthew; Luke; Philippians; Ephesians",
     "RelatedPeople": "Jesus; Martha; Mary of Bethany; Paul",
-    "Slug": "priorities"
+    "Slug": "priorities",
+    "Places": "Bethany; Galilee",
+    "RelatedEvents": "Sermon on the Mount"
   },
   {
     "Theme": "Prophetic witness",
@@ -1324,7 +1472,8 @@
     "RelatedBooks": "Jeremiah; Amos; Micah; Revelation",
     "RelatedPeople": "Jeremiah; Amos; Micah; John the Apostle",
     "RelatedEvents": "Elijah on Mount Carmel; Jonah and Nineveh",
-    "Slug": "prophetic-witness"
+    "Slug": "prophetic-witness",
+    "Places": "Mount Carmel; Nineveh"
   },
   {
     "Theme": "Prophets",
@@ -1333,7 +1482,8 @@
     "RelatedBooks": "Deuteronomy; 1 Kings; Isaiah; Hebrews",
     "RelatedPeople": "Moses; Samuel; Elijah; Isaiah; John the Baptist",
     "RelatedEvents": "Elijah on Mount Carmel; The Burning Bush",
-    "Slug": "prophets"
+    "Slug": "prophets",
+    "Places": "Mount Carmel; Midian; Mount Sinai"
   },
   {
     "Theme": "Purity",
@@ -1341,7 +1491,9 @@
     "KeyPassages": "Psalm 24:3-4; Matthew 5:8; 1 Thessalonians 4:3-5; 1 John 3:2-3",
     "RelatedBooks": "Psalms; Matthew; 1 Thessalonians; 1 John",
     "RelatedPeople": "Jesus; Paul; John the Apostle",
-    "Slug": "purity"
+    "Slug": "purity",
+    "Places": "Galilee; Thessalonica",
+    "RelatedEvents": "Sermon on the Mount"
   },
   {
     "Theme": "Rebellion",
@@ -1350,7 +1502,8 @@
     "RelatedBooks": "Genesis; Exodus; Isaiah; Romans",
     "RelatedPeople": "Adam; Eve; Moses; Aaron",
     "RelatedEvents": "The Fall; The Golden Calf",
-    "Slug": "rebellion"
+    "Slug": "rebellion",
+    "Places": "Garden of Eden; Mount Sinai"
   },
   {
     "Theme": "Rebuilding",
@@ -1359,7 +1512,8 @@
     "RelatedBooks": "Nehemiah; Ezra; Isaiah; Ephesians",
     "RelatedPeople": "Nehemiah; Zerubbabel; Ezra",
     "RelatedEvents": "Nehemiah Rebuilds the Wall; Rebuilding of the Temple",
-    "Slug": "rebuilding"
+    "Slug": "rebuilding",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Refuge",
@@ -1376,7 +1530,8 @@
     "RelatedBooks": "Deuteronomy; Psalms; Luke",
     "RelatedPeople": "Moses; Jesus",
     "RelatedEvents": "The Passover; Last Supper; The Exodus and Crossing of the Red Sea",
-    "Slug": "remembering"
+    "Slug": "remembering",
+    "Places": "Egypt; Goshen; Jerusalem"
   },
   {
     "Theme": "Remembrance",
@@ -1385,7 +1540,8 @@
     "RelatedBooks": "Exodus; Joshua; Psalms; 1 Corinthians",
     "RelatedPeople": "Moses; Joshua; Jesus; Paul",
     "RelatedEvents": "The Passover; Crossing the Jordan; Last Supper",
-    "Slug": "remembrance"
+    "Slug": "remembrance",
+    "Places": "Egypt; Jordan River; Gilgal; Jerusalem"
   },
   {
     "Theme": "Remnant",
@@ -1394,7 +1550,8 @@
     "RelatedBooks": "1 Kings; Isaiah; Romans; Revelation",
     "RelatedPeople": "Elijah; Isaiah; Paul",
     "RelatedEvents": "Elijah on Mount Carmel; Cyrus's Decree and Return from Exile",
-    "Slug": "remnant"
+    "Slug": "remnant",
+    "Places": "Mount Carmel; Babylon; Jerusalem"
   },
   {
     "Theme": "Return from exile",
@@ -1403,7 +1560,8 @@
     "RelatedBooks": "Ezra; Nehemiah; Jeremiah; Isaiah",
     "RelatedPeople": "Cyrus the Great; Zerubbabel; Ezra; Nehemiah",
     "RelatedEvents": "Cyrus's Decree and Return from Exile; Ezra Reads the Law; Nehemiah Rebuilds the Wall",
-    "Slug": "return-from-exile"
+    "Slug": "return-from-exile",
+    "Places": "Babylon; Susa; Jerusalem"
   },
   {
     "Theme": "Return of Christ",
@@ -1412,7 +1570,8 @@
     "RelatedBooks": "Acts; Matthew; 1 Thessalonians; Revelation",
     "RelatedPeople": "Jesus; Paul; John the Apostle",
     "RelatedEvents": "The Ascension; The Resurrection",
-    "Slug": "return-of-christ"
+    "Slug": "return-of-christ",
+    "Places": "Jerusalem; Bethany"
   },
   {
     "Theme": "Return",
@@ -1430,7 +1589,8 @@
     "RelatedBooks": "Genesis; Luke; Revelation",
     "RelatedPeople": "Jacob; Esau; Joseph, Son of Jacob; Jesus",
     "RelatedEvents": "Joseph and His Brothers; The Prodigal Son",
-    "Slug": "reunion"
+    "Slug": "reunion",
+    "Places": "Canaan; Egypt; Goshen"
   },
   {
     "Theme": "Reversal",
@@ -1439,7 +1599,8 @@
     "RelatedBooks": "1 Samuel; Luke; 1 Corinthians",
     "RelatedPeople": "Hannah; Mary, Mother of Jesus; Jesus; Paul",
     "RelatedEvents": "The Crucifixion; The Resurrection",
-    "Slug": "reversal"
+    "Slug": "reversal",
+    "Places": "Golgotha; Jerusalem"
   },
   {
     "Theme": "Righteousness of God",
@@ -1448,7 +1609,8 @@
     "RelatedBooks": "Psalms; Romans; 2 Corinthians",
     "RelatedPeople": "Paul; Jesus",
     "RelatedEvents": "The Crucifixion; The Resurrection",
-    "Slug": "righteousness-of-god"
+    "Slug": "righteousness-of-god",
+    "Places": "Golgotha; Jerusalem"
   },
   {
     "Theme": "Rise of David",
@@ -1457,7 +1619,8 @@
     "RelatedBooks": "1 Samuel; 2 Samuel; Psalms",
     "RelatedPeople": "Samuel; King David; King Saul; Jonathan",
     "RelatedEvents": "David Becomes King; David and Goliath",
-    "Slug": "rise-of-david"
+    "Slug": "rise-of-david",
+    "Places": "Hebron; Jerusalem; Bethlehem"
   },
   {
     "Theme": "Savior for all",
@@ -1466,7 +1629,8 @@
     "RelatedBooks": "Luke; John; 1 Timothy; Revelation",
     "RelatedPeople": "Simeon; Jesus; Paul",
     "RelatedEvents": "The Birth of Jesus; Pentecost",
-    "Slug": "savior-for-all"
+    "Slug": "savior-for-all",
+    "Places": "Bethlehem; Jerusalem"
   },
   {
     "Theme": "Servant",
@@ -1475,7 +1639,8 @@
     "RelatedBooks": "Isaiah; Mark; Philippians",
     "RelatedPeople": "Isaiah; Jesus; Paul",
     "RelatedEvents": "Last Supper; The Crucifixion",
-    "Slug": "servant"
+    "Slug": "servant",
+    "Places": "Jerusalem; Golgotha"
   },
   {
     "Theme": "Service",
@@ -1484,7 +1649,8 @@
     "RelatedBooks": "Galatians; Mark; 1 Peter; John",
     "RelatedPeople": "Jesus; Simon Peter; Paul",
     "RelatedEvents": "Last Supper",
-    "Slug": "service"
+    "Slug": "service",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Shelter in Christ",
@@ -1493,7 +1659,8 @@
     "RelatedBooks": "Psalms; Colossians; Romans; John",
     "RelatedPeople": "King David; Paul; Jesus",
     "RelatedEvents": "The Crucifixion; The Resurrection",
-    "Slug": "shelter-in-christ"
+    "Slug": "shelter-in-christ",
+    "Places": "Golgotha; Jerusalem"
   },
   {
     "Theme": "Sin and repentance",
@@ -1502,7 +1669,8 @@
     "RelatedBooks": "Psalms; Luke; Acts; 1 John",
     "RelatedPeople": "King David; Simon Peter; Jesus",
     "RelatedEvents": "The Prodigal Son; The Crucifixion",
-    "Slug": "sin-and-repentance"
+    "Slug": "sin-and-repentance",
+    "Places": "Golgotha; Jerusalem"
   },
   {
     "Theme": "Social righteousness",
@@ -1511,7 +1679,8 @@
     "RelatedBooks": "Micah; Amos; Isaiah; Matthew",
     "RelatedPeople": "Amos; Micah; Isaiah; Jesus",
     "RelatedEvents": "The Good Samaritan; The Sermon on the Mount",
-    "Slug": "social-righteousness"
+    "Slug": "social-righteousness",
+    "Places": "Jericho; Jerusalem; Galilee"
   },
   {
     "Theme": "Son of God",
@@ -1520,7 +1689,8 @@
     "RelatedBooks": "Matthew; Mark; John",
     "RelatedPeople": "Jesus; Simon Peter; John the Baptist",
     "RelatedEvents": "The Baptism of Jesus; The Crucifixion",
-    "Slug": "son-of-god"
+    "Slug": "son-of-god",
+    "Places": "Jordan River; Golgotha"
   },
   {
     "Theme": "Son of Man",
@@ -1529,7 +1699,8 @@
     "RelatedBooks": "Daniel; Mark; Luke",
     "RelatedPeople": "Daniel; Jesus",
     "RelatedEvents": "The Crucifixion; Transfiguration",
-    "Slug": "son-of-man"
+    "Slug": "son-of-man",
+    "Places": "Golgotha"
   },
   {
     "Theme": "Sound doctrine",
@@ -1537,7 +1708,9 @@
     "KeyPassages": "1 Timothy 4:6; 2 Timothy 1:13-14; Titus 2:1; 2 Timothy 3:16-17",
     "RelatedBooks": "1 Timothy; 2 Timothy; Titus",
     "RelatedPeople": "Paul; Timothy",
-    "Slug": "sound-doctrine"
+    "Slug": "sound-doctrine",
+    "Places": "Ephesus",
+    "RelatedEvents": "Jerusalem Council"
   },
   {
     "Theme": "Speech",
@@ -1554,7 +1727,8 @@
     "RelatedBooks": "Romans; 1 Corinthians; 1 Peter",
     "RelatedPeople": "Paul; Simon Peter",
     "RelatedEvents": "Pentecost",
-    "Slug": "spiritual-gifts"
+    "Slug": "spiritual-gifts",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Standing firm",
@@ -1563,7 +1737,8 @@
     "RelatedBooks": "Ephesians; 1 Corinthians; Philippians; Matthew",
     "RelatedPeople": "Paul; Jesus",
     "RelatedEvents": "Martyrdom of Stephen; Daniel in the Lions' Den",
-    "Slug": "standing-firm"
+    "Slug": "standing-firm",
+    "Places": "Jerusalem; Babylon"
   },
   {
     "Theme": "Strength in weakness",
@@ -1572,7 +1747,8 @@
     "RelatedBooks": "2 Corinthians; Isaiah; Hebrews; Philippians",
     "RelatedPeople": "Paul; Jesus",
     "RelatedEvents": "The Crucifixion; The Resurrection",
-    "Slug": "strength-in-weakness"
+    "Slug": "strength-in-weakness",
+    "Places": "Golgotha; Jerusalem"
   },
   {
     "Theme": "Sufficiency",
@@ -1581,7 +1757,8 @@
     "RelatedBooks": "Psalms; 2 Corinthians; Philippians",
     "RelatedPeople": "King David; Paul",
     "RelatedEvents": "Feeding of the Five Thousand",
-    "Slug": "sufficiency"
+    "Slug": "sufficiency",
+    "Places": "Galilee"
   },
   {
     "Theme": "Superiority of Christ",
@@ -1590,7 +1767,8 @@
     "RelatedBooks": "Hebrews",
     "RelatedPeople": "Jesus; Moses; Aaron",
     "RelatedEvents": "The Crucifixion; Transfiguration",
-    "Slug": "superiority-of-christ"
+    "Slug": "superiority-of-christ",
+    "Places": "Golgotha"
   },
   {
     "Theme": "Support for ministry",
@@ -1599,7 +1777,8 @@
     "RelatedBooks": "Luke; Philippians; 3 John; 2 Corinthians",
     "RelatedPeople": "Jesus; Paul; Lydia; Phoebe",
     "RelatedEvents": "Paul's Missionary Journeys",
-    "Slug": "support-for-ministry"
+    "Slug": "support-for-ministry",
+    "Places": "Galilee; Antioch; Philippi"
   },
   {
     "Theme": "Supremacy of Christ",
@@ -1608,7 +1787,8 @@
     "RelatedBooks": "Colossians; Philippians; Ephesians; Revelation",
     "RelatedPeople": "Paul; Jesus; John the Apostle",
     "RelatedEvents": "The Resurrection; The Ascension",
-    "Slug": "supremacy-of-christ"
+    "Slug": "supremacy-of-christ",
+    "Places": "Jerusalem; Bethany"
   },
   {
     "Theme": "Surrender",
@@ -1617,7 +1797,8 @@
     "RelatedBooks": "Luke; Romans; Matthew",
     "RelatedPeople": "Mary, Mother of Jesus; Jesus",
     "RelatedEvents": "Jesus Prays in Gethsemane; The Crucifixion",
-    "Slug": "surrender"
+    "Slug": "surrender",
+    "Places": "Jerusalem; Golgotha"
   },
   {
     "Theme": "Temple rebuilding",
@@ -1626,7 +1807,8 @@
     "RelatedBooks": "Ezra; Nehemiah; Haggai",
     "RelatedPeople": "Zerubbabel; Ezra; Nehemiah",
     "RelatedEvents": "Rebuilding of the Temple; Nehemiah Rebuilds the Wall; Cyrus's Decree and Return from Exile",
-    "Slug": "temple-rebuilding"
+    "Slug": "temple-rebuilding",
+    "Places": "Jerusalem; Babylon"
   },
   {
     "Theme": "Time",
@@ -1634,7 +1816,8 @@
     "KeyPassages": "Psalm 90:12; Ecclesiastes 3:1-8; Ephesians 5:15-16; James 4:14",
     "RelatedBooks": "Psalms; Ecclesiastes; Ephesians; James",
     "RelatedPeople": "Moses; King Solomon; Paul",
-    "Slug": "time"
+    "Slug": "time",
+    "Places": "Jerusalem; Ephesus"
   },
   {
     "Theme": "Tithing",
@@ -1642,7 +1825,8 @@
     "KeyPassages": "Genesis 14:20; Genesis 28:22; Malachi 3:10; 2 Corinthians 9:7",
     "RelatedBooks": "Genesis; Malachi; 2 Corinthians",
     "RelatedPeople": "Abraham; Melchizedek; Jacob; Paul",
-    "Slug": "tithing"
+    "Slug": "tithing",
+    "Places": "Jerusalem; Bethel"
   },
   {
     "Theme": "Unfaithfulness",
@@ -1651,7 +1835,8 @@
     "RelatedBooks": "Hosea; Jeremiah; 2 Timothy",
     "RelatedPeople": "Hosea; Jeremiah; Paul",
     "RelatedEvents": "The Golden Calf",
-    "Slug": "unfaithfulness"
+    "Slug": "unfaithfulness",
+    "Places": "Mount Sinai"
   },
   {
     "Theme": "Unity in Christ",
@@ -1660,7 +1845,8 @@
     "RelatedBooks": "Galatians; Ephesians; Colossians; Romans",
     "RelatedPeople": "Paul; Jesus",
     "RelatedEvents": "Pentecost; Peter and Cornelius",
-    "Slug": "unity-in-christ"
+    "Slug": "unity-in-christ",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Unity",
@@ -1669,7 +1855,8 @@
     "RelatedBooks": "John; Ephesians; 1 Corinthians; Psalms",
     "RelatedPeople": "Jesus; Paul",
     "RelatedEvents": "Pentecost; Jerusalem Council",
-    "Slug": "unity"
+    "Slug": "unity",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Urgency",
@@ -1677,7 +1864,9 @@
     "KeyPassages": "2 Corinthians 6:2; Luke 12:16-21; Matthew 9:37-38; Romans 13:11-12",
     "RelatedBooks": "2 Corinthians; Luke; Matthew; Romans",
     "RelatedPeople": "Jesus; Paul",
-    "Slug": "urgency"
+    "Slug": "urgency",
+    "Places": "Galilee; Rome",
+    "RelatedEvents": "Paul's Missionary Journeys"
   },
   {
     "Theme": "Vanity",
@@ -1685,7 +1874,9 @@
     "KeyPassages": "Ecclesiastes 1:2; Ecclesiastes 2:11; Ecclesiastes 12:13; Matthew 6:19-21",
     "RelatedBooks": "Ecclesiastes; Matthew",
     "RelatedPeople": "King Solomon; Jesus",
-    "Slug": "vanity"
+    "Slug": "vanity",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Tower of Babel"
   },
   {
     "Theme": "Victory of Christ",
@@ -1694,7 +1885,8 @@
     "RelatedBooks": "Colossians; 1 Corinthians; John; Revelation",
     "RelatedPeople": "Jesus; Paul; John the Apostle",
     "RelatedEvents": "The Crucifixion; The Resurrection",
-    "Slug": "victory-of-christ"
+    "Slug": "victory-of-christ",
+    "Places": "Golgotha; Jerusalem"
   },
   {
     "Theme": "Visions",
@@ -1703,7 +1895,8 @@
     "RelatedBooks": "Genesis; Isaiah; Ezekiel; Revelation",
     "RelatedPeople": "Jacob; Isaiah; Ezekiel; John the Apostle",
     "RelatedEvents": "Transfiguration",
-    "Slug": "visions"
+    "Slug": "visions",
+    "Places": "Bethel; Jerusalem; River Chebar; Patmos"
   },
   {
     "Theme": "Waiting on God",
@@ -1712,7 +1905,8 @@
     "RelatedBooks": "Psalms; Isaiah; Acts",
     "RelatedPeople": "King David; Isaiah; Jesus",
     "RelatedEvents": "Pentecost",
-    "Slug": "waiting-on-god"
+    "Slug": "waiting-on-god",
+    "Places": "Jerusalem"
   },
   {
     "Theme": "Wandering and Return",
@@ -1721,7 +1915,8 @@
     "RelatedBooks": "Deuteronomy; Hosea; Luke; James",
     "RelatedPeople": "Moses; Jesus",
     "RelatedEvents": "Wilderness Wanderings; The Prodigal Son; Cyrus's Decree and Return from Exile",
-    "Slug": "wandering-and-return"
+    "Slug": "wandering-and-return",
+    "Places": "Mount Sinai; Babylon; Jerusalem"
   },
   {
     "Theme": "Wilderness",
@@ -1730,7 +1925,8 @@
     "RelatedBooks": "Deuteronomy; 1 Kings; Matthew; Hosea",
     "RelatedPeople": "Moses; Elijah; Jesus",
     "RelatedEvents": "Wilderness Wanderings; The Temptation in the Wilderness",
-    "Slug": "wilderness"
+    "Slug": "wilderness",
+    "Places": "Mount Sinai; Kadesh Barnea; Plains of Moab"
   },
   {
     "Theme": "Works",
@@ -1739,6 +1935,7 @@
     "RelatedBooks": "Ephesians; James; Matthew; Titus",
     "RelatedPeople": "Paul; Jesus",
     "RelatedEvents": "The Sermon on the Mount",
-    "Slug": "works"
+    "Slug": "works",
+    "Places": "Galilee"
   }
 ]

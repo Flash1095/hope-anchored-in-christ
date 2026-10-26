@@ -5,5 +5,7 @@
   "KeyPassages": "Exodus 20:1-17; Micah 6:8; Matthew 22:37-40; Romans 13:8-10",
   "RelatedPeople": "Moses; Jesus; Paul",
   "RelatedBooks": "Exodus; Micah; Matthew; Romans",
-  "Slug": "ethics"
+  "Slug": "ethics",
+  "Places": "Mount Sinai",
+  "RelatedEvents": "The Ten Commandments; Sermon on the Mount"
 }

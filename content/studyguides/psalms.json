@@ -8,5 +8,8 @@
   "Application": "Choose one psalm to pray every morning this week, and let its words set the tone for the day before you check anything else.",
   "RelatedBooks": "Psalms",
   "RelatedTopics": "Worship; Prayer",
-  "Slug": "psalms"
+  "Slug": "psalms",
+  "RelatedPeople": "King David; Moses",
+  "Places": "Jerusalem",
+  "RelatedEvents": "David and Bathsheba"
 }

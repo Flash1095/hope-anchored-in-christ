@@ -5,5 +5,6 @@
   "RelatedBooks": "John; Romans; Hebrews; James",
   "RelatedPeople": "Jesus; Paul; Abraham; Thomas",
   "RelatedEvents": "The Resurrection; Conversion of Saul (Paul)",
-  "Slug": "belief"
+  "Slug": "belief",
+  "Places": "Jerusalem; Golgotha"
 }

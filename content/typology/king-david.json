@@ -8,5 +8,6 @@
   "RelatedBooks": "1 Samuel; 2 Samuel; Psalms; Matthew; Luke; Acts; Romans",
   "RelatedPeople": "King David; Jesus; Nathan",
   "RelatedEvents": "David Becomes King; Davidic Covenant; Birth of Jesus; The Crucifixion; The Resurrection",
-  "Slug": "king-david"
+  "Slug": "king-david",
+  "Places": "Bethlehem; Jerusalem"
 }

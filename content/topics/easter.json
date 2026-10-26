@@ -7,5 +7,7 @@
   "RelatedDoctrines": "Resurrection",
   "RelatedQuestions": "Did Jesus really rise from the dead?",
   "RelatedBooks": "Matthew; Mark; Luke; John; 1 Corinthians",
-  "Slug": "easter"
+  "Slug": "easter",
+  "Places": "Jerusalem; Golgotha",
+  "RelatedEvents": "The Resurrection"
 }

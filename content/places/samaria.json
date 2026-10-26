@@ -9,5 +9,7 @@
   "KeyScriptures": "1 Kings 16:24; 2 Kings 17:6; John 4:4-26; Acts 8:5-8",
   "RelatedBooks": "1 Kings; 2 Kings; John; Acts",
   "RelatedPeople": "King Ahab; Elijah; Elisha; Jesus; The Samaritan Woman; Philip",
-  "Slug": "samaria"
+  "Slug": "samaria",
+  "RelatedEvents": "Fall of Samaria",
+  "Places": "Jerusalem; Shechem; Mount Carmel"
 }

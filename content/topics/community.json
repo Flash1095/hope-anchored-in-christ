@@ -7,5 +7,7 @@
   "RelatedDoctrines": "The Church",
   "RelatedQuestions": "Why should I go to church?",
   "RelatedBooks": "Acts; Romans; Hebrews; 1 John",
-  "Slug": "community"
+  "Slug": "community",
+  "Places": "Jerusalem",
+  "RelatedEvents": "Pentecost"
 }

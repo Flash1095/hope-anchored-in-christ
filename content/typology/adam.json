@@ -8,5 +8,6 @@
   "RelatedBooks": "Genesis; Romans; 1 Corinthians",
   "RelatedPeople": "Adam; Eve; Jesus; Paul",
   "RelatedEvents": "Creation; The Fall; The Crucifixion; The Resurrection",
-  "Slug": "adam"
+  "Slug": "adam",
+  "Places": "Garden of Eden"
 }

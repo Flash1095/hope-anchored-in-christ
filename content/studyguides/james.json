@@ -8,5 +8,8 @@
   "Application": "Pick one practice from James — taming the tongue, caring for someone in need, or praying first — and do it daily for a week.",
   "RelatedBooks": "James",
   "RelatedTopics": "Faith; Wisdom",
-  "Slug": "james"
+  "Slug": "james",
+  "RelatedPeople": "Jesus",
+  "Places": "Jerusalem",
+  "RelatedEvents": "Jerusalem Council; Sermon on the Mount"
 }

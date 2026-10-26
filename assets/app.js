@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "44";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "45";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var app = document.getElementById("app");
 
@@ -165,6 +165,8 @@
     });
   }
   function label(field) {
+    if (field === "Places") return "Related Places";
+    if (field === "Place") return "Related Place";
     return field.replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
       .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
       .replace(/^./, function (c) { return c.toUpperCase(); });

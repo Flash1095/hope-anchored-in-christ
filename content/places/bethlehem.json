@@ -9,5 +9,7 @@
   "KeyScriptures": "Ruth 4:11; Micah 5:2; Matthew 2:1-6; Luke 2:4-7",
   "RelatedBooks": "Ruth; 1 Samuel; Micah; Matthew; Luke",
   "RelatedPeople": "Ruth; Boaz; King David; Jesus; Mary, Mother of Jesus; Joseph, Husband of Mary",
-  "Slug": "bethlehem"
+  "Slug": "bethlehem",
+  "RelatedEvents": "Birth of Jesus; Story of Ruth",
+  "Places": "Jerusalem; Hebron; Nazareth"
 }

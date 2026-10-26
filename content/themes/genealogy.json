@@ -5,5 +5,6 @@
   "RelatedBooks": "Genesis; Ruth; Matthew; Luke",
   "RelatedPeople": "Adam; Noah; Abraham; Jesus",
   "RelatedEvents": "Creation; The Call of Abraham",
-  "Slug": "genealogy"
+  "Slug": "genealogy",
+  "Places": "Garden of Eden; Ur; Canaan"
 }

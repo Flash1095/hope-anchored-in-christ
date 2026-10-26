@@ -41,7 +41,8 @@
     "MetaDescription": "The Bible reveals one God who is eternal, holy, loving, and faithful, Creator of all things and Father who saves. He is both transcendent in majesty...",
     "Tags": "god; character of god; trinity; creator; who is god; attributes",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Moses"
   },
   {
     "Question": "What is the Trinity?",
@@ -85,7 +86,8 @@
     "MetaDescription": "Hebrews 6:19 calls our hope in Christ an anchor for the soul, firm and secure. An anchor holds a ship steady in a storm, and Jesus holds us steady...",
     "Tags": "hope; anchor; assurance; perseverance; hebrews 6 19; steadfast",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Jesus"
   },
   {
     "Question": "What does it mean that God is sovereign?",
@@ -107,7 +109,8 @@
     "MetaDescription": "God's sovereignty means He rules over all creation with wisdom, power, and purpose, and nothing is outside His control. It does not mean we understand...",
     "Tags": "sovereignty; providence; control; trust; gods plan; purpose",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedEvents": "Creation"
   },
   {
     "Question": "What is grace?",
@@ -151,7 +154,8 @@
     "MetaDescription": "Holy means set apart, pure, and wholly other, and it describes God's perfect character above all. It matters because this holy God calls His people to...",
     "Tags": "holy; holiness; set apart; purity; sanctification; character",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Isaiah"
   },
   {
     "Question": "Who is Jesus Christ?",
@@ -173,7 +177,8 @@
     "MetaDescription": "Jesus is the Son of God, fully God and fully man, who lived a sinless life, died on the cross for our sins, and rose again. He is Savior, Lord, and the...",
     "Tags": "jesus; christ; messiah; son of god; savior; who is jesus",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Jesus"
   },
   {
     "Question": "Why did Jesus have to die on the cross?",
@@ -195,7 +200,8 @@
     "MetaDescription": "Jesus died on the cross to pay the penalty for our sin and reconcile us to a holy God. His death was substitutionary and loving, He took our place, so...",
     "Tags": "cross; crucifixion; atonement; why did jesus die; sacrifice; forgiveness",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Jesus"
   },
   {
     "Question": "Did Jesus really rise from the dead?",
@@ -217,7 +223,9 @@
     "MetaDescription": "Yes, Christians confess Jesus rose bodily from the dead on the third day, seen by many witnesses including over 500 people. The empty tomb, transformed...",
     "Tags": "resurrection; easter; empty tomb; risen; evidence; alive",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Jesus; Mary Magdalene; Paul",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Question": "What miracles did Jesus perform and why?",
@@ -239,7 +247,8 @@
     "MetaDescription": "Jesus healed the sick, gave sight to the blind, calmed storms, fed thousands, and raised the dead. His miracles were signs of God's kingdom, revealing...",
     "Tags": "miracles; healing; signs; lazarus; compassion; power",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Jesus; Lazarus"
   },
   {
     "Question": "What did Jesus teach about loving your enemies?",
@@ -261,7 +270,9 @@
     "MetaDescription": "Jesus taught His followers to love their enemies and pray for those who persecute them, reflecting the Father's generous kindness. This radical love...",
     "Tags": "love enemies; forgiveness; sermon on the mount; pray for persecutors; revenge",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Jesus",
+    "RelatedEvents": "The Sermon on the Mount"
   },
   {
     "Question": "Is Jesus the only way to God?",
@@ -283,7 +294,8 @@
     "MetaDescription": "According to Jesus' own words, He is the way, the truth, and the life, and no one comes to the Father except through Him. Christians proclaim this not...",
     "Tags": "only way; exclusivity; way truth life; salvation; mediator",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Jesus"
   },
   {
     "Question": "What is the Parable of the Prodigal Son about?",
@@ -305,7 +317,8 @@
     "MetaDescription": "The Prodigal Son tells of a wayward son who squanders his inheritance, returns in shame, and is embraced by his running, forgiving father. Jesus told...",
     "Tags": "prodigal son; parable; repentance; fathers love; lost and found; grace",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedEvents": "The Prodigal Son"
   },
   {
     "Question": "How can I be saved?",
@@ -327,7 +340,8 @@
     "MetaDescription": "You are saved by grace through faith in Jesus Christ, trusting His death and resurrection for the forgiveness of your sins. Confess Him as Lord,...",
     "Tags": "saved; salvation; how to be saved; faith; gospel; born again",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Question": "What does it mean to have faith?",
@@ -393,7 +407,8 @@
     "MetaDescription": "Repentance is turning away from sin and turning toward God with a changed heart and mind. It involves honest sorrow for sin, confession, and a new...",
     "Tags": "repentance; repent; confession; turn from sin; forgiveness",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "King David"
   },
   {
     "Question": "Do good works save us?",
@@ -437,7 +452,9 @@
     "MetaDescription": "Baptism is a public act of obedience symbolizing a believer's union with Christ in His death and resurrection and washing away of sins. Jesus commanded...",
     "Tags": "baptism; baptized; obedience; new life; water baptism",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Jesus",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Question": "How can I know I am truly saved?",
@@ -481,7 +498,8 @@
     "MetaDescription": "The Holy Spirit is God, the third Person of the Trinity, who convicts, regenerates, indwells, and empowers believers. He is not a force or feeling but...",
     "Tags": "holy spirit; helper; comforter; trinity; spirit of god",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedEvents": "Pentecost; Creation"
   },
   {
     "Question": "What are the fruits of the Spirit?",
@@ -547,7 +565,10 @@
     "MetaDescription": "At Pentecost, fifty days after Jesus' resurrection, the Holy Spirit came upon the disciples with wind and fire, enabling them to proclaim the gospel in...",
     "Tags": "pentecost; holy spirit comes; acts 2; church born; tongues",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Simon Peter",
+    "Places": "Jerusalem; Babel",
+    "RelatedEvents": "Pentecost"
   },
   {
     "Question": "How does the Holy Spirit help us pray?",
@@ -635,7 +656,8 @@
     "MetaDescription": "Yes, God hears and answers prayer according to His wisdom, timing, and good purposes, sometimes with yes, sometimes with wait, and sometimes with a...",
     "Tags": "answered prayer; god hears; unanswered; ask seek knock; petition",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedEvents": "Jesus Prays in Gethsemane"
   },
   {
     "Question": "What is worship according to the Bible?",
@@ -657,7 +679,8 @@
     "MetaDescription": "Worship is honoring God for who He is and what He has done, in spirit and truth, with our songs, prayers, obedience, and whole lives. True worship...",
     "Tags": "worship; praise; spirit and truth; adoration; singing",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "The Samaritan Woman"
   },
   {
     "Question": "Why should I go to church?",
@@ -679,7 +702,8 @@
     "MetaDescription": "Believers gather in church for worship, teaching, fellowship, prayer, and mutual encouragement, as God designed. Church is not a building or a...",
     "Tags": "church; fellowship; gathering; community; attendance; body",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedEvents": "Pentecost"
   },
   {
     "Question": "What is fasting and why do Christians fast?",
@@ -701,7 +725,8 @@
     "MetaDescription": "Fasting is voluntarily abstaining from food, or another good thing, for a time to seek God with focused prayer and humility. Christians fast to deepen...",
     "Tags": "fasting; fast; seek god; humility; spiritual discipline",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Jesus; Queen Esther"
   },
   {
     "Question": "How can I hear God's voice?",
@@ -855,7 +880,8 @@
     "MetaDescription": "The Old Testament records God's creation, covenant with Israel, law, history, poetry, and prophecy pointing forward to Christ. The New Testament...",
     "Tags": "old testament; new testament; difference; covenants; two testaments",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedEvents": "The Resurrection; Creation"
   },
   {
     "Question": "Has the Bible been changed over time?",
@@ -877,7 +903,8 @@
     "MetaDescription": "No, the Bible has not been meaningfully changed; thousands of early manuscripts and discoveries like the Dead Sea Scrolls show the text was copied with...",
     "Tags": "bible changed; manuscripts; textual criticism; dead sea scrolls; preserved",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Isaiah"
   },
   {
     "Question": "What is the main message of the Bible?",
@@ -899,7 +926,8 @@
     "MetaDescription": "The Bible's main message is the gospel: God created us, we fell into sin, and God redeems us through Jesus Christ's life, death, and resurrection. It...",
     "Tags": "main message; gospel; storyline; big picture; summary of bible",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedEvents": "Creation; The Resurrection"
   },
   {
     "Question": "How did the world begin according to Genesis?",
@@ -921,7 +949,8 @@
     "MetaDescription": "Genesis teaches God created everything from nothing by His word in the beginning, forming a good, ordered world and crowning it with humanity in His...",
     "Tags": "creation; genesis; beginning; creator; in the beginning; origins",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedEvents": "Creation"
   },
   {
     "Question": "What does it mean to be made in the image of God?",
@@ -943,7 +972,8 @@
     "MetaDescription": "Being made in God's image means every person reflects God in dignity, reason, creativity, morality, and relationship, and possesses immeasurable worth....",
     "Tags": "image of god; imago dei; dignity; human worth; identity",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedEvents": "Creation"
   },
   {
     "Question": "What happened in the Garden of Eden?",
@@ -965,7 +995,10 @@
     "MetaDescription": "In Eden, Adam and Eve lived in perfect fellowship with God until the serpent tempted them to eat the forbidden fruit. Their disobedience, the Fall,...",
     "Tags": "garden of eden; adam and eve; the fall; serpent; original sin",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Adam; Eve",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "The Fall"
   },
   {
     "Question": "Was Noah's flood real?",
@@ -987,7 +1020,9 @@
     "MetaDescription": "The Bible presents Noah's flood as a real, devastating judgment on widespread corruption, with Noah and his family saved in the ark by grace. Jesus and...",
     "Tags": "noahs flood; ark; noah; deluge; judgment; was flood real",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Noah",
+    "RelatedEvents": "Noah and the Flood"
   },
   {
     "Question": "What is the Tower of Babel story about?",
@@ -1009,7 +1044,9 @@
     "MetaDescription": "The Tower of Babel tells of humanity uniting in pride to build a city and tower to make a name for themselves, against God's purpose. God confused...",
     "Tags": "tower of babel; babel; languages; pride; scattering",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "Places": "Babel",
+    "RelatedEvents": "The Tower of Babel; Pentecost"
   },
   {
     "Question": "Why did God create humans?",
@@ -1031,7 +1068,8 @@
     "MetaDescription": "God created humans out of His love and for His glory, to know Him, reflect His image, care for creation, and enjoy fellowship with Him forever. Our...",
     "Tags": "why created; purpose of life; meaning; glory of god; humans created",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedEvents": "Creation"
   },
   {
     "Question": "Who was Abraham and why is he important?",
@@ -1053,7 +1091,9 @@
     "MetaDescription": "Abraham is the father of the nation of Israel and of all who believe, chosen by God to receive promises of land, descendants, and blessing for all...",
     "Tags": "abraham; father of faith; covenant; promise; patriarch",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Abraham; Hagar; Isaac",
+    "Places": "Ur"
   },
   {
     "Question": "What was the Exodus from Egypt?",
@@ -1075,7 +1115,10 @@
     "MetaDescription": "The Exodus was God's mighty deliverance of Israel from slavery in Egypt under Moses, climaxing in the Passover and the parting of the Red Sea. It is...",
     "Tags": "exodus; moses; passover; red sea; egypt; deliverance",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Moses",
+    "Places": "Egypt; Mount Sinai",
+    "RelatedEvents": "The Exodus and the Red Sea; The Ten Plagues; The Passover"
   },
   {
     "Question": "What are the Ten Commandments?",
@@ -1097,7 +1140,10 @@
     "MetaDescription": "The Ten Commandments are God's foundational moral laws given to Israel through Moses at Mount Sinai, summarizing love for God and love for neighbor....",
     "Tags": "ten commandments; law; sinai; moses; moral law; decalogue",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Moses",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "The Ten Commandments"
   },
   {
     "Question": "Who was King David?",
@@ -1119,7 +1165,10 @@
     "MetaDescription": "David was Israel's shepherd-king, a man after God's own heart who united the kingdom, wrote many Psalms, and received God's promise of an everlasting...",
     "Tags": "david; king david; goliath; son of david; psalms; shepherd king",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Bathsheba; King David",
+    "Places": "Jerusalem",
+    "RelatedEvents": "David and Goliath"
   },
   {
     "Question": "Why did Israel split into two kingdoms?",
@@ -1141,7 +1190,9 @@
     "MetaDescription": "After Solomon's death, Israel split into the northern kingdom of Israel and southern kingdom of Judah because of heavy burdens under Rehoboam and...",
     "Tags": "divided kingdom; israel judah; rehoboam; jeroboam; split; solomon",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Jeroboam; King David; King Solomon; Rehoboam",
+    "Places": "Jerusalem; Samaria"
   },
   {
     "Question": "What was the Babylonian exile?",
@@ -1163,7 +1214,9 @@
     "MetaDescription": "The Babylonian exile was God's judgment in which Judah was conquered by Babylon, Jerusalem and its temple were destroyed in 586 BC, and many Judeans...",
     "Tags": "exile; babylon; jerusalem destroyed; 586 bc; captivity; return",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Cyrus the Great; Ezra; Jeremiah; King Nebuchadnezzar; King Solomon; Nehemiah; Zerubbabel",
+    "Places": "Jerusalem; Babylon"
   },
   {
     "Question": "Who were the prophets and what did they do?",
@@ -1207,7 +1260,9 @@
     "MetaDescription": "Yes, the Tel Dan Stele, discovered in 1993, mentions the House of David in an Aramaic victory inscription from the 9th century BC. Together with the...",
     "Tags": "archaeology; king david evidence; tel dan stele; house of david; history",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "King David",
+    "Places": "Jerusalem; Plains of Moab"
   },
   {
     "Question": "What are the Dead Sea Scrolls?",
@@ -1229,7 +1284,8 @@
     "MetaDescription": "The Dead Sea Scrolls are ancient Jewish manuscripts, dating from about 250 BC to AD 68, discovered in caves near Qumran from 1947 onward. They include...",
     "Tags": "dead sea scrolls; qumran; manuscripts; isaiah scroll; preservation",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Isaiah; Queen Esther"
   },
   {
     "Question": "Has Noah's ark been found?",
@@ -1251,7 +1307,10 @@
     "MetaDescription": "No verified discovery of Noah's ark has been confirmed, despite many claims and expeditions on Mount Ararat and elsewhere. Christians trust the flood...",
     "Tags": "noahs ark found; mount ararat; ark discovery; flood evidence; claims",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Noah",
+    "Places": "Mount Ararat",
+    "RelatedEvents": "Noah and the Flood"
   },
   {
     "Question": "What is the Cyrus Cylinder and why does it matter?",
@@ -1273,7 +1332,9 @@
     "MetaDescription": "The Cyrus Cylinder is a Persian clay inscription from about 539 BC recording Cyrus the Great's policy of restoring exiled peoples and their temples. It...",
     "Tags": "cyrus cylinder; cyrus; decree; return from exile; persia; british museum",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Cyrus the Great; Ezra; Isaiah",
+    "Places": "Jerusalem; Babylon"
   },
   {
     "Question": "Is there evidence for the Exodus?",
@@ -1295,7 +1356,9 @@
     "MetaDescription": "Evidence for the Exodus is indirect and debated: Egyptian records rarely celebrated defeats or slave escapes, and a desert migration leaves few traces....",
     "Tags": "exodus evidence; archaeology exodus; merneptah stele; egypt; moses history",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "Places": "Egypt; Canaan; Goshen; Mount Sinai",
+    "RelatedEvents": "The Passover"
   },
   {
     "Question": "What archaeological finds support the New Testament?",
@@ -1339,7 +1402,10 @@
     "MetaDescription": "Excavations at Jericho found a collapsed mudbrick wall and a city destroyed by fire with full grain stores, consistent with a springtime conquest as...",
     "Tags": "jericho; walls fell; joshua; archaeology; bryant wood; kenyon",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Joshua",
+    "Places": "Jericho",
+    "RelatedEvents": "The Walls of Jericho"
   },
   {
     "Question": "How can I grow spiritually?",
@@ -1405,7 +1471,8 @@
     "MetaDescription": "The Bible invites anxious hearts to bring every concern to God in prayer with thanksgiving, promising His peace that guards hearts and minds. Scripture...",
     "Tags": "anxiety; worry; fear; peace; anxious; stress; care",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedEvents": "The Sermon on the Mount"
   },
   {
     "Question": "How can I share my faith with others?",
@@ -1427,7 +1494,8 @@
     "MetaDescription": "Share your faith by living a credible, loving life, praying for people, and gently telling what Jesus has done for you, using Scripture's gospel...",
     "Tags": "evangelism; share faith; witness; tell others; gospel sharing",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Simon Peter; The Samaritan Woman"
   },
   {
     "Question": "What does the Bible say about money and generosity?",
@@ -1493,7 +1561,9 @@
     "MetaDescription": "The Sabbath was God's gift of rest to Israel, rooted in creation, pointing to our need for rhythmic rest and trust. Christians honor its principle by...",
     "Tags": "sabbath; rest; lords day; sunday; rhythm; weariness",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Jesus",
+    "RelatedEvents": "Creation"
   },
   {
     "Question": "Will Jesus come back?",
@@ -1515,7 +1585,9 @@
     "MetaDescription": "Yes, Jesus promised He will return visibly and gloriously to judge the living and the dead, defeat evil, and make all things new. His return is the...",
     "Tags": "second coming; jesus return; blessed hope; maranatha; eschatology",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Jesus",
+    "RelatedEvents": "The Ascension"
   },
   {
     "Question": "What is heaven like?",
@@ -1581,7 +1653,8 @@
     "MetaDescription": "Revelation is John's prophetic vision unveiling Jesus Christ as the victorious Lamb and King who defeats evil, judges the world, and brings the new...",
     "Tags": "revelation; apocalypse; lamb; prophecy; end times; patmos",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "Places": "Patmos"
   },
   {
     "Question": "What are the signs of the end times?",
@@ -1647,7 +1720,9 @@
     "MetaDescription": "The Bible does not give a single simple reason for all suffering, but shows it entered a good world through the Fall, and that God is present,...",
     "Tags": "suffering; pain; why suffering; problem of evil; god and suffering; hope in pain",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Job",
+    "RelatedEvents": "The Fall; Creation"
   },
   {
     "Question": "What should I do when I doubt God?",
@@ -1669,7 +1744,8 @@
     "MetaDescription": "Doubt is not the end of faith; bring your doubts honestly to God, to Scripture, and to trusted believers, as many biblical saints did. God meets honest...",
     "Tags": "doubt; doubt god; faith crisis; unbelief; questions; thomas",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "John the Baptist; Thomas"
   },
   {
     "Question": "Why do my prayers go unanswered?",
@@ -1691,7 +1767,8 @@
     "MetaDescription": "Prayers may seem unanswered because of God's better timing, a wiser no, unseen spiritual realities, or our need to persevere, and sometimes the reason...",
     "Tags": "unanswered prayer; prayer not answered; silence of god; waiting; perseverance",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "King David"
   },
   {
     "Question": "How can a loving God send people to hell?",
@@ -1735,7 +1812,9 @@
     "MetaDescription": "Scripture teaches God judges fairly according to the light each person has received, that He is perfectly just and merciful, and that salvation is...",
     "Tags": "never heard gospel; unreached; salvation; fairness; missions; judgment",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Philip",
+    "RelatedEvents": "Creation"
   },
   {
     "Question": "Why does God seem silent in my hardest seasons?",
@@ -1757,7 +1836,8 @@
     "MetaDescription": "God's silence in Scripture is never His absence: He was silent before the Exodus, before Easter, and with Job, yet working His purposes throughout. In...",
     "Tags": "god silent; silence; waiting on god; dark night; absence; hope waiting",
     "Status": "Published",
-    "LastUpdated": "2026-10-23"
+    "LastUpdated": "2026-10-23",
+    "RelatedPeople": "Job; King David"
   },
   {
     "Question": "Are we guilty for Adam's sin?",
@@ -1775,7 +1855,8 @@
     "MetaDescription": "The Bible teaches that Adam's sin affects all of us, but Christians understand the 'how' in two complementary ways: we inherit a fallen nature from...",
     "Tags": "original sin; adam; guilt; imputation; romans 5; grace",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Adam"
   },
   {
     "Question": "Can a Christian be sanctified and still struggle with sin?",
@@ -1792,7 +1873,8 @@
     "MetaDescription": "Yes — struggling with sin is not proof that sanctification has failed; it is the normal experience of Christians in this life. Sanctification is real...",
     "Tags": "sanctification; sin; struggle; romans 7; growth; grace",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Paul"
   },
   {
     "Question": "Can faith and doubt exist together?",
@@ -1809,7 +1891,9 @@
     "MetaDescription": "Yes. Faith and doubt often exist together in the same heart, and Scripture is full of believers who trusted God while still asking hard questions....",
     "Tags": "faith; doubt; questions; thomas; trust; unbelief",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Thomas",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Question": "Can we earn God's grace?",
@@ -1826,7 +1910,8 @@
     "MetaDescription": "No. Grace, by definition, cannot be earned — if it could be, it would not be grace. Paul is blunt: if salvation comes by grace, 'it cannot be based...",
     "Tags": "grace; works; salvation; faith; earning; gift",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Paul"
   },
   {
     "Question": "Did God create the world in six literal days?",
@@ -1843,7 +1928,8 @@
     "MetaDescription": "Christians who all affirm that God created the world disagree about how to read the six days of Genesis 1. Some understand them as six ordinary...",
     "Tags": "creation; genesis; six days; origins; interpretation; creator",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedEvents": "Creation"
   },
   {
     "Question": "Did the Exodus really happen?",
@@ -1861,7 +1947,9 @@
     "MetaDescription": "The Bible presents the Exodus as the defining event of Israel's history, and while scholars debate its scale and date, there is real historical...",
     "Tags": "exodus; moses; egypt; evidence; history; deliverance",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Moses",
+    "Places": "Egypt; Canaan"
   },
   {
     "Question": "Do angels still appear today?",
@@ -1895,7 +1983,8 @@
     "MetaDescription": "No. People do not become angels when they die. Angels and humans are different kinds of creatures, and the Bible promises believers something better...",
     "Tags": "angels; heaven; death; resurrection; afterlife",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Question": "Does forgiving mean I have to trust them again?",
@@ -1912,7 +2001,8 @@
     "MetaDescription": "No. Forgiveness and trust are different things. Forgiveness releases the debt and gives up revenge; trust is rebuilt slowly, over time, through...",
     "Tags": "forgiveness; trust; boundaries; reconciliation; relationships; safety",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Paul"
   },
   {
     "Question": "Does prayer change God's mind?",
@@ -1930,7 +2020,9 @@
     "MetaDescription": "Prayer does not manipulate God or change His character, but Scripture shows God genuinely responding to prayer — relenting, giving, and acting —...",
     "Tags": "prayer; sovereignty; intercession; moses; unanswered prayer; god's will",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Jonah; King Hezekiah; Moses",
+    "Places": "Nineveh"
   },
   {
     "Question": "Does suffering mean God is punishing me?",
@@ -1947,7 +2039,8 @@
     "MetaDescription": "Not necessarily — and often, no. The Bible shows suffering coming from many causes: a fallen world, other people's sins, spiritual opposition, and...",
     "Tags": "suffering; punishment; discipline; job; guilt; grace",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Job"
   },
   {
     "Question": "How can a Christian marriage survive hard seasons?",
@@ -1964,7 +2057,8 @@
     "MetaDescription": "Christian marriages survive hard seasons the way any covenant survives: by keeping promises when feelings fade, forgiving quickly, praying together,...",
     "Tags": "marriage; hard seasons; forgiveness; covenant; love; perseverance",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Paul"
   },
   {
     "Question": "How can a loving God also be just?",
@@ -1981,7 +2075,8 @@
     "MetaDescription": "God's love and justice meet at the cross. Justice means God takes evil seriously and will not let it stand; love means He took the penalty for that...",
     "Tags": "love; justice; cross; goodness of god; judgment; mercy",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Paul"
   },
   {
     "Question": "How can God be three and one at the same time?",
@@ -2015,7 +2110,8 @@
     "MetaDescription": "God can declare sinners righteous because their sins were fully punished in Christ, and Christ's righteousness is credited to them. Paul calls this...",
     "Tags": "justification; righteousness; faith; cross; grace; romans",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Paul"
   },
   {
     "Question": "How can I forgive someone who hurt me deeply?",
@@ -2083,7 +2179,8 @@
     "MetaDescription": "Show mercy the way Jesus did: with truth in one hand and grace in the other. Mercy forgives and restores; it does not pretend the sin did not happen...",
     "Tags": "mercy; forgiveness; truth; grace; restoration; sin",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedEvents": "The Prodigal Son"
   },
   {
     "Question": "How can I stop being afraid when I cannot control the future?",
@@ -2100,7 +2197,8 @@
     "MetaDescription": "You cannot control the future, but you can trust the God who holds it — and Scripture's practical answer to fear is to name it honestly, pray...",
     "Tags": "fear; anxiety; future; trust; peace; control",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Paul"
   },
   {
     "Question": "How can we tell true prophecy from false prophecy?",
@@ -2117,7 +2215,8 @@
     "MetaDescription": "True prophecy is tested by Scripture: it comes true, it agrees with God's Word, and it bears good fruit. Deuteronomy gives the test — if a prophet's...",
     "Tags": "prophecy; false prophets; discernment; deuteronomy; testing; truth",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Jeremiah"
   },
   {
     "Question": "How do Christians grow in holiness?",
@@ -2134,7 +2233,8 @@
     "MetaDescription": "Christians grow in holiness by the Spirit's power through ordinary means: God's Word, prayer, worship, community, and obedience — over a lifetime,...",
     "Tags": "holiness; sanctification; growth; spirit; disciplines; maturity",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Paul"
   },
   {
     "Question": "How do I disciple someone else?",
@@ -2170,7 +2270,8 @@
     "MetaDescription": "Share your faith the way Peter describes: with gentleness and respect, ready to give a reason for your hope (1 Peter 3:15). Listening well, telling...",
     "Tags": "evangelism; sharing faith; gentleness; witness; conversation; gospel",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Simon Peter"
   },
   {
     "Question": "How do I teach my children about God at home?",
@@ -2204,7 +2305,10 @@
     "MetaDescription": "The Exodus points to Jesus as the greater deliverance: where Moses led Israel out of slavery in Egypt through the blood of the Passover lamb, Jesus...",
     "Tags": "exodus; jesus; passover; deliverance; moses; typology",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Jesus; John the Baptist; Moses",
+    "Places": "Egypt",
+    "RelatedEvents": "The Exodus and the Red Sea; The Passover; Transfiguration"
   },
   {
     "Question": "How is Christian hope different from wishful thinking?",
@@ -2221,7 +2325,9 @@
     "MetaDescription": "Wishful thinking hopes something might happen; Christian hope trusts Someone who has already acted. It is anchored in the resurrection of Jesus and...",
     "Tags": "hope; faith; resurrection; promises; optimism; assurance",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Jesus",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Question": "How is the new covenant different from the old?",
@@ -2256,7 +2362,8 @@
     "MetaDescription": "Christians should honor leaders, pray for them, and obey them where possible — but never follow them into sin, and never treat any leader as above...",
     "Tags": "leaders; authority; government; obedience; prayer; integrity",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Jesus; King David; King Saul; Simon Peter"
   },
   {
     "Question": "If God is good and powerful, why is there so much suffering?",
@@ -2273,7 +2380,8 @@
     "MetaDescription": "This is the hardest question in faith, and the Bible does not offer a quick answer — but it does offer a framework: suffering entered through a...",
     "Tags": "suffering; evil; theodicy; pain; sovereignty; grief",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedEvents": "Creation"
   },
   {
     "Question": "Is anxiety a lack of faith?",
@@ -2289,7 +2397,8 @@
     "MetaDescription": "No. Anxiety is not simply a lack of faith, and feeling anxious does not mean you have failed God. Faith and anxiety often live side by side: many...",
     "Tags": "anxiety; faith; worry; peace; mental health; prayer",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedEvents": "Jesus Prays in Gethsemane"
   },
   {
     "Question": "Is hell eternal or temporary?",
@@ -2322,7 +2431,9 @@
     "MetaDescription": "Honest doubt is not the same as rebellious unbelief, and God is patient with honest questions. The Psalms, the prophets, and even the apostles...",
     "Tags": "doubt; faith; questions; thomas; psalms; unbelief",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Thomas",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Question": "Is original sin unjust?",
@@ -2340,7 +2451,8 @@
     "MetaDescription": "Original sin can feel unjust — why should Adam's sin affect us? The Bible answers on two levels: we are connected to Adam as our representative head,...",
     "Tags": "original sin; adam; justice; guilt; romans 5; fall",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Adam"
   },
   {
     "Question": "Is the kingdom of God already here or still coming?",
@@ -2409,7 +2521,8 @@
     "MetaDescription": "We are redeemed from sin, its guilt, its slavery, and its curse — and ultimately from death itself. Redemption means being bought out of bondage:...",
     "Tags": "redemption; ransom; freedom; sin; slavery; curse",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Paul"
   },
   {
     "Question": "What can Christians learn from the exile?",
@@ -2427,7 +2540,10 @@
     "MetaDescription": "The exile teaches God's people how to stay faithful far from home: God is present even in discipline, He works through ordinary life in a strange...",
     "Tags": "exile; faithfulness; babylon; hope; discipline; perseverance",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Daniel; Jeremiah",
+    "Places": "Babylon",
+    "RelatedEvents": "Daniel in the Lions' Den"
   },
   {
     "Question": "What does atonement mean?",
@@ -2445,7 +2561,8 @@
     "MetaDescription": "Atonement means the restoring of a broken relationship between God and people through a sacrifice that deals with sin. In the Bible, atonement is how...",
     "Tags": "atonement; sacrifice; forgiveness; reconciliation; cross; sin",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Paul"
   },
   {
     "Question": "What does it mean that God is holy?",
@@ -2463,7 +2580,8 @@
     "MetaDescription": "To say God is holy means He is completely set apart — perfectly pure, majestic, and unlike anything else. In heaven, the angels never stop crying,...",
     "Tags": "holiness; god; purity; isaiah; worship; character of god",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Isaiah"
   },
   {
     "Question": "What does it mean that Jesus redeemed us?",
@@ -2481,7 +2599,8 @@
     "MetaDescription": "To say Jesus redeemed us means He paid the price to set us free from sin and death. Like a slave bought out of bondage, we now belong to Him — not as...",
     "Tags": "redemption; ransom; jesus; freedom; cross; belonging",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Jesus"
   },
   {
     "Question": "What does it mean to be a disciple of Jesus?",
@@ -2499,7 +2618,8 @@
     "MetaDescription": "A disciple is a learner and follower of Jesus: someone who trusts Him, learns His teaching, and shapes their whole life around obeying Him....",
     "Tags": "disciple; following jesus; obedience; faith; growth; learning",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Jesus"
   },
   {
     "Question": "What does it mean to be justified by faith?",
@@ -2550,7 +2670,8 @@
     "MetaDescription": "The Bible commands God's people to do justice as part of loving Him: to defend the vulnerable, correct oppression, and live fairly. Micah sums it up:...",
     "Tags": "justice; mercy; poor; oppression; neighbor; righteousness",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedEvents": "The Good Samaritan"
   },
   {
     "Question": "What does the Bible say about fear?",
@@ -2584,7 +2705,8 @@
     "MetaDescription": "The Bible presents marriage as a lifelong covenant between a man and a woman, created by God, meant to picture Christ's love for His church. Jesus...",
     "Tags": "marriage; covenant; husband; wife; love; family",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedEvents": "Creation"
   },
   {
     "Question": "What does the Bible say about raising children?",
@@ -2619,7 +2741,10 @@
     "MetaDescription": "The evidence for the resurrection includes the empty tomb, the eyewitness appearances, the transformation of the disciples, and an early creed dating...",
     "Tags": "resurrection; evidence; empty tomb; eyewitnesses; apologetics; easter",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Jesus; Paul; Thomas",
+    "Places": "Jerusalem",
+    "RelatedEvents": "The Resurrection; The Crucifixion"
   },
   {
     "Question": "What exactly is the gospel I should share?",
@@ -2655,7 +2780,9 @@
     "MetaDescription": "The Fall is humanity's first rebellion against God: Adam and Eve, tempted by the serpent, disobeyed God's one command and ate from the tree of the...",
     "Tags": "fall; adam; eve; sin; genesis 3; serpent",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Adam; Eve",
+    "RelatedEvents": "The Fall"
   },
   {
     "Question": "What is a covenant in the Bible?",
@@ -2673,7 +2800,8 @@
     "MetaDescription": "A covenant is a binding promise-relationship between God and His people. Unlike a simple contract, a biblical covenant is personal: God commits...",
     "Tags": "covenant; promise; abraham; bible; relationship; faithfulness",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedEvents": "The Last Supper"
   },
   {
     "Question": "What is biblical wisdom and how do I get it?",
@@ -2708,7 +2836,8 @@
     "MetaDescription": "Biblical faith is confident trust in God based on who He is and what He has promised. Hebrews defines it as 'confidence in what we hope for and...",
     "Tags": "faith; trust; belief; assurance; hebrews 11; abraham",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Abraham"
   },
   {
     "Question": "What is grace and how is it different from mercy?",
@@ -2725,7 +2854,8 @@
     "MetaDescription": "Grace is God giving us good we do not deserve; mercy is God withholding the punishment we do deserve. They are two sides of His kindness: mercy...",
     "Tags": "grace; mercy; salvation; forgiveness; kindness; gospel",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Paul"
   },
   {
     "Question": "What is the church supposed to do?",
@@ -2760,7 +2890,8 @@
     "MetaDescription": "Mercy is God not giving us the punishment we deserve; grace is God giving us the blessing we do not deserve. Mercy withholds judgment; grace pours...",
     "Tags": "mercy; grace; compassion; forgiveness; kindness; salvation",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedEvents": "The Good Samaritan"
   },
   {
     "Question": "What is the kingdom of God?",
@@ -2778,7 +2909,9 @@
     "MetaDescription": "The kingdom of God is God's reign — His rule breaking into the world through Jesus. It is not mainly a place, but a King ruling: where Jesus is...",
     "Tags": "kingdom of god; reign; jesus; parables; citizenship; gospel",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Daniel; Jesus",
+    "RelatedEvents": "The Sermon on the Mount"
   },
   {
     "Question": "What is true worship according to the Bible?",
@@ -2796,7 +2929,8 @@
     "MetaDescription": "True worship is honoring God with your whole life, in spirit and in truth. Jesus said the Father seeks worshipers who worship 'in the Spirit and in...",
     "Tags": "worship; praise; spirit and truth; sacrifice; singing; church",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "The Samaritan Woman"
   },
   {
     "Question": "What makes a good leader according to the Bible?",
@@ -2813,7 +2947,8 @@
     "MetaDescription": "A good leader, in the Bible's picture, is a servant: someone of proven character who leads by example, puts others' good first, and follows Jesus,...",
     "Tags": "leadership; servant; character; shepherd; integrity; example",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Nehemiah"
   },
   {
     "Question": "What should I do when my faith feels weak?",
@@ -2847,7 +2982,8 @@
     "MetaDescription": "When Jesus comes back, He will raise the dead, judge the world with perfect justice, and make all things new: a new heaven and a new earth where God...",
     "Tags": "second coming; return of christ; judgment; new creation; resurrection; hope",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Jesus"
   },
   {
     "Question": "What will heaven be like?",
@@ -2881,7 +3017,8 @@
     "MetaDescription": "No one knows — and Jesus said so plainly: 'about that day or hour no one knows, not even the angels in heaven, nor the Son, but only the Father'...",
     "Tags": "second coming; return of christ; end times; readiness; prophecy; patience",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Jesus"
   },
   {
     "Question": "Which prophecies did Jesus fulfill?",
@@ -2899,7 +3036,10 @@
     "MetaDescription": "Jesus fulfilled prophecies across the whole Old Testament: born in Bethlehem, born of a virgin, from David's line, a suffering servant who would be...",
     "Tags": "prophecy; fulfilled prophecy; messiah; isaiah 53; jesus; old testament",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Jesus",
+    "Places": "Egypt; Jerusalem; Bethlehem",
+    "RelatedEvents": "The Crucifixion; The Resurrection; The Birth of Jesus"
   },
   {
     "Question": "Why did God allow Adam and Eve to sin?",
@@ -2917,7 +3057,9 @@
     "MetaDescription": "God allowed Adam and Eve to sin because He made them with real freedom, and real love requires real choice. He did not cause their sin, but He...",
     "Tags": "fall; free will; sin; sovereignty; adam; eve",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Adam; Eve",
+    "RelatedEvents": "The Fall; Creation"
   },
   {
     "Question": "Why did God send Israel into exile?",
@@ -2935,7 +3077,9 @@
     "MetaDescription": "God sent Israel into exile because, after centuries of warnings, the nation persisted in idolatry, injustice, and breaking the covenant He had made...",
     "Tags": "exile; judgment; idolatry; covenant; israel; discipline",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Jeremiah",
+    "Places": "Babylon"
   },
   {
     "Question": "Why did Jesus have to die for our sins?",
@@ -2953,7 +3097,8 @@
     "MetaDescription": "Jesus died because sin carries a real penalty, and only a perfect substitute could pay it. God's justice requires sin to be dealt with, and God's...",
     "Tags": "cross; sacrifice; sin; salvation; jesus; forgiveness",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Isaiah; Jesus"
   },
   {
     "Question": "Why do Christians get baptized?",
@@ -2971,7 +3116,9 @@
     "MetaDescription": "Christians are baptized because Jesus commanded it, and because baptism pictures what God has done for us: buried with Christ and raised to new life....",
     "Tags": "baptism; obedience; new life; church; faith; sign",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Jesus",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Question": "Why do I need to go to church if I believe in Jesus?",
@@ -2989,7 +3136,8 @@
     "MetaDescription": "You can believe in Jesus without going to church, but you cannot grow as He intends without His people. God designed faith to be lived in community:...",
     "Tags": "church; fellowship; community; gathering; faith; body of christ",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Jesus"
   },
   {
     "Question": "Why does God seem not to answer some prayers?",
@@ -3006,7 +3154,9 @@
     "MetaDescription": "God hears every prayer of His people, but He does not always answer the way we ask or when we ask. Sometimes the answer is no, sometimes it is wait,...",
     "Tags": "prayer; unanswered prayer; waiting; god's will; suffering; trust",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Paul",
+    "RelatedEvents": "Jesus Prays in Gethsemane"
   },
   {
     "Question": "Why does God want our worship?",
@@ -3040,7 +3190,8 @@
     "MetaDescription": "Holiness matters because God made us to share His character, not just to be forgiven. Peter writes, 'Be holy in all you do' (1 Peter 1:15) — holiness...",
     "Tags": "holiness; obedience; witness; growth; character; everyday faith",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Simon Peter"
   },
   {
     "Question": "Why does the book of Ecclesiastes sound so pessimistic?",
@@ -3058,7 +3209,8 @@
     "MetaDescription": "Ecclesiastes sounds pessimistic because it looks at life 'under the sun' — from a purely earthly viewpoint, where everything fades. But its bleak...",
     "Tags": "ecclesiastes; wisdom; meaning; pessimism; vanity; fear of god",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "King Solomon"
   },
   {
     "Question": "Why does the resurrection matter if Jesus already died for sins?",
@@ -3076,7 +3228,9 @@
     "MetaDescription": "The resurrection matters because without it, the cross would be just another death. Paul says it plainly: 'If Christ has not been raised, your faith...",
     "Tags": "resurrection; cross; justification; new life; hope; easter",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Jesus",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Question": "Will we recognize loved ones in heaven?",
@@ -3093,6 +3247,7 @@
     "MetaDescription": "The Bible does not answer this in a single verse, but everything it says points to yes: we will know one another in heaven, because resurrection life...",
     "Tags": "heaven; loved ones; reunion; resurrection; grief; hope",
     "Status": "Published",
-    "LastUpdated": "2026-10-25"
+    "LastUpdated": "2026-10-25",
+    "RelatedPeople": "Paul"
   }
 ]

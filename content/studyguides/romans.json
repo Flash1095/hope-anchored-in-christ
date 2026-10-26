@@ -8,5 +8,8 @@
   "Application": "Memorize Romans 8:1 or 8:28, and return to it whenever guilt or worry tries to rewrite what God has said about you.",
   "RelatedBooks": "Romans",
   "RelatedTopics": "Justification; Grace; Faith",
-  "Slug": "romans"
+  "Slug": "romans",
+  "RelatedPeople": "Paul; Abraham; Adam",
+  "Places": "Rome; Corinth",
+  "RelatedEvents": "The Crucifixion; The Resurrection"
 }

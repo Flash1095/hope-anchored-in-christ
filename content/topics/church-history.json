@@ -6,5 +6,7 @@
   "RelatedPeople": "Simon Peter; Paul; Stephen",
   "RelatedDoctrines": "The Church",
   "RelatedBooks": "Acts; Revelation",
-  "Slug": "church-history"
+  "Slug": "church-history",
+  "Places": "Jerusalem",
+  "RelatedEvents": "Pentecost"
 }

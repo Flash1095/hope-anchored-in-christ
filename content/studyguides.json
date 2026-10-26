@@ -9,7 +9,9 @@
     "Application": "Pick the one quality of love you most lack, and practice it deliberately toward one person every day this week.",
     "RelatedBooks": "1 Corinthians",
     "RelatedTopics": "Love; Church",
-    "Slug": "1-corinthians-13"
+    "Slug": "1-corinthians-13",
+    "RelatedPeople": "Paul; Jesus",
+    "Places": "Corinth"
   },
   {
     "Guide": "Anxiety",
@@ -21,7 +23,9 @@
     "Application": "Each evening this week, write down one worry and one thing you are thankful for, and hand the worry to God in prayer before you sleep.",
     "RelatedBooks": "Philippians; Matthew; 1 Peter",
     "RelatedTopics": "Anxiety; Fear; Prayer",
-    "Slug": "anxiety"
+    "Slug": "anxiety",
+    "RelatedPeople": "Jesus; King David; Elijah",
+    "RelatedEvents": "Jesus Prays in Gethsemane"
   },
   {
     "Guide": "David",
@@ -33,7 +37,10 @@
     "Application": "If there is a failure you have hidden, bring it to God this week in the spirit of Psalm 51 — honestly, without excuse — and ask for a clean heart.",
     "RelatedBooks": "1 Samuel; 2 Samuel; Psalms",
     "RelatedTopics": "Worship; Forgiveness; Leadership",
-    "Slug": "david"
+    "Slug": "david",
+    "RelatedPeople": "King David; Jonathan; Samuel",
+    "Places": "Bethlehem; Hebron; Jerusalem",
+    "RelatedEvents": "David and Goliath; David Becomes King; David and Bathsheba; Davidic Covenant"
   },
   {
     "Guide": "Esther",
@@ -45,7 +52,10 @@
     "Application": "Identify one situation where you have influence — at work, at home, in your community — and take one brave, wise step for someone else's good this week.",
     "RelatedBooks": "Esther",
     "RelatedTopics": "Leadership; Faith",
-    "Slug": "esther"
+    "Slug": "esther",
+    "RelatedPeople": "Queen Esther; Mordecai",
+    "Places": "Susa",
+    "RelatedEvents": "Esther Saves the Jews"
   },
   {
     "Guide": "Faith",
@@ -57,7 +67,10 @@
     "Application": "Take one concrete step this week that requires trusting God — a hard conversation, a generous gift, a surrendered plan — and do it because he is faithful, not because you feel ready.",
     "RelatedBooks": "Hebrews; Romans; James",
     "RelatedTopics": "Faith; Justification",
-    "Slug": "faith"
+    "Slug": "faith",
+    "RelatedPeople": "Abraham; Moses; Paul",
+    "Places": "Canaan",
+    "RelatedEvents": "The Call of Abraham"
   },
   {
     "Guide": "Forgiveness",
@@ -69,7 +82,10 @@
     "Application": "This week, pray daily for one person who has hurt you, asking God to bless them — and notice what that prayer does to your own heart.",
     "RelatedBooks": "Matthew; Ephesians; Colossians",
     "RelatedTopics": "Forgiveness; Grace; Mercy",
-    "Slug": "forgiveness"
+    "Slug": "forgiveness",
+    "RelatedPeople": "Jesus; Joseph, Son of Jacob; Stephen",
+    "Places": "Egypt",
+    "RelatedEvents": "Joseph and His Brothers; The Crucifixion"
   },
   {
     "Guide": "Genesis",
@@ -81,7 +97,10 @@
     "Application": "Write down one promise of God from Genesis that speaks to your present situation, and put it where you will see it every day this week.",
     "RelatedBooks": "Genesis",
     "RelatedTopics": "Creation; Covenant; The Fall",
-    "Slug": "genesis"
+    "Slug": "genesis",
+    "RelatedPeople": "Adam; Eve; Noah; Abraham; Joseph, Son of Jacob",
+    "Places": "Garden of Eden; Babel; Ur; Canaan; Egypt",
+    "RelatedEvents": "Creation; The Fall; Noah and the Flood; The Call of Abraham; Joseph and His Brothers"
   },
   {
     "Guide": "Hebrews 11",
@@ -93,7 +112,9 @@
     "Application": "Take one step of faith this week that you have been postponing — an obedience, a risk, a trust — and do it because God is faithful, not because the outcome is certain.",
     "RelatedBooks": "Hebrews",
     "RelatedTopics": "Faith; Hope",
-    "Slug": "hebrews-11"
+    "Slug": "hebrews-11",
+    "RelatedPeople": "Abel; Noah; Abraham; Moses; Rahab",
+    "RelatedEvents": "Creation; Noah and the Flood; The Call of Abraham"
   },
   {
     "Guide": "Hope",
@@ -105,7 +126,9 @@
     "Application": "Anchor your week to one promise — Romans 15:13 or Hebrews 6:19 — and repeat it each morning before you face the day.",
     "RelatedBooks": "Romans; Hebrews; 1 Peter",
     "RelatedTopics": "Hope; Suffering",
-    "Slug": "hope"
+    "Slug": "hope",
+    "RelatedPeople": "Abraham; Paul; Jeremiah",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Guide": "Inductive Bible Study Method",
@@ -117,7 +140,9 @@
     "Application": "This week, study one passage inductively from start to finish, and write down the one application you will actually carry out.",
     "RelatedBooks": "2 Timothy; Psalms; Acts",
     "RelatedTopics": "Discipleship; Wisdom",
-    "Slug": "inductive-bible-study-method"
+    "Slug": "inductive-bible-study-method",
+    "RelatedPeople": "Ezra",
+    "RelatedEvents": "Ezra Reads the Law"
   },
   {
     "Guide": "James",
@@ -129,7 +154,10 @@
     "Application": "Pick one practice from James — taming the tongue, caring for someone in need, or praying first — and do it daily for a week.",
     "RelatedBooks": "James",
     "RelatedTopics": "Faith; Wisdom",
-    "Slug": "james"
+    "Slug": "james",
+    "RelatedPeople": "Jesus",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Jerusalem Council; Sermon on the Mount"
   },
   {
     "Guide": "John",
@@ -141,7 +169,10 @@
     "Application": "Pick one \"I am\" statement to carry through your week, and let it shape one concrete decision — how you speak, spend, forgive, or rest.",
     "RelatedBooks": "John",
     "RelatedTopics": "Faith; Love",
-    "Slug": "john"
+    "Slug": "john",
+    "RelatedPeople": "John the Apostle; Jesus",
+    "Places": "Jerusalem; Galilee; Bethany",
+    "RelatedEvents": "Baptism of Jesus; Raising of Lazarus; The Crucifixion; The Resurrection"
   },
   {
     "Guide": "Joseph",
@@ -153,7 +184,10 @@
     "Application": "Name one hard chapter of your life, and pray Joseph's confession over it: God meant it for good — even if you cannot yet see how.",
     "RelatedBooks": "Genesis",
     "RelatedTopics": "Forgiveness; Suffering; Redemption",
-    "Slug": "joseph"
+    "Slug": "joseph",
+    "RelatedPeople": "Joseph, Son of Jacob; Jacob; Judah",
+    "Places": "Canaan; Egypt",
+    "RelatedEvents": "Joseph and His Brothers; Joseph Sold into Egypt; Joseph Rises to Power in Egypt"
   },
   {
     "Guide": "The Lord's Prayer",
@@ -165,7 +199,9 @@
     "Application": "Pray the Lord's Prayer slowly every morning this week, pausing after each petition to make it your own — and let it become the shape of your prayers.",
     "RelatedBooks": "Matthew; Luke",
     "RelatedTopics": "Prayer; Kingdom of God",
-    "Slug": "lords-prayer"
+    "Slug": "lords-prayer",
+    "RelatedPeople": "Jesus",
+    "RelatedEvents": "Sermon on the Mount"
   },
   {
     "Guide": "Love",
@@ -177,7 +213,10 @@
     "Application": "Choose one person to love actively this week — not with feelings, but with a specific kind act, a patient conversation, or a forgiven debt.",
     "RelatedBooks": "1 Corinthians; 1 John; John",
     "RelatedTopics": "Love; Grace",
-    "Slug": "love"
+    "Slug": "love",
+    "RelatedPeople": "Jesus; John the Apostle; Paul",
+    "Places": "Corinth",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Guide": "Mark",
@@ -189,7 +228,10 @@
     "Application": "Tell one person this week, in your own words, who Jesus is according to Mark — not a rehearsed answer, but the one you actually believe.",
     "RelatedBooks": "Mark",
     "RelatedTopics": "Faith; Discipleship; Kingdom of God",
-    "Slug": "mark"
+    "Slug": "mark",
+    "RelatedPeople": "Simon Peter; Jesus",
+    "Places": "Galilee; Jerusalem; Capernaum",
+    "RelatedEvents": "Baptism of Jesus; The Crucifixion; The Resurrection"
   },
   {
     "Guide": "Mary",
@@ -201,7 +243,10 @@
     "Application": "Pray Mary's words — \"let it be to me according to your word\" — over one situation you cannot control, and mean it for a week.",
     "RelatedBooks": "Luke; John",
     "RelatedTopics": "Discipleship; Worship",
-    "Slug": "mary"
+    "Slug": "mary",
+    "RelatedPeople": "Mary, Mother of Jesus; Jesus; Elizabeth; Joseph, Husband of Mary",
+    "Places": "Nazareth; Bethlehem",
+    "RelatedEvents": "Birth of Jesus; Jesus Turns Water into Wine at Cana; The Crucifixion"
   },
   {
     "Guide": "Moses",
@@ -213,7 +258,10 @@
     "Application": "Name one thing God has been nudging you toward that you have avoided, and take the smallest possible first step this week.",
     "RelatedBooks": "Exodus; Deuteronomy",
     "RelatedTopics": "Exodus; Leadership; Covenant",
-    "Slug": "moses"
+    "Slug": "moses",
+    "RelatedPeople": "Moses; Aaron; Miriam; Joshua",
+    "Places": "Egypt; Mount Sinai; Plains of Moab",
+    "RelatedEvents": "The Burning Bush; The Ten Plagues; The Exodus and Crossing of the Red Sea; Giving of the Law at Sinai; Wilderness Wanderings"
   },
   {
     "Guide": "Paul",
@@ -225,7 +273,10 @@
     "Application": "Write a short version of your own grace story — who you were, how Christ met you, who you are becoming — and share it with one person this week.",
     "RelatedBooks": "Acts; Galatians; Philippians",
     "RelatedTopics": "Evangelism; Grace; Discipleship",
-    "Slug": "paul"
+    "Slug": "paul",
+    "RelatedPeople": "Paul; Barnabas; Timothy; Stephen",
+    "Places": "Jerusalem; Antioch; Corinth; Rome",
+    "RelatedEvents": "Conversion of Saul (Paul); Paul's Missionary Journeys; Paul in Rome; Martyrdom of Stephen"
   },
   {
     "Guide": "Philippians",
@@ -237,7 +288,10 @@
     "Application": "Each morning this week, name three things to be thankful for before you start the day, and tell one person why you are grateful for them.",
     "RelatedBooks": "Philippians",
     "RelatedTopics": "Discipleship; Love",
-    "Slug": "philippians"
+    "Slug": "philippians",
+    "RelatedPeople": "Paul; Timothy; Lydia",
+    "Places": "Philippi",
+    "RelatedEvents": "Paul's Missionary Journeys"
   },
   {
     "Guide": "Prayer",
@@ -249,7 +303,10 @@
     "Application": "Set aside ten minutes tomorrow morning for prayer before anything else, using the Lord's Prayer as your outline — and repeat it daily for a week.",
     "RelatedBooks": "Matthew; Philippians; James",
     "RelatedTopics": "Prayer",
-    "Slug": "prayer"
+    "Slug": "prayer",
+    "RelatedPeople": "Hannah; Daniel; Jesus; Paul",
+    "Places": "Shiloh; Jerusalem",
+    "RelatedEvents": "Jesus Prays in Gethsemane; Daniel in the Lions' Den"
   },
   {
     "Guide": "Proverbs",
@@ -261,7 +318,9 @@
     "Application": "Choose one proverb to practice for a week — especially one about your speech — and ask someone close to you whether they notice a difference.",
     "RelatedBooks": "Proverbs",
     "RelatedTopics": "Wisdom; Fear",
-    "Slug": "proverbs"
+    "Slug": "proverbs",
+    "RelatedPeople": "King Solomon",
+    "Places": "Jerusalem"
   },
   {
     "Guide": "Psalm 23",
@@ -273,7 +332,9 @@
     "Application": "When worry or grief rises this week, pray Psalm 23 aloud, slowly, until its promises are louder than your fear.",
     "RelatedBooks": "Psalms",
     "RelatedTopics": "Worship; Suffering; Hope",
-    "Slug": "psalm-23"
+    "Slug": "psalm-23",
+    "RelatedPeople": "King David; Jesus",
+    "Places": "Bethlehem"
   },
   {
     "Guide": "Psalms",
@@ -285,7 +346,10 @@
     "Application": "Choose one psalm to pray every morning this week, and let its words set the tone for the day before you check anything else.",
     "RelatedBooks": "Psalms",
     "RelatedTopics": "Worship; Prayer",
-    "Slug": "psalms"
+    "Slug": "psalms",
+    "RelatedPeople": "King David; Moses",
+    "Places": "Jerusalem",
+    "RelatedEvents": "David and Bathsheba"
   },
   {
     "Guide": "Revelation",
@@ -297,7 +361,10 @@
     "Application": "Read Revelation 21:1-5 aloud as a personal promise this week, and let it steady you whenever the news or your circumstances feel overwhelming.",
     "RelatedBooks": "Revelation",
     "RelatedTopics": "Prophecy; Second Coming; Hope",
-    "Slug": "revelation"
+    "Slug": "revelation",
+    "RelatedPeople": "John the Apostle; Jesus",
+    "Places": "Patmos; Jerusalem",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Guide": "Romans 8",
@@ -309,7 +376,10 @@
     "Application": "Write Romans 8:38-39 on a card and read it each morning this week, especially on the days you least feel it.",
     "RelatedBooks": "Romans",
     "RelatedTopics": "Justification; Grace; Hope",
-    "Slug": "romans-8"
+    "Slug": "romans-8",
+    "RelatedPeople": "Paul",
+    "Places": "Rome",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Guide": "Romans",
@@ -321,7 +391,10 @@
     "Application": "Memorize Romans 8:1 or 8:28, and return to it whenever guilt or worry tries to rewrite what God has said about you.",
     "RelatedBooks": "Romans",
     "RelatedTopics": "Justification; Grace; Faith",
-    "Slug": "romans"
+    "Slug": "romans",
+    "RelatedPeople": "Paul; Abraham; Adam",
+    "Places": "Rome; Corinth",
+    "RelatedEvents": "The Crucifixion; The Resurrection"
   },
   {
     "Guide": "Ruth",
@@ -333,7 +406,10 @@
     "Application": "Do one concrete act of loyal kindness this week for someone who cannot repay you, and do it quietly, without telling anyone.",
     "RelatedBooks": "Ruth",
     "RelatedTopics": "Redemption; Love; Covenant",
-    "Slug": "ruth"
+    "Slug": "ruth",
+    "RelatedPeople": "Ruth; Naomi; Boaz",
+    "Places": "Bethlehem",
+    "RelatedEvents": "Story of Ruth"
   },
   {
     "Guide": "The Sermon on the Mount",
@@ -345,7 +421,10 @@
     "Application": "Choose one Beatitude to live out this week — mercy, purity of heart, peacemaking — and let it shape one real interaction each day.",
     "RelatedBooks": "Matthew",
     "RelatedTopics": "Kingdom of God; Discipleship; Holiness",
-    "Slug": "sermon-on-the-mount"
+    "Slug": "sermon-on-the-mount",
+    "RelatedPeople": "Jesus",
+    "Places": "Galilee",
+    "RelatedEvents": "Sermon on the Mount"
   },
   {
     "Guide": "Wisdom",
@@ -357,6 +436,8 @@
     "Application": "Before your next significant decision, pause and pray James 1:5, then seek one piece of godly counsel before you act.",
     "RelatedBooks": "Proverbs; James",
     "RelatedTopics": "Wisdom; Fear",
-    "Slug": "wisdom"
+    "Slug": "wisdom",
+    "RelatedPeople": "King Solomon",
+    "Places": "Jerusalem"
   }
 ]

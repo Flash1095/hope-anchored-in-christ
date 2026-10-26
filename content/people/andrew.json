@@ -9,5 +9,7 @@
   "RelatedBooks": "Matthew; Mark; Luke; John",
   "RelatedPeople": "Simon Peter; Jesus; Philip",
   "LifeLesson": "Andrew's ministry was bringing one person at a time to Jesus. Never underestimate the eternal weight of a single introduction — your brother, neighbour, or friend could be next.",
-  "Slug": "andrew"
+  "Slug": "andrew",
+  "Places": "Galilee; Capernaum",
+  "RelatedEvents": "The Feeding of the Five Thousand"
 }

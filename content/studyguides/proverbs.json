@@ -8,5 +8,7 @@
   "Application": "Choose one proverb to practice for a week — especially one about your speech — and ask someone close to you whether they notice a difference.",
   "RelatedBooks": "Proverbs",
   "RelatedTopics": "Wisdom; Fear",
-  "Slug": "proverbs"
+  "Slug": "proverbs",
+  "RelatedPeople": "King Solomon",
+  "Places": "Jerusalem"
 }

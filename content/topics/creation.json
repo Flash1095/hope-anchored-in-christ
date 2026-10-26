@@ -7,5 +7,7 @@
   "RelatedDoctrines": "Creation; Image of God; Providence",
   "RelatedQuestions": "Did God create the world in six literal days?; What does it mean to be made in the image of God?",
   "RelatedBooks": "Genesis; Psalms; John; Colossians; Hebrews",
-  "Slug": "creation"
+  "Slug": "creation",
+  "Places": "Garden of Eden",
+  "RelatedEvents": "Creation"
 }

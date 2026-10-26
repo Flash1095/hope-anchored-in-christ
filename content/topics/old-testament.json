@@ -6,5 +6,7 @@
   "RelatedPeople": "Moses; King David; Isaiah",
   "RelatedDoctrines": "Inspiration of Scripture",
   "RelatedBooks": "Exodus; Psalms; Isaiah; Luke; 2 Timothy",
-  "Slug": "old-testament"
+  "Slug": "old-testament",
+  "Places": "Canaan; Jerusalem; Babylon",
+  "RelatedEvents": "The Exodus and the Red Sea; Fall of Jerusalem and the Exile"
 }

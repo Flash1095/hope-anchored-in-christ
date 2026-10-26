@@ -11,7 +11,9 @@
     "TheologicalSignificance": "Hesed is the love that will not let go. It assures believers that God's kindness is covenant loyalty, not mood — a firm anchor when feelings and circumstances shift.",
     "RelatedTopics": "Grace; Mercy; Covenant; Love of God",
     "RelatedBooks": "Exodus; Psalms; Lamentations; Micah",
-    "Slug": "hesed"
+    "Slug": "hesed",
+    "RelatedPeople": "King David; Moses",
+    "RelatedEvents": "The Golden Calf"
   },
   {
     "Word": "שָׁלוֹם",
@@ -25,7 +27,9 @@
     "TheologicalSignificance": "Shalom shows salvation is wholeness, not just rescue. In Christ, the God of peace restores what sin fractured — our hearts, our relationships and one day all creation.",
     "RelatedTopics": "Peace; Salvation; Hope",
     "RelatedBooks": "Numbers; Isaiah; Jeremiah",
-    "Slug": "shalom"
+    "Slug": "shalom",
+    "RelatedPeople": "Jesus; Aaron",
+    "RelatedEvents": "Birth of Jesus"
   },
   {
     "Word": "בְּרִית",
@@ -39,7 +43,10 @@
     "TheologicalSignificance": "Because God binds Himself by covenant, hope rests on His promise, not our performance. Berit is why believers can trust that God will finish what He began.",
     "RelatedTopics": "Covenant; Promises of God; Salvation",
     "RelatedBooks": "Genesis; Exodus; 2 Samuel; Jeremiah; Hebrews",
-    "Slug": "berit"
+    "Slug": "berit",
+    "RelatedPeople": "Noah; Abraham; Moses; King David; Jesus",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "Giving of the Law at Sinai; Davidic Covenant"
   },
   {
     "Word": "אֱמוּנָה",
@@ -53,7 +60,9 @@
     "TheologicalSignificance": "Emunah reminds us faith is not a leap in the dark but trust in a God who is utterly steady. Our faith rests on His faithfulness first.",
     "RelatedTopics": "Faith; Faithfulness of God; Trust",
     "RelatedBooks": "Deuteronomy; Psalms; Habakkuk; Lamentations",
-    "Slug": "emunah"
+    "Slug": "emunah",
+    "RelatedPeople": "Abraham; Moses",
+    "RelatedEvents": "The Call of Abraham"
   },
   {
     "Word": "תּוֹרָה",
@@ -67,7 +76,10 @@
     "TheologicalSignificance": "Torah reframes God's commands as a gift, not a burden. For Christians, Christ fulfils the Torah and the Spirit writes its heart on us, guiding us in grateful obedience.",
     "RelatedTopics": "Law; Obedience; Word of God",
     "RelatedBooks": "Deuteronomy; Joshua; Psalms",
-    "Slug": "torah"
+    "Slug": "torah",
+    "RelatedPeople": "Moses; Ezra; King David",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "Giving of the Law at Sinai; Ezra Reads the Law"
   },
   {
     "Word": "רוּחַ",
@@ -81,7 +93,9 @@
     "TheologicalSignificance": "Ruach is hope for the lifeless places: the same Spirit who raised dry bones in Ezekiel and raised Jesus from the dead lives in believers, renewing what seemed beyond repair.",
     "RelatedTopics": "Holy Spirit; Creation; Resurrection",
     "RelatedBooks": "Genesis; Psalms; Ezekiel; Joel",
-    "Slug": "ruach"
+    "Slug": "ruach",
+    "RelatedPeople": "Ezekiel",
+    "RelatedEvents": "Creation; Pentecost"
   },
   {
     "Word": "נֶפֶשׁ",
@@ -95,7 +109,10 @@
     "TheologicalSignificance": "Nephesh teaches that God cares for the whole person — body, mind, longings and life itself. The soul that thirsts for God finds its anchor and satisfaction in Him.",
     "RelatedTopics": "Soul; Worship; Love of God",
     "RelatedBooks": "Genesis; Deuteronomy; Psalms",
-    "Slug": "nephesh"
+    "Slug": "nephesh",
+    "RelatedPeople": "Adam; King David",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "Creation"
   },
   {
     "Word": "קָדוֹשׁ",
@@ -109,7 +126,10 @@
     "TheologicalSignificance": "God's holiness is not distant coldness — the Holy One of Israel draws near to redeem. His call 'be holy, for I am holy' is an invitation into His own character.",
     "RelatedTopics": "Holiness; Worship; God",
     "RelatedBooks": "Exodus; Leviticus; Psalms; Isaiah",
-    "Slug": "qadosh"
+    "Slug": "qadosh",
+    "RelatedPeople": "Moses; Isaiah",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "The Burning Bush; Giving of the Law at Sinai"
   },
   {
     "Word": "צֶדֶק",
@@ -123,7 +143,9 @@
     "TheologicalSignificance": "Tsedeq assures a hurting world that God sees injustice and will set things right. In Christ, God's righteousness is both revealed and gifted to all who believe.",
     "RelatedTopics": "Righteousness; Justice; Salvation",
     "RelatedBooks": "Deuteronomy; Psalms; Isaiah; Amos",
-    "Slug": "tsedeq"
+    "Slug": "tsedeq",
+    "RelatedPeople": "Amos",
+    "Places": "Bethel"
   },
   {
     "Word": "אַהֲבָה",
@@ -137,7 +159,9 @@
     "TheologicalSignificance": "Ahavah shows love in Scripture is covenant devotion, not passing feeling. God's everlasting ahavah is the root from which all our loving grows.",
     "RelatedTopics": "Love of God; Covenant; Marriage",
     "RelatedBooks": "Deuteronomy; Song of Solomon; Jeremiah",
-    "Slug": "ahavah"
+    "Slug": "ahavah",
+    "RelatedPeople": "Moses; King Solomon",
+    "Places": "Plains of Moab"
   },
   {
     "Word": "יָדַע",
@@ -151,7 +175,10 @@
     "TheologicalSignificance": "Yada is a comfort and an invitation: we are fully known by God, and eternal life is growing to know Him truly — knowledge that is relationship, not just information.",
     "RelatedTopics": "Knowledge of God; Covenant; Eternal Life",
     "RelatedBooks": "Genesis; Psalms; Jeremiah; Hosea",
-    "Slug": "yada"
+    "Slug": "yada",
+    "RelatedPeople": "Adam; Abraham; Jeremiah",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "Creation"
   },
   {
     "Word": "שׁוּב",
@@ -165,7 +192,10 @@
     "TheologicalSignificance": "Shuv means no one has wandered too far to come home. Repentance is not grovelling — it is turning toward a Father who says, 'Return to Me, and I will return to you.'",
     "RelatedTopics": "Repentance; Forgiveness; Restoration",
     "RelatedBooks": "Deuteronomy; Hosea; Joel; Zechariah",
-    "Slug": "shuv"
+    "Slug": "shuv",
+    "RelatedPeople": "Jonah",
+    "Places": "Nineveh",
+    "RelatedEvents": "Jonah and Nineveh"
   },
   {
     "Word": "קָוָה",
@@ -179,7 +209,8 @@
     "TheologicalSignificance": "Kavah dignifies waiting: biblical hope is not wishful thinking but strong, expectant trust. The cord holds because the One we wait for is faithful.",
     "RelatedTopics": "Hope; Perseverance; Trust",
     "RelatedBooks": "Psalms; Isaiah; Lamentations",
-    "Slug": "kavah"
+    "Slug": "kavah",
+    "RelatedPeople": "Isaiah; King David"
   },
   {
     "Word": "גֹּאֵל",
@@ -193,7 +224,10 @@
     "TheologicalSignificance": "Goel makes redemption personal and familial: God is not a distant rescuer but a near kinsman who pays the price Himself. Job's hope — and ours — rests on a living Redeemer.",
     "RelatedTopics": "Redemption; Salvation; Hope",
     "RelatedBooks": "Ruth; Job; Psalms; Isaiah",
-    "Slug": "goel"
+    "Slug": "goel",
+    "RelatedPeople": "Boaz; Ruth; Naomi; Job",
+    "Places": "Bethlehem",
+    "RelatedEvents": "Story of Ruth"
   },
   {
     "Word": "סֶלָה",
@@ -207,7 +241,8 @@
     "TheologicalSignificance": "Selah teaches the rhythm of hope: pause, breathe and ponder who God is before rushing on. Reflection turns true words into anchored convictions.",
     "RelatedTopics": "Worship; Prayer; Psalms",
     "RelatedBooks": "Psalms; Habakkuk",
-    "Slug": "selah"
+    "Slug": "selah",
+    "RelatedPeople": "King David"
   },
   {
     "Word": "דָּבָר",
@@ -221,7 +256,10 @@
     "TheologicalSignificance": "Dabar assures us God's promises are not fragile. The word that created galaxies and sustained Israel still accomplishes everything God sends it to do.",
     "RelatedTopics": "Word of God; Promises of God; Creation",
     "RelatedBooks": "Deuteronomy; Psalms; Isaiah; Jeremiah",
-    "Slug": "dabar"
+    "Slug": "dabar",
+    "RelatedPeople": "Moses; Isaiah",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "Giving of the Law at Sinai"
   },
   {
     "Word": "כָּבוֹד",
@@ -235,7 +273,10 @@
     "TheologicalSignificance": "Kabod anchors our worth and our worship: the King of glory is not far away — He fills His creation and invites His people to reflect His glory.",
     "RelatedTopics": "Glory; Worship; Presence of God",
     "RelatedBooks": "Exodus; Psalms; Isaiah; Ezekiel",
-    "Slug": "kabod"
+    "Slug": "kabod",
+    "RelatedPeople": "Moses; Isaiah",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "Giving of the Law at Sinai"
   },
   {
     "Word": "מִשְׁפָּט",
@@ -249,7 +290,10 @@
     "TheologicalSignificance": "Mishpat shows faith is never private only: the God of justice calls His people to defend the vulnerable. His final judgement means wrongs will not have the last word.",
     "RelatedTopics": "Justice; Righteousness; Ethics",
     "RelatedBooks": "Deuteronomy; Psalms; Amos; Micah",
-    "Slug": "mishpat"
+    "Slug": "mishpat",
+    "RelatedPeople": "Moses; Amos; Micah",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "Giving of the Law at Sinai"
   },
   {
     "Word": "ἐλπίς",
@@ -263,7 +307,9 @@
     "TheologicalSignificance": "Elpis is this blog's heartbeat: 'We have this hope as an anchor for the soul, firm and secure.' Christian hope is not optimism — it is certainty about God's future, holding us steady today.",
     "RelatedTopics": "Hope; Resurrection; Perseverance",
     "RelatedBooks": "Romans; Colossians; Hebrews; 1 Peter",
-    "Slug": "elpis"
+    "Slug": "elpis",
+    "RelatedPeople": "Simon Peter; Paul",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Word": "ἄγκυρα",
@@ -277,7 +323,9 @@
     "TheologicalSignificance": "Agkura turns a nautical tool into a promise: your soul need not drift. Hope is anchored to Christ Himself, already secure in the heavenly holy place on your behalf.",
     "RelatedTopics": "Hope; Perseverance; Jesus Christ",
     "RelatedBooks": "Acts; Hebrews",
-    "Slug": "agkura"
+    "Slug": "agkura",
+    "RelatedPeople": "Paul",
+    "RelatedEvents": "Paul Shipwrecked on Malta"
   },
   {
     "Word": "ἀγάπη",
@@ -291,7 +339,9 @@
     "TheologicalSignificance": "Agape is love that acts, gives and stays. Because God loved us first at such cost, our love for others can be patient, kind and unafraid.",
     "RelatedTopics": "Love of God; Love; Salvation",
     "RelatedBooks": "John; Romans; 1 Corinthians; 1 John",
-    "Slug": "agape"
+    "Slug": "agape",
+    "RelatedPeople": "Jesus; John the Apostle",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Word": "χάρις",
@@ -305,7 +355,9 @@
     "TheologicalSignificance": "Charis means your standing with God is gift from start to finish — and when you are weak, that grace is not only pardon but strength: 'My grace is sufficient for you.'",
     "RelatedTopics": "Grace; Salvation; Faith",
     "RelatedBooks": "John; Romans; Ephesians; 2 Corinthians",
-    "Slug": "charis"
+    "Slug": "charis",
+    "RelatedPeople": "Paul",
+    "RelatedEvents": "Conversion of Saul (Paul)"
   },
   {
     "Word": "πίστις",
@@ -319,7 +371,9 @@
     "TheologicalSignificance": "Pistis is not believing in spite of evidence but trusting a trustworthy Person. Faith is the hand that receives grace and the feet that keep walking with God.",
     "RelatedTopics": "Faith; Salvation; Perseverance",
     "RelatedBooks": "Romans; Ephesians; Hebrews",
-    "Slug": "pistis"
+    "Slug": "pistis",
+    "RelatedPeople": "Abraham; Paul",
+    "RelatedEvents": "The Call of Abraham"
   },
   {
     "Word": "λόγος",
@@ -333,7 +387,9 @@
     "TheologicalSignificance": "Logos declares that God has spoken — finally and personally — in His Son. We do not guess at God's heart; we look at Jesus, the Word made flesh.",
     "RelatedTopics": "Jesus Christ; Word of God; Incarnation",
     "RelatedBooks": "John; Luke; Hebrews",
-    "Slug": "logos"
+    "Slug": "logos",
+    "RelatedPeople": "Jesus; John the Apostle",
+    "RelatedEvents": "Birth of Jesus"
   },
   {
     "Word": "πνεῦμα",
@@ -347,7 +403,10 @@
     "TheologicalSignificance": "Pneuma means believers are never left to manage the Christian life alone. The Spirit who raised Jesus lives in us — helper, seal and guarantee of what is coming.",
     "RelatedTopics": "Holy Spirit; Salvation; Prayer",
     "RelatedBooks": "John; Acts; Romans; Galatians",
-    "Slug": "pneuma"
+    "Slug": "pneuma",
+    "RelatedPeople": "Jesus; Simon Peter",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Pentecost"
   },
   {
     "Word": "ἐκκλησία",
@@ -361,7 +420,10 @@
     "TheologicalSignificance": "Ekklesia reminds lonely believers they belong to something Christ is building and loves — a people He gave Himself for, secure across every century and storm.",
     "RelatedTopics": "Church; Salvation; Community",
     "RelatedBooks": "Matthew; Acts; Ephesians; Colossians",
-    "Slug": "ekklesia"
+    "Slug": "ekklesia",
+    "RelatedPeople": "Simon Peter; Paul",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Pentecost; Jerusalem Council"
   },
   {
     "Word": "σωτηρία",
@@ -375,7 +437,10 @@
     "TheologicalSignificance": "Soteria is comprehensive rescue — forgiven, being transformed, and certain of glory. The God who began salvation will complete it, which is why hope does not disappoint.",
     "RelatedTopics": "Salvation; Grace; Hope",
     "RelatedBooks": "Luke; Acts; Philippians",
-    "Slug": "soteria"
+    "Slug": "soteria",
+    "RelatedPeople": "Jesus; Zacchaeus; Paul",
+    "Places": "Jericho",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Word": "δικαιοσύνη",
@@ -389,7 +454,9 @@
     "TheologicalSignificance": "Dikaiosyne is gospel gold: God is righteous, and in Christ He makes sinners righteous — counted right with God and being made right in daily life.",
     "RelatedTopics": "Righteousness; Justification; Salvation",
     "RelatedBooks": "Matthew; Romans; 2 Corinthians",
-    "Slug": "dikaiosyne"
+    "Slug": "dikaiosyne",
+    "RelatedPeople": "Paul; Abraham",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Word": "μετάνοια",
@@ -403,7 +470,10 @@
     "TheologicalSignificance": "Metanoia is good news, not bad: turning is possible because God is near and kind. Repentance is not paying for pardon — it is the doorway into joy.",
     "RelatedTopics": "Repentance; Forgiveness; Salvation",
     "RelatedBooks": "Matthew; Luke; Acts; 2 Corinthians",
-    "Slug": "metanoia"
+    "Slug": "metanoia",
+    "RelatedPeople": "John the Baptist; Jesus",
+    "Places": "Jordan River",
+    "RelatedEvents": "Baptism of Jesus"
   },
   {
     "Word": "κοινωνία",
@@ -417,7 +487,10 @@
     "TheologicalSignificance": "Koinonia says faith was never meant to be solitary. We share life with the Trinity and with one another — an anchored community in a drifting world.",
     "RelatedTopics": "Church; Community; Fellowship",
     "RelatedBooks": "Acts; Philippians; 1 John",
-    "Slug": "koinonia"
+    "Slug": "koinonia",
+    "RelatedPeople": "Simon Peter; Paul",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Pentecost; Jerusalem Council"
   },
   {
     "Word": "εἰρήνη",
@@ -431,7 +504,9 @@
     "TheologicalSignificance": "Eirene is not the world's fragile calm. It is Christ's own peace guarding hearts and minds — peace with God that becomes the peace of God.",
     "RelatedTopics": "Peace; Salvation; Hope",
     "RelatedBooks": "John; Romans; Ephesians; Philippians",
-    "Slug": "eirene"
+    "Slug": "eirene",
+    "RelatedPeople": "Jesus; Paul",
+    "RelatedEvents": "Last Supper"
   },
   {
     "Word": "δόξα",
@@ -445,7 +520,10 @@
     "TheologicalSignificance": "Doxa gives suffering a horizon: an eternal weight of glory is being prepared that will make today's heaviest trials look light by comparison.",
     "RelatedTopics": "Glory; Hope; Resurrection",
     "RelatedBooks": "Luke; John; Romans; 2 Corinthians",
-    "Slug": "doxa"
+    "Slug": "doxa",
+    "RelatedPeople": "Jesus; Moses",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "Giving of the Law at Sinai; Transfiguration"
   },
   {
     "Word": "ἁμαρτία",
@@ -459,7 +537,10 @@
     "TheologicalSignificance": "Naming hamartia honestly is the first step to hope: if we confess our sins, God is faithful and just to forgive. The diagnosis is grave precisely because the cure is glorious.",
     "RelatedTopics": "Sin; Original Sin; Forgiveness",
     "RelatedBooks": "John; Romans; 1 John",
-    "Slug": "hamartia"
+    "Slug": "hamartia",
+    "RelatedPeople": "Adam; Paul",
+    "Places": "Garden of Eden",
+    "RelatedEvents": "The Fall"
   },
   {
     "Word": "εὐαγγέλιον",
@@ -473,7 +554,10 @@
     "TheologicalSignificance": "Euangelion is announcement before it is advice: something has happened — Christ died, is risen and reigns. Hope rests on news, not on our efforts to be newsworthy.",
     "RelatedTopics": "Gospel; Salvation; Jesus Christ",
     "RelatedBooks": "Isaiah; Mark; Romans",
-    "Slug": "euangelion"
+    "Slug": "euangelion",
+    "RelatedPeople": "Jesus; Paul",
+    "Places": "Galilee",
+    "RelatedEvents": "Conversion of Saul (Paul)"
   },
   {
     "Word": "κύριος",
@@ -487,7 +571,9 @@
     "TheologicalSignificance": "Kurios settles the question of who is in charge — and it is good news. The Lord who anchors our hope is Jesus, exalted, reigning and returning.",
     "RelatedTopics": "Jesus Christ; Lordship; Salvation",
     "RelatedBooks": "Luke; Acts; Romans; Philippians",
-    "Slug": "kurios"
+    "Slug": "kurios",
+    "RelatedPeople": "Jesus; Paul",
+    "RelatedEvents": "The Resurrection; Conversion of Saul (Paul)"
   },
   {
     "Word": "Χριστός",
@@ -501,7 +587,10 @@
     "TheologicalSignificance": "Christos means our hope has a name and a throne. Jesus is not merely a teacher who points the way — He is God's promised King, anointed to save His people.",
     "RelatedTopics": "Jesus Christ; Messiah; Prophecy",
     "RelatedBooks": "Matthew; Luke; John; Acts",
-    "Slug": "christos"
+    "Slug": "christos",
+    "RelatedPeople": "Jesus; King David",
+    "Places": "Bethlehem",
+    "RelatedEvents": "Birth of Jesus"
   },
   {
     "Word": "βάπτισμα",
@@ -515,7 +604,10 @@
     "TheologicalSignificance": "Baptisma gives believers a moment to point back to: I have been buried and raised with Christ. When assurance wavers, baptism preaches the gospel back to us.",
     "RelatedTopics": "Baptism; Salvation; Church",
     "RelatedBooks": "Matthew; Acts; Romans; Colossians",
-    "Slug": "baptisma"
+    "Slug": "baptisma",
+    "RelatedPeople": "Jesus; John the Baptist; Paul",
+    "Places": "Jordan River",
+    "RelatedEvents": "Baptism of Jesus"
   },
   {
     "Word": "μάρτυς",
@@ -529,7 +621,10 @@
     "TheologicalSignificance": "Martys dignifies ordinary testimony: you are Christ's witness where you live. And we run surrounded by a great cloud of witnesses who prove God keeps His people.",
     "RelatedTopics": "Witness; Perseverance; Church History",
     "RelatedBooks": "Acts; Hebrews; Revelation",
-    "Slug": "martys"
+    "Slug": "martys",
+    "RelatedPeople": "Stephen; Paul",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Martyrdom of Stephen"
   },
   {
     "Word": "παράκλητος",
@@ -543,7 +638,10 @@
     "TheologicalSignificance": "Parakletos means you never face trial, grief or accusation alone. Heaven has stationed an Advocate beside you forever — that is anchored hope for anxious hearts.",
     "RelatedTopics": "Holy Spirit; Prayer; Comfort",
     "RelatedBooks": "John; 1 John",
-    "Slug": "parakletos"
+    "Slug": "parakletos",
+    "RelatedPeople": "Jesus",
+    "Places": "Jerusalem",
+    "RelatedEvents": "Last Supper; Pentecost"
   },
   {
     "Word": "ἀλήθεια",
@@ -557,7 +655,8 @@
     "TheologicalSignificance": "Aletheia assures a confused age that truth is not a weapon or a trend but a Person who can be known and trusted. His word is truth, and it sanctifies.",
     "RelatedTopics": "Truth; Jesus Christ; Word of God",
     "RelatedBooks": "John; Ephesians",
-    "Slug": "aletheia"
+    "Slug": "aletheia",
+    "RelatedPeople": "Jesus"
   },
   {
     "Word": "ζωή",
@@ -571,7 +670,9 @@
     "TheologicalSignificance": "Zoe means Christianity is not mere survival or fire insurance. Christ gives life with a capital L — abundant now and unending forever.",
     "RelatedTopics": "Eternal Life; Salvation; Jesus Christ",
     "RelatedBooks": "John; 1 John",
-    "Slug": "zoe"
+    "Slug": "zoe",
+    "RelatedPeople": "Jesus; John the Apostle",
+    "RelatedEvents": "The Resurrection"
   },
   {
     "Word": "θάνατος",
@@ -585,7 +686,9 @@
     "TheologicalSignificance": "Thanatos has met its match. Because Christ died and rose, death is a defeated enemy and a doorway, not a terminus — the anchor holds on the far side of the grave.",
     "RelatedTopics": "Death; Resurrection; Hope",
     "RelatedBooks": "Romans; 1 Corinthians; Hebrews; Revelation",
-    "Slug": "thanatos"
+    "Slug": "thanatos",
+    "RelatedPeople": "Jesus; Paul",
+    "RelatedEvents": "The Crucifixion; The Resurrection"
   },
   {
     "Word": "ὁδός",
@@ -599,7 +702,9 @@
     "TheologicalSignificance": "Hodos pictures faith as a journey with a sure direction. However winding your road feels, Jesus is both the path and the destination — you cannot lose your way while you stay with Him.",
     "RelatedTopics": "Jesus Christ; Discipleship; Truth",
     "RelatedBooks": "Psalms; John; Acts",
-    "Slug": "hodos"
+    "Slug": "hodos",
+    "RelatedPeople": "Jesus; Paul",
+    "RelatedEvents": "Conversion of Saul (Paul)"
   },
   {
     "Word": "φῶς",
@@ -613,7 +718,9 @@
     "TheologicalSignificance": "Phos is hope with a guarantee: darkness never wins. The Light has come, still shines, and now shines through ordinary people in ordinary places.",
     "RelatedTopics": "Light; Jesus Christ; Holiness",
     "RelatedBooks": "Matthew; John; 1 John",
-    "Slug": "phos"
+    "Slug": "phos",
+    "RelatedPeople": "Jesus; John the Apostle",
+    "RelatedEvents": "Transfiguration"
   },
   {
     "Word": "σκοτία",
@@ -627,7 +734,9 @@
     "TheologicalSignificance": "Skotia is real, but it is retreating. No darkness in your story is permanent for those in Christ: He came so that no one who believes need stay in the dark.",
     "RelatedTopics": "Darkness; Salvation; Light",
     "RelatedBooks": "John; Colossians; 1 John",
-    "Slug": "skotia"
+    "Slug": "skotia",
+    "RelatedPeople": "Jesus; John the Apostle",
+    "RelatedEvents": "The Crucifixion"
   },
   {
     "Word": "ἅγιος",
@@ -641,7 +750,10 @@
     "TheologicalSignificance": "Hagios gives ordinary believers an honoured identity: set apart, beloved and being made holy. Who you are in Christ anchors how you live each day.",
     "RelatedTopics": "Holiness; Church; Holy Spirit",
     "RelatedBooks": "Romans; Ephesians; 1 Peter; Revelation",
-    "Slug": "hagios"
+    "Slug": "hagios",
+    "RelatedPeople": "Paul; Moses",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "Giving of the Law at Sinai"
   },
   {
     "Word": "ψυχή",
@@ -655,7 +767,8 @@
     "TheologicalSignificance": "Psuche guards our priorities: nothing profits a person who trades their soul away. In Christ, the soul finds the rest, worth and safekeeping it was made for.",
     "RelatedTopics": "Soul; Salvation; Rest",
     "RelatedBooks": "Matthew; Mark; 3 John",
-    "Slug": "psuche"
+    "Slug": "psuche",
+    "RelatedPeople": "Jesus"
   },
   {
     "Word": "θεός",
@@ -669,7 +782,10 @@
     "TheologicalSignificance": "Theos is the anchor behind the anchor: if God is for us, who can be against us? Every word study in this collection finally points back to Him.",
     "RelatedTopics": "God; Trinity; Faith",
     "RelatedBooks": "John; Romans; Hebrews",
-    "Slug": "theos"
+    "Slug": "theos",
+    "RelatedPeople": "Moses",
+    "Places": "Mount Sinai",
+    "RelatedEvents": "The Burning Bush"
   },
   {
     "Word": "σάρξ",
@@ -683,7 +799,10 @@
     "TheologicalSignificance": "Sarx explains the inner war every believer knows, and why victory is by the Spirit, not willpower. The Word became sarx to redeem sarx — flesh is not beyond His reach.",
     "RelatedTopics": "Sin; Holy Spirit; Incarnation",
     "RelatedBooks": "John; Romans; Galatians",
-    "Slug": "sarx"
+    "Slug": "sarx",
+    "RelatedPeople": "Paul; Jesus",
+    "Places": "Bethlehem",
+    "RelatedEvents": "Birth of Jesus"
   },
   {
     "Word": "καιρός",
@@ -697,6 +816,9 @@
     "TheologicalSignificance": "Kairos consoles everyone waiting on God: His timing is not delay but design. The God who sent His Son at exactly the right moment can be trusted with your seasons too.",
     "RelatedTopics": "Providence; Hope; Jesus Christ",
     "RelatedBooks": "Ecclesiastes; Mark; Galatians; Ephesians",
-    "Slug": "kairos"
+    "Slug": "kairos",
+    "RelatedPeople": "Jesus; Paul",
+    "Places": "Galilee",
+    "RelatedEvents": "Birth of Jesus"
   }
 ]
