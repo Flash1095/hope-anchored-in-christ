@@ -288,6 +288,66 @@
     "BlogPostLink": ""
   },
   {
+    "Title": "The Ten Plagues",
+    "Era": "Exodus and Wilderness",
+    "DateApprox": "c. 1446 BC or c. 1270 BC (date debated by tradition)",
+    "KeyPersons": "Moses; Aaron; Pharaoh",
+    "BibleBooks": "Exodus",
+    "Places": "Egypt; Goshen",
+    "Events": "God sends ten plagues on Egypt; Pharaoh finally lets Israel go",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Exodus 5-11",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Crossing the Red Sea",
+    "Era": "Exodus and Wilderness",
+    "DateApprox": "c. 1446 BC or c. 1270 BC (date debated by tradition)",
+    "KeyPersons": "Moses; Miriam; Pharaoh",
+    "BibleBooks": "Exodus",
+    "Places": "Red Sea; Egypt",
+    "Events": "God parts the Red Sea; Israel crosses on dry ground and Pharaoh's army is drowned",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Exodus 14",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Manna and Quail",
+    "Era": "Exodus and Wilderness",
+    "DateApprox": "c. 1446 BC or c. 1270 BC (date debated by tradition)",
+    "KeyPersons": "Moses; Aaron",
+    "BibleBooks": "Exodus",
+    "Places": "Wilderness of Sin",
+    "Events": "God provides manna and quail for Israel in the wilderness",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Exodus 16",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Water from the Rock and Victory over Amalek",
+    "Era": "Exodus and Wilderness",
+    "DateApprox": "c. 1446 BC or c. 1270 BC (date debated by tradition)",
+    "KeyPersons": "Moses; Aaron; Hur; Joshua",
+    "BibleBooks": "Exodus",
+    "Places": "Rephidim",
+    "Events": "God gives water from the rock at Rephidim; Israel defeats Amalek as Aaron and Hur hold up Moses' hands",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Exodus 17",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Jethro's Counsel",
+    "Era": "Exodus and Wilderness",
+    "DateApprox": "c. 1446 BC or c. 1270 BC (date debated by tradition)",
+    "KeyPersons": "Moses; Jethro",
+    "BibleBooks": "Exodus",
+    "Places": "Midian; Mount Sinai (Horeb)",
+    "Events": "Jethro advises Moses to share the burden of judging Israel",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Exodus 18",
+    "BlogPostLink": ""
+  },
+  {
     "Title": "Law Given at Mount Sinai",
     "Era": "Exodus and Wilderness",
     "DateApprox": "c. 1446 BC or c. 1270 BC (approx., after Exodus)",
@@ -297,6 +357,54 @@
     "Events": "Ten Commandments given; Tabernacle built; sacrificial law established",
     "ArchaeologicalFinds": "",
     "ScriptureReference": "Exodus 19-40; Leviticus 1-27",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "The Covenant Sealed at Sinai",
+    "Era": "Exodus and Wilderness",
+    "DateApprox": "c. 1446 BC or c. 1270 BC (date debated by tradition)",
+    "KeyPersons": "Moses; Aaron",
+    "BibleBooks": "Exodus",
+    "Places": "Mount Sinai",
+    "Events": "Israel seals the covenant at Sinai with sacrifices; the elders see God",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Exodus 24",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "The Pattern of the Tabernacle",
+    "Era": "Exodus and Wilderness",
+    "DateApprox": "c. 1446 BC or c. 1270 BC (date debated by tradition)",
+    "KeyPersons": "Moses; Bezalel; Oholiab",
+    "BibleBooks": "Exodus",
+    "Places": "Mount Sinai",
+    "Events": "God shows Moses the pattern of the tabernacle and its furnishings on the mountain",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Exodus 25-31",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "The Golden Calf",
+    "Era": "Exodus and Wilderness",
+    "DateApprox": "c. 1446 BC or c. 1270 BC (date debated by tradition)",
+    "KeyPersons": "Moses; Aaron",
+    "BibleBooks": "Exodus",
+    "Places": "Mount Sinai",
+    "Events": "Israel worships a golden calf while Moses is on the mountain; the tablets are broken",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Exodus 32",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "God's Glory and the Second Tablets",
+    "Era": "Exodus and Wilderness",
+    "DateApprox": "c. 1446 BC or c. 1270 BC (date debated by tradition)",
+    "KeyPersons": "Moses",
+    "BibleBooks": "Exodus",
+    "Places": "Mount Sinai",
+    "Events": "God renews the covenant; Moses returns with new tablets, his face shining with God's glory",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Exodus 33-34",
     "BlogPostLink": ""
   },
   {
