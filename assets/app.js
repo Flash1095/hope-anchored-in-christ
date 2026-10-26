@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "85";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "86";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1219,7 +1219,7 @@
     bibleLinkCache = {
       map: map,
       lower: lower,
-      reMulti: new RegExp("\\b(" + multi.map(escapeRegExp).join("|") + ")\\b", "g"),
+      reMulti: new RegExp("(<a\\b[^>]*>.*?</a>)|\\b(" + multi.map(escapeRegExp).join("|") + ")\\b", "g"),
       reSingle: new RegExp("(<a\\b[^>]*>.*?</a>)|\\b(" + single.map(escapeRegExp).join("|") + ")\\b", "gi")
     };
     return bibleLinkCache;
@@ -1227,10 +1227,32 @@
   function linkifyVerseText(text) {
     var t = bibleLinkData();
     var safe = esc(text).replace(/\[([^\]]+)\]/g, "<em>$1</em>");
-    safe = safe.replace(t.reMulti, function (m) {
-      var hit = t.map[m];
+    /* Phrase pass, first: "Jahaziel the son of Zechariah" links as a
+       whole, with each person going to the context-correct profile —
+       the son to "Jahaziel, Son of Zechariah" when it exists, the
+       father to "Zechariah, Father of Jahaziel" when it exists — and
+       the connector ("the son of") stays inside the first link, so no
+       word of the name stands plain. Falls back to the plain names
+       when no qualified profile exists, and to one link over the whole
+       phrase when only the first name resolves. A name that resolves
+       to nothing (e.g. "Then the son of ...") is left untouched. */
+    safe = safe.replace(/\b([A-Z][A-Za-z]+),? the (son|daughter) of ([A-Z][A-Za-z]+)\b/g, function (m, x, rel, y) {
+      var xKeys = rel === "son" ? [x + ", Son of " + y, x] : [x + ", Daughter of " + y, x];
+      var yKeys = rel === "son" ? [y + ", Father of " + x, y] : [y + ", Father of " + x, y + ", Mother of " + x, y];
+      var xHit = null, yHit = null, i;
+      for (i = 0; i < xKeys.length; i++) { xHit = t.map[xKeys[i]] || t.lower[xKeys[i].toLowerCase()]; if (xHit) break; }
+      for (i = 0; i < yKeys.length; i++) { yHit = t.map[yKeys[i]] || t.lower[yKeys[i].toLowerCase()]; if (yHit) break; }
+      if (!xHit) return m;
+      if (!yHit) return '<a href="#/' + xHit.coll + '/' + xHit.idx + '">' + esc(m) + '</a>';
+      var connector = m.slice(x.length, m.length - y.length);
+      return '<a href="#/' + xHit.coll + '/' + xHit.idx + '">' + esc(x + connector) + '</a>' +
+        '<a href="#/' + yHit.coll + '/' + yHit.idx + '">' + esc(y) + '</a>';
+    });
+    safe = safe.replace(t.reMulti, function (m, anchor, term) {
+      if (anchor) return anchor;
+      var hit = t.map[term];
       if (!hit) return m;
-      return '<a href="#/' + hit.coll + '/' + hit.idx + '">' + esc(m) + '</a>';
+      return '<a href="#/' + hit.coll + '/' + hit.idx + '">' + esc(term) + '</a>';
     });
     safe = safe.replace(t.reSingle, function (m, anchor, term) {
       if (anchor) return anchor;

@@ -7984,5 +7984,31 @@
     "RelatedPeople": "Shelumiel, Son of Zurishaddai; Moses",
     "LifeLesson": "Even a single mention means God did not overlook him.",
     "Slug": "zurishaddai"
+  },
+  {
+    "KeyStory": "He declared to Jehoshaphat and all Judah, Be not afraid nor dismayed by reason of this great multitude; for the battle is not yours, but God's — and told them they would not need to fight, but only stand and see the salvation of the LORD.",
+    "KeyVerses": "2 Chronicles 20:14-17",
+    "LifeLesson": "God's word through one faithful voice steadied a whole nation. When the battle is bigger than you, stand still and watch what God does.",
+    "Name": "Jahaziel, Son of Zechariah",
+    "RelatedBooks": "2 Chronicles",
+    "RelatedPeople": "Zechariah, Father of Jahaziel; King Jehoshaphat",
+    "Role": "Levite of the Sons of Asaph",
+    "Slug": "jahaziel-son-of-zechariah",
+    "Summary": "Jahaziel was a Levite of the sons of Asaph upon whom the Spirit of the LORD came in the midst of the congregation as Judah faced a vast invading army.",
+    "Testament": "Old",
+    "TimelineEra": "Divided Monarchy"
+  },
+  {
+    "KeyStory": "He appears in Jahaziel's genealogy: Jahaziel the son of Zechariah, the son of Benaiah, the son of Jeiel, the son of Mattaniah, a Levite of the sons of Asaph.",
+    "KeyVerses": "2 Chronicles 20:14",
+    "LifeLesson": "Zechariah is named in Scripture only as Jahaziel's father, yet his name stands in the line God used at Judah's crisis. A quiet place in the story is still a place in the story.",
+    "Name": "Zechariah, Father of Jahaziel",
+    "RelatedBooks": "2 Chronicles",
+    "RelatedPeople": "Jahaziel, Son of Zechariah",
+    "Role": "Levite of the Sons of Asaph",
+    "Slug": "zechariah-father-of-jahaziel",
+    "Summary": "Zechariah was a Levite of the sons of Asaph, named in Scripture as the father of Jahaziel, in the line given when the Spirit came upon his son.",
+    "Testament": "Old",
+    "TimelineEra": "Divided Monarchy"
   }
 ]
