@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "93";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "94";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -748,18 +748,33 @@
     });
     return groups;
   }
+  function quizCategory(g) {
+    if (/ Story Quiz$/.test(g.name)) return g.course === "New Testament Survey" ? "nt" : "ot";
+    return "topic";
+  }
   function viewQuizList(params) {
-    var diff = params.get("difficulty") || "";
+    var cat = params.get("category") || "";
+    if (["", "ot", "nt", "topic"].indexOf(cat) === -1) cat = "";
     var groups = quizGroups();
+    var cats = [
+      { key: "", label: "All quizzes" },
+      { key: "ot", label: "Old Testament stories" },
+      { key: "nt", label: "New Testament stories" },
+      { key: "topic", label: "Topic quizzes" }
+    ];
+    cats.forEach(function (c) {
+      c.count = c.key ? groups.filter(function (g) { return quizCategory(g) === c.key; }).length : groups.length;
+    });
     var html = "<h2>Quizzes</h2><p class='page-intro'>Test what you've learned — every answer teaches. " +
       (data.quizzes || []).length + " questions across " + groups.length + " quizzes.</p>";
-    html += '<div class="controls"><div class="chips"><span class="chip-label">Difficulty:</span>' +
-      ["", "Easy", "Medium", "Hard"].map(function (d) {
-        return '<button class="chip' + (diff === d ? " active" : "") + '" data-diff="' + d + '">' + (d || "All") + "</button>";
+    html += '<div class="controls"><div class="chips"><span class="chip-label">Category:</span>' +
+      cats.map(function (c) {
+        return '<button class="chip' + (cat === c.key ? " active" : "") + '" data-cat="' + c.key + '">' +
+          c.label + " (" + c.count + ")</button>";
       }).join("") + "</div></div>";
     var shown = groups.filter(function (g) {
-      return !diff || g.qs.some(function (q) { return val(q, "Difficulty") === diff; });
-    });
+      return !cat || quizCategory(g) === cat;
+    }).sort(function (a, b) { return a.name.localeCompare(b.name); });
     html += '<div class="card-grid">' + shown.map(function (g) {
       var counts = {};
       g.qs.forEach(function (q) { var d = val(q, "Difficulty"); counts[d] = (counts[d] || 0) + 1; });
@@ -768,12 +783,12 @@
         "</h3><p class='meta'>" + esc(g.course) + "</p><p class='meta'>" + g.qs.length +
         " questions &middot; " + esc(breakdown) + "</p></a>";
     }).join("") + "</div>";
-    if (!shown.length) html += '<p class="empty">No quizzes at that difficulty.</p>';
+    if (!shown.length) html += '<p class="empty">No quizzes in this category.</p>';
     app.innerHTML = html;
-    app.querySelectorAll("[data-diff]").forEach(function (btn) {
+    app.querySelectorAll("[data-cat]").forEach(function (btn) {
       btn.addEventListener("click", function () {
-        var d = btn.getAttribute("data-diff");
-        navigate(d ? "#/quizzes?difficulty=" + d : "#/quizzes", true);
+        var c = btn.getAttribute("data-cat");
+        navigate(c ? "#/quizzes?category=" + c : "#/quizzes", true);
       });
     });
     window.scrollTo(0, 0);
