@@ -631,3 +631,20 @@ collections:
             fields:
               - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "places", "topics", "themes", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories", "hermeneutics", "jewishculture", "comicstories", "studyguides"]}
               - {label: "Description", name: "blurb", widget: "text"}
+  - name: "store"
+    label: "Store Products"
+    files:
+      - name: "products"
+        label: "Store Products"
+        file: "content/store.json"
+        fields:
+          - label: "Products"
+            name: "products"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Type", name: "kind", widget: "select", options: ["Physical", "Digital"]}
+              - {label: "Price", name: "price", widget: "string", required: false}
+              - {label: "Description", name: "desc", widget: "text", required: false}
+              - {label: "Image URL", name: "image", widget: "string", required: false}
+              - {label: "Buy Link", name: "url", widget: "string"}

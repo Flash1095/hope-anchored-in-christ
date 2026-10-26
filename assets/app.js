@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "48";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "49";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -891,37 +891,79 @@
     window.scrollTo(0, 0);
   }
   /* ---------- store ---------- */
-  /* Each product: name, price, image, url (the print-on-demand checkout page), desc.
-     The list starts empty on purpose: real products are added here once the
-     print-on-demand shop is set up, so the live page never shows fake items. */
-  var STORE_PRODUCTS = [];
-  /* Set to the Printify Pop-Up Store URL once Lorraine shares it. Empty means coming soon. */
+  /* Store products live in content/store.json (Decap-editable), so new items
+     appear without a code change. Each product: name, kind ("Physical" for
+     Printify goods, "Digital" for Ko-fi downloads), price, desc, image (a URL,
+     may be empty), url (the checkout link). The file starts empty on purpose:
+     real products are added once the shops are set up, so the live page never
+     shows fake items. */
+  /* Set to the Printify Pop-Up Store URL once Lorraine shares it. Empty means no shop button. */
   var STORE_URL = "";
+  /* Set to the Ko-fi shop URL once Lorraine shares it. Empty means no digital-shop button. */
+  var DIGITAL_SHOP_URL = "";
   /* Set to the giving link (Ko-fi/PayPal/Stripe) once Lorraine shares it. Empty means coming soon. */
   var GIVE_URL = "";
   function viewStore() {
-    var html = "<h2>Store</h2><div class='post-body'>" +
-      "<p>Beautiful, faith-anchored goods, made to order and shipped to you. " +
-      "Every item is printed on demand — nothing is mass-produced or warehoused — so your purchase supports this ministry " +
-      "and arrives made just for you.</p>";
-    if (STORE_URL) {
-      html += "<p><a class='btn' href='" + esc(STORE_URL) + "' target='_blank' rel='noopener'>Visit our shop</a></p>";
-    }
-    if (!STORE_PRODUCTS.length) {
-      if (!STORE_URL) html += "<p class='empty'>Our shop is coming soon. Our Printify store will be linked here as soon as it launches.</p>";
-    } else {
-      html += "<div class='card-grid'>" + STORE_PRODUCTS.map(function (p) {
-        return "<div class='card store-card'>" +
-          "<img src='" + esc(p.image) + "' alt='" + esc(p.name) + "'>" +
-          "<h3>" + esc(p.name) + "</h3>" +
-          "<p class='price'>" + esc(p.price) + "</p>" +
-          "<p class='snippet'>" + esc(p.desc) + "</p>" +
-          "<p><a class='buy-btn' href='" + esc(p.url) + "' target='_blank' rel='noopener'>Buy</a></p>" +
-          "</div>";
-      }).join("") + "</div>";
-    }
-    app.innerHTML = html + "</div>";
-    window.scrollTo(0, 0);
+    fetch("content/store.json?v=" + ASSET_V).then(function (r) {
+      return r.ok ? r.json() : { products: [] };
+    }).catch(function () { return { products: []; }; }).then(function (json) {
+      var products = json.products || [];
+      var state = { q: "", kind: "" };
+      function renderGrid() {
+        var q = state.q.trim().toLowerCase();
+        var filtered = products.filter(function (p) {
+          if (state.kind && p.kind !== state.kind) return false;
+          if (!q) return true;
+          return ((p.name || "") + " " + (p.desc || "")).toLowerCase().indexOf(q) !== -1;
+        });
+        var wrap = document.getElementById("storeGrid");
+        if (!wrap) return;
+        if (!products.length) {
+          wrap.innerHTML = "<p class='empty'>Our shop is coming soon. Physical goods from our Printify store and printable downloads will be listed here as soon as they launch.</p>";
+        } else if (!filtered.length) {
+          wrap.innerHTML = "<p class='empty'>No products match your search.</p>";
+        } else {
+          wrap.innerHTML = "<div class='card-grid'>" + filtered.map(function (p) {
+            var card = "<div class='card store-card'>";
+            if (p.image) card += "<img src='" + esc(p.image) + "' alt='" + esc(p.name) + "'>";
+            card += "<h3>" + esc(p.name) + "</h3>";
+            card += "<p><span class='chip'>" + esc(p.kind || "Physical") + "</span></p>";
+            if (p.price) card += "<p class='price'>" + esc(p.price) + "</p>";
+            if (p.desc) card += "<p class='snippet'>" + esc(p.desc) + "</p>";
+            card += "<p><a class='buy-btn' href='" + esc(p.url) + "' target='_blank' rel='noopener'>Buy</a></p></div>";
+            return card;
+          }).join("") + "</div>";
+        }
+      }
+      var html = "<h2>Store</h2><div class='post-body'>" +
+        "<p>Beautiful, faith-anchored goods, made to order and shipped to you. " +
+        "Every physical item is printed on demand — nothing is mass-produced or warehoused — so your purchase supports this ministry " +
+        "and arrives made just for you. Digital items download instantly for you to print at home.</p>";
+      if (STORE_URL) html += "<p><a class='btn' href='" + esc(STORE_URL) + "' target='_blank' rel='noopener'>Visit our shop</a></p>";
+      if (DIGITAL_SHOP_URL) html += "<p><a class='btn' href='" + esc(DIGITAL_SHOP_URL) + "' target='_blank' rel='noopener'>Browse digital downloads</a></p>";
+      html += '<div class="controls"><input type="search" id="storeSearch" placeholder="Search the store…">' +
+        '<div class="chips"><span class="chip-label">Type:</span>' +
+        '<button class="chip active" data-kind="">All</button>' +
+        '<button class="chip" data-kind="Physical">Physical</button>' +
+        '<button class="chip" data-kind="Digital">Digital</button></div></div>' +
+        '<div id="storeGrid"></div>';
+      app.innerHTML = html + "</div>";
+      renderGrid();
+      document.getElementById("storeSearch").addEventListener("input", function (e) {
+        state.q = e.target.value;
+        renderGrid();
+      });
+      app.querySelectorAll("[data-kind]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          state.kind = btn.getAttribute("data-kind");
+          btn.parentNode.querySelectorAll("[data-kind]").forEach(function (b) {
+            b.classList.toggle("active", b.getAttribute("data-kind") === state.kind);
+          });
+          renderGrid();
+        });
+      });
+      window.scrollTo(0, 0);
+    });
   }
   function viewConnect() {
     app.innerHTML = "<h2>Connect</h2><div class='post-body'>" +
