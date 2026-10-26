@@ -1,17 +1,17 @@
-/* Hope Anchored in Christ — brand: navy #1B2A4E, pastel champagne gold, pastel pink/mint/butter/lilac/sky */
+/* Hope Anchored in Christ — Lunara-style theme: clean white, dark navy text, rose pink accents, soft lavender footer */
 :root {
   --navy: #1B2A4E;
   --navy-light: #2a3d68;
-  --gold: #e3c9a2;
-  --gold-dark: #c2a071;
-  --ivory: #fdfaf3;
-  --cream: #fdf3dd;
+  --gold: #e91e63;
+  --gold-dark: #c2185b;
+  --ivory: #ffffff;
+  --cream: #fdf2f5;
   --sage: #a8c8a5;
-  --sage-light: #eef6ec;
-  --blush: #eeb3c2;
+  --sage-light: #eaf6ec;
+  --blush: #f8bbd0;
   --ink: #2b2b2b;
   --muted: #6b6b6b;
-  --line: #e8ddd6;
+  --line: #e9e2ec;
   --green-ok: #2e7d4f;
   --red-no: #a63a3a;
   --pastel-pink: #fdeef2;
@@ -20,6 +20,10 @@
   --pastel-lilac: #f1ecf9;
   --pastel-sky: #e8f1fa;
   --pastel-peach: #fdeede;
+  --rose: #e91e63;
+  --rose-dark: #c2185b;
+  --lavender: #ede7f6;
+  --lavender-deep: #d1c4e9;
 }
 * { box-sizing: border-box; }
 body {
@@ -33,13 +37,10 @@ h1, h2, h3, .brand { font-family: "Playfair Display", Georgia, serif; color: var
 a { color: var(--navy-light); }
 a:hover { color: var(--gold-dark); }
 
-/* Header */
-/* Header — pastel watercolor wash melting into the white banner below */
+/* Header — clean white, like Lunara */
 .site-header {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0) 55%, #ffffff 100%),
-    linear-gradient(105deg, rgba(246, 193, 205, 0.55) 0%, rgba(232, 201, 162, 0.45) 28%, rgba(209, 196, 233, 0.45) 52%, rgba(168, 200, 165, 0.45) 76%, rgba(184, 213, 234, 0.45) 100%);
-  background-color: #fdf6f8;
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(27, 42, 78, 0.08);
   color: var(--navy); position: sticky; top: 0; z-index: 10;
 }
 .header-inner {
@@ -52,15 +53,15 @@ a:hover { color: var(--gold-dark); }
 .main-nav a:hover { color: var(--gold-dark); }
 .header-search { margin-left: auto; display: flex; gap: 0.4rem; }
 .header-search input {
-  padding: 0.4rem 0.6rem; border: 1px solid var(--gold); border-radius: 6px;
+  padding: 0.4rem 0.6rem; border: 1px solid var(--gold); border-radius: 999px;
   background: #fff; min-width: 180px; font-size: 0.95rem;
 }
 .header-search button, .btn {
-  background: var(--gold); color: var(--navy); border: none; border-radius: 6px;
+  background: var(--gold); color: #fff; border: none; border-radius: 999px;
   padding: 0.45rem 0.9rem; font-weight: 700; cursor: pointer; text-decoration: none;
   display: inline-block; font-size: 0.95rem;
 }
-.header-search button:hover, .btn:hover { background: var(--blush); color: var(--navy); }
+.header-search button:hover, .btn:hover { background: var(--gold-dark); color: #fff; }
 
 /* Banner */
 .banner { position: relative; }
@@ -68,8 +69,8 @@ a:hover { color: var(--gold-dark); }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .banner-title {
   position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.92); border: 3px solid var(--sage);
-  border-radius: 12px; padding: 1rem 1.8rem; text-align: center; max-width: 92%;
+  background: rgba(255, 255, 255, 0.92); border: 3px solid var(--rose);
+  border-radius: 16px; padding: 1rem 1.8rem; text-align: center; max-width: 92%;
 }
 .banner-title h1 { margin: 0; font-size: clamp(1.3rem, 4vw, 2.2rem); letter-spacing: 0.04em; }
 .banner-title p { margin: 0.3rem 0 0; font-style: italic; color: var(--navy); }
@@ -79,54 +80,48 @@ a:hover { color: var(--gold-dark); }
 .content { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
 .page-intro { color: var(--muted); max-width: 720px; }
 .verse-band {
-  background: var(--navy); color: #fdf8ec; border-left: 6px solid var(--gold);
-  padding: 1rem 1.4rem; border-radius: 8px; font-size: 1.1rem; margin: 1.5rem 0;
+  background: linear-gradient(105deg, #fce4ec 0%, #f3e5f5 55%, #ede7f6 100%);
+  color: var(--navy); border-left: 6px solid var(--gold);
+  padding: 1rem 1.4rem; border-radius: 16px; font-size: 1.1rem; margin: 1.5rem 0;
 }
 .stats { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.2rem 0; }
 .stat {
-  background: #fff; border: 1px solid var(--line); border-radius: 10px;
+  background: #fff; border: 1px solid var(--line); border-radius: 16px;
   padding: 0.7rem 1.2rem; text-align: center; flex: 1 1 120px;
+  box-shadow: 0 2px 10px rgba(27, 42, 78, 0.08);
 }
 .stat strong { display: block; font-size: 1.6rem; color: var(--navy); font-family: "Playfair Display", Georgia, serif; }
 .stat span { color: var(--muted); font-size: 0.9rem; }
-/* Pastel stat cycle */
-.stats > .stat:nth-child(4n+1) { background: var(--pastel-pink); border-color: #f3cdd7; }
-.stats > .stat:nth-child(4n+2) { background: var(--pastel-mint); border-color: #cde6d2; }
-.stats > .stat:nth-child(4n+3) { background: var(--pastel-butter); border-color: #f2e3ac; }
-.stats > .stat:nth-child(4n+4) { background: var(--pastel-lilac); border-color: #ddd2ee; }
+/* Stats stay white, like Lunara cards */
 
 /* Cards */
 .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; margin-top: 1rem; }
 .card {
-  background: #fff; border: 1px solid var(--line); border-radius: 12px;
+  background: #fff; border: 1px solid var(--line); border-radius: 16px;
   padding: 1rem 1.2rem; text-decoration: none; color: inherit; display: block;
+  box-shadow: 0 2px 10px rgba(27, 42, 78, 0.08);
   transition: box-shadow 0.15s, transform 0.15s;
 }
-.card:hover { box-shadow: 0 6px 18px rgba(27, 42, 78, 0.15); transform: translateY(-2px); }
-/* Pastel card cycle: pink, mint, butter, lilac, sky */
-.card-grid > .card:nth-child(5n+1) { background: var(--pastel-pink); border-color: #f3cdd7; }
-.card-grid > .card:nth-child(5n+2) { background: var(--pastel-mint); border-color: #cde6d2; }
-.card-grid > .card:nth-child(5n+3) { background: var(--pastel-butter); border-color: #f2e3ac; }
-.card-grid > .card:nth-child(5n+4) { background: var(--pastel-lilac); border-color: #ddd2ee; }
-.card-grid > .card:nth-child(5n+5) { background: var(--pastel-sky); border-color: #c9dcee; }
+.card:hover { box-shadow: 0 8px 22px rgba(27, 42, 78, 0.15); transform: translateY(-2px); }
+/* Cards stay white, like Lunara product cards */
 /* Line art (Lorraine's own drawings) on collection tiles and blog posts */
-.card-art { width: 100%; height: auto; display: block; border-radius: 8px; margin-bottom: 0.6rem; background: #fff; }
-.post-art { width: 100%; height: auto; display: block; border-radius: 12px; margin-bottom: 1.2rem; background: #fff; }
+.card-art { width: 100%; height: auto; display: block; border-radius: 12px; margin-bottom: 0.6rem; background: #fff; }
+.post-art { width: 100%; height: auto; display: block; border-radius: 16px; margin-bottom: 1.2rem; background: #fff; }
 .card h3 { margin: 0 0 0.3rem; font-size: 1.15rem; }
 .card .meta { color: var(--muted); font-size: 0.9rem; margin: 0.2rem 0; }
 .card .snippet { margin: 0.4rem 0 0; font-size: 0.95rem; }
 .store-card img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 0.6rem; }
 .store-card .price { font-weight: 700; color: var(--navy); font-size: 1.1rem; margin: 0.3rem 0; }
 .buy-btn {
-  display: inline-block; background: var(--navy); color: #fff; text-decoration: none;
+  display: inline-block; background: var(--gold); color: #fff; text-decoration: none;
   border-radius: 999px; padding: 0.5rem 1.4rem; font-weight: 700; margin-top: 0.4rem;
 }
-.buy-btn:hover { background: var(--gold); color: var(--navy); }
+.buy-btn:hover { background: var(--gold-dark); color: #fff; }
 /* ---------- timeline ---------- */
 .tl { position: relative; margin: 1.5rem 0 0 0.6rem; padding-left: 1.8rem; border-left: 3px solid var(--gold); }
 .tl-era { position: relative; margin: 2.2rem 0 1rem -1.8rem; padding-left: 1.8rem; font-size: 1.4rem; font-weight: 700; color: var(--navy); font-family: Georgia, "Times New Roman", serif; }
 .tl-era::before { content: ""; position: absolute; left: -11px; top: 0.3rem; width: 20px; height: 20px; border-radius: 50%; background: var(--gold); border: 3px solid #fff; box-shadow: 0 0 0 1px var(--gold); }
-.tl-node { position: relative; margin: 0 0 1.4rem; background: #fffdf6; border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.2rem; }
+.tl-node { position: relative; margin: 0 0 1.4rem; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 1rem 1.2rem; box-shadow: 0 2px 10px rgba(27, 42, 78, 0.08); }
 .tl-node::before { content: ""; position: absolute; left: calc(-1.8rem - 9px); top: 1.4rem; width: 12px; height: 12px; border-radius: 50%; background: var(--navy); border: 3px solid var(--gold); }
 .tl-node h3 { margin: 0.15rem 0 0.3rem; font-size: 1.2rem; }
 .tl-node h3 a { color: var(--navy); text-decoration: none; }
@@ -168,7 +163,7 @@ a:hover { color: var(--gold-dark); }
 /* Controls */
 .controls { display: flex; flex-direction: column; gap: 0.7rem; margin: 1rem 0; }
 .controls input[type="search"] {
-  padding: 0.6rem 0.8rem; border: 1px solid var(--line); border-radius: 8px;
+  padding: 0.6rem 0.8rem; border: 1px solid var(--line); border-radius: 999px;
   font-size: 1rem; width: 100%; max-width: 520px; background: #fff;
 }
 .chips { display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center; }
@@ -177,11 +172,11 @@ a:hover { color: var(--gold-dark); }
   border: 1px solid var(--gold); background: #fff; color: var(--navy);
   border-radius: 999px; padding: 0.25rem 0.8rem; cursor: pointer; font-size: 0.9rem;
 }
-.chip.active { background: var(--navy); color: #fff; border-color: var(--navy); }
+.chip.active { background: var(--gold); color: #fff; border-color: var(--gold); }
 .back-link { display: inline-block; margin-bottom: 0.8rem; font-weight: 600; text-decoration: none; }
 
 /* Detail */
-.detail { background: #fffdf6; border: 1px solid var(--line); border-radius: 12px; padding: 1.5rem 1.8rem; }
+.detail { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 1.5rem 1.8rem; box-shadow: 0 2px 10px rgba(27, 42, 78, 0.08); }
 .detail dl { margin: 0; }
 .detail dt { font-weight: 700; color: var(--navy); margin-top: 1rem; }
 .detail dt:first-child { margin-top: 0; }
@@ -202,37 +197,37 @@ a:hover { color: var(--gold-dark); }
 
 /* Quiz */
 .quiz-score {
-  background: var(--navy); color: #fff; border-radius: 8px;
+  background: var(--navy); color: #fff; border-radius: 999px;
   padding: 0.6rem 1rem; font-weight: 700; margin: 1rem 0;
 }
-.question-card { background: #fffdf6; border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem 1.4rem; margin: 1rem 0; }
+.question-card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 1.2rem 1.4rem; margin: 1rem 0; box-shadow: 0 2px 10px rgba(27, 42, 78, 0.08); }
 .options { display: grid; gap: 0.5rem; margin-top: 0.8rem; }
 .option-btn {
-  text-align: left; background: #fff; border: 1.5px solid var(--line); border-radius: 8px;
+  text-align: left; background: #fff; border: 1.5px solid var(--line); border-radius: 12px;
   padding: 0.6rem 0.9rem; cursor: pointer; font-size: 1rem; font-family: inherit;
 }
 .option-btn:hover:not(:disabled) { border-color: var(--gold); }
 .option-btn.correct { background: #d9eddf; border-color: var(--green-ok); font-weight: 700; }
 .option-btn.wrong { background: #fde3e3; border-color: var(--red-no); }
 .option-btn:disabled { cursor: default; opacity: 0.95; }
-.explanation { background: var(--sage-light); border-radius: 8px; padding: 0.7rem 1rem; margin-top: 0.8rem; }
-.quiz-btn { background: var(--navy); color: #fff; border: none; border-radius: 8px; padding: 0.7rem 1.4rem; font-size: 1rem; font-family: inherit; cursor: pointer; margin-top: 1rem; }
-.quiz-btn:hover { background: var(--gold); color: var(--navy); }
+.explanation { background: var(--sage-light); border-radius: 12px; padding: 0.7rem 1rem; margin-top: 0.8rem; }
+.quiz-btn { background: var(--gold); color: #fff; border: none; border-radius: 999px; padding: 0.7rem 1.4rem; font-size: 1rem; font-family: inherit; cursor: pointer; margin-top: 1rem; }
+.quiz-btn:hover { background: var(--gold-dark); color: #fff; }
 .quiz-btn-link { display: inline-block; text-decoration: none; }
 .quiz-progress { color: var(--muted); font-weight: 700; margin: 0.5rem 0; }
-.quiz-grade { background: #fffdf6; border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem 1.4rem; margin: 1rem 0; }
+.quiz-grade { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 1.2rem 1.4rem; margin: 1rem 0; box-shadow: 0 2px 10px rgba(27, 42, 78, 0.08); }
 .grade-big { font-size: 1.3rem; font-weight: 700; color: var(--navy); }
 .grade-pct { font-size: 1.1rem; font-weight: 700; }
-.quiz-reading { background: #fdf6e3; border-left: 4px solid var(--gold); border-radius: 8px; padding: 0.8rem 1rem; margin: 1rem 0; }
+.quiz-reading { background: var(--cream); border-left: 4px solid var(--gold); border-radius: 8px; padding: 0.8rem 1rem; margin: 1rem 0; }
 .quiz-reading a { font-weight: 700; color: var(--navy); }
 
-/* Footer */
-.site-footer { background: var(--navy); color: #e9e2c8; text-align: center; padding: 1.5rem 1rem 2rem; }
-.site-footer strong { color: #fff; }
+/* Footer — soft lavender gradient, like Lunara */
+.site-footer { background: linear-gradient(180deg, #f3e5f5 0%, #ede7f6 45%, #d1c4e9 100%); color: var(--navy); text-align: center; padding: 1.5rem 1rem 2rem; }
+.site-footer strong { color: var(--navy); }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; justify-content: center; margin: 0.8rem 0; }
-.footer-nav a { color: var(--gold); text-decoration: none; font-size: 0.9rem; }
-.footer-legal { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; justify-content: center; margin: 0.8rem 0; padding-top: 0.8rem; border-top: 1px solid rgba(233, 226, 200, 0.25); }
-.footer-legal a { color: var(--gold); text-decoration: none; font-size: 0.9rem; }
+.footer-nav a { color: var(--gold-dark); text-decoration: none; font-size: 0.9rem; }
+.footer-legal { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; justify-content: center; margin: 0.8rem 0; padding-top: 0.8rem; border-top: 1px solid rgba(27, 42, 78, 0.15); }
+.footer-legal a { color: var(--gold-dark); text-decoration: none; font-size: 0.9rem; }
 .footer-note { font-size: 0.85rem; opacity: 0.8; }
 .empty, .loading { color: var(--muted); padding: 2rem 0; text-align: center; }
 
