@@ -119,6 +119,8 @@ collections:
       - {label: "Related Books", name: "RelatedBooks", widget: "list"}
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Life Lesson", name: "LifeLesson", widget: "text"}
+      - {label: "Image", name: "Image", widget: "image", required: false}
+      - {label: "Image Credit", name: "ImageCredit", widget: "string", required: false}
       - {label: "Slug", name: "Slug", widget: "string"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
