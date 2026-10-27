@@ -87,8 +87,6 @@
   { id: "jewishculture", label: "Jewish Culture & the Messiah", file: "content/jewishculture.json", primary: "Topic",
     blurb: "Jewish culture, feasts, and traditions \u2014 and how each one points to Jesus the Messiah.",
     filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
-  { id: "comicstories", label: "Comic Stories", file: "content/comicstories.json", primary: "Story",
-    blurb: "Bible stories told comic-style — scroll down and each page appears as you read." },
   { id: "studyguides", label: "Bible Study Guides", file: "content/studyguides.json", primary: "Guide",
     blurb: "Step-by-step guides for studying a book, a topic, a person, or a passage — with questions and application for every study.",
     filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
@@ -105,7 +103,7 @@
     "prophecies", "typology", "apologetics", "objections", "heresies",
     "fallacies", "perspectives", "jewishculture", "hermeneutics", "heritage",
     "politics", "socialmedia", "courses", "studyguides", "quizzes", "hymns",
-    "nature", "comicstories"];
+    "nature"];
   /* Section headings for the Explore tiles, keyed by the collection that
      starts each section. The first section combines the story and the
      world behind it under one title, Foundations. */
@@ -181,7 +179,7 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "122";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "123";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1749,7 +1747,7 @@
     BIBLE_BOOKS.forEach(function (b) { if (b.name === bookName) bookSlug = b.slug; });
     var seen = {}, list = [];
     COLLECTIONS.forEach(function (c) {
-      if (c.id === "quizzes" || c.id === "comicstories") return;
+      if (c.id === "quizzes") return;
       (data[c.id] || []).forEach(function (row) {
         var refs = [];
         SCRIPTURE_FIELDS.forEach(function (f) {
@@ -1859,7 +1857,7 @@
     });
     var out = [];
     COLLECTIONS.forEach(function (c) {
-      if (c.id === "quizzes" || c.id === "comicstories") return;
+      if (c.id === "quizzes") return;
       (data[c.id] || []).forEach(function (row, i) {
         var hit = SCRIPTURE_FIELDS.some(function (f) {
           var v = val(row, f);
@@ -1994,104 +1992,6 @@
       "</div>";
     app.innerHTML = html;
     window.scrollTo(0, 0);
-  }
-  /* ---------- comic stories ---------- */
-  /* Panels group into stories by Story name, exactly like quiz questions group by Quiz name. */
-  function comicStoryKey(name) {
-    return String(name || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
-  }
-  function comicStories() {
-    var groups = {};
-    var order = [];
-    (data.comicstories || []).forEach(function (p) {
-      var key = comicStoryKey(p.Story);
-      if (!groups[key]) { groups[key] = { title: p.Story, description: p.StoryDescription, panels: [] }; order.push(key); }
-      groups[key].panels.push(p);
-    });
-    order.forEach(function (key) {
-      groups[key].panels.sort(function (a, b) { return (parseInt(a.PanelNumber, 10) || 0) - (parseInt(b.PanelNumber, 10) || 0); });
-    });
-    return { groups: groups, order: order };
-  }
-  function viewComicList() {
-    var s = comicStories();
-    var html = "<h2>Comic Stories</h2><p class='page-intro'>Bible stories told comic-style — scroll down and each page appears as you read.</p>";
-    if (!s.order.length) {
-      html += '<p class="empty">No comic stories yet. Check back soon!</p>';
-    } else {
-      html += "<div class='card-grid'>" + s.order.map(function (key) {
-        var g = s.groups[key];
-        var cover = g.panels[0];
-        return '<a class="card comic-card" href="#/comicstories/' + key + '">' +
-          (cover && cover.PanelImage ? "<img src='" + esc(cover.PanelImage) + "' alt=''>" : "") +
-          "<h3>" + esc(g.title) + "</h3>" +
-          "<p class='meta'>" + g.panels.length + " panels</p>" +
-          "<p class='snippet'>" + esc(g.description) + "</p></a>";
-      }).join("") + "</div>";
-    }
-    app.innerHTML = html;
-    window.scrollTo(0, 0);
-  }
-  function viewComicReader(key) {
-    var s = comicStories();
-    var g = s.groups[key];
-    if (!g) return viewComicList();
-    var panels = g.panels;
-    var html = '<a class="back-link" href="#/comicstories">&larr; All comic stories</a>' +
-      "<div class='comic-progress'><div class='comic-progress-bar' id='comicProgressBar'></div></div>" +
-      "<h2>" + esc(g.title) + "</h2><p class='page-intro'>" + esc(g.description) + "</p>" +
-      "<div class='comic-reader'>" + panels.map(function (p, i) {
-        return "<article class='comic-panel'>" +
-          "<div class='comic-scene'>" +
-          (p.PanelBackground ? "<div class='comic-scene-bg' data-bg='" + esc(p.PanelBackground) + "'></div>" : "<div class='comic-scene-bg comic-scene-bg-default'></div>") +
-          (p.PanelImage ? "<div class='comic-scene-art'><img src='" + esc(p.PanelImage) + "' alt='Comic panel " + (i + 1) + "'></div>" : "") +
-          "</div>" +
-          (p.PanelImageCredit ? "<p class='comic-credit'>" + esc(p.PanelImageCredit) + "</p>" : "") +
-          "<div class='comic-panel-body'><p class='comic-text'>" + esc(p.PanelText) + "</p>" +
-          "<p class='comic-meta'><span class='comic-char'>" + esc(p.Character) + "</span> &middot; Panel " + (i + 1) + " of " + panels.length + "</p></div>" +
-          "</article>";
-      }).join("") + "</div>";
-    app.innerHTML = html;
-    window.scrollTo(0, 0);
-    Array.prototype.slice.call(document.querySelectorAll(".comic-scene-bg[data-bg]")).forEach(function (bg) {
-      bg.style.backgroundImage = "url('" + bg.getAttribute("data-bg") + "')";
-    });
-    var els = Array.prototype.slice.call(document.querySelectorAll(".comic-panel"));
-    if (!("IntersectionObserver" in window) || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) {
-      els.forEach(function (el) { el.classList.add("comic-visible"); });
-    } else {
-      var obs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) { e.target.classList.add("comic-visible"); obs.unobserve(e.target); }
-        });
-      }, { threshold: 0.15 });
-      els.forEach(function (el) { obs.observe(el); });
-    }
-    var comicScenes = Array.prototype.slice.call(document.querySelectorAll(".comic-scene"));
-    var comicReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    function updateComicParallax() {
-      if (comicReduced) return;
-      var vh = window.innerHeight;
-      comicScenes.forEach(function (scene) {
-        var r = scene.getBoundingClientRect();
-        if (r.bottom < 0 || r.top > vh) return;
-        var offset = (r.top + r.height / 2) - vh / 2;
-        var bg = scene.querySelector(".comic-scene-bg");
-        var art = scene.querySelector(".comic-scene-art");
-        if (bg) bg.style.transform = "translateY(" + Math.max(-r.height * 0.05, Math.min(r.height * 0.05, offset * -0.10)) + "px)";
-        if (art) art.style.transform = "translateY(" + Math.max(-r.height * 0.12, Math.min(r.height * 0.12, offset * -0.30)) + "px)";
-      });
-    }
-    function onComicScroll() {
-      var bar = document.getElementById("comicProgressBar");
-      if (!bar) return;
-      var h = document.documentElement;
-      var max = h.scrollHeight - h.clientHeight;
-      bar.style.width = (max > 0 ? Math.min(100, (h.scrollTop / max) * 100) : 0) + "%";
-      updateComicParallax();
-    }
-    window.addEventListener("scroll", onComicScroll, { passive: true });
-    onComicScroll();
   }
   function viewAbout() {
     var total = COLLECTIONS.reduce(function (sum, c) { return sum + (data[c.id] || []).length; }, 0);
@@ -2279,12 +2179,6 @@
     if (path[0] === "faq") return viewFaq();
     if (path[0] === "search") return viewSearch(params);
     if (path[0] === "quizzes" && path[1] === "play") return viewQuizPlay(path[2] ? decodeURIComponent(path[2]) : "", params);
-    if (path[0] === "comicstories") {
-      if (!path[1]) return viewComicList();
-      var ck = comicStoryKey(decodeURIComponent(path[1]));
-      if (comicStories().groups[ck]) return viewComicReader(ck);
-      /* Unknown segment: fall through to the generic collection behavior below. */
-    }
     if (path[0] === "storybook") return viewStorybook(path[1] ? decodeURIComponent(path[1]) : null, path[2] ? decodeURIComponent(path[2]) : null, params);
     if (path[0] === "gallery") return viewGallery();
     var c = coll(path[0]);

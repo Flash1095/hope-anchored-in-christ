@@ -264,9 +264,9 @@ FIELD_HOME = {"RelatedBooks": "books", "RelatedBook": "books", "BibleBooks": "bo
 SKIP_FIELDS = ["Slug", "Maps", "Image", "ImageCredit", "ImageSource", "PanelImage", "PanelImageCredit"]
 SNIPPET_FIELDS = ["Summary", "Description", "Story", "Definition", "ShortAnswer",
     "ProphecySummary", "Explanation", "BiblicalUsage", "Beliefs"]
-# Collections with no generic detail page: quizzes is an interactive player,
-# comicstories is a panel reader. Everything else gets a static page.
-SKIP_COLLECTIONS = {"quizzes", "comicstories"}
+# Collections with no generic detail page: quizzes is an interactive
+# player. Everything else gets a static page.
+SKIP_COLLECTIONS = {"quizzes"}
 
 
 def slugify(s):

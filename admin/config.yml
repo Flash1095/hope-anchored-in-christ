@@ -620,24 +620,6 @@ collections:
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
-  - name: "comicstories"
-    label: "Comic Stories"
-    folder: "content/comicstories"
-    create: true
-    slug: "{{fields.Slug}}"
-    identifier_field: "Slug"
-    extension: "json"
-    format: "json"
-    fields:
-      - {label: "Story", name: "Story", widget: "string", hint: "Use the exact same story name on every panel of that story — panels group into a story by this name."}
-      - {label: "Story Description", name: "StoryDescription", widget: "text", hint: "Repeat the same description on every panel of the story."}
-      - {label: "Panel Number", name: "PanelNumber", widget: "number", hint: "Panels read in this order, lowest first."}
-      - {label: "Panel Image", name: "PanelImage", widget: "image"}
-      - {label: "Panel Background (parallax layer)", name: "PanelBackground", widget: "image", required: false, hint: "Optional slow-moving background layer behind the panel art, for the parallax depth effect. Leave empty to use the default soft backdrop."}
-      - {label: "Panel Image Credit", name: "PanelImageCredit", widget: "string"}
-      - {label: "Panel Text", name: "PanelText", widget: "text"}
-      - {label: "Character", name: "Character", widget: "string"}
-      - {label: "Slug", name: "Slug", widget: "string"}
   - name: "studyguides"
     label: "Bible Study Guides"
     folder: "content/studyguides"
@@ -673,7 +655,7 @@ collections:
             name: "blurbs"
             widget: "list"
             fields:
-              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "places", "topics", "themes", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories", "hermeneutics", "jewishculture", "comicstories", "studyguides"]}
+              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "places", "topics", "themes", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories", "hermeneutics", "jewishculture", "studyguides"]}
               - {label: "Description", name: "blurb", widget: "text"}
   - name: "store"
     label: "Store Products"
