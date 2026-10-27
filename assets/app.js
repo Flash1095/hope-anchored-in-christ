@@ -99,10 +99,11 @@
     "KeyPersons", "KeyPeople", "BibleBooks", "Places", "Events",
     "KeyScriptures", "KeyPassages", "KeyVerses", "ScriptureReference",
     "ScriptureIlluminated", "BibleReferences", "Tags", "Themes", "Place", "Prophet", "Course"];
-  /* Bible book study sections (Genesis page): long-form prose. Each line
-     is one paragraph on the live page, and entry names link automatically
-     through the same name index the Bible reader uses — nothing here is
-     hand-listed, so new entries link the moment their data ships. */
+  /* Bible book study sections (Genesis page): full markdown sections
+     rendered as expandable <details> blocks below the overview. The
+     section titles come from STUDY_LABELS; nothing here is hand-listed
+     per book, so the same rendering works if another book gains study
+     sections later. */
   var STUDY_FIELDS = ["StudyOverview", "StudyAuthorship", "StudyHistoricalBackground",
     "StudyCulturalContext", "StudyLiteraryStructure", "StudyChapterByChapter",
     "StudyMajorThemes", "StudyTheologyDoctrine", "StudyChristMessianic",
@@ -158,7 +159,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "100";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "101";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -416,11 +417,6 @@
     if (field === "DetailedAnswer") {
       return value.split(/\n\s*\n/).filter(function (p) { return p.trim() !== ""; }).map(function (para) {
         return "<p>" + esc(para).replace(/\n/g, "<br>") + "</p>";
-      }).join("");
-    }
-    if (STUDY_FIELDS.indexOf(field) !== -1) {
-      return value.split(/\n/).filter(function (p) { return p.trim() !== ""; }).map(function (para) {
-        return "<p>" + linkifyVerseText(para.trim()) + "</p>";
       }).join("");
     }
     return esc(value);
@@ -774,11 +770,25 @@
     html += '<div class="detail"><dl>';
     Object.keys(row).forEach(function (field) {
       if (SKIP_FIELDS.indexOf(field) !== -1) return;
+      if (STUDY_FIELDS.indexOf(field) !== -1 || field === "StudyIntroduction") return;
       var v = val(row, field);
       if (isEmpty(v)) return;
       html += "<dt>" + esc(label(field)) + "</dt><dd>" + renderValue(field, v) + "</dd>";
     });
     html += "</dl>";
+    if (STUDY_FIELDS.some(function (f) { return !isEmpty(val(row, f)); })) {
+      html += '<div class="study">';
+      var intro = val(row, "StudyIntroduction");
+      if (intro) html += '<div class="study-intro">' + renderMarkdown(intro) + "</div>";
+      html += '<p class="study-controls"><button type="button" class="btn study-expand">Expand all sections</button> ' +
+        '<button type="button" class="btn study-collapse">Collapse all sections</button></p>';
+      STUDY_FIELDS.forEach(function (f) {
+        var v = val(row, f);
+        if (isEmpty(v)) return;
+        html += '<details class="study-section"><summary>' + esc(STUDY_LABELS[f] || label(f)) + "</summary><div class=\"study-body\">" + renderMarkdown(v) + "</div></details>";
+      });
+      html += "</div>";
+    }
     if (c.id === "courses") {
       var linked = [];
       (data.quizzes || []).forEach(function (q) {
@@ -792,6 +802,17 @@
     }
     html += "</div>";
     app.innerHTML = html;
+    var study = app.querySelector(".study");
+    if (study) {
+      var expand = study.querySelector(".study-expand");
+      var collapse = study.querySelector(".study-collapse");
+      if (expand) expand.addEventListener("click", function () {
+        study.querySelectorAll("details.study-section").forEach(function (d) { d.open = true; });
+      });
+      if (collapse) collapse.addEventListener("click", function () {
+        study.querySelectorAll("details.study-section").forEach(function (d) { d.open = false; });
+      });
+    }
     window.scrollTo(0, 0);
   }
 
@@ -1915,10 +1936,19 @@
     var out = [], i = 0;
     function inline(t) {
       var h = esc(t);
+      h = h.replace(/\\\./g, ".");
       h = h.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
       h = h.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
       h = h.replace(/\*([^*]+)\*/g, "<em>$1</em>");
       return h;
+    }
+    function isTableStart(idx) {
+      if (idx + 1 >= lines.length) return false;
+      if (!/^\s*\|/.test(lines[idx])) return false;
+      return /^\s*\|[\s:|\-]+\|\s*$/.test(lines[idx + 1]) && /-/.test(lines[idx + 1]);
+    }
+    function splitRow(row) {
+      return row.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map(function (c) { return c.trim(); });
     }
     while (i < lines.length) {
       var line = lines[i];
@@ -1938,10 +1968,22 @@
         out.push("<ul>" + items.map(function (t) { return "<li>" + inline(t) + "</li>"; }).join("") + "</ul>");
       } else if (line.trim() === "") {
         i++;
+      } else if (isTableStart(i)) {
+        var head = splitRow(lines[i]); i += 2;
+        var body = [];
+        while (i < lines.length && /^\s*\|/.test(lines[i])) { body.push(splitRow(lines[i])); i++; }
+        var thead = "<thead><tr>" + head.map(function (c) { return "<th>" + inline(c) + "</th>"; }).join("") + "</tr></thead>";
+        var tbody = "<tbody>" + body.map(function (r) { return "<tr>" + r.map(function (c) { return "<td>" + inline(c) + "</td>"; }).join("") + "</tr>"; }).join("") + "</tbody>";
+        out.push('<div class="study-table"><table>' + thead + tbody + "</table></div>");
+      } else if (/^\s*\d+\\?\.\s+/.test(line)) {
+        var items = [];
+        while (i < lines.length && /^\s*\d+\\?\.\s+/.test(lines[i])) { items.push(lines[i].replace(/^\s*\d+\\?\.\s+/, "")); i++; }
+        out.push("<ol>" + items.map(function (t) { return "<li>" + inline(t) + "</li>"; }).join("") + "</ol>");
       } else {
         var para = [];
         while (i < lines.length && lines[i].trim() !== "" && !/^#{1,3}\s/.test(lines[i]) &&
-               !/^\s*[-*]\s+/.test(lines[i]) && !/^\s*>\s?/.test(lines[i]) && !/^\s*---\s*$/.test(lines[i])) {
+               !/^\s*[-*]\s+/.test(lines[i]) && !/^\s*>\s?/.test(lines[i]) && !/^\s*---\s*$/.test(lines[i]) &&
+               !isTableStart(i) && !/^\s*\d+\\?\.\s+/.test(lines[i])) {
           para.push(lines[i]); i++;
         }
         out.push("<p>" + inline(para.join(" ")) + "</p>");

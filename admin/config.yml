@@ -67,6 +67,7 @@ collections:
       - {label: "Historical Context", name: "HistoricalContext", widget: "text"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Study Introduction", name: "StudyIntroduction", widget: "text", required: false}
       - {label: "Basic Book Information & Overview", name: "StudyOverview", widget: "text", required: false}
       - {label: "Authorship & Composition", name: "StudyAuthorship", widget: "text", required: false}
       - {label: "Historical Background", name: "StudyHistoricalBackground", widget: "text", required: false}

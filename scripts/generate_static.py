@@ -55,6 +55,7 @@ def esc(t):
 
 def inline(t):
     h = esc(t)
+    h = h.replace("\\.", ".")
     # SPA routes (#/...) become relative links from blog/<slug>/ back to the app.
     h = re.sub(r"\[([^\]]+)\]\(([^)]+)\)",
                lambda m: '<a href="%s">%s</a>' % (
@@ -92,6 +93,22 @@ def render_markdown(src):
                 items.append(re.sub(r"^\s*[-*]\s+", "", lines[i]))
                 i += 1
             out.append("<ul>" + "".join("<li>" + inline(t) + "</li>" for t in items) + "</ul>")
+        elif is_table_start(lines, i):
+            head = split_row(lines[i])
+            i += 2
+            body = []
+            while i < len(lines) and re.match(r"^\s*\|", lines[i]):
+                body.append(split_row(lines[i]))
+                i += 1
+            thead = "<thead><tr>" + "".join("<th>" + inline(c) + "</th>" for c in head) + "</tr></thead>"
+            tbody = "<tbody>" + "".join("<tr>" + "".join("<td>" + inline(c) + "</td>" for c in r) + "</tr>" for r in body) + "</tbody>"
+            out.append('<div class="study-table"><table>' + thead + tbody + "</table></div>")
+        elif re.match(r"^\s*\d+\\?\.\s+", line):
+            items = []
+            while i < len(lines) and re.match(r"^\s*\d+\\?\.\s+", lines[i]):
+                items.append(re.sub(r"^\s*\d+\\?\.\s+", "", lines[i]))
+                i += 1
+            out.append("<ol>" + "".join("<li>" + inline(t) + "</li>" for t in items) + "</ol>")
         elif line.strip() == "":
             i += 1
         else:
@@ -100,11 +117,31 @@ def render_markdown(src):
                    and not re.match(r"^#{1,3}\s", lines[i])
                    and not re.match(r"^\s*[-*]\s+", lines[i])
                    and not re.match(r"^\s*>\s?", lines[i])
-                   and not re.match(r"^\s*---\s*$", lines[i])):
+                   and not re.match(r"^\s*---\s*$", lines[i])
+                   and not is_table_start(lines, i)
+                   and not re.match(r"^\s*\d+\\?\.\s+", lines[i])):
                 para.append(lines[i])
                 i += 1
             out.append("<p>" + inline(" ".join(para)) + "</p>")
     return "\n".join(out)
+
+
+def is_table_start(lines, idx):
+    if idx + 1 >= len(lines):
+        return False
+    if not re.match(r"^\s*\|", lines[idx]):
+        return False
+    sep = lines[idx + 1]
+    return bool(re.match(r"^\s*\|[\s:|\-]+\|\s*$", sep) and "-" in sep)
+
+
+def split_row(row):
+    cells = row.strip()
+    if cells.startswith("|"):
+        cells = cells[1:]
+    if cells.endswith("|"):
+        cells = cells[:-1]
+    return [c.strip() for c in cells.split("|")]
 
 
 def plain_text(md):
@@ -407,9 +444,9 @@ BIBLE_BOOKS = []
 
 SCRIPTURE_FIELDS = ["KeyVerses", "KeyPassages", "KeyScriptures", "ScriptureReference",
                     "ScriptureIlluminated", "BibleReferences"]
-# Bible book study sections (Genesis page): long-form prose, one paragraph
-# per line. Static pages render the same text as plain paragraphs (the live
-# page additionally auto-links entry names through the Bible name index).
+# Bible book study sections (Genesis page): full markdown sections,
+# rendered as expandable <details> blocks below the overview (see
+# entry_page). The titles come from STUDY_LABELS.
 STUDY_FIELDS = ["StudyOverview", "StudyAuthorship", "StudyHistoricalBackground",
     "StudyCulturalContext", "StudyLiteraryStructure", "StudyChapterByChapter",
     "StudyMajorThemes", "StudyTheologyDoctrine", "StudyChristMessianic",
@@ -421,6 +458,43 @@ STUDY_FIELDS = ["StudyOverview", "StudyAuthorship", "StudyHistoricalBackground",
     "StudySymbolism", "StudyInterpretations", "StudyMisconceptions",
     "StudyQuestionsAnswers", "StudyChurchHistory", "StudyTranslations",
     "StudyRelatedPosts", "StudySources", "StudyTakeaways"]
+
+STUDY_LABELS = {
+    "StudyOverview": "Basic Book Information & Overview",
+    "StudyAuthorship": "Authorship & Composition",
+    "StudyHistoricalBackground": "Historical Background",
+    "StudyCulturalContext": "Cultural & Religious Context",
+    "StudyLiteraryStructure": "Literary Structure & Book Outline",
+    "StudyChapterByChapter": "Chapter-by-Chapter Studies",
+    "StudyMajorThemes": "Major Themes",
+    "StudyTheologyDoctrine": "Theology & Doctrine",
+    "StudyChristMessianic": "Jesus Christ & Messianic Connections",
+    "StudyProphecyFulfillment": "Biblical Prophecy & Fulfillment",
+    "StudyPeopleGenealogies": "Biblical People & Genealogies",
+    "StudyGeographyMaps": "Biblical Geography & Maps",
+    "StudyArchaeology": "Archaeology & Historical Evidence",
+    "StudyLanguages": "Original Languages & Word Studies",
+    "StudyManuscriptsCanon": "Ancient Manuscripts, Textual Criticism & Canon",
+    "StudyApologetics": "Apologetics & Difficult Bible Passages",
+    "StudyCrossReferences": "Cross-References & Biblical Connections",
+    "StudyJewishBackground": "Jewish Background & Interpretation",
+    "StudyEthicsApplication": "Ethics & Practical Application",
+    "StudyResourcesActivities": "Bible Study Resources & Interactive Activities",
+    "StudyQuizzesTrivia": "Bible Quizzes & Trivia",
+    "StudyImportantVerses": "Important Bible Verses",
+    "StudyEventsChronology": "Biblical Events & Chronology",
+    "StudyCovenantsLaws": "Covenants, Laws & Commandments",
+    "StudyMiraclesParables": "Miracles, Parables & Teachings",
+    "StudySymbolism": "Symbolism, Imagery & Literary Devices",
+    "StudyInterpretations": "Historical & Theological Interpretations",
+    "StudyMisconceptions": "Common Misconceptions & Misinterpretations",
+    "StudyQuestionsAnswers": "Questions & Answers",
+    "StudyChurchHistory": "Christian Church History & Historical Reception",
+    "StudyTranslations": "Bible Translation Comparisons",
+    "StudyRelatedPosts": "Related Blog Posts & Articles",
+    "StudySources": "Scholarly Sources, References & Further Reading",
+    "StudyTakeaways": "Key Takeaways & Book Summary",
+}
 
 
 def linkify_scripture_refs(value):
@@ -513,9 +587,6 @@ def render_entry_field(field, value, cur_coll, glob, home):
     if field == "DetailedAnswer":
         paras = [p for p in re.split(r"\n\s*\n", value) if p.strip()]
         return "".join("<p>%s</p>" % esc(p).replace("\n", "<br>") for p in paras)
-    if field in STUDY_FIELDS:
-        paras = [p for p in value.split("\n") if p.strip()]
-        return "".join("<p>%s</p>" % esc(p.strip()) for p in paras)
     return esc(value)
 
 
@@ -554,6 +625,8 @@ def entry_page(e, glob, home, quizzes_by_course):
     for field, v in row.items():
         if field in SKIP_FIELDS:
             continue
+        if field in STUDY_FIELDS or field == "StudyIntroduction":
+            continue
         if isinstance(v, list):
             v = "; ".join(str(x) for x in v)
         v = "" if v is None else str(v)
@@ -562,6 +635,18 @@ def entry_page(e, glob, home, quizzes_by_course):
         dl.append("<dt>%s</dt><dd>%s</dd>" % (
             esc(label(field)), render_entry_field(field, v, coll, glob, home)))
     body = "\n".join(parts) + '<div class="detail"><dl>' + "\n".join(dl) + "</dl>"
+    if any((row.get(f) or "").strip() for f in STUDY_FIELDS):
+        body += '<div class="study">'
+        intro = (row.get("StudyIntroduction") or "").strip()
+        if intro:
+            body += '<div class="study-intro">' + render_markdown(intro) + "</div>"
+        for f in STUDY_FIELDS:
+            v = (row.get(f) or "").strip()
+            if not v:
+                continue
+            body += '<details class="study-section"><summary>%s</summary><div class="study-body">%s</div></details>' % (
+                esc(STUDY_LABELS[f]), render_markdown(v))
+        body += "</div>"
     if coll == "courses":
         qs = quizzes_by_course.get(title, [])
         if qs:
