@@ -162,7 +162,7 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "112";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "113";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1056,9 +1056,27 @@
     if (latest) {
       html += "<h3>Latest from the blog</h3>" + postRowCard(latest, "Latest blog post");
     }
-    html += "<h3>Explore the collections</h3><div class='card-grid'>" +
+    html += "<h3>Explore the collections</h3><div class='card-grid home-grid'>" +
       COLLECTIONS.map(collectionCard).join("") + "</div>";
     app.innerHTML = html;
+    /* Animated home: stat numbers count up on load (instant under
+       reduced-motion, where the final values simply stay put). */
+    (function () {
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce) return;
+      app.querySelectorAll(".stat strong").forEach(function (el) {
+        var target = parseInt(el.textContent.replace(/[^0-9]/g, ""), 10);
+        if (isNaN(target)) return;
+        var start = null, dur = 1200;
+        el.textContent = "0";
+        (function step(ts) {
+          if (!start) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(step);
+        })(performance.now());
+      });
+    })();
     loadExcerpts();
     window.scrollTo(0, 0);
   }
@@ -2177,6 +2195,7 @@
     var parts = raw.split("?");
     var path = parts[0].split("/").filter(Boolean);
     var params = new URLSearchParams(parts[1] || "");
+    document.body.classList.toggle("is-home", path.length === 0);
     if (path.length === 0) return viewHome();
     if (path[0] === "explore") return viewExplore();
     if (path[0] === "blog") return viewBlog(path[1] ? decodeURIComponent(path[1]) : null);
