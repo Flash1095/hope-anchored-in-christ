@@ -65,8 +65,6 @@ When Paul preached in Berea, the Jews there were called **noble** because they 
 >
 >  to see if these things were so.” (Acts 17:11)
 
-![Acts 17:11 — They received the word with all eagerness, examining the Scriptures daily to see if these things were so](assets/posts/christianity-invites-testing-acts-17-11.jpg?v=108)
-
 Christianity doesn’t ask for blind allegiance. It **welcomes examination**, reflection, and wrestling with the truth. Truth isn’t fragile—it can take the weight of deep questions. Christianity invites you to think deeply **because the evidence is strong** and the truth is coherent.
 
 
