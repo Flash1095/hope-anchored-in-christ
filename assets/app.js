@@ -27,12 +27,10 @@
       blurb: "Where the story happened, and where those places are today.",
       filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }],
       meta: ["ModernLocation", "Testament"] },
-    { id: "topics", label: "Topics", file: "content/topics.json", primary: "Topic",
-      blurb: "Central topic pages linking passages, people, doctrines, and questions.",
+    { id: "topics", label: "Topics and Themes", file: "content/topics.json", primary: "Topic",
+      blurb: "Central topics and the great themes woven through Scripture, linking passages, people, doctrines, and questions.",
       filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
-    { id: "themes", label: "Themes", file: "content/themes.json", primary: "Theme",
-      blurb: "The great themes woven through Scripture." },
-    { id: "doctrines", label: "Doctrines", file: "content/doctrines.json", primary: "Doctrine",
+    { id: "doctrines", label: "Theology and Doctrine", file: "content/doctrines.json", primary: "Doctrine",
       blurb: "What Christians believe, with biblical support and history." },
     { id: "heresies", label: "Heretical Teachings", file: "content/heresies.json", primary: "Heresy",
       blurb: "False teachings answered, with the Christian response.",
@@ -84,7 +82,7 @@
   { id: "hermeneutics", label: "Biblical Hermeneutics", file: "content/hermeneutics.json", primary: "Principle",
     blurb: "How to interpret Scripture rightly — context, literary genres, literary devices, and principles for handling God's Word with care.",
     filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
-  { id: "jewishculture", label: "Jewish Culture & the Messiah", file: "content/jewishculture.json", primary: "Topic",
+  { id: "jewishculture", label: "Jewish Cultural Backgrounds", file: "content/jewishculture.json", primary: "Topic",
     blurb: "Jewish culture, feasts, and traditions \u2014 and how each one points to Jesus the Messiah.",
     filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
   { id: "studyguides", label: "Bible Study Guides", file: "content/studyguides.json", primary: "Guide",
@@ -102,7 +100,7 @@
      decides link-index tie-breaking. Any collection missing here falls
      back to the end of the tiles, so nothing can ever disappear. */
   var EXPLORE_ORDER = ["timeline", "books", "stories", "people", "places",
-    "finds", "civilizations", "questions", "topics", "themes", "wordstudies", "doctrines",
+    "finds", "civilizations", "questions", "topics", "wordstudies", "doctrines",
     "prophecies", "typology", "apologetics", "objections", "heresies",
     "fallacies", "perspectives", "jewishculture", "hermeneutics", "heritage",
     "politics", "socialmedia", "courses", "studyguides", "quizzes", "hymns",
@@ -182,7 +180,7 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "124";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "125";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -190,7 +188,7 @@
   // that happens to share the name and comes first in COLLECTIONS order.
   var FIELD_HOME = { RelatedBooks: "books", RelatedBook: "books", BibleBooks: "books",
     RelatedPeople: "people", KeyPeople: "people", KeyPersons: "people", Prophet: "people",
-    RelatedEvents: "stories", Events: "stories", RelatedTopics: "topics", Themes: "themes",
+    RelatedEvents: "stories", Events: "stories", RelatedTopics: "topics", Themes: "topics",
     RelatedDoctrines: "doctrines", RelatedQuestions: "questions", RelatedFinds: "finds",
     Places: "places", Place: "places", Course: "courses" };
   var app = document.getElementById("app");

@@ -258,7 +258,7 @@ REL_FIELDS = ["RelatedBooks", "RelatedPeople", "RelatedEvents", "RelatedTopics",
     "ScriptureIlluminated", "BibleReferences", "Tags", "Themes", "Place", "Prophet", "Course"]
 FIELD_HOME = {"RelatedBooks": "books", "RelatedBook": "books", "BibleBooks": "books",
     "RelatedPeople": "people", "KeyPeople": "people", "KeyPersons": "people", "Prophet": "people",
-    "RelatedEvents": "stories", "Events": "stories", "RelatedTopics": "topics", "Themes": "themes",
+    "RelatedEvents": "stories", "Events": "stories", "RelatedTopics": "topics", "Themes": "topics",
     "RelatedDoctrines": "doctrines", "RelatedQuestions": "questions", "RelatedFinds": "finds",
     "Places": "places", "Place": "places", "Course": "courses"}
 SKIP_FIELDS = ["Slug", "Maps", "Image", "ImageCredit", "ImageSource", "PanelImage", "PanelImageCredit"]

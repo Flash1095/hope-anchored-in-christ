@@ -40,7 +40,6 @@ SOURCES = [
     ("finds", "archaeological-finds-cms/Archaeological Finds CMS.csv", "FindName"),
     ("places", "biblical-places-cms/Biblical Places CMS.csv", "Name"),
     ("topics", "topics-categories-cms/Topics and Categories CMS.csv", "Topic"),
-    ("themes", "biblical-themes-cms/Biblical Themes CMS.csv", "Theme"),
     ("doctrines", "christian-doctrines-cms/Christian Doctrines CMS.csv", "Doctrine"),
     ("heresies", "heresies-cms/Heresies CMS.csv", "Heresy"),
     ("wordstudies", "word-studies-cms/Word Studies CMS.csv", "Transliteration"),

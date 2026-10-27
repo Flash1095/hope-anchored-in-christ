@@ -1,12 +1,13 @@
 {
- "Topic": "Faith",
- "Category": "Theology",
- "Summary": "Faith is trust in God and His promises, receiving Christ and resting on Him alone for salvation. It is a gift of God that unites believers to Jesus and inevitably produces love, obedience, and endurance. The heroes of Hebrews 11 show that faith sees the unseen and acts on God's word even when circumstances argue otherwise.",
- "KeyPassages": "Genesis 15:6; Habakkuk 2:4; Romans 10:17; Ephesians 2:8; Hebrews 11:1; Hebrews 11:6; James 2:17",
- "RelatedPeople": "Abraham; Rahab; Moses; Paul; Jesus",
- "RelatedDoctrines": "Faith; Justification by Faith; Perseverance",
- "RelatedQuestions": "What is faith according to the Bible?; Can faith and doubt exist together?",
- "RelatedBooks": "Genesis; Habakkuk; Romans; Ephesians; Hebrews; James",
- "Slug": "faith",
- "RelatedEvents": "The Binding of Isaac"
+  "Topic": "Faith",
+  "Category": "Theology",
+  "Summary": "Faith is trust in God and His promises, receiving Christ and resting on Him alone for salvation. It is a gift of God that unites believers to Jesus and inevitably produces love, obedience, and endurance. The heroes of Hebrews 11 show that faith sees the unseen and acts on God's word even when circumstances argue otherwise.",
+  "KeyPassages": "Genesis 15:6; Habakkuk 2:4; Romans 10:17; Ephesians 2:8; Hebrews 11:1; Hebrews 11:6; James 2:17",
+  "RelatedPeople": "Abraham; Rahab; Moses; Paul; Jesus; Noah; Mary",
+  "RelatedDoctrines": "Faith; Justification by Faith; Perseverance",
+  "RelatedQuestions": "What is faith according to the Bible?; Can faith and doubt exist together?",
+  "RelatedBooks": "Genesis; Habakkuk; Romans; Ephesians; Hebrews; James",
+  "Slug": "faith",
+  "RelatedEvents": "The Binding of Isaac; Noah and the Flood; The Resurrection",
+  "Places": "Mount Ararat; Jerusalem"
 }

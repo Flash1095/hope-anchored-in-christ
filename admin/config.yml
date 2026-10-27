@@ -234,7 +234,7 @@ collections:
       - {label: "Related Finds", name: "RelatedFinds", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
   - name: "topics"
-    label: "Topics"
+    label: "Topics and Themes"
     folder: "content/topics"
     create: true
     slug: "{{fields.Topic}}"
@@ -253,25 +253,8 @@ collections:
       - {label: "Slug", name: "Slug", widget: "string"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
-  - name: "themes"
-    label: "Themes"
-    folder: "content/themes"
-    create: true
-    slug: "{{fields.Theme}}"
-    identifier_field: "Theme"
-    extension: "json"
-    format: "json"
-    fields:
-      - {label: "Theme", name: "Theme", widget: "string"}
-      - {label: "Summary", name: "Summary", widget: "text"}
-      - {label: "Key Passages", name: "KeyPassages", widget: "list"}
-      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
-      - {label: "Related People", name: "RelatedPeople", widget: "list"}
-      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
-      - {label: "Slug", name: "Slug", widget: "string"}
-      - {label: "Related Places", name: "Places", widget: "list"}
   - name: "doctrines"
-    label: "Doctrines"
+    label: "Theology and Doctrine"
     folder: "content/doctrines"
     create: true
     slug: "{{fields.Doctrine}}"
@@ -623,7 +606,7 @@ collections:
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
   - name: "jewishculture"
-    label: "Jewish Culture & the Messiah"
+    label: "Jewish Cultural Backgrounds"
     folder: "content/jewishculture"
     create: true
     slug: "{{fields.Topic}}"
@@ -677,7 +660,7 @@ collections:
             name: "blurbs"
             widget: "list"
             fields:
-              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "places", "topics", "themes", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories", "hermeneutics", "jewishculture", "studyguides", "civilizations"]}
+              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "places", "topics", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories", "hermeneutics", "jewishculture", "studyguides", "civilizations"]}
               - {label: "Description", name: "blurb", widget: "text"}
   - name: "store"
     label: "Store Products"
