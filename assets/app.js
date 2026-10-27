@@ -106,6 +106,12 @@
     "fallacies", "perspectives", "jewishculture", "hermeneutics", "heritage",
     "politics", "socialmedia", "courses", "studyguides", "quizzes", "hymns",
     "nature", "comicstories"];
+  /* Section headings for the Explore tiles, keyed by the collection that
+     starts each section. The first section combines the story and the
+     world behind it under one title, Foundations. */
+  var SECTION_HEADINGS = { timeline: "Foundations", questions: "Ask and Understand",
+    apologetics: "Defend and Discern", courses: "Learn and Practice",
+    hymns: "Worship and Wonder" };
 
   var REL_FIELDS = ["RelatedBooks", "RelatedPeople", "RelatedEvents", "RelatedTopics",
     "RelatedDoctrines", "RelatedQuestions", "RelatedFinds", "RelatedBook",
@@ -175,7 +181,7 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "120";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "121";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1280,9 +1286,24 @@
     html += "<div class='card gallery-card'><h3>Art Gallery</h3>" +
       "<p class='snippet'>Art, verse cards, and other pieces — and the ones for sale link through to the store.</p><p>" +
       "<a class='btn' href='#/gallery'>Browse the gallery</a></p></div>";
-    html += "<div class='card-grid'>" + EXPLORE_ORDER.map(function (id) { return coll(id); }).filter(Boolean)
-      .concat(COLLECTIONS.filter(function (c) { return EXPLORE_ORDER.indexOf(c.id) === -1; }))
-      .map(collectionCard).join("") + "</div>";
+    var ordered = EXPLORE_ORDER.map(function (id) { return coll(id); }).filter(Boolean)
+      .concat(COLLECTIONS.filter(function (c) { return EXPLORE_ORDER.indexOf(c.id) === -1; }));
+    var gridHtml = "";
+    var openGrid = false;
+    ordered.forEach(function (c, i) {
+      var heading = SECTION_HEADINGS[c.id];
+      var listed = EXPLORE_ORDER.indexOf(c.id) !== -1;
+      var prevListed = i > 0 && EXPLORE_ORDER.indexOf(ordered[i - 1].id) !== -1;
+      if (heading || (listed !== prevListed && i > 0) || !openGrid) {
+        if (openGrid) gridHtml += "</div>";
+        if (heading) gridHtml += "<h3>" + esc(heading) + "</h3>";
+        gridHtml += "<div class='card-grid'>";
+        openGrid = true;
+      }
+      gridHtml += collectionCard(c);
+    });
+    if (openGrid) gridHtml += "</div>";
+    html += gridHtml;
     app.innerHTML = html;
     var sel = document.getElementById("exploreJump");
     if (sel) sel.addEventListener("change", function () { if (sel.value) navigate(sel.value, true); });
