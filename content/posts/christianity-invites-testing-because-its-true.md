@@ -21,8 +21,6 @@ This isn’t a religion built on shallow claims or emotional comfort—it’s bu
 
 
 
-![Did You Know? Christianity invites testing](assets/posts/christianity-invites-testing-did-you-know.jpg?v=108)
-
 ## 1. Christianity Is Based on Verifiable Historical Claims
 
 Unlike many religious systems that are abstract or purely personal, Christianity hinges on **historical events**. The Apostle Paul makes this crystal clear:
