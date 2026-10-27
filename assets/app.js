@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "94";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "95";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -767,6 +767,22 @@
     });
     var html = "<h2>Quizzes</h2><p class='page-intro'>Test what you've learned — every answer teaches. " +
       (data.quizzes || []).length + " questions across " + groups.length + " quizzes.</p>";
+    var browseCats = [
+      { label: "Old Testament", url: "#/stories?f_Testament=" + encodeURIComponent("Old Testament") },
+      { label: "New Testament", url: "#/stories?f_Testament=" + encodeURIComponent("New Testament") },
+      { label: "Topics", url: "#/topics" },
+      { label: "Themes", url: "#/themes" },
+      { label: "People", url: "#/people" },
+      { label: "Places", url: "#/places" },
+      { label: "Stories", url: "#/stories" },
+      { label: "Blog posts", url: "#/blog" },
+      { label: "Other categories", url: "#/explore" }
+    ];
+    html += '<div class="controls"><span class="chip-label">Browse categories:</span>' +
+      '<select id="quizBrowseCats"><option value="">Choose a category…</option>' +
+      browseCats.map(function (c) {
+        return '<option value="' + esc(c.url) + '">' + esc(c.label) + "</option>";
+      }).join("") + "</select></div>";
     html += '<div class="controls"><div class="chips"><span class="chip-label">Category:</span>' +
       cats.map(function (c) {
         return '<button class="chip' + (cat === c.key ? " active" : "") + '" data-cat="' + c.key + '">' +
@@ -790,6 +806,10 @@
         var c = btn.getAttribute("data-cat");
         navigate(c ? "#/quizzes?category=" + c : "#/quizzes", true);
       });
+    });
+    var browseSel = document.getElementById("quizBrowseCats");
+    if (browseSel) browseSel.addEventListener("change", function () {
+      if (browseSel.value) navigate(browseSel.value, true);
     });
     window.scrollTo(0, 0);
   }
