@@ -159,7 +159,9 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "108";  // bump when site code or content changes, so browsers fetch fresh copies
+  var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
+  var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
+  var ASSET_V = "109";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1059,6 +1061,110 @@
     loadExcerpts();
     window.scrollTo(0, 0);
   }
+  /* ---------- storybook reader ---------- */
+  /* Three shelves, one reader: Bible stories (the stories collection),
+     plus pet stories and children's stories, which start empty and fill
+     as Lorraine sends them. Shelf items share one shape: Story (title),
+     Retelling (prose), Discussion (optional), Scripture (optional). */
+  var STORYBOOK_SHELVES = [
+    { key: "bible", label: "Bible Stories",
+      blurb: "Beloved Bible stories retold — read them one page at a time.",
+      items: function () { return data.stories || []; } },
+    { key: "pets", label: "Pet Stories",
+      blurb: "True tales and adventures of the animals we love.",
+      items: function () { return petStories; } },
+    { key: "children", label: "Children's Stories",
+      blurb: "Gentle stories for young readers, big and small.",
+      items: function () { return childStories; } }
+  ];
+  function storybookShelf(key) {
+    for (var i = 0; i < STORYBOOK_SHELVES.length; i++) {
+      if (STORYBOOK_SHELVES[i].key === key) return STORYBOOK_SHELVES[i];
+    }
+    return null;
+  }
+  /* Split prose into reading pages of about 100 words, breaking only at
+     sentence ends so no page stops mid-thought. */
+  function storybookPages(text) {
+    var src = String(text || "");
+    var sentences = src.match(/[^.!?]+[.!?]+["']?/g) || [];
+    var joined = sentences.join("");
+    var rest = src.slice(joined.length).trim();
+    if (rest) sentences.push(rest);
+    if (!sentences.length && src.trim()) sentences = [src];
+    var pages = [], page = [], words = 0;
+    sentences.forEach(function (s) {
+      var n = s.trim().split(/\s+/).length;
+      if (words > 0 && words + n > 100) { pages.push(page.join(" ")); page = []; words = 0; }
+      page.push(s.trim()); words += n;
+    });
+    if (page.length) pages.push(page.join(" "));
+    return pages.length ? pages : [""];
+  }
+  function storybookPara(text) {
+    return String(text || "").split(/\n\s*\n/).map(function (p) {
+      return "<p>" + esc(p.trim()) + "</p>";
+    }).join("");
+  }
+  function viewStorybook(shelfKey, idx, params) {
+    var shelf, items, i, html, item, pages, thinkPage, page, body, isThink;
+    if (!shelfKey) {
+      html = '<a class="back-link" href="#/explore">&larr; Explore</a><h2>Storybook Reader</h2>' +
+        '<p class="page-intro">Pick a shelf, pick a story, and read it one page at a time — just like a book.</p><div class="card-grid">' +
+        STORYBOOK_SHELVES.map(function (s) {
+          var n = s.items().length;
+          return '<a class="card" href="#/storybook/' + s.key + '"><h3>' + esc(s.label) + '</h3>' +
+            '<p class="meta">' + (n ? n + (n === 1 ? " story" : " stories") : "Coming soon") + '</p>' +
+            '<p class="snippet">' + esc(s.blurb) + '</p></a>';
+        }).join("") + "</div>";
+      app.innerHTML = html; window.scrollTo(0, 0); return;
+    }
+    shelf = storybookShelf(shelfKey);
+    if (!shelf) return viewStorybook(null, null, params);
+    items = shelf.items();
+    if (idx === undefined || idx === null || idx === "") {
+      html = '<a class="back-link" href="#/storybook">&larr; Storybook</a><h2>' + esc(shelf.label) + '</h2>';
+      if (!items.length) {
+        html += '<p class="empty">No ' + esc(shelf.label.toLowerCase()) + ' yet — new stories will appear here as they are added.</p>';
+      } else {
+        html += '<p class="page-intro">' + esc(shelf.blurb) + '</p><ul class="storybook-list">' +
+          items.map(function (it, j) {
+            return '<li><a href="#/storybook/' + shelf.key + '/' + j + '">' + esc(it.Story || ("Story " + (j + 1))) + "</a></li>";
+          }).join("") + "</ul>";
+      }
+      app.innerHTML = html; window.scrollTo(0, 0); return;
+    }
+    i = parseInt(idx, 10);
+    if (isNaN(i) || i < 0 || i >= items.length) return viewStorybook(shelfKey, null, params);
+    item = items[i];
+    if (!item.Retelling && !item.Discussion) {
+      app.innerHTML = '<a class="back-link" href="#/storybook/' + shelf.key + '">&larr; All ' + esc(shelf.label) + '</a>' +
+        '<p class="empty">This story has no text yet.</p>';
+      window.scrollTo(0, 0); return;
+    }
+    pages = storybookPages(item.Retelling || "");
+    thinkPage = 0;
+    if (item.Discussion) { pages.push(item.Discussion); thinkPage = pages.length; }
+    page = parseInt(params.get("page") || "1", 10);
+    if (isNaN(page) || page < 1) page = 1;
+    if (page > pages.length) page = pages.length;
+    body = pages[page - 1];
+    isThink = (thinkPage > 0 && page === thinkPage);
+    html = '<a class="back-link" href="#/storybook/' + shelf.key + '">&larr; All ' + esc(shelf.label) + '</a>' +
+      '<article class="storybook-page"><h2>' + esc(item.Story || "") + '</h2>' +
+      (item.Scripture ? '<p class="post-meta">' + esc(item.Scripture) + '</p>' : "") +
+      (isThink ? "<h3>Think about it</h3>" + storybookPara(body) : storybookPara(body)) +
+      '</article><div class="storybook-nav">' +
+      (page > 1 ? '<a class="btn" href="#/storybook/' + shelf.key + '/' + i + '?page=' + (page - 1) + '">&larr; Previous page</a>' : '<span></span>') +
+      '<span class="storybook-progress">Page ' + page + ' of ' + pages.length + '</span>' +
+      (page < pages.length ? '<a class="btn" href="#/storybook/' + shelf.key + '/' + i + '?page=' + (page + 1) + '">Next page &rarr;</a>' : '<span></span>') +
+      '</div>';
+    if (page === pages.length && shelf.key === "bible") {
+      html += '<p class="storybook-more"><a href="#/stories/' + i + '">Read the full story page &rarr;</a></p>';
+    }
+    html += '<p class="storybook-more"><a href="#/storybook">Back to the Storybook</a></p>';
+    app.innerHTML = html; window.scrollTo(0, 0);
+  }
   function viewExplore() {
     var html = "<h2>" + esc(explorePage.heading || "Explore") + "</h2><p class='page-intro'>" +
       esc(explorePage.intro || "Every collection on the site — pick one and start browsing.") + "</p>";
@@ -1071,6 +1177,11 @@
       cats.map(function (c) {
         return '<option value="#/' + c.id + '">' + esc(c.label) + " (" + c.n + ")</option>";
       }).join("") + "</select></div>";
+    html += "<div class='card storybook-card'><h3>Storybook Reader</h3>" +
+      "<p class='snippet'>Read stories like a book — one page at a time.</p><p>" +
+      STORYBOOK_SHELVES.map(function (s) {
+        return '<a class="btn" href="#/storybook/' + s.key + '">' + esc(s.label) + '</a>';
+      }).join(" ") + "</p></div>";
     html += "<div class='card-grid'>" + COLLECTIONS.map(collectionCard).join("") + "</div>";
     app.innerHTML = html;
     var sel = document.getElementById("exploreJump");
@@ -2022,6 +2133,7 @@
       if (comicStories().groups[ck]) return viewComicReader(ck);
       /* Unknown segment: fall through to the generic collection behavior below. */
     }
+    if (path[0] === "storybook") return viewStorybook(path[1] ? decodeURIComponent(path[1]) : null, path[2] ? decodeURIComponent(path[2]) : null, params);
     var c = coll(path[0]);
     if (c) return viewCollection(c.id, path[1] ? decodeURIComponent(path[1]) : null, params);
     return viewHome();
@@ -2033,7 +2145,7 @@
   });
   document.getElementById("footerNav").innerHTML =
     COLLECTIONS.map(function (c) { return '<a href="#/' + c.id + '">' + esc(c.label) + "</a>"; }).join("") +
-    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a>';
+    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a>';
 
   app.innerHTML = '<p class="loading">Loading the collections…</p>';
   var jobs = COLLECTIONS.map(function (c) {
@@ -2047,6 +2159,8 @@
   }).then(function (p) { posts = p; }));
   jobs.push(fetch("content/maps.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : {}; }).then(function (m) { maps = m; }).catch(function () { maps = {}; }));
   jobs.push(fetch("content/pages/explore.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : {}; }).then(function (p) { explorePage = p; }).catch(function () { explorePage = {}; }));
+  jobs.push(fetch("content/petstories.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (p) { petStories = p; }).catch(function () { petStories = []; }));
+  jobs.push(fetch("content/childrenstories.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (p) { childStories = p; }).catch(function () { childStories = []; }));
   Promise.all(jobs).then(function () {
     buildLinkIndex();
     window.addEventListener("hashchange", render);
