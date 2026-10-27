@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "97";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "98";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -950,7 +950,7 @@
     });
   }
   function collectionCard(c) {
-    var n = (data[c.id] || []).length;
+    var n = c.id === "quizzes" ? quizGroups().length : (data[c.id] || []).length;
     var blurb = c.blurb;
     (explorePage.blurbs || []).forEach(function (b) { if (b.collection === c.id && b.blurb) blurb = b.blurb; });
     var art = TILE_ART[c.id] ? "<img class='card-art' src='" + esc(TILE_ART[c.id]) + "' alt=''>" : "";
