@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "96";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "97";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -983,9 +983,20 @@
   }
   function viewExplore() {
     var html = "<h2>" + esc(explorePage.heading || "Explore") + "</h2><p class='page-intro'>" +
-      esc(explorePage.intro || "Every collection on the site — pick one and start browsing.") + "</p>" +
-      "<div class='card-grid'>" + COLLECTIONS.map(collectionCard).join("") + "</div>";
+      esc(explorePage.intro || "Every collection on the site — pick one and start browsing.") + "</p>";
+    var cats = COLLECTIONS.map(function (c) {
+      var n = c.id === "quizzes" ? quizGroups().length : (data[c.id] || []).length;
+      return { id: c.id, label: c.label, n: n };
+    }).sort(function (a, b) { return a.label.localeCompare(b.label); });
+    html += '<div class="controls"><span class="chip-label">Jump to a category:</span>' +
+      '<select id="exploreJump"><option value="">Choose a category…</option>' +
+      cats.map(function (c) {
+        return '<option value="#/' + c.id + '">' + esc(c.label) + " (" + c.n + ")</option>";
+      }).join("") + "</select></div>";
+    html += "<div class='card-grid'>" + COLLECTIONS.map(collectionCard).join("") + "</div>";
     app.innerHTML = html;
+    var sel = document.getElementById("exploreJump");
+    if (sel) sel.addEventListener("change", function () { if (sel.value) navigate(sel.value, true); });
     window.scrollTo(0, 0);
   }
   function viewBlog(slug) {

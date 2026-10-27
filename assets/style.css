@@ -183,7 +183,7 @@ a:hover { color: var(--gold-dark); }
   border-radius: 999px; padding: 0.25rem 0.8rem; cursor: pointer; font-size: 0.9rem;
 }
 .chip.active { background: var(--gold); color: #fff; border-color: var(--gold); }
-#quizCategorySelect {
+#quizCategorySelect, #exploreJump {
   padding: 0.5rem 0.8rem; border: 1px solid var(--line); border-radius: 999px;
   font-size: 1rem; background: #fff; color: var(--navy); max-width: 520px;
 }
