@@ -107,7 +107,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "95";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "96";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -748,48 +748,43 @@
     });
     return groups;
   }
-  function quizCategory(g) {
-    if (/ Story Quiz$/.test(g.name)) return g.course === "New Testament Survey" ? "nt" : "ot";
-    return "topic";
+  function quizInCategory(g, key) {
+    if (!key) return true;
+    if (key === "ot") return g.course === "Old Testament Survey";
+    if (key === "nt") return g.course === "New Testament Survey";
+    if (key === "stories") return / Story Quiz$/.test(g.name);
+    if (key === "topics") return !/ Story Quiz$/.test(g.name);
+    if (key === "people") return ["Old Testament People Quiz", "New Testament People Quiz", "Women of the Bible Quiz"].indexOf(g.name) !== -1;
+    if (key === "blog") return g.qs.some(function (q) { return (val(q, "ReadingLink") || "").indexOf("#/blog/") === 0; });
+    return true;
   }
   function viewQuizList(params) {
     var cat = params.get("category") || "";
-    if (["", "ot", "nt", "topic"].indexOf(cat) === -1) cat = "";
+    if (cat === "topic") cat = "topics";
+    if (["", "ot", "nt", "stories", "topics", "people", "blog"].indexOf(cat) === -1) cat = "";
     var groups = quizGroups();
     var cats = [
       { key: "", label: "All quizzes" },
-      { key: "ot", label: "Old Testament stories" },
-      { key: "nt", label: "New Testament stories" },
-      { key: "topic", label: "Topic quizzes" }
+      { key: "ot", label: "Old Testament" },
+      { key: "nt", label: "New Testament" },
+      { key: "stories", label: "Bible Stories" },
+      { key: "topics", label: "Bible Topics" },
+      { key: "people", label: "People of the Bible" },
+      { key: "blog", label: "From the Blog" }
     ];
     cats.forEach(function (c) {
-      c.count = c.key ? groups.filter(function (g) { return quizCategory(g) === c.key; }).length : groups.length;
+      c.count = groups.filter(function (g) { return quizInCategory(g, c.key); }).length;
     });
     var html = "<h2>Quizzes</h2><p class='page-intro'>Test what you've learned — every answer teaches. " +
       (data.quizzes || []).length + " questions across " + groups.length + " quizzes.</p>";
-    var browseCats = [
-      { label: "Old Testament", url: "#/stories?f_Testament=" + encodeURIComponent("Old Testament") },
-      { label: "New Testament", url: "#/stories?f_Testament=" + encodeURIComponent("New Testament") },
-      { label: "Topics", url: "#/topics" },
-      { label: "Themes", url: "#/themes" },
-      { label: "People", url: "#/people" },
-      { label: "Places", url: "#/places" },
-      { label: "Stories", url: "#/stories" },
-      { label: "Blog posts", url: "#/blog" },
-      { label: "Other categories", url: "#/explore" }
-    ];
-    html += '<div class="controls"><span class="chip-label">Browse categories:</span>' +
-      '<select id="quizBrowseCats"><option value="">Choose a category…</option>' +
-      browseCats.map(function (c) {
-        return '<option value="' + esc(c.url) + '">' + esc(c.label) + "</option>";
-      }).join("") + "</select></div>";
-    html += '<div class="controls"><div class="chips"><span class="chip-label">Category:</span>' +
+    html += '<div class="controls"><span class="chip-label">Categories:</span>' +
+      '<select id="quizCategorySelect">' +
       cats.map(function (c) {
-        return '<button class="chip' + (cat === c.key ? " active" : "") + '" data-cat="' + c.key + '">' +
-          c.label + " (" + c.count + ")</button>";
-      }).join("") + "</div></div>";
+        return '<option value="' + c.key + '"' + (cat === c.key ? " selected" : "") + ">" +
+          esc(c.label) + " (" + c.count + ")</option>";
+      }).join("") + "</select></div>";
     var shown = groups.filter(function (g) {
-      return !cat || quizCategory(g) === cat;
+      return quizInCategory(g, cat);
     }).sort(function (a, b) { return a.name.localeCompare(b.name); });
     html += '<div class="card-grid">' + shown.map(function (g) {
       var counts = {};
@@ -801,15 +796,9 @@
     }).join("") + "</div>";
     if (!shown.length) html += '<p class="empty">No quizzes in this category.</p>';
     app.innerHTML = html;
-    app.querySelectorAll("[data-cat]").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var c = btn.getAttribute("data-cat");
-        navigate(c ? "#/quizzes?category=" + c : "#/quizzes", true);
-      });
-    });
-    var browseSel = document.getElementById("quizBrowseCats");
-    if (browseSel) browseSel.addEventListener("change", function () {
-      if (browseSel.value) navigate(browseSel.value, true);
+    var sel = document.getElementById("quizCategorySelect");
+    if (sel) sel.addEventListener("change", function () {
+      navigate(sel.value ? "#/quizzes?category=" + sel.value : "#/quizzes", true);
     });
     window.scrollTo(0, 0);
   }
