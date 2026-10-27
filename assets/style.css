@@ -147,6 +147,7 @@ a:hover { color: var(--gold-dark); }
 .conn-plain { margin-right: 0.25rem; }
 .map-figure { margin: 1rem 0 1.5rem; }
 .map-figure img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; }
+.study-body img { width: 100%; max-width: 720px; height: auto; display: block; margin: 1rem auto; border: 1px solid var(--line); border-radius: 8px; }
 .map-figure figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 0.35rem; }
 /* ---------- nature tiles ---------- */
 .nature-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; margin-top: 1rem; }

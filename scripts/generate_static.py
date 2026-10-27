@@ -56,6 +56,14 @@ def esc(t):
 def inline(t):
     h = esc(t)
     h = h.replace("\\.", ".")
+    # Images first (before links, which would otherwise swallow them).
+    # Static pages sit two levels deep, so site-relative assets/ paths
+    # become ../../assets/ here; the live app uses assets/ unchanged.
+    h = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)",
+               lambda m: '<img src="%s" alt="%s" loading="lazy">' % (
+                   "../../" + m.group(2) if m.group(2).startswith("assets/") else m.group(2),
+                   m.group(1)),
+               h)
     # SPA routes (#/...) become relative links from blog/<slug>/ back to the app.
     h = re.sub(r"\[([^\]]+)\]\(([^)]+)\)",
                lambda m: '<a href="%s">%s</a>' % (

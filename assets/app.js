@@ -159,7 +159,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "104";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "105";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1937,6 +1937,7 @@
     function inline(t) {
       var h = esc(t);
       h = h.replace(/\\\./g, ".");
+      h = h.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" loading="lazy">');
       h = h.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
       h = h.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
       h = h.replace(/\*([^*]+)\*/g, "<em>$1</em>");
