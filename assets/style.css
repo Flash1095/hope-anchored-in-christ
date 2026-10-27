@@ -201,6 +201,7 @@ a:hover { color: var(--gold-dark); }
 
 /* Blog */
 .post-body { max-width: 740px; }
+.post-body img { width: 100%; max-width: 720px; height: auto; display: block; margin: 1rem auto; border: 1px solid var(--line); border-radius: 8px; }
 .bible-verses p { line-height: 1.9; margin: 0 0 1rem; }
 .bible-verses sup { color: var(--gold-dark); font-weight: 700; font-size: 0.75em; }
 .bible-verses a { text-decoration: underline; }
