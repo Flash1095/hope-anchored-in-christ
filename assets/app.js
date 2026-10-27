@@ -161,7 +161,7 @@
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
-  var ASSET_V = "109";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "110";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1065,7 +1065,9 @@
   /* Three shelves, one reader: Bible stories (the stories collection),
      plus pet stories and children's stories, which start empty and fill
      as Lorraine sends them. Shelf items share one shape: Story (title),
-     Retelling (prose), Discussion (optional), Scripture (optional). */
+     Retelling (prose), Discussion (optional), Scripture (optional).
+     Older stories carry Summary instead of Retelling — the reader falls
+     back to it, so every story reads. */
   var STORYBOOK_SHELVES = [
     { key: "bible", label: "Bible Stories",
       blurb: "Beloved Bible stories retold — read them one page at a time.",
@@ -1137,12 +1139,12 @@
     i = parseInt(idx, 10);
     if (isNaN(i) || i < 0 || i >= items.length) return viewStorybook(shelfKey, null, params);
     item = items[i];
-    if (!item.Retelling && !item.Discussion) {
+    if (!item.Retelling && !item.Discussion && !item.Summary) {
       app.innerHTML = '<a class="back-link" href="#/storybook/' + shelf.key + '">&larr; All ' + esc(shelf.label) + '</a>' +
         '<p class="empty">This story has no text yet.</p>';
       window.scrollTo(0, 0); return;
     }
-    pages = storybookPages(item.Retelling || "");
+    pages = storybookPages(item.Retelling || item.Summary || "");
     thinkPage = 0;
     if (item.Discussion) { pages.push(item.Discussion); thinkPage = pages.length; }
     page = parseInt(params.get("page") || "1", 10);
