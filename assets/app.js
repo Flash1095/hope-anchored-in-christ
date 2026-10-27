@@ -93,6 +93,19 @@
     blurb: "Step-by-step guides for studying a book, a topic, a person, or a passage — with questions and application for every study.",
     filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
 ];
+  /* Explore tile order, as a study journey: the story first, then the
+     world behind it, then deeper study, then discernment, then the
+     learn-and-practice trio in taxonomy order (take a course, use a
+     guide, test with a quiz), then worship and wonder. This order is
+     display-only: COLLECTIONS itself stays untouched, because its order
+     decides link-index tie-breaking. Any collection missing here falls
+     back to the end of the tiles, so nothing can ever disappear. */
+  var EXPLORE_ORDER = ["timeline", "books", "stories", "people", "places",
+    "finds", "questions", "topics", "themes", "wordstudies", "doctrines",
+    "prophecies", "typology", "apologetics", "objections", "heresies",
+    "fallacies", "perspectives", "jewishculture", "hermeneutics", "heritage",
+    "politics", "socialmedia", "courses", "studyguides", "quizzes", "hymns",
+    "nature", "comicstories"];
 
   var REL_FIELDS = ["RelatedBooks", "RelatedPeople", "RelatedEvents", "RelatedTopics",
     "RelatedDoctrines", "RelatedQuestions", "RelatedFinds", "RelatedBook",
@@ -162,7 +175,7 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "119";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "120";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1267,7 +1280,9 @@
     html += "<div class='card gallery-card'><h3>Art Gallery</h3>" +
       "<p class='snippet'>Art, verse cards, and other pieces — and the ones for sale link through to the store.</p><p>" +
       "<a class='btn' href='#/gallery'>Browse the gallery</a></p></div>";
-    html += "<div class='card-grid'>" + COLLECTIONS.map(collectionCard).join("") + "</div>";
+    html += "<div class='card-grid'>" + EXPLORE_ORDER.map(function (id) { return coll(id); }).filter(Boolean)
+      .concat(COLLECTIONS.filter(function (c) { return EXPLORE_ORDER.indexOf(c.id) === -1; }))
+      .map(collectionCard).join("") + "</div>";
     app.innerHTML = html;
     var sel = document.getElementById("exploreJump");
     if (sel) sel.addEventListener("change", function () { if (sel.value) navigate(sel.value, true); });
