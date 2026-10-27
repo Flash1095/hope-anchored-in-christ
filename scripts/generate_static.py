@@ -225,6 +225,44 @@ def label(field):
         return "Related Places"
     if field == "Place":
         return "Related Place"
+    study_labels = {
+        "StudyOverview": "Basic Book Information & Overview",
+        "StudyAuthorship": "Authorship & Composition",
+        "StudyHistoricalBackground": "Historical Background",
+        "StudyCulturalContext": "Cultural & Religious Context",
+        "StudyLiteraryStructure": "Literary Structure & Book Outline",
+        "StudyChapterByChapter": "Chapter-by-Chapter Studies",
+        "StudyMajorThemes": "Major Themes",
+        "StudyTheologyDoctrine": "Theology & Doctrine",
+        "StudyChristMessianic": "Jesus Christ & Messianic Connections",
+        "StudyProphecyFulfillment": "Biblical Prophecy & Fulfillment",
+        "StudyPeopleGenealogies": "Biblical People & Genealogies",
+        "StudyGeographyMaps": "Biblical Geography & Maps",
+        "StudyArchaeology": "Archaeology & Historical Evidence",
+        "StudyLanguages": "Original Languages & Word Studies",
+        "StudyManuscriptsCanon": "Ancient Manuscripts, Textual Criticism & Canon",
+        "StudyApologetics": "Apologetics & Difficult Bible Passages",
+        "StudyCrossReferences": "Cross-References & Biblical Connections",
+        "StudyJewishBackground": "Jewish Background & Interpretation",
+        "StudyEthicsApplication": "Ethics & Practical Application",
+        "StudyResourcesActivities": "Bible Study Resources & Interactive Activities",
+        "StudyQuizzesTrivia": "Bible Quizzes & Trivia",
+        "StudyImportantVerses": "Important Bible Verses",
+        "StudyEventsChronology": "Biblical Events & Chronology",
+        "StudyCovenantsLaws": "Covenants, Laws & Commandments",
+        "StudyMiraclesParables": "Miracles, Parables & Teachings",
+        "StudySymbolism": "Symbolism, Imagery & Literary Devices",
+        "StudyInterpretations": "Historical & Theological Interpretations",
+        "StudyMisconceptions": "Common Misconceptions & Misinterpretations",
+        "StudyQuestionsAnswers": "Questions & Answers",
+        "StudyChurchHistory": "Christian Church History & Historical Reception",
+        "StudyTranslations": "Bible Translation Comparisons",
+        "StudyRelatedPosts": "Related Blog Posts & Articles",
+        "StudySources": "Scholarly Sources, References & Further Reading",
+        "StudyTakeaways": "Key Takeaways & Book Summary",
+    }
+    if field in study_labels:
+        return study_labels[field]
     s = re.sub(r"([A-Z]+)([A-Z][a-z])", r"\1 \2", field)
     s = re.sub(r"([a-z0-9])([A-Z])", r"\1 \2", s)
     return s[:1].upper() + s[1:] if s else s
@@ -369,6 +407,20 @@ BIBLE_BOOKS = []
 
 SCRIPTURE_FIELDS = ["KeyVerses", "KeyPassages", "KeyScriptures", "ScriptureReference",
                     "ScriptureIlluminated", "BibleReferences"]
+# Bible book study sections (Genesis page): long-form prose, one paragraph
+# per line. Static pages render the same text as plain paragraphs (the live
+# page additionally auto-links entry names through the Bible name index).
+STUDY_FIELDS = ["StudyOverview", "StudyAuthorship", "StudyHistoricalBackground",
+    "StudyCulturalContext", "StudyLiteraryStructure", "StudyChapterByChapter",
+    "StudyMajorThemes", "StudyTheologyDoctrine", "StudyChristMessianic",
+    "StudyProphecyFulfillment", "StudyPeopleGenealogies", "StudyGeographyMaps",
+    "StudyArchaeology", "StudyLanguages", "StudyManuscriptsCanon", "StudyApologetics",
+    "StudyCrossReferences", "StudyJewishBackground", "StudyEthicsApplication",
+    "StudyResourcesActivities", "StudyQuizzesTrivia", "StudyImportantVerses",
+    "StudyEventsChronology", "StudyCovenantsLaws", "StudyMiraclesParables",
+    "StudySymbolism", "StudyInterpretations", "StudyMisconceptions",
+    "StudyQuestionsAnswers", "StudyChurchHistory", "StudyTranslations",
+    "StudyRelatedPosts", "StudySources", "StudyTakeaways"]
 
 
 def linkify_scripture_refs(value):
@@ -461,6 +513,9 @@ def render_entry_field(field, value, cur_coll, glob, home):
     if field == "DetailedAnswer":
         paras = [p for p in re.split(r"\n\s*\n", value) if p.strip()]
         return "".join("<p>%s</p>" % esc(p).replace("\n", "<br>") for p in paras)
+    if field in STUDY_FIELDS:
+        paras = [p for p in value.split("\n") if p.strip()]
+        return "".join("<p>%s</p>" % esc(p.strip()) for p in paras)
     return esc(value)
 
 

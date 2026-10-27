@@ -67,6 +67,40 @@ collections:
       - {label: "Historical Context", name: "HistoricalContext", widget: "text"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Basic Book Information & Overview", name: "StudyOverview", widget: "text", required: false}
+      - {label: "Authorship & Composition", name: "StudyAuthorship", widget: "text", required: false}
+      - {label: "Historical Background", name: "StudyHistoricalBackground", widget: "text", required: false}
+      - {label: "Cultural & Religious Context", name: "StudyCulturalContext", widget: "text", required: false}
+      - {label: "Literary Structure & Book Outline", name: "StudyLiteraryStructure", widget: "text", required: false}
+      - {label: "Chapter-by-Chapter Studies", name: "StudyChapterByChapter", widget: "text", required: false}
+      - {label: "Major Themes", name: "StudyMajorThemes", widget: "text", required: false}
+      - {label: "Theology & Doctrine", name: "StudyTheologyDoctrine", widget: "text", required: false}
+      - {label: "Jesus Christ & Messianic Connections", name: "StudyChristMessianic", widget: "text", required: false}
+      - {label: "Biblical Prophecy & Fulfillment", name: "StudyProphecyFulfillment", widget: "text", required: false}
+      - {label: "Biblical People & Genealogies", name: "StudyPeopleGenealogies", widget: "text", required: false}
+      - {label: "Biblical Geography & Maps", name: "StudyGeographyMaps", widget: "text", required: false}
+      - {label: "Archaeology & Historical Evidence", name: "StudyArchaeology", widget: "text", required: false}
+      - {label: "Original Languages & Word Studies", name: "StudyLanguages", widget: "text", required: false}
+      - {label: "Ancient Manuscripts, Textual Criticism & Canon", name: "StudyManuscriptsCanon", widget: "text", required: false}
+      - {label: "Apologetics & Difficult Bible Passages", name: "StudyApologetics", widget: "text", required: false}
+      - {label: "Cross-References & Biblical Connections", name: "StudyCrossReferences", widget: "text", required: false}
+      - {label: "Jewish Background & Interpretation", name: "StudyJewishBackground", widget: "text", required: false}
+      - {label: "Ethics & Practical Application", name: "StudyEthicsApplication", widget: "text", required: false}
+      - {label: "Bible Study Resources & Interactive Activities", name: "StudyResourcesActivities", widget: "text", required: false}
+      - {label: "Bible Quizzes & Trivia", name: "StudyQuizzesTrivia", widget: "text", required: false}
+      - {label: "Important Bible Verses", name: "StudyImportantVerses", widget: "text", required: false}
+      - {label: "Biblical Events & Chronology", name: "StudyEventsChronology", widget: "text", required: false}
+      - {label: "Covenants, Laws & Commandments", name: "StudyCovenantsLaws", widget: "text", required: false}
+      - {label: "Miracles, Parables & Teachings", name: "StudyMiraclesParables", widget: "text", required: false}
+      - {label: "Symbolism, Imagery & Literary Devices", name: "StudySymbolism", widget: "text", required: false}
+      - {label: "Historical & Theological Interpretations", name: "StudyInterpretations", widget: "text", required: false}
+      - {label: "Common Misconceptions & Misinterpretations", name: "StudyMisconceptions", widget: "text", required: false}
+      - {label: "Questions & Answers", name: "StudyQuestionsAnswers", widget: "text", required: false}
+      - {label: "Christian Church History & Historical Reception", name: "StudyChurchHistory", widget: "text", required: false}
+      - {label: "Bible Translation Comparisons", name: "StudyTranslations", widget: "text", required: false}
+      - {label: "Related Blog Posts & Articles", name: "StudyRelatedPosts", widget: "text", required: false}
+      - {label: "Scholarly Sources, References & Further Reading", name: "StudySources", widget: "text", required: false}
+      - {label: "Key Takeaways & Book Summary", name: "StudyTakeaways", widget: "text", required: false}
   - name: "questions"
     label: "Questions and Answers"
     folder: "content/questions"

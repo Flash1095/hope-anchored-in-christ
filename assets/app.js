@@ -99,6 +99,57 @@
     "KeyPersons", "KeyPeople", "BibleBooks", "Places", "Events",
     "KeyScriptures", "KeyPassages", "KeyVerses", "ScriptureReference",
     "ScriptureIlluminated", "BibleReferences", "Tags", "Themes", "Place", "Prophet", "Course"];
+  /* Bible book study sections (Genesis page): long-form prose. Each line
+     is one paragraph on the live page, and entry names link automatically
+     through the same name index the Bible reader uses — nothing here is
+     hand-listed, so new entries link the moment their data ships. */
+  var STUDY_FIELDS = ["StudyOverview", "StudyAuthorship", "StudyHistoricalBackground",
+    "StudyCulturalContext", "StudyLiteraryStructure", "StudyChapterByChapter",
+    "StudyMajorThemes", "StudyTheologyDoctrine", "StudyChristMessianic",
+    "StudyProphecyFulfillment", "StudyPeopleGenealogies", "StudyGeographyMaps",
+    "StudyArchaeology", "StudyLanguages", "StudyManuscriptsCanon", "StudyApologetics",
+    "StudyCrossReferences", "StudyJewishBackground", "StudyEthicsApplication",
+    "StudyResourcesActivities", "StudyQuizzesTrivia", "StudyImportantVerses",
+    "StudyEventsChronology", "StudyCovenantsLaws", "StudyMiraclesParables",
+    "StudySymbolism", "StudyInterpretations", "StudyMisconceptions",
+    "StudyQuestionsAnswers", "StudyChurchHistory", "StudyTranslations",
+    "StudyRelatedPosts", "StudySources", "StudyTakeaways"];
+  var STUDY_LABELS = {
+    "StudyOverview": "Basic Book Information & Overview",
+    "StudyAuthorship": "Authorship & Composition",
+    "StudyHistoricalBackground": "Historical Background",
+    "StudyCulturalContext": "Cultural & Religious Context",
+    "StudyLiteraryStructure": "Literary Structure & Book Outline",
+    "StudyChapterByChapter": "Chapter-by-Chapter Studies",
+    "StudyMajorThemes": "Major Themes",
+    "StudyTheologyDoctrine": "Theology & Doctrine",
+    "StudyChristMessianic": "Jesus Christ & Messianic Connections",
+    "StudyProphecyFulfillment": "Biblical Prophecy & Fulfillment",
+    "StudyPeopleGenealogies": "Biblical People & Genealogies",
+    "StudyGeographyMaps": "Biblical Geography & Maps",
+    "StudyArchaeology": "Archaeology & Historical Evidence",
+    "StudyLanguages": "Original Languages & Word Studies",
+    "StudyManuscriptsCanon": "Ancient Manuscripts, Textual Criticism & Canon",
+    "StudyApologetics": "Apologetics & Difficult Bible Passages",
+    "StudyCrossReferences": "Cross-References & Biblical Connections",
+    "StudyJewishBackground": "Jewish Background & Interpretation",
+    "StudyEthicsApplication": "Ethics & Practical Application",
+    "StudyResourcesActivities": "Bible Study Resources & Interactive Activities",
+    "StudyQuizzesTrivia": "Bible Quizzes & Trivia",
+    "StudyImportantVerses": "Important Bible Verses",
+    "StudyEventsChronology": "Biblical Events & Chronology",
+    "StudyCovenantsLaws": "Covenants, Laws & Commandments",
+    "StudyMiraclesParables": "Miracles, Parables & Teachings",
+    "StudySymbolism": "Symbolism, Imagery & Literary Devices",
+    "StudyInterpretations": "Historical & Theological Interpretations",
+    "StudyMisconceptions": "Common Misconceptions & Misinterpretations",
+    "StudyQuestionsAnswers": "Questions & Answers",
+    "StudyChurchHistory": "Christian Church History & Historical Reception",
+    "StudyTranslations": "Bible Translation Comparisons",
+    "StudyRelatedPosts": "Related Blog Posts & Articles",
+    "StudySources": "Scholarly Sources, References & Further Reading",
+    "StudyTakeaways": "Key Takeaways & Book Summary"
+  };
   var SNIPPET_FIELDS = ["Summary", "Description", "Story", "Definition", "ShortAnswer",
     "ProphecySummary", "Explanation", "BiblicalUsage", "Beliefs"];
   var SKIP_FIELDS = ["Slug", "Maps", "Image", "ImageCredit", "ImageSource", "PanelImage", "PanelImageCredit"];
@@ -107,7 +158,7 @@
   var posts = [];     // blog manifest
   var maps = {};      // map id -> {title, file, credit, source}
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
-  var ASSET_V = "99";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "100";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -176,6 +227,7 @@
   function label(field) {
     if (field === "Places") return "Related Places";
     if (field === "Place") return "Related Place";
+    if (STUDY_LABELS[field]) return STUDY_LABELS[field];
     return field.replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
       .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
       .replace(/^./, function (c) { return c.toUpperCase(); });
@@ -364,6 +416,11 @@
     if (field === "DetailedAnswer") {
       return value.split(/\n\s*\n/).filter(function (p) { return p.trim() !== ""; }).map(function (para) {
         return "<p>" + esc(para).replace(/\n/g, "<br>") + "</p>";
+      }).join("");
+    }
+    if (STUDY_FIELDS.indexOf(field) !== -1) {
+      return value.split(/\n/).filter(function (p) { return p.trim() !== ""; }).map(function (para) {
+        return "<p>" + linkifyVerseText(para.trim()) + "</p>";
       }).join("");
     }
     return esc(value);
