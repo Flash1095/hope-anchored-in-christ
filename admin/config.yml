@@ -317,7 +317,7 @@ collections:
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
   - name: "prophecies"
-    label: "Prophecies"
+    label: "Biblical Prophecies"
     folder: "content/prophecies"
     create: true
     slug: "{{fields.Prophecy}}"
@@ -339,7 +339,7 @@ collections:
       - {label: "Slug", name: "Slug", widget: "string"}
       - {label: "Related Places", name: "Places", widget: "list"}
   - name: "typology"
-    label: "Typology"
+    label: "Foreshadows of Christ"
     folder: "content/typology"
     create: true
     slug: "{{fields.Type}}"

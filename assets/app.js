@@ -38,11 +38,11 @@
     { id: "wordstudies", label: "Word Studies", file: "content/wordstudies.json", primary: "Transliteration",
       blurb: "Hebrew and Greek words, with Strong's numbers and meaning.",
       filters: [{ label: "Language", field: "Language" }], meta: ["Language", "StrongsNumber", "PartOfSpeech"] },
-    { id: "prophecies", label: "Prophecies", file: "content/prophecies.json", primary: "Prophecy",
+    { id: "prophecies", label: "Biblical Prophecies", file: "content/prophecies.json", primary: "Prophecy",
       blurb: "What was foretold, how it was fulfilled — marked honestly.",
       filters: [{ label: "Status", field: "FulfillmentStatus" }, { label: "Era", field: "TimelineEra" }],
       meta: ["Prophet", "DateApprox"] },
-    { id: "typology", label: "Typology", file: "content/typology.json", primary: "Type",
+    { id: "typology", label: "Foreshadows of Christ", file: "content/typology.json", primary: "Type",
       blurb: "Old Testament shadows fulfilled in Christ.",
       filters: [{ label: "Category", field: "Category" }] },
     { id: "fallacies", label: "Logical Fallacies", file: "content/fallacies.json", primary: "Fallacy",
@@ -180,7 +180,7 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "125";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "126";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
