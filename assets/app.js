@@ -100,9 +100,9 @@
      decides link-index tie-breaking. Any collection missing here falls
      back to the end of the tiles, so nothing can ever disappear. */
   var EXPLORE_ORDER = ["timeline", "books", "stories", "people", "places",
-    "finds", "civilizations", "questions", "topics", "wordstudies", "doctrines",
-    "prophecies", "typology", "apologetics", "objections", "heresies",
-    "fallacies", "perspectives", "jewishculture", "hermeneutics", "heritage",
+    "finds", "civilizations", "questions", "hermeneutics", "jewishculture",
+    "topics", "wordstudies", "doctrines", "prophecies", "typology", "apologetics",
+    "objections", "heresies", "fallacies", "perspectives", "heritage",
     "politics", "socialmedia", "courses", "studyguides", "quizzes", "hymns",
     "nature"];
   /* Section headings for the Explore tiles, keyed by the collection that
@@ -180,7 +180,7 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "127";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "128";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
