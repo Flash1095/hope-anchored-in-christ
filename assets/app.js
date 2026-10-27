@@ -109,7 +109,7 @@
   /* Section headings for the Explore tiles, keyed by the collection that
      starts each section. The first section combines the story and the
      world behind it under one title, Foundations. */
-  var SECTION_HEADINGS = { timeline: "Foundations", questions: "Ask and Understand",
+  var SECTION_HEADINGS = { timeline: "Biblical Foundations", questions: "Ask and Understand",
     apologetics: "Defend and Discern", courses: "Learn and Practice",
     hymns: "Worship and Wonder" };
 
@@ -181,7 +181,7 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "121";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "122";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
