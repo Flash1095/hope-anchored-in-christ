@@ -34,7 +34,7 @@
       blurb: "The great themes woven through Scripture." },
     { id: "doctrines", label: "Doctrines", file: "content/doctrines.json", primary: "Doctrine",
       blurb: "What Christians believe, with biblical support and history." },
-    { id: "heresies", label: "Heresies", file: "content/heresies.json", primary: "Heresy",
+    { id: "heresies", label: "Heretical Teachings", file: "content/heresies.json", primary: "Heresy",
       blurb: "False teachings answered, with the Christian response.",
       meta: ["Founder"] },
     { id: "wordstudies", label: "Word Studies", file: "content/wordstudies.json", primary: "Transliteration",
@@ -47,7 +47,7 @@
     { id: "typology", label: "Typology", file: "content/typology.json", primary: "Type",
       blurb: "Old Testament shadows fulfilled in Christ.",
       filters: [{ label: "Category", field: "Category" }] },
-    { id: "fallacies", label: "Fallacies", file: "content/fallacies.json", primary: "Fallacy",
+    { id: "fallacies", label: "Logical Fallacies", file: "content/fallacies.json", primary: "Fallacy",
       blurb: "Spot bad reasoning in faith discussions — and answer graciously.",
       filters: [{ label: "Category", field: "Category" }] },
     { id: "courses", label: "Courses", file: "content/courses.json", primary: "Course",
@@ -67,7 +67,7 @@
   { id: "objections", label: "Objections & Answers", file: "content/objections.json", primary: "Objection",
     blurb: "Honest objections from atheists, Muslims, Jews, and others — stated fairly and answered with grace and truth.",
     filters: [{ label: "Worldview", field: "Worldview" }], meta: ["Worldview"] },
-  { id: "perspectives", label: "Perspectives", file: "content/perspectives.json", primary: "Profession",
+  { id: "perspectives", label: "Different Perspectives", file: "content/perspectives.json", primary: "Profession",
     blurb: "How journalists, detectives, doctors, and other professionals shed light on the truth of the Bible.",
     meta: ["Exemplar"] },
   { id: "heritage", label: "Christian Heritage", file: "content/heritage.json", primary: "Name",
@@ -90,6 +90,9 @@
   { id: "studyguides", label: "Bible Study Guides", file: "content/studyguides.json", primary: "Guide",
     blurb: "Step-by-step guides for studying a book, a topic, a person, or a passage — with questions and application for every study.",
     filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
+  { id: "civilizations", label: "Ancient Civilizations", file: "content/civilizations.json", primary: "Civilization",
+    blurb: "The empires and peoples around Israel — Egypt, Assyria, Babylon, Persia, Greece, Rome, and their neighbors — and how each one touches the Bible story.",
+    filters: [{ label: "Region", field: "Region" }], meta: ["Region"] },
 ];
   /* Explore tile order, as a study journey: the story first, then the
      world behind it, then deeper study, then discernment, then the
@@ -99,7 +102,7 @@
      decides link-index tie-breaking. Any collection missing here falls
      back to the end of the tiles, so nothing can ever disappear. */
   var EXPLORE_ORDER = ["timeline", "books", "stories", "people", "places",
-    "finds", "questions", "topics", "themes", "wordstudies", "doctrines",
+    "finds", "civilizations", "questions", "topics", "themes", "wordstudies", "doctrines",
     "prophecies", "typology", "apologetics", "objections", "heresies",
     "fallacies", "perspectives", "jewishculture", "hermeneutics", "heritage",
     "politics", "socialmedia", "courses", "studyguides", "quizzes", "hymns",
@@ -179,7 +182,7 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "123";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "124";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a

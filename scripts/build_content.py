@@ -61,6 +61,7 @@ SOURCES = [
     ("hermeneutics", "hermeneutics-cms/Hermeneutics CMS.csv", "Principle"),
     ("jewishculture", "jewishculture-cms/Jewish Culture CMS.csv", "Topic"),
     ("studyguides", "studyguides-cms/Study Guides CMS.csv", "Guide"),
+    ("civilizations", "civilizations-cms/Civilizations CMS.csv", "Civilization"),
 ]
 
 

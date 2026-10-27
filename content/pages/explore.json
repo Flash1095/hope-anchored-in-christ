@@ -113,6 +113,10 @@
     {
       "collection": "studyguides",
       "blurb": "Step-by-step guides for studying a book, a topic, a person, or a passage — with questions and application for every study."
+    },
+    {
+      "collection": "civilizations",
+      "blurb": "The empires and peoples around Israel — Egypt, Assyria, Babylon, Persia, Greece, Rome, and their neighbors — and how each one touches the Bible story."
     }
   ]
 }

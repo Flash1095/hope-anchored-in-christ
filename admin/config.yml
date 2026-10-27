@@ -211,6 +211,28 @@ collections:
       - {label: "Slug", name: "Slug", widget: "string"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+  - name: "civilizations"
+    label: "Ancient Civilizations"
+    folder: "content/civilizations"
+    create: true
+    slug: "{{fields.Slug}}"
+    identifier_field: "Slug"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Civilization", name: "Civilization", widget: "string"}
+      - {label: "Time Period", name: "TimePeriod", widget: "string"}
+      - {label: "Region", name: "Region", widget: "string"}
+      - {label: "History", name: "History", widget: "text"}
+      - {label: "Culture", name: "Culture", widget: "text"}
+      - {label: "Religion", name: "Religion", widget: "text"}
+      - {label: "Bible Connection", name: "BibleConnection", widget: "text"}
+      - {label: "Key Scriptures", name: "KeyScriptures", widget: "string"}
+      - {label: "Related People", name: "RelatedPeople", widget: "list"}
+      - {label: "Related Places", name: "RelatedPlaces", widget: "list"}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Related Finds", name: "RelatedFinds", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
   - name: "topics"
     label: "Topics"
     folder: "content/topics"
@@ -268,7 +290,7 @@ collections:
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
   - name: "heresies"
-    label: "Heresies"
+    label: "Heretical Teachings"
     folder: "content/heresies"
     create: true
     slug: "{{fields.Heresy}}"
@@ -354,7 +376,7 @@ collections:
       - {label: "Slug", name: "Slug", widget: "string"}
       - {label: "Related Places", name: "Places", widget: "list"}
   - name: "fallacies"
-    label: "Fallacies"
+    label: "Logical Fallacies"
     folder: "content/fallacies"
     create: true
     slug: "{{fields.Fallacy}}"
@@ -489,7 +511,7 @@ collections:
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
   - name: "perspectives"
-    label: "Perspectives"
+    label: "Different Perspectives"
     folder: "content/perspectives"
     create: true
     slug: "{{fields.Profession}}"
@@ -655,7 +677,7 @@ collections:
             name: "blurbs"
             widget: "list"
             fields:
-              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "places", "topics", "themes", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories", "hermeneutics", "jewishculture", "studyguides"]}
+              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "places", "topics", "themes", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories", "hermeneutics", "jewishculture", "studyguides", "civilizations"]}
               - {label: "Description", name: "blurb", widget: "text"}
   - name: "store"
     label: "Store Products"
