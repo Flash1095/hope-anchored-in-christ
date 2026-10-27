@@ -195,7 +195,7 @@ FOOTER = """
 """
 
 
-def post_page(slug, fm, body_html, desc):
+def post_page(slug, fm, body_html, desc, series_nav=""):
     title = fm.get("title", slug)
     url = "%s/blog/%s/" % (SITE_URL, slug)
     meta_bits = [fm.get("date", "")]
@@ -204,6 +204,11 @@ def post_page(slug, fm, body_html, desc):
     if fm.get("scripture"):
         meta_bits.append(fm["scripture"])
     meta = " &middot; ".join(esc(b) for b in meta_bits if b)
+    series_line = ""
+    if fm.get("series"):
+        series_line = '<p class="post-meta">Series: %s%s</p>' % (
+            esc(fm["series"]),
+            " &middot; Part %s" % esc(fm["part"]) if fm.get("part") else "")
     return """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -231,6 +236,8 @@ def post_page(slug, fm, body_html, desc):
 <article class="post-body">
 <h1>{title}</h1>
 <p class="post-meta">{meta}</p>
+{series_line}
+{series_nav}
 {body}
 <p><a class="btn" href="../../#/blog/{slug}">Read on the full site &rarr;</a></p>
 </article>
@@ -240,7 +247,8 @@ def post_page(slug, fm, body_html, desc):
 </html>
 """.format(title=esc(title), desc=esc(desc), url=url, site=SITE_URL,
            banner_v=BANNER_V, header=HEADER.format(banner_v=BANNER_V),
-           meta=meta, body=body_html, slug=slug, footer=FOOTER)
+           meta=meta, body=body_html, slug=slug, footer=FOOTER,
+           series_line=series_line, series_nav=series_nav)
 
 
 REL_FIELDS = ["RelatedBooks", "RelatedPeople", "RelatedEvents", "RelatedTopics",
@@ -735,18 +743,43 @@ def main():
             continue
         slug, fm, body = parse_post(os.path.join(posts_dir, fname))
         desc = description_for(body)
+        posts.append((slug, fm, body, desc))
+        print("post: blog/%s/ (%s)" % (slug, fm.get("title", slug)))
+    # Series navigation: posts sharing a `series` frontmatter name, ordered
+    # by numeric `part` (a post without a part sorts first).
+    def part_no(fm):
+        try:
+            return int(fm.get("part") or 0)
+        except ValueError:
+            return 0
+    series_groups = {}
+    for slug, fm, body, desc in posts:
+        if fm.get("series"):
+            series_groups.setdefault(fm["series"], []).append((slug, fm))
+    series_navs = {}
+    for name, members in series_groups.items():
+        members.sort(key=lambda sf: (part_no(sf[1]), sf[1].get("date", "")))
+        for i, (slug, fm) in enumerate(members):
+            bits = []
+            if i > 0:
+                bits.append("&larr; Previous part: <a href=\"../%s/\">%s</a>" % (
+                    members[i - 1][0], esc(members[i - 1][1].get("title", members[i - 1][0]))))
+            if i < len(members) - 1:
+                bits.append("Next part: <a href=\"../%s/\">%s</a> &rarr;" % (
+                    members[i + 1][0], esc(members[i + 1][1].get("title", members[i + 1][0]))))
+            if bits:
+                series_navs[slug] = "<p class=\"post-meta\">" + " &nbsp;|&nbsp; ".join(bits) + "</p>"
+    for slug, fm, body, desc in posts:
         out_dir = os.path.join(ROOT, "blog", slug)
         os.makedirs(out_dir, exist_ok=True)
         with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as fh:
-            fh.write(post_page(slug, fm, render_markdown(body), desc))
-        posts.append((slug, fm, desc))
-        print("post: blog/%s/ (%s)" % (slug, fm.get("title", slug)))
+            fh.write(post_page(slug, fm, render_markdown(body), desc, series_navs.get(slug, "")))
     # Listing page for crawlers (and anyone landing on /blog/ directly).
     items = "".join(
         '<p><a href="./%s/">%s</a><br><span class="meta">%s</span></p>\n' % (
             slug, esc(fm.get("title", slug)),
             esc(" · ".join(b for b in [fm.get("date", ""), fm.get("category", "")] if b)))
-        for slug, fm, _ in posts)
+        for slug, fm, *_ in posts)
     listing = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -788,7 +821,7 @@ def main():
     # separate pages and must not appear here.
     urls = [(SITE_URL + "/", None), (SITE_URL + "/blog/", None)]
     urls += [("%s/blog/%s/" % (SITE_URL, slug), fm.get("date"))
-             for slug, fm, _ in posts]
+             for slug, fm, *_ in posts]
     urls += [(u, None) for u in entry_urls]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

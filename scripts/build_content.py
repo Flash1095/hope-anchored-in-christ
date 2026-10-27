@@ -186,6 +186,8 @@ def build_posts_manifest():
             "date": meta.get("date", ""),
             "category": meta.get("category", ""),
             "scripture": meta.get("scripture", ""),
+            "series": meta.get("series", ""),
+            "part": meta.get("part", ""),
             "file": f"content/posts/{fname}",
         })
     posts.sort(key=lambda p: p["date"], reverse=True)

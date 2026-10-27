@@ -162,7 +162,7 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "118";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "119";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -205,7 +205,7 @@
       }
     });
     var slug = file.split("/").pop().replace(/\.md$/, "");
-    return { slug: slug, title: meta.title || slug, date: meta.date || "", category: meta.category || "", scripture: meta.scripture || "", file: file };
+    return { slug: slug, title: meta.title || slug, date: meta.date || "", category: meta.category || "", scripture: meta.scripture || "", series: meta.series || "", part: meta.part || "", file: file };
   }
   function loadPostsFromGithub() {
     return fetch("https://api.github.com/repos/Flash1095/hope-anchored-in-christ/contents/content/posts?ref=main", { cache: "no-store" }).then(function (r) {
@@ -1010,8 +1010,9 @@
      first paragraph once its file loads; cards read fine without them. */
   function postRowCard(p, label) {
     var art = POST_ART[p.slug] ? "<img class='post-row-art' src='" + esc(POST_ART[p.slug]) + "' alt=''>" : "";
+    var cardLabel = label || (p.series ? "Series: " + p.series + (p.part ? " · Part " + p.part : "") : (p.category || "From the blog"));
     return '<a class="post-row-card" href="#/blog/' + esc(p.slug) + '">' + art + "<div class='post-row-body'>" +
-      '<span class="post-row-label">' + esc(label || p.category || "From the blog") + "</span>" +
+      '<span class="post-row-label">' + esc(cardLabel) + "</span>" +
       "<h3>" + esc(p.title) + "</h3>" +
       '<p class="post-row-excerpt" data-excerpt-for="' + esc(p.slug) + '"></p>' +
       '<p class="post-row-meta">' + esc(shortDate(p.date)) + (p.scripture ? " &middot; " + esc(p.scripture) : "") + "</p>" +
@@ -1272,6 +1273,25 @@
     if (sel) sel.addEventListener("change", function () { if (sel.value) navigate(sel.value, true); });
     window.scrollTo(0, 0);
   }
+  /* Blog series: posts sharing a frontmatter `series` name, ordered by
+     numeric `part` (a post without a part sorts first). Series posts are
+     called Parts, never Lessons — lessons belong to courses only. */
+  function seriesParts(name) {
+    return posts.filter(function (p) { return p.series === name; }).sort(function (a, b) {
+      var pa = parseInt(a.part, 10) || 0, pb = parseInt(b.part, 10) || 0;
+      if (pa !== pb) return pa - pb;
+      return (a.date || "") < (b.date || "") ? -1 : ((a.date || "") > (b.date || "") ? 1 : 0);
+    });
+  }
+  function seriesNav(post) {
+    if (!post.series) return "";
+    var parts = seriesParts(post.series);
+    var idx = parts.indexOf(post);
+    var bits = ["Series: " + esc(post.series) + (post.part ? " · Part " + esc(post.part) : "")];
+    if (idx > 0) bits.push("&larr; Previous part: <a href='#/blog/" + esc(parts[idx - 1].slug) + "'>" + esc(parts[idx - 1].title) + "</a>");
+    if (idx >= 0 && idx < parts.length - 1) bits.push("Next part: <a href='#/blog/" + esc(parts[idx + 1].slug) + "'>" + esc(parts[idx + 1].title) + "</a> &rarr;");
+    return '<p class="post-meta">' + bits.join(" &nbsp;|&nbsp; ") + "</p>";
+  }
   function viewBlog(slug) {
     if (slug) {
       var post = posts.filter(function (p) { return p.slug === slug; })[0];
@@ -1281,7 +1301,7 @@
         app.innerHTML = '<a class="back-link" href="#/blog">&larr; All posts</a><article class="post-body"><h2>' +
           esc(post.title) + '</h2><p class="post-meta">' + esc(shortDate(post.date)) +
           (post.category ? " &middot; " + esc(post.category) : "") +
-          (post.scripture ? " &middot; " + esc(post.scripture) : "") + "</p>" +
+          (post.scripture ? " &middot; " + esc(post.scripture) : "") + "</p>" + seriesNav(post) +
           (POST_ART[post.slug] ? "<img class='post-art' src='" + esc(POST_ART[post.slug]) + "' alt=''>" : "") +
           renderMarkdown(body) + "</article>";
         window.scrollTo(0, 0);
@@ -1292,6 +1312,16 @@
     }
     var html = "<h2>Blog</h2><p class='page-intro'>Reflections and studies from the anchored story.</p>";
     if (!posts.length) html += '<p class="empty">No posts yet.</p>';
+    var seriesNames = [];
+    posts.forEach(function (p) { if (p.series && seriesNames.indexOf(p.series) === -1) seriesNames.push(p.series); });
+    if (seriesNames.length) {
+      html += "<div class='post-body'><h3>Series</h3>" + seriesNames.map(function (name) {
+        var parts = seriesParts(name);
+        return "<p><strong>" + esc(name) + "</strong><br>" + parts.map(function (p) {
+          return "<a href='#/blog/" + esc(p.slug) + "'>" + (p.part ? "Part " + esc(p.part) + ": " : "") + esc(p.title) + "</a>";
+        }).join("<br>") + "</p>";
+      }).join("") + "</div>";
+    }
     html += "<div class='post-row-list'>" + posts.map(function (p) { return postRowCard(p); }).join("") + "</div>";
     app.innerHTML = html;
     loadExcerpts();
