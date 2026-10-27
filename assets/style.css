@@ -383,3 +383,8 @@ img { max-width: 100%; }
 .storybook-nav { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; max-width: 720px; margin-top: 1rem; gap: 0.5rem; }
 .storybook-progress { color: var(--muted); font-weight: 600; }
 .storybook-more { max-width: 720px; margin-top: 1rem; }
+
+/* Art gallery */
+.gallery-card { margin: 1rem 0; }
+.card blockquote { border-left: 4px solid var(--gold); margin: 0.8rem 0; padding: 0.3rem 1rem; color: var(--navy); font-style: italic; }
+.card blockquote cite { display: block; margin-top: 0.3rem; font-style: normal; font-weight: 700; font-size: 0.9rem; }

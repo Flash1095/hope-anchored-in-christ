@@ -161,7 +161,8 @@
   var explorePage = {}; // editable Explore page text (content/pages/explore.json)
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
-  var ASSET_V = "110";  // bump when site code or content changes, so browsers fetch fresh copies
+  var galleryItems = []; // art gallery (content/gallery.json)
+  var ASSET_V = "111";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1061,6 +1062,66 @@
     loadExcerpts();
     window.scrollTo(0, 0);
   }
+  /* ---------- art gallery ---------- */
+  /* Gallery items (content/gallery.json) share one shape: Title, Image,
+     Kind ("Art", "Verse Card" or "Other"), Verse, VerseRef, Description,
+     ForSale, Price, BuyLink. New art arrives through chat; a piece with a
+     BuyLink sells from its own checkout, a piece marked ForSale without
+     one points at the store until its product link exists. */
+  function viewGallery() {
+    var state = { kind: "" };
+    function cardHTML(it) {
+      var card = "<div class='card store-card'>";
+      if (it.Image) card += "<img src='" + esc(it.Image) + "' alt='" + esc(it.Title || "") + "'>";
+      card += "<h3>" + esc(it.Title || "Untitled") + "</h3>";
+      if (it.Kind) card += "<p><span class='chip'>" + esc(it.Kind) + "</span></p>";
+      if (it.Verse) card += "<blockquote>" + esc(it.Verse) + (it.VerseRef ? "<br><cite>" + esc(it.VerseRef) + "</cite>" : "") + "</blockquote>";
+      if (it.Description) card += "<p class='snippet'>" + esc(it.Description) + "</p>";
+      if (it.BuyLink) {
+        card += "<p>" + (it.Price ? "<span class='price'>" + esc(it.Price) + "</span> " : "") + "<a class='buy-btn' href='" + esc(it.BuyLink) + "' target='_blank' rel='noopener'>Buy</a></p>";
+      } else if (it.ForSale) {
+        card += "<p><a class='btn' href='#/store'>View in Store</a></p>";
+      }
+      card += "</div>";
+      return card;
+    }
+    function renderGrid() {
+      var wrap = document.getElementById("galleryGrid");
+      if (!wrap) return;
+      if (!galleryItems.length) {
+        wrap.innerHTML = "<p class='empty'>The gallery is coming soon — new art, verse cards, and other pieces will appear here as they are added.</p>";
+        return;
+      }
+      var items = galleryItems.filter(function (it) {
+        return !state.kind || it.Kind === state.kind;
+      });
+      if (!items.length) {
+        wrap.innerHTML = "<p class='empty'>No pieces in this category yet.</p>";
+        return;
+      }
+      wrap.innerHTML = "<div class='card-grid'>" + items.map(cardHTML).join("") + "</div>";
+    }
+    var html = '<a class="back-link" href="#/explore">&larr; Explore</a><h2>Art Gallery</h2>' +
+      "<p class='page-intro'>Art, verse cards, and other pieces — displayed here, and connected to the store where they can be bought.</p>" +
+      '<div class="controls"><div class="chips"><span class="chip-label">Show:</span>' +
+      '<button class="chip active" data-kind="">All</button>' +
+      '<button class="chip" data-kind="Art">Art</button>' +
+      '<button class="chip" data-kind="Verse Card">Verse Cards</button>' +
+      '<button class="chip" data-kind="Other">Other</button></div></div>' +
+      '<div id="galleryGrid"></div>';
+    app.innerHTML = html;
+    renderGrid();
+    app.querySelectorAll("[data-kind]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        state.kind = btn.getAttribute("data-kind");
+        btn.parentNode.querySelectorAll("[data-kind]").forEach(function (b) {
+          b.classList.toggle("active", b.getAttribute("data-kind") === state.kind);
+        });
+        renderGrid();
+      });
+    });
+    window.scrollTo(0, 0);
+  }
   /* ---------- storybook reader ---------- */
   /* Three shelves, one reader: Bible stories (the stories collection),
      plus pet stories and children's stories, which start empty and fill
@@ -1184,6 +1245,9 @@
       STORYBOOK_SHELVES.map(function (s) {
         return '<a class="btn" href="#/storybook/' + s.key + '">' + esc(s.label) + '</a>';
       }).join(" ") + "</p></div>";
+    html += "<div class='card gallery-card'><h3>Art Gallery</h3>" +
+      "<p class='snippet'>Art, verse cards, and other pieces — and the ones for sale link through to the store.</p><p>" +
+      "<a class='btn' href='#/gallery'>Browse the gallery</a></p></div>";
     html += "<div class='card-grid'>" + COLLECTIONS.map(collectionCard).join("") + "</div>";
     app.innerHTML = html;
     var sel = document.getElementById("exploreJump");
@@ -1265,6 +1329,7 @@
         "Every physical item is printed on demand — nothing is mass-produced or warehoused — so your purchase supports this ministry " +
         "and arrives made just for you. Digital items download instantly for you to print at home.</p>";
       if (STORE_URL) html += "<p><a class='btn' href='" + esc(STORE_URL) + "' target='_blank' rel='noopener'>Visit our shop</a></p>";
+      html += "<p><a class='btn' href='#/gallery'>Browse the art gallery</a></p>";
       if (DIGITAL_SHOP_URL) html += "<p><a class='btn' href='" + esc(DIGITAL_SHOP_URL) + "' target='_blank' rel='noopener'>Browse digital downloads</a></p>";
       html += '<div class="controls"><input type="search" id="storeSearch" placeholder="Search the store…">' +
         '<div class="chips"><span class="chip-label">Type:</span>' +
@@ -2136,6 +2201,7 @@
       /* Unknown segment: fall through to the generic collection behavior below. */
     }
     if (path[0] === "storybook") return viewStorybook(path[1] ? decodeURIComponent(path[1]) : null, path[2] ? decodeURIComponent(path[2]) : null, params);
+    if (path[0] === "gallery") return viewGallery();
     var c = coll(path[0]);
     if (c) return viewCollection(c.id, path[1] ? decodeURIComponent(path[1]) : null, params);
     return viewHome();
@@ -2147,7 +2213,7 @@
   });
   document.getElementById("footerNav").innerHTML =
     COLLECTIONS.map(function (c) { return '<a href="#/' + c.id + '">' + esc(c.label) + "</a>"; }).join("") +
-    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a>';
+    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/gallery">Gallery</a>';
 
   app.innerHTML = '<p class="loading">Loading the collections…</p>';
   var jobs = COLLECTIONS.map(function (c) {
@@ -2163,6 +2229,7 @@
   jobs.push(fetch("content/pages/explore.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : {}; }).then(function (p) { explorePage = p; }).catch(function () { explorePage = {}; }));
   jobs.push(fetch("content/petstories.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (p) { petStories = p; }).catch(function () { petStories = []; }));
   jobs.push(fetch("content/childrenstories.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (p) { childStories = p; }).catch(function () { childStories = []; }));
+  jobs.push(fetch("content/gallery.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (g) { galleryItems = g; }).catch(function () { galleryItems = []; }));
   Promise.all(jobs).then(function () {
     buildLinkIndex();
     window.addEventListener("hashchange", render);
