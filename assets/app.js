@@ -91,6 +91,9 @@
   { id: "civilizations", label: "Ancient Civilizations", file: "content/civilizations.json", primary: "Civilization",
     blurb: "The empires and peoples around Israel — Egypt, Assyria, Babylon, Persia, Greece, Rome, and their neighbors — and how each one touches the Bible story.",
     filters: [{ label: "Region", field: "Region" }], meta: ["Region"] },
+  { id: "manuscripts", label: "Dead Sea Scrolls Manuscripts", file: "content/manuscripts.json", primary: "Manuscript",
+    blurb: "Qumran manuscripts of the Bible — the best-preserved copy of each book, with its cave, date, language, material, and the passages that actually survive. Search by book, cave, period, language, or completeness.",
+    filters: [{ label: "Book", field: "Work" }, { label: "Cave", field: "Cave" }, { label: "Period", field: "Period" }, { label: "Language", field: "Language" }, { label: "Category", field: "Category" }, { label: "Completeness", field: "Completeness" }], meta: ["ManuscriptID", "Cave", "DateApprox"] },
 ];
   /* Explore tile order, as a study journey: the story first, then the
      world behind it, then deeper study, then discernment, then the
@@ -100,7 +103,7 @@
      decides link-index tie-breaking. Any collection missing here falls
      back to the end of the tiles, so nothing can ever disappear. */
   var EXPLORE_ORDER = ["timeline", "books", "stories", "people", "places",
-    "finds", "civilizations", "questions", "hermeneutics", "jewishculture",
+    "finds", "manuscripts", "civilizations", "questions", "hermeneutics", "jewishculture",
     "topics", "wordstudies", "doctrines", "prophecies", "typology", "apologetics",
     "objections", "heresies", "fallacies", "perspectives", "heritage",
     "politics", "socialmedia", "courses", "studyguides", "quizzes", "hymns",
@@ -180,7 +183,7 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "133";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "134";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -367,7 +370,7 @@
      "Numbers 22-24" links to its first chapter. Anything unparseable
      stays plain text, never a broken link. */
   var SCRIPTURE_FIELDS = ["KeyVerses", "KeyPassages", "KeyScriptures", "ScriptureReference",
-    "ScriptureIlluminated", "BibleReferences", "Scripture", "BiblicalSupport"];
+    "ScriptureIlluminated", "BibleReferences", "Scripture", "BiblicalSupport", "PreservedPassages"];
   function bibleBookByNameStart(text) {
     var low = text.toLowerCase();
     var books = BIBLE_BOOKS.slice().sort(function (a, b) { return b.name.length - a.name.length; });
@@ -443,6 +446,14 @@
     if (REL_FIELDS.indexOf(field) !== -1) {
       return '<span class="related">' + linkifyField(field, value) + "</span>";
     }
+    if (field === "Sources") {
+      return splitList(value).map(function (u) {
+        return '<a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(u) + "</a>";
+      }).join("<br>");
+    }
+    if (field === "LeonLevyLink") {
+      return '<a href="' + esc(value) + '" target="_blank" rel="noopener">View in the Leon Levy Dead Sea Scrolls Digital Library</a>';
+    }
     if (field === "DetailedAnswer") {
       return value.split(/\n\s*\n/).filter(function (p) { return p.trim() !== ""; }).map(function (para) {
         return "<p>" + esc(para).replace(/\n/g, "<br>") + "</p>";
@@ -467,7 +478,7 @@
     var values = {};
     filterDefs.forEach(function (f) {
       var set = {};
-      rows.forEach(function (r) { var v = val(r, f.field); if (!isEmpty(v)) set[v] = true; });
+      rows.forEach(function (r) { var v = val(r, f.field); if (!isEmpty(v)) splitList(v).forEach(function (t) { set[t] = true; }); });
       values[f.field] = Object.keys(set).sort();
     });
 
@@ -487,7 +498,7 @@
         var r = item.row;
         for (var j = 0; j < filterDefs.length; j++) {
           var f = filterDefs[j], want = state.filters[f.field];
-          if (want && val(r, f.field) !== want) return false;
+          if (want && splitList(val(r, f.field)).indexOf(want) === -1) return false;
         }
         if (q) {
           var hay = Object.keys(r).map(function (k) { return val(r, k); }).join(" ").toLowerCase();
@@ -758,6 +769,7 @@
     else if (c.id === "courses") badges = '<span class="badge gold">' + esc(val(row, "Level")) + "</span> ";
     else if (c.id === "typology" || c.id === "fallacies") badges = '<span class="badge">' + esc(val(row, "Category")) + "</span> ";
     else if (c.id === "wordstudies") badges = '<span class="badge">' + esc(val(row, "Language")) + "</span> ";
+    else if (c.id === "manuscripts") badges = '<span class="badge">' + esc(val(row, "Completeness")) + "</span> ";
     var meta = (c.meta || []).map(function (f) { return val(row, f); }).filter(function (v) { return !isEmpty(v); }).join(" · ");
     var snip = snippet(row);
     return '<a class="card" href="#/' + c.id + "/" + idx + '">' + badges + "<h3>" + title + "</h3>" +

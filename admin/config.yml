@@ -191,6 +191,39 @@ collections:
       - {label: "Image", name: "Image", widget: "image", required: false}
       - {label: "Image Credit", name: "ImageCredit", widget: "string", required: false}
       - {label: "Image Source", name: "ImageSource", widget: "string", required: false}
+  - name: "manuscripts"
+    label: "Dead Sea Scrolls Manuscripts"
+    folder: "content/manuscripts"
+    create: true
+    slug: "{{fields.Slug}}"
+    identifier_field: "Manuscript"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Manuscript", name: "Manuscript", widget: "string"}
+      - {label: "Manuscript ID", name: "ManuscriptID", widget: "string"}
+      - {label: "Work (Biblical Book or Ancient Work)", name: "Work", widget: "list"}
+      - {label: "Category", name: "Category", widget: "select", options: ["Biblical", "Nonbiblical"]}
+      - {label: "Cave", name: "Cave", widget: "string"}
+      - {label: "Location", name: "Location", widget: "string"}
+      - {label: "Estimated Date", name: "DateApprox", widget: "string"}
+      - {label: "Period", name: "Period", widget: "string", required: false}
+      - {label: "Language", name: "Language", widget: "string"}
+      - {label: "Script", name: "Script", widget: "string", required: false}
+      - {label: "Material", name: "Material", widget: "string", required: false}
+      - {label: "Completeness", name: "Completeness", widget: "select", options: ["Complete", "Near-complete", "Substantial fragment", "Fragment"]}
+      - {label: "Preserved Passages", name: "PreservedPassages", widget: "text"}
+      - {label: "Description", name: "Description", widget: "text"}
+      - {label: "Significance", name: "Significance", widget: "text"}
+      - {label: "Current Location", name: "CurrentLocation", widget: "string", required: false}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Related Finds", name: "RelatedFinds", widget: "list", required: false}
+      - {label: "Leon Levy Link", name: "LeonLevyLink", widget: "string", required: false}
+      - {label: "Sources", name: "Sources", widget: "list", required: false}
+      - {label: "Image", name: "Image", widget: "image", required: false}
+      - {label: "Image Credit", name: "ImageCredit", widget: "string", required: false}
+      - {label: "Image Source", name: "ImageSource", widget: "string", required: false}
+      - {label: "Slug", name: "Slug", widget: "string"}
   - name: "places"
     label: "Biblical Places"
     folder: "content/places"
@@ -662,7 +695,7 @@ collections:
             name: "blurbs"
             widget: "list"
             fields:
-              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "places", "topics", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories", "hermeneutics", "jewishculture", "studyguides", "civilizations"]}
+              - {label: "Collection", name: "collection", widget: "select", options: ["timeline", "books", "questions", "people", "finds", "places", "topics", "doctrines", "heresies", "wordstudies", "prophecies", "typology", "fallacies", "courses", "quizzes", "hymns", "nature", "apologetics", "objections", "perspectives", "heritage", "politics", "socialmedia", "stories", "hermeneutics", "jewishculture", "studyguides", "civilizations", "manuscripts"]}
               - {label: "Description", name: "blurb", widget: "text"}
   - name: "store"
     label: "Store Products"

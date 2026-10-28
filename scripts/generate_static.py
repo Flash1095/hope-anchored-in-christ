@@ -459,7 +459,8 @@ def load_bible_books():
 BIBLE_BOOKS = []
 
 SCRIPTURE_FIELDS = ["KeyVerses", "KeyPassages", "KeyScriptures", "ScriptureReference",
-                    "ScriptureIlluminated", "BibleReferences", "Scripture", "BiblicalSupport"]
+                    "ScriptureIlluminated", "BibleReferences", "Scripture", "BiblicalSupport",
+                    "PreservedPassages"]
 # Bible book study sections (Genesis page): full markdown sections,
 # rendered as expandable <details> blocks below the overview (see
 # entry_page). The titles come from STUDY_LABELS.
@@ -598,6 +599,12 @@ def render_entry_field(field, value, cur_coll, glob, home):
         return "<ul>" + "".join("<li>%s</li>" % esc(t) for t in toks) + "</ul>"
     if field in SCRIPTURE_FIELDS:
         return '<span class="related">' + linkify_scripture_refs(value) + "</span>"
+    if field == "Sources":
+        links = ["<a href=\"%s\" target=\"_blank\" rel=\"noopener\">%s</a>" % (esc(u), esc(u))
+                 for u in [t.strip() for t in value.split(";") if t.strip()]]
+        return "<br>".join(links)
+    if field == "LeonLevyLink":
+        return '<a href="%s" target="_blank" rel="noopener">View in the Leon Levy Dead Sea Scrolls Digital Library</a>' % esc(value)
     if field in REL_FIELDS:
         return '<span class="related">' + static_linkify(field, value, cur_coll, glob, home) + "</span>"
     if field == "DetailedAnswer":
