@@ -180,7 +180,7 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "130";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "131";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1904,6 +1904,86 @@
     });
     return out;
   }
+  function notesForChapter(bookName, chapter, collIds) {
+    /* Study-Bible reverse links: entries in the given collections whose
+       scripture fields cite this exact chapter. Parsed refs only, so a
+       prose mention never creates a false note. */
+    var out = [];
+    collIds.forEach(function (id) {
+      var c = coll(id);
+      if (!c) return;
+      (data[id] || []).forEach(function (row, i) {
+        var hit = ["Scripture"].concat(SCRIPTURE_FIELDS).some(function (f) {
+          var v = val(row, f);
+          if (isEmpty(v)) return false;
+          return refsInValue(v).some(function (r) { return r.name === bookName && r.chapter === chapter; });
+        });
+        if (hit) out.push({ c: c, row: row, idx: i });
+      });
+    });
+    return out;
+  }
+  function verseRefsInValue(value) {
+    /* Like refsInValue, but returns explicit verses: {slug, name, chapter, verse}.
+       Bare-chapter refs mark no verse (they stay chapter-level); verse ranges
+       expand up to 50 verses; verse continuations ("13:22, 28, 33") count as
+       verses of the same chapter, and a verse alone in a single-chapter book
+       ("Jude 22") counts as chapter 1, verse 22. */
+    var out = [];
+    var lastBook = null;
+    String(value).split(";").forEach(function (part) {
+      var p = part.trim();
+      if (!p) return;
+      var found = bibleBookByNameStart(p);
+      var book = found ? found.book : lastBook;
+      var rest = found ? found.rest : p;
+      if (found) lastBook = book;
+      if (!book || !rest) return;
+      var lastChapter = null, lastHadVerse = false;
+      rest.split(",").forEach(function (item) {
+        var it = item.trim();
+        var m = it.match(/^(\d+)(?::(\d+))?/);
+        if (!m) return;
+        var ch = +m[1];
+        var remapped = false;
+        if (!m[2] && lastChapter !== null && lastHadVerse) { ch = lastChapter; remapped = true; }
+        else if (book.chapters === 1 && !m[2] && ch !== 1) { ch = 1; remapped = true; }
+        if (ch < 1 || ch > book.chapters) return;
+        if (m[2]) {
+          lastChapter = ch; lastHadVerse = true;
+          var vm = it.match(/^\d+\s*:\s*(\d+)\s*-\s*(\d+)/);
+          if (vm) {
+            var a = +vm[1], b = +vm[2];
+            if (b > a && b - a <= 50) { for (var v = a; v <= b; v++) out.push({ slug: book.slug, name: book.name, chapter: ch, verse: v }); }
+            else out.push({ slug: book.slug, name: book.name, chapter: ch, verse: a });
+          } else {
+            out.push({ slug: book.slug, name: book.name, chapter: ch, verse: +m[2] });
+          }
+        } else if (remapped) {
+          out.push({ slug: book.slug, name: book.name, chapter: ch, verse: +m[1] });
+        } else {
+          lastChapter = ch; lastHadVerse = false;
+        }
+      });
+    });
+    return out;
+  }
+  function notesForVerse(bookName, chapter, verse, collIds) {
+    var out = [];
+    collIds.forEach(function (id) {
+      var c = coll(id);
+      if (!c) return;
+      (data[id] || []).forEach(function (row, i) {
+        var hit = ["Scripture"].concat(SCRIPTURE_FIELDS).some(function (f) {
+          var v = val(row, f);
+          if (isEmpty(v)) return false;
+          return verseRefsInValue(v).some(function (r) { return r.name === bookName && r.chapter === chapter && r.verse === verse; });
+        });
+        if (hit) out.push({ c: c, row: row, idx: i });
+      });
+    });
+    return out;
+  }
   function viewBibleChapter(slug, chapter, params) {
     var book = bibleBookBySlug(slug);
     if (!book) return viewBible();
@@ -1918,11 +1998,26 @@
       var ci = nums.indexOf(+chapter);
       var prev = ci > 0 ? nums[ci - 1] : null;
       var next = ci < nums.length - 1 ? nums[ci + 1] : null;
+      /* Verses with study notes (apologetics or cultural entries citing the
+         exact verse) get a † marker; tapping it opens the notes panel. */
+      var marked = {};
+      ["apologetics", "objections", "jewishculture"].forEach(function (id) {
+        (data[id] || []).forEach(function (row) {
+          ["Scripture"].concat(SCRIPTURE_FIELDS).forEach(function (f) {
+            var v = val(row, f);
+            if (isEmpty(v)) return;
+            verseRefsInValue(v).forEach(function (r) {
+              if (r.name === book.name && r.chapter === +chapter) marked[r.verse] = true;
+            });
+          });
+        });
+      });
       var paras = [""];
       Object.keys(verses).sort(function (a, b) { return +a - +b; }).forEach(function (n) {
         var txt = verses[n];
         if (txt.indexOf("# ") === 0) { txt = txt.slice(2); paras.push(""); }
-        paras[paras.length - 1] += '<span class="verse" id="v' + n + '"><sup>' + n + '</sup> ' + linkifyVerseText(txt) + '</span> ';
+        var marker = marked[+n] ? '<button type="button" class="verse-note" data-v="' + n + '" aria-label="Study notes for verse ' + n + '">†</button>' : "";
+        paras[paras.length - 1] += '<span class="verse" id="v' + n + '"><sup>' + n + '</sup>' + marker + ' ' + linkifyVerseText(txt) + '</span> ';
       });
       var html = "<h2>" + esc(book.name) + " " + esc(chapter) + "</h2><div class='post-body'>" +
         "<p class='page-intro'>King James Version &middot; " + esc(book.testament === "Old" ? "Old Testament" : "New Testament") + "</p>";
@@ -1935,6 +2030,7 @@
         "<a href='https://www.biblegateway.com/passage/?search=" + encodeURIComponent(book.name + " " + chapter) + "&version=NIV' target='_blank' rel='noopener'>NIV</a> &middot; " +
         "<a href='https://www.biblegateway.com/passage/?search=" + encodeURIComponent(book.name + " " + chapter) + "&version=ESV' target='_blank' rel='noopener'>ESV</a></p>";
       html += "<div class='bible-verses'>" + paras.map(function (p) { return "<p>" + p + "</p>"; }).join("") + "</div>";
+      html += '<div id="verseStudy"></div>';
       var arts = articlesForChapter(book.name, chapter);
       if (arts.length) {
         html += "<h3>Articles about this chapter</h3><div class='card-grid'>" + arts.map(function (a) {
@@ -1948,8 +2044,36 @@
             return "<a href='#/bible/" + r.slug + "/" + r.chapter + "'>" + esc(r.name) + " " + r.chapter + "</a>";
           }).join(" &middot; ") + "</p>";
       }
+      var noteCards = function (list) {
+        return "<div class='card-grid'>" + list.map(function (a) {
+          return "<a class='card' href='#/" + a.c.id + "/" + a.idx + "'><h3>" + esc(val(a.row, a.c.primary)) + "</h3><p class='meta'>" + esc(a.c.label) + "</p></a>";
+        }).join("") + "</div>";
+      };
+      var apols = notesForChapter(book.name, +chapter, ["apologetics", "objections"]);
+      html += "<h3>Apologetics study notes</h3>" +
+        (apols.length ? noteCards(apols) : "<p class='page-intro'>No apologetics notes cite this chapter yet.</p>");
+      var cults = notesForChapter(book.name, +chapter, ["jewishculture"]);
+      html += "<h3>Cultural background notes</h3>" +
+        (cults.length ? noteCards(cults) : "<p class='page-intro'>No cultural background notes cite this chapter yet.</p>");
       html += "</div>";
       app.innerHTML = html;
+      app.querySelectorAll(".verse-note").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var vn = +btn.getAttribute("data-v");
+          var a = notesForVerse(book.name, +chapter, vn, ["apologetics", "objections"]);
+          var cu = notesForVerse(book.name, +chapter, vn, ["jewishculture"]);
+          var panel = document.getElementById("verseStudy");
+          if (!panel) return;
+          var group = function (title, list) {
+            if (!list.length) return "";
+            return "<h4>" + title + "</h4><ul>" + list.map(function (x) {
+              return "<li><a href='#/" + x.c.id + "/" + x.idx + "'>" + esc(val(x.row, x.c.primary)) + "</a> <span class='meta'>" + esc(x.c.label) + "</span></li>";
+            }).join("") + "</ul>";
+          };
+          panel.innerHTML = '<details class="study-section" open><summary>Study notes for ' + esc(book.name) + ' ' + chapter + ':' + vn + '</summary><div class="study-body">' + group("Apologetics", a) + group("Cultural backgrounds", cu) + '</div></details>';
+          panel.scrollIntoView();
+        });
+      });
       var v = params && params.get ? params.get("v") : null;
       if (v) { var el = document.getElementById("v" + v); if (el) el.scrollIntoView(); }
       else window.scrollTo(0, 0);

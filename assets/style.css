@@ -317,6 +317,10 @@ a:hover { color: var(--gold-dark); }
   .post-row-body { padding: 1rem; }
 }
 
+/* ---------- Bible verse study notes ---------- */
+.verse-note { background: none; border: none; color: var(--gold-dark); cursor: pointer; font-weight: 700; padding: 0 0.15rem; font-size: 0.95em; line-height: 1; }
+.verse-note:hover { color: var(--gold); }
+
 /* ---------- Bible book study (expandable sections + tables) ---------- */
 .study { margin-top: 1.5rem; }
 .study-intro { font-size: 1.05rem; }
