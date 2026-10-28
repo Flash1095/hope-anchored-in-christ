@@ -185,7 +185,7 @@
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // family tree (content/genealogy.json)
-  var ASSET_V = "146";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "147";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1208,12 +1208,12 @@
       return esc(n.name) + (n.context ? ' <span class="gen-context">' + esc(n.context) + "</span>" : "");
     }
     /* A name in a relationship list: profiled names link to their
-       profile (plus a small tree link); unprofiled names stay plain
-       text with their scripture refs, as the tree brief requires. */
+       profile; unprofiled names stay plain text with their scripture
+       refs, as the tree brief requires. (No tree shortcut link: removed
+       at Lorraine's request, Oct 2026 — the name link alone remains.) */
     function relNameHTML(n) {
       if (n.profileIndex !== null && n.profileIndex !== undefined) {
-        return '<a href="#/people/' + n.profileIndex + '">' + esc(n.name) + "</a>" +
-          ' <a class="gen-tree-link" href="' + genHref(n) + '" title="View in family tree">tree</a>';
+        return '<a href="#/people/' + n.profileIndex + '">' + esc(n.name) + "</a>";
       }
       return esc(n.name);
     }
