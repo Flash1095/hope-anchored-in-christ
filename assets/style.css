@@ -402,3 +402,59 @@ a:hover { color: var(--gold-dark); }
 .gen-chain a { text-decoration: none; }
 .gen-chain a:hover { color: var(--gold-dark); }
 .gen-chain-note { color: var(--muted); font-size: 0.9rem; }
+
+/* =====================================================================
+   GENEALOGY INTERACTIVE PATCH — styles (append to assets/style.css)
+   Theme-matched: white cards, navy #1B2A4E text, rose pink #e91e63
+   accents (the site's --gold), soft lavender footer untouched.
+   Reuses the existing .tl spine for the timeline view; only the
+   toggle, tree, and current-person highlight are new.
+   ===================================================================== */
+
+/* Toggle + section shell (shared by person panels and the start view) */
+.gen-interactive { margin-top: 1.5rem; max-width: 100%; }
+.gen-interactive h3 { margin-bottom: 0.6rem; }
+.gen-view-toggle { display: inline-flex; gap: 0; border: 2px solid var(--gold); border-radius: 999px; overflow: hidden; margin-bottom: 0.8rem; }
+.gen-view-toggle button { border: 0; background: #fff; color: var(--navy); font-weight: 700; font-size: 0.95rem; padding: 0.45rem 1.3rem; cursor: pointer; }
+.gen-view-toggle button.active { background: var(--gold); color: #fff; }
+.gen-view-toggle button:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
+.gen-view-hint { color: var(--muted); font-size: 0.9rem; }
+
+/* Tree: horizontal scroll inside the container so a wide tree never
+   breaks the page layout; on a phone the tree scrolls sideways. */
+.gen-tree-scroll { overflow-x: auto; overflow-y: hidden; border: 1px solid var(--line); border-radius: 16px; background: #fff; padding: 0.5rem 0; box-shadow: 0 2px 10px rgba(27, 42, 78, 0.08); }
+.gen-tree-svg { display: block; margin: 0 auto; }
+.gen-tree-hint { color: var(--muted); font-size: 0.9rem; }
+@media (max-width: 700px) {
+  .gen-tree-hint { font-weight: 600; color: var(--navy); }
+}
+.gen-tree-ctrls { display: flex; flex-wrap: wrap; gap: 0.4rem 0.8rem; align-items: center; margin: 0.4rem 0 0.8rem; font-size: 0.9rem; }
+.gen-tree-ctrls button { border: 1px solid var(--gold); background: #fff; color: var(--gold-dark); border-radius: 999px; padding: 0.25rem 0.9rem; font-weight: 700; cursor: pointer; }
+.gen-tree-ctrls button:hover { background: var(--cream); }
+.gen-tree-footnote { color: var(--muted); font-size: 0.9rem; max-width: 720px; }
+.gen-tree-foot { max-width: 720px; }
+.gen-tree-foot:empty { display: none; }
+.gen-tree-foot p { margin: 0.7rem 0; }
+
+/* SVG node styling */
+.gtn-line { stroke: var(--gold); stroke-width: 2; }
+.gtn-box { fill: #fff; stroke: var(--line); stroke-width: 1.5; }
+.gtn-box-center { fill: #fdf2f5; stroke: var(--gold); stroke-width: 2.5; }
+.gtn-box-loop { fill: #fff; stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.gtn-name { fill: var(--navy); font-weight: 700; font-size: 13px; font-family: inherit; }
+.gtn-name:hover { fill: var(--gold-dark); }
+.gtn-sub { fill: var(--muted); font-size: 11px; font-family: inherit; }
+.gtn-head { fill: #fff; stroke: var(--gold); stroke-width: 1.5; }
+.gtn-head-none { fill: #f7f2f7; stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 4 3; }
+.gtn-head-name { fill: var(--navy); font-weight: 700; font-size: 12px; font-family: inherit; }
+.gtn-head-name:hover { fill: var(--gold-dark); }
+.gtn-head-label { fill: var(--muted); font-size: 11px; font-style: italic; font-family: inherit; }
+.gtn-btn { cursor: pointer; }
+.gtn-btn-bg { fill: var(--gold); }
+.gtn-btn-txt { fill: #fff; font-size: 12px; font-weight: 700; font-family: inherit; }
+
+/* Timeline view: the existing .tl spine is reused; this only marks
+   the selected person and styles the connector + era lines. */
+.gen-tl-current { border: 2px solid var(--gold); box-shadow: 0 4px 16px rgba(233, 30, 99, 0.15); }
+.gen-tl-conn { margin: 0 0 0.4rem 0.2rem; color: var(--gold-dark); font-size: 0.9rem; }
+.gen-tl-era { margin: 0.3rem 0; font-weight: 700; color: var(--gold-dark); font-size: 0.9rem; }

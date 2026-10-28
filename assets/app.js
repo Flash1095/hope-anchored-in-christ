@@ -185,7 +185,7 @@
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
-  var ASSET_V = "150";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "151";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1374,8 +1374,10 @@
     html += searchHTML();
     if (!nameParam) {
       html += startPointsHTML();
+      html += genModeToggleSectionHTML();
       app.innerHTML = html;
       bindSearch();
+      genBindInteractive(null);
       window.scrollTo(0, 0);
       return;
     }
@@ -1411,10 +1413,590 @@
       return;
     }
     html += panelHTML(node);
+    html += genInteractiveHTML(node);
     app.innerHTML = html;
     bindSearch();
+    genBindInteractive(node);
     window.scrollTo(0, 0);
   }
+/* =====================================================================
+   GENEALOGY INTERACTIVE PATCH — Tree diagram + Timeline view, toggle
+   ---------------------------------------------------------------------
+   PASTE INSIDE the app.js IIFE, immediately after viewGenealogy
+   (anchor: the "storybook reader" section comment). See INTEGRATION.md.
+
+   Self-contained: it rebuilds its own node/relation lookups from
+   genealogyData and never depends on viewGenealogy's inner helpers.
+   It DOES reuse these IIFE-scope globals (they already exist there):
+     esc, linkifyScriptureRefs, genealogyData, data, app.
+   No framework, no new dependencies, no data changes.
+
+   HONESTY RULES baked in:
+   - genealogy.json has NO years. The timeline counts GENERATIONS only.
+   - Spouse boxes appear only where the person's own record names a
+     spouse (only 6 edges in the whole file carry spouses at all).
+   - Children are grouped by the co-parent named on each child's own
+     record. A co-parent is NOT automatically called a spouse: the
+     group header says "(named as spouse)" only when that co-parent
+     is also in the person's own spouse list; otherwise the header
+     says so plainly. Children with no co-parent named sit in an
+     "Other parent not named" group — never assigned to a spouse.
+   - Ancestor rows use the FIRST named father and FIRST named mother;
+     any further parents named in parallel records are listed in a
+     footnote with their refs, never silently dropped or merged.
+   - Unmapped nodes (profileIndex null) never link to a profile: the
+     name is plain text and the node's refs are shown on the box.
+   ===================================================================== */
+
+/* Toggle + depth + collapse state. Lives in IIFE scope, so it
+   survives hash navigation (the script is not reloaded); the mode
+   therefore persists when the user opens another person's panel,
+   while the tree centre resets to the panel person on every full
+   render (see genInteractiveHTML). */
+var genTreeState = { mode: "tree", ancDepth: 2, descDepth: 2, collapsed: {} };
+
+/* ---------- shared lookups (mirrors of viewGenealogy's helpers) --- */
+function genTreeLookups() {
+  var G = genealogyData || { nodes: [], edges: [] };
+  var nodes = G.nodes || [], edges = G.edges || [];
+  var byId = {};
+  nodes.forEach(function (n) { byId[n.id] = n; });
+  var nameCounts = {};
+  nodes.forEach(function (n) { nameCounts[n.name] = (nameCounts[n.name] || 0) + 1; });
+  function href(n) {
+    var base = "#/genealogy/" + encodeURIComponent(n.name);
+    return nameCounts[n.name] > 1 ? base + "?id=" + encodeURIComponent(n.id) : base;
+  }
+  function mergeRefs(list) {
+    var out = [];
+    list.forEach(function (r) { if (out.indexOf(r) === -1) out.push(r); });
+    return out;
+  }
+  /* Relations for one node id, refs merged across parallel edges
+     (30 children in the data carry more than one edge). */
+  function relations(id) {
+    var fathers = {}, mothers = {}, spouses = {}, children = {};
+    edges.forEach(function (e) {
+      if (e.child === id) {
+        if (e.father) fathers[e.father] = mergeRefs((fathers[e.father] || []).concat(e.refs || []));
+        if (e.mother) mothers[e.mother] = mergeRefs((mothers[e.mother] || []).concat(e.refs || []));
+        (e.spouses || []).forEach(function (s) {
+          spouses[s] = mergeRefs((spouses[s] || []).concat(e.refs || []));
+        });
+      }
+      if (e.father === id || e.mother === id) children[e.child] = true;
+    });
+    return { fathers: fathers, mothers: mothers, spouses: spouses, children: children };
+  }
+  /* Children of one person, grouped by the co-parent named on each
+     child's own record (null = no co-parent named). A child named on
+     parallel edges appears once per distinct co-parent. */
+  function childGroups(id) {
+    var groups = {}, order = [];
+    edges.forEach(function (e) {
+      if (e.father !== id && e.mother !== id) return;
+      var co = (e.father === id) ? (e.mother || null) : (e.father || null);
+      var key = co === null ? "__none__" : co;
+      if (!groups[key]) { groups[key] = { coParent: co, children: [] }; order.push(key); }
+      if (groups[key].children.indexOf(e.child) === -1) groups[key].children.push(e.child);
+    });
+    return order.map(function (k) { return groups[k]; });
+  }
+  /* Refs for the edge(s) joining parent -> child, merged. */
+  function edgeRefs(parentId, childId) {
+    var out = [];
+    edges.forEach(function (e) {
+      if (e.child === childId && (e.father === parentId || e.mother === parentId)) {
+        out = mergeRefs(out.concat(e.refs || []));
+      }
+    });
+    return out;
+  }
+  return { nodes: nodes, edges: edges, byId: byId, href: href, relations: relations, childGroups: childGroups, edgeRefs: edgeRefs };
+}
+
+function genTrunc(s, n) {
+  s = String(s == null ? "" : s);
+  return s.length > n ? s.slice(0, n - 1) + "…" : s;
+}
+function genRefsHTML(refs) {
+  if (!refs || !refs.length) return "";
+  return ' <span class="gen-refs">' + linkifyScriptureRefs(refs.join("; ")) + "</span>";
+}
+/* Name inside the tree/timeline: profiled names link to their
+   profile; unmapped names stay plain text (never a guessed link). */
+function genTreeNameHTML(L, n) {
+  if (n.profileIndex !== null && n.profileIndex !== undefined) {
+    return '<a href="#/people/' + n.profileIndex + '">' + esc(n.name) + "</a>";
+  }
+  return esc(n.name);
+}
+
+/* ---------- tree layout (plain SVG, no libraries) ------------------ */
+/* Box geometry. The tree is laid out in two halves sharing one centre
+   box: ancestors above (person box at the bottom of its block),
+   descendants below (person box at the top of its block). */
+var GEN_TW = 152, GEN_TH = 66, GEN_HGAP = 16, GEN_VGAP = 28, GEN_HH = 30;
+
+function genBox(key, nodeId, x, y, opts) {
+  opts = opts || {};
+  return { key: key, nodeId: nodeId, x: x, y: y, w: GEN_TW, h: GEN_TH,
+           root: !!opts.root, loop: !!opts.loop, center: !!opts.center,
+           collapsed: !!opts.collapsed, hasKids: !!opts.hasKids,
+           note: !!opts.note, header: !!opts.header, headerLabel: opts.headerLabel || "",
+           headerSpouse: !!opts.headerSpouse };
+}
+/* Ancestor block: person box at the BOTTOM centre. depth = generations
+   above the person still to draw. First father + first mother only;
+   further named parents are footnoted, never merged (see below). */
+function genAncBlock(L, id, depth, path) {
+  var n = L.byId[id];
+  if (!n) return { w: GEN_TW, h: GEN_TH, boxes: [], lines: [] };
+  if (path[id]) {
+    return { w: GEN_TW, h: GEN_TH,
+             boxes: [genBox(id + "@loop", id, 0, 0, { loop: true })], lines: [] };
+  }
+  var rel = L.relations(id);
+  var fathers = Object.keys(rel.fathers), mothers = Object.keys(rel.mothers);
+  var personY, totalH, totalW;
+  if (depth <= 0 || (!fathers.length && !mothers.length)) {
+    return { w: GEN_TW, h: GEN_TH,
+             boxes: [genBox(id + "@anc", id, 0, 0, { root: true })], lines: [] };
+  }
+  var path2 = {}; for (var k in path) path2[k] = true; path2[id] = true;
+  var fBlock = fathers.length ? genAncBlock(L, fathers[0], depth - 1, path2) : null;
+  var mBlock = mothers.length ? genAncBlock(L, mothers[0], depth - 1, path2) : null;
+  var parentsH = Math.max(fBlock ? fBlock.h : 0, mBlock ? mBlock.h : 0);
+  totalH = parentsH + GEN_VGAP + GEN_TH;
+  var blocks = [];
+  if (fBlock) blocks.push(fBlock);
+  if (mBlock) blocks.push(mBlock);
+  totalW = blocks.reduce(function (s, b) { return s + b.w; }, 0) + GEN_HGAP * (blocks.length - 1);
+  if (totalW < GEN_TW) totalW = GEN_TW;
+  var boxes = [], lines = [], x = 0, parentCenters = [];
+  blocks.forEach(function (b) {
+    var dy = parentsH - b.h, dx = x;
+    b.boxes.forEach(function (bx) {
+      boxes.push({ key: bx.key, nodeId: bx.nodeId, x: bx.x + dx, y: bx.y + dy,
+                   w: bx.w, h: bx.h, root: bx.root, loop: bx.loop, center: bx.center,
+                   collapsed: bx.collapsed, hasKids: bx.hasKids, note: bx.note,
+                   header: bx.header, headerLabel: bx.headerLabel });
+    });
+    b.lines.forEach(function (ln) {
+      lines.push(ln.map(function (p) { return [p[0] + dx, p[1] + dy]; }));
+    });
+    /* The block's own person box sits at its bottom centre. */
+    parentCenters.push(dx + b.w / 2);
+    x += b.w + GEN_HGAP;
+  });
+  var px = (totalW - GEN_TW) / 2, py = parentsH + GEN_VGAP;
+  boxes.push(genBox(id + "@anc", id, px, py, { root: true }));
+  var midY = parentsH + GEN_VGAP / 2, cx = px + GEN_TW / 2;
+  if (parentCenters.length === 2) {
+    lines.push([[parentCenters[0], parentsH], [parentCenters[0], midY],
+                [parentCenters[1], midY], [parentCenters[1], parentsH]]);
+    lines.push([[cx, midY], [cx, py]]);
+  } else {
+    lines.push([[parentCenters[0], parentsH], [parentCenters[0], py]]);
+  }
+  return { w: totalW, h: totalH, boxes: boxes, lines: lines };
+}
+/* Descendant block: person box at the TOP, spouses with no children
+   beside it, children grouped by co-parent below. depth = generations
+   below the person still to draw. */
+function genDescBlock(L, id, depth, path) {
+  var n = L.byId[id];
+  if (!n) return { w: GEN_TW, h: GEN_TH, boxes: [], lines: [] };
+  if (path[id]) {
+    return { w: GEN_TW, h: GEN_TH,
+             boxes: [genBox(id + "@loop", id, 0, 0, { loop: true })], lines: [] };
+  }
+  var rel = L.relations(id);
+  var groups = L.childGroups(id);
+  var spouseIds = Object.keys(rel.spouses);
+  var coParents = {};
+  groups.forEach(function (g) { if (g.coParent) coParents[g.coParent] = true; });
+  var rowSpouses = spouseIds.filter(function (s) { return !coParents[s]; });
+  var rowW = GEN_TW * (1 + rowSpouses.length) + GEN_HGAP * rowSpouses.length;
+  var collapsed = !!genTreeState.collapsed[id];
+  if (depth <= 0 || collapsed || !groups.length) {
+    var boxes0 = [genBox(id + "@desc", id, 0, 0,
+      { root: true, collapsed: collapsed, hasKids: groups.length > 0, note: !!n.note })];
+    rowSpouses.forEach(function (s, i) {
+      boxes0.push(genBox(s + "@spouse-of-" + id, s, GEN_TW * (i + 1) + GEN_HGAP * (i + 1), 0, { note: !!(L.byId[s] && L.byId[s].note) }));
+    });
+    return { w: rowW, h: GEN_TH, boxes: boxes0, lines: [] };
+  }
+  var path2 = {}; for (var k in path) path2[k] = true; path2[id] = true;
+  var clusters = groups.map(function (g) {
+    var childBlocks = g.children.map(function (c) { return genDescBlock(L, c, depth - 1, path2); });
+    var w = childBlocks.reduce(function (s, b) { return s + b.w; }, 0) + GEN_HGAP * (childBlocks.length - 1);
+    return { group: g, blocks: childBlocks, w: w };
+  });
+  var kidsW = clusters.reduce(function (s, c) { return s + c.w; }, 0) + GEN_HGAP * (clusters.length - 1);
+  var totalW = Math.max(rowW, kidsW);
+  var headY = GEN_TH + GEN_VGAP, kidsY = headY + GEN_HH + GEN_VGAP;
+  var maxChildH = 0;
+  clusters.forEach(function (c) { c.blocks.forEach(function (b) { if (b.h > maxChildH) maxChildH = b.h; }); });
+  var boxes = [], lines = [];
+  var rowX = (totalW - rowW) / 2;
+  boxes.push(genBox(id + "@desc", id, rowX, 0,
+    { root: true, hasKids: true, note: !!n.note }));
+  rowSpouses.forEach(function (s, i) {
+    boxes.push(genBox(s + "@spouse-of-" + id, s, rowX + GEN_TW * (i + 1) + GEN_HGAP * (i + 1), 0, { note: !!(L.byId[s] && L.byId[s].note) }));
+  });
+  var px = rowX + GEN_TW / 2;
+  var busY = GEN_TH + GEN_VGAP / 2;
+  var headCenters = [], cx = 0;
+  clusters.forEach(function (cl) {
+    var cw = cl.w;
+    var hx = cx + (cw - GEN_TW) / 2;
+    var co = cl.group.coParent;
+    boxes.push(genBox((co || "__none__") + "@head-for-" + id, co, hx, headY,
+      { header: true, headerLabel: co ? "" : "Other parent not named",
+        headerSpouse: co ? !!rel.spouses[co] : false }));
+    headCenters.push(hx + GEN_TW / 2);
+    var childBusY = kidsY - GEN_VGAP / 2, childCenters = [], bx = cx;
+    cl.blocks.forEach(function (b) {
+      var bdx = bx, bdy = kidsY;
+      b.boxes.forEach(function (bb) {
+        boxes.push({ key: bb.key, nodeId: bb.nodeId, x: bb.x + bdx, y: bb.y + bdy,
+                     w: bb.w, h: bb.h, root: bb.root, loop: bb.loop, center: bb.center,
+                     collapsed: bb.collapsed, hasKids: bb.hasKids, note: bb.note,
+                     header: bb.header, headerLabel: bb.headerLabel, headerSpouse: bb.headerSpouse });
+      });
+      b.lines.forEach(function (ln) {
+        lines.push(ln.map(function (p) { return [p[0] + bdx, p[1] + bdy]; }));
+      });
+      childCenters.push(bdx + b.w / 2);
+      bx += b.w + GEN_HGAP;
+    });
+    var hc = hx + GEN_TW / 2;
+    if (childCenters.length === 1) {
+      lines.push([[hc, headY + GEN_HH], [hc, kidsY]]);
+    } else {
+      lines.push([[hc, headY + GEN_HH], [hc, childBusY]]);
+      lines.push([[childCenters[0], childBusY], [childCenters[childCenters.length - 1], childBusY]]);
+      childCenters.forEach(function (ccx) { lines.push([[ccx, childBusY], [ccx, kidsY]]); });
+    }
+    cx += cw + GEN_HGAP;
+  });
+  if (headCenters.length === 1) {
+    lines.push([[px, GEN_TH], [px, headY]]);
+  } else {
+    lines.push([[px, GEN_TH], [px, busY]]);
+    lines.push([[headCenters[0], busY], [headCenters[headCenters.length - 1], busY]]);
+    headCenters.forEach(function (hcx) { lines.push([[hcx, busY], [hcx, headY]]); });
+  }
+  return { w: totalW, h: kidsY + maxChildH, boxes: boxes, lines: lines };
+}
+
+/* ---------- tree SVG rendering -------------------------------------- */
+function genTreeNodeSVG(L, b, centerId) {
+  var n = L.byId[b.nodeId];
+  if (!n) return "";
+  if (b.header) {
+    if (!b.nodeId) {
+      return '<g><rect x="' + b.x + '" y="' + b.y + '" width="' + b.w + '" height="' + GEN_HH +
+        '" rx="15" class="gtn-head-none"/><text x="' + (b.x + b.w / 2) + '" y="' + (b.y + 19) +
+        '" text-anchor="middle" class="gtn-head-label">' + esc(b.headerLabel) + "</text></g>";
+    }
+    var name = genTrunc(n.name, b.headerSpouse ? 14 : 20) + (b.headerSpouse ? " · spouse" : "");
+    var nm = (n.profileIndex !== null && n.profileIndex !== undefined)
+      ? '<a href="#/people/' + n.profileIndex + '"><text x="' + (b.x + b.w / 2) + '" y="' + (b.y + 19) +
+        '" text-anchor="middle" class="gtn-head-name">' + esc(name) + "</text></a>"
+      : '<text x="' + (b.x + b.w / 2) + '" y="' + (b.y + 19) +
+        '" text-anchor="middle" class="gtn-head-name">' + esc(name) + "</text>";
+    return '<g><rect x="' + b.x + '" y="' + b.y + '" width="' + b.w + '" height="' + GEN_HH +
+      '" rx="15" class="gtn-head"/><title>' + esc(n.name) + "</title>" + nm + "</g>";
+  }
+  var cls = "gtn-box";
+  if (b.nodeId === centerId) cls = "gtn-box-center";
+  else if (b.loop) cls = "gtn-box-loop";
+  var s = '<g><rect x="' + b.x + '" y="' + b.y + '" width="' + b.w + '" height="' + b.h +
+    '" rx="12" class="' + cls + '"/><title>' + esc(n.name) +
+    (n.context ? " — " + n.context : "") + "</title>";
+  var cx = b.x + b.w / 2;
+  var nameTxt = esc(genTrunc(n.name, 20));
+  if (n.profileIndex !== null && n.profileIndex !== undefined) {
+    s += '<a href="#/people/' + n.profileIndex + '"><text x="' + cx + '" y="' + (b.y + 24) +
+      '" text-anchor="middle" class="gtn-name">' + nameTxt + "</text></a>";
+  } else {
+    s += '<text x="' + cx + '" y="' + (b.y + 24) + '" text-anchor="middle" class="gtn-name">' + nameTxt + "</text>";
+  }
+  if (n.context) {
+    s += '<text x="' + cx + '" y="' + (b.y + 41) + '" text-anchor="middle" class="gtn-sub">' + esc(genTrunc(n.context, 22)) + "</text>";
+  }
+  if (b.loop) {
+    s += '<text x="' + cx + '" y="' + (b.y + 57) + '" text-anchor="middle" class="gtn-sub">already shown above</text>';
+  } else if (n.profileIndex === null || n.profileIndex === undefined) {
+    var refs = [];
+    L.edges.forEach(function (e) {
+      if (e.child === b.nodeId) refs = refs.concat(e.refs || []);
+    });
+    var seen = {};
+    refs = refs.filter(function (r) { return seen[r] ? false : (seen[r] = true); });
+    if (refs.length) {
+      s += '<text x="' + cx + '" y="' + (b.y + 57) + '" text-anchor="middle" class="gtn-sub">' + esc(genTrunc(refs.join("; "), 26)) + "</text>";
+    }
+  }
+  if (!b.loop && !b.header && b.nodeId !== centerId) {
+    s += '<g class="gtn-btn" data-gen-action="center" data-node="' + esc(b.nodeId) + '"><title>Centre the tree on ' + esc(n.name) +
+      '</title><circle cx="' + (b.x + 13) + '" cy="' + (b.y + 13) + '" r="10" class="gtn-btn-bg"/><text x="' + (b.x + 13) +
+      '" y="' + (b.y + 17) + '" text-anchor="middle" class="gtn-btn-txt">⌖</text></g>';
+  }
+  if (!b.loop && !b.header && b.hasKids) {
+    s += '<g class="gtn-btn" data-gen-action="collapse" data-node="' + esc(b.nodeId) + '"><title>' + (b.collapsed ? "Expand" : "Collapse") +
+      ' this branch</title><circle cx="' + (b.x + b.w - 13) + '" cy="' + (b.y + 13) + '" r="10" class="gtn-btn-bg"/><text x="' +
+      (b.x + b.w - 13) + '" y="' + (b.y + 17) + '" text-anchor="middle" class="gtn-btn-txt">' + (b.collapsed ? "+" : "–") + "</text></g>";
+  }
+  if (!b.loop && !b.header && n.note) {
+    s += '<g class="gtn-btn" data-gen-action="note" data-node="' + esc(b.nodeId) + '"><title>Show the note on ' + esc(n.name) +
+      '</title><circle cx="' + (b.x + b.w - 13) + '" cy="' + (b.y + b.h - 13) + '" r="10" class="gtn-btn-bg"/><text x="' +
+      (b.x + b.w - 13) + '" y="' + (b.y + b.h - 9) + '" text-anchor="middle" class="gtn-btn-txt">ⓘ</text></g>';
+  }
+  return s + "</g>";
+}
+
+function genTreeBodyHTML(L, centerId) {
+  var center = L.byId[centerId];
+  if (!center) return "<p class='empty'>That person is not in the family tree.</p>";
+  var anc = genAncBlock(L, centerId, genTreeState.ancDepth, {});
+  var desc = genDescBlock(L, centerId, genTreeState.descDepth, {});
+  var totalW = Math.max(anc.w, desc.w);
+  var totalH = anc.h + desc.h - GEN_TH;
+  var boxes = [], lines = [];
+  var ancDx = (totalW - anc.w) / 2;
+  anc.boxes.forEach(function (b) {
+    if (b.root && b.nodeId === centerId) return; /* shared centre box: desc's copy is kept */
+    boxes.push({ key: b.key, nodeId: b.nodeId, x: b.x + ancDx, y: b.y, w: b.w, h: b.h,
+                 root: b.root, loop: b.loop, center: b.center, collapsed: b.collapsed,
+                 hasKids: b.hasKids, note: b.note, header: b.header, headerLabel: b.headerLabel,
+                 headerSpouse: b.headerSpouse });
+  });
+  anc.lines.forEach(function (ln) {
+    lines.push(ln.map(function (p) { return [p[0] + ancDx, p[1]]; }));
+  });
+  var descDx = (totalW - desc.w) / 2, descDy = anc.h - GEN_TH;
+  desc.boxes.forEach(function (b) {
+    boxes.push({ key: b.key, nodeId: b.nodeId, x: b.x + descDx, y: b.y + descDy, w: b.w, h: b.h,
+                 root: b.root, loop: b.loop, center: b.center, collapsed: b.collapsed,
+                 hasKids: b.hasKids, note: b.note, header: b.header, headerLabel: b.headerLabel,
+                 headerSpouse: b.headerSpouse });
+  });
+  desc.lines.forEach(function (ln) {
+    lines.push(ln.map(function (p) { return [p[0] + descDx, p[1] + descDy]; }));
+  });
+  var svg = '<svg class="gen-tree-svg" width="' + totalW + '" height="' + totalH +
+    '" viewBox="0 0 ' + totalW + " " + totalH + '" role="img" aria-label="Family tree centred on ' + esc(center.name) + '">';
+  lines.forEach(function (ln) {
+    svg += '<path d="M ' + ln.map(function (p) { return p[0] + " " + p[1]; }).join(" L ") + '" class="gtn-line" fill="none"/>';
+  });
+  boxes.forEach(function (b) { svg += genTreeNodeSVG(L, b, centerId); });
+  svg += "</svg>";
+  /* Footnotes: extra parents from parallel records; child-grouping rule. */
+  var rel = L.relations(centerId);
+  var extra = [];
+  Object.keys(rel.fathers).slice(1).forEach(function (pid) {
+    var pn = L.byId[pid];
+    if (pn) extra.push("father " + esc(pn.name) + genRefsHTML(rel.fathers[pid]));
+  });
+  Object.keys(rel.mothers).slice(1).forEach(function (pid) {
+    var pn = L.byId[pid];
+    if (pn) extra.push("mother " + esc(pn.name) + genRefsHTML(rel.mothers[pid]));
+  });
+  var foot = "";
+  if (extra.length) {
+    foot += "<p class='gen-tree-footnote'>Also named as a parent in parallel records (the tree shows the first-named parent above): " + extra.join("; ") + ".</p>";
+  }
+  if (desc.h > GEN_TH) {
+    foot += "<p class='gen-tree-footnote'>Children are grouped by the other parent named on each child's own record. A group header marked “spouse” is also named as a spouse on that parent's own record; any other header names the child's other parent without claiming a marriage. “Other parent not named” means the passages name no second parent for those children — they are never assigned to a spouse by guesswork.</p>";
+  }
+  var ctrls = '<div class="gen-tree-ctrls">' +
+    '<span>Ancestors: ' + genTreeState.ancDepth + " generations</span> " +
+    '<button type="button" data-gen-action="anc-more">More</button> ' +
+    '<button type="button" data-gen-action="anc-fewer">Fewer</button> ' +
+    '<span>Descendants: ' + genTreeState.descDepth + " generations</span> " +
+    '<button type="button" data-gen-action="desc-more">More</button> ' +
+    '<button type="button" data-gen-action="desc-fewer">Fewer</button></div>';
+  return "<p class='gen-tree-hint'>Tap ⌖ on any person to centre the tree on them. Tap a name to open their profile. On a phone, scroll sideways inside the tree.</p>" +
+    ctrls + '<div class="gen-tree-scroll">' + svg + "</div>" + foot;
+}
+
+/* ---------- timeline view (generations, NEVER years) --------------- */
+/* The data holds no dates, so the spine counts generations: the
+   oldest named ancestor is Generation 1, the panel person is the
+   last generation. Each step's connector carries the scripture refs
+   of the edge joining that person to the one above. Where the panel
+   person's profile carries a TimelineEra it is shown as an era label;
+   where it does not, no era is shown. */
+function genTimelineHTML(L, node) {
+  var chain = [{ node: node, parentId: null, refs: [] }];
+  var cur = node, seen = {}, guard = 0, capped = false;
+  seen[node.id] = true;
+  while (guard++ < 12) {
+    var rel = L.relations(cur.id);
+    var fatherIds = Object.keys(rel.fathers), motherIds = Object.keys(rel.mothers);
+    var parentId = fatherIds[0] || motherIds[0] || null;
+    if (!parentId || !L.byId[parentId] || seen[parentId]) break;
+    if (guard === 12) { capped = true; }
+    seen[parentId] = true;
+    chain.unshift({ node: L.byId[parentId], parentId: null, refs: [] });
+    cur = L.byId[parentId];
+  }
+  /* Connector refs: for each entry after the first, the edge(s) from
+     the entry above to this entry. */
+  for (var i = 1; i < chain.length; i++) {
+    chain[i].refs = L.edgeRefs(chain[i - 1].node.id, chain[i].node.id);
+  }
+  var people = (typeof data !== "undefined" && data.people) || [];
+  var html = "<p class='page-intro'>Generations, not years — the genealogy passages give order, not dates, so this spine counts generations from the oldest named ancestor down to " +
+    esc(node.name) + ". Nothing here is dated; undated generations are not a gap in the record, they are what the passages give.</p>";
+  if (chain.length < 2) {
+    return html + "<p>Parentage is not stated in the genealogy passages for this person, so there is no chain to lay out.</p>";
+  }
+  html += '<div class="tl">';
+  chain.forEach(function (step, idx) {
+    var n = step.node;
+    if (idx > 0) {
+      html += '<p class="gen-tl-conn">&darr; ' +
+        (step.refs.length ? genRefsHTML(step.refs).replace(/^ /, "") : "no passage cited for this link") + "</p>";
+    }
+    var isLast = idx === chain.length - 1;
+    var era = "";
+    if (n.profileIndex !== null && n.profileIndex !== undefined && people[n.profileIndex]) {
+      var te = people[n.profileIndex].TimelineEra;
+      if (te) era = "<p class='gen-tl-era'>Era: " + esc(te) + "</p>";
+    }
+    html += '<div class="tl-node' + (isLast ? " gen-tl-current" : "") + '">' +
+      '<p class="tl-date">Generation ' + (idx + 1) + (isLast ? " &middot; selected person" : "") + "</p>" +
+      "<h3>" + genTreeNameHTML(L, n) + "</h3>" +
+      era +
+      (n.context ? "<p class='gen-context'>" + esc(n.context) + "</p>" : "") +
+      ((n.alt && n.alt.length) ? "<p class='gen-context'>Also spelled: " + n.alt.map(esc).join(", ") + "</p>" : "") +
+      (n.note ? "<p class='gen-note'>" + esc(n.note) + "</p>" : "") +
+      ((n.profileIndex !== null && n.profileIndex !== undefined)
+        ? "<p><a class='btn' href='#/people/" + n.profileIndex + "'>View full profile &rarr;</a></p>" : "") +
+      "</div>";
+  });
+  html += "</div>";
+  var top = chain[0].node;
+  if (capped) {
+    html += "<p class='gen-chain-note'>The chain stops at 12 generations here — open " +
+      '<a href="' + L.href(top) + '">' + esc(top.name) + "</a> to continue further back.</p>";
+  } else {
+    html += "<p class='gen-chain-note'>Parentage beyond " + esc(top.name) +
+      " is not stated in the genealogy passages, so the spine honestly stops there.</p>";
+  }
+  return html;
+}
+
+/* ---------- toggle + section + binding ----------------------------- */
+function genModeToggleHTML() {
+  function btn(mode, label) {
+    return '<button type="button" data-gen-view="' + mode + '" class="' +
+      (genTreeState.mode === mode ? "active" : "") + '">' + label + "</button>";
+  }
+  return '<div class="gen-view-toggle" role="group" aria-label="Family tree view">' +
+    btn("tree", "Tree") + btn("timeline", "Timeline") + "</div>";
+}
+/* Person panel: toggle + interactive body + note foot. The body is
+   filled by genBindInteractive (it must be called after innerHTML). */
+function genInteractiveHTML(node) {
+  return '<div class="gen-interactive" id="genInteractive"><h3>Interactive view</h3>' +
+    genModeToggleHTML() + '<div id="genInteractiveBody"></div>' +
+    '<div id="genInteractiveFoot" class="gen-tree-foot"></div></div>';
+}
+/* Starting-points view: the toggle alone; the choice applies to the
+   next person the visitor opens (mode lives in genTreeState). */
+function genModeToggleSectionHTML() {
+  return '<div class="gen-interactive" id="genInteractive"><h3>Interactive view</h3>' +
+    genModeToggleHTML() +
+    '<p class="gen-view-hint">Choose Tree or Timeline — your choice applies to the next person you open.</p></div>';
+}
+function genTreeFootHTML(L, centerId) {
+  var n = L.byId[centerId];
+  if (!n) return "";
+  var refs = [];
+  L.edges.forEach(function (e) {
+    if (e.child === centerId) refs = refs.concat(e.refs || []);
+  });
+  var seen = {};
+  refs = refs.filter(function (r) { return seen[r] ? false : (seen[r] = true); });
+  var html = "";
+  if (refs.length) html += "<p>Record for " + esc(n.name) + ": " + genRefsHTML(refs).replace(/^ /, "") + "</p>";
+  if (n.note) html += "<p class='gen-note'>" + esc(n.note) + "</p>";
+  return html;
+}
+function genRenderInteractiveBody(node) {
+  var body = document.getElementById("genInteractiveBody");
+  var foot = document.getElementById("genInteractiveFoot");
+  if (!body) return;
+  var L = genTreeLookups();
+  if (genTreeState.mode === "timeline") {
+    body.innerHTML = genTimelineHTML(L, node);
+    if (foot) foot.innerHTML = "";
+    return;
+  }
+  var centerId = genTreeState.centerId && L.byId[genTreeState.centerId]
+    ? genTreeState.centerId : node.id;
+  genTreeState.centerId = centerId;
+  body.innerHTML = genTreeBodyHTML(L, centerId);
+  if (foot) foot.innerHTML = genTreeFootHTML(L, centerId);
+}
+/* Call after app.innerHTML is set. node may be null (starting view:
+   only the toggle is bound). One delegated listener serves the
+   toggle, the tree buttons, and the depth controls. */
+function genBindInteractive(node) {
+  var section = document.getElementById("genInteractive");
+  if (!section) return;
+  if (node) {
+    genTreeState.centerId = node.id;
+    genTreeState.nodeId = node.id;
+    genRenderInteractiveBody(node);
+  }
+  section.addEventListener("click", function (e) {
+    var viewBtn = e.target.closest ? e.target.closest("[data-gen-view]") : null;
+    if (viewBtn) {
+      genTreeState.mode = viewBtn.getAttribute("data-gen-view");
+      var btns = section.querySelectorAll("[data-gen-view]");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].className = btns[i].getAttribute("data-gen-view") === genTreeState.mode ? "active" : "";
+      }
+      if (node) genRenderInteractiveBody(node);
+      return;
+    }
+    if (!node) return;
+    var act = e.target.closest ? e.target.closest("[data-gen-action]") : null;
+    if (!act) return;
+    var action = act.getAttribute("data-gen-action");
+    var nid = act.getAttribute("data-node");
+    var L = genTreeLookups();
+    if (action === "center" && nid && L.byId[nid]) {
+      genTreeState.centerId = nid;
+      genRenderInteractiveBody(node);
+    } else if (action === "collapse" && nid) {
+      if (genTreeState.collapsed[nid]) delete genTreeState.collapsed[nid];
+      else genTreeState.collapsed[nid] = true;
+      genRenderInteractiveBody(node);
+    } else if (action === "note" && nid && L.byId[nid]) {
+      var foot = document.getElementById("genInteractiveFoot");
+      if (foot) foot.innerHTML = genTreeFootHTML(L, nid);
+    } else if (action === "anc-more") {
+      if (genTreeState.ancDepth < 6) genTreeState.ancDepth++;
+      genRenderInteractiveBody(node);
+    } else if (action === "anc-fewer") {
+      if (genTreeState.ancDepth > 1) genTreeState.ancDepth--;
+      genRenderInteractiveBody(node);
+    } else if (action === "desc-more") {
+      if (genTreeState.descDepth < 6) genTreeState.descDepth++;
+      genRenderInteractiveBody(node);
+    } else if (action === "desc-fewer") {
+      if (genTreeState.descDepth > 1) genTreeState.descDepth--;
+      genRenderInteractiveBody(node);
+    }
+  });
+}
   /* ---------- storybook reader ---------- */
   /* Three shelves, one reader: Bible stories (the stories collection),
      plus pet stories and children's stories, which start empty and fill
