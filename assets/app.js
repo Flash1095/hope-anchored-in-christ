@@ -184,7 +184,8 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "142";  // bump when site code or content changes, so browsers fetch fresh copies
+  var genealogyData = null; // family tree (content/genealogy.json)
+  var ASSET_V = "143";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1182,6 +1183,202 @@
     });
     window.scrollTo(0, 0);
   }
+  /* ---------- genealogy family tree ---------- */
+  /* Family tree (content/genealogy.json): typed parent/child/spouse
+     edges taken from the Bible's own genealogy passages (Genesis 5,
+     10, 11, 36; Exodus 6; Ruth 4; Matthew 1; Luke 3; 1 Chronicles 1-9).
+     Nodes are keyed on (name, father), never on name alone, so
+     same-name men stay separate; Matthew and Luke's lines after David
+     are kept fully separate, never harmonized. Where a passage is
+     ambiguous the node carries a note saying so — nothing is guessed.
+     Like storybook/gallery this is app-only: no collection, no static
+     pages, no sitemap change. */
+  function viewGenealogy(nameParam, params) {
+    var G = genealogyData || { nodes: [], edges: [] };
+    var nodes = G.nodes || [], edges = G.edges || [];
+    var byId = {};
+    nodes.forEach(function (n) { byId[n.id] = n; });
+    var nameCounts = {};
+    nodes.forEach(function (n) { nameCounts[n.name] = (nameCounts[n.name] || 0) + 1; });
+    function genHref(n) {
+      var base = "#/genealogy/" + encodeURIComponent(n.name);
+      return nameCounts[n.name] > 1 ? base + "?id=" + encodeURIComponent(n.id) : base;
+    }
+    function nameHTML(n) {
+      return esc(n.name) + (n.context ? ' <span class="gen-context">' + esc(n.context) + "</span>" : "");
+    }
+    /* A name in a relationship list: profiled names link to their
+       profile (plus a small tree link); unprofiled names stay plain
+       text with their scripture refs, as the tree brief requires. */
+    function relNameHTML(n) {
+      if (n.profileIndex !== null && n.profileIndex !== undefined) {
+        return '<a href="#/people/' + n.profileIndex + '">' + esc(n.name) + "</a>" +
+          ' <a class="gen-tree-link" href="' + genHref(n) + '" title="View in family tree">tree</a>';
+      }
+      return esc(n.name);
+    }
+    function refsHTML(refs) {
+      if (!refs || !refs.length) return "";
+      return ' <span class="gen-refs">' + linkifyScriptureRefs(refs.join("; ")) + "</span>";
+    }
+    function mergeRefs(list) {
+      var out = [];
+      list.forEach(function (r) { if (out.indexOf(r) === -1) out.push(r); });
+      return out;
+    }
+    function relations(id) {
+      var fathers = {}, mothers = {}, spouses = {}, children = {};
+      edges.forEach(function (e) {
+        if (e.child === id) {
+          if (e.father) fathers[e.father] = mergeRefs((fathers[e.father] || []).concat(e.refs || []));
+          if (e.mother) mothers[e.mother] = mergeRefs((mothers[e.mother] || []).concat(e.refs || []));
+          (e.spouses || []).forEach(function (s) {
+            spouses[s] = mergeRefs((spouses[s] || []).concat(e.refs || []));
+          });
+        }
+        if (e.father === id || e.mother === id) {
+          children[e.child] = mergeRefs((children[e.child] || []).concat(e.refs || []));
+        }
+      });
+      return { fathers: fathers, mothers: mothers, spouses: spouses, children: children };
+    }
+    function relListHTML(map) {
+      var ids = Object.keys(map);
+      if (!ids.length) return "";
+      return '<ul class="gen-rel-list">' + ids.map(function (pid) {
+        var n = byId[pid];
+        if (!n) return "";
+        return "<li>" + relNameHTML(n) + refsHTML(map[pid]) + "</li>";
+      }).join("") + "</ul>";
+    }
+    function chainHTML(node) {
+      var chain = [node], cur = node, guard = 0, seen = {};
+      seen[node.id] = true;
+      while (guard++ < 12) {
+        var rel = relations(cur.id);
+        var parentId = Object.keys(rel.fathers)[0] || Object.keys(rel.mothers)[0];
+        if (!parentId || !byId[parentId] || seen[parentId]) break;
+        seen[parentId] = true;
+        cur = byId[parentId];
+        chain.unshift(cur);
+      }
+      if (chain.length < 2) return "<p>Parentage is not stated in the genealogy passages for this person.</p>";
+      return '<p class="gen-chain">' + chain.map(function (n) {
+        return '<a href="' + genHref(n) + '">' + esc(n.name) + "</a>";
+      }).join(" &rsaquo; ") + "</p>" +
+        "<p class='gen-chain-note'>Oldest ancestor first, following fathers (or mothers where no father is stated) as far as the passages go — the chain stops honestly where parentage is unstated.</p>";
+    }
+    function panelHTML(node) {
+      var rel = relations(node.id);
+      var html = '<div class="gen-panel"><h2>' + esc(node.name) + "</h2>";
+      if (node.context) html += "<p class='gen-context'>" + esc(node.context) + "</p>";
+      if (node.alt && node.alt.length) html += "<p class='gen-context'>Also spelled: " + node.alt.map(esc).join(", ") + "</p>";
+      if (node.profileIndex !== null && node.profileIndex !== undefined) {
+        html += "<p><a class='btn' href='#/people/" + node.profileIndex + "'>View full profile &rarr;</a></p>";
+      }
+      if (node.note) html += "<p class='gen-note'>" + esc(node.note) + "</p>";
+      html += "<h3>Parents</h3>";
+      var parents = relListHTML(rel.fathers) + relListHTML(rel.mothers);
+      html += parents || "<p>Parentage is not stated in the genealogy passages for this person.</p>";
+      html += "<h3>Spouse(s)</h3>";
+      html += relListHTML(rel.spouses) || "<p>No spouse is named for this person in the genealogy passages.</p>";
+      html += "<h3>Children</h3>";
+      html += relListHTML(rel.children) || "<p>No children are named for this person in the genealogy passages.</p>";
+      html += "<h3>Ancestor chain</h3>" + chainHTML(node);
+      html += "</div>";
+      return html;
+    }
+    function searchHTML() {
+      return '<div class="controls"><input type="search" id="genSearch" placeholder="Search the family tree — try Adam, Abraham, David, or Jesus…" aria-label="Search the family tree"></div>' +
+        '<div id="genResults"></div>';
+    }
+    function startPointsHTML() {
+      var wanted = ["Adam", "Abraham", "King David", "Jesus"];
+      var people = data.people || [];
+      var items = [];
+      wanted.forEach(function (w) {
+        var pi = -1;
+        for (var i = 0; i < people.length; i++) if (people[i].Name === w) { pi = i; break; }
+        if (pi === -1) return;
+        var node = null;
+        for (var j = 0; j < nodes.length; j++) if (nodes[j].profileIndex === pi) { node = nodes[j]; break; }
+        if (node) items.push('<li><a href="' + genHref(node) + '">' + esc(w) + "</a></li>");
+      });
+      if (!items.length) return "";
+      return "<h3>Start with</h3><ul class='gen-rel-list'>" + items.join("") + "</ul>";
+    }
+    function bindSearch() {
+      var input = document.getElementById("genSearch");
+      var wrap = document.getElementById("genResults");
+      if (!input || !wrap) return;
+      input.addEventListener("input", function () {
+        var q = input.value.trim().toLowerCase();
+        if (!q) { wrap.innerHTML = ""; return; }
+        var hits = nodes.filter(function (n) {
+          return n.name.toLowerCase().indexOf(q) !== -1 ||
+            (n.alt || []).some(function (a) { return a.toLowerCase().indexOf(q) !== -1; }) ||
+            (n.context || "").toLowerCase().indexOf(q) !== -1;
+        }).slice(0, 60);
+        if (!hits.length) { wrap.innerHTML = "<p class='empty'>No one in the family tree matches that name.</p>"; return; }
+        wrap.innerHTML = "<ul class='gen-results'>" + hits.map(function (n) {
+          var prof = (n.profileIndex !== null && n.profileIndex !== undefined)
+            ? ' <a href="#/people/' + n.profileIndex + '">profile</a>' : "";
+          return "<li><a href='" + genHref(n) + "'>" + nameHTML(n) + "</a>" + prof + "</li>";
+        }).join("") + "</ul>";
+      });
+    }
+    var html = '<a class="back-link" href="#/explore">&larr; Explore</a><h2>Family Tree</h2>' +
+      "<p class='page-intro'>Every parent, child, and spouse named in the Bible's genealogy passages — Genesis 5, 10, 11, 36; Exodus 6; Ruth 4; Matthew 1; Luke 3; 1 Chronicles 1–9 — linked to their profiles and to the passages themselves. Where the text leaves a link unstated or debated, the tree says so instead of guessing.</p>";
+    if (!nodes.length) {
+      html += "<p class='empty'>The family tree data is not available right now.</p>";
+      app.innerHTML = html;
+      window.scrollTo(0, 0);
+      return;
+    }
+    html += searchHTML();
+    if (!nameParam) {
+      html += startPointsHTML();
+      app.innerHTML = html;
+      bindSearch();
+      window.scrollTo(0, 0);
+      return;
+    }
+    var node = null;
+    var idParam = params ? params.get("id") : null;
+    if (idParam && byId[idParam]) {
+      node = byId[idParam];
+    } else {
+      var matches = nodes.filter(function (n) {
+        return n.name === nameParam || (n.alt || []).indexOf(nameParam) !== -1;
+      });
+      if (matches.length === 1) {
+        node = matches[0];
+      } else if (matches.length > 1) {
+        html += "<h3>Which " + esc(nameParam) + "?</h3><p>Several people in the tree share this name — pick the one you mean:</p>" +
+          "<ul class='gen-results'>" + matches.map(function (n) {
+            var rel = relations(n.id);
+            var fatherId = Object.keys(rel.fathers)[0];
+            var fatherTxt = fatherId && byId[fatherId] ? " — child of " + esc(byId[fatherId].name) : "";
+            return "<li><a href='" + genHref(n) + "'>" + nameHTML(n) + "</a>" + fatherTxt + "</li>";
+          }).join("") + "</ul>";
+        app.innerHTML = html;
+        bindSearch();
+        window.scrollTo(0, 0);
+        return;
+      }
+    }
+    if (!node) {
+      html += "<p class='empty'>No one named “" + esc(nameParam) + "” is in the family tree.</p>";
+      app.innerHTML = html;
+      bindSearch();
+      window.scrollTo(0, 0);
+      return;
+    }
+    html += panelHTML(node);
+    app.innerHTML = html;
+    bindSearch();
+    window.scrollTo(0, 0);
+  }
   /* ---------- storybook reader ---------- */
   /* Three shelves, one reader: Bible stories (the stories collection),
      plus pet stories and children's stories, which start empty and fill
@@ -1308,6 +1505,9 @@
     html += "<div class='card gallery-card'><h3>Art Gallery</h3>" +
       "<p class='snippet'>Art, verse cards, and other pieces — and the ones for sale link through to the store.</p><p>" +
       "<a class='btn' href='#/gallery'>Browse the gallery</a></p></div>";
+    html += "<div class='card genealogy-card'><h3>Family Tree</h3>" +
+      "<p class='snippet'>Every parent, child, and spouse named in the Bible's genealogy passages — linked to their profiles and to the passages.</p><p>" +
+      "<a class='btn' href='#/genealogy'>Explore the family tree</a></p></div>";
     var ordered = EXPLORE_ORDER.map(function (id) { return coll(id); }).filter(Boolean)
       .concat(COLLECTIONS.filter(function (c) { return EXPLORE_ORDER.indexOf(c.id) === -1; }));
     var gridHtml = "";
@@ -2496,6 +2696,7 @@
     if (path[0] === "quizzes" && path[1] === "play") return viewQuizPlay(path[2] ? decodeURIComponent(path[2]) : "", params);
     if (path[0] === "storybook") return viewStorybook(path[1] ? decodeURIComponent(path[1]) : null, path[2] ? decodeURIComponent(path[2]) : null, params);
     if (path[0] === "gallery") return viewGallery();
+    if (path[0] === "genealogy") return viewGenealogy(path[1] ? decodeURIComponent(path[1]) : null, params);
     var c = coll(path[0]);
     if (c) return viewCollection(c.id, path[1] ? decodeURIComponent(path[1]) : null, params);
     return viewHome();
@@ -2507,7 +2708,7 @@
   });
   document.getElementById("footerNav").innerHTML =
     COLLECTIONS.map(function (c) { return '<a href="#/' + c.id + '">' + esc(c.label) + "</a>"; }).join("") +
-    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/gallery">Gallery</a>';
+    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/gallery">Gallery</a><a href="#/genealogy">Genealogy</a>';
 
   app.innerHTML = '<p class="loading">Loading the collections…</p>';
   var jobs = COLLECTIONS.map(function (c) {
@@ -2524,6 +2725,7 @@
   jobs.push(fetch("content/petstories.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (p) { petStories = p; }).catch(function () { petStories = []; }));
   jobs.push(fetch("content/childrenstories.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (p) { childStories = p; }).catch(function () { childStories = []; }));
   jobs.push(fetch("content/gallery.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (g) { galleryItems = g; }).catch(function () { galleryItems = []; }));
+  jobs.push(fetch("content/genealogy.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : { nodes: [], edges: [] }; }).then(function (g) { genealogyData = g; }).catch(function () { genealogyData = { nodes: [], edges: [] }; }));
   Promise.all(jobs).then(function () {
     buildLinkIndex();
     window.addEventListener("hashchange", render);

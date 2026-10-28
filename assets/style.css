@@ -379,3 +379,26 @@ a:hover { color: var(--gold-dark); }
 .verif-box .badge { font-size: 0.85rem; }
 .verif-meaning { margin-left: 0.4rem; }
 .verif-sources, .verif-reviewed { margin-top: 0.5rem; font-size: 0.95rem; overflow-wrap: anywhere; }
+
+/* Genealogy family tree */
+.genealogy-card { margin: 1rem 0; }
+#genSearch { width: 100%; max-width: 520px; padding: 0.6rem 0.8rem; border: 1px solid var(--line); border-radius: 999px; font-size: 1rem; }
+.gen-results { list-style: none; padding: 0; margin-top: 1rem; max-width: 720px; }
+.gen-results li { border-bottom: 1px solid var(--line); padding: 0.7rem 0.2rem; }
+.gen-results a { font-weight: 600; text-decoration: none; }
+.gen-results a:hover { color: var(--gold-dark); }
+.gen-context { color: var(--muted); font-size: 0.9rem; font-weight: 400; }
+.gen-panel { background: #fff; border-radius: 16px; box-shadow: 0 4px 16px rgba(27, 42, 78, 0.10); padding: 1.5rem; max-width: 720px; margin-top: 1rem; }
+.gen-panel h2 { margin-top: 0; }
+.gen-panel h3 { margin-top: 1.4rem; }
+.gen-note { border-left: 4px solid var(--gold); padding: 0.3rem 1rem; color: var(--navy); font-style: italic; }
+.gen-rel-list { list-style: none; padding: 0; margin: 0.5rem 0; }
+.gen-rel-list li { padding: 0.35rem 0; border-bottom: 1px solid var(--line); }
+.gen-rel-list a { font-weight: 600; text-decoration: none; }
+.gen-rel-list a:hover { color: var(--gold-dark); }
+.gen-tree-link { font-size: 0.85rem; font-weight: 400; }
+.gen-refs { font-size: 0.95rem; }
+.gen-chain { font-weight: 600; line-height: 1.8; }
+.gen-chain a { text-decoration: none; }
+.gen-chain a:hover { color: var(--gold-dark); }
+.gen-chain-note { color: var(--muted); font-size: 0.9rem; }

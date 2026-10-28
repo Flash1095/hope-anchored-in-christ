@@ -168,6 +168,26 @@ def description_for(body):
     return "Hope Anchored in Christ — a Bible study site anchored on Hebrews 6:19."
 
 
+def json_ld(obj):
+    # "<\/" is a valid JSON escape for "</", so the block can never break
+    # out of its own <script> tag even if the text contains markup.
+    return ('<script type="application/ld+json">' +
+            json.dumps(obj, ensure_ascii=False).replace("</", "<\\/") +
+            "</script>")
+
+
+def article_ld(title, desc, url):
+    return json_ld({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "description": desc,
+        "url": url,
+        "inLanguage": "en",
+        "mainEntityOfPage": url,
+    })
+
+
 HEADER = """<header class="site-header">
   <div class="header-inner">
     <a class="brand" href="../../#/">&#9875; Hope Anchored in Christ</a>
@@ -227,6 +247,7 @@ def post_page(slug, fm, body_html, desc, series_nav=""):
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="{site}/assets/banner.jpg?v={banner_v}">
+{jsonld}
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
@@ -248,7 +269,8 @@ def post_page(slug, fm, body_html, desc, series_nav=""):
 """.format(title=esc(title), desc=esc(desc), url=url, site=SITE_URL,
            banner_v=BANNER_V, header=HEADER.format(banner_v=BANNER_V),
            meta=meta, body=body_html, slug=slug, footer=FOOTER,
-           series_line=series_line, series_nav=series_nav)
+           series_line=series_line, series_nav=series_nav,
+           jsonld=article_ld(title, desc, url))
 
 
 REL_FIELDS = ["RelatedBooks", "RelatedPeople", "RelatedEvents", "RelatedTopics",
@@ -282,7 +304,8 @@ def verification_box(row):
     html += '<div class="verif-reviewed">Last reviewed: ' + (esc(rev) if rev else "not yet reviewed") + "</div></div>"
     return html
 
-SNIPPET_FIELDS = ["Summary", "Description", "Story", "Definition", "ShortAnswer",
+SNIPPET_FIELDS = ["Summary", "Description", "Retelling", "Discussion", "Story",
+    "Definition", "ShortAnswer",
     "ProphecySummary", "Explanation", "BiblicalUsage", "Beliefs"]
 # Collections with no generic detail page: quizzes is an interactive
 # player. Everything else gets a static page.
@@ -633,6 +656,26 @@ def render_entry_field(field, value, cur_coll, glob, home):
     return esc(value)
 
 
+def entry_jsonld(title, desc, url, coll, row):
+    blocks = [article_ld(title, desc, url)]
+    if coll == "questions":
+        q = (row.get("Question") or "").strip()
+        a = plain_text(row.get("DetailedAnswer") or "").strip()
+        if q and a:
+            if len(a) > 2000:
+                a = a[:1997].rsplit(" ", 1)[0] + "…"
+            blocks.append(json_ld({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [{
+                    "@type": "Question",
+                    "name": q,
+                    "acceptedAnswer": {"@type": "Answer", "text": a},
+                }],
+            }))
+    return "\n".join(blocks)
+
+
 def entry_page(e, glob, home, quizzes_by_course):
     row = e["row"]
     coll = e["coll"]
@@ -644,7 +687,10 @@ def entry_page(e, glob, home, quizzes_by_course):
         if isinstance(v, list):
             v = "; ".join(str(x) for x in v)
         v = v.strip()
-        if v:
+        # A field whose value IS the title (stories: "Story" == the title)
+        # is not a description; skip it so the page never gets a one-word
+        # meta description.
+        if v and v != title:
             desc = plain_text(v)
             if len(desc) > 160:
                 desc = desc[:157].rsplit(" ", 1)[0] + "…"
@@ -715,6 +761,7 @@ def entry_page(e, glob, home, quizzes_by_course):
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="{site}/assets/banner.jpg?v={banner_v}">
+{jsonld}
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
@@ -730,7 +777,8 @@ def entry_page(e, glob, home, quizzes_by_course):
 </html>
 """.format(title=esc(title), desc=esc(desc), url=url, site=SITE_URL,
            banner_v=BANNER_V, header=HEADER.format(banner_v=BANNER_V),
-           coll=coll, label=esc(e["label"]), body=body, idx=e["idx"], footer=FOOTER)
+           coll=coll, label=esc(e["label"]), body=body, idx=e["idx"], footer=FOOTER,
+           jsonld=entry_jsonld(title, desc, url, coll, row))
 
 
 def generate_entries():
