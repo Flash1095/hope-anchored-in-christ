@@ -185,7 +185,7 @@
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // family tree (content/genealogy.json)
-  var ASSET_V = "144";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "145";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1779,6 +1779,170 @@
     "you": true, "the": true, "and": true, "for": true, "with": true,
     "from": true, "that": true, "this": true, "saves": true, "seed": true,
     "simeon": true, "hadar": true };
+  /* Verse-text people overrides and safe aliases. WHY THIS EXISTS: the
+     comma-alias rule lets a sole comma-profile capture a bare name that
+     usually means someone else, because regnal profiles ("King X") have
+     no comma and propose nothing — so bare "Saul" linked to Saul, King
+     of Edom (416 anchors), "Ahab" to Ahab, Son of Kolaiah (90), and
+     "Josiah" to Josiah, Son of Zephaniah (49). Every entry here was
+     verified against the verse text: the override target is the
+     referent of the bare form in the overwhelming majority of verses,
+     and the chapter rules below cover the exceptions. An override
+     beats the alias rule and beats a non-people exact key, but only
+     for the listed forms — it never reorders the global passes, so
+     place-wins ("Haran", "Midian", "Shechem") is untouched. */
+  var BIBLE_PEOPLE_OVERRIDE = {
+    "saul": "King Saul", "ahab": "King Ahab", "josiah": "King Josiah",
+    "abram": "Abraham", "satan": "Satan",
+    "david": "King David", "solomon": "King Solomon", "christ": "Jesus",
+    "peter": "Simon Peter", "esther": "Queen Esther", "pilate": "Pontius Pilate",
+    "nebuchadnezzar": "King Nebuchadnezzar", "nebuchadrezzar": "King Nebuchadnezzar",
+    "cyrus": "Cyrus the Great", "sarai": "Sarah", "noe": "Noah",
+    "nachor": "Nahor, Father of Terah", "saruch": "Serug", "thara": "Terah",
+    "sem": "Shem", "core": "Korah, Son of Izhar", "apollyon": "Abaddon",
+    /* Hyphenated text forms whose profile drops the hyphen or the title:
+       "Pharaoh-hophra" (Jer 44:30) -> Hophra; "Pharaoh-necho" (Jer 46:2,
+       no final h) -> Pharaoh-nechoh; "Regem-melech" (Zech 7:2) ->
+       Regemmelech. Each form occurs in exactly one verse. */
+    "pharaoh-hophra": "Hophra", "pharaoh-necho": "Pharaoh-nechoh",
+    "regem-melech": "Regemmelech"
+  };
+  /* Chapter/verse-scoped rules, checked before the override table.
+     target null means: link NOTHING here (plain verdict) — used where
+     the bare form means a different man, a tribe, or a kingdom in that
+     passage (Ezra 10's two list-Men named Manasseh are not Joseph's
+     son and not the king, so they stay plain). chapters "all" means
+     every chapter of the book; verses, when present, restricts the
+     rule to those verses of the listed chapters. */
+  var BIBLE_CONTEXT_RULES = [
+    { form: "saul", target: "Saul, King of Edom", book: "Genesis", chapters: [36] },
+    { form: "saul", target: "Paul", book: "Acts", chapters: "all" },
+    { form: "ahab", target: "Ahab, Son of Kolaiah", book: "Jeremiah", chapters: [29] },
+    { form: "manasseh", target: "Manasseh, King of Judah", book: "2 Kings", chapters: [20, 21, 23, 24] },
+    { form: "manasseh", target: "Manasseh, King of Judah", book: "2 Chronicles", chapters: [32, 33] },
+    { form: "manasseh", target: "Manasseh, King of Judah", book: "1 Chronicles", chapters: [3] },
+    { form: "manasseh", target: null, book: "Ezra", chapters: [10] },
+    { form: "gad", target: "Gad, David's Seer", book: "1 Samuel", chapters: [22] },
+    /* 2 Samuel 24 is verse-restricted: 24:5 is "the river of Gad"
+       (the tribe's territory), not the seer — a whole-chapter rule
+       would link it to the wrong man. */
+    { form: "gad", target: "Gad, David's Seer", book: "2 Samuel", chapters: [24], verses: [11, 13, 14, 18, 19] },
+    { form: "gad", target: "Gad, David's Seer", book: "1 Chronicles", chapters: [21, 29] },
+    { form: "gad", target: "Gad, David's Seer", book: "2 Chronicles", chapters: [29] },
+    { form: "joseph", target: "Joseph, Son of Jacob", book: "Genesis", chapters: "all" },
+    { form: "joseph", target: "Joseph, Son of Jacob", book: "Acts", chapters: [7] },
+    { form: "joseph", target: "Joseph, Son of Jacob", book: "Hebrews", chapters: [11] },
+    { form: "joseph", target: "Joseph, Son of Jacob", book: "John", chapters: [4], verses: [5] },
+    { form: "joseph", target: "Joseph, Husband of Mary", book: "Matthew", chapters: [1, 2] },
+    { form: "joseph", target: "Joseph, Husband of Mary", book: "Luke", chapters: [1, 2, 4] },
+    { form: "joseph", target: "Joseph, Husband of Mary", book: "Luke", chapters: [3], verses: [23] },
+    { form: "joseph", target: "Joseph, Husband of Mary", book: "John", chapters: [1, 6] },
+    { form: "hezekiah", target: "King Hezekiah", book: "2 Kings", chapters: [16, 18, 19, 20, 21] },
+    { form: "hezekiah", target: "King Hezekiah", book: "2 Chronicles", chapters: [28, 29, 30, 31, 32, 33] },
+    { form: "hezekiah", target: "King Hezekiah", book: "Isaiah", chapters: [1, 36, 37, 38, 39] },
+    { form: "hezekiah", target: "King Hezekiah", book: "1 Chronicles", chapters: [4] },
+    { form: "hezekiah", target: "King Hezekiah", book: "Jeremiah", chapters: [26] },
+    { form: "hezekiah", target: "King Hezekiah", book: "Hosea", chapters: [1] },
+    { form: "hezekiah", target: "King Hezekiah", book: "Micah", chapters: [1] },
+    { form: "hezekiah", target: "King Hezekiah", book: "Proverbs", chapters: [25] },
+    { form: "mary", target: "Mary, Mother of Jesus", book: "Matthew", chapters: [1, 2, 13] },
+    { form: "mary", target: "Mary, Mother of Jesus", book: "Luke", chapters: [1, 2] },
+    { form: "mary", target: "Mary of Bethany", book: "John", chapters: [11, 12] },
+    { form: "abimelech", target: "Abimelech, King of Gerar", book: "Genesis", chapters: "all" },
+    { form: "abimelech", target: "Abimelech, Son of Gideon", book: "Judges", chapters: [8, 9, 10] },
+    { form: "abimelech", target: "Abimelech, Son of Gideon", book: "2 Samuel", chapters: [11] },
+    { form: "lamech", target: "Lamech, Son of Methusael", book: "Genesis", chapters: [4] },
+    { form: "lamech", target: "Lamech, Father of Noah", book: "Genesis", chapters: [5] },
+    { form: "lamech", target: "Lamech, Father of Noah", book: "1 Chronicles", chapters: [1] },
+    { form: "lamech", target: "Lamech, Father of Noah", book: "Luke", chapters: [3] },
+    { form: "korah", target: "Korah, Son of Esau", book: "Genesis", chapters: [36] },
+    { form: "korah", target: "Korah, Son of Esau", book: "1 Chronicles", chapters: [1] },
+    { form: "korah", target: "Korah, Son of Izhar", book: "Exodus", chapters: [6] },
+    { form: "korah", target: "Korah, Son of Izhar", book: "Numbers", chapters: [16, 26, 27] },
+    { form: "korah", target: "Korah, Son of Izhar", book: "1 Chronicles", chapters: [6, 9] },
+    { form: "korah", target: "Korah, Son of Hebron", book: "1 Chronicles", chapters: [2] },
+    { form: "jehoshaphat", target: "King Jehoshaphat", book: "1 Kings", chapters: [15, 22] },
+    { form: "jehoshaphat", target: "King Jehoshaphat", book: "2 Kings", chapters: [1, 3, 8, 12] },
+    { form: "jehoshaphat", target: "King Jehoshaphat", book: "1 Chronicles", chapters: [3] },
+    { form: "jehoshaphat", target: "King Jehoshaphat", book: "2 Chronicles", chapters: [17, 18, 19, 20, 21, 22] }
+  ];
+  /* Link-only forms: these link ONLY inside their verified set and stay
+     plain everywhere else, even though an exact key exists. "Judah"
+     is the patriarch in Genesis and Ruth 4:12, but a tribe, land, or
+     kingdom in nearly every other book — linking those would point
+     700+ kingdom/tribe mentions at one man. "Michael" is the archangel
+     in Daniel, Jude, and Revelation, but a dozen minor men in the
+     genealogies — the exact key alone would capture all of them. */
+  var BIBLE_LINK_ONLY = {
+    "judah": { target: "Judah", books: { "Genesis": "all", "Ruth": [4] } },
+    "michael": { target: "Michael", books: { "Daniel": [10, 12], "Jude": [1], "Revelation": [12] } }
+  };
+  /* Verse-only forms: these link ONLY in the exact verses listed and stay
+     plain everywhere else, even though a map key exists. Without this,
+     every preposition "on" in the whole Bible linked to the city On
+     (1,968 false anchors) and every sentence-initial "So" linked to So,
+     King of Egypt (622 false anchors). The genuine uses are exactly:
+     On — Genesis 41:45, 41:50, 46:20 ("priest of On"); So — 2 Kings 17:4
+     ("So king of Egypt"). In an allowed verse the normal map hit applies,
+     so the collection and index come from the map itself. */
+  var BIBLE_VERSE_ONLY = {
+    "on": { "Genesis": { 41: [45, 50], 46: [20] } },
+    "so": { "2 Kings": { 17: [4] } }
+  };
+  /* Multi-word phrases whose meaning changes with case stay
+     case-sensitive even though the multi pass is now case-insensitive:
+     Ezekiel's "son of man" (the prophet, 93 times) is not the "Son of
+     Man" topic, and Adam in Luke 3:38 is "the son of God" without
+     being the "Son of God" topic. */
+  var BIBLE_CASE_SENSITIVE_MULTI = { "son of man": true, "son of god": true };
+  var biblePeopleByName = null;
+  function peopleIndexByName(name) {
+    if (!biblePeopleByName) {
+      biblePeopleByName = {};
+      (data.people || []).forEach(function (row, idx) {
+        var n = val(row, "Name");
+        if (n && !(n in biblePeopleByName)) biblePeopleByName[n] = idx;
+      });
+    }
+    return (name in biblePeopleByName) ? biblePeopleByName[name] : -1;
+  }
+  function overrideTarget(formLower) {
+    var name = BIBLE_PEOPLE_OVERRIDE[formLower];
+    if (!name) return null;
+    var idx = peopleIndexByName(name);
+    return idx === -1 ? null : { coll: "people", idx: idx };
+  }
+  /* Returns {coll, idx}, {plain: true}, or null (no rule for this form
+     in this passage). A null target in a rule is a deliberate plain
+     verdict, not a miss. */
+  function contextVerdict(formLower, book, chapter, verse) {
+    for (var i = 0; i < BIBLE_CONTEXT_RULES.length; i++) {
+      var r = BIBLE_CONTEXT_RULES[i];
+      if (r.form !== formLower || r.book !== book) continue;
+      if (r.chapters !== "all" && r.chapters.indexOf(chapter) === -1) continue;
+      if (r.verses && r.verses.indexOf(verse) === -1) continue;
+      if (!r.target) return { plain: true };
+      var idx = peopleIndexByName(r.target);
+      return idx === -1 ? { plain: true } : { coll: "people", idx: idx };
+    }
+    return null;
+  }
+  function linkOnlyVerdict(formLower, book, chapter) {
+    var s = BIBLE_LINK_ONLY[formLower];
+    if (!s) return null;
+    var chs = s.books[book];
+    if (chs && (chs === "all" || chs.indexOf(chapter) !== -1)) {
+      var idx = peopleIndexByName(s.target);
+      return idx === -1 ? { plain: true } : { coll: "people", idx: idx };
+    }
+    return { plain: true };
+  }
+  function isOldTestament(bookName) {
+    for (var i = 0; i < BIBLE_BOOKS.length; i++) {
+      if (BIBLE_BOOKS[i].name === bookName) return BIBLE_BOOKS[i].testament === "Old";
+    }
+    return false;
+  }
   function bibleLinkData() {
     if (bibleLinkCache) return bibleLinkCache;
     /* Only words with a corresponding article link: a person, story,
@@ -1821,10 +1985,22 @@
       if (val(row, "Name") === "Matthew" && !map["Levi, Son of Alphaeus"]) {
         map["Levi, Son of Alphaeus"] = { coll: "people", idx: idx };
       }
+      /* Jeremiah 15:4 names Manasseh as "the son of Hezekiah" — the
+         king, not Joseph's son — so the phrase needs its own key, or
+         the phrase pass falls back to the bare exact key and links
+         the verse to Joseph's son. */
+      if (val(row, "Name") === "Manasseh, King of Judah" && !map["Manasseh, Son of Hezekiah"]) {
+        map["Manasseh, Son of Hezekiah"] = { coll: "people", idx: idx };
+      }
     });
     var proposed = {};
     COLLECTIONS.forEach(function (c) {
       if (!allowed[c.id]) return;
+      /* Timeline event TITLES must not propose aliases: a title like
+         "Abram, Lot, and Melchizedek" captured the bare name "Abram"
+         61 times and pointed it at an event instead of Abraham. Only
+         article names propose aliases. */
+      if (c.id === "timeline") return;
       (data[c.id] || []).forEach(function (row, idx) {
         var p = val(row, c.primary);
         if (isEmpty(p) || p.indexOf(",") === -1) return;
@@ -1842,6 +2018,19 @@
     });
     var keys = Object.keys(map).filter(function (k) { return !BIBLE_STOP[k.toLowerCase()]; });
     var terms = keys.sort(function (a, b) { return b.length - a.length; });
+    /* Override, context-rule, and link-only forms must ALSO be regex
+       terms: a form with no map key (David, Joseph, Hezekiah…) would
+       otherwise never reach the callbacks that resolve it, so the
+       override table alone cannot create a link — it can only
+       redirect one that already matches. */
+    var virtualTerms = {};
+    Object.keys(BIBLE_PEOPLE_OVERRIDE).forEach(function (f) { virtualTerms[f] = true; });
+    BIBLE_CONTEXT_RULES.forEach(function (r) { virtualTerms[r.form] = true; });
+    Object.keys(BIBLE_LINK_ONLY).forEach(function (f) { virtualTerms[f] = true; });
+    Object.keys(virtualTerms).forEach(function (f) {
+      if (terms.indexOf(f) === -1 && !BIBLE_STOP[f]) terms.push(f);
+    });
+    terms.sort(function (a, b) { return b.length - a.length; });
     var multi = terms.filter(function (t) { return t.indexOf(" ") !== -1; });
     var single = terms.filter(function (t) { return t.indexOf(" ") === -1; });
     var lower = {};
@@ -1852,14 +2041,45 @@
     bibleLinkCache = {
       map: map,
       lower: lower,
-      reMulti: new RegExp("(<a\\b[^>]*>.*?</a>)|\\b(" + multi.map(escapeRegExp).join("|") + ")\\b", "g"),
+      reMulti: new RegExp("(<a\\b[^>]*>.*?</a>)|\\b(" + multi.map(escapeRegExp).join("|") + ")\\b", "gi"),
       reSingle: new RegExp("(<a\\b[^>]*>.*?</a>)|\\b(" + single.map(escapeRegExp).join("|") + ")\\b", "gi")
     };
     return bibleLinkCache;
   }
-  function linkifyVerseText(text) {
+  /* book/chapter/verse thread the chapter rules (BIBLE_CONTEXT_RULES
+     and BIBLE_LINK_ONLY) into the linker; callers that omit them get
+     the old context-free behaviour. */
+  function linkifyVerseText(text, book, chapter, verse) {
     var t = bibleLinkData();
     var safe = esc(text).replace(/\[([^\]]+)\]/g, "<em>$1</em>");
+    /* Phrase-pass lookup: qualified keys first, then the bare name.
+       A bare fallback consults the override table (so "Saul the son
+       of Cis" in Acts 13:21 still resolves to King Saul — the phrase
+       itself disambiguates, and the Acts chapter rule must NOT
+       override it to Paul). Chapter rules are deliberately NOT
+       consulted here: they govern bare occurrences, and a qualified
+       phrase carries its own disambiguation. A bare fallback for a
+       link-only form (Judah, Michael) resolves only inside its
+       verified set and otherwise counts as no hit. */
+    function phraseHit(keys) {
+      for (var i = 0; i < keys.length; i++) {
+        if (keys[i].indexOf(",") === -1) {
+          /* Bare fallback: link-only verdict first (a Judah/Michael
+             fallback outside its verified set is no hit at all),
+             then the override table — which must beat the stale
+             sole-owner alias key, or "X the son of Josiah" would
+             link its father to Josiah, Son of Zephaniah instead of
+             King Josiah — then the map. */
+          var lo = linkOnlyVerdict(keys[i].toLowerCase(), book, chapter);
+          if (lo) return lo.plain ? null : lo;
+          var ov = overrideTarget(keys[i].toLowerCase());
+          if (ov) return ov;
+        }
+        var hit = t.map[keys[i]] || t.lower[keys[i].toLowerCase()];
+        if (hit && !BIBLE_STOP[keys[i].toLowerCase()]) return hit;
+      }
+      return null;
+    }
     /* Phrase pass, first: "Jahaziel the son of Zechariah" links as a
        whole, with each person going to the context-correct profile —
        the son to "Jahaziel, Son of Zechariah" when it exists, the
@@ -1867,48 +2087,94 @@
        the connector ("the son of") stays inside the first link, so no
        word of the name stands plain. The same pass handles "X the
        daughter of Y" and "X the mother of Y" ("Mary the mother of
-       Jesus" -> Mary, Mother of Jesus, and Jesus). A chain
+       Jesus" -> Mary, Mother of Jesus, and Jesus), and now also
+       husband, wife, brother, sister, and father ("Joseph the husband
+       of Mary" -> Joseph, Husband of Mary, and Mary). A chain
        ("Achan the son of Carmi, the son of Zabdi") resolves the middle
        name against the name that follows it, so Carmi goes to Carmi,
        Son of Zabdi, not to Carmi son of Reuben. Falls back to the
        plain names when no qualified profile exists, and to one link
        over the first name plus its connector when only the first name
-       resolves. A name that resolves to nothing is left untouched, and
-       a stopped bare name (an ambiguous one, like Simeon) never wins a
-       fallback. */
-    safe = safe.replace(/\b([A-Z][A-Za-z]+),? the (son|daughter|mother) of ([A-Z][A-Za-z]+)(, the (son|daughter) of ([A-Z][A-Za-z]+))?\b/g, function (m, x, rel, y, chain, rel2, z) {
-      var xKeys = rel === "son" ? [x + ", Son of " + y, x] : rel === "daughter" ? [x + ", Daughter of " + y, x] : [x + ", Mother of " + y, x];
-      var yKeys = [];
+       resolves — except for the new kin terms, which never swallow:
+       returning the phrase untouched lets the single pass resolve
+       each side on its own (Matthew 1:16 links Joseph by the Matthew 1
+       rule and Mary by the Matthew 1 rule, instead of swallowing Mary
+       into Joseph's anchor). A name that resolves to nothing is left
+       untouched, and a stopped bare name (an ambiguous one, like
+       Simeon) never wins a fallback. */
+    safe = safe.replace(/\b([A-Z][A-Za-z]+),? the (son|daughter|mother|husband|wife|brother|sister|father) of ([A-Z][A-Za-z]+)(, the (son|daughter) of ([A-Z][A-Za-z]+))?\b/g, function (m, x, rel, y, chain, rel2, z) {
+      var xKeys, yKeys;
+      if (rel === "son") xKeys = [x + ", Son of " + y, x];
+      else if (rel === "daughter") xKeys = [x + ", Daughter of " + y, x];
+      else if (rel === "mother") xKeys = [x + ", Mother of " + y, x];
+      else if (rel === "husband") xKeys = [x + ", Husband of " + y, x];
+      else if (rel === "wife") xKeys = [x + ", Wife of " + y, x];
+      else if (rel === "brother") xKeys = [x + ", Brother of " + y, x];
+      else if (rel === "sister") xKeys = [x + ", Sister of " + y, x];
+      else xKeys = [x + ", Father of " + y, x];
+      yKeys = [];
       if (chain && (rel2 === "son" || rel2 === "daughter")) yKeys.push(y + (rel2 === "son" ? ", Son of " : ", Daughter of ") + z);
       if (rel === "son") yKeys.push(y + ", Father of " + x, y);
       else if (rel === "daughter") yKeys.push(y + ", Father of " + x, y + ", Mother of " + x, y);
+      else if (rel === "mother") yKeys.push(y + ", Son of " + x, y + ", Daughter of " + x, y);
+      else if (rel === "husband") yKeys.push(y + ", Wife of " + x, y);
+      else if (rel === "wife") yKeys.push(y + ", Husband of " + x, y);
+      else if (rel === "brother") yKeys.push(y + ", Brother of " + x, y);
+      else if (rel === "sister") yKeys.push(y + ", Sister of " + x, y);
       else yKeys.push(y + ", Son of " + x, y + ", Daughter of " + x, y);
-      var xHit = null, yHit = null, i, hit;
-      for (i = 0; i < xKeys.length; i++) {
-        hit = t.map[xKeys[i]] || t.lower[xKeys[i].toLowerCase()];
-        if (hit && !BIBLE_STOP[xKeys[i].toLowerCase()]) { xHit = hit; break; }
-      }
-      for (i = 0; i < yKeys.length; i++) {
-        hit = t.map[yKeys[i]] || t.lower[yKeys[i].toLowerCase()];
-        if (hit && !BIBLE_STOP[yKeys[i].toLowerCase()]) { yHit = hit; break; }
-      }
+      var xHit = phraseHit(xKeys), yHit = phraseHit(yKeys);
       if (!xHit) return m;
       var yPos = m.indexOf(y, x.length);
       var connector = m.slice(x.length, yPos);
       var tail = m.slice(yPos + y.length);
-      if (!yHit) return '<a href="#/' + xHit.coll + '/' + xHit.idx + '">' + esc(x + connector + y) + '</a>' + esc(tail);
+      if (!yHit) {
+        if (rel === "husband" || rel === "wife" || rel === "brother" || rel === "sister" || rel === "father") return m;
+        return '<a href="#/' + xHit.coll + '/' + xHit.idx + '">' + esc(x + connector + y) + '</a>' + esc(tail);
+      }
       return '<a href="#/' + xHit.coll + '/' + xHit.idx + '">' + esc(x + connector) + '</a>' +
         '<a href="#/' + yHit.coll + '/' + yHit.idx + '">' + esc(y) + '</a>' + esc(tail);
     });
-    safe = safe.replace(t.reMulti, function (m, anchor, term) {
+    safe = safe.replace(t.reMulti, function (m, anchor, term, offset, str) {
       if (anchor) return anchor;
+      /* Hyphen guard (see single pass): never link half of a
+         hyphenated name. */
+      if ((offset > 0 && str[offset - 1] === "-") || str[offset + m.length] === "-") return term;
+      /* "Angel of the LORD" is an Old Testament theophany figure; the
+         New Testament's "angel of the Lord" is an ordinary angel, so
+         it never links to that profile even though the multi pass is
+         now case-insensitive. */
+      if (term.toLowerCase() === "angel of the lord" && !isOldTestament(book)) return term;
       var hit = t.map[term];
+      if (hit) return '<a href="#/' + hit.coll + '/' + hit.idx + '">' + esc(term) + '</a>';
+      if (BIBLE_CASE_SENSITIVE_MULTI[term.toLowerCase()]) return term;
+      hit = t.lower[term.toLowerCase()];
       if (!hit) return m;
       return '<a href="#/' + hit.coll + '/' + hit.idx + '">' + esc(term) + '</a>';
     });
-    safe = safe.replace(t.reSingle, function (m, anchor, term) {
+    safe = safe.replace(t.reSingle, function (m, anchor, term, offset, str) {
       if (anchor) return anchor;
-      var hit = t.map[term] || t.lower[term.toLowerCase()];
+      /* Hyphen guard: \b treats "-" as a word boundary, so without
+         this a hyphenated name fractures — Jeremiah 39:3 used to
+         render plain "Samgar-" plus a wrong "nebo" link to the place
+         Nebo. A single-word match immediately adjacent to "-" on
+         either side is rejected unless the full hyphenated term is
+         itself the key (in which case the longer term matched first
+         and this branch never runs for its parts). */
+      if ((offset > 0 && str[offset - 1] === "-") || str[offset + m.length] === "-") return term;
+      var fl = term.toLowerCase();
+      var vo = BIBLE_VERSE_ONLY[fl];
+      if (vo) {
+        var chs = vo[book];
+        var vs = chs && chs[chapter];
+        if (!vs || vs.indexOf(verse) === -1) return term;
+      }
+      var lo = linkOnlyVerdict(fl, book, chapter);
+      if (lo) return lo.plain ? term : '<a href="#/people/' + lo.idx + '">' + esc(term) + '</a>';
+      var cv = contextVerdict(fl, book, chapter, verse);
+      if (cv) return cv.plain ? term : '<a href="#/people/' + cv.idx + '">' + esc(term) + '</a>';
+      var ov = overrideTarget(fl);
+      if (ov) return '<a href="#/people/' + ov.idx + '">' + esc(term) + '</a>';
+      var hit = t.map[term] || t.lower[fl];
       if (!hit) return term;
       return '<a href="#/' + hit.coll + '/' + hit.idx + '">' + esc(term) + '</a>';
     });
@@ -2321,7 +2587,7 @@
         var txt = verses[n];
         if (txt.indexOf("# ") === 0) { txt = txt.slice(2); paras.push(""); }
         var marker = marked[+n] ? '<button type="button" class="verse-note" data-v="' + n + '" aria-label="Study notes for verse ' + n + '">†</button>' : "";
-        paras[paras.length - 1] += '<span class="verse" id="v' + n + '"><sup>' + n + '</sup>' + marker + ' ' + linkifyVerseText(txt) + '</span> ';
+        paras[paras.length - 1] += '<span class="verse" id="v' + n + '"><sup>' + n + '</sup>' + marker + ' ' + linkifyVerseText(txt, book.name, +chapter, +n) + '</span> ';
       });
       var html = "<h2>" + esc(book.name) + " " + esc(chapter) + "</h2><div class='post-body'>" +
         "<p class='page-intro'>King James Version &middot; " + esc(book.testament === "Old" ? "Old Testament" : "New Testament") + "</p>";
