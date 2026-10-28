@@ -180,7 +180,7 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "129";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "130";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1855,8 +1855,10 @@
         tab("Key People", "<p>" + renderValue("KeyPeople", val(row, "KeyPeople")) + "</p>") +
         tab("Themes", "<p>" + renderValue("Themes", val(row, "Themes")) + "</p>") +
         tab("Historical Context", "<p>" + esc(val(row, "HistoricalContext")) + "</p>") +
+        (isEmpty(val(row, "CulturalBackground")) ? "" : tab("Cultural Backgrounds", "<p>" + esc(val(row, "CulturalBackground")) + "</p>")) +
         (isEmpty(val(row, "Places")) ? "" : tab("Places", "<p>" + renderValue("Places", val(row, "Places")) + "</p>")) +
         (isEmpty(val(row, "RelatedEvents")) ? "" : tab("Related Events", "<p>" + renderValue("RelatedEvents", val(row, "RelatedEvents")) + "</p>")) +
+        (isEmpty(val(row, "LifeApplication")) ? "" : tab("Life Application", "<p>" + esc(val(row, "LifeApplication")) + "</p>")) +
         "</div>";
     }
     html += "</div>";

@@ -65,6 +65,8 @@ collections:
       - {label: "Purpose", name: "Purpose", widget: "string"}
       - {label: "Outline", name: "Outline", widget: "list"}
       - {label: "Historical Context", name: "HistoricalContext", widget: "text"}
+      - {label: "Cultural Background", name: "CulturalBackground", widget: "text", required: false}
+      - {label: "Life Application", name: "LifeApplication", widget: "text", required: false}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
       - {label: "Study Introduction", name: "StudyIntroduction", widget: "text", required: false}
