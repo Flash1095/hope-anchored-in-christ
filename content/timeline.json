@@ -1176,16 +1176,16 @@
     "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Song of Solomon",
-    "BlogPostLink": "",
-    "DateApprox": "Traditionally Solomon c. 970-931 BC (date debated; some scholars place it later)",
+    "Title": "Song of Solomon Written",
     "Era": "United Monarchy",
-    "Events": "A collection of love poems traditionally attributed to Solomon, celebrating love and marriage, is written and preserved as the Song of Solomon.",
+    "DateApprox": "Traditionally Solomon c. 970-931 BC (date debated; some scholars place it later)",
     "KeyPersons": "Solomon",
+    "BibleBooks": "Song of Solomon",
     "Places": "",
+    "Events": "A collection of love poems traditionally attributed to Solomon, celebrating love and marriage, is written and preserved as the Song of Solomon.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Song of Solomon 1:1",
-    "Title": "Song of Solomon Written"
+    "BlogPostLink": ""
   },
   {
     "Title": "Kingdom Divides - Israel and Judah",
@@ -1308,28 +1308,28 @@
     "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Jonah",
-    "BlogPostLink": "",
-    "DateApprox": "c. 790-750 BC (traditional, under Jeroboam II; date debated)",
+    "Title": "Jonah and Nineveh",
     "Era": "Divided Monarchy",
-    "Events": "Jonah, sent to the Assyrian capital Nineveh, preaches repentance and the whole city turns from its evil, showing God's mercy reaching beyond Israel.",
+    "DateApprox": "c. 790-750 BC (traditional, under Jeroboam II; date debated)",
     "KeyPersons": "Jonah",
+    "BibleBooks": "Jonah",
     "Places": "Nineveh",
+    "Events": "Jonah, sent to the Assyrian capital Nineveh, preaches repentance and the whole city turns from its evil, showing God's mercy reaching beyond Israel.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Jonah 1-4",
-    "Title": "Jonah and Nineveh"
+    "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Amos",
-    "BlogPostLink": "",
-    "DateApprox": "c. 760-750 BC",
+    "Title": "Amos's Ministry",
     "Era": "Divided Monarchy",
-    "Events": "Amos, a shepherd from Tekoa, preaches justice and righteousness at Bethel, denouncing Israel's oppression of the poor and warning of coming judgment.",
+    "DateApprox": "c. 760-750 BC",
     "KeyPersons": "Amos",
+    "BibleBooks": "Amos",
     "Places": "Bethel",
+    "Events": "Amos, a shepherd from Tekoa, preaches justice and righteousness at Bethel, denouncing Israel's oppression of the poor and warning of coming judgment.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Amos 1-9",
-    "Title": "Amos's Ministry"
+    "BlogPostLink": ""
   },
   {
     "Title": "Early Writing Prophets - Amos, Hosea, Jonah, Obadiah, Joel",
@@ -1344,28 +1344,28 @@
     "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Hosea",
-    "BlogPostLink": "",
-    "DateApprox": "c. 755-710 BC",
+    "Title": "Hosea's Ministry",
     "Era": "Divided Monarchy",
-    "Events": "Hosea's marriage to Gomer and his preaching picture Israel's unfaithfulness and God's pursuing love, calling the northern kingdom back before its fall.",
+    "DateApprox": "c. 755-710 BC",
     "KeyPersons": "Hosea;Gomer",
+    "BibleBooks": "Hosea",
     "Places": "Samaria",
+    "Events": "Hosea's marriage to Gomer and his preaching picture Israel's unfaithfulness and God's pursuing love, calling the northern kingdom back before its fall.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Hosea 1-14",
-    "Title": "Hosea's Ministry"
+    "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Joel",
-    "BlogPostLink": "",
-    "DateApprox": "c. 9th century BC (traditional; date debated)",
+    "Title": "Joel's Ministry",
     "Era": "Divided Monarchy",
-    "Events": "Joel calls Judah to repentance after a devastating locust plague, proclaiming the day of the Lord and the promise of God's Spirit poured out on all people.",
+    "DateApprox": "c. 9th century BC (traditional; date debated)",
     "KeyPersons": "Joel",
+    "BibleBooks": "Joel",
     "Places": "Jerusalem",
+    "Events": "Joel calls Judah to repentance after a devastating locust plague, proclaiming the day of the Lord and the promise of God's Spirit poured out on all people.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Joel 1-3",
-    "Title": "Joel's Ministry"
+    "BlogPostLink": ""
   },
   {
     "Title": "Isaiah and Micah in Judah",
@@ -1380,28 +1380,28 @@
     "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Isaiah",
-    "BlogPostLink": "",
-    "DateApprox": "740 BC (the year King Uzziah died)",
+    "Title": "Isaiah's Call",
     "Era": "Divided Monarchy",
-    "Events": "In the temple Isaiah sees the Lord high and lifted up, is cleansed by a burning coal, and answers God's call with, 'Here am I; send me.'",
+    "DateApprox": "740 BC (the year King Uzziah died)",
     "KeyPersons": "Isaiah",
+    "BibleBooks": "Isaiah",
     "Places": "Jerusalem",
+    "Events": "In the temple Isaiah sees the Lord high and lifted up, is cleansed by a burning coal, and answers God's call with, 'Here am I; send me.'",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Isaiah 6",
-    "Title": "Isaiah's Call"
+    "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Micah",
-    "BlogPostLink": "",
-    "DateApprox": "c. 740-700 BC",
+    "Title": "Micah's Ministry",
     "Era": "Divided Monarchy",
-    "Events": "Micah preaches in Judah under Jotham, Ahaz, and Hezekiah, condemning corrupt leaders and promising a ruler from Bethlehem who will shepherd God's people.",
+    "DateApprox": "c. 740-700 BC",
     "KeyPersons": "Micah",
+    "BibleBooks": "Micah",
     "Places": "Jerusalem;Bethlehem",
+    "Events": "Micah preaches in Judah under Jotham, Ahaz, and Hezekiah, condemning corrupt leaders and promising a ruler from Bethlehem who will shepherd God's people.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Micah 1-7",
-    "Title": "Micah's Ministry"
+    "BlogPostLink": ""
   },
   {
     "Title": "Fall of Northern Israel to Assyria",
@@ -1416,16 +1416,16 @@
     "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Proverbs",
-    "BlogPostLink": "",
-    "DateApprox": "Proverbs of Solomon c. 970-931 BC; copied by the men of Hezekiah c. 715-686 BC; later sayings added (compilation date debated)",
+    "Title": "Proverbs Collected",
     "Era": "Divided Monarchy",
-    "Events": "Solomon's proverbs are gathered together with the sayings of Agur and Lemuel, including proverbs copied by the men of Hezekiah, forming the book of Proverbs.",
+    "DateApprox": "Proverbs of Solomon c. 970-931 BC; copied by the men of Hezekiah c. 715-686 BC; later sayings added (compilation date debated)",
     "KeyPersons": "Solomon; Hezekiah; Agur; Lemuel",
+    "BibleBooks": "Proverbs",
     "Places": "",
+    "Events": "Solomon's proverbs are gathered together with the sayings of Agur and Lemuel, including proverbs copied by the men of Hezekiah, forming the book of Proverbs.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Proverbs 1:1; 25:1",
-    "Title": "Proverbs Collected"
+    "BlogPostLink": ""
   },
   {
     "Title": "Hezekiah, Josiah, and Judah's Reforms",
@@ -1464,52 +1464,52 @@
     "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Nahum",
-    "BlogPostLink": "",
+    "Title": "Nahum's Prophecy Against Nineveh",
+    "Era": "Divided Monarchy",
     "DateApprox": "c. 660-630 BC (before Nineveh's fall in 612 BC)",
-    "Era": "Divided Monarchy",
-    "Events": "Nahum prophesies the fall of Nineveh, the Assyrian capital that had destroyed the northern kingdom, declaring that God will judge violent empires.",
     "KeyPersons": "Nahum",
+    "BibleBooks": "Nahum",
     "Places": "Nineveh",
+    "Events": "Nahum prophesies the fall of Nineveh, the Assyrian capital that had destroyed the northern kingdom, declaring that God will judge violent empires.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Nahum 1-3",
-    "Title": "Nahum's Prophecy Against Nineveh"
+    "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Zephaniah",
-    "BlogPostLink": "",
+    "Title": "Zephaniah's Ministry",
+    "Era": "Divided Monarchy",
     "DateApprox": "c. 640-609 BC (reign of Josiah)",
-    "Era": "Divided Monarchy",
-    "Events": "Zephaniah warns Judah of the coming day of the Lord against idolatry and injustice, and promises a humble remnant that will trust in the Lord.",
     "KeyPersons": "Zephaniah",
+    "BibleBooks": "Zephaniah",
     "Places": "Jerusalem",
+    "Events": "Zephaniah warns Judah of the coming day of the Lord against idolatry and injustice, and promises a humble remnant that will trust in the Lord.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Zephaniah 1-3",
-    "Title": "Zephaniah's Ministry"
+    "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Jeremiah",
-    "BlogPostLink": "",
+    "Title": "Jeremiah's Call",
+    "Era": "Divided Monarchy",
     "DateApprox": "627 BC (13th year of King Josiah)",
-    "Era": "Divided Monarchy",
-    "Events": "Jeremiah is called as a prophet while still young, appointed to uproot and plant, and sent to warn Judah even though his message will be rejected.",
     "KeyPersons": "Jeremiah",
+    "BibleBooks": "Jeremiah",
     "Places": "Jerusalem",
+    "Events": "Jeremiah is called as a prophet while still young, appointed to uproot and plant, and sent to warn Judah even though his message will be rejected.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Jeremiah 1",
-    "Title": "Jeremiah's Call"
+    "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Habakkuk",
-    "BlogPostLink": "",
-    "DateApprox": "c. 609-605 BC (date debated)",
+    "Title": "Habakkuk's Dialogue with God",
     "Era": "Divided Monarchy",
-    "Events": "Habakkuk questions God about injustice in Judah and the rise of Babylon, and learns that the righteous shall live by faith.",
+    "DateApprox": "c. 609-605 BC (date debated)",
     "KeyPersons": "Habakkuk",
+    "BibleBooks": "Habakkuk",
     "Places": "Jerusalem",
+    "Events": "Habakkuk questions God about injustice in Judah and the rise of Babylon, and learns that the righteous shall live by faith.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Habakkuk 1-3",
-    "Title": "Habakkuk's Dialogue with God"
+    "BlogPostLink": ""
   },
   {
     "Title": "Jeremiah and the Fall of Jerusalem",
@@ -1524,76 +1524,76 @@
     "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Daniel",
-    "BlogPostLink": "",
+    "Title": "Daniel Taken to Babylon",
+    "Era": "Exile",
     "DateApprox": "605 BC (first deportation to Babylon)",
-    "Era": "Exile",
-    "Events": "Daniel and his friends are taken to Babylon, where Daniel resolves not to defile himself with the king's food and God gives him understanding in visions and dreams.",
     "KeyPersons": "Daniel",
-    "Places": "Babylon",
-    "ScriptureReference": "Daniel 1",
-    "Title": "Daniel Taken to Babylon"
-  },
-  {
-    "ArchaeologicalFinds": "",
     "BibleBooks": "Daniel",
-    "BlogPostLink": "",
+    "Places": "Babylon",
+    "Events": "Daniel and his friends are taken to Babylon, where Daniel resolves not to defile himself with the king's food and God gives him understanding in visions and dreams.",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Daniel 1",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Daniel Interprets the King's Dream",
+    "Era": "Exile",
     "DateApprox": "c. 603 BC (second year of Nebuchadnezzar)",
-    "Era": "Exile",
-    "Events": "Daniel tells and interprets Nebuchadnezzar's dream of a great statue, revealing that God sets up and removes kings and will establish an everlasting kingdom.",
     "KeyPersons": "Daniel",
+    "BibleBooks": "Daniel",
     "Places": "Babylon",
+    "Events": "Daniel tells and interprets Nebuchadnezzar's dream of a great statue, revealing that God sets up and removes kings and will establish an everlasting kingdom.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Daniel 2",
-    "Title": "Daniel Interprets the King's Dream"
+    "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Ezekiel",
-    "BlogPostLink": "",
+    "Title": "Ezekiel's Call",
+    "Era": "Exile",
     "DateApprox": "593 BC (fifth year of exile)",
-    "Era": "Exile",
-    "Events": "By the River Chebar in Babylon, Ezekiel sees the glory of the Lord and is called as a watchman to speak God's word to the exiles.",
     "KeyPersons": "Ezekiel",
-    "Places": "Babylon",
-    "ScriptureReference": "Ezekiel 1-3",
-    "Title": "Ezekiel's Call"
-  },
-  {
-    "ArchaeologicalFinds": "",
     "BibleBooks": "Ezekiel",
-    "BlogPostLink": "",
-    "DateApprox": "c. 593-592 BC",
-    "Era": "Exile",
-    "Events": "Ezekiel acts out the siege of Jerusalem with a clay brick, lying on his side, and shaved hair, warning the exiles that Jerusalem will indeed fall.",
-    "KeyPersons": "Ezekiel",
     "Places": "Babylon",
+    "Events": "By the River Chebar in Babylon, Ezekiel sees the glory of the Lord and is called as a watchman to speak God's word to the exiles.",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Ezekiel 1-3",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Ezekiel's Sign-Acts of the Siege",
+    "Era": "Exile",
+    "DateApprox": "c. 593-592 BC",
+    "KeyPersons": "Ezekiel",
+    "BibleBooks": "Ezekiel",
+    "Places": "Babylon",
+    "Events": "Ezekiel acts out the siege of Jerusalem with a clay brick, lying on his side, and shaved hair, warning the exiles that Jerusalem will indeed fall.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Ezekiel 4-5",
-    "Title": "Ezekiel's Sign-Acts of the Siege"
+    "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Jeremiah",
-    "BlogPostLink": "",
+    "Title": "Jeremiah Buys a Field During the Siege",
+    "Era": "Exile",
     "DateApprox": "587 BC (during the Babylonian siege of Jerusalem)",
-    "Era": "Exile",
-    "Events": "While Jerusalem is under siege, Jeremiah buys a field at Anathoth as a sign that God will one day restore his people to the land.",
     "KeyPersons": "Jeremiah",
+    "BibleBooks": "Jeremiah",
     "Places": "Jerusalem",
+    "Events": "While Jerusalem is under siege, Jeremiah buys a field at Anathoth as a sign that God will one day restore his people to the land.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Jeremiah 32",
-    "Title": "Jeremiah Buys a Field During the Siege"
+    "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Obadiah",
-    "BlogPostLink": "",
-    "DateApprox": "c. 586 BC or later (date debated)",
+    "Title": "Obadiah's Ministry",
     "Era": "Exile",
-    "Events": "Obadiah pronounces judgment on Edom for standing by and rejoicing when Jerusalem fell, and promises that deliverance will come from Mount Zion.",
+    "DateApprox": "c. 586 BC or later (date debated)",
     "KeyPersons": "Obadiah",
+    "BibleBooks": "Obadiah",
     "Places": "Jerusalem",
+    "Events": "Obadiah pronounces judgment on Edom for standing by and rejoicing when Jerusalem fell, and promises that deliverance will come from Mount Zion.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Obadiah 1",
-    "Title": "Obadiah's Ministry"
+    "BlogPostLink": ""
   },
   {
     "Title": "Ezekiel and Daniel in Exile",
@@ -1608,64 +1608,64 @@
     "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Daniel",
-    "BlogPostLink": "",
+    "Title": "Shadrach, Meshach and Abednego in the Fiery Furnace",
+    "Era": "Exile",
     "DateApprox": "During Nebuchadnezzar's reign (date debated)",
-    "Era": "Exile",
-    "Events": "Shadrach, Meshach, and Abednego refuse to worship Nebuchadnezzar's golden image and are thrown into a fiery furnace, where God preserves them unharmed.",
     "KeyPersons": "Daniel;Shadrach;Meshach;Abednego",
+    "BibleBooks": "Daniel",
     "Places": "Babylon",
+    "Events": "Shadrach, Meshach, and Abednego refuse to worship Nebuchadnezzar's golden image and are thrown into a fiery furnace, where God preserves them unharmed.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Daniel 3",
-    "Title": "Shadrach, Meshach and Abednego in the Fiery Furnace"
+    "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Ezekiel",
-    "BlogPostLink": "",
+    "Title": "Ezekiel's Vision of the Valley of Dry Bones",
+    "Era": "Exile",
     "DateApprox": "During Ezekiel's ministry, c. 593-571 BC (vision undated)",
-    "Era": "Exile",
-    "Events": "Ezekiel sees a valley of dry bones come to life, a vision that God will restore his scattered people and put his Spirit within them.",
     "KeyPersons": "Ezekiel",
-    "Places": "Babylon",
-    "ScriptureReference": "Ezekiel 37",
-    "Title": "Ezekiel's Vision of the Valley of Dry Bones"
-  },
-  {
-    "ArchaeologicalFinds": "",
     "BibleBooks": "Ezekiel",
-    "BlogPostLink": "",
+    "Places": "Babylon",
+    "Events": "Ezekiel sees a valley of dry bones come to life, a vision that God will restore his scattered people and put his Spirit within them.",
+    "ArchaeologicalFinds": "",
+    "ScriptureReference": "Ezekiel 37",
+    "BlogPostLink": ""
+  },
+  {
+    "Title": "Ezekiel's Vision of the New Temple",
+    "Era": "Exile",
     "DateApprox": "573 BC (25th year of exile)",
-    "Era": "Exile",
-    "Events": "Ezekiel is shown a new temple and a river of life flowing from it, picturing God's restored presence among his people.",
     "KeyPersons": "Ezekiel",
+    "BibleBooks": "Ezekiel",
     "Places": "Babylon",
+    "Events": "Ezekiel is shown a new temple and a river of life flowing from it, picturing God's restored presence among his people.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Ezekiel 40-48",
-    "Title": "Ezekiel's Vision of the New Temple"
+    "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Daniel",
-    "BlogPostLink": "",
+    "Title": "The Writing on the Wall",
+    "Era": "Exile",
     "DateApprox": "539 BC (night Babylon fell)",
-    "Era": "Exile",
-    "Events": "At Belshazzar's feast a hand writes on the wall, and Daniel reads the writing: Belshazzar's kingdom has been weighed and is given to the Medes and Persians.",
     "KeyPersons": "Daniel;Belshazzar",
+    "BibleBooks": "Daniel",
     "Places": "Babylon",
+    "Events": "At Belshazzar's feast a hand writes on the wall, and Daniel reads the writing: Belshazzar's kingdom has been weighed and is given to the Medes and Persians.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Daniel 5",
-    "Title": "The Writing on the Wall"
+    "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Daniel",
-    "BlogPostLink": "",
-    "DateApprox": "c. 539-535 BC (early Persian period)",
+    "Title": "Daniel in the Lions' Den",
     "Era": "Exile",
-    "Events": "Daniel keeps praying openly despite the royal decree, is thrown into the lions' den, and is delivered unharmed because he trusted in God.",
+    "DateApprox": "c. 539-535 BC (early Persian period)",
     "KeyPersons": "Daniel",
+    "BibleBooks": "Daniel",
     "Places": "Babylon",
+    "Events": "Daniel keeps praying openly despite the royal decree, is thrown into the lions' den, and is delivered unharmed because he trusted in God.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Daniel 6",
-    "Title": "Daniel in the Lions' Den"
+    "BlogPostLink": ""
   },
   {
     "Title": "Esther in Persia",
@@ -1740,40 +1740,40 @@
     "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Psalms",
-    "BlogPostLink": "",
+    "Title": "Book of Psalms Compiled",
+    "Era": "Return and Second Temple",
     "DateApprox": "Individual psalms from David's time onward; final collection formed after the exile (date debated)",
-    "Era": "Return and Second Temple",
-    "Events": "One hundred and fifty psalms — Davidic psalms along with psalms of Asaph, the sons of Korah, and post-exilic psalms — are gathered into the five-book collection of the Psalter.",
     "KeyPersons": "David; Asaph",
+    "BibleBooks": "Psalms",
     "Places": "",
+    "Events": "One hundred and fifty psalms — Davidic psalms along with psalms of Asaph, the sons of Korah, and post-exilic psalms — are gathered into the five-book collection of the Psalter.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Psalms 1-150",
-    "Title": "Book of Psalms Compiled"
+    "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Haggai",
-    "BlogPostLink": "",
+    "Title": "Haggai's Call to Rebuild the Temple",
+    "Era": "Return and Second Temple",
     "DateApprox": "520 BC (second year of King Darius)",
-    "Era": "Return and Second Temple",
-    "Events": "Haggai calls the returned exiles to stop paneling their own houses while God's house lies in ruins, and the people resume rebuilding the temple.",
     "KeyPersons": "Haggai;Zerubbabel",
+    "BibleBooks": "Haggai",
     "Places": "Jerusalem",
+    "Events": "Haggai calls the returned exiles to stop paneling their own houses while God's house lies in ruins, and the people resume rebuilding the temple.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Haggai 1-2",
-    "Title": "Haggai's Call to Rebuild the Temple"
+    "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Zechariah",
-    "BlogPostLink": "",
-    "DateApprox": "520-518 BC (second to fourth year of King Darius)",
+    "Title": "Zechariah's Night Visions",
     "Era": "Return and Second Temple",
-    "Events": "Zechariah receives a series of night visions encouraging the returned exiles, promising that God will dwell in Jerusalem and cleanse his people.",
+    "DateApprox": "520-518 BC (second to fourth year of King Darius)",
     "KeyPersons": "Zechariah",
+    "BibleBooks": "Zechariah",
     "Places": "Jerusalem",
+    "Events": "Zechariah receives a series of night visions encouraging the returned exiles, promising that God will dwell in Jerusalem and cleanse his people.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Zechariah 1-6",
-    "Title": "Zechariah's Night Visions"
+    "BlogPostLink": ""
   },
   {
     "Title": "Second Temple and Post-Exilic Prophets",
@@ -1788,28 +1788,28 @@
     "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Ecclesiastes",
-    "BlogPostLink": "",
-    "DateApprox": "Traditionally Solomon c. 970-931 BC; many scholars date the book to the Persian or early Hellenistic period (date debated)",
+    "Title": "Ecclesiastes Written",
     "Era": "Return and Second Temple",
-    "Events": "The Teacher's reflection on the vanity of life under the sun, concluding with fearing God and keeping His commandments, is written as the book of Ecclesiastes.",
+    "DateApprox": "Traditionally Solomon c. 970-931 BC; many scholars date the book to the Persian or early Hellenistic period (date debated)",
     "KeyPersons": "Solomon",
+    "BibleBooks": "Ecclesiastes",
     "Places": "",
+    "Events": "The Teacher's reflection on the vanity of life under the sun, concluding with fearing God and keeping His commandments, is written as the book of Ecclesiastes.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Ecclesiastes 1:1-2; 12:13-14",
-    "Title": "Ecclesiastes Written"
+    "BlogPostLink": ""
   },
   {
-    "ArchaeologicalFinds": "",
-    "BibleBooks": "Malachi",
-    "BlogPostLink": "",
-    "DateApprox": "c. 460-430 BC (date debated)",
+    "Title": "Malachi's Ministry",
     "Era": "Return and Second Temple",
-    "Events": "Malachi, the last of the Old Testament prophets, rebukes corrupt worship and unfaithfulness and points forward to the messenger who will prepare the Lord's way.",
+    "DateApprox": "c. 460-430 BC (date debated)",
     "KeyPersons": "Malachi",
+    "BibleBooks": "Malachi",
     "Places": "Jerusalem",
+    "Events": "Malachi, the last of the Old Testament prophets, rebukes corrupt worship and unfaithfulness and points forward to the messenger who will prepare the Lord's way.",
+    "ArchaeologicalFinds": "",
     "ScriptureReference": "Malachi 1-4",
-    "Title": "Malachi's Ministry"
+    "BlogPostLink": ""
   },
   {
     "Title": "Between the Testaments",
