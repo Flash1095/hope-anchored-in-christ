@@ -185,7 +185,7 @@
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // family tree (content/genealogy.json)
-  var ASSET_V = "145";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "146";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1236,6 +1236,13 @@
             spouses[s] = mergeRefs((spouses[s] || []).concat(e.refs || []));
           });
         }
+        /* Spousehood is symmetric: an edge naming this person among a
+           child's spouses makes the child this person's spouse. Without
+           this, a spouse who is never anyone's child (Eve, Sarai, Milcah
+           and the rest) showed no spouse while their husband did. */
+        (e.spouses || []).forEach(function (s) {
+          if (s === id) spouses[e.child] = mergeRefs((spouses[e.child] || []).concat(e.refs || []));
+        });
         if (e.father === id || e.mother === id) {
           children[e.child] = mergeRefs((children[e.child] || []).concat(e.refs || []));
         }
@@ -1262,7 +1269,7 @@
         cur = byId[parentId];
         chain.unshift(cur);
       }
-      if (chain.length < 2) return "<p>Parentage is not stated in the genealogy passages for this person.</p>";
+      if (chain.length < 2) return "<p>No ancestors are named for this person in the genealogy passages.</p>";
       return '<p class="gen-chain">' + chain.map(function (n) {
         return '<a href="' + genHref(n) + '">' + esc(n.name) + "</a>";
       }).join(" &rsaquo; ") + "</p>" +
@@ -1279,7 +1286,7 @@
       if (node.note) html += "<p class='gen-note'>" + esc(node.note) + "</p>";
       html += "<h3>Parents</h3>";
       var parents = relListHTML(rel.fathers) + relListHTML(rel.mothers);
-      html += parents || "<p>Parentage is not stated in the genealogy passages for this person.</p>";
+      html += parents || "<p>No human parents are named for this person in the genealogy passages.</p>";
       html += "<h3>Spouse(s)</h3>";
       html += relListHTML(rel.spouses) || "<p>No spouse is named for this person in the genealogy passages.</p>";
       html += "<h3>Children</h3>";
