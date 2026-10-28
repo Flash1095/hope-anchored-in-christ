@@ -15,12 +15,12 @@
   "ManuscriptID": "6Q4 / 6QpapKgs",
   "Material": "Papyrus",
   "Period": "Hellenistic",
-  "PreservedPassages": "1 Kings 3:12-14; 12:28-31; 22:28-31; 2 Kings 5:26; 6:32; 7:8-10, 20; 8:1-5; 9:1-2; 10:19, 21",
+  "PreservedPassages": "1 Kings 3:12-14; 12:28-31; 22:28-31; 2 Kings 5:26; 6:32; 7:8-10, 20-8:5; 9:1-2; 10:19-21",
   "RelatedBooks": "1 Kings; 2 Kings",
   "RelatedFinds": "",
   "Script": "",
-  "Significance": "The only one of the three Qumran Kings manuscripts that covers BOTH 1 and 2 Kings, and the fullest by verse coverage under the coverage criterion (about 26 verse-ranges). It carries multiple literary variants, some found in other witnesses; fragment 15 (2 Kings 7:20-8:5) adds 'according to the word of the man of God' twice against the Masoretic Text, agreeing in one case with the Antiochene Greek text. See close_calls: 4Q54 is the flagged alternative (a single, more legible temple passage).",
+  "Significance": "The only one of the three Qumran Kings manuscripts that covers both 1 and 2 Kings (4Q54 and 5Q2 preserve 1 Kings only), and the fullest by coverage. It carries multiple literary variants, some found in other textual witnesses; Tigchelaar notes it was written in a less professional manner but with few errors, while 4Q54 was a nonprofessional copy on substandard material.",
   "Slug": "6q4-kings-scroll",
-  "Sources": "http://dssenglishbible.com/scroll6Q4.htm; https://www.citedrive.com/en/discovery/reading-and-assessing-the-books-of-kings-manuscripts-from-qumran/",
+  "Sources": "http://dssenglishbible.com/scroll6Q4.htm; https://www.citedrive.com/en/discovery/reading-and-assessing-the-books-of-kings-manuscripts-from-qumran/; https://czasopisma.kul.pl/index.php/ba/article/download/18326/16191",
   "Work": "1 Kings; 2 Kings"
 }

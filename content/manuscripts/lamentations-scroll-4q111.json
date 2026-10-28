@@ -4,7 +4,7 @@
   "Completeness": "Fragment",
   "CurrentLocation": "",
   "DateApprox": "c. 30-1 BC",
-  "Description": "Fragments of a Hebrew copy of Lamentations from Qumran Cave 4, in Herodian script, dated c. 30-1 BC. It preserves the opening chapter of Lamentations (chapter 1, with verses 16 and 17 listed in that order in the published contents) and one verse of chapter 2. It is one of four Lamentations manuscripts from Qumran (3Q3, 4Q111, 5Q6, 5Q7).",
+  "Description": "Fragments of a Hebrew copy of Lamentations from Qumran Cave 4, in Herodian script, dated c. 30-1 BC. It preserves the opening chapter of Lamentations (chapter 1, with the pe/ayin verses in swapped order, 17 before 16, in the published contents) and one verse of chapter 2. It is one of four Lamentations manuscripts from Qumran (3Q3, 4Q111, 5Q6, 5Q7).",
   "Image": "",
   "ImageCredit": "",
   "ImageSource": "",
@@ -21,6 +21,6 @@
   "Script": "Square Hebrew",
   "Significance": "The fullest Lamentations witness at Qumran by published word count (about 193 words, against about 141 for 5Q6). It is also the most variant of the Qumran Lamentations copies against the Masoretic Text: in the published statistical count it shows 37 variants, and recent study argues that most of its differences are deliberate scribal creations rather than simple copying errors. It therefore shows the text of Lamentations still fluid in the 1st century BC, even though the great stability of most of the Masoretic tradition is also visible across the Qumran copies as a group.",
   "Slug": "lamentations-scroll-4q111",
-  "Sources": "https://en.wikipedia.org/wiki/Lamentations_of_Jeremiah; https://ixtheo.de/Record/1696632811",
+  "Sources": "https://en.wikipedia.org/wiki/Lamentations_of_Jeremiah; https://ixtheo.de/Record/1696632811; https://Scriptura.Journals.Ac.Za/pub/article/download/110/118",
   "Work": "Lamentations"
 }

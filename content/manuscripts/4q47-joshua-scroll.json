@@ -15,12 +15,12 @@
   "ManuscriptID": "4Q47 / 4QJosha",
   "Material": "",
   "Period": "Hasmonean",
-  "PreservedPassages": "Joshua 5:2-7; 6:5-10; 7:12-17; 8:3-14, 18, 34-35; 10:2-5, 8-11",
+  "PreservedPassages": "Joshua 5:2-7; 6:5-10; 7:12-17; 8:3-14, 18?, 34-35; 10:2-5, 8-11",
   "RelatedBooks": "Joshua",
   "RelatedFinds": "",
   "Script": "",
-  "Significance": "The oldest and fullest Qumran witness to Joshua. Its text shows variations in wording and omissions against the Masoretic Text, with some readings aligning with the Greek text rather than the Masoretic Text; the altar-building sequence question (Gilgal versus Mount Ebal) is discussed in the DJD 14 edition (Ulrich) and by Tov. Wording of that significance claim should be re-checked against DJD 14 before publication, as it rests on secondary summaries.",
+  "Significance": "The fullest Qumran witness to Joshua. Its most discussed feature is the position of Joshua 8:34–35 before 5:2, showing that the blessings-and-curses passage circulated in a different place in the book; Ulrich cautions that it is not certain the altar-building verses (8:30–31) preceded them, since that text would fall in an unpreserved part of the preceding column. Its text shows variations in wording and omissions against the Masoretic Text, with some readings aligning with the Greek text.",
   "Slug": "4q47-joshua-scroll",
-  "Sources": "https://en.wikipedia.org/wiki/List_of_manuscripts_from_Qumran_Cave_4; https://www.deadseascrolls.org.il/explore-the-archive/manuscript/4Q47-1?locale=en_US",
+  "Sources": "https://en.wikipedia.org/wiki/List_of_manuscripts_from_Qumran_Cave_4; https://www.deadseascrolls.org.il/explore-the-archive/manuscript/4Q47-1?locale=en_US; https://ia601507.us.archive.org/18/items/TheBiblicalQumranScrolls/61301866-The-Biblical-Qumran-Scrolls-Eugene-Charles-Ulrich.pdf",
   "Work": "Joshua"
 }
