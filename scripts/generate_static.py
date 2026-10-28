@@ -459,7 +459,7 @@ def load_bible_books():
 BIBLE_BOOKS = []
 
 SCRIPTURE_FIELDS = ["KeyVerses", "KeyPassages", "KeyScriptures", "ScriptureReference",
-                    "ScriptureIlluminated", "BibleReferences"]
+                    "ScriptureIlluminated", "BibleReferences", "Scripture", "BiblicalSupport"]
 # Bible book study sections (Genesis page): full markdown sections,
 # rendered as expandable <details> blocks below the overview (see
 # entry_page). The titles come from STUDY_LABELS.

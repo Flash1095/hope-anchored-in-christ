@@ -180,7 +180,7 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "132";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "133";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -214,14 +214,22 @@
   function parsePostFrontmatter(text, file) {
     var meta = {};
     var m = text.match(/^---\s*([\s\S]*?)\n---/);
-    if (m) m[1].split("\n").forEach(function (line) {
-      var i = line.indexOf(":");
-      if (i > 0) {
-        var val = line.slice(i + 1).trim();
-        if ((val.charAt(0) === '"' && val.slice(-1) === '"') || (val.charAt(0) === "'" && val.slice(-1) === "'")) val = val.slice(1, -1);
-        meta[line.slice(0, i).trim()] = val;
-      }
-    });
+    if (m) {
+      var lastKey = null;
+      m[1].split("\n").forEach(function (line) {
+        /* YAML folds an indented continuation line into the previous
+           value (the Testing post's scripture wraps this way); without
+           this the value is cut off at the wrap point. */
+        if (/^\s/.test(line) && lastKey) { meta[lastKey] += " " + line.trim(); return; }
+        var i = line.indexOf(":");
+        if (i > 0) {
+          var val = line.slice(i + 1).trim();
+          if ((val.charAt(0) === '"' && val.slice(-1) === '"') || (val.charAt(0) === "'" && val.slice(-1) === "'")) val = val.slice(1, -1);
+          lastKey = line.slice(0, i).trim();
+          meta[lastKey] = val;
+        }
+      });
+    }
     var slug = file.split("/").pop().replace(/\.md$/, "");
     return { slug: slug, title: meta.title || slug, date: meta.date || "", category: meta.category || "", scripture: meta.scripture || "", series: meta.series || "", part: meta.part || "", file: file };
   }
@@ -359,7 +367,7 @@
      "Numbers 22-24" links to its first chapter. Anything unparseable
      stays plain text, never a broken link. */
   var SCRIPTURE_FIELDS = ["KeyVerses", "KeyPassages", "KeyScriptures", "ScriptureReference",
-    "ScriptureIlluminated", "BibleReferences"];
+    "ScriptureIlluminated", "BibleReferences", "Scripture", "BiblicalSupport"];
   function bibleBookByNameStart(text) {
     var low = text.toLowerCase();
     var books = BIBLE_BOOKS.slice().sort(function (a, b) { return b.name.length - a.name.length; });
@@ -697,7 +705,7 @@
           '<p class="tl-date">' + esc(val(r, "DateApprox")) + "</p>" +
           '<h3><a href="#/timeline/' + item.idx + '">' + esc(val(r, "Title")) + "</a></h3>" +
           (isEmpty(val(r, "Events")) ? "" : '<p class="tl-desc">' + esc(val(r, "Events")) + "</p>") +
-          (isEmpty(val(r, "ScriptureReference")) ? "" : '<p class="tl-meta">' + esc(val(r, "ScriptureReference")) + "</p>") +
+          (isEmpty(val(r, "ScriptureReference")) ? "" : '<p class="tl-meta">' + linkifyScriptureRefs(val(r, "ScriptureReference")) + "</p>") +
           connGroup("People", chips(val(r, "KeyPersons"), peopleMap, "people")) +
           connGroup("Places", chips(val(r, "Places"), placesMap, "places")) +
           connGroup("Books", chips(val(r, "BibleBooks"), booksMap, "books")) +
@@ -975,7 +983,7 @@
             if (b.getAttribute("data-letter") === right) b.classList.add("correct");
           });
           var fb = card.querySelector(".explanation");
-          var note = (val(q, "ScriptureReference") ? " <em>(" + esc(val(q, "ScriptureReference")) + ")</em>" : "");
+          var note = (val(q, "ScriptureReference") ? " <em>(" + linkifyScriptureRefs(val(q, "ScriptureReference")) + ")</em>" : "");
           if (picked === right) {
             st.correct++;
             fb.innerHTML = "<strong>Correct!</strong> &mdash; " + esc(val(q, "Explanation")) + note;
@@ -1336,7 +1344,7 @@
         app.innerHTML = '<a class="back-link" href="#/blog">&larr; All posts</a><article class="post-body"><h2>' +
           esc(post.title) + '</h2><p class="post-meta">' + esc(shortDate(post.date)) +
           (post.category ? " &middot; " + esc(post.category) : "") +
-          (post.scripture ? " &middot; " + esc(post.scripture) : "") + "</p>" + seriesNav(post) +
+          (post.scripture ? " &middot; " + linkifyScriptureRefs(post.scripture) : "") + "</p>" + seriesNav(post) +
           (POST_ART[post.slug] ? "<img class='post-art' src='" + esc(POST_ART[post.slug]) + "' alt=''>" : "") +
           renderMarkdown(body) + "</article>";
         window.scrollTo(0, 0);
@@ -1913,7 +1921,7 @@
       var c = coll(id);
       if (!c) return;
       (data[id] || []).forEach(function (row, i) {
-        var hit = ["Scripture", "BiblicalSupport"].concat(SCRIPTURE_FIELDS).some(function (f) {
+        var hit = SCRIPTURE_FIELDS.some(function (f) {
           var v = val(row, f);
           if (isEmpty(v)) return false;
           return refsInValue(v).some(function (r) { return r.name === bookName && r.chapter === chapter; });
@@ -1939,7 +1947,7 @@
       return new RegExp("(^|[^0-9A-Za-z])" + escapeRegExp(v) + " " + chapter + "(?![0-9])", "i");
     });
     return Object.keys(row).some(function (k) {
-      if (["Scripture", "BiblicalSupport"].concat(SCRIPTURE_FIELDS).indexOf(k) !== -1) return false;
+      if (SCRIPTURE_FIELDS.indexOf(k) !== -1) return false;
       var text = " " + val(row, k);
       if (stripRe) text = text.replace(stripRe, " ");
       return res.some(function (re) { return re.test(text); });
@@ -1962,8 +1970,41 @@
     { title: "Life application notes", empty: "No life application notes cite this chapter yet.", colls: ["people", "studyguides"], textColls: [], panel: "Life application" },
     { title: "Archaeology notes", empty: "No archaeology notes cite this chapter yet.", colls: ["finds"], textColls: [], panel: "Archaeology" },
     { title: "Biblical theology notes", empty: "No biblical theology notes cite this chapter yet.", colls: ["topics", "doctrines"], textColls: [], panel: "Biblical theology" },
-    { title: "Hermeneutics notes", empty: "No hermeneutics notes cite this chapter yet.", colls: ["hermeneutics", "perspectives"], textColls: ["heresies"], panel: "Hermeneutics" }
+    { title: "Hermeneutics notes", empty: "No hermeneutics notes cite this chapter yet.", colls: ["hermeneutics", "perspectives"], textColls: ["heresies"], panel: "Hermeneutics" },
+    { title: "Geographical notes", empty: "No geographical notes cite this chapter yet.", colls: ["places"], textColls: [], panel: "Geography", geo: true, intro: "Maps: American Bible Society, 1888 — public domain." },
+    { title: "Expository notes", empty: "No expository notes cite this chapter yet.", colls: [], textColls: [], posts: true, panel: "Exposition" },
+    { title: "Devotional notes", empty: "No devotional notes cite this chapter yet.", colls: ["hymns"], textColls: [], panel: "Devotion" }
   ];
+  function postSlug(p) {
+    if (p.slug) return p.slug;
+    var m = String(p.file || "").match(/([^\/]+)\.md$/);
+    return m ? m[1] : "";
+  }
+  function postTitle(p) { return val(p, "title") || val(p, "Title"); }
+  function postScripture(p) { return val(p, "scripture") || val(p, "Scripture"); }
+  function notesForChapterPosts(bookName, chapter) {
+    /* Blog posts that expound a passage, from the boot-loaded posts list. */
+    var out = [];
+    (typeof posts !== "undefined" ? posts : []).forEach(function (p) {
+      var s = postScripture(p);
+      if (isEmpty(s)) return;
+      if (refsInValue(s).some(function (r) { return r.name === bookName && r.chapter === chapter; })) {
+        out.push({ c: { id: "blog", label: "Blog", primary: "title" }, row: p, idx: postSlug(p), href: "#/blog/" + postSlug(p) });
+      }
+    });
+    return out;
+  }
+  function notesForVersePosts(bookName, chapter, verse) {
+    var out = [];
+    (typeof posts !== "undefined" ? posts : []).forEach(function (p) {
+      var s = postScripture(p);
+      if (isEmpty(s)) return;
+      if (verseRefsInValue(s).some(function (r) { return r.name === bookName && r.chapter === chapter && r.verse === verse; })) {
+        out.push({ c: { id: "blog", label: "Blog", primary: "title" }, row: p, idx: postSlug(p), href: "#/blog/" + postSlug(p) });
+      }
+    });
+    return out;
+  }
   function verseRefsInValue(value) {
     /* Like refsInValue, but returns explicit verses: {slug, name, chapter, verse}.
        Bare-chapter refs mark no verse (they stay chapter-level); verse ranges
@@ -2015,7 +2056,7 @@
       var c = coll(id);
       if (!c) return;
       (data[id] || []).forEach(function (row, i) {
-        var hit = ["Scripture", "BiblicalSupport"].concat(SCRIPTURE_FIELDS).some(function (f) {
+        var hit = SCRIPTURE_FIELDS.some(function (f) {
           var v = val(row, f);
           if (isEmpty(v)) return false;
           return verseRefsInValue(v).some(function (r) { return r.name === bookName && r.chapter === chapter && r.verse === verse; });
@@ -2042,15 +2083,22 @@
       /* Verses with study notes (apologetics or cultural entries citing the
          exact verse) get a † marker; tapping it opens the notes panel. */
       var marked = {};
-      ["apologetics", "objections", "jewishculture", "people", "studyguides", "finds", "topics", "doctrines", "hermeneutics", "perspectives"].forEach(function (id) {
+      ["apologetics", "objections", "jewishculture", "people", "studyguides", "finds", "topics", "doctrines", "hermeneutics", "perspectives", "places", "hymns"].forEach(function (id) {
         (data[id] || []).forEach(function (row) {
-          ["Scripture", "BiblicalSupport"].concat(SCRIPTURE_FIELDS).forEach(function (f) {
+          SCRIPTURE_FIELDS.forEach(function (f) {
             var v = val(row, f);
             if (isEmpty(v)) return;
             verseRefsInValue(v).forEach(function (r) {
               if (r.name === book.name && r.chapter === +chapter) marked[r.verse] = true;
             });
           });
+        });
+      });
+      (typeof posts !== "undefined" ? posts : []).forEach(function (p) {
+        var s = postScripture(p);
+        if (isEmpty(s)) return;
+        verseRefsInValue(s).forEach(function (r) {
+          if (r.name === book.name && r.chapter === +chapter) marked[r.verse] = true;
         });
       });
       var paras = [""];
@@ -2072,7 +2120,7 @@
         "<a href='https://www.biblegateway.com/passage/?search=" + encodeURIComponent(book.name + " " + chapter) + "&version=ESV' target='_blank' rel='noopener'>ESV</a></p>";
       html += "<div class='bible-verses'>" + paras.map(function (p) { return "<p>" + p + "</p>"; }).join("") + "</div>";
       html += '<div id="verseStudy"></div>';
-      var arts = articlesForChapter(book.name, chapter);
+      var arts = articlesForChapter(book.name, +chapter);
       if (arts.length) {
         html += "<h3>Articles about this chapter</h3><div class='card-grid'>" + arts.map(function (a) {
           return "<a class='card' href='#/" + a.c.id + "/" + a.idx + "'><h3>" + esc(val(a.row, a.c.primary)) + "</h3><p class='meta'>" + esc(a.c.label) + "</p></a>";
@@ -2085,16 +2133,27 @@
             return "<a href='#/bible/" + r.slug + "/" + r.chapter + "'>" + esc(r.name) + " " + r.chapter + "</a>";
           }).join(" &middot; ") + "</p>";
       }
-      var noteCards = function (list) {
+      var noteCards = function (list, L) {
         return "<div class='card-grid'>" + list.map(function (a) {
-          return "<a class='card' href='#/" + a.c.id + "/" + a.idx + "'><h3>" + esc(val(a.row, a.c.primary)) + "</h3><p class='meta'>" + esc(a.c.label) + "</p></a>";
+          var href = a.href || ("#/" + a.c.id + "/" + a.idx);
+          var thumb = "";
+          if (L && L.geo) {
+            var mapIds = splitList(val(a.row, "Maps"));
+            for (var mi = 0; mi < mapIds.length; mi++) {
+              var m = typeof maps !== "undefined" ? maps[mapIds[mi]] : null;
+              if (m) { thumb = '<img class="geo-thumb" src="' + esc(m.file) + '" alt="' + esc(m.title) + '">'; break; }
+            }
+          }
+          var title = a.c.id === "blog" ? postTitle(a.row) : val(a.row, a.c.primary);
+          return "<a class='card' href='" + href + "'>" + thumb + "<h3>" + esc(title) + "</h3><p class='meta'>" + esc(a.c.label) + "</p></a>";
         }).join("") + "</div>";
       };
       STUDY_LAYERS.forEach(function (L) {
         var list = notesForChapter(book.name, +chapter, L.colls);
         L.textColls.forEach(function (id) { list = list.concat(notesForChapterText(book.name, +chapter, id)); });
+        if (L.posts) list = list.concat(notesForChapterPosts(book.name, +chapter));
         html += '<details class="study-section"><summary>' + L.title + (list.length ? ' (' + list.length + ')' : '') + '</summary><div class="study-body">' +
-          (list.length ? noteCards(list) : '<p>' + L.empty + '</p>') + '</div></details>';
+          (list.length ? (L.intro ? '<p class="page-intro">' + L.intro + '</p>' : '') + noteCards(list, L) : '<p>' + L.empty + '</p>') + '</div></details>';
       });
       html += "</div>";
       app.innerHTML = html;
@@ -2106,12 +2165,16 @@
           var group = function (title, list) {
             if (!list.length) return "";
             return "<h4>" + title + "</h4><ul>" + list.map(function (x) {
-              return "<li><a href='#/" + x.c.id + "/" + x.idx + "'>" + esc(val(x.row, x.c.primary)) + "</a> <span class='meta'>" + esc(x.c.label) + "</span></li>";
+              var href = x.href || ("#/" + x.c.id + "/" + x.idx);
+              var t = x.c.id === "blog" ? postTitle(x.row) : val(x.row, x.c.primary);
+              return "<li><a href='" + href + "'>" + esc(t) + "</a> <span class='meta'>" + esc(x.c.label) + "</span></li>";
             }).join("") + "</ul>";
           };
           var groups = "";
           STUDY_LAYERS.forEach(function (L) {
-            groups += group(L.panel, notesForVerse(book.name, +chapter, vn, L.colls));
+            var list = notesForVerse(book.name, +chapter, vn, L.colls);
+            if (L.posts) list = list.concat(notesForVersePosts(book.name, +chapter, vn));
+            groups += group(L.panel, list);
           });
           panel.innerHTML = '<details class="study-section" open><summary>Study notes for ' + esc(book.name) + ' ' + chapter + ':' + vn + '</summary><div class="study-body">' + groups + '</div></details>';
           panel.scrollIntoView();

@@ -165,10 +165,17 @@ def parse_frontmatter(path):
     if text.startswith("---"):
         end = text.find("\n---", 3)
         if end != -1:
+            last_key = None
             for line in text[4:end].strip().splitlines():
+                # YAML folds an indented continuation line into the
+                # previous value (the Testing post's scripture wraps).
+                if line[:1] in (" ", "\t") and last_key:
+                    meta[last_key] += " " + line.strip()
+                    continue
                 if ":" in line:
                     key, val = line.split(":", 1)
-                    meta[key.strip()] = val.strip().strip('"').strip("'")
+                    last_key = key.strip()
+                    meta[last_key] = val.strip().strip('"').strip("'")
     return meta
 
 
