@@ -185,7 +185,7 @@
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // family tree (content/genealogy.json)
-  var ASSET_V = "147";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "148";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -2305,6 +2305,7 @@
       "<p>Looking for another translation? The NIV and ESV are copyrighted, so this reader shows the KJV on-site; every chapter page also links to the same passage on BibleGateway in NIV and ESV.</p>" +
       '<div class="controls"><input type="search" id="bibleRef" placeholder="Go to a passage, e.g. John 3:16">' +
       '<button class="btn" id="bibleGo">Go</button></div>' +
+      '<p><a class="btn" href="#/bible/topics">Bible Verses by Topic</a> Find passages by need — healing, strength, anxiety, fear, hope, and every other topic.</p>' +
       "<h3>Old Testament</h3>" + grid(ot) +
       "<h3>New Testament</h3>" + grid(nt) + "</div>";
     app.innerHTML = html;
@@ -2316,6 +2317,47 @@
     }
     document.getElementById("bibleGo").addEventListener("click", go);
     document.getElementById("bibleRef").addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); go(); } });
+    window.scrollTo(0, 0);
+  }
+  /* Bible Verses by Topic: every Topics and Themes entry's KeyPassages,
+     rendered as links straight into this reader. No new data, no new
+     collection — the reader reuses the topics already on the site. */
+  function viewBibleTopics() {
+    var NEEDS = ["Healing", "Strength", "Anxiety", "Fear", "Hope", "Peace", "Love", "Forgiveness", "Comfort", "Courage", "Grief", "Joy", "Refuge"];
+    var rows = (data.topics || []).map(function (t, i) { return { t: t, i: i }; })
+      .filter(function (x) { return x.t.KeyPassages && x.t.KeyPassages.trim(); });
+    function card(x) {
+      var refs = x.t.KeyPassages.split(";").map(function (s) { return s.trim(); }).filter(Boolean);
+      return "<div class='card bible-topic-card' data-name='" + esc(x.t.Topic.toLowerCase()) + "'>" +
+        "<h3><a href='#/topics/" + x.i + "'>" + esc(x.t.Topic) + "</a></h3>" +
+        "<p class='meta'>" + refs.length + (refs.length === 1 ? " passage" : " passages") + "</p>" +
+        "<p>" + linkifyScriptureRefs(x.t.KeyPassages) + "</p></div>";
+    }
+    var html = "<h2>Bible Verses by Topic</h2><div class='post-body'>" +
+      "<p>Find passages by what you need. Tap a passage to read it in the Bible reader; tap a topic name to open its full article.</p>" +
+      '<div class="controls"><input type="search" id="bibleTopicSearch" placeholder="Search topics, e.g. healing"></div>' +
+      "<p>" + NEEDS.map(function (n) {
+        return '<button class="chip bible-topic-need" data-need="' + esc(n.toLowerCase()) + '">' + esc(n) + "</button>";
+      }).join(" ") + "</p>" +
+      "<p class='meta'>" + rows.length + " topics</p>" +
+      "<div class='card-grid' id='bibleTopicGrid'>" + rows.map(card).join("") + "</div>" +
+      "<p id='bibleTopicEmpty' style='display:none'>No topics match that search.</p></div>";
+    app.innerHTML = html;
+    var input = document.getElementById("bibleTopicSearch");
+    function filter() {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      Array.prototype.forEach.call(document.querySelectorAll(".bible-topic-card"), function (el) {
+        var ok = !q || el.getAttribute("data-name").indexOf(q) !== -1;
+        el.style.display = ok ? "" : "none";
+        if (ok) shown++;
+      });
+      document.getElementById("bibleTopicEmpty").style.display = shown ? "none" : "";
+    }
+    input.addEventListener("input", filter);
+    Array.prototype.forEach.call(document.querySelectorAll(".bible-topic-need"), function (btn) {
+      btn.addEventListener("click", function () { input.value = btn.getAttribute("data-need"); filter(); input.focus(); });
+    });
     window.scrollTo(0, 0);
   }
   function viewBibleBook(slug) {
@@ -2958,6 +3000,7 @@
     if (path[0] === "give") return viewGive();
     if (path[0] === "bible") {
       if (!path[1]) return viewBible();
+      if (path[1] === "topics") return viewBibleTopics();
       if (!path[2]) return viewBibleBook(path[1]);
       return viewBibleChapter(path[1], path[2], params);
     }
