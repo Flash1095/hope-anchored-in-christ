@@ -184,8 +184,8 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var genealogyData = null; // family tree (content/genealogy.json)
-  var ASSET_V = "148";  // bump when site code or content changes, so browsers fetch fresh copies
+  var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
+  var ASSET_V = "149";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1044,7 +1044,7 @@
   /* Line art Lorraine creates herself, one per collection tile and one per
      blog post. Add the file under assets/lineart/ and list it here; the
      tile/post shows it automatically. Empty until her art arrives. */
-  var TILE_ART = { timeline: "assets/lineart/timeline.png", people: "assets/lineart/people.png?v=2", books: "assets/lineart/books.png", finds: "assets/lineart/finds.jpg?v=3", places: "assets/lineart/places.jpg", topics: "assets/lineart/topics.jpg", hymns: "assets/lineart/hymns.jpg", wordstudies: "assets/lineart/wordstudies.jpg", jewishculture: "assets/lineart/jewishculture.jpg", socialmedia: "assets/lineart/socialmedia.jpg", nature: "assets/lineart/nature.jpg" };
+  var TILE_ART = { timeline: "assets/lineart/timeline.png", people: "assets/lineart/people.png?v=2", books: "assets/lineart/books.png", finds: "assets/lineart/finds.jpg?v=3", places: "assets/lineart/places.jpg", topics: "assets/lineart/topics.jpg", hymns: "assets/lineart/hymns.jpg", wordstudies: "assets/lineart/wordstudies.jpg", jewishculture: "assets/lineart/jewishculture.jpg", socialmedia: "assets/lineart/socialmedia.jpg", nature: "assets/lineart/nature.jpg", civilizations: "assets/lineart/civilizations.jpg", manuscripts: "assets/lineart/manuscripts.jpg", stories: "assets/lineart/stories.jpg" };
   var POST_ART = { "do-animals-go-to-heaven": "assets/lineart/do-animals-go-to-heaven.jpg", "christianity-invites-testing-because-its-true": "assets/lineart/christianity-invites-testing-because-its-true.jpg", "how-to-study-the-bible": "assets/lineart/how-to-study-the-bible.jpg", "why-hope-anchored-in-christ": "assets/lineart/why-hope-anchored-in-christ.jpg" };
   /* Blog post teaser cards, in the style of the mockup's bottom row:
      image on the left when post art exists, label + title + excerpt +
@@ -1183,8 +1183,8 @@
     });
     window.scrollTo(0, 0);
   }
-  /* ---------- genealogy family tree ---------- */
-  /* Family tree (content/genealogy.json): typed parent/child/spouse
+  /* ---------- Biblical Genealogies ---------- */
+  /* Biblical Genealogies (content/genealogy.json): typed parent/child/spouse
      edges taken from the Bible's own genealogy passages (Genesis 5,
      10, 11, 36; Exodus 6; Ruth 4; Matthew 1; Luke 3; 1 Chronicles 1-9).
      Nodes are keyed on (name, father), never on name alone, so
@@ -1296,7 +1296,7 @@
       return html;
     }
     function searchHTML() {
-      return '<div class="controls"><input type="search" id="genSearch" placeholder="Search the family tree — try Adam, Abraham, David, or Jesus…" aria-label="Search the family tree"></div>' +
+      return '<div class="controls"><input type="search" id="genSearch" placeholder="Search Biblical Genealogies — try Adam, Abraham, David, or Jesus…" aria-label="Search Biblical Genealogies"></div>' +
         '<div id="genResults"></div>';
     }
     function startPointsHTML() {
@@ -1326,7 +1326,7 @@
             (n.alt || []).some(function (a) { return a.toLowerCase().indexOf(q) !== -1; }) ||
             (n.context || "").toLowerCase().indexOf(q) !== -1;
         }).slice(0, 60);
-        if (!hits.length) { wrap.innerHTML = "<p class='empty'>No one in the family tree matches that name.</p>"; return; }
+        if (!hits.length) { wrap.innerHTML = "<p class='empty'>No one in Biblical Genealogies matches that name.</p>"; return; }
         wrap.innerHTML = "<ul class='gen-results'>" + hits.map(function (n) {
           var prof = (n.profileIndex !== null && n.profileIndex !== undefined)
             ? ' <a href="#/people/' + n.profileIndex + '">profile</a>' : "";
@@ -1334,10 +1334,10 @@
         }).join("") + "</ul>";
       });
     }
-    var html = '<a class="back-link" href="#/explore">&larr; Explore</a><h2>Family Tree</h2>' +
-      "<p class='page-intro'>Every parent, child, and spouse named in the Bible's genealogy passages — Genesis 5, 10, 11, 36; Exodus 6; Ruth 4; Matthew 1; Luke 3; 1 Chronicles 1–9 — linked to their profiles and to the passages themselves. Where the text leaves a link unstated or debated, the tree says so instead of guessing.</p>";
+    var html = '<a class="back-link" href="#/explore">&larr; Explore</a><h2>Biblical Genealogies</h2>' +
+      "<p class='page-intro'>Every parent, child, and spouse named in the Bible's genealogy passages — Genesis 5, 10, 11, 36; Exodus 6; Ruth 4; Matthew 1; Luke 3; 1 Chronicles 1–9 — linked to their profiles and to the passages themselves. Where the text leaves a link unstated or debated, the genealogy says so instead of guessing.</p>";
     if (!nodes.length) {
-      html += "<p class='empty'>The family tree data is not available right now.</p>";
+      html += "<p class='empty'>The Biblical Genealogies data is not available right now.</p>";
       app.innerHTML = html;
       window.scrollTo(0, 0);
       return;
@@ -1375,7 +1375,7 @@
       }
     }
     if (!node) {
-      html += "<p class='empty'>No one named “" + esc(nameParam) + "” is in the family tree.</p>";
+      html += "<p class='empty'>No one named “" + esc(nameParam) + "” is in Biblical Genealogies.</p>";
       app.innerHTML = html;
       bindSearch();
       window.scrollTo(0, 0);
@@ -1512,9 +1512,9 @@
     html += "<div class='card gallery-card'><h3>Art Gallery</h3>" +
       "<p class='snippet'>Art, verse cards, and other pieces — and the ones for sale link through to the store.</p><p>" +
       "<a class='btn' href='#/gallery'>Browse the gallery</a></p></div>";
-    html += "<div class='card genealogy-card'><h3>Family Tree</h3>" +
+    html += "<div class='card genealogy-card'><h3>Biblical Genealogies</h3>" +
       "<p class='snippet'>Every parent, child, and spouse named in the Bible's genealogy passages — linked to their profiles and to the passages.</p><p>" +
-      "<a class='btn' href='#/genealogy'>Explore the family tree</a></p></div>";
+      "<a class='btn' href='#/genealogy'>Explore Biblical Genealogies</a></p></div>";
     var ordered = EXPLORE_ORDER.map(function (id) { return coll(id); }).filter(Boolean)
       .concat(COLLECTIONS.filter(function (c) { return EXPLORE_ORDER.indexOf(c.id) === -1; }));
     var gridHtml = "";
@@ -1786,6 +1786,20 @@
     "you": true, "the": true, "and": true, "for": true, "with": true,
     "from": true, "that": true, "this": true, "saves": true, "seed": true,
     "simeon": true, "hadar": true };
+  /* Word-study transliterations that must never link from verse text,
+     even though the KJV spells a word the same way. "a" is the English
+     article, not Alpha; "day" is the translation of yom, not H1767;
+     "bath", "bag", "mad", "bad" and the rest are English words or name
+     fragments (Bar-jesus, Rab-shakeh, Beth-shemesh) that merely coincide
+     with a Hebrew or Greek transliteration. The transliterated words the
+     KJV genuinely leaves untranslated (selah, hesed, shalom, mishpat)
+     are deliberately NOT in this list, so they keep linking. */
+  var BIBLE_WORDSTUDY_STOP = { "a": true, "bad": true, "bag": true,
+    "bar": true, "bath": true, "baz": true, "bether": true, "day": true,
+    "en": true, "geber": true, "geder": true, "ho": true, "leshem": true,
+    "mad": true, "mar": true, "metheg": true, "nether": true,
+    "pannag": true, "path": true, "rab": true, "rachab": true,
+    "shemer": true, "shemesh": true, "telem": true };
   /* Verse-text people overrides and safe aliases. WHY THIS EXISTS: the
      comma-alias rule lets a sole comma-profile capture a bare name that
      usually means someone else, because regnal profiles ("King X") have
@@ -1963,18 +1977,27 @@
     var allowed = { people: true, places: true, stories: true, themes: true,
       topics: true, timeline: true, wordstudies: true };
     var map = {};
-    /* Two passes, places before people: where a person and a place share
-       one name, the place is what the word means in most verses
-       ("Haran", "Midian", "Shechem" are cities far more often than
-       men), so the place wins the bare word. Person links are
-       unaffected: RelatedPeople tokens still resolve people-first in
-       the separate link index, and a person's full name ("Shechem the
-       son of Hamor") still resolves by the phrase pass below. */
-    [false, true].forEach(function (peoplePass) {
+    /* Three passes, in claim order: other collections first (places
+       still beat people for shared names — "Haran", "Midian",
+       "Shechem" are cities far more often than men), then people, then
+       word studies last, so a name with a profile never loses its
+       verse link to a dictionary entry for the same word. Word-study
+       rows are also skipped when they are proper names (the profile
+       owns the name) or when their transliteration is on the stop list
+       above. Person links are otherwise unaffected: RelatedPeople
+       tokens still resolve people-first in the separate link index,
+       and a person's full name ("Shechem the son of Hamor") still
+       resolves by the phrase pass below. */
+    ["other", "people", "wordstudies"].forEach(function (pass) {
       COLLECTIONS.forEach(function (c) {
         if (!allowed[c.id]) return;
-        if ((c.id === "people") !== peoplePass) return;
+        var kind = c.id === "people" ? "people" : (c.id === "wordstudies" ? "wordstudies" : "other");
+        if (kind !== pass) return;
         (data[c.id] || []).forEach(function (row, idx) {
+          if (c.id === "wordstudies") {
+            if (BIBLE_WORDSTUDY_STOP[val(row, "Transliteration").toLowerCase()]) return;
+            if (val(row, "PartOfSpeech").indexOf("proper noun") === 0) return;
+          }
           var p = val(row, c.primary);
           if (!isEmpty(p) && !map[p]) map[p] = { coll: c.id, idx: idx };
           if (c.id === "wordstudies") {
@@ -3024,7 +3047,7 @@
   });
   document.getElementById("footerNav").innerHTML =
     COLLECTIONS.map(function (c) { return '<a href="#/' + c.id + '">' + esc(c.label) + "</a>"; }).join("") +
-    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/gallery">Gallery</a><a href="#/genealogy">Genealogy</a>';
+    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/gallery">Gallery</a><a href="#/genealogy">Biblical Genealogies</a>';
 
   app.innerHTML = '<p class="loading">Loading the collections…</p>';
   var jobs = COLLECTIONS.map(function (c) {
