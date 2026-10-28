@@ -180,7 +180,7 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "128";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "129";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1835,7 +1835,31 @@
       "<a href='https://www.biblegateway.com/passage/?search=" + encodeURIComponent(book.name) + "&version=ESV' target='_blank' rel='noopener'>ESV</a></p>";
     html += '<div class="chips">';
     for (var c = 1; c <= book.chapters; c++) html += '<a class="chip" href="#/bible/' + slug + '/' + c + '">' + c + '</a>';
-    html += "</div></div>";
+    html += "</div>";
+    if (artIdx !== -1) {
+      var row = data.books[artIdx];
+      var tab = function (title, inner, open) {
+        if (!inner) return "";
+        return '<details class="study-section"' + (open ? " open" : "") + "><summary>" + title + "</summary><div class='study-body'>" + inner + "</div></details>";
+      };
+      var meta = "Author: " + esc(val(row, "TraditionalAuthor")) + " &middot; Written: " + esc(val(row, "DateApprox")) +
+        " &middot; Category: " + esc(val(row, "Category")) + " &middot; Era: " + esc(val(row, "TimelineEra"));
+      var overview = "<p>" + meta + "</p>" +
+        "<p>" + esc(val(row, "Summary")) + "</p>" +
+        "<p><strong>Purpose:</strong> " + esc(val(row, "Purpose")) + "</p>" +
+        "<p><strong>Key theme:</strong> " + esc(val(row, "KeyTheme")) + "</p>";
+      html += '<div class="study">' +
+        tab("Book Overview", overview, true) +
+        tab("Outline", "<p>" + esc(val(row, "Outline")) + "</p>") +
+        tab("Key Verses", "<p>" + renderValue("KeyVerses", val(row, "KeyVerses")) + "</p>") +
+        tab("Key People", "<p>" + renderValue("KeyPeople", val(row, "KeyPeople")) + "</p>") +
+        tab("Themes", "<p>" + renderValue("Themes", val(row, "Themes")) + "</p>") +
+        tab("Historical Context", "<p>" + esc(val(row, "HistoricalContext")) + "</p>") +
+        (isEmpty(val(row, "Places")) ? "" : tab("Places", "<p>" + renderValue("Places", val(row, "Places")) + "</p>")) +
+        (isEmpty(val(row, "RelatedEvents")) ? "" : tab("Related Events", "<p>" + renderValue("RelatedEvents", val(row, "RelatedEvents")) + "</p>")) +
+        "</div>";
+    }
+    html += "</div>";
     app.innerHTML = html;
     window.scrollTo(0, 0);
   }
