@@ -185,7 +185,7 @@
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
-  var ASSET_V = "151";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "152";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1343,6 +1343,45 @@
       if (!items.length) return "";
       return "<h3>Start with</h3><ul class='gen-rel-list'>" + items.join("") + "</ul>";
     }
+    /* Full index: the landing page lists EVERYONE in the genealogies,
+       alphabetically, in batches of 100 — not just the four starting
+       points — so the whole scope is visible without searching. */
+    var genAllSorted = [];
+    function allNamesHTML() {
+      genAllSorted = nodes.slice().sort(function (a, b) {
+        var an = a.name.toLowerCase(), bn = b.name.toLowerCase();
+        return an < bn ? -1 : (an > bn ? 1 : 0);
+      });
+      var html = "<h3>Everyone in the genealogies (" + genAllSorted.length + " people)</h3>" +
+        "<ul class='gen-rel-list' id='genAllList'>" + genAllSorted.slice(0, 100).map(function (n) {
+          return "<li><a href='" + genHref(n) + "'>" + nameHTML(n) + "</a></li>";
+        }).join("") + "</ul>";
+      if (genAllSorted.length > 100) {
+        html += '<p><button class="btn" id="genAllMore">Show more (100 of ' + genAllSorted.length + ')</button></p>';
+      }
+      return html;
+    }
+    function bindAllNames() {
+      var btn = document.getElementById("genAllMore");
+      if (!btn) return;
+      var shown = 100;
+      btn.addEventListener("click", function () {
+        var list = document.getElementById("genAllList");
+        if (!list) return;
+        var next = Math.min(shown + 100, genAllSorted.length);
+        var frag = "";
+        for (var i = shown; i < next; i++) {
+          frag += "<li><a href='" + genHref(genAllSorted[i]) + "'>" + nameHTML(genAllSorted[i]) + "</a></li>";
+        }
+        list.insertAdjacentHTML("beforeend", frag);
+        shown = next;
+        if (shown >= genAllSorted.length) {
+          if (btn.parentNode) btn.parentNode.remove();
+        } else {
+          btn.textContent = "Show more (" + shown + " of " + genAllSorted.length + ")";
+        }
+      });
+    }
     function bindSearch() {
       var input = document.getElementById("genSearch");
       var wrap = document.getElementById("genResults");
@@ -1375,9 +1414,11 @@
     if (!nameParam) {
       html += startPointsHTML();
       html += genModeToggleSectionHTML();
+      html += allNamesHTML();
       app.innerHTML = html;
       bindSearch();
       genBindInteractive(null);
+      bindAllNames();
       window.scrollTo(0, 0);
       return;
     }

@@ -1671,11 +1671,13 @@
   {
    "id": "n178",
    "name": "Jacob",
-   "alt": [],
+   "alt": [
+    "Israel"
+   ],
    "context": "child of Isaac",
    "profileIndex": 14,
    "profileSlug": "jacob",
-   "note": ""
+   "note": "Called Israel in 1 Chronicles 1:34 and 2:1-2: Israel is the name God gave Jacob (Genesis 32:28)."
   },
   {
    "id": "n179",
@@ -1969,12 +1971,11 @@
    "id": "n207",
    "name": "Joseph, Husband of Mary",
    "alt": [
-    "Joseph",
-    "Joseph, Son of Jacob"
+    "Joseph"
    ],
    "context": "",
-   "profileIndex": 19,
-   "profileSlug": "joseph-son-of-jacob",
+   "profileIndex": 76,
+   "profileSlug": "joseph-husband-of-mary",
    "note": ""
   },
   {
@@ -2683,15 +2684,6 @@
   },
   {
    "id": "n286",
-   "name": "Israel",
-   "alt": [],
-   "context": "",
-   "profileIndex": 14,
-   "profileSlug": "jacob",
-   "note": "Israel here is Jacob, renamed Israel (Genesis 32:28); 1 Chronicles 1:34 names him as a son of Isaac."
-  },
-  {
-   "id": "n287",
    "name": "Zephi",
    "alt": [],
    "context": "",
@@ -2700,7 +2692,7 @@
    "note": ""
   },
   {
-   "id": "n288",
+   "id": "n287",
    "name": "Timna",
    "alt": [],
    "context": "",
@@ -2709,7 +2701,7 @@
    "note": ""
   },
   {
-   "id": "n289",
+   "id": "n288",
    "name": "Homam",
    "alt": [],
    "context": "",
@@ -2718,7 +2710,7 @@
    "note": ""
   },
   {
-   "id": "n290",
+   "id": "n289",
    "name": "Alian",
    "alt": [],
    "context": "",
@@ -2727,7 +2719,7 @@
    "note": ""
   },
   {
-   "id": "n291",
+   "id": "n290",
    "name": "Shephi",
    "alt": [],
    "context": "",
@@ -2736,7 +2728,7 @@
    "note": ""
   },
   {
-   "id": "n292",
+   "id": "n291",
    "name": "Amram",
    "alt": [],
    "context": "child of Dishon",
@@ -2745,7 +2737,7 @@
    "note": ""
   },
   {
-   "id": "n293",
+   "id": "n292",
    "name": "Zavan",
    "alt": [],
    "context": "",
@@ -2754,7 +2746,7 @@
    "note": ""
   },
   {
-   "id": "n294",
+   "id": "n293",
    "name": "Reuben",
    "alt": [],
    "context": "",
@@ -2763,7 +2755,7 @@
    "note": ""
   },
   {
-   "id": "n295",
+   "id": "n294",
    "name": "Simeon",
    "alt": [],
    "context": "child of Jacob",
@@ -2772,7 +2764,7 @@
    "note": ""
   },
   {
-   "id": "n296",
+   "id": "n295",
    "name": "Levi",
    "alt": [],
    "context": "child of Jacob",
@@ -2781,7 +2773,7 @@
    "note": ""
   },
   {
-   "id": "n297",
+   "id": "n296",
    "name": "Issachar",
    "alt": [],
    "context": "",
@@ -2790,7 +2782,7 @@
    "note": ""
   },
   {
-   "id": "n298",
+   "id": "n297",
    "name": "Zebulun",
    "alt": [],
    "context": "",
@@ -2799,12 +2791,21 @@
    "note": ""
   },
   {
-   "id": "n299",
+   "id": "n298",
    "name": "Dan",
    "alt": [],
    "context": "",
    "profileIndex": 182,
    "profileSlug": "dan",
+   "note": ""
+  },
+  {
+   "id": "n299",
+   "name": "Joseph, Son of Jacob",
+   "alt": [],
+   "context": "",
+   "profileIndex": 19,
+   "profileSlug": "joseph-son-of-jacob",
    "note": ""
   },
   {
@@ -10098,7 +10099,7 @@
   {
    "child": "n94",
    "father": "n84",
-   "mother": "n288",
+   "mother": "n287",
    "spouses": [],
    "refs": [
     "Genesis 36:12"
@@ -10450,7 +10451,7 @@
   },
   {
    "child": "n130",
-   "father": "n294",
+   "father": "n293",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -10459,7 +10460,7 @@
   },
   {
    "child": "n131",
-   "father": "n294",
+   "father": "n293",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -10468,7 +10469,7 @@
   },
   {
    "child": "n132",
-   "father": "n294",
+   "father": "n293",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -10477,7 +10478,7 @@
   },
   {
    "child": "n133",
-   "father": "n294",
+   "father": "n293",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -10486,7 +10487,7 @@
   },
   {
    "child": "n134",
-   "father": "n295",
+   "father": "n294",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -10495,7 +10496,7 @@
   },
   {
    "child": "n135",
-   "father": "n295",
+   "father": "n294",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -10505,7 +10506,7 @@
   },
   {
    "child": "n136",
-   "father": "n295",
+   "father": "n294",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -10514,7 +10515,7 @@
   },
   {
    "child": "n137",
-   "father": "n295",
+   "father": "n294",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -10523,7 +10524,7 @@
   },
   {
    "child": "n138",
-   "father": "n295",
+   "father": "n294",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -10532,7 +10533,7 @@
   },
   {
    "child": "n139",
-   "father": "n295",
+   "father": "n294",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -10542,7 +10543,7 @@
   },
   {
    "child": "n140",
-   "father": "n296",
+   "father": "n295",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -10552,7 +10553,7 @@
   },
   {
    "child": "n141",
-   "father": "n296",
+   "father": "n295",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -10562,7 +10563,7 @@
   },
   {
    "child": "n142",
-   "father": "n296",
+   "father": "n295",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -10674,7 +10675,7 @@
   },
   {
    "child": "n153",
-   "father": "n292",
+   "father": "n291",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -10930,7 +10931,8 @@
    "spouses": [],
    "refs": [
     "Matthew 1:2",
-    "Luke 3:34"
+    "Luke 3:34",
+    "1 Chronicles 1:34"
    ]
   },
   {
@@ -10940,7 +10942,8 @@
    "spouses": [],
    "refs": [
     "Matthew 1:2",
-    "Luke 3:33-34"
+    "Luke 3:33-34",
+    "1 Chronicles 2:1-2"
    ]
   },
   {
@@ -12019,15 +12022,6 @@
    ]
   },
   {
-   "child": "n286",
-   "father": "n177",
-   "mother": null,
-   "spouses": [],
-   "refs": [
-    "1 Chronicles 1:34"
-   ]
-  },
-  {
    "child": "n84",
    "father": "n83",
    "mother": null,
@@ -12073,7 +12067,7 @@
    ]
   },
   {
-   "child": "n287",
+   "child": "n286",
    "father": "n84",
    "mother": null,
    "spouses": [],
@@ -12082,7 +12076,7 @@
    ]
   },
   {
-   "child": "n288",
+   "child": "n287",
    "father": "n84",
    "mother": null,
    "spouses": [],
@@ -12100,12 +12094,21 @@
    ]
   },
   {
-   "child": "n289",
+   "child": "n288",
    "father": "n99",
    "mother": null,
    "spouses": [],
    "refs": [
     "1 Chronicles 1:39"
+   ]
+  },
+  {
+   "child": "n289",
+   "father": "n100",
+   "mother": null,
+   "spouses": [],
+   "refs": [
+    "1 Chronicles 1:40"
    ]
   },
   {
@@ -12119,15 +12122,6 @@
   },
   {
    "child": "n291",
-   "father": "n100",
-   "mother": null,
-   "spouses": [],
-   "refs": [
-    "1 Chronicles 1:40"
-   ]
-  },
-  {
-   "child": "n292",
    "father": "n115",
    "mother": null,
    "spouses": [],
@@ -12136,7 +12130,7 @@
    ]
   },
   {
-   "child": "n293",
+   "child": "n292",
    "father": "n104",
    "mother": null,
    "spouses": [],
@@ -12145,8 +12139,17 @@
    ]
   },
   {
+   "child": "n293",
+   "father": "n178",
+   "mother": null,
+   "spouses": [],
+   "refs": [
+    "1 Chronicles 2:1-2"
+   ]
+  },
+  {
    "child": "n294",
-   "father": "n286",
+   "father": "n178",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -12155,16 +12158,7 @@
   },
   {
    "child": "n295",
-   "father": "n286",
-   "mother": null,
-   "spouses": [],
-   "refs": [
-    "1 Chronicles 2:1-2"
-   ]
-  },
-  {
-   "child": "n296",
-   "father": "n286",
+   "father": "n178",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -12173,8 +12167,8 @@
    ]
   },
   {
-   "child": "n179",
-   "father": "n286",
+   "child": "n296",
+   "father": "n178",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -12183,7 +12177,7 @@
   },
   {
    "child": "n297",
-   "father": "n286",
+   "father": "n178",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -12192,7 +12186,7 @@
   },
   {
    "child": "n298",
-   "father": "n286",
+   "father": "n178",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -12201,16 +12195,7 @@
   },
   {
    "child": "n299",
-   "father": "n286",
-   "mother": null,
-   "spouses": [],
-   "refs": [
-    "1 Chronicles 2:1-2"
-   ]
-  },
-  {
-   "child": "n207",
-   "father": "n286",
+   "father": "n178",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -12219,7 +12204,7 @@
   },
   {
    "child": "n300",
-   "father": "n286",
+   "father": "n178",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -12228,7 +12213,7 @@
   },
   {
    "child": "n301",
-   "father": "n286",
+   "father": "n178",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -12237,7 +12222,7 @@
   },
   {
    "child": "n302",
-   "father": "n286",
+   "father": "n178",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -12246,7 +12231,7 @@
   },
   {
    "child": "n303",
-   "father": "n286",
+   "father": "n178",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -14319,7 +14304,7 @@
   },
   {
    "child": "n526",
-   "father": "n295",
+   "father": "n294",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -14328,7 +14313,7 @@
   },
   {
    "child": "n527",
-   "father": "n295",
+   "father": "n294",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -14337,7 +14322,7 @@
   },
   {
    "child": "n528",
-   "father": "n295",
+   "father": "n294",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -15519,7 +15504,7 @@
   },
   {
    "child": "n654",
-   "father": "n297",
+   "father": "n296",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -15528,7 +15513,7 @@
   },
   {
    "child": "n655",
-   "father": "n297",
+   "father": "n296",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -15537,7 +15522,7 @@
   },
   {
    "child": "n656",
-   "father": "n297",
+   "father": "n296",
    "mother": null,
    "spouses": [],
    "refs": [
@@ -15546,7 +15531,7 @@
   },
   {
    "child": "n657",
-   "father": "n297",
+   "father": "n296",
    "mother": null,
    "spouses": [],
    "refs": [
