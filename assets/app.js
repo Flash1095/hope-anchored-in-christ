@@ -185,7 +185,7 @@
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
-  var ASSET_V = "153";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "154";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1304,8 +1304,73 @@
       }).join(" &rsaquo; ") + "</p>" +
         "<p class='gen-chain-note'>Oldest ancestor first, following fathers (or mothers where no father is stated) as far as the passages go — the chain stops honestly where parentage is unstated.</p>";
     }
+    /* Extended family, computed from the edges at runtime: siblings share
+       a parent; grandparents are parents of parents; aunts/uncles are
+       siblings of parents; nieces/nephews are children of siblings;
+       cousins are children of aunts/uncles; grandchildren are children
+       of children. Closest relationship wins: the person, their parents,
+       children, and siblings are never repeated in a further-out section.
+       A section renders only where the connection genuinely exists. */
+    function familyMaps(node) {
+      var parentSet = {}, childSet = {};
+      edges.forEach(function (e) {
+        if (e.child === node.id) {
+          if (e.father) parentSet[e.father] = true;
+          if (e.mother) parentSet[e.mother] = true;
+        }
+        if (e.father === node.id || e.mother === node.id) childSet[e.child] = true;
+      });
+      function kidsOf(pid) {
+        var m = {};
+        edges.forEach(function (e) {
+          if (e.father === pid || e.mother === pid) m[e.child] = mergeRefs((m[e.child] || []).concat(e.refs || []));
+        });
+        return m;
+      }
+      function parentsOf(id) {
+        var m = {};
+        edges.forEach(function (e) {
+          if (e.child === id) {
+            if (e.father) m[e.father] = mergeRefs((m[e.father] || []).concat(e.refs || []));
+            if (e.mother) m[e.mother] = mergeRefs((m[e.mother] || []).concat(e.refs || []));
+          }
+        });
+        return m;
+      }
+      function absorb(into, from) {
+        Object.keys(from).forEach(function (k) {
+          into[k] = mergeRefs((into[k] || []).concat(from[k]));
+        });
+      }
+      var sibs = {}, grandkids = {}, grandps = {}, aunts = {}, nieces = {}, cousins = {};
+      Object.keys(parentSet).forEach(function (pid) {
+        absorb(sibs, kidsOf(pid));
+        absorb(grandps, parentsOf(pid));
+      });
+      delete sibs[node.id];
+      Object.keys(childSet).forEach(function (c) { absorb(grandkids, kidsOf(c)); });
+      Object.keys(grandps).forEach(function (gid) {
+        var gk = kidsOf(gid);
+        Object.keys(gk).forEach(function (c) {
+          if (!parentSet[c]) aunts[c] = mergeRefs((aunts[c] || []).concat(gk[c]));
+        });
+      });
+      Object.keys(sibs).forEach(function (s) { absorb(nieces, kidsOf(s)); });
+      Object.keys(aunts).forEach(function (a) { absorb(cousins, kidsOf(a)); });
+      [grandkids, grandps, aunts, nieces, cousins].forEach(function (m) { delete m[node.id]; });
+      Object.keys(parentSet).forEach(function (p) {
+        delete grandkids[p]; delete aunts[p]; delete nieces[p]; delete cousins[p];
+      });
+      Object.keys(childSet).forEach(function (c) {
+        delete nieces[c]; delete cousins[c]; delete aunts[c];
+      });
+      Object.keys(sibs).forEach(function (s) { delete cousins[s]; });
+      return { siblings: sibs, grandchildren: grandkids, grandparents: grandps,
+               aunts: aunts, nieces: nieces, cousins: cousins };
+    }
     function panelHTML(node) {
       var rel = relations(node.id);
+      var fam = familyMaps(node);
       var html = '<div class="gen-panel"><h2>' + esc(node.name) + "</h2>";
       if (node.context) html += "<p class='gen-context'>" + esc(node.context) + "</p>";
       if (node.alt && node.alt.length) html += "<p class='gen-context'>Also spelled: " + node.alt.map(esc).join(", ") + "</p>";
@@ -1316,10 +1381,22 @@
       html += "<h3>Parents</h3>";
       var parents = relListHTML(rel.fathers) + relListHTML(rel.mothers);
       html += parents || "<p>No human parents are named for this person in the genealogy passages.</p>";
+      var sib = relListHTML(fam.siblings);
+      if (sib) html += "<h3>Siblings</h3>" + sib;
       html += "<h3>Spouse(s)</h3>";
       html += relListHTML(rel.spouses) || "<p>No spouse is named for this person in the genealogy passages.</p>";
       html += "<h3>Children</h3>";
       html += relListHTML(rel.children) || "<p>No children are named for this person in the genealogy passages.</p>";
+      var gk = relListHTML(fam.grandchildren);
+      if (gk) html += "<h3>Grandchildren</h3>" + gk;
+      var gp = relListHTML(fam.grandparents);
+      if (gp) html += "<h3>Grandparents</h3>" + gp;
+      var au = relListHTML(fam.aunts);
+      if (au) html += "<h3>Aunts &amp; Uncles</h3>" + au;
+      var nn = relListHTML(fam.nieces);
+      if (nn) html += "<h3>Nieces &amp; Nephews</h3>" + nn;
+      var co = relListHTML(fam.cousins);
+      if (co) html += "<h3>Cousins</h3>" + co;
       html += "<h3>Ancestor chain</h3>" + chainHTML(node);
       html += "</div>";
       return html;
