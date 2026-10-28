@@ -6,5 +6,8 @@
   "RelatedPeople": "Paul; Simon Peter; Nehemiah",
   "RelatedEvents": "Nehemiah Rebuilds the Wall; Rebuilding of the Temple",
   "Slug": "diligence",
-  "Places": "Jerusalem"
+  "Places": "Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

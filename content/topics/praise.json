@@ -6,5 +6,8 @@
   "RelatedPeople": "King David; Paul",
   "Slug": "praise",
   "Places": "Jerusalem; Philippi; Patmos",
-  "RelatedEvents": "The Birth of Jesus"
+  "RelatedEvents": "The Birth of Jesus",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -11,5 +11,8 @@
   "RelatedPeople": "Jesus; Mary of Bethany; Martha; Lazarus",
   "Slug": "bethany",
   "RelatedEvents": "Raising of Lazarus; The Ascension",
-  "Places": "Jerusalem; Golgotha"
+  "Places": "Jerusalem; Golgotha",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

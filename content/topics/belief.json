@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Paul; Abraham; Thomas",
   "RelatedEvents": "The Resurrection; The Conversion of Paul",
   "Slug": "belief",
-  "Places": "Jerusalem; Golgotha"
+  "Places": "Jerusalem; Golgotha",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

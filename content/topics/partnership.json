@@ -6,5 +6,8 @@
   "RelatedPeople": "Paul; Barnabas; Timothy; Priscilla; Aquila",
   "RelatedEvents": "Paul's Missionary Journeys",
   "Slug": "partnership",
-  "Places": "Antioch; Corinth; Ephesus"
+  "Places": "Antioch; Corinth; Ephesus",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

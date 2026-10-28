@@ -6,5 +6,8 @@
   "RelatedPeople": "Adam; Noah; Abraham; Jesus",
   "RelatedEvents": "Creation; The Call of Abraham",
   "Slug": "genealogy",
-  "Places": "Garden of Eden; Ur; Canaan"
+  "Places": "Garden of Eden; Ur; Canaan",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

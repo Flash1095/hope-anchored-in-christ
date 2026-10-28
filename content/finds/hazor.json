@@ -17,5 +17,8 @@
   "Image": "assets/finds/hazor.jpg",
   "ImageCredit": "Photo: Bukvoed (CC BY 4.0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/Tel-Hazor-2004.jpg",
-  "Slug": "hazor"
+  "Slug": "hazor",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -6,7 +6,10 @@
     "KeyPassages": "Genesis 1:27; Exodus 21:16; Galatians 3:28; Philemon 1:15-16",
     "RelatedPeople": "Moses; Paul",
     "RelatedBooks": "Genesis; Exodus; Galatians; Philemon",
-    "Slug": "abolition"
+    "Slug": "abolition",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Abundance",
@@ -16,7 +19,10 @@
     "RelatedPeople": "Moses; King David; Jesus; Paul",
     "RelatedEvents": "Wilderness Wanderings; The Feeding of the Five Thousand",
     "Slug": "abundance",
-    "Places": "Galilee"
+    "Places": "Galilee",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Acceptance",
@@ -25,7 +31,10 @@
     "RelatedBooks": "Romans; Ephesians; Luke; John",
     "RelatedPeople": "Jesus; Paul; Mary Magdalene",
     "RelatedEvents": "The Prodigal Son; Peter and Cornelius",
-    "Slug": "acceptance"
+    "Slug": "acceptance",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Adam and Eve",
@@ -37,7 +46,10 @@
     "RelatedBooks": "Genesis; Romans; 1 Corinthians",
     "Slug": "adam-and-eve",
     "Places": "Garden of Eden",
-    "RelatedEvents": "Creation; The Fall"
+    "RelatedEvents": "Creation; The Fall",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Allegory",
@@ -47,7 +59,10 @@
     "RelatedPeople": "Paul; Jesus",
     "RelatedDoctrines": "Inspiration of Scripture",
     "RelatedBooks": "Galatians; Matthew; 2 Peter",
-    "Slug": "allegory"
+    "Slug": "allegory",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Ancient Israel",
@@ -59,7 +74,10 @@
     "RelatedBooks": "Exodus; Deuteronomy; 1 Kings; Isaiah",
     "Slug": "ancient-israel",
     "Places": "Canaan; Jerusalem",
-    "RelatedEvents": "The Exodus and the Red Sea; Fall of Jerusalem and the Exile"
+    "RelatedEvents": "The Exodus and the Red Sea; Fall of Jerusalem and the Exile",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Angels",
@@ -70,7 +88,10 @@
     "RelatedDoctrines": "Angels; Spiritual Warfare; Ministry of Angels",
     "RelatedQuestions": "Do people become angels when they die?; Do angels still appear today?",
     "RelatedBooks": "Psalms; Daniel; Luke; Hebrews; Revelation",
-    "Slug": "angels"
+    "Slug": "angels",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Anxiety",
@@ -82,7 +103,10 @@
     "RelatedQuestions": "What does the Bible say about anxiety and worry?; Is anxiety a lack of faith?",
     "RelatedBooks": "Psalms; Proverbs; Matthew; John; Philippians; 1 Peter",
     "Slug": "anxiety",
-    "RelatedEvents": "The Sermon on the Mount"
+    "RelatedEvents": "The Sermon on the Mount",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Apologetics",
@@ -92,7 +116,10 @@
     "RelatedPeople": "Simon Peter; Paul",
     "RelatedQuestions": "Is Jesus the only way to God?; Is the Bible reliable and true?",
     "RelatedBooks": "1 Peter; Acts; Jude; Colossians",
-    "Slug": "apologetics"
+    "Slug": "apologetics",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Apostasy",
@@ -102,7 +129,10 @@
     "RelatedPeople": "Paul; John the Apostle; Judas Iscariot",
     "RelatedEvents": "The Golden Calf; The Kingdom Divides",
     "Slug": "apostasy",
-    "Places": "Mount Sinai; Samaria"
+    "Places": "Mount Sinai; Samaria",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Archaeology",
@@ -112,7 +142,10 @@
     "RelatedPeople": "Cyrus the Great",
     "RelatedQuestions": "Is there archaeological evidence for King David?; What are the Dead Sea Scrolls?; Is there evidence for the Exodus?",
     "RelatedBooks": "1 Kings; Ezra; Luke",
-    "Slug": "archaeology"
+    "Slug": "archaeology",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Assurance",
@@ -123,7 +156,10 @@
     "RelatedDoctrines": "Perseverance of the Saints",
     "RelatedQuestions": "How can I know I am truly saved?; Can I lose my salvation?",
     "RelatedBooks": "John; Romans; 1 John; Hebrews",
-    "Slug": "assurance"
+    "Slug": "assurance",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Atonement",
@@ -136,7 +172,10 @@
     "RelatedBooks": "Leviticus; Isaiah; Romans; Hebrews; 1 John",
     "Slug": "atonement",
     "Places": "Golgotha; Jerusalem",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Authority",
@@ -146,7 +185,10 @@
     "RelatedPeople": "Jesus; Paul",
     "RelatedDoctrines": "Inspiration of Scripture",
     "RelatedBooks": "Matthew; Acts; Romans; 2 Timothy",
-    "Slug": "authority"
+    "Slug": "authority",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Baptism",
@@ -159,7 +201,10 @@
     "RelatedBooks": "Matthew; Acts; Romans; Colossians; 1 Peter",
     "Slug": "baptism",
     "Places": "Jordan River",
-    "RelatedEvents": "The Baptism of Jesus"
+    "RelatedEvents": "The Baptism of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Beauty",
@@ -170,7 +215,10 @@
     "RelatedDoctrines": "Creation",
     "RelatedBooks": "Genesis; Psalms; Revelation",
     "Slug": "beauty",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Belief",
@@ -180,7 +228,10 @@
     "RelatedPeople": "Jesus; Paul; Abraham; Thomas",
     "RelatedEvents": "The Resurrection; The Conversion of Paul",
     "Slug": "belief",
-    "Places": "Jerusalem; Golgotha"
+    "Places": "Jerusalem; Golgotha",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Bethlehem ruler",
@@ -190,7 +241,10 @@
     "RelatedPeople": "Jesus; Mary, Mother of Jesus; Joseph, Husband of Mary",
     "RelatedEvents": "The Birth of Jesus",
     "Slug": "bethlehem-ruler",
-    "Places": "Bethlehem"
+    "Places": "Bethlehem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Bible",
@@ -201,7 +255,10 @@
     "RelatedDoctrines": "Inspiration of Scripture; Inerrancy of Scripture",
     "RelatedQuestions": "Is the Bible reliable and true?; Who wrote the Bible?; How should I start reading the Bible?",
     "RelatedBooks": "Psalms; 2 Timothy; Hebrews; John",
-    "Slug": "bible"
+    "Slug": "bible",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Bible History",
@@ -211,7 +268,10 @@
     "RelatedPeople": "Moses",
     "RelatedQuestions": "How did the world begin according to Genesis?; What was the Exodus from Egypt?",
     "RelatedBooks": "Exodus; Luke; Acts; 1 Corinthians",
-    "Slug": "bible-history"
+    "Slug": "bible-history",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Bible Reliability",
@@ -222,7 +282,10 @@
     "RelatedDoctrines": "Inspiration of Scripture; Inerrancy of Scripture",
     "RelatedQuestions": "Is the Bible reliable and true?; Has the Bible been changed over time?; Why are there so many Bible translations?",
     "RelatedBooks": "Psalms; Isaiah; Matthew; 2 Peter",
-    "Slug": "bible-reliability"
+    "Slug": "bible-reliability",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Biblical Authority",
@@ -232,7 +295,10 @@
     "RelatedPeople": "Moses; Jesus; Paul",
     "RelatedDoctrines": "Inspiration of Scripture; Inerrancy of Scripture",
     "RelatedBooks": "Deuteronomy; Psalms; Matthew; 2 Timothy",
-    "Slug": "biblical-authority"
+    "Slug": "biblical-authority",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Biblical Interpretation",
@@ -242,7 +308,10 @@
     "RelatedPeople": "Ezra; Jesus; Paul",
     "RelatedDoctrines": "Inspiration of Scripture",
     "RelatedBooks": "Nehemiah; Luke; Acts; 2 Timothy",
-    "Slug": "biblical-interpretation"
+    "Slug": "biblical-interpretation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Blessing",
@@ -252,7 +321,10 @@
     "RelatedPeople": "Abraham; Moses; Jesus",
     "RelatedEvents": "The Call of Abraham; The Sermon on the Mount",
     "Slug": "blessing",
-    "Places": "Canaan; Galilee"
+    "Places": "Canaan; Galilee",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Blessing and curse",
@@ -262,7 +334,10 @@
     "RelatedPeople": "Moses; Joshua; Paul",
     "RelatedEvents": "The Ten Commandments; Crossing the Jordan",
     "Slug": "blessing-and-curse",
-    "Places": "Mount Sinai; Plains of Moab"
+    "Places": "Mount Sinai; Plains of Moab",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Boldness",
@@ -274,7 +349,10 @@
     "RelatedBooks": "Acts; Ephesians; Proverbs",
     "Slug": "boldness",
     "Places": "Jerusalem",
-    "RelatedEvents": "Pentecost"
+    "RelatedEvents": "Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Bread",
@@ -284,7 +362,10 @@
     "RelatedPeople": "Moses; Elijah; Jesus; Paul",
     "RelatedEvents": "Wilderness Wanderings; The Feeding of the Five Thousand; The Last Supper",
     "Slug": "bread",
-    "Places": "Galilee; Jerusalem"
+    "Places": "Galilee; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Brotherhood",
@@ -294,7 +375,10 @@
     "RelatedPeople": "Jesus; Paul; John the Apostle; Joseph, Son of Jacob",
     "RelatedEvents": "Joseph and His Brothers; Pentecost",
     "Slug": "brotherhood",
-    "Places": "Canaan; Egypt; Jerusalem"
+    "Places": "Canaan; Egypt; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Buddhism",
@@ -303,7 +387,10 @@
     "KeyPassages": "Ecclesiastes 3:11; John 14:6; Acts 17:22-31; Colossians 2:8",
     "RelatedPeople": "Paul",
     "RelatedBooks": "Ecclesiastes; John; Acts; Colossians",
-    "Slug": "buddhism"
+    "Slug": "buddhism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Calling",
@@ -314,7 +401,10 @@
     "RelatedBooks": "Exodus; Isaiah; Matthew; Ephesians; 1 Peter",
     "Slug": "calling",
     "Places": "Midian",
-    "RelatedEvents": "The Burning Bush"
+    "RelatedEvents": "The Burning Bush",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Canon",
@@ -324,7 +414,10 @@
     "RelatedPeople": "Simon Peter; John the Apostle",
     "RelatedDoctrines": "Inspiration of Scripture",
     "RelatedBooks": "Luke; John; 2 Peter; Revelation",
-    "Slug": "canon"
+    "Slug": "canon",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Character",
@@ -334,7 +427,10 @@
     "RelatedPeople": "Paul; Simon Peter; Joseph, Son of Jacob",
     "RelatedEvents": "Joseph and His Brothers; The Temptation in the Wilderness",
     "Slug": "character",
-    "Places": "Egypt"
+    "Places": "Egypt",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Christ Alone",
@@ -344,7 +440,10 @@
     "RelatedPeople": "Jesus; Paul; Simon Peter",
     "RelatedEvents": "The Crucifixion; The Resurrection",
     "Slug": "christ-alone",
-    "Places": "Golgotha; Jerusalem"
+    "Places": "Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Christ's example",
@@ -354,7 +453,10 @@
     "RelatedPeople": "Jesus; Simon Peter; Paul",
     "RelatedEvents": "The Last Supper; The Crucifixion",
     "Slug": "christ-s-example",
-    "Places": "Jerusalem; Golgotha"
+    "Places": "Jerusalem; Golgotha",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Christ's return",
@@ -364,7 +466,10 @@
     "RelatedPeople": "Jesus; Paul; John the Apostle",
     "RelatedEvents": "The Ascension; Transfiguration",
     "Slug": "christ-s-return",
-    "Places": "Jerusalem; Bethany"
+    "Places": "Jerusalem; Bethany",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Christian Ethics",
@@ -375,7 +480,10 @@
     "RelatedBooks": "Exodus; Micah; Matthew; Romans",
     "Slug": "christian-ethics",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments; The Sermon on the Mount"
+    "RelatedEvents": "The Ten Commandments; The Sermon on the Mount",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Christian Life",
@@ -386,7 +494,10 @@
     "RelatedDoctrines": "Sanctification",
     "RelatedQuestions": "How can I grow spiritually?",
     "RelatedBooks": "Romans; Galatians; Colossians; 1 Thessalonians",
-    "Slug": "christian-life"
+    "Slug": "christian-life",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Christian living",
@@ -396,7 +507,10 @@
     "RelatedPeople": "Paul; Jesus",
     "RelatedEvents": "The Sermon on the Mount; Pentecost",
     "Slug": "christian-living",
-    "Places": "Galilee; Jerusalem"
+    "Places": "Galilee; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Christian Witness",
@@ -408,7 +522,10 @@
     "RelatedBooks": "Matthew; Acts; 1 Peter; Colossians",
     "Slug": "christian-witness",
     "Places": "Jerusalem",
-    "RelatedEvents": "Pentecost"
+    "RelatedEvents": "Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Christology",
@@ -420,7 +537,10 @@
     "RelatedQuestions": "Who is Jesus Christ?",
     "RelatedBooks": "John; Philippians; Colossians; Hebrews",
     "Slug": "christology",
-    "RelatedEvents": "Transfiguration; The Resurrection"
+    "RelatedEvents": "Transfiguration; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Church",
@@ -433,7 +553,10 @@
     "RelatedBooks": "Matthew; Acts; 1 Corinthians; Ephesians; 1 Peter",
     "Slug": "church",
     "Places": "Jerusalem",
-    "RelatedEvents": "Pentecost"
+    "RelatedEvents": "Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Church Councils",
@@ -442,7 +565,10 @@
     "KeyPassages": "Acts 15:1-29; 1 Timothy 3:15; Jude 1:3",
     "RelatedPeople": "Paul; James, Son of Zebedee",
     "RelatedBooks": "Acts; 1 Timothy; Jude",
-    "Slug": "church-councils"
+    "Slug": "church-councils",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Church growth",
@@ -452,7 +578,10 @@
     "RelatedPeople": "Simon Peter; Paul; Barnabas",
     "RelatedEvents": "Pentecost; Jerusalem Council",
     "Slug": "church-growth",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Church History",
@@ -464,7 +593,10 @@
     "RelatedBooks": "Acts; Revelation",
     "Slug": "church-history",
     "Places": "Jerusalem",
-    "RelatedEvents": "Pentecost"
+    "RelatedEvents": "Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Church Hurt",
@@ -473,7 +605,10 @@
     "KeyPassages": "Psalm 55:12-14; Matthew 18:15-17; Galatians 6:1-2; Hebrews 10:24-25",
     "RelatedPeople": "King David; Jesus; Paul",
     "RelatedBooks": "Psalms; Matthew; Galatians; Hebrews",
-    "Slug": "church-hurt"
+    "Slug": "church-hurt",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Church order",
@@ -483,7 +618,10 @@
     "RelatedPeople": "Paul; Timothy; Stephen",
     "RelatedEvents": "Jerusalem Council; Pentecost",
     "Slug": "church-order",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Comfort",
@@ -492,7 +630,10 @@
     "KeyPassages": "Psalm 23:4; Isaiah 40:1-2; 2 Corinthians 1:3-7; Revelation 21:4",
     "RelatedPeople": "King David; Paul; Isaiah",
     "RelatedBooks": "Psalms; Isaiah; 2 Corinthians; Revelation",
-    "Slug": "comfort"
+    "Slug": "comfort",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Comfort for Judah",
@@ -502,7 +643,10 @@
     "RelatedPeople": "Isaiah; Jeremiah",
     "RelatedEvents": "Fall of Jerusalem and the Exile; Cyrus's Decree and Return from Exile",
     "Slug": "comfort-for-judah",
-    "Places": "Jerusalem; Babylon"
+    "Places": "Jerusalem; Babylon",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Coming King",
@@ -512,7 +656,10 @@
     "RelatedPeople": "Jesus; King David; Zechariah the Prophet",
     "RelatedEvents": "Triumphal Entry; David Becomes King",
     "Slug": "coming-king",
-    "Places": "Bethany; Hebron; Jerusalem"
+    "Places": "Bethany; Hebron; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Communion",
@@ -525,7 +672,10 @@
     "RelatedBooks": "Matthew; Luke; 1 Corinthians",
     "Slug": "communion",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Last Supper"
+    "RelatedEvents": "The Last Supper",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Community",
@@ -538,7 +688,10 @@
     "RelatedBooks": "Acts; Romans; Hebrews; 1 John",
     "Slug": "community",
     "Places": "Jerusalem",
-    "RelatedEvents": "Pentecost"
+    "RelatedEvents": "Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Compassion",
@@ -548,7 +701,10 @@
     "RelatedPeople": "Jesus; King David",
     "RelatedBooks": "Psalms; Matthew; Luke; Colossians",
     "Slug": "compassion",
-    "RelatedEvents": "The Good Samaritan; The Feeding of the Five Thousand"
+    "RelatedEvents": "The Good Samaritan; The Feeding of the Five Thousand",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Compassion for nations",
@@ -558,7 +714,10 @@
     "RelatedPeople": "Jonah; Jesus; Paul",
     "RelatedEvents": "Jonah and Nineveh; Pentecost",
     "Slug": "compassion-for-nations",
-    "Places": "Nineveh; Jerusalem"
+    "Places": "Nineveh; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Confession",
@@ -568,7 +727,10 @@
     "RelatedPeople": "King David; John the Apostle",
     "RelatedBooks": "Psalms; Proverbs; 1 John; James",
     "Slug": "confession",
-    "RelatedEvents": "David and Bathsheba"
+    "RelatedEvents": "David and Bathsheba",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Conquest",
@@ -578,7 +740,10 @@
     "RelatedPeople": "Joshua; Caleb; Rahab",
     "RelatedEvents": "Crossing the Jordan; The Walls of Jericho",
     "Slug": "conquest",
-    "Places": "Jordan River; Gilgal; Jericho"
+    "Places": "Jordan River; Gilgal; Jericho",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Conscience",
@@ -587,7 +752,10 @@
     "KeyPassages": "Romans 2:14-15; 1 Corinthians 8:7-13; 1 Timothy 1:5; Hebrews 9:14",
     "RelatedPeople": "Paul",
     "RelatedBooks": "Romans; 1 Corinthians; 1 Timothy; Hebrews",
-    "Slug": "conscience"
+    "Slug": "conscience",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Consecration",
@@ -597,7 +765,10 @@
     "RelatedPeople": "Moses; Aaron; Simon Peter",
     "RelatedEvents": "The Ten Commandments",
     "Slug": "consecration",
-    "Places": "Mount Sinai"
+    "Places": "Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Contending for the faith",
@@ -607,7 +778,10 @@
     "RelatedPeople": "Paul; Simon Peter; John the Apostle",
     "RelatedEvents": "Jerusalem Council; Martyrdom of Stephen",
     "Slug": "contending-for-the-faith",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Contentment",
@@ -616,7 +790,10 @@
     "KeyPassages": "Psalm 23:1; Philippians 4:11-13; 1 Timothy 6:6-8; Hebrews 13:5",
     "RelatedPeople": "King David; Paul",
     "RelatedBooks": "Psalms; Philippians; 1 Timothy; Hebrews",
-    "Slug": "contentment"
+    "Slug": "contentment",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Context",
@@ -626,7 +803,10 @@
     "RelatedPeople": "Ezra; Jesus; Simon Peter",
     "RelatedDoctrines": "Inspiration of Scripture",
     "RelatedBooks": "Nehemiah; Luke; Acts; 2 Peter",
-    "Slug": "context"
+    "Slug": "context",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Conversion",
@@ -637,7 +817,10 @@
     "RelatedDoctrines": "Justification",
     "RelatedBooks": "Ezekiel; Acts; 2 Corinthians",
     "Slug": "conversion",
-    "RelatedEvents": "The Conversion of Paul"
+    "RelatedEvents": "The Conversion of Paul",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Courage",
@@ -648,7 +831,10 @@
     "RelatedBooks": "Joshua; Esther; Daniel; Acts",
     "Slug": "courage",
     "Places": "Susa",
-    "RelatedEvents": "Esther Saves Her People; David and Goliath"
+    "RelatedEvents": "Esther Saves Her People; David and Goliath",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Covenant",
@@ -661,7 +847,10 @@
     "RelatedBooks": "Genesis; Exodus; Jeremiah; Luke; Hebrews; 2 Samuel",
     "Slug": "covenant",
     "Places": "Mount Sinai; Egypt; Jerusalem; Golgotha",
-    "RelatedEvents": "The Ten Commandments; Davidic Covenant; The Exodus and the Red Sea; The Last Supper; The Crucifixion"
+    "RelatedEvents": "The Ten Commandments; Davidic Covenant; The Exodus and the Red Sea; The Last Supper; The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Covenant love",
@@ -671,7 +860,10 @@
     "RelatedPeople": "Moses; Hosea; John the Apostle",
     "RelatedEvents": "The Golden Calf; The Exodus and the Red Sea",
     "Slug": "covenant-love",
-    "Places": "Mount Sinai; Egypt"
+    "Places": "Mount Sinai; Egypt",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Covenant renewal",
@@ -681,7 +873,10 @@
     "RelatedPeople": "Joshua; Nehemiah; Ezra; King Josiah",
     "RelatedEvents": "Ezra Reads the Law; Nehemiah Rebuilds the Wall",
     "Slug": "covenant-renewal",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Covenant unfaithfulness",
@@ -691,7 +886,10 @@
     "RelatedPeople": "Hosea; Jeremiah; Ezekiel",
     "RelatedEvents": "The Golden Calf; The Kingdom Divides",
     "Slug": "covenant-unfaithfulness",
-    "Places": "Mount Sinai; Samaria; Jerusalem"
+    "Places": "Mount Sinai; Samaria; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Creation",
@@ -704,7 +902,10 @@
     "RelatedBooks": "Genesis; Psalms; John; Colossians; Hebrews",
     "Slug": "creation",
     "Places": "Garden of Eden",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Creeds",
@@ -714,7 +915,10 @@
     "RelatedPeople": "Moses; Paul",
     "RelatedDoctrines": "Trinity; Incarnation",
     "RelatedBooks": "Deuteronomy; Matthew; 1 Corinthians; 1 Timothy",
-    "Slug": "creeds"
+    "Slug": "creeds",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Cross",
@@ -724,7 +928,10 @@
     "RelatedPeople": "Jesus; Mary, Mother of Jesus; Paul",
     "RelatedEvents": "The Crucifixion; The Last Supper",
     "Slug": "cross",
-    "Places": "Golgotha; Jerusalem"
+    "Places": "Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Crucifixion",
@@ -737,7 +944,10 @@
     "RelatedBooks": "Psalms; Isaiah; Mark; John",
     "Slug": "crucifixion",
     "Places": "Golgotha; Jerusalem",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Culture",
@@ -746,7 +956,10 @@
     "KeyPassages": "Jeremiah 29:4-7; Daniel 1:8-21; John 17:15-18; Romans 12:2",
     "RelatedPeople": "Daniel; Jeremiah; Jesus; Paul",
     "RelatedBooks": "Jeremiah; Daniel; John; Romans",
-    "Slug": "culture"
+    "Slug": "culture",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Cycles of sin",
@@ -756,7 +969,10 @@
     "RelatedPeople": "Deborah; Gideon; Samson",
     "RelatedEvents": "Deborah and Barak Defeat Sisera; Gideon's Victory over Midian",
     "Slug": "cycles-of-sin",
-    "Places": "Ramah; Bethel; Midian"
+    "Places": "Ramah; Bethel; Midian",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Daily Faith",
@@ -766,7 +982,10 @@
     "RelatedPeople": "Jesus; Jeremiah; Paul",
     "RelatedEvents": "The Sermon on the Mount; Wilderness Wanderings",
     "Slug": "daily-faith",
-    "Places": "Galilee; Mount Sinai"
+    "Places": "Galilee; Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Darkness",
@@ -775,7 +994,10 @@
     "KeyPassages": "Genesis 1:2-4; Isaiah 9:2; John 1:4-9; 1 John 1:5-7; Revelation 22:5",
     "RelatedPeople": "Jesus; John the Apostle",
     "RelatedBooks": "Genesis; Isaiah; John; 1 John; Revelation",
-    "Slug": "darkness"
+    "Slug": "darkness",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "David's lineage",
@@ -785,7 +1007,10 @@
     "RelatedPeople": "King David; Ruth; Boaz; Jesus",
     "RelatedEvents": "Ruth's Loyalty; David Becomes King",
     "Slug": "david-s-lineage",
-    "Places": "Bethlehem; Hebron; Jerusalem"
+    "Places": "Bethlehem; Hebron; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Davidic covenant",
@@ -795,7 +1020,10 @@
     "RelatedPeople": "King David; Nathan; Jesus",
     "RelatedEvents": "Davidic Covenant; David Becomes King",
     "Slug": "davidic-covenant",
-    "Places": "Hebron; Jerusalem"
+    "Places": "Hebron; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Day of the Lord",
@@ -804,7 +1032,10 @@
     "RelatedBooks": "Joel; Amos; Zephaniah; 2 Peter",
     "RelatedPeople": "Amos; Isaiah; Simon Peter",
     "Slug": "day-of-the-lord",
-    "RelatedEvents": "The Ascension"
+    "RelatedEvents": "The Ascension",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Death",
@@ -816,7 +1047,10 @@
     "RelatedBooks": "Genesis; Psalms; John; 1 Corinthians",
     "Slug": "death",
     "Places": "Golgotha",
-    "RelatedEvents": "The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Crucifixion; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Definitions",
@@ -825,7 +1059,10 @@
     "KeyPassages": "Psalm 119:105; Proverbs 18:17; 2 Timothy 2:15; Titus 2:1",
     "RelatedPeople": "Paul",
     "RelatedBooks": "Psalms; Proverbs; 2 Timothy; Titus",
-    "Slug": "definitions"
+    "Slug": "definitions",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Deliverance",
@@ -836,7 +1073,10 @@
     "RelatedBooks": "Exodus; Psalms; Colossians; Galatians",
     "Slug": "deliverance",
     "Places": "Egypt",
-    "RelatedEvents": "The Exodus and the Red Sea"
+    "RelatedEvents": "The Exodus and the Red Sea",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Deliverance (Exodus)",
@@ -846,7 +1086,10 @@
     "RelatedPeople": "Moses; Aaron; Jesus",
     "RelatedEvents": "The Exodus and the Red Sea; The Passover; The Crucifixion",
     "Slug": "deliverance-exodus",
-    "Places": "Egypt; Goshen; Golgotha; Jerusalem"
+    "Places": "Egypt; Goshen; Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Dependence",
@@ -856,7 +1099,10 @@
     "RelatedPeople": "Jesus; Paul; King David",
     "RelatedEvents": "The Temptation in the Wilderness; Jesus Prays in Gethsemane",
     "Slug": "dependence",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Desire",
@@ -865,7 +1111,10 @@
     "KeyPassages": "Psalm 37:4; Psalm 42:1-2; Galatians 5:16-17; James 1:14-15; 1 John 2:15-17",
     "RelatedPeople": "King David; Paul",
     "RelatedBooks": "Psalms; Galatians; James; 1 John",
-    "Slug": "desire"
+    "Slug": "desire",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Devotion",
@@ -874,7 +1123,10 @@
     "KeyPassages": "Deuteronomy 6:5; Psalm 1:2; Luke 10:38-42; Colossians 3:16-17",
     "RelatedPeople": "Moses; Jesus; Mary of Bethany",
     "RelatedBooks": "Deuteronomy; Psalms; Luke; Colossians",
-    "Slug": "devotion"
+    "Slug": "devotion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Dignity",
@@ -884,7 +1136,10 @@
     "RelatedPeople": "Paul",
     "RelatedDoctrines": "Creation",
     "RelatedBooks": "Genesis; Psalms; James; Galatians",
-    "Slug": "dignity"
+    "Slug": "dignity",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Diligence",
@@ -894,7 +1149,10 @@
     "RelatedPeople": "Paul; Simon Peter; Nehemiah",
     "RelatedEvents": "Nehemiah Rebuilds the Wall; Rebuilding of the Temple",
     "Slug": "diligence",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Diligent work",
@@ -904,7 +1162,10 @@
     "RelatedPeople": "Adam; Paul; Joseph, Son of Jacob",
     "RelatedEvents": "Creation; Joseph and His Brothers",
     "Slug": "diligent-work",
-    "Places": "Garden of Eden; Egypt"
+    "Places": "Garden of Eden; Egypt",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Discernment",
@@ -913,7 +1174,10 @@
     "KeyPassages": "1 Kings 3:9; Proverbs 2:1-6; Philippians 1:9-11; 1 John 4:1-3; Hebrews 5:14",
     "RelatedPeople": "King Solomon; Paul; John the Apostle",
     "RelatedBooks": "1 Kings; Proverbs; Philippians; 1 John; Hebrews",
-    "Slug": "discernment"
+    "Slug": "discernment",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Discipleship",
@@ -926,7 +1190,10 @@
     "RelatedBooks": "Matthew; Luke; John; Acts; 2 Timothy",
     "Slug": "discipleship",
     "Places": "Galilee",
-    "RelatedEvents": "The Sermon on the Mount"
+    "RelatedEvents": "The Sermon on the Mount",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Divinity",
@@ -938,7 +1205,10 @@
     "RelatedBooks": "Exodus; Isaiah; John; Colossians",
     "Slug": "divinity",
     "Places": "Jordan River",
-    "RelatedEvents": "The Baptism of Jesus; Transfiguration"
+    "RelatedEvents": "The Baptism of Jesus; Transfiguration",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Doctrine",
@@ -947,7 +1217,10 @@
     "KeyPassages": "Deuteronomy 6:6-7; Matthew 28:20; Romans 6:17; 1 Timothy 4:16; Titus 2:1",
     "RelatedPeople": "Moses; Paul",
     "RelatedBooks": "Deuteronomy; Matthew; Romans; 1 Timothy; Titus",
-    "Slug": "doctrine"
+    "Slug": "doctrine",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Doubt",
@@ -958,7 +1231,10 @@
     "RelatedDoctrines": "Doubt; Faith; Assurance",
     "RelatedQuestions": "Is it a sin to doubt God?; What should I do when my faith feels weak?",
     "RelatedBooks": "Psalms; Matthew; Mark; John; Jude",
-    "Slug": "doubt"
+    "Slug": "doubt",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Dreams",
@@ -968,7 +1244,10 @@
     "RelatedPeople": "Joseph, Son of Jacob; Daniel; Joseph, Husband of Mary",
     "RelatedEvents": "Joseph and His Brothers",
     "Slug": "dreams",
-    "Places": "Canaan; Egypt"
+    "Places": "Canaan; Egypt",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Dry bones revived",
@@ -978,7 +1257,10 @@
     "RelatedPeople": "Ezekiel; Jesus; Paul",
     "RelatedEvents": "Raising of Lazarus; The Resurrection",
     "Slug": "dry-bones-revived",
-    "Places": "Bethany; Jerusalem"
+    "Places": "Bethany; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Early Church",
@@ -990,7 +1272,10 @@
     "RelatedBooks": "Acts",
     "Slug": "early-church",
     "Places": "Jerusalem",
-    "RelatedEvents": "Pentecost"
+    "RelatedEvents": "Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Easter",
@@ -1003,7 +1288,10 @@
     "RelatedBooks": "Matthew; Mark; Luke; John; 1 Corinthians",
     "Slug": "easter",
     "Places": "Jerusalem; Golgotha",
-    "RelatedEvents": "The Resurrection"
+    "RelatedEvents": "The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Emotions",
@@ -1012,7 +1300,10 @@
     "KeyPassages": "Psalm 42:1-11; Psalm 62:8; John 11:33-36; Philippians 4:6-7; Galatians 5:22-23",
     "RelatedPeople": "King David; Jesus; Paul",
     "RelatedBooks": "Psalms; John; Philippians; Galatians",
-    "Slug": "emotions"
+    "Slug": "emotions",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Encouragement",
@@ -1022,7 +1313,10 @@
     "RelatedPeople": "Barnabas; Paul; Timothy",
     "RelatedEvents": "Pentecost; Paul's Missionary Journeys",
     "Slug": "encouragement",
-    "Places": "Jerusalem; Antioch"
+    "Places": "Jerusalem; Antioch",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "End Times",
@@ -1034,7 +1328,10 @@
     "RelatedQuestions": "Will Jesus come back?; What are the signs of the end times?",
     "RelatedBooks": "Daniel; Matthew; 1 Thessalonians; Revelation",
     "Slug": "end-times",
-    "RelatedEvents": "The Ascension"
+    "RelatedEvents": "The Ascension",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Endurance",
@@ -1044,7 +1341,10 @@
     "RelatedPeople": "Paul; James, Son of Zebedee; Stephen",
     "RelatedEvents": "Martyrdom of Stephen; The Crucifixion",
     "Slug": "endurance",
-    "Places": "Jerusalem; Golgotha"
+    "Places": "Jerusalem; Golgotha",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Enjoying God's gifts",
@@ -1054,7 +1354,10 @@
     "RelatedPeople": "King David; Paul; King Solomon",
     "RelatedEvents": "Creation; The Feeding of the Five Thousand",
     "Slug": "enjoying-god-s-gifts",
-    "Places": "Garden of Eden; Galilee"
+    "Places": "Garden of Eden; Galilee",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Eschatology",
@@ -1065,7 +1368,10 @@
     "RelatedDoctrines": "Second Coming; Resurrection; Heaven",
     "RelatedBooks": "Isaiah; Romans; 2 Peter; Revelation",
     "Slug": "eschatology",
-    "RelatedEvents": "The Ascension"
+    "RelatedEvents": "The Ascension",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Eternal Life",
@@ -1077,7 +1383,10 @@
     "RelatedBooks": "John; Romans; 1 John",
     "Slug": "eternal-life",
     "Places": "Bethany",
-    "RelatedEvents": "The Resurrection; Raising of Lazarus"
+    "RelatedEvents": "The Resurrection; Raising of Lazarus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Eternal Security",
@@ -1088,7 +1397,10 @@
     "RelatedDoctrines": "Perseverance of the Saints; Election",
     "RelatedQuestions": "Can I lose my salvation?; How can I know I am truly saved?",
     "RelatedBooks": "John; Romans; Philippians; 1 John",
-    "Slug": "eternal-security"
+    "Slug": "eternal-security",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Eternity",
@@ -1097,7 +1409,10 @@
     "KeyPassages": "Psalm 90:1-4; Isaiah 57:15; 2 Peter 3:8; Revelation 22:13",
     "RelatedPeople": "Moses; Isaiah; Simon Peter; John the Apostle",
     "RelatedBooks": "Psalms; Isaiah; 2 Peter; Revelation",
-    "Slug": "eternity"
+    "Slug": "eternity",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Ethics",
@@ -1108,7 +1423,10 @@
     "RelatedBooks": "Exodus; Micah; Matthew; Romans",
     "Slug": "ethics",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments; The Sermon on the Mount"
+    "RelatedEvents": "The Ten Commandments; The Sermon on the Mount",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Evangelism",
@@ -1121,7 +1439,10 @@
     "RelatedBooks": "Matthew; Acts; Romans; 2 Corinthians; 1 Peter",
     "Slug": "evangelism",
     "Places": "Jerusalem; Antioch",
-    "RelatedEvents": "Pentecost; Paul's Missionary Journeys"
+    "RelatedEvents": "Pentecost; Paul's Missionary Journeys",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Evidence",
@@ -1131,7 +1452,10 @@
     "RelatedPeople": "Paul; Simon Peter",
     "RelatedQuestions": "Is the Bible reliable and true?; Did Jesus really rise from the dead?",
     "RelatedBooks": "Luke; Acts; 1 Corinthians; 1 Peter",
-    "Slug": "evidence"
+    "Slug": "evidence",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Evil and Suffering",
@@ -1143,7 +1467,10 @@
     "RelatedBooks": "Genesis; Job; Isaiah; Romans; Revelation",
     "Slug": "evil-and-suffering",
     "Places": "Golgotha",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Evolution",
@@ -1154,7 +1481,10 @@
     "RelatedDoctrines": "Creation",
     "RelatedQuestions": "Did God create the world in six literal days?; How did the world begin according to Genesis?",
     "RelatedBooks": "Genesis; Psalms; Romans; Colossians",
-    "Slug": "evolution"
+    "Slug": "evolution",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Exile",
@@ -1167,7 +1497,10 @@
     "RelatedBooks": "2 Kings; Psalms; Jeremiah; Ezekiel; Daniel; Ezra",
     "Slug": "exile",
     "Places": "Babylon; Jerusalem; River Chebar",
-    "RelatedEvents": "Fall of Jerusalem and the Exile; Cyrus's Decree and Return from Exile"
+    "RelatedEvents": "Fall of Jerusalem and the Exile; Cyrus's Decree and Return from Exile",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Exile and Return",
@@ -1177,7 +1510,10 @@
     "RelatedPeople": "Jeremiah; Ezekiel; Daniel; Ezra; Nehemiah; Cyrus the Great",
     "RelatedEvents": "Fall of Jerusalem and the Exile; Cyrus's Decree and Return from Exile; Rebuilding of the Temple",
     "Slug": "exile-and-return",
-    "Places": "Jerusalem; Babylon; Susa"
+    "Places": "Jerusalem; Babylon; Susa",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Existence of God",
@@ -1186,7 +1522,10 @@
     "KeyPassages": "Psalm 19:1-4; Romans 1:19-20; Hebrews 11:6; Acts 17:24-28",
     "RelatedPeople": "Paul",
     "RelatedBooks": "Psalms; Romans; Hebrews; Acts",
-    "Slug": "existence-of-god"
+    "Slug": "existence-of-god",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Exodus",
@@ -1199,7 +1538,10 @@
     "RelatedBooks": "Exodus; Deuteronomy; 1 Corinthians",
     "Slug": "exodus",
     "Places": "Egypt; Goshen; Mount Sinai",
-    "RelatedEvents": "The Ten Plagues; The Passover; The Exodus and the Red Sea; The Ten Commandments"
+    "RelatedEvents": "The Ten Plagues; The Passover; The Exodus and the Red Sea; The Ten Commandments",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Eyewitnesses",
@@ -1211,7 +1553,10 @@
     "RelatedBooks": "Luke; John; Acts; 1 Corinthians; 1 John",
     "Slug": "eyewitnesses",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Resurrection"
+    "RelatedEvents": "The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Faith",
@@ -1224,7 +1569,10 @@
     "RelatedBooks": "Genesis; Habakkuk; Romans; Ephesians; Hebrews; James",
     "Slug": "faith",
     "RelatedEvents": "The Binding of Isaac; Noah and the Flood; The Resurrection",
-    "Places": "Mount Ararat; Jerusalem"
+    "Places": "Mount Ararat; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Faith and Reason",
@@ -1233,7 +1581,10 @@
     "KeyPassages": "Isaiah 1:18; Acts 17:2-3; Romans 12:2; 1 Peter 3:15; Jude 1:3",
     "RelatedPeople": "Isaiah; Paul; Simon Peter",
     "RelatedBooks": "Isaiah; Acts; Romans; 1 Peter; Jude",
-    "Slug": "faith-and-reason"
+    "Slug": "faith-and-reason",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Faithfulness",
@@ -1243,7 +1594,10 @@
     "RelatedPeople": "Daniel; Joseph, Son of Jacob; Paul",
     "RelatedEvents": "Daniel in the Lions' Den; Joseph and His Brothers",
     "Slug": "faithfulness",
-    "Places": "Babylon; Egypt"
+    "Places": "Babylon; Egypt",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Faithfulness in exile",
@@ -1253,7 +1607,10 @@
     "RelatedPeople": "Daniel; Queen Esther; Mordecai",
     "RelatedEvents": "Daniel in the Lions' Den; Esther Saves Her People",
     "Slug": "faithfulness-in-exile",
-    "Places": "Babylon; Susa"
+    "Places": "Babylon; Susa",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Faithfulness of God",
@@ -1264,7 +1621,10 @@
     "RelatedBooks": "Deuteronomy; Lamentations; 1 Corinthians; 2 Timothy; Hebrews",
     "Slug": "faithfulness-of-god",
     "Places": "Egypt; Golgotha",
-    "RelatedEvents": "The Exodus and the Red Sea; The Crucifixion"
+    "RelatedEvents": "The Exodus and the Red Sea; The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "False teachers",
@@ -1274,7 +1634,10 @@
     "RelatedPeople": "Jesus; Simon Peter; John the Apostle",
     "RelatedEvents": "Jerusalem Council",
     "Slug": "false-teachers",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "False Teaching",
@@ -1283,7 +1646,10 @@
     "KeyPassages": "Matthew 7:15-20; Galatians 1:6-9; 2 Peter 2:1-3; 1 John 4:1-3",
     "RelatedPeople": "Jesus; Paul; Simon Peter; John the Apostle",
     "RelatedBooks": "Matthew; Galatians; 2 Peter; 1 John",
-    "Slug": "false-teaching"
+    "Slug": "false-teaching",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "False teaching refuted",
@@ -1293,7 +1659,10 @@
     "RelatedPeople": "Paul; Timothy; John the Apostle",
     "RelatedEvents": "Jerusalem Council; The Conversion of Paul",
     "Slug": "false-teaching-refuted",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Family",
@@ -1302,7 +1671,10 @@
     "KeyPassages": "Genesis 2:24; Deuteronomy 6:6-7; Ephesians 5:25-33; Ephesians 6:1-4; Psalm 127:3-5",
     "RelatedPeople": "Adam; Eve; Abraham",
     "RelatedBooks": "Genesis; Deuteronomy; Ephesians; Psalms",
-    "Slug": "family"
+    "Slug": "family",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Fear",
@@ -1315,7 +1687,10 @@
     "RelatedBooks": "Genesis; Psalms; Isaiah; Matthew; 2 Timothy; 1 John",
     "Slug": "fear",
     "Places": "Galilee",
-    "RelatedEvents": "Jesus Calms the Storm"
+    "RelatedEvents": "Jesus Calms the Storm",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Fear of God",
@@ -1325,7 +1700,10 @@
     "RelatedPeople": "King Solomon; Simon Peter; Moses",
     "RelatedEvents": "The Ten Commandments",
     "Slug": "fear-of-god",
-    "Places": "Mount Sinai"
+    "Places": "Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Fear of the Lord",
@@ -1335,7 +1713,10 @@
     "RelatedPeople": "Moses; King David; Isaiah",
     "RelatedEvents": "The Burning Bush; The Ten Commandments",
     "Slug": "fear-of-the-lord",
-    "Places": "Midian; Mount Sinai"
+    "Places": "Midian; Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Fellowship",
@@ -1348,7 +1729,10 @@
     "RelatedBooks": "Acts; 1 Corinthians; 1 John; Hebrews",
     "Slug": "fellowship",
     "Places": "Jerusalem",
-    "RelatedEvents": "Pentecost"
+    "RelatedEvents": "Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Finishing well",
@@ -1358,7 +1742,10 @@
     "RelatedPeople": "Paul; Timothy; King David",
     "RelatedEvents": "Paul in Rome; Paul Shipwrecked on Malta",
     "Slug": "finishing-well",
-    "Places": "Rome"
+    "Places": "Rome",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Forgiveness",
@@ -1371,7 +1758,10 @@
     "RelatedBooks": "Psalms; Matthew; Luke; Ephesians; Colossians; Genesis",
     "Slug": "forgiveness",
     "Places": "Golgotha; Egypt; Jerusalem",
-    "RelatedEvents": "The Prodigal Son; The Crucifixion; Joseph and His Brothers; Martyrdom of Stephen"
+    "RelatedEvents": "The Prodigal Son; The Crucifixion; Joseph and His Brothers; Martyrdom of Stephen",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Foundation",
@@ -1381,7 +1771,10 @@
     "RelatedPeople": "Jesus; Paul; Simon Peter",
     "RelatedEvents": "The Sermon on the Mount; Rebuilding of the Temple",
     "Slug": "foundation",
-    "Places": "Galilee; Jerusalem"
+    "Places": "Galilee; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Freedom",
@@ -1391,7 +1784,10 @@
     "RelatedPeople": "Jesus; Paul; Moses",
     "RelatedEvents": "The Exodus and the Red Sea; The Passover",
     "Slug": "freedom",
-    "Places": "Egypt; Goshen"
+    "Places": "Egypt; Goshen",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Friendship with Christ",
@@ -1401,7 +1797,10 @@
     "RelatedPeople": "Jesus; Abraham; Moses",
     "RelatedEvents": "The Last Supper; The Burning Bush",
     "Slug": "friendship-with-christ",
-    "Places": "Jerusalem; Midian; Mount Sinai"
+    "Places": "Jerusalem; Midian; Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Fruit of the Spirit",
@@ -1411,7 +1810,10 @@
     "RelatedPeople": "Paul; Jesus",
     "RelatedEvents": "Pentecost; The Sermon on the Mount",
     "Slug": "fruit-of-the-spirit",
-    "Places": "Jerusalem; Galilee"
+    "Places": "Jerusalem; Galilee",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Fulfillment",
@@ -1421,7 +1823,10 @@
     "RelatedPeople": "Jesus; Paul; John the Apostle",
     "RelatedEvents": "The Resurrection; The Birth of Jesus",
     "Slug": "fulfillment",
-    "Places": "Jerusalem; Bethlehem"
+    "Places": "Jerusalem; Bethlehem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Full Payment",
@@ -1431,7 +1836,10 @@
     "RelatedPeople": "Jesus; Paul; Simon Peter",
     "RelatedEvents": "The Crucifixion; The Passover",
     "Slug": "full-payment",
-    "Places": "Golgotha; Jerusalem; Egypt"
+    "Places": "Golgotha; Jerusalem; Egypt",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Genealogy",
@@ -1441,7 +1849,10 @@
     "RelatedPeople": "Adam; Noah; Abraham; Jesus",
     "RelatedEvents": "Creation; The Call of Abraham",
     "Slug": "genealogy",
-    "Places": "Garden of Eden; Ur; Canaan"
+    "Places": "Garden of Eden; Ur; Canaan",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Generosity",
@@ -1451,7 +1862,10 @@
     "RelatedPeople": "Moses; Paul",
     "RelatedQuestions": "What does the Bible say about money and generosity?",
     "RelatedBooks": "Deuteronomy; Proverbs; 2 Corinthians; 1 Timothy",
-    "Slug": "generosity"
+    "Slug": "generosity",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Glory",
@@ -1461,7 +1875,10 @@
     "RelatedPeople": "Moses; Jesus; Paul",
     "RelatedBooks": "Exodus; Psalms; John; Romans; Revelation",
     "Slug": "glory",
-    "RelatedEvents": "Transfiguration"
+    "RelatedEvents": "Transfiguration",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God",
@@ -1472,7 +1889,10 @@
     "RelatedDoctrines": "Trinity",
     "RelatedQuestions": "Who is God according to the Bible?",
     "RelatedBooks": "Genesis; Exodus; Deuteronomy; Psalms; John; 1 John",
-    "Slug": "god"
+    "Slug": "god",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God Fights for Us",
@@ -1482,7 +1902,10 @@
     "RelatedPeople": "Moses; Joshua; King Jehoshaphat",
     "RelatedEvents": "The Exodus and the Red Sea; Crossing the Jordan",
     "Slug": "god-fights-for-us",
-    "Places": "Egypt; Jordan River; Gilgal"
+    "Places": "Egypt; Jordan River; Gilgal",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God's choice",
@@ -1492,7 +1915,10 @@
     "RelatedPeople": "Moses; Paul; Simon Peter",
     "RelatedEvents": "The Call of Abraham; The Exodus and the Red Sea",
     "Slug": "god-s-choice",
-    "Places": "Ur; Canaan; Egypt"
+    "Places": "Ur; Canaan; Egypt",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God's faithfulness",
@@ -1502,7 +1928,10 @@
     "RelatedPeople": "Moses; Paul; Jeremiah",
     "RelatedEvents": "The Exodus and the Red Sea; Wilderness Wanderings",
     "Slug": "god-s-faithfulness",
-    "Places": "Egypt; Mount Sinai"
+    "Places": "Egypt; Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God's glory",
@@ -1512,7 +1941,10 @@
     "RelatedPeople": "Moses; Isaiah; Jesus",
     "RelatedEvents": "The Burning Bush; Transfiguration",
     "Slug": "god-s-glory",
-    "Places": "Midian; Mount Sinai"
+    "Places": "Midian; Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God's Holiness",
@@ -1524,7 +1956,10 @@
     "RelatedBooks": "Exodus; Isaiah; 1 Peter; Revelation",
     "Slug": "god-s-holiness",
     "Places": "Midian",
-    "RelatedEvents": "The Burning Bush"
+    "RelatedEvents": "The Burning Bush",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God's joy over His people",
@@ -1534,7 +1969,10 @@
     "RelatedPeople": "Jesus; Nehemiah; Isaiah",
     "RelatedEvents": "The Prodigal Son; Nehemiah Rebuilds the Wall",
     "Slug": "god-s-joy-over-his-people",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God's justice",
@@ -1544,7 +1982,10 @@
     "RelatedPeople": "Moses; King David; Paul",
     "RelatedEvents": "Destruction of Sodom and Gomorrah; The Fall",
     "Slug": "god-s-justice",
-    "Places": "Garden of Eden"
+    "Places": "Garden of Eden",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God's mercy",
@@ -1554,7 +1995,10 @@
     "RelatedPeople": "Moses; King David; Jesus",
     "RelatedEvents": "The Golden Calf; The Prodigal Son",
     "Slug": "god-s-mercy",
-    "Places": "Mount Sinai"
+    "Places": "Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God's Power",
@@ -1565,7 +2009,10 @@
     "RelatedBooks": "Genesis; Exodus; Psalms; Ephesians; Jeremiah",
     "Slug": "god-s-power",
     "Places": "Egypt; Golgotha",
-    "RelatedEvents": "Creation; The Exodus and the Red Sea; The Resurrection"
+    "RelatedEvents": "Creation; The Exodus and the Red Sea; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God's presence",
@@ -1575,7 +2022,10 @@
     "RelatedPeople": "Moses; King David; Jesus",
     "RelatedEvents": "The Burning Bush; Pentecost",
     "Slug": "god-s-presence",
-    "Places": "Midian; Mount Sinai; Jerusalem"
+    "Places": "Midian; Mount Sinai; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God's promises",
@@ -1585,7 +2035,10 @@
     "RelatedPeople": "Abraham; King David; Jeremiah",
     "RelatedEvents": "The Call of Abraham; Davidic Covenant",
     "Slug": "god-s-promises",
-    "Places": "Ur; Canaan; Jerusalem"
+    "Places": "Ur; Canaan; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God's Protection",
@@ -1596,7 +2049,10 @@
     "RelatedBooks": "Psalms; Isaiah; John; Romans",
     "Slug": "god-s-protection",
     "Places": "Babylon",
-    "RelatedEvents": "Daniel in the Lions' Den"
+    "RelatedEvents": "Daniel in the Lions' Den",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God's Providence",
@@ -1608,7 +2064,10 @@
     "RelatedBooks": "Genesis; Psalms; Proverbs; Romans; Ephesians",
     "Slug": "god-s-providence",
     "Places": "Egypt; Susa",
-    "RelatedEvents": "Joseph and His Brothers; Esther Saves Her People"
+    "RelatedEvents": "Joseph and His Brothers; Esther Saves Her People",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God's Provision",
@@ -1618,7 +2077,10 @@
     "RelatedPeople": "Moses; Jesus; Paul",
     "RelatedBooks": "Exodus; Psalms; Matthew; Philippians",
     "Slug": "god-s-provision",
-    "RelatedEvents": "Wilderness Wanderings"
+    "RelatedEvents": "Wilderness Wanderings",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God's Sovereignty",
@@ -1630,7 +2092,10 @@
     "RelatedBooks": "Psalms; Isaiah; Daniel; Romans; Ephesians",
     "Slug": "god-s-sovereignty",
     "Places": "Babylon",
-    "RelatedEvents": "Cyrus's Decree and Return from Exile"
+    "RelatedEvents": "Cyrus's Decree and Return from Exile",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God's Will",
@@ -1639,7 +2104,10 @@
     "KeyPassages": "Psalm 143:10; Matthew 6:10; Romans 12:2; Ephesians 5:17; 1 Thessalonians 4:3",
     "RelatedPeople": "King David; Jesus; Paul",
     "RelatedBooks": "Psalms; Matthew; Romans; Ephesians; 1 Thessalonians",
-    "Slug": "god-s-will"
+    "Slug": "god-s-will",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "God's wrath and refuge",
@@ -1649,7 +2117,10 @@
     "RelatedPeople": "King David; Paul; Noah",
     "RelatedEvents": "Noah and the Flood; The Passover",
     "Slug": "god-s-wrath-and-refuge",
-    "Places": "Mount Ararat; Egypt; Goshen"
+    "Places": "Mount Ararat; Egypt; Goshen",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Godliness",
@@ -1659,7 +2130,10 @@
     "RelatedPeople": "Paul; Simon Peter; Timothy",
     "RelatedEvents": "The Sermon on the Mount; Pentecost",
     "Slug": "godliness",
-    "Places": "Galilee; Jerusalem"
+    "Places": "Galilee; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Godly leadership",
@@ -1669,7 +2143,10 @@
     "RelatedPeople": "Simon Peter; Nehemiah; Moses",
     "RelatedEvents": "Nehemiah Rebuilds the Wall; The Burning Bush",
     "Slug": "godly-leadership",
-    "Places": "Jerusalem; Midian; Mount Sinai"
+    "Places": "Jerusalem; Midian; Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Good works",
@@ -1679,7 +2156,10 @@
     "RelatedPeople": "Jesus; Paul; Timothy",
     "RelatedEvents": "The Good Samaritan; The Sermon on the Mount",
     "Slug": "good-works",
-    "Places": "Jericho; Jerusalem; Galilee"
+    "Places": "Jericho; Jerusalem; Galilee",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Goodness",
@@ -1688,7 +2168,10 @@
     "KeyPassages": "Psalm 34:8; Psalm 145:9; James 1:17; Galatians 6:9-10; Romans 8:28",
     "RelatedPeople": "King David; Paul",
     "RelatedBooks": "Psalms; James; Galatians; Romans",
-    "Slug": "goodness"
+    "Slug": "goodness",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Goodness of Creation",
@@ -1698,7 +2181,10 @@
     "RelatedPeople": "Adam; King David; Paul",
     "RelatedEvents": "Creation; Noah and the Flood",
     "Slug": "goodness-of-creation",
-    "Places": "Garden of Eden; Mount Ararat"
+    "Places": "Garden of Eden; Mount Ararat",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Gospel in relationships",
@@ -1708,7 +2194,10 @@
     "RelatedPeople": "Paul; Timothy; Barnabas",
     "RelatedEvents": "Jerusalem Council; Pentecost",
     "Slug": "gospel-in-relationships",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Gospel purity",
@@ -1718,7 +2207,10 @@
     "RelatedPeople": "Paul; John the Apostle",
     "RelatedEvents": "Jerusalem Council; The Conversion of Paul",
     "Slug": "gospel-purity",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Gospels",
@@ -1729,7 +2221,10 @@
     "RelatedBooks": "Matthew; Mark; Luke; John",
     "Slug": "gospels",
     "Places": "Bethlehem; Nazareth; Galilee; Jerusalem; Golgotha",
-    "RelatedEvents": "The Birth of Jesus; The Baptism of Jesus; The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Birth of Jesus; The Baptism of Jesus; The Crucifixion; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Grace",
@@ -1742,7 +2237,10 @@
     "RelatedBooks": "John; Romans; Ephesians; 2 Corinthians; Hebrews; Genesis; Psalms; Titus",
     "Slug": "grace",
     "Places": "Golgotha; Jerusalem",
-    "RelatedEvents": "The Prodigal Son; The Crucifixion; The Conversion of Paul; Pentecost"
+    "RelatedEvents": "The Prodigal Son; The Crucifixion; The Conversion of Paul; Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Gratitude",
@@ -1752,7 +2250,10 @@
     "RelatedPeople": "Jesus; Paul; King David",
     "RelatedEvents": "The Last Supper; The Feeding of the Five Thousand",
     "Slug": "gratitude",
-    "Places": "Jerusalem; Galilee"
+    "Places": "Jerusalem; Galilee",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Grief",
@@ -1762,7 +2263,10 @@
     "RelatedPeople": "Jesus; King David; Mary of Bethany",
     "RelatedEvents": "Raising of Lazarus; The Crucifixion",
     "Slug": "grief",
-    "Places": "Bethany; Golgotha; Jerusalem"
+    "Places": "Bethany; Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Growth",
@@ -1772,7 +2276,10 @@
     "RelatedPeople": "Simon Peter; Paul; Timothy",
     "RelatedEvents": "Pentecost; Paul's Missionary Journeys",
     "Slug": "growth",
-    "Places": "Jerusalem; Antioch"
+    "Places": "Jerusalem; Antioch",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Guidance",
@@ -1782,7 +2289,10 @@
     "RelatedPeople": "King David; Paul",
     "RelatedQuestions": "How can I hear God's voice?",
     "RelatedBooks": "Psalms; Proverbs; Isaiah; James; Romans",
-    "Slug": "guidance"
+    "Slug": "guidance",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Healing",
@@ -1791,7 +2301,10 @@
     "KeyPassages": "Exodus 15:26; Psalm 103:2-3; Isaiah 53:5; Mark 5:34; James 5:14-16; 2 Corinthians 12:7-10",
     "RelatedPeople": "Jesus; Paul",
     "RelatedBooks": "Exodus; Psalms; Isaiah; Mark; James; 2 Corinthians",
-    "Slug": "healing"
+    "Slug": "healing",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Health",
@@ -1800,7 +2313,10 @@
     "KeyPassages": "Exodus 15:26; Proverbs 3:7-8; 1 Corinthians 6:19-20; 3 John 1:2; Matthew 25:36",
     "RelatedPeople": "Jesus; Paul",
     "RelatedBooks": "Exodus; Proverbs; 1 Corinthians; 3 John; Matthew",
-    "Slug": "health"
+    "Slug": "health",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Heaven",
@@ -1812,7 +2328,10 @@
     "RelatedQuestions": "What will heaven be like?; Will we recognize loved ones in heaven?",
     "RelatedBooks": "John; Philippians; 2 Peter; Revelation",
     "Slug": "heaven",
-    "RelatedEvents": "The Ascension"
+    "RelatedEvents": "The Ascension",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Hell",
@@ -1823,7 +2342,10 @@
     "RelatedDoctrines": "Hell; Final Judgment; Wrath of God",
     "RelatedQuestions": "How can a loving God send people to hell?; Is hell eternal or temporary?",
     "RelatedBooks": "Matthew; Mark; 2 Thessalonians; Revelation",
-    "Slug": "hell"
+    "Slug": "hell",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Hiddenness",
@@ -1835,7 +2357,10 @@
     "RelatedBooks": "Job; Psalms; Isaiah; Matthew",
     "Slug": "hiddenness",
     "Places": "Golgotha",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "History",
@@ -1844,7 +2369,10 @@
     "KeyPassages": "Deuteronomy 6:20-25; Psalm 78:1-8; Acts 17:26; Hebrews 11:1-40",
     "RelatedPeople": "Moses; Paul",
     "RelatedBooks": "Deuteronomy; Psalms; Acts; Hebrews",
-    "Slug": "history"
+    "Slug": "history",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Holiness",
@@ -1857,7 +2385,10 @@
     "RelatedBooks": "Leviticus; Isaiah; Matthew; Hebrews; 1 Peter; Exodus",
     "Slug": "holiness",
     "Places": "Mount Sinai; Jerusalem",
-    "RelatedEvents": "The Ten Commandments; Pentecost"
+    "RelatedEvents": "The Ten Commandments; Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Homecoming",
@@ -1867,7 +2398,10 @@
     "RelatedPeople": "Jesus; Ezra; Ruth",
     "RelatedEvents": "The Prodigal Son; Cyrus's Decree and Return from Exile",
     "Slug": "homecoming",
-    "Places": "Babylon; Jerusalem"
+    "Places": "Babylon; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Hope",
@@ -1880,7 +2414,10 @@
     "RelatedBooks": "Psalms; Lamentations; Romans; Hebrews; 1 Peter; Jeremiah",
     "Slug": "hope",
     "RelatedEvents": "The Resurrection; Fall of Jerusalem and the Exile; Cyrus's Decree and Return from Exile",
-    "Places": "Jerusalem; Babylon"
+    "Places": "Jerusalem; Babylon",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Hope in suffering",
@@ -1890,7 +2427,10 @@
     "RelatedPeople": "Paul; Simon Peter; Job",
     "RelatedEvents": "The Resurrection; The Crucifixion",
     "Slug": "hope-in-suffering",
-    "Places": "Jerusalem; Golgotha"
+    "Places": "Jerusalem; Golgotha",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Hospitality",
@@ -1900,7 +2440,10 @@
     "RelatedPeople": "Abraham; Simon Peter; Martha",
     "RelatedEvents": "The Call of Abraham; Peter and Cornelius",
     "Slug": "hospitality",
-    "Places": "Hebron"
+    "Places": "Hebron",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Hospitality guarded",
@@ -1910,7 +2453,10 @@
     "RelatedPeople": "John the Apostle; Jesus; Paul",
     "RelatedEvents": "Jerusalem Council; Peter and Cornelius",
     "Slug": "hospitality-guarded",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Human Nature",
@@ -1922,7 +2468,10 @@
     "RelatedBooks": "Genesis; Romans; Ephesians",
     "Slug": "human-nature",
     "Places": "Garden of Eden",
-    "RelatedEvents": "Creation; The Fall"
+    "RelatedEvents": "Creation; The Fall",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Humanity",
@@ -1934,7 +2483,10 @@
     "RelatedBooks": "Genesis; Psalms; Hebrews; Revelation",
     "Slug": "humanity",
     "Places": "Garden of Eden",
-    "RelatedEvents": "Creation; The Fall"
+    "RelatedEvents": "Creation; The Fall",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Humble remnant",
@@ -1944,7 +2496,10 @@
     "RelatedPeople": "Elijah; Isaiah; Paul",
     "RelatedEvents": "Elijah on Mount Carmel; Fall of Jerusalem and the Exile",
     "Slug": "humble-remnant",
-    "Places": "Mount Carmel; Jerusalem"
+    "Places": "Mount Carmel; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Humility",
@@ -1955,7 +2510,10 @@
     "RelatedBooks": "Proverbs; Micah; Philippians; 1 Peter; James",
     "Slug": "humility",
     "Places": "Golgotha",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Hypocrisy",
@@ -1964,7 +2522,10 @@
     "KeyPassages": "Matthew 6:1-6; Matthew 23:27-28; Luke 12:1-3; Galatians 2:11-14; 1 John 1:6",
     "RelatedPeople": "Jesus; Paul; Simon Peter",
     "RelatedBooks": "Matthew; Luke; Galatians; 1 John",
-    "Slug": "hypocrisy"
+    "Slug": "hypocrisy",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Hypostatic Union",
@@ -1976,7 +2537,10 @@
     "RelatedBooks": "John; Philippians; Colossians; Hebrews",
     "Slug": "hypostatic-union",
     "Places": "Jordan River",
-    "RelatedEvents": "The Baptism of Jesus; Transfiguration"
+    "RelatedEvents": "The Baptism of Jesus; Transfiguration",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Identity",
@@ -1985,7 +2549,10 @@
     "KeyPassages": "Genesis 1:27; 2 Corinthians 5:17; Galatians 2:20; Ephesians 1:3-6; 1 Peter 2:9-10",
     "RelatedPeople": "Paul; Simon Peter",
     "RelatedBooks": "Genesis; 2 Corinthians; Galatians; Ephesians; 1 Peter",
-    "Slug": "identity"
+    "Slug": "identity",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Identity in Christ",
@@ -1995,7 +2562,10 @@
     "RelatedPeople": "Paul; Simon Peter; Jesus",
     "RelatedEvents": "The Conversion of Paul; The Baptism of Jesus",
     "Slug": "identity-in-christ",
-    "Places": "Jordan River"
+    "Places": "Jordan River",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Idolatry",
@@ -2006,7 +2576,10 @@
     "RelatedBooks": "Exodus; Psalms; Isaiah; 1 Corinthians; 1 John",
     "Slug": "idolatry",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Golden Calf"
+    "RelatedEvents": "The Golden Calf",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Image of God",
@@ -2019,7 +2592,10 @@
     "RelatedBooks": "Genesis; Colossians; James",
     "Slug": "image-of-god",
     "Places": "Garden of Eden",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Imagination",
@@ -2029,7 +2605,10 @@
     "RelatedPeople": "Paul",
     "RelatedDoctrines": "Creation",
     "RelatedBooks": "Genesis; Psalms; Philippians; Hebrews",
-    "Slug": "imagination"
+    "Slug": "imagination",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Inheritance",
@@ -2039,7 +2618,10 @@
     "RelatedPeople": "Paul; Simon Peter; Joshua",
     "RelatedEvents": "Crossing the Jordan; The Resurrection",
     "Slug": "inheritance",
-    "Places": "Jordan River; Gilgal; Jerusalem"
+    "Places": "Jordan River; Gilgal; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Integrity",
@@ -2048,7 +2630,10 @@
     "KeyPassages": "Psalm 15:1-5; Proverbs 11:3; Matthew 5:37; Titus 2:7-8; 1 Peter 3:16",
     "RelatedPeople": "King David; Paul; Simon Peter",
     "RelatedBooks": "Psalms; Proverbs; Matthew; Titus; 1 Peter",
-    "Slug": "integrity"
+    "Slug": "integrity",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Intelligent Design",
@@ -2058,7 +2643,10 @@
     "RelatedPeople": "Job; Paul",
     "RelatedDoctrines": "Creation",
     "RelatedBooks": "Psalms; Romans; Job; Colossians",
-    "Slug": "intelligent-design"
+    "Slug": "intelligent-design",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Interpretation",
@@ -2068,7 +2656,10 @@
     "RelatedPeople": "Ezra; Jesus; Paul; Simon Peter",
     "RelatedDoctrines": "Inspiration of Scripture",
     "RelatedBooks": "Nehemiah; Luke; Acts; 2 Timothy; 2 Peter",
-    "Slug": "interpretation"
+    "Slug": "interpretation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Invitation",
@@ -2078,7 +2669,10 @@
     "RelatedPeople": "Jesus; Isaiah; John the Apostle",
     "RelatedEvents": "The Sermon on the Mount; The Feeding of the Five Thousand",
     "Slug": "invitation",
-    "Places": "Galilee"
+    "Places": "Galilee",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Islam",
@@ -2087,7 +2681,10 @@
     "KeyPassages": "Genesis 16:11-12; John 1:1-14; John 14:6; Acts 4:12; Galatians 1:8",
     "RelatedPeople": "Abraham; Ishmael; Jesus; Paul",
     "RelatedBooks": "Genesis; John; Acts; Galatians",
-    "Slug": "islam"
+    "Slug": "islam",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Israel's identity",
@@ -2097,7 +2694,10 @@
     "RelatedPeople": "Moses; Abraham; Paul",
     "RelatedEvents": "The Exodus and the Red Sea; The Ten Commandments",
     "Slug": "israel-s-identity",
-    "Places": "Egypt; Mount Sinai"
+    "Places": "Egypt; Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Israel's restoration",
@@ -2107,7 +2707,10 @@
     "RelatedPeople": "Ezekiel; Jeremiah; Ezra",
     "RelatedEvents": "Cyrus's Decree and Return from Exile; Rebuilding of the Temple",
     "Slug": "israel-s-restoration",
-    "Places": "Babylon; Jerusalem"
+    "Places": "Babylon; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Jesus Christ",
@@ -2120,7 +2723,10 @@
     "RelatedBooks": "Isaiah; Matthew; John; Philippians; Colossians",
     "Slug": "jesus-christ",
     "Places": "Bethlehem; Nazareth; Galilee; Jerusalem; Golgotha",
-    "RelatedEvents": "The Birth of Jesus; The Baptism of Jesus; The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Birth of Jesus; The Baptism of Jesus; The Crucifixion; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Joy",
@@ -2130,7 +2736,10 @@
     "RelatedPeople": "Nehemiah; David; Jesus; Paul",
     "RelatedEvents": "Cyrus's Decree and Return from Exile; The Birth of Jesus; The Resurrection; Pentecost",
     "Slug": "joy",
-    "Places": "Babylon; Bethlehem; Jerusalem"
+    "Places": "Babylon; Bethlehem; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Joy in hardship",
@@ -2140,7 +2749,10 @@
     "RelatedPeople": "Paul; Stephen; Barnabas",
     "RelatedEvents": "Paul Shipwrecked on Malta; Martyrdom of Stephen",
     "Slug": "joy-in-hardship",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Judgment",
@@ -2153,7 +2765,10 @@
     "RelatedBooks": "Ecclesiastes; Matthew; Romans; 2 Corinthians; Revelation",
     "Slug": "judgment",
     "Places": "Jerusalem; Mount Ararat",
-    "RelatedEvents": "Noah and the Flood; Fall of Jerusalem and the Exile"
+    "RelatedEvents": "Noah and the Flood; Fall of Jerusalem and the Exile",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Judgment and mercy",
@@ -2163,7 +2778,10 @@
     "RelatedPeople": "Moses; Micah; Paul",
     "RelatedEvents": "The Golden Calf; Destruction of Sodom and Gomorrah",
     "Slug": "judgment-and-mercy",
-    "Places": "Mount Sinai"
+    "Places": "Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Judgment on false teachers",
@@ -2173,7 +2791,10 @@
     "RelatedPeople": "Simon Peter; John the Apostle; Jesus",
     "RelatedEvents": "Jerusalem Council",
     "Slug": "judgment-on-false-teachers",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Judgment on Nineveh",
@@ -2183,7 +2804,10 @@
     "RelatedPeople": "Jonah; Jesus",
     "RelatedEvents": "Jonah and Nineveh",
     "Slug": "judgment-on-nineveh",
-    "Places": "Nineveh"
+    "Places": "Nineveh",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Judgment on pride",
@@ -2193,7 +2817,10 @@
     "RelatedPeople": "Daniel; King Nebuchadnezzar; Paul",
     "RelatedEvents": "The Tower of Babel",
     "Slug": "judgment-on-pride",
-    "Places": "Babel"
+    "Places": "Babel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Justice",
@@ -2206,7 +2833,10 @@
     "RelatedBooks": "Genesis; Deuteronomy; Psalms; Micah; Amos; Romans; Isaiah",
     "Slug": "justice",
     "Places": "Golgotha; Mount Sinai; Jerusalem",
-    "RelatedEvents": "The Crucifixion; The Ten Commandments"
+    "RelatedEvents": "The Crucifixion; The Ten Commandments",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Justification",
@@ -2219,7 +2849,10 @@
     "RelatedBooks": "Genesis; Romans; Galatians; Philippians",
     "Slug": "justification",
     "Places": "Golgotha",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Justification by faith",
@@ -2229,7 +2862,10 @@
     "RelatedPeople": "Paul; Abraham; Jesus",
     "RelatedEvents": "The Call of Abraham; The Crucifixion",
     "Slug": "justification-by-faith",
-    "Places": "Canaan; Golgotha; Jerusalem"
+    "Places": "Canaan; Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Karma",
@@ -2238,7 +2874,10 @@
     "KeyPassages": "Galatians 6:7-8; Hebrews 9:27; Romans 3:23-24; Ephesians 2:8-9",
     "RelatedPeople": "Paul",
     "RelatedBooks": "Galatians; Hebrews; Romans; Ephesians",
-    "Slug": "karma"
+    "Slug": "karma",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Kindness",
@@ -2248,7 +2887,10 @@
     "RelatedPeople": "Ruth; Boaz; Jesus; Paul",
     "RelatedBooks": "Ruth; Proverbs; Luke; Galatians; Ephesians; Titus",
     "Slug": "kindness",
-    "RelatedEvents": "The Good Samaritan"
+    "RelatedEvents": "The Good Samaritan",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Kingdom Living",
@@ -2258,7 +2900,10 @@
     "RelatedPeople": "Jesus; Paul",
     "RelatedEvents": "The Sermon on the Mount; Pentecost",
     "Slug": "kingdom-living",
-    "Places": "Galilee; Jerusalem"
+    "Places": "Galilee; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Kingdom of God",
@@ -2271,7 +2916,10 @@
     "RelatedBooks": "Daniel; Matthew; Mark; Luke; John; Revelation",
     "Slug": "kingdom-of-god",
     "Places": "Galilee; Bethlehem; Golgotha; Jerusalem",
-    "RelatedEvents": "The Sermon on the Mount; The Birth of Jesus; The Crucifixion; The Resurrection; Pentecost"
+    "RelatedEvents": "The Sermon on the Mount; The Birth of Jesus; The Crucifixion; The Resurrection; Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Kingdom of heaven",
@@ -2281,7 +2929,10 @@
     "RelatedPeople": "Jesus; Daniel",
     "RelatedEvents": "The Baptism of Jesus; The Sermon on the Mount",
     "Slug": "kingdom-of-heaven",
-    "Places": "Jordan River; Galilee"
+    "Places": "Jordan River; Galilee",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Kingdoms",
@@ -2291,7 +2942,10 @@
     "RelatedPeople": "Daniel; Jesus; King Nebuchadnezzar",
     "RelatedEvents": "The Tower of Babel; Daniel in the Lions' Den",
     "Slug": "kingdoms",
-    "Places": "Babel; Babylon"
+    "Places": "Babel; Babylon",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Kingship",
@@ -2301,7 +2955,10 @@
     "RelatedPeople": "King David; Paul; Isaiah",
     "RelatedEvents": "David Becomes King; Triumphal Entry",
     "Slug": "kingship",
-    "Places": "Hebron; Bethany; Jerusalem"
+    "Places": "Hebron; Bethany; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Kingship of Christ",
@@ -2311,7 +2968,10 @@
     "RelatedPeople": "Jesus; King David; Simon Peter",
     "RelatedEvents": "Triumphal Entry; The Resurrection",
     "Slug": "kingship-of-christ",
-    "Places": "Bethany; Jerusalem"
+    "Places": "Bethany; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Knowledge of Christ",
@@ -2320,7 +2980,10 @@
     "RelatedBooks": "Philippians; John; 2 Peter; Ephesians",
     "RelatedPeople": "Paul; Jesus; Simon Peter",
     "RelatedEvents": "Transfiguration; The Conversion of Paul",
-    "Slug": "knowledge-of-christ"
+    "Slug": "knowledge-of-christ",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Knowledge of God",
@@ -2329,7 +2992,10 @@
     "KeyPassages": "Jeremiah 9:23-24; Hosea 6:6; John 17:3; Philippians 3:7-11; 2 Peter 1:2-3",
     "RelatedPeople": "Jeremiah; Hosea; Jesus; Paul; Simon Peter",
     "RelatedBooks": "Jeremiah; Hosea; John; Philippians; 2 Peter",
-    "Slug": "knowledge-of-god"
+    "Slug": "knowledge-of-god",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Lamb",
@@ -2339,7 +3005,10 @@
     "RelatedPeople": "Abraham; Isaac; Moses; Isaiah; Jesus; John the Baptist",
     "RelatedEvents": "The Binding of Isaac; The Passover; The Crucifixion; The Resurrection",
     "Slug": "lamb",
-    "Places": "Jerusalem; Egypt; Golgotha"
+    "Places": "Jerusalem; Egypt; Golgotha",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Lament",
@@ -2348,7 +3017,10 @@
     "KeyPassages": "Psalm 13:1-6; Psalm 42:1-11; Lamentations 3:19-26; Matthew 27:46",
     "RelatedPeople": "King David; Jeremiah; Jesus",
     "RelatedBooks": "Psalms; Lamentations; Matthew",
-    "Slug": "lament"
+    "Slug": "lament",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Language",
@@ -2358,7 +3030,10 @@
     "RelatedPeople": "Paul; Simon Peter; Moses",
     "RelatedEvents": "The Tower of Babel; Pentecost",
     "Slug": "language",
-    "Places": "Babel; Jerusalem"
+    "Places": "Babel; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Leadership",
@@ -2371,7 +3046,10 @@
     "RelatedBooks": "Joshua; Mark; 1 Timothy; 1 Peter",
     "Slug": "leadership",
     "Places": "Hebron",
-    "RelatedEvents": "David Becomes King"
+    "RelatedEvents": "David Becomes King",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Life",
@@ -2383,7 +3061,10 @@
     "RelatedBooks": "Genesis; Deuteronomy; John; Romans",
     "Slug": "life",
     "Places": "Garden of Eden",
-    "RelatedEvents": "Creation; The Resurrection"
+    "RelatedEvents": "Creation; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Light",
@@ -2393,7 +3074,10 @@
     "RelatedPeople": "Jesus; Isaiah; Paul; John",
     "RelatedEvents": "Creation; The Birth of Jesus; Transfiguration",
     "Slug": "light",
-    "Places": "Garden of Eden; Bethlehem"
+    "Places": "Garden of Eden; Bethlehem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Light and Darkness",
@@ -2403,7 +3087,10 @@
     "RelatedPeople": "Jesus; Isaiah; Paul; John",
     "RelatedEvents": "Creation; The Birth of Jesus; The Crucifixion; The Resurrection",
     "Slug": "light-and-darkness",
-    "Places": "Garden of Eden; Bethlehem; Golgotha; Jerusalem"
+    "Places": "Garden of Eden; Bethlehem; Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Listening Well",
@@ -2412,7 +3099,10 @@
     "KeyPassages": "Proverbs 18:13; James 1:19; Luke 10:38-42; Philippians 2:4",
     "RelatedPeople": "Jesus; Paul",
     "RelatedBooks": "Proverbs; James; Luke; Philippians",
-    "Slug": "listening-well"
+    "Slug": "listening-well",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Living faith",
@@ -2422,7 +3112,10 @@
     "RelatedPeople": "Paul; Abraham; Rahab",
     "RelatedEvents": "The Call of Abraham; The Walls of Jericho",
     "Slug": "living-faith",
-    "Places": "Ur; Canaan; Jericho"
+    "Places": "Ur; Canaan; Jericho",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Living hope",
@@ -2432,7 +3125,10 @@
     "RelatedPeople": "Simon Peter; Paul; Jesus",
     "RelatedEvents": "The Resurrection; Pentecost",
     "Slug": "living-hope",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Logic",
@@ -2441,7 +3137,10 @@
     "KeyPassages": "Isaiah 1:18; Acts 17:2-3; Acts 18:4; Romans 12:2; 1 Peter 3:15",
     "RelatedPeople": "Isaiah; Paul; Simon Peter",
     "RelatedBooks": "Isaiah; Acts; Romans; 1 Peter",
-    "Slug": "logic"
+    "Slug": "logic",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Longing",
@@ -2450,7 +3149,10 @@
     "KeyPassages": "Psalm 42:1-2; Psalm 63:1; Ecclesiastes 3:11; Philippians 1:23; Revelation 22:17",
     "RelatedPeople": "King David; Paul; John the Apostle",
     "RelatedBooks": "Psalms; Ecclesiastes; Philippians; Revelation",
-    "Slug": "longing"
+    "Slug": "longing",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Lordship",
@@ -2460,7 +3162,10 @@
     "RelatedPeople": "King David; Jesus; Paul",
     "RelatedBooks": "Psalms; Matthew; Romans; Philippians; Colossians",
     "Slug": "lordship",
-    "RelatedEvents": "The Resurrection"
+    "RelatedEvents": "The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Love",
@@ -2473,7 +3178,10 @@
     "RelatedBooks": "Deuteronomy; Matthew; John; Romans; 1 Corinthians; 1 John; Psalms",
     "Slug": "love",
     "Places": "Golgotha; Jerusalem; Garden of Eden",
-    "RelatedEvents": "The Good Samaritan; The Crucifixion; The Last Supper; Creation"
+    "RelatedEvents": "The Good Samaritan; The Crucifixion; The Last Supper; Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Love for God",
@@ -2483,7 +3191,10 @@
     "RelatedPeople": "Jesus; Moses; John the Apostle",
     "RelatedEvents": "The Sermon on the Mount; The Last Supper",
     "Slug": "love-for-god",
-    "Places": "Galilee; Jerusalem"
+    "Places": "Galilee; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Love of God",
@@ -2494,7 +3205,10 @@
     "RelatedBooks": "Deuteronomy; Psalms; John; Romans; 1 John",
     "Slug": "love-of-god",
     "Places": "Golgotha",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Loyalty",
@@ -2505,7 +3219,10 @@
     "RelatedBooks": "Ruth; 1 Samuel; Proverbs; John; Revelation",
     "Slug": "loyalty",
     "Places": "Bethlehem",
-    "RelatedEvents": "Ruth's Loyalty"
+    "RelatedEvents": "Ruth's Loyalty",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Majesty of God",
@@ -2514,7 +3231,10 @@
     "RelatedBooks": "Psalms; Isaiah; Revelation",
     "RelatedPeople": "Isaiah; John the Apostle",
     "RelatedEvents": "Transfiguration",
-    "Slug": "majesty-of-god"
+    "Slug": "majesty-of-god",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Manipulation",
@@ -2523,7 +3243,10 @@
     "KeyPassages": "Matthew 23:25-28; 2 Corinthians 4:2; 1 Thessalonians 2:3-6; James 3:17",
     "RelatedPeople": "Paul; Jesus",
     "RelatedBooks": "Matthew; 2 Corinthians; 1 Thessalonians; James",
-    "Slug": "manipulation"
+    "Slug": "manipulation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Manuscripts",
@@ -2533,7 +3256,10 @@
     "RelatedPeople": "Jeremiah",
     "RelatedDoctrines": "Inspiration of Scripture; Inerrancy of Scripture",
     "RelatedBooks": "Deuteronomy; Jeremiah; Luke; 2 Peter",
-    "Slug": "manuscripts"
+    "Slug": "manuscripts",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Marriage",
@@ -2546,7 +3272,10 @@
     "RelatedBooks": "Genesis; Proverbs; Malachi; Matthew; Ephesians",
     "Slug": "marriage",
     "Places": "Garden of Eden",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Marriage covenant",
@@ -2556,7 +3285,10 @@
     "RelatedPeople": "Adam; Eve; Jesus; Paul",
     "Slug": "marriage-covenant",
     "Places": "Garden of Eden; Jerusalem; Ephesus",
-    "RelatedEvents": "Creation; Ruth's Loyalty"
+    "RelatedEvents": "Creation; Ruth's Loyalty",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Martyrdom",
@@ -2567,7 +3299,10 @@
     "RelatedBooks": "Acts; Revelation; Hebrews",
     "Slug": "martyrdom",
     "Places": "Jerusalem",
-    "RelatedEvents": "Martyrdom of Stephen"
+    "RelatedEvents": "Martyrdom of Stephen",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Meaning",
@@ -2577,7 +3312,10 @@
     "RelatedPeople": "King Solomon; Jesus; Paul",
     "Slug": "meaning",
     "Places": "Jerusalem",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Mercy",
@@ -2590,7 +3328,10 @@
     "RelatedBooks": "Exodus; Psalms; Lamentations; Micah; Matthew; Titus; Luke; Ephesians",
     "Slug": "mercy",
     "RelatedEvents": "The Prodigal Son; The Good Samaritan; The Exodus and the Red Sea; Jonah and Nineveh; The Crucifixion",
-    "Places": "Egypt; Nineveh; Golgotha; Jerusalem"
+    "Places": "Egypt; Nineveh; Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Messiah",
@@ -2603,7 +3344,10 @@
     "RelatedBooks": "Psalms; Isaiah; Daniel; Luke; John",
     "Slug": "messiah",
     "Places": "Bethlehem; Jordan River; Golgotha",
-    "RelatedEvents": "The Birth of Jesus; The Baptism of Jesus; The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Birth of Jesus; The Baptism of Jesus; The Crucifixion; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Messiah and King",
@@ -2613,7 +3357,10 @@
     "RelatedPeople": "King David; Jesus; Paul",
     "RelatedEvents": "Triumphal Entry; The Crucifixion; The Resurrection",
     "Slug": "messiah-and-king",
-    "Places": "Bethany; Golgotha; Jerusalem"
+    "Places": "Bethany; Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Messianic hope",
@@ -2623,7 +3370,10 @@
     "RelatedPeople": "Isaiah; Simeon; Jesus",
     "RelatedEvents": "The Birth of Jesus; The Resurrection",
     "Slug": "messianic-hope",
-    "Places": "Bethlehem; Jerusalem"
+    "Places": "Bethlehem; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Messianic Prophecies",
@@ -2636,7 +3386,10 @@
     "RelatedBooks": "Genesis; Micah; Isaiah; Zechariah; Matthew",
     "Slug": "messianic-prophecies",
     "Places": "Bethlehem",
-    "RelatedEvents": "The Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Methodism",
@@ -2646,7 +3399,10 @@
     "RelatedPeople": "Paul",
     "RelatedDoctrines": "Sanctification",
     "RelatedBooks": "Micah; Matthew; Acts; Galatians; James",
-    "Slug": "methodism"
+    "Slug": "methodism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Ministry",
@@ -2656,7 +3412,10 @@
     "RelatedPeople": "Paul; Jesus",
     "RelatedDoctrines": "Spiritual Gifts; Priesthood of Believers",
     "RelatedBooks": "Mark; Romans; Ephesians; 1 Peter",
-    "Slug": "ministry"
+    "Slug": "ministry",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Miracles",
@@ -2667,7 +3426,10 @@
     "RelatedBooks": "Exodus; 1 Kings; John; Acts",
     "Slug": "miracles",
     "Places": "Egypt; Mount Carmel; Bethany",
-    "RelatedEvents": "The Ten Plagues; Elijah on Mount Carmel; The Feeding of the Five Thousand; Raising of Lazarus"
+    "RelatedEvents": "The Ten Plagues; Elijah on Mount Carmel; The Feeding of the Five Thousand; Raising of Lazarus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Mission",
@@ -2679,7 +3441,10 @@
     "RelatedBooks": "Matthew; Luke; John; Acts; Romans",
     "Slug": "mission",
     "Places": "Jerusalem; Antioch",
-    "RelatedEvents": "Pentecost; Paul's Missionary Journeys"
+    "RelatedEvents": "Pentecost; Paul's Missionary Journeys",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Missions",
@@ -2691,7 +3456,10 @@
     "RelatedBooks": "Genesis; Jonah; Matthew; Acts; Revelation",
     "Slug": "missions",
     "Places": "Antioch; Corinth; Ephesus; Rome",
-    "RelatedEvents": "The Conversion of Paul; Paul's Missionary Journeys"
+    "RelatedEvents": "The Conversion of Paul; Paul's Missionary Journeys",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Money",
@@ -2700,7 +3468,10 @@
     "KeyPassages": "Proverbs 3:9-10; Malachi 3:8-10; Matthew 6:19-24; Luke 12:13-21; 1 Timothy 6:6-10",
     "RelatedPeople": "Paul; Jesus",
     "RelatedBooks": "Proverbs; Malachi; Matthew; Luke; 1 Timothy",
-    "Slug": "money"
+    "Slug": "money",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Monotheism",
@@ -2712,7 +3483,10 @@
     "RelatedBooks": "Deuteronomy; Isaiah; 1 Corinthians; Ephesians; James",
     "Slug": "monotheism",
     "Places": "Mount Carmel",
-    "RelatedEvents": "Elijah on Mount Carmel"
+    "RelatedEvents": "Elijah on Mount Carmel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Moral Responsibility",
@@ -2722,7 +3496,10 @@
     "RelatedPeople": "Adam; Eve; Paul",
     "RelatedDoctrines": "Free Will; Original Sin",
     "RelatedBooks": "Genesis; Deuteronomy; Ezekiel; Romans; Galatians",
-    "Slug": "moral-responsibility"
+    "Slug": "moral-responsibility",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Morality",
@@ -2733,7 +3510,10 @@
     "RelatedBooks": "Exodus; Micah; Matthew; Romans",
     "Slug": "morality",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments; The Sermon on the Mount"
+    "RelatedEvents": "The Ten Commandments; The Sermon on the Mount",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Myths",
@@ -2744,7 +3524,10 @@
     "RelatedBooks": "Genesis; Exodus; 2 Timothy; 2 Peter",
     "Slug": "myths",
     "Places": "Mount Ararat",
-    "RelatedEvents": "Noah and the Flood; Creation"
+    "RelatedEvents": "Noah and the Flood; Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Nations",
@@ -2755,7 +3538,10 @@
     "RelatedBooks": "Genesis; Psalms; Isaiah; Revelation",
     "Slug": "nations",
     "Places": "Babel; Jerusalem",
-    "RelatedEvents": "The Tower of Babel; Pentecost"
+    "RelatedEvents": "The Tower of Babel; Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Nature and Creation",
@@ -2767,7 +3553,10 @@
     "RelatedBooks": "Genesis; Psalms; Romans",
     "Slug": "nature-and-creation",
     "Places": "Garden of Eden",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Nearness to God",
@@ -2777,7 +3566,10 @@
     "RelatedPeople": "Jesus; Moses",
     "RelatedEvents": "The Burning Bush",
     "Slug": "nearness-to-god",
-    "Places": "Midian; Mount Sinai"
+    "Places": "Midian; Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Need for a king",
@@ -2787,7 +3579,10 @@
     "RelatedPeople": "Samuel; King Saul; King David; Jesus",
     "RelatedEvents": "Anointing of Saul as King; David Becomes King",
     "Slug": "need-for-a-king",
-    "Places": "Ramah; Mizpah; Hebron; Jerusalem"
+    "Places": "Ramah; Mizpah; Hebron; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Neighbor",
@@ -2798,7 +3593,10 @@
     "RelatedQuestions": "How can I love difficult people?",
     "RelatedBooks": "Leviticus; Luke; Matthew; Galatians; James",
     "Slug": "neighbor",
-    "RelatedEvents": "The Good Samaritan"
+    "RelatedEvents": "The Good Samaritan",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "New covenant",
@@ -2808,7 +3606,10 @@
     "RelatedPeople": "Jeremiah; Jesus; Paul",
     "RelatedEvents": "The Last Supper; The Crucifixion; Pentecost",
     "Slug": "new-covenant",
-    "Places": "Jerusalem; Golgotha"
+    "Places": "Jerusalem; Golgotha",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "New Creation",
@@ -2818,7 +3619,10 @@
     "RelatedPeople": "Isaiah; Jesus; Paul; John",
     "RelatedEvents": "Creation; The Resurrection; Pentecost",
     "Slug": "new-creation",
-    "Places": "Garden of Eden; Jerusalem"
+    "Places": "Garden of Eden; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "New heart",
@@ -2828,7 +3632,10 @@
     "RelatedPeople": "Ezekiel; Jeremiah; King David; Paul",
     "RelatedEvents": "Pentecost; The Conversion of Paul",
     "Slug": "new-heart",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "New Life",
@@ -2840,7 +3647,10 @@
     "RelatedBooks": "John; Romans; 2 Corinthians; Ephesians; 1 Peter",
     "Slug": "new-life",
     "Places": "Jordan River",
-    "RelatedEvents": "The Baptism of Jesus; The Resurrection"
+    "RelatedEvents": "The Baptism of Jesus; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Nicene Creed",
@@ -2850,7 +3660,10 @@
     "RelatedPeople": "Paul",
     "RelatedDoctrines": "Trinity; Incarnation",
     "RelatedBooks": "John; Colossians; Hebrews; 1 Corinthians",
-    "Slug": "nicene-creed"
+    "Slug": "nicene-creed",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Obedience",
@@ -2861,7 +3674,10 @@
     "RelatedDoctrines": "Sanctification",
     "RelatedBooks": "Deuteronomy; 1 Samuel; Psalms; Luke; John; Hebrews",
     "Slug": "obedience",
-    "RelatedEvents": "The Binding of Isaac"
+    "RelatedEvents": "The Binding of Isaac",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Occult",
@@ -2871,7 +3687,10 @@
     "RelatedPeople": "Paul",
     "RelatedDoctrines": "Demons",
     "RelatedBooks": "Leviticus; Deuteronomy; Isaiah; Acts; Galatians",
-    "Slug": "occult"
+    "Slug": "occult",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Old Testament",
@@ -2883,7 +3702,10 @@
     "RelatedBooks": "Exodus; Psalms; Isaiah; Luke; 2 Timothy",
     "Slug": "old-testament",
     "Places": "Canaan; Jerusalem; Babylon",
-    "RelatedEvents": "The Exodus and the Red Sea; Fall of Jerusalem and the Exile"
+    "RelatedEvents": "The Exodus and the Red Sea; Fall of Jerusalem and the Exile",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Opposition",
@@ -2893,7 +3715,10 @@
     "RelatedPeople": "Nehemiah; Daniel; Simon Peter; Paul",
     "RelatedEvents": "Nehemiah Rebuilds the Wall; Martyrdom of Stephen",
     "Slug": "opposition",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Original Sin",
@@ -2906,7 +3731,10 @@
     "RelatedBooks": "Genesis; Psalms; Romans",
     "Slug": "original-sin",
     "Places": "Garden of Eden",
-    "RelatedEvents": "The Fall"
+    "RelatedEvents": "The Fall",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Origins",
@@ -2919,7 +3747,10 @@
     "RelatedBooks": "Genesis; Psalms; John; Colossians; Hebrews",
     "Slug": "origins",
     "Places": "Garden of Eden",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Outpouring of the Spirit",
@@ -2929,7 +3760,10 @@
     "RelatedPeople": "Simon Peter; Paul",
     "RelatedEvents": "Pentecost",
     "Slug": "outpouring-of-the-spirit",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Parenting",
@@ -2940,7 +3774,10 @@
     "RelatedDoctrines": "Parenting; Family; Instruction",
     "RelatedQuestions": "What does the Bible say about raising children?; How do I teach my children about God at home?",
     "RelatedBooks": "Deuteronomy; Psalms; Proverbs; Ephesians; 2 Timothy",
-    "Slug": "parenting"
+    "Slug": "parenting",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Partnership",
@@ -2950,7 +3787,10 @@
     "RelatedPeople": "Paul; Barnabas; Timothy; Priscilla; Aquila",
     "RelatedEvents": "Paul's Missionary Journeys",
     "Slug": "partnership",
-    "Places": "Antioch; Corinth; Ephesus"
+    "Places": "Antioch; Corinth; Ephesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Patience",
@@ -2960,7 +3800,10 @@
     "RelatedPeople": "Abraham; Joseph; Job; Jesus; Paul",
     "RelatedEvents": "The Binding of Isaac; Joseph and His Brothers; The Birth of Jesus",
     "Slug": "patience",
-    "Places": "Jerusalem; Egypt; Bethlehem"
+    "Places": "Jerusalem; Egypt; Bethlehem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Peace",
@@ -2970,7 +3813,10 @@
     "RelatedPeople": "Isaiah; Jesus; Paul",
     "RelatedEvents": "The Birth of Jesus; The Crucifixion; The Resurrection",
     "Slug": "peace",
-    "Places": "Bethlehem; Golgotha; Jerusalem"
+    "Places": "Bethlehem; Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Persecution",
@@ -2981,7 +3827,10 @@
     "RelatedBooks": "Matthew; John; Acts; 2 Timothy; 1 Peter",
     "Slug": "persecution",
     "Places": "Jerusalem",
-    "RelatedEvents": "Martyrdom of Stephen"
+    "RelatedEvents": "Martyrdom of Stephen",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Perseverance",
@@ -2994,7 +3843,10 @@
     "RelatedBooks": "John; Romans; Philippians; Hebrews; James; Revelation",
     "Slug": "perseverance",
     "Places": "Egypt",
-    "RelatedEvents": "Joseph and His Brothers"
+    "RelatedEvents": "Joseph and His Brothers",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Philosophy",
@@ -3003,7 +3855,10 @@
     "KeyPassages": "Acts 17:16-34; Colossians 2:8; 1 Corinthians 1:18-25; Romans 1:19-22",
     "RelatedPeople": "Paul",
     "RelatedBooks": "Acts; Colossians; 1 Corinthians; Romans",
-    "Slug": "philosophy"
+    "Slug": "philosophy",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Pilgrimage",
@@ -3013,7 +3868,10 @@
     "RelatedPeople": "Abraham; King David",
     "RelatedBooks": "Psalms; Hebrews; 1 Peter",
     "Slug": "pilgrimage",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Plea",
@@ -3023,7 +3881,10 @@
     "RelatedPeople": "King David; Jesus",
     "RelatedEvents": "Jesus Calms the Storm",
     "Slug": "plea",
-    "Places": "Galilee"
+    "Places": "Galilee",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Praise",
@@ -3033,7 +3894,10 @@
     "RelatedPeople": "King David; Paul",
     "Slug": "praise",
     "Places": "Jerusalem; Philippi; Patmos",
-    "RelatedEvents": "The Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Prayer",
@@ -3046,7 +3910,10 @@
     "RelatedBooks": "Psalms; Matthew; Luke; Philippians; James; Genesis; 1 Samuel; Daniel; Hebrews",
     "Slug": "prayer",
     "Places": "Jerusalem; Babylon; Golgotha",
-    "RelatedEvents": "Jesus Prays in Gethsemane; Destruction of Sodom and Gomorrah; Daniel in the Lions' Den; The Crucifixion; Pentecost"
+    "RelatedEvents": "Jesus Prays in Gethsemane; Destruction of Sodom and Gomorrah; Daniel in the Lions' Den; The Crucifixion; Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Preaching",
@@ -3058,7 +3925,10 @@
     "RelatedBooks": "Nehemiah; Luke; Acts; Romans; 2 Timothy",
     "Slug": "preaching",
     "Places": "Jerusalem",
-    "RelatedEvents": "Pentecost; Ezra Reads the Law"
+    "RelatedEvents": "Pentecost; Ezra Reads the Law",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Presence of God",
@@ -3070,7 +3940,10 @@
     "RelatedBooks": "Exodus; Psalms; Matthew; John; Revelation",
     "Slug": "presence-of-god",
     "Places": "Midian; Mount Sinai; Jerusalem",
-    "RelatedEvents": "The Burning Bush; The Ten Commandments; Pentecost"
+    "RelatedEvents": "The Burning Bush; The Ten Commandments; Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Preservation",
@@ -3080,7 +3953,10 @@
     "RelatedPeople": "Noah; Jesus",
     "RelatedEvents": "Noah and the Flood",
     "Slug": "preservation",
-    "Places": "Mount Ararat"
+    "Places": "Mount Ararat",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Pride",
@@ -3092,7 +3968,10 @@
     "RelatedBooks": "Proverbs; Isaiah; Daniel; Luke; James; 1 Peter",
     "Slug": "pride",
     "Places": "Babel",
-    "RelatedEvents": "The Tower of Babel"
+    "RelatedEvents": "The Tower of Babel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Priesthood",
@@ -3102,7 +3981,10 @@
     "RelatedPeople": "Aaron; Moses; Jesus; Simon Peter",
     "RelatedEvents": "The Crucifixion",
     "Slug": "priesthood",
-    "Places": "Mount Sinai; Golgotha; Jerusalem"
+    "Places": "Mount Sinai; Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Priorities",
@@ -3112,7 +3994,10 @@
     "RelatedPeople": "Jesus; Martha; Mary of Bethany; Paul",
     "Slug": "priorities",
     "Places": "Bethany; Galilee",
-    "RelatedEvents": "The Sermon on the Mount"
+    "RelatedEvents": "The Sermon on the Mount",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Promise",
@@ -3123,7 +4008,10 @@
     "RelatedBooks": "Genesis; 2 Samuel; Jeremiah; 2 Corinthians; Hebrews",
     "Slug": "promise",
     "Places": "Ur; Haran; Canaan",
-    "RelatedEvents": "The Call of Abraham; Davidic Covenant"
+    "RelatedEvents": "The Call of Abraham; Davidic Covenant",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Promises of God",
@@ -3135,7 +4023,10 @@
     "RelatedBooks": "Genesis; Deuteronomy; Isaiah; Matthew; Romans; Hebrews",
     "Slug": "promises-of-god",
     "Places": "Ur; Canaan",
-    "RelatedEvents": "The Call of Abraham; Davidic Covenant"
+    "RelatedEvents": "The Call of Abraham; Davidic Covenant",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Prophecy",
@@ -3148,7 +4039,10 @@
     "RelatedBooks": "Deuteronomy; Isaiah; Micah; Luke; 2 Peter",
     "Slug": "prophecy",
     "Places": "Mount Carmel; Nineveh",
-    "RelatedEvents": "Elijah on Mount Carmel; Jonah and Nineveh"
+    "RelatedEvents": "Elijah on Mount Carmel; Jonah and Nineveh",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Prophetic witness",
@@ -3158,7 +4052,10 @@
     "RelatedPeople": "Jeremiah; Amos; Micah; John the Apostle",
     "RelatedEvents": "Elijah on Mount Carmel; Jonah and Nineveh",
     "Slug": "prophetic-witness",
-    "Places": "Mount Carmel; Nineveh"
+    "Places": "Mount Carmel; Nineveh",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Prophets",
@@ -3168,7 +4065,10 @@
     "RelatedPeople": "Moses; Samuel; Elijah; Isaiah; John the Baptist",
     "RelatedEvents": "Elijah on Mount Carmel; The Burning Bush",
     "Slug": "prophets",
-    "Places": "Mount Carmel; Midian; Mount Sinai"
+    "Places": "Mount Carmel; Midian; Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Provision",
@@ -3180,7 +4080,10 @@
     "RelatedBooks": "Exodus; 1 Kings; Psalms; Matthew; Philippians",
     "Slug": "provision",
     "Places": "Galilee",
-    "RelatedEvents": "Wilderness Wanderings; The Feeding of the Five Thousand"
+    "RelatedEvents": "Wilderness Wanderings; The Feeding of the Five Thousand",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Psychology",
@@ -3189,7 +4092,10 @@
     "KeyPassages": "Psalm 139:13-16; Proverbs 4:23; Romans 12:2; Philippians 4:8; 2 Corinthians 10:5",
     "RelatedPeople": "King David; Paul",
     "RelatedBooks": "Psalms; Proverbs; Romans; Philippians; 2 Corinthians",
-    "Slug": "psychology"
+    "Slug": "psychology",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Purity",
@@ -3199,7 +4105,10 @@
     "RelatedPeople": "Jesus; Paul; John the Apostle",
     "Slug": "purity",
     "Places": "Galilee; Thessalonica",
-    "RelatedEvents": "The Sermon on the Mount"
+    "RelatedEvents": "The Sermon on the Mount",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Reason",
@@ -3208,7 +4117,10 @@
     "KeyPassages": "Isaiah 1:18; Acts 17:2-3; Acts 18:4; Romans 1:19-20; 1 Peter 3:15",
     "RelatedPeople": "Paul",
     "RelatedBooks": "Isaiah; Acts; Romans; 1 Peter",
-    "Slug": "reason"
+    "Slug": "reason",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Reasoning",
@@ -3217,7 +4129,10 @@
     "KeyPassages": "Proverbs 18:17; Isaiah 1:18; Acts 17:10-12; 1 Thessalonians 5:21; 1 John 4:1",
     "RelatedPeople": "Paul",
     "RelatedBooks": "Proverbs; Isaiah; Acts; 1 Thessalonians; 1 John",
-    "Slug": "reasoning"
+    "Slug": "reasoning",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Rebellion",
@@ -3227,7 +4142,10 @@
     "RelatedPeople": "Adam; Eve; Moses; Aaron",
     "RelatedEvents": "The Fall; The Golden Calf",
     "Slug": "rebellion",
-    "Places": "Garden of Eden; Mount Sinai"
+    "Places": "Garden of Eden; Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Rebuilding",
@@ -3237,7 +4155,10 @@
     "RelatedPeople": "Nehemiah; Zerubbabel; Ezra",
     "RelatedEvents": "Nehemiah Rebuilds the Wall; Rebuilding of the Temple",
     "Slug": "rebuilding",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Reconciliation",
@@ -3249,7 +4170,10 @@
     "RelatedBooks": "Romans; 2 Corinthians; Ephesians; Colossians",
     "Slug": "reconciliation",
     "Places": "Egypt",
-    "RelatedEvents": "Joseph and His Brothers; The Prodigal Son"
+    "RelatedEvents": "Joseph and His Brothers; The Prodigal Son",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Redemption",
@@ -3262,7 +4186,10 @@
     "RelatedBooks": "Exodus; Ruth; Mark; Ephesians; 1 Peter; Psalms; Romans",
     "Slug": "redemption",
     "Places": "Egypt; Golgotha; Jerusalem",
-    "RelatedEvents": "The Exodus and the Red Sea; The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Exodus and the Red Sea; The Crucifixion; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Reform",
@@ -3274,7 +4201,10 @@
     "RelatedBooks": "2 Kings; Nehemiah; Matthew; Romans; Revelation",
     "Slug": "reform",
     "Places": "Jerusalem",
-    "RelatedEvents": "Ezra Reads the Law"
+    "RelatedEvents": "Ezra Reads the Law",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Reformation",
@@ -3284,7 +4214,10 @@
     "RelatedPeople": "Paul",
     "RelatedDoctrines": "Justification; Sanctification",
     "RelatedBooks": "Romans; Galatians; Ephesians; 2 Timothy",
-    "Slug": "reformation"
+    "Slug": "reformation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Reformed Theology",
@@ -3294,7 +4227,10 @@
     "RelatedPeople": "Paul",
     "RelatedDoctrines": "Election; Predestination; Perseverance of the Saints",
     "RelatedBooks": "Romans; Ephesians; John",
-    "Slug": "reformed-theology"
+    "Slug": "reformed-theology",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Refuge",
@@ -3302,7 +4238,10 @@
     "KeyPassages": "Psalm 46:1-3; Psalm 91:1-4; Proverbs 18:10; Hebrews 6:19-20",
     "RelatedBooks": "Psalms; Proverbs; Hebrews",
     "RelatedPeople": "King David; Jesus",
-    "Slug": "refuge"
+    "Slug": "refuge",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Regeneration",
@@ -3312,7 +4251,10 @@
     "RelatedPeople": "Jesus",
     "RelatedDoctrines": "Sanctification; Election",
     "RelatedBooks": "Ezekiel; John; Titus; 1 Peter; 1 John",
-    "Slug": "regeneration"
+    "Slug": "regeneration",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Relativism",
@@ -3321,7 +4263,10 @@
     "KeyPassages": "Judges 21:25; Proverbs 14:12; John 14:6; John 18:37-38; Romans 1:18-25",
     "RelatedPeople": "Paul; Jesus",
     "RelatedBooks": "Judges; Proverbs; John; Romans",
-    "Slug": "relativism"
+    "Slug": "relativism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Remembering",
@@ -3331,7 +4276,10 @@
     "RelatedPeople": "Moses; Jesus",
     "RelatedEvents": "The Passover; The Last Supper; The Exodus and the Red Sea",
     "Slug": "remembering",
-    "Places": "Egypt; Goshen; Jerusalem"
+    "Places": "Egypt; Goshen; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Remembrance",
@@ -3341,7 +4289,10 @@
     "RelatedPeople": "Moses; Joshua; Jesus; Paul",
     "RelatedEvents": "The Passover; Crossing the Jordan; The Last Supper",
     "Slug": "remembrance",
-    "Places": "Egypt; Jordan River; Gilgal; Jerusalem"
+    "Places": "Egypt; Jordan River; Gilgal; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Remnant",
@@ -3351,7 +4302,10 @@
     "RelatedPeople": "Elijah; Isaiah; Paul",
     "RelatedEvents": "Elijah on Mount Carmel; Cyrus's Decree and Return from Exile",
     "Slug": "remnant",
-    "Places": "Mount Carmel; Babylon; Jerusalem"
+    "Places": "Mount Carmel; Babylon; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Repentance",
@@ -3363,7 +4317,10 @@
     "RelatedBooks": "Psalms; Isaiah; Luke; Acts; 2 Corinthians",
     "Slug": "repentance",
     "Places": "Nineveh",
-    "RelatedEvents": "Jonah and Nineveh; The Prodigal Son; David and Bathsheba"
+    "RelatedEvents": "Jonah and Nineveh; The Prodigal Son; David and Bathsheba",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Respectful Dialogue",
@@ -3373,7 +4330,10 @@
     "RelatedPeople": "Paul; Jesus",
     "RelatedBooks": "Proverbs; Colossians; 1 Peter; James; Titus",
     "Slug": "respectful-dialogue",
-    "RelatedEvents": "Peter and Cornelius"
+    "RelatedEvents": "Peter and Cornelius",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Rest",
@@ -3384,7 +4344,10 @@
     "RelatedDoctrines": "Creation",
     "RelatedBooks": "Genesis; Exodus; Psalms; Matthew; Hebrews",
     "Slug": "rest",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Restoration",
@@ -3396,7 +4359,10 @@
     "RelatedBooks": "Joel; Ezekiel; Luke; Acts; Revelation",
     "Slug": "restoration",
     "Places": "Jerusalem; Babylon",
-    "RelatedEvents": "Cyrus's Decree and Return from Exile; Nehemiah Rebuilds the Wall"
+    "RelatedEvents": "Cyrus's Decree and Return from Exile; Nehemiah Rebuilds the Wall",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Resurrection",
@@ -3409,7 +4375,10 @@
     "RelatedBooks": "Matthew; John; Romans; 1 Corinthians; 1 Peter",
     "Slug": "resurrection",
     "Places": "Bethany; Jerusalem",
-    "RelatedEvents": "The Resurrection; Raising of Lazarus"
+    "RelatedEvents": "The Resurrection; Raising of Lazarus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Resurrection Life",
@@ -3419,7 +4388,10 @@
     "RelatedPeople": "Jesus; Lazarus; Mary Magdalene; Paul; Peter",
     "RelatedEvents": "The Resurrection; Raising of Lazarus; Pentecost",
     "Slug": "resurrection-life",
-    "Places": "Jerusalem; Bethany"
+    "Places": "Jerusalem; Bethany",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Return",
@@ -3428,7 +4400,10 @@
     "RelatedBooks": "Deuteronomy; Luke; James; Acts",
     "RelatedPeople": "Jesus; Simon Peter",
     "RelatedEvents": "The Prodigal Son; The Conversion of Paul",
-    "Slug": "return"
+    "Slug": "return",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Return from exile",
@@ -3438,7 +4413,10 @@
     "RelatedPeople": "Cyrus the Great; Zerubbabel; Ezra; Nehemiah",
     "RelatedEvents": "Cyrus's Decree and Return from Exile; Ezra Reads the Law; Nehemiah Rebuilds the Wall",
     "Slug": "return-from-exile",
-    "Places": "Babylon; Susa; Jerusalem"
+    "Places": "Babylon; Susa; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Return of Christ",
@@ -3448,7 +4426,10 @@
     "RelatedPeople": "Jesus; Paul; John the Apostle",
     "RelatedEvents": "The Ascension; The Resurrection",
     "Slug": "return-of-christ",
-    "Places": "Jerusalem; Bethany"
+    "Places": "Jerusalem; Bethany",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Reunion",
@@ -3458,7 +4439,10 @@
     "RelatedPeople": "Jacob; Esau; Joseph, Son of Jacob; Jesus",
     "RelatedEvents": "Joseph and His Brothers; The Prodigal Son",
     "Slug": "reunion",
-    "Places": "Canaan; Egypt; Goshen"
+    "Places": "Canaan; Egypt; Goshen",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Reversal",
@@ -3468,7 +4452,10 @@
     "RelatedPeople": "Hannah; Mary, Mother of Jesus; Jesus; Paul",
     "RelatedEvents": "The Crucifixion; The Resurrection",
     "Slug": "reversal",
-    "Places": "Golgotha; Jerusalem"
+    "Places": "Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Revival",
@@ -3480,7 +4467,10 @@
     "RelatedBooks": "2 Chronicles; Nehemiah; Psalms; Acts; Habakkuk",
     "Slug": "revival",
     "Places": "Jerusalem",
-    "RelatedEvents": "Ezra Reads the Law"
+    "RelatedEvents": "Ezra Reads the Law",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Righteousness",
@@ -3492,7 +4482,10 @@
     "RelatedBooks": "Genesis; Psalms; Isaiah; Romans; Philippians",
     "Slug": "righteousness",
     "Places": "Golgotha",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Righteousness of God",
@@ -3502,7 +4495,10 @@
     "RelatedPeople": "Paul; Jesus",
     "RelatedEvents": "The Crucifixion; The Resurrection",
     "Slug": "righteousness-of-god",
-    "Places": "Golgotha; Jerusalem"
+    "Places": "Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Rise of David",
@@ -3512,7 +4508,10 @@
     "RelatedPeople": "Samuel; King David; King Saul; Jonathan",
     "RelatedEvents": "David Becomes King; David and Goliath",
     "Slug": "rise-of-david",
-    "Places": "Hebron; Jerusalem; Bethlehem"
+    "Places": "Hebron; Jerusalem; Bethlehem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Sacraments and Ordinances",
@@ -3524,7 +4523,10 @@
     "RelatedBooks": "Matthew; Luke; Acts; Romans; 1 Corinthians",
     "Slug": "sacraments-and-ordinances",
     "Places": "Jerusalem; Jordan River",
-    "RelatedEvents": "The Last Supper; The Baptism of Jesus"
+    "RelatedEvents": "The Last Supper; The Baptism of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Sacrifice",
@@ -3534,7 +4536,10 @@
     "RelatedPeople": "Abraham; Isaac; Aaron; Jesus; John the Baptist",
     "RelatedEvents": "The Binding of Isaac; The Passover; The Crucifixion",
     "Slug": "sacrifice",
-    "Places": "Jerusalem; Egypt; Golgotha"
+    "Places": "Jerusalem; Egypt; Golgotha",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Salvation",
@@ -3544,7 +4549,10 @@
     "RelatedPeople": "Moses; Isaiah; Jesus; Peter; Paul",
     "RelatedEvents": "The Exodus and the Red Sea; The Crucifixion; The Resurrection; Pentecost",
     "Slug": "salvation",
-    "Places": "Egypt; Golgotha; Jerusalem"
+    "Places": "Egypt; Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Sanctification",
@@ -3555,7 +4563,10 @@
     "RelatedDoctrines": "Sanctification; Holiness; Perseverance",
     "RelatedQuestions": "How do Christians grow in holiness?; Can a Christian be sanctified and still struggle with sin?",
     "RelatedBooks": "John; Romans; 1 Thessalonians; Hebrews; 1 Peter",
-    "Slug": "sanctification"
+    "Slug": "sanctification",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Satan",
@@ -3567,7 +4578,10 @@
     "RelatedBooks": "Genesis; Job; Matthew; Ephesians; 1 Peter; Revelation",
     "Slug": "satan",
     "Places": "Garden of Eden",
-    "RelatedEvents": "The Fall; The Temptation in the Wilderness"
+    "RelatedEvents": "The Fall; The Temptation in the Wilderness",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Savior for all",
@@ -3577,7 +4591,10 @@
     "RelatedPeople": "Simeon; Jesus; Paul",
     "RelatedEvents": "The Birth of Jesus; Pentecost",
     "Slug": "savior-for-all",
-    "Places": "Bethlehem; Jerusalem"
+    "Places": "Bethlehem; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Science",
@@ -3587,7 +4604,10 @@
     "RelatedPeople": "King David; Paul",
     "RelatedDoctrines": "Creation",
     "RelatedBooks": "Genesis; Psalms; Proverbs; Romans; Colossians",
-    "Slug": "science"
+    "Slug": "science",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Science and Faith",
@@ -3598,7 +4618,10 @@
     "RelatedDoctrines": "Creation",
     "RelatedQuestions": "Did God create the world in six literal days?",
     "RelatedBooks": "Genesis; Psalms; Proverbs; Romans; Hebrews",
-    "Slug": "science-and-faith"
+    "Slug": "science-and-faith",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Scripture",
@@ -3608,7 +4631,10 @@
     "RelatedPeople": "Moses; King David; Paul",
     "RelatedDoctrines": "Inspiration of Scripture; Inerrancy of Scripture",
     "RelatedBooks": "Deuteronomy; Psalms; Matthew; Luke; 2 Timothy; 2 Peter",
-    "Slug": "scripture"
+    "Slug": "scripture",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Second Coming",
@@ -3620,7 +4646,10 @@
     "RelatedQuestions": "When will Jesus return?; What will happen when Jesus comes back?",
     "RelatedBooks": "Matthew; John; Acts; 1 Thessalonians; Revelation",
     "Slug": "second-coming",
-    "RelatedEvents": "The Ascension"
+    "RelatedEvents": "The Ascension",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Seeking God",
@@ -3629,7 +4658,10 @@
     "KeyPassages": "Deuteronomy 4:29; Psalm 27:8; Psalm 63:1; Jeremiah 29:13; Matthew 6:33; Hebrews 11:6",
     "RelatedPeople": "King David; Moses",
     "RelatedBooks": "Deuteronomy; Psalms; Jeremiah; Matthew; Hebrews",
-    "Slug": "seeking-god"
+    "Slug": "seeking-god",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Servant",
@@ -3639,7 +4671,10 @@
     "RelatedPeople": "Isaiah; Jesus; Paul",
     "RelatedEvents": "The Last Supper; The Crucifixion",
     "Slug": "servant",
-    "Places": "Jerusalem; Golgotha"
+    "Places": "Jerusalem; Golgotha",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Servanthood",
@@ -3649,7 +4684,10 @@
     "RelatedPeople": "Isaiah; Jesus; Moses; Paul; Peter",
     "RelatedEvents": "The Exodus and the Red Sea; The Last Supper; The Crucifixion",
     "Slug": "servanthood",
-    "Places": "Egypt; Jerusalem; Golgotha"
+    "Places": "Egypt; Jerusalem; Golgotha",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Service",
@@ -3659,7 +4697,10 @@
     "RelatedPeople": "Jesus; Simon Peter; Paul",
     "RelatedEvents": "The Last Supper",
     "Slug": "service",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Shelter in Christ",
@@ -3669,7 +4710,10 @@
     "RelatedPeople": "King David; Paul; Jesus",
     "RelatedEvents": "The Crucifixion; The Resurrection",
     "Slug": "shelter-in-christ",
-    "Places": "Golgotha; Jerusalem"
+    "Places": "Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Shepherd",
@@ -3679,7 +4723,10 @@
     "RelatedPeople": "David; Ezekiel; Jesus; Peter",
     "RelatedEvents": "David Becomes King; The Birth of Jesus; The Crucifixion",
     "Slug": "shepherd",
-    "Places": "Bethlehem; Hebron; Jerusalem; Golgotha"
+    "Places": "Bethlehem; Hebron; Jerusalem; Golgotha",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Sin",
@@ -3689,7 +4736,10 @@
     "RelatedPeople": "Adam; Eve; David; Paul; Jesus",
     "RelatedEvents": "The Fall; David and Bathsheba; The Crucifixion",
     "Slug": "sin",
-    "Places": "Garden of Eden; Jerusalem; Golgotha"
+    "Places": "Garden of Eden; Jerusalem; Golgotha",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Sin and repentance",
@@ -3699,7 +4749,10 @@
     "RelatedPeople": "King David; Simon Peter; Jesus",
     "RelatedEvents": "The Prodigal Son; The Crucifixion",
     "Slug": "sin-and-repentance",
-    "Places": "Golgotha; Jerusalem"
+    "Places": "Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Social righteousness",
@@ -3709,7 +4762,10 @@
     "RelatedPeople": "Amos; Micah; Isaiah; Jesus",
     "RelatedEvents": "The Good Samaritan; The Sermon on the Mount",
     "Slug": "social-righteousness",
-    "Places": "Jericho; Jerusalem; Galilee"
+    "Places": "Jericho; Jerusalem; Galilee",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Son of God",
@@ -3719,7 +4775,10 @@
     "RelatedPeople": "Jesus; Simon Peter; John the Baptist",
     "RelatedEvents": "The Baptism of Jesus; The Crucifixion",
     "Slug": "son-of-god",
-    "Places": "Jordan River; Golgotha"
+    "Places": "Jordan River; Golgotha",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Son of Man",
@@ -3729,7 +4788,10 @@
     "RelatedPeople": "Daniel; Jesus",
     "RelatedEvents": "The Crucifixion; Transfiguration",
     "Slug": "son-of-man",
-    "Places": "Golgotha"
+    "Places": "Golgotha",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Soul",
@@ -3739,7 +4801,10 @@
     "RelatedPeople": "King David; Jesus",
     "RelatedDoctrines": "Heaven; Hell",
     "RelatedBooks": "Genesis; Psalms; Matthew; Mark; 1 Thessalonians",
-    "Slug": "soul"
+    "Slug": "soul",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Sound doctrine",
@@ -3749,7 +4814,10 @@
     "RelatedPeople": "Paul; Timothy",
     "Slug": "sound-doctrine",
     "Places": "Ephesus",
-    "RelatedEvents": "Jerusalem Council"
+    "RelatedEvents": "Jerusalem Council",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Sovereignty",
@@ -3761,7 +4829,10 @@
     "RelatedBooks": "Psalms; Isaiah; Daniel; Romans; Ephesians",
     "Slug": "sovereignty",
     "Places": "Babylon",
-    "RelatedEvents": "Cyrus's Decree and Return from Exile"
+    "RelatedEvents": "Cyrus's Decree and Return from Exile",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Speech",
@@ -3769,7 +4840,10 @@
     "KeyPassages": "Proverbs 15:1; Proverbs 18:21; James 3:1-12; Ephesians 4:29",
     "RelatedBooks": "Proverbs; James; Ephesians",
     "RelatedPeople": "Paul; Jesus",
-    "Slug": "speech"
+    "Slug": "speech",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Spiritual gifts",
@@ -3779,7 +4853,10 @@
     "RelatedPeople": "Paul; Simon Peter",
     "RelatedEvents": "Pentecost",
     "Slug": "spiritual-gifts",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Spiritual Warfare",
@@ -3790,7 +4867,10 @@
     "RelatedDoctrines": "Demons",
     "RelatedBooks": "Daniel; Matthew; Ephesians; James; 1 Peter; Revelation",
     "Slug": "spiritual-warfare",
-    "RelatedEvents": "The Temptation in the Wilderness"
+    "RelatedEvents": "The Temptation in the Wilderness",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Standing firm",
@@ -3800,7 +4880,10 @@
     "RelatedPeople": "Paul; Jesus",
     "RelatedEvents": "Martyrdom of Stephen; Daniel in the Lions' Den",
     "Slug": "standing-firm",
-    "Places": "Jerusalem; Babylon"
+    "Places": "Jerusalem; Babylon",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Stereotypes",
@@ -3811,7 +4894,10 @@
     "RelatedBooks": "Jonah; Luke; John; James; Galatians",
     "Slug": "stereotypes",
     "Places": "Nineveh",
-    "RelatedEvents": "Jonah and Nineveh; The Good Samaritan; Peter and Cornelius"
+    "RelatedEvents": "Jonah and Nineveh; The Good Samaritan; Peter and Cornelius",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Strength",
@@ -3822,7 +4908,10 @@
     "RelatedDoctrines": "Providence",
     "RelatedBooks": "Judges; Psalms; Isaiah; 2 Corinthians; Philippians",
     "Slug": "strength",
-    "RelatedEvents": "Samson and Delilah"
+    "RelatedEvents": "Samson and Delilah",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Strength in weakness",
@@ -3832,7 +4921,10 @@
     "RelatedPeople": "Paul; Jesus",
     "RelatedEvents": "The Crucifixion; The Resurrection",
     "Slug": "strength-in-weakness",
-    "Places": "Golgotha; Jerusalem"
+    "Places": "Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Suffering",
@@ -3845,7 +4937,10 @@
     "RelatedBooks": "Job; Psalms; John; Romans; 2 Corinthians; 1 Peter",
     "Slug": "suffering",
     "Places": "Golgotha",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Sufficiency",
@@ -3855,7 +4950,10 @@
     "RelatedPeople": "King David; Paul",
     "RelatedEvents": "The Feeding of the Five Thousand",
     "Slug": "sufficiency",
-    "Places": "Galilee"
+    "Places": "Galilee",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Superiority of Christ",
@@ -3865,7 +4963,10 @@
     "RelatedPeople": "Jesus; Moses; Aaron",
     "RelatedEvents": "The Crucifixion; Transfiguration",
     "Slug": "superiority-of-christ",
-    "Places": "Golgotha"
+    "Places": "Golgotha",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Superstition",
@@ -3875,7 +4976,10 @@
     "RelatedPeople": "King Saul",
     "RelatedDoctrines": "Demons; Providence",
     "RelatedBooks": "Leviticus; Deuteronomy; 1 Samuel; Isaiah; Acts",
-    "Slug": "superstition"
+    "Slug": "superstition",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Support for ministry",
@@ -3885,7 +4989,10 @@
     "RelatedPeople": "Jesus; Paul; Lydia; Phoebe",
     "RelatedEvents": "Paul's Missionary Journeys",
     "Slug": "support-for-ministry",
-    "Places": "Galilee; Antioch; Philippi"
+    "Places": "Galilee; Antioch; Philippi",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Supremacy of Christ",
@@ -3895,7 +5002,10 @@
     "RelatedPeople": "Paul; Jesus; John the Apostle",
     "RelatedEvents": "The Resurrection; The Ascension",
     "Slug": "supremacy-of-christ",
-    "Places": "Jerusalem; Bethany"
+    "Places": "Jerusalem; Bethany",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Surrender",
@@ -3905,7 +5015,10 @@
     "RelatedPeople": "Mary, Mother of Jesus; Jesus",
     "RelatedEvents": "Jesus Prays in Gethsemane; The Crucifixion",
     "Slug": "surrender",
-    "Places": "Jerusalem; Golgotha"
+    "Places": "Jerusalem; Golgotha",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Technology",
@@ -3915,7 +5028,10 @@
     "RelatedPeople": "Adam; Paul",
     "RelatedDoctrines": "Creation",
     "RelatedBooks": "Genesis; Ecclesiastes; 1 Corinthians; Philippians",
-    "Slug": "technology"
+    "Slug": "technology",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Temple",
@@ -3925,7 +5041,10 @@
     "RelatedPeople": "Moses; Solomon; Jesus; Paul",
     "RelatedEvents": "Building of Solomon's Temple; Pentecost; Rebuilding of the Temple",
     "Slug": "temple",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Temple rebuilding",
@@ -3935,7 +5054,10 @@
     "RelatedPeople": "Zerubbabel; Ezra; Nehemiah",
     "RelatedEvents": "Rebuilding of the Temple; Nehemiah Rebuilds the Wall; Cyrus's Decree and Return from Exile",
     "Slug": "temple-rebuilding",
-    "Places": "Jerusalem; Babylon"
+    "Places": "Jerusalem; Babylon",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Temptation",
@@ -3947,7 +5069,10 @@
     "RelatedBooks": "Genesis; Matthew; 1 Corinthians; Hebrews; James",
     "Slug": "temptation",
     "Places": "Garden of Eden",
-    "RelatedEvents": "The Fall; The Temptation in the Wilderness"
+    "RelatedEvents": "The Fall; The Temptation in the Wilderness",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Testimony",
@@ -3959,7 +5084,10 @@
     "RelatedBooks": "Mark; John; Acts; 1 John; Revelation",
     "Slug": "testimony",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Resurrection; Pentecost"
+    "RelatedEvents": "The Resurrection; Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "The Fall",
@@ -3972,7 +5100,10 @@
     "RelatedBooks": "Genesis; Romans; 1 Corinthians",
     "Slug": "the-fall",
     "Places": "Garden of Eden",
-    "RelatedEvents": "The Fall"
+    "RelatedEvents": "The Fall",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "The Universe",
@@ -3983,7 +5114,10 @@
     "RelatedDoctrines": "Creation",
     "RelatedBooks": "Genesis; Psalms; Isaiah; Hebrews",
     "Slug": "the-universe",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Theology",
@@ -3993,7 +5127,10 @@
     "RelatedPeople": "Moses; Paul",
     "RelatedDoctrines": "Trinity",
     "RelatedBooks": "Deuteronomy; Romans; 1 Corinthians; 2 Timothy",
-    "Slug": "theology"
+    "Slug": "theology",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Time",
@@ -4002,7 +5139,10 @@
     "RelatedBooks": "Psalms; Ecclesiastes; Ephesians; James",
     "RelatedPeople": "Moses; King Solomon; Paul",
     "Slug": "time",
-    "Places": "Jerusalem; Ephesus"
+    "Places": "Jerusalem; Ephesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Tithing",
@@ -4011,7 +5151,10 @@
     "RelatedBooks": "Genesis; Malachi; 2 Corinthians",
     "RelatedPeople": "Abraham; Melchizedek; Jacob; Paul",
     "Slug": "tithing",
-    "Places": "Jerusalem; Bethel"
+    "Places": "Jerusalem; Bethel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Tradition",
@@ -4021,7 +5164,10 @@
     "RelatedPeople": "Paul; Jesus",
     "RelatedDoctrines": "Inspiration of Scripture",
     "RelatedBooks": "Mark; 1 Corinthians; 2 Thessalonians; Colossians",
-    "Slug": "tradition"
+    "Slug": "tradition",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Transformation",
@@ -4032,7 +5178,10 @@
     "RelatedDoctrines": "Sanctification",
     "RelatedBooks": "Romans; 2 Corinthians; Galatians; Ephesians; Philippians",
     "Slug": "transformation",
-    "RelatedEvents": "The Conversion of Paul"
+    "RelatedEvents": "The Conversion of Paul",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Translation",
@@ -4042,7 +5191,10 @@
     "RelatedPeople": "Paul",
     "RelatedDoctrines": "Inspiration of Scripture; Inerrancy of Scripture",
     "RelatedBooks": "Nehemiah; Luke; Acts; 1 Corinthians; Revelation",
-    "Slug": "translation"
+    "Slug": "translation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Trinity",
@@ -4055,7 +5207,10 @@
     "RelatedBooks": "Genesis; Deuteronomy; Matthew; John; 2 Corinthians",
     "Slug": "trinity",
     "Places": "Jordan River",
-    "RelatedEvents": "The Baptism of Jesus"
+    "RelatedEvents": "The Baptism of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "True Worship",
@@ -4067,7 +5222,10 @@
     "RelatedBooks": "Psalms; Isaiah; John; Romans; Hebrews",
     "Slug": "true-worship",
     "Places": "Mount Carmel",
-    "RelatedEvents": "Elijah on Mount Carmel"
+    "RelatedEvents": "Elijah on Mount Carmel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Trust",
@@ -4079,7 +5237,10 @@
     "RelatedBooks": "Psalms; Proverbs; Isaiah; Mark",
     "Slug": "trust",
     "Places": "Galilee",
-    "RelatedEvents": "Jesus Calms the Storm"
+    "RelatedEvents": "Jesus Calms the Storm",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Truth",
@@ -4089,7 +5250,10 @@
     "RelatedPeople": "Jesus",
     "RelatedDoctrines": "Inspiration of Scripture",
     "RelatedBooks": "Psalms; John; Ephesians",
-    "Slug": "truth"
+    "Slug": "truth",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Unfaithfulness",
@@ -4099,7 +5263,10 @@
     "RelatedPeople": "Hosea; Jeremiah; Paul",
     "RelatedEvents": "The Golden Calf",
     "Slug": "unfaithfulness",
-    "Places": "Mount Sinai"
+    "Places": "Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Unity",
@@ -4109,7 +5276,10 @@
     "RelatedPeople": "Jesus; Paul",
     "RelatedEvents": "Pentecost; Jerusalem Council",
     "Slug": "unity",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Unity in Christ",
@@ -4119,7 +5289,10 @@
     "RelatedPeople": "Paul; Jesus",
     "RelatedEvents": "Pentecost; Peter and Cornelius",
     "Slug": "unity-in-christ",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Urgency",
@@ -4129,7 +5302,10 @@
     "RelatedPeople": "Jesus; Paul",
     "Slug": "urgency",
     "Places": "Galilee; Rome",
-    "RelatedEvents": "Paul's Missionary Journeys"
+    "RelatedEvents": "Paul's Missionary Journeys",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Vanity",
@@ -4139,7 +5315,10 @@
     "RelatedPeople": "King Solomon; Jesus",
     "Slug": "vanity",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Tower of Babel"
+    "RelatedEvents": "The Tower of Babel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Victory",
@@ -4151,7 +5330,10 @@
     "RelatedBooks": "Exodus; 1 Samuel; John; Romans; 1 Corinthians; 1 John",
     "Slug": "victory",
     "Places": "Jericho",
-    "RelatedEvents": "David and Goliath; The Walls of Jericho; The Resurrection"
+    "RelatedEvents": "David and Goliath; The Walls of Jericho; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Victory of Christ",
@@ -4161,7 +5343,10 @@
     "RelatedPeople": "Jesus; Paul; John the Apostle",
     "RelatedEvents": "The Crucifixion; The Resurrection",
     "Slug": "victory-of-christ",
-    "Places": "Golgotha; Jerusalem"
+    "Places": "Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Vine and Branches",
@@ -4171,7 +5356,10 @@
     "RelatedPeople": "Isaiah; Jesus; Paul",
     "RelatedEvents": "The Exodus and the Red Sea; The Last Supper; Pentecost",
     "Slug": "vine-and-branches",
-    "Places": "Egypt; Jerusalem"
+    "Places": "Egypt; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Violence",
@@ -4182,7 +5370,10 @@
     "RelatedBooks": "Genesis; Joshua; Psalms; Matthew; Isaiah; Revelation",
     "Slug": "violence",
     "Places": "Golgotha",
-    "RelatedEvents": "Cain Murders Abel; The Crucifixion"
+    "RelatedEvents": "Cain Murders Abel; The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Visions",
@@ -4192,7 +5383,10 @@
     "RelatedPeople": "Jacob; Isaiah; Ezekiel; John the Apostle",
     "RelatedEvents": "Transfiguration",
     "Slug": "visions",
-    "Places": "Bethel; Jerusalem; River Chebar; Patmos"
+    "Places": "Bethel; Jerusalem; River Chebar; Patmos",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Waiting on God",
@@ -4202,7 +5396,10 @@
     "RelatedPeople": "King David; Isaiah; Jesus",
     "RelatedEvents": "Pentecost",
     "Slug": "waiting-on-god",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Wandering and Return",
@@ -4212,7 +5409,10 @@
     "RelatedPeople": "Moses; Jesus",
     "RelatedEvents": "Wilderness Wanderings; The Prodigal Son; Cyrus's Decree and Return from Exile",
     "Slug": "wandering-and-return",
-    "Places": "Mount Sinai; Babylon; Jerusalem"
+    "Places": "Mount Sinai; Babylon; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Water",
@@ -4222,7 +5422,10 @@
     "RelatedPeople": "Moses; Noah; Jesus; The Samaritan Woman",
     "RelatedEvents": "Creation; Noah and the Flood; The Exodus and the Red Sea; The Baptism of Jesus",
     "Slug": "water",
-    "Places": "Garden of Eden; Mount Ararat; Egypt; Jordan River"
+    "Places": "Garden of Eden; Mount Ararat; Egypt; Jordan River",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Weakness",
@@ -4231,7 +5434,10 @@
     "KeyPassages": "Psalm 103:13-14; Isaiah 40:28-31; 2 Corinthians 12:9-10; Hebrews 4:14-16; 1 Corinthians 1:26-29",
     "RelatedPeople": "Paul; King David",
     "RelatedBooks": "Psalms; Isaiah; 2 Corinthians; Hebrews; 1 Corinthians",
-    "Slug": "weakness"
+    "Slug": "weakness",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Wilderness",
@@ -4241,7 +5447,10 @@
     "RelatedPeople": "Moses; Elijah; Jesus",
     "RelatedEvents": "Wilderness Wanderings; The Temptation in the Wilderness",
     "Slug": "wilderness",
-    "Places": "Mount Sinai; Kadesh Barnea; Plains of Moab"
+    "Places": "Mount Sinai; Kadesh Barnea; Plains of Moab",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Wisdom",
@@ -4254,7 +5463,10 @@
     "RelatedBooks": "Job; Psalms; Proverbs; Ecclesiastes; James; 1 Corinthians",
     "Slug": "wisdom",
     "Places": "Jerusalem; Bethlehem",
-    "RelatedEvents": "Building of Solomon's Temple; The Birth of Jesus"
+    "RelatedEvents": "Building of Solomon's Temple; The Birth of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Witness",
@@ -4266,7 +5478,10 @@
     "RelatedBooks": "Isaiah; Acts; 1 Peter; Revelation",
     "Slug": "witness",
     "Places": "Jerusalem",
-    "RelatedEvents": "Pentecost; The Resurrection"
+    "RelatedEvents": "Pentecost; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Word of God",
@@ -4276,7 +5491,10 @@
     "RelatedPeople": "Moses; King David",
     "RelatedDoctrines": "Inspiration of Scripture; Inerrancy of Scripture",
     "RelatedBooks": "Deuteronomy; Psalms; Isaiah; John; Hebrews",
-    "Slug": "word-of-god"
+    "Slug": "word-of-god",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Word Studies",
@@ -4286,7 +5504,10 @@
     "RelatedPeople": "Paul",
     "RelatedDoctrines": "Inspiration of Scripture",
     "RelatedBooks": "Psalms; Matthew; John; 2 Timothy; 2 Peter",
-    "Slug": "word-studies"
+    "Slug": "word-studies",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Works",
@@ -4296,7 +5517,10 @@
     "RelatedPeople": "Paul; Jesus",
     "RelatedEvents": "The Sermon on the Mount",
     "Slug": "works",
-    "Places": "Galilee"
+    "Places": "Galilee",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "World Religions",
@@ -4305,7 +5529,10 @@
     "KeyPassages": "Genesis 12:1-3; Isaiah 45:22; John 14:6; Acts 4:12; Acts 17:22-31",
     "RelatedPeople": "Abraham; Paul",
     "RelatedBooks": "Genesis; Isaiah; John; Acts",
-    "Slug": "world-religions"
+    "Slug": "world-religions",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Worldviews",
@@ -4317,7 +5544,10 @@
     "RelatedBooks": "Genesis; Romans; Colossians; 1 Peter; 2 Corinthians",
     "Slug": "worldviews",
     "Places": "Garden of Eden",
-    "RelatedEvents": "Creation; The Fall"
+    "RelatedEvents": "Creation; The Fall",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Worship",
@@ -4330,6 +5560,9 @@
     "RelatedBooks": "Exodus; Psalms; John; Romans; Revelation; Genesis",
     "Slug": "worship",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Binding of Isaac; Building of Solomon's Temple; Pentecost"
+    "RelatedEvents": "The Binding of Isaac; Building of Solomon's Temple; Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

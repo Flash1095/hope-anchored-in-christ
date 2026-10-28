@@ -11,5 +11,8 @@
   "RelatedPeople": "Abraham; Sarah; King David",
   "Slug": "hebron",
   "RelatedEvents": "David Becomes King",
-  "Places": "Jerusalem; Beersheba"
+  "Places": "Jerusalem; Beersheba",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

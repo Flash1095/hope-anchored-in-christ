@@ -6,5 +6,8 @@
   "RelatedPeople": "King David; Paul",
   "RelatedQuestions": "How can I hear God's voice?",
   "RelatedBooks": "Psalms; Proverbs; Isaiah; James; Romans",
-  "Slug": "guidance"
+  "Slug": "guidance",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

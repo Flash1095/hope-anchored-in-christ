@@ -6,5 +6,8 @@
   "RelatedPeople": "Abraham; Simon Peter; Martha",
   "RelatedEvents": "The Call of Abraham; Peter and Cornelius",
   "Slug": "hospitality",
-  "Places": "Hebron"
+  "Places": "Hebron",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

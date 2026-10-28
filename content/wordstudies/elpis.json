@@ -12,5 +12,8 @@
   "RelatedBooks": "Romans; Colossians; Hebrews; 1 Peter",
   "Slug": "elpis",
   "RelatedPeople": "Simon Peter; Paul",
-  "RelatedEvents": "The Resurrection"
+  "RelatedEvents": "The Resurrection",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

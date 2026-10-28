@@ -8,5 +8,8 @@
   "RelatedBooks": "Genesis; Deuteronomy; John; Romans",
   "Slug": "life",
   "Places": "Garden of Eden",
-  "RelatedEvents": "Creation; The Resurrection"
+  "RelatedEvents": "Creation; The Resurrection",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

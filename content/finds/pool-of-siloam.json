@@ -17,5 +17,8 @@
   "Image": "assets/finds/pool-of-siloam.jpg",
   "ImageCredit": "Photo: Davidbena (CC BY-SA 4.0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3AThe_Upper_Pool_of_Siloam_%28Shiloah%29.jpg",
-  "Slug": "pool-of-siloam"
+  "Slug": "pool-of-siloam",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

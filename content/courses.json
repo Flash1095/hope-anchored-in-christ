@@ -7,7 +7,10 @@
     "Description": "Whether you are brand new to faith or returning after a long time away, this gentle course lays the essentials down clearly and kindly. You will discover who God is, what Jesus has done, and how to begin a confident, everyday walk with Him.",
     "KeyTopics": "Trinity; Salvation; Grace; Faith; Forgiveness",
     "RelatedBooks": "John; Romans; Ephesians; Hebrews",
-    "Slug": "foundations-of-faith"
+    "Slug": "foundations-of-faith",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Course": "Bible Overview: All 66 Books",
@@ -17,7 +20,10 @@
     "Description": "Feeling overwhelmed by where to start in the Bible? This friendly tour walks you through all 66 books in order, showing how one big story of God's love holds together from Genesis to Revelation. By the end you will know where everything fits — and where to turn next.",
     "KeyTopics": "Creation; Covenant; Redemption; Kingdom of God; Hope",
     "RelatedBooks": "Genesis; Exodus; Psalms; Isaiah; Matthew; Acts; Romans; Revelation",
-    "Slug": "bible-overview-all-66-books"
+    "Slug": "bible-overview-all-66-books",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Course": "How to Study the Bible",
@@ -27,7 +33,10 @@
     "Description": "You do not need a theology degree to understand Scripture — you just need a simple, steady method. This practical course gives you tools you can use the very same day, so Bible reading stops feeling confusing and starts feeling nourishing. Bring your questions; everyone learns here.",
     "KeyTopics": "Prayer; Wisdom; Discipleship; Faith",
     "RelatedBooks": "Psalms; Proverbs; Matthew; 2 Timothy",
-    "Slug": "how-to-study-the-bible"
+    "Slug": "how-to-study-the-bible",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Course": "The Life of Christ",
@@ -37,7 +46,10 @@
     "Description": "Come and walk with Jesus through the Gospels, step by step. You will meet Him in His teachings, His miracles and His compassion for ordinary people, and see why His death and resurrection change everything. It is a warm invitation to know Him better, not just know about Him.",
     "KeyTopics": "Jesus; Atonement; Resurrection; Forgiveness; Love",
     "RelatedBooks": "Matthew; Mark; Luke; John",
-    "Slug": "the-life-of-christ"
+    "Slug": "the-life-of-christ",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Course": "Old Testament Survey",
@@ -47,7 +59,10 @@
     "Description": "Go deeper into the first three-quarters of your Bible with confidence. This survey traces God's covenant story through creation, exodus, kingdom, exile and return, helping you read the Law, the Prophets and the Writings as one unfolding promise. You will finish with a map you can trust.",
     "KeyTopics": "Covenant; Exodus; Exile; Prophecy; Holiness",
     "RelatedBooks": "Genesis; Exodus; Joshua; 1 Samuel; Psalms; Isaiah; Daniel",
-    "Slug": "old-testament-survey"
+    "Slug": "old-testament-survey",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Course": "New Testament Survey",
@@ -57,7 +72,10 @@
     "Description": "Build on the Gospels by exploring how the good news travelled and took root. You will survey Acts, Paul's letters, the general letters and Revelation in their historical setting, seeing how each book answers real questions real churches faced. Expect clarity, context and plenty of encouragement.",
     "KeyTopics": "Church; Evangelism; Resurrection; Second Coming; Grace",
     "RelatedBooks": "Matthew; Acts; Romans; Galatians; Hebrews; Revelation",
-    "Slug": "new-testament-survey"
+    "Slug": "new-testament-survey",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Course": "Christian Apologetics 101",
@@ -67,7 +85,10 @@
     "Description": "Have you ever frozen when someone challenged your faith? This course equips you to respond thoughtfully and kindly, with reasons grounded in Scripture, history and logic. You will learn to listen well, answer honestly, and let gentleness lead every conversation.",
     "KeyTopics": "Faith; Resurrection; Suffering; Doubt",
     "RelatedBooks": "Isaiah; John; Romans; 1 Corinthians; 1 Peter",
-    "Slug": "christian-apologetics-101"
+    "Slug": "christian-apologetics-101",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Course": "Understanding Bible Prophecy",
@@ -77,7 +98,10 @@
     "Description": "Prophecy can feel puzzling, but it was given to give God's people hope, not fear. This course teaches you to read prophetic books in context, trace promises fulfilled in Christ, and handle future-focused passages with humility and care. You will leave steadier and more hope-filled.",
     "KeyTopics": "Prophecy; Second Coming; Hope; Kingdom of God",
     "RelatedBooks": "Isaiah; Daniel; Ezekiel; Matthew; Revelation",
-    "Slug": "understanding-bible-prophecy"
+    "Slug": "understanding-bible-prophecy",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Course": "Women of the Bible",
@@ -87,7 +111,10 @@
     "Description": "Meet women whose faith, courage and faithfulness shaped the whole biblical story. From Sarah and Ruth to Esther, Mary and Priscilla, their lives show that God sees, calls and uses women in powerful ways. Their stories will encourage yours.",
     "KeyTopics": "Faith; Prayer; Courage; Redemption",
     "RelatedBooks": "Genesis; Ruth; 1 Samuel; Esther; Luke; Acts",
-    "Slug": "women-of-the-bible"
+    "Slug": "women-of-the-bible",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Course": "Archaeology & the Bible",
@@ -97,7 +124,10 @@
     "Description": "Dig into the discoveries that illuminate the world of the Bible — scrolls, inscriptions, cities and everyday objects. This course presents the evidence fairly, noting what is well-established and what is still debated, so your confidence rests on honesty as well as wonder.",
     "KeyTopics": "Creation; Exodus; Church; Historical Evidence",
     "RelatedBooks": "Genesis; Exodus; Joshua; Daniel; Luke; Acts",
-    "Slug": "archaeology-and-the-bible"
+    "Slug": "archaeology-and-the-bible",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Course": "Theology Basics",
@@ -107,7 +137,10 @@
     "Description": "Big words like justification and sanctification become clear, friendly ideas in this grounding course. You will build a simple framework for what Christians believe and why it matters for worship, prayer and everyday life. No prior study needed — just curiosity.",
     "KeyTopics": "Trinity; Atonement; Justification; Sanctification; Holy Spirit; Church",
     "RelatedBooks": "Genesis; Isaiah; John; Romans; Ephesians",
-    "Slug": "theology-basics"
+    "Slug": "theology-basics",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Course": "Prayer & Spiritual Growth",
@@ -117,7 +150,10 @@
     "Description": "If prayer feels hard, rushed or one-sided, you are not alone — and you are very welcome here. This gentle, practical course helps you build a real prayer life at your own pace, rooted in Scripture and honest conversation with God. Small steps, lasting growth.",
     "KeyTopics": "Prayer; Faith; Anxiety; Fear; Hope; Discipleship",
     "RelatedBooks": "Psalms; Matthew; Luke; Philippians",
-    "Slug": "prayer-and-spiritual-growth"
+    "Slug": "prayer-and-spiritual-growth",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Course": "Church History Journey",
@@ -127,7 +163,10 @@
     "Description": "Your faith has a family story stretching back two thousand years. Travel through persecution, councils, reform and revival to meet the men and women who carried the gospel before us, learning from their courage and their mistakes alike. History, told warmly and honestly.",
     "KeyTopics": "Church; Persecution; Evangelism; Leadership",
     "RelatedBooks": "Acts; Hebrews; Revelation",
-    "Slug": "church-history-journey"
+    "Slug": "church-history-journey",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Course": "Hebrew & Greek Word Studies",
@@ -137,6 +176,9 @@
     "Description": "For learners ready to go beneath the translation, this advanced course opens up the richness of Hebrew and Greek. You will work with key words like hesed, shalom, agape — and elpis and agkura, the hope and anchor of Hebrews 6:19 that gave this blog its name. Careful tools, deep rewards.",
     "KeyTopics": "Hope; Grace; Love; Faith; Peace",
     "RelatedBooks": "Psalms; Isaiah; John; Romans; Hebrews",
-    "Slug": "hebrew-and-greek-word-studies"
+    "Slug": "hebrew-and-greek-word-studies",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

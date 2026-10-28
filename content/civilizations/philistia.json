@@ -10,5 +10,8 @@
   "RelatedPeople": "Samson; Delilah",
   "RelatedEvents": "Samson and Delilah; David and Goliath",
   "RelatedFinds": "Ekron Temple Inscription",
-  "Slug": "philistia"
+  "Slug": "philistia",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

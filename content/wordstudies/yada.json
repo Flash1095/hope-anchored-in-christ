@@ -13,5 +13,8 @@
   "Slug": "yada",
   "RelatedPeople": "Adam; Abraham; Jeremiah",
   "Places": "Garden of Eden",
-  "RelatedEvents": "Creation"
+  "RelatedEvents": "Creation",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

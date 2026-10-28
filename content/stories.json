@@ -15,7 +15,10 @@
     "RelatedTopics": "God; Humanity",
     "RelatedFinds": "—",
     "Slug": "story-creation",
-    "RelatedEvents": "The Fall; Noah and the Flood"
+    "RelatedEvents": "The Fall; Noah and the Flood",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Daniel in the Lions' Den",
@@ -33,7 +36,10 @@
     "RelatedTopics": "Integrity; Prayer; God's Protection",
     "RelatedFinds": "Babylonian Chronicle",
     "Slug": "story-daniel-in-the-lions-den",
-    "RelatedEvents": "Shadrach, Meshach and Abednego in the Fiery Furnace"
+    "RelatedEvents": "Shadrach, Meshach and Abednego in the Fiery Furnace",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "David and Goliath",
@@ -51,7 +57,10 @@
     "RelatedTopics": "Courage; Faith; Victory",
     "RelatedFinds": "Tel Dan Stele",
     "Slug": "story-david-and-goliath",
-    "RelatedEvents": "David Becomes King"
+    "RelatedEvents": "David Becomes King",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Elijah on Mount Carmel",
@@ -69,7 +78,10 @@
     "RelatedTopics": "True Worship; Prayer; God's Power",
     "RelatedFinds": "Black Obelisk",
     "Slug": "story-elijah-on-mount-carmel",
-    "RelatedEvents": "Transfiguration"
+    "RelatedEvents": "Transfiguration",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Esther Saves Her People",
@@ -87,7 +99,10 @@
     "RelatedFinds": "—",
     "Significance": "God is never named in Esther, yet His fingerprints are on every page. For seasons when heaven seems silent, Esther anchors hope that God is working behind the scenes for His people's good.",
     "DateApprox": "c. 474 BC",
-    "TimelineEra": "Return and Second Temple"
+    "TimelineEra": "Return and Second Temple",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Jonah and Nineveh",
@@ -105,7 +120,10 @@
     "RelatedFinds": "—",
     "Significance": "God's mercy reached a runaway prophet and a wicked city alike. Jonah anchors hope that no one — not the fleeing, not the far enemy — is beyond the reach of God's compassion.",
     "DateApprox": "c. 780 BC",
-    "TimelineEra": "Divided Monarchy"
+    "TimelineEra": "Divided Monarchy",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Joseph and His Brothers",
@@ -123,7 +141,10 @@
     "RelatedFinds": "—",
     "Significance": "Joseph's forgiveness is one of Scripture's clearest pictures of God's providence turning harm into salvation. It gives hope that God can redeem even family wounds and wasted years for the saving of many lives.",
     "DateApprox": "c. 1700 BC",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Noah and the Flood",
@@ -141,7 +162,10 @@
     "RelatedTopics": "Judgment; Obedience; Covenant",
     "RelatedFinds": "—",
     "Slug": "story-noah-and-the-flood",
-    "RelatedEvents": "Creation; The Tower of Babel"
+    "RelatedEvents": "Creation; The Tower of Babel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Pentecost",
@@ -159,7 +183,10 @@
     "RelatedTopics": "Holy Spirit; Church; Boldness",
     "RelatedFinds": "Dead Sea Scrolls",
     "Slug": "story-pentecost",
-    "RelatedEvents": "The Ascension; Martyrdom of Stephen"
+    "RelatedEvents": "The Ascension; Martyrdom of Stephen",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Ruth's Loyalty",
@@ -177,7 +204,10 @@
     "RelatedFinds": "Mesha Stele",
     "Significance": "In the dark days of the judges, quiet loyalty and kindness carried the line of the Messiah. Ruth anchors hope that God weaves ordinary faithfulness — and outsiders welcomed in — into His greatest stories.",
     "DateApprox": "c. 1100 BC",
-    "TimelineEra": "Conquest and Judges"
+    "TimelineEra": "Conquest and Judges",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Samson and Delilah",
@@ -195,7 +225,10 @@
     "Place": "Zorah; Gaza; Valley of Sorek",
     "Significance": "Samson's wasted gifts are a warning, but his final prayer is pure hope: God heard a broken man in the dark. It is never too late to cry out to the God who restores.",
     "DateApprox": "c. 1075 BC",
-    "TimelineEra": "Conquest and Judges"
+    "TimelineEra": "Conquest and Judges",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Baptism of Jesus",
@@ -213,7 +246,10 @@
     "RelatedFinds": "Dead Sea Scrolls",
     "Significance": "At the Jordan all three Persons of the Trinity appear together as Jesus steps into our place. His baptism anchors hope that in Him we too are called God's beloved children.",
     "DateApprox": "c. AD 27",
-    "TimelineEra": "Life of Christ"
+    "TimelineEra": "Life of Christ",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Binding of Isaac",
@@ -231,7 +267,10 @@
     "Place": "Mount Moriah",
     "Significance": "On the very mountain where Jerusalem's Temple would stand, God showed He Himself provides the sacrifice. This story anchors our hope in a Father who did not spare His own Son — and can be trusted with what we love most.",
     "DateApprox": "c. 1900 BC",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Birth of Jesus",
@@ -249,7 +288,10 @@
     "RelatedFinds": "Dead Sea Scrolls",
     "Significance": "God entered our world not in a palace but in a feeding trough, announced first to shepherds. Every hope on this blog begins here: the promised Saviour has actually come.",
     "DateApprox": "c. 5 BC",
-    "TimelineEra": "Life of Christ"
+    "TimelineEra": "Life of Christ",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Burning Bush",
@@ -267,7 +309,10 @@
     "RelatedTopics": "Calling; God's Holiness; Deliverance",
     "RelatedFinds": "—",
     "Slug": "story-the-burning-bush",
-    "RelatedEvents": "The Ten Plagues; The Exodus and the Red Sea"
+    "RelatedEvents": "The Ten Plagues; The Exodus and the Red Sea",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Call of Abraham",
@@ -285,7 +330,10 @@
     "RelatedFinds": "Amarna Letters",
     "Significance": "Abraham's journey is the heartbeat of this blog's hope: God keeps covenant promises across generations. When God calls you into the unknown, the same faithful God goes with you.",
     "DateApprox": "c. 2000 BC",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Conversion of Paul",
@@ -303,7 +351,10 @@
     "Place": "Damascus Road; Damascus",
     "Significance": "If grace could turn the church's fiercest enemy into its greatest missionary, no one you love is too far gone. Paul's conversion is hope's proof that Jesus transforms persecutors into proclaimers.",
     "DateApprox": "c. AD 35",
-    "TimelineEra": "Early Church"
+    "TimelineEra": "Early Church",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Crucifixion",
@@ -321,7 +372,10 @@
     "RelatedTopics": "Sacrifice; Love; Atonement",
     "RelatedFinds": "Pilate Stone; Caiaphas Ossuary",
     "Slug": "story-the-crucifixion",
-    "RelatedEvents": "The Last Supper; Jesus Prays in Gethsemane; The Resurrection"
+    "RelatedEvents": "The Last Supper; Jesus Prays in Gethsemane; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Exodus and the Red Sea",
@@ -339,7 +393,10 @@
     "RelatedFinds": "Merneptah Stele",
     "Significance": "The Exodus is Israel's defining rescue and a pattern of all God's saving work. When there is water in front and an army behind, the God who makes a way through the sea can be trusted.",
     "DateApprox": "c. 1446 BC (early) or c. 1260 BC (late)",
-    "TimelineEra": "Exodus and Wilderness"
+    "TimelineEra": "Exodus and Wilderness",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Fall",
@@ -357,7 +414,10 @@
     "RelatedTopics": "Sin; Temptation; Grace",
     "RelatedFinds": "—",
     "Slug": "story-the-fall",
-    "RelatedEvents": "Creation; Cain Murders Abel"
+    "RelatedEvents": "Creation; Cain Murders Abel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Feeding of the Five Thousand",
@@ -375,7 +435,10 @@
     "RelatedFinds": "Capernaum",
     "Significance": "Little placed in Jesus' hands becomes more than enough. This miracle anchors hope for every 'not enough' — of money, strength, or time — surrendered to Him.",
     "DateApprox": "c. AD 29",
-    "TimelineEra": "Life of Christ"
+    "TimelineEra": "Life of Christ",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Good Samaritan",
@@ -389,7 +452,10 @@
     "RelatedTopics": "Compassion; Neighbor; Mercy",
     "Slug": "the-good-samaritan",
     "RelatedEvents": "The Prodigal Son; The Sermon on the Mount",
-    "Place": "Jericho"
+    "Place": "Jericho",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Last Supper",
@@ -407,7 +473,10 @@
     "RelatedFinds": "—",
     "Significance": "At a table of betrayal and failure, Jesus gave gifts — His body, His blood, His love to the end. Every Communion table since anchors hope in that night: we proclaim His death until He comes.",
     "DateApprox": "c. AD 30",
-    "TimelineEra": "Life of Christ"
+    "TimelineEra": "Life of Christ",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Prodigal Son",
@@ -420,7 +489,10 @@
     "RelatedBooks": "Luke",
     "RelatedTopics": "Grace; Repentance; Forgiveness",
     "Slug": "the-prodigal-son",
-    "RelatedEvents": "The Good Samaritan; The Sermon on the Mount"
+    "RelatedEvents": "The Good Samaritan; The Sermon on the Mount",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Resurrection",
@@ -438,7 +510,10 @@
     "RelatedTopics": "Victory; Hope; New Life",
     "RelatedFinds": "Pilate Stone; Caiaphas Ossuary",
     "Slug": "story-the-resurrection",
-    "RelatedEvents": "The Crucifixion; The Ascension; Pentecost"
+    "RelatedEvents": "The Crucifixion; The Ascension; Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Sermon on the Mount",
@@ -456,7 +531,10 @@
     "RelatedFinds": "Capernaum",
     "Significance": "The Sermon is the constitution of Christ's upside-down kingdom, where the lowly are blessed. Building on these words, Jesus promises, is building a life that stands when the storms come.",
     "DateApprox": "c. AD 28",
-    "TimelineEra": "Life of Christ"
+    "TimelineEra": "Life of Christ",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Temptation in the Wilderness",
@@ -474,7 +552,10 @@
     "Place": "Judean Wilderness",
     "Significance": "Where Adam fell and Israel grumbled, Jesus stood firm in the same wilderness. Because He was tempted in every way yet did not sin, He understands our struggles and helps us in ours.",
     "DateApprox": "c. AD 27",
-    "TimelineEra": "Life of Christ"
+    "TimelineEra": "Life of Christ",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Ten Commandments",
@@ -492,7 +573,10 @@
     "RelatedFinds": "—",
     "Significance": "The Law was a gift to a rescued people — God saved them first, then showed them how to live. It anchors hope by revealing God's holy character and pointing us to the Saviour who fulfils it.",
     "DateApprox": "c. 1446 BC (early) or c. 1260 BC (late)",
-    "TimelineEra": "Exodus and Wilderness"
+    "TimelineEra": "Exodus and Wilderness",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Tower of Babel",
@@ -510,7 +594,10 @@
     "RelatedFinds": "—",
     "Significance": "Babel shows what human pride builds, and Pentecost will one day show what God's Spirit gathers. Our hope is not in making our own name great, but in the God who brings scattered people together in Christ.",
     "DateApprox": "c. 2242 BC (traditional chronology; date debated)",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Walls of Jericho",
@@ -528,7 +615,10 @@
     "RelatedFinds": "Hazor; Amarna Letters",
     "Significance": "Jericho fell not by siege engines but by obedient faith, and a scarlet cord saved an outsider who trusted Israel's God. Hope here is for impossible walls and unlikely people alike.",
     "DateApprox": "c. 1400 BC (early) or c. 1210 BC (late)",
-    "TimelineEra": "Conquest and Judges"
+    "TimelineEra": "Conquest and Judges",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Anointing of Saul as King",
@@ -543,7 +633,10 @@
     "RelatedBooks": "1 Samuel",
     "RelatedFinds": "—",
     "Slug": "anointing-of-saul-as-king",
-    "RelatedEvents": "Calling of Samuel; David Becomes King"
+    "RelatedEvents": "Calling of Samuel; David Becomes King",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Building of Solomon's Temple",
@@ -558,7 +651,10 @@
     "RelatedBooks": "1 Kings; 2 Chronicles",
     "RelatedFinds": "Megiddo; Hazor; Gezer Calendar",
     "Slug": "building-of-solomons-temple",
-    "RelatedEvents": "Davidic Covenant; The Kingdom Divides"
+    "RelatedEvents": "Davidic Covenant; The Kingdom Divides",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Cain Murders Abel",
@@ -573,7 +669,10 @@
     "RelatedBooks": "Genesis",
     "RelatedFinds": "—",
     "Slug": "cain-murders-abel",
-    "RelatedEvents": "The Fall"
+    "RelatedEvents": "The Fall",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Calling of Samuel",
@@ -588,7 +687,10 @@
     "RelatedBooks": "1 Samuel",
     "RelatedFinds": "—",
     "Slug": "calling-of-samuel",
-    "RelatedEvents": "Anointing of Saul as King"
+    "RelatedEvents": "Anointing of Saul as King",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Crossing the Jordan",
@@ -603,7 +705,10 @@
     "RelatedBooks": "Joshua",
     "RelatedFinds": "Amarna Letters",
     "Slug": "crossing-the-jordan",
-    "RelatedEvents": "Wilderness Wanderings; The Walls of Jericho"
+    "RelatedEvents": "Wilderness Wanderings; The Walls of Jericho",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Cyrus's Decree and Return from Exile",
@@ -618,7 +723,10 @@
     "RelatedBooks": "Ezra; Isaiah; 2 Chronicles",
     "RelatedFinds": "Cyrus Cylinder",
     "Slug": "cyruss-decree-and-return-from-exile",
-    "RelatedEvents": "Fall of Jerusalem and the Exile; Rebuilding of the Temple; Ezra Reads the Law"
+    "RelatedEvents": "Fall of Jerusalem and the Exile; Rebuilding of the Temple; Ezra Reads the Law",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "David and Bathsheba",
@@ -633,7 +741,10 @@
     "RelatedBooks": "2 Samuel; Psalms",
     "RelatedFinds": "Tel Dan Stele",
     "Slug": "david-and-bathsheba",
-    "RelatedEvents": "David Becomes King; Davidic Covenant"
+    "RelatedEvents": "David Becomes King; Davidic Covenant",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "David Becomes King",
@@ -648,7 +759,10 @@
     "RelatedBooks": "2 Samuel; 1 Chronicles",
     "RelatedFinds": "Tel Dan Stele",
     "Slug": "david-becomes-king",
-    "RelatedEvents": "David and Goliath; David and Bathsheba; Davidic Covenant"
+    "RelatedEvents": "David and Goliath; David and Bathsheba; Davidic Covenant",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Davidic Covenant",
@@ -663,7 +777,10 @@
     "RelatedBooks": "2 Samuel; Psalms",
     "RelatedFinds": "Tel Dan Stele",
     "Slug": "davidic-covenant",
-    "RelatedEvents": "David Becomes King; Building of Solomon's Temple"
+    "RelatedEvents": "David Becomes King; Building of Solomon's Temple",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Deborah and Barak Defeat Sisera",
@@ -678,7 +795,10 @@
     "RelatedBooks": "Judges",
     "RelatedFinds": "Megiddo; Hazor",
     "Slug": "deborah-and-barak-defeat-sisera",
-    "RelatedEvents": "Gideon's Victory over Midian"
+    "RelatedEvents": "Gideon's Victory over Midian",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Destruction of Sodom and Gomorrah",
@@ -693,7 +813,10 @@
     "RelatedBooks": "Genesis",
     "RelatedFinds": "—",
     "Slug": "destruction-of-sodom-and-gomorrah",
-    "RelatedEvents": "The Call of Abraham"
+    "RelatedEvents": "The Call of Abraham",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Ezra Reads the Law",
@@ -708,7 +831,10 @@
     "RelatedBooks": "Ezra; Nehemiah",
     "RelatedFinds": "Ketef Hinnom scrolls",
     "Slug": "ezra-reads-the-law",
-    "RelatedEvents": "Cyrus's Decree and Return from Exile; Nehemiah Rebuilds the Wall"
+    "RelatedEvents": "Cyrus's Decree and Return from Exile; Nehemiah Rebuilds the Wall",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Fall of Jerusalem and the Exile",
@@ -723,7 +849,10 @@
     "RelatedBooks": "2 Kings; Jeremiah; Lamentations",
     "RelatedFinds": "Babylonian Chronicle",
     "Slug": "fall-of-jerusalem-and-the-exile",
-    "RelatedEvents": "Fall of Samaria; Cyrus's Decree and Return from Exile"
+    "RelatedEvents": "Fall of Samaria; Cyrus's Decree and Return from Exile",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Fall of Samaria",
@@ -738,7 +867,10 @@
     "RelatedBooks": "2 Kings; Isaiah",
     "RelatedFinds": "Black Obelisk",
     "Slug": "fall-of-samaria",
-    "RelatedEvents": "The Kingdom Divides; Fall of Jerusalem and the Exile"
+    "RelatedEvents": "The Kingdom Divides; Fall of Jerusalem and the Exile",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Gideon's Victory over Midian",
@@ -753,7 +885,10 @@
     "RelatedBooks": "Judges",
     "RelatedFinds": "Megiddo",
     "Slug": "gideons-victory-over-midian",
-    "RelatedEvents": "Deborah and Barak Defeat Sisera"
+    "RelatedEvents": "Deborah and Barak Defeat Sisera",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Hezekiah and Sennacherib's Invasion",
@@ -768,7 +903,10 @@
     "RelatedBooks": "2 Kings; 2 Chronicles; Isaiah",
     "RelatedFinds": "Hezekiah's Tunnel; Sennacherib Prism; Lachish Reliefs",
     "Slug": "hezekiah-and-sennacheribs-invasion",
-    "RelatedEvents": "Fall of Jerusalem and the Exile"
+    "RelatedEvents": "Fall of Jerusalem and the Exile",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Jacob Wrestles with God",
@@ -783,7 +921,10 @@
     "RelatedBooks": "Genesis",
     "RelatedFinds": "—",
     "Slug": "jacob-wrestles-with-god",
-    "RelatedEvents": "Joseph and His Brothers"
+    "RelatedEvents": "Joseph and His Brothers",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Jerusalem Council",
@@ -798,7 +939,10 @@
     "RelatedBooks": "Acts; Galatians",
     "RelatedFinds": "Dead Sea Scrolls",
     "Slug": "jerusalem-council",
-    "RelatedEvents": "Paul's Missionary Journeys; Peter and Cornelius"
+    "RelatedEvents": "Paul's Missionary Journeys; Peter and Cornelius",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Jesus Calms the Storm",
@@ -813,7 +957,10 @@
     "RelatedBooks": "Matthew; Mark; Luke",
     "RelatedFinds": "Capernaum",
     "Slug": "jesus-calms-the-storm",
-    "RelatedEvents": "The Feeding of the Five Thousand"
+    "RelatedEvents": "The Feeding of the Five Thousand",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Jesus Prays in Gethsemane",
@@ -828,7 +975,10 @@
     "RelatedBooks": "Matthew; Mark; Luke",
     "RelatedFinds": "—",
     "Slug": "jesus-prays-in-gethsemane",
-    "RelatedEvents": "The Last Supper; The Crucifixion"
+    "RelatedEvents": "The Last Supper; The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Jesus Turns Water into Wine at Cana",
@@ -843,7 +993,10 @@
     "RelatedBooks": "John",
     "RelatedFinds": "Capernaum",
     "Slug": "jesus-turns-water-into-wine-at-cana",
-    "RelatedEvents": "The Baptism of Jesus"
+    "RelatedEvents": "The Baptism of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Martyrdom of Stephen",
@@ -858,7 +1011,10 @@
     "RelatedBooks": "Acts",
     "RelatedFinds": "—",
     "Slug": "martyrdom-of-stephen",
-    "RelatedEvents": "Pentecost; The Conversion of Paul"
+    "RelatedEvents": "Pentecost; The Conversion of Paul",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Nehemiah Rebuilds the Wall",
@@ -873,7 +1029,10 @@
     "RelatedBooks": "Nehemiah",
     "RelatedFinds": "—",
     "Slug": "nehemiah-rebuilds-the-wall",
-    "RelatedEvents": "Ezra Reads the Law; Rebuilding of the Temple"
+    "RelatedEvents": "Ezra Reads the Law; Rebuilding of the Temple",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Paul in Rome",
@@ -888,7 +1047,10 @@
     "RelatedBooks": "Acts; Philippians; Philemon",
     "RelatedFinds": "Gallio Inscription; Erastus Inscription",
     "Slug": "paul-in-rome",
-    "RelatedEvents": "Paul's Missionary Journeys; Paul Shipwrecked on Malta"
+    "RelatedEvents": "Paul's Missionary Journeys; Paul Shipwrecked on Malta",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Paul Shipwrecked on Malta",
@@ -903,7 +1065,10 @@
     "RelatedBooks": "Acts",
     "RelatedFinds": "—",
     "Slug": "paul-shipwrecked-on-malta",
-    "RelatedEvents": "Paul's Missionary Journeys; Paul in Rome"
+    "RelatedEvents": "Paul's Missionary Journeys; Paul in Rome",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Paul's Missionary Journeys",
@@ -918,7 +1083,10 @@
     "RelatedBooks": "Acts",
     "RelatedFinds": "Gallio Inscription; Erastus Inscription",
     "Slug": "pauls-missionary-journeys",
-    "RelatedEvents": "The Conversion of Paul; Jerusalem Council; Paul in Rome"
+    "RelatedEvents": "The Conversion of Paul; Jerusalem Council; Paul in Rome",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Peter and Cornelius",
@@ -933,7 +1101,10 @@
     "RelatedBooks": "Acts",
     "RelatedFinds": "Pilate Stone",
     "Slug": "peter-and-cornelius",
-    "RelatedEvents": "Jerusalem Council; Pentecost"
+    "RelatedEvents": "Jerusalem Council; Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Raising of Lazarus",
@@ -948,7 +1119,10 @@
     "RelatedBooks": "John",
     "RelatedFinds": "—",
     "Slug": "raising-of-lazarus",
-    "RelatedEvents": "Triumphal Entry"
+    "RelatedEvents": "Triumphal Entry",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Rebuilding of the Temple",
@@ -963,7 +1137,10 @@
     "RelatedBooks": "Ezra; Haggai; Zechariah",
     "RelatedFinds": "Cyrus Cylinder",
     "Slug": "rebuilding-of-the-temple",
-    "RelatedEvents": "Cyrus's Decree and Return from Exile; Nehemiah Rebuilds the Wall"
+    "RelatedEvents": "Cyrus's Decree and Return from Exile; Nehemiah Rebuilds the Wall",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Shadrach, Meshach and Abednego in the Fiery Furnace",
@@ -978,7 +1155,10 @@
     "RelatedBooks": "Daniel",
     "RelatedFinds": "Babylonian Chronicle",
     "Slug": "shadrach-meshach-and-abednego-in-the-fiery-furnace",
-    "RelatedEvents": "Daniel in the Lions' Den"
+    "RelatedEvents": "Daniel in the Lions' Den",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Ascension",
@@ -993,7 +1173,10 @@
     "RelatedBooks": "Luke; Acts",
     "RelatedFinds": "—",
     "Slug": "the-ascension",
-    "RelatedEvents": "The Resurrection; Pentecost"
+    "RelatedEvents": "The Resurrection; Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Golden Calf",
@@ -1008,7 +1191,10 @@
     "RelatedBooks": "Exodus",
     "RelatedFinds": "—",
     "Slug": "the-golden-calf",
-    "RelatedEvents": "The Ten Commandments; Wilderness Wanderings"
+    "RelatedEvents": "The Ten Commandments; Wilderness Wanderings",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Kingdom Divides",
@@ -1023,7 +1209,10 @@
     "RelatedBooks": "1 Kings; 2 Chronicles",
     "RelatedFinds": "Megiddo; Hazor",
     "Slug": "the-kingdom-divides",
-    "RelatedEvents": "Building of Solomon's Temple; Fall of Samaria; Fall of Jerusalem and the Exile"
+    "RelatedEvents": "Building of Solomon's Temple; Fall of Samaria; Fall of Jerusalem and the Exile",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Passover",
@@ -1038,7 +1227,10 @@
     "RelatedBooks": "Exodus; Leviticus",
     "RelatedFinds": "—",
     "Slug": "the-passover",
-    "RelatedEvents": "The Ten Plagues; The Exodus and the Red Sea"
+    "RelatedEvents": "The Ten Plagues; The Exodus and the Red Sea",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Ten Plagues",
@@ -1053,7 +1245,10 @@
     "RelatedBooks": "Exodus",
     "RelatedFinds": "Merneptah Stele",
     "Slug": "the-ten-plagues",
-    "RelatedEvents": "The Passover; The Exodus and the Red Sea; The Burning Bush"
+    "RelatedEvents": "The Passover; The Exodus and the Red Sea; The Burning Bush",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Twelve Spies and Israel's Unbelief",
@@ -1068,7 +1263,10 @@
     "RelatedBooks": "Numbers; Deuteronomy",
     "RelatedFinds": "—",
     "Slug": "the-twelve-spies",
-    "RelatedEvents": "Wilderness Wanderings; Crossing the Jordan"
+    "RelatedEvents": "Wilderness Wanderings; Crossing the Jordan",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Transfiguration",
@@ -1083,7 +1281,10 @@
     "RelatedBooks": "Matthew; Mark; Luke",
     "RelatedFinds": "—",
     "Slug": "transfiguration",
-    "RelatedEvents": "Elijah on Mount Carmel; The Baptism of Jesus"
+    "RelatedEvents": "Elijah on Mount Carmel; The Baptism of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Triumphal Entry",
@@ -1098,7 +1299,10 @@
     "RelatedBooks": "Matthew; Mark; Luke; John",
     "RelatedFinds": "Pool of Siloam",
     "Slug": "triumphal-entry",
-    "RelatedEvents": "Raising of Lazarus; The Last Supper"
+    "RelatedEvents": "Raising of Lazarus; The Last Supper",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Wilderness Wanderings",
@@ -1113,7 +1317,10 @@
     "RelatedBooks": "Numbers; Deuteronomy",
     "RelatedFinds": "Merneptah Stele",
     "Slug": "wilderness-wanderings",
-    "RelatedEvents": "The Exodus and the Red Sea; Crossing the Jordan; The Twelve Spies and Israel's Unbelief; The Golden Calf"
+    "RelatedEvents": "The Exodus and the Red Sea; Crossing the Jordan; The Twelve Spies and Israel's Unbelief; The Golden Calf",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Abraham and Abimelech",
@@ -1129,7 +1336,10 @@
     "RelatedEvents": "The Call of Abraham",
     "Significance": "God protected Sarah a second time from a 'sister' claim, kept Abimelech from sinning, and used Abraham's prayer to heal Abimelech's household — showing that God guards His promise and restores through prayer.",
     "DateApprox": "c. 2000 BC",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "DateApprox": "c. 1900 BC",
@@ -1146,7 +1356,10 @@
     "Story": "Abraham Buys the Burial Cave",
     "Testament": "Old Testament",
     "Themes": "Death; Faith; Promise",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Abram and Lot Part Ways",
@@ -1163,7 +1376,10 @@
     "Place": "Egypt; Canaan; Bethel; Hebron",
     "Significance": "Abram's generous parting from Lot shows faith in action: he surrendered the best-looking land, and God confirmed that the promised land was still his, by gift rather than by grasping.",
     "DateApprox": "c. 2000 BC",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Abram in Egypt",
@@ -1180,7 +1396,10 @@
     "Place": "Egypt; Canaan",
     "Significance": "God guarded His promise through Abram's failure in Egypt: Sarai was restored untouched, and the covenant line was preserved not by Abram's plan but by God's protection.",
     "DateApprox": "c. 2000 BC",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Abram Rescues Lot",
@@ -1197,7 +1416,10 @@
     "Place": "Canaan; Hebron",
     "Significance": "Abram's rescue of Lot shows a faith that fights for family and then refuses worldly reward, honouring God alone as the giver of victory — a pattern crowned by his meeting with Melchizedek, priest of the most high God.",
     "DateApprox": "c. 2000 BC",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Dinah and Shechem",
@@ -1214,7 +1436,10 @@
     "Place": "Shechem; Canaan",
     "Significance": "Dinah's story is a sober warning that wrongdoing breeds further wrongdoing: deceit and vengeance only deepened the family's trouble. It shows why God's people need justice that is truthful, measured, and entrusted to God rather than seized in anger.",
     "DateApprox": "c. 1800 BC",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "DateApprox": "c. 1900 BC",
@@ -1230,7 +1455,10 @@
     "Story": "Esau Sells His Birthright",
     "Testament": "Old Testament",
     "Themes": "Family; God's Sovereignty; Wisdom",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "God Blesses Jacob at Bethel",
@@ -1247,7 +1475,10 @@
     "Place": "Bethel; Shechem; Canaan",
     "Significance": "At Bethel God confirmed Jacob's new name, Israel, and renewed the covenant of land, descendants and kings. The nation that would bear that name traces its identity to this blessing.",
     "DateApprox": "c. 1800 BC",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Hagar and Ishmael",
@@ -1264,7 +1495,10 @@
     "Place": "Egypt; Canaan; Beersheba",
     "Significance": "Hagar's story shows that God's mercy reaches beyond the household's plans: He heard the afflicted, promised Ishmael a nation, and still kept His covenant through Isaac.",
     "DateApprox": "c. 2000 BC",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "DateApprox": "c. 1900 BC",
@@ -1281,7 +1515,10 @@
     "Story": "Isaac and Rebekah",
     "Testament": "Old Testament",
     "Themes": "God's Providence; Marriage; Faith",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "DateApprox": "c. 1900 BC",
@@ -1298,7 +1535,10 @@
     "Story": "Isaac in Gerar",
     "Testament": "Old Testament",
     "Themes": "God's Provision; Obedience; Trust",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Jacob and Laban",
@@ -1315,7 +1555,10 @@
     "Place": "Haran; Canaan",
     "Significance": "In Laban's house the twelve tribes of Israel began: the sons born to Leah, Rachel, Bilhah and Zilpah became the fathers of the nation God had promised. God's covenant advanced through a flawed, quarrelling household, not around it.",
     "DateApprox": "c. 1800 BC",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Jacob Meets Esau Again",
@@ -1332,7 +1575,10 @@
     "Place": "Canaan; Shechem",
     "Significance": "After twenty years apart, the brothers who had parted in anger met in tears and parted in peace. The reunion shows that God can heal even long-standing family wounds, and it brought Jacob safely home to Canaan.",
     "DateApprox": "c. 1800 BC",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "DateApprox": "c. 1900 BC",
@@ -1349,7 +1595,10 @@
     "Story": "Jacob Receives Isaac's Blessing",
     "Testament": "Old Testament",
     "Themes": "Family; God's Sovereignty; Promise",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Jacob's Dream at Bethel",
@@ -1366,7 +1615,10 @@
     "Place": "Beersheba; Bethel; Haran",
     "Significance": "At Bethel God renewed to Jacob the covenant promise first given to Abraham: land, descendants, and blessing for all the families of the earth. It is the promise that carries the whole story of Israel, and of hope, forward.",
     "DateApprox": "c. 1800 BC",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "Judah and Tamar",
@@ -1382,7 +1634,10 @@
     "RelatedEvents": "Joseph and His Brothers",
     "Significance": "From this tangled family story comes Pharez, through whom the line of Judah runs to David and to Christ. It is a striking proof that God's Messianic promise advances by grace through flawed people, not through perfect ones.",
     "DateApprox": "c. 1800 BC",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "DateApprox": "c. 1900 BC",
@@ -1398,7 +1653,10 @@
     "Story": "The Birth of Isaac",
     "Testament": "Old Testament",
     "Themes": "Faith; Promise; God's Providence",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Story": "The Covenant of Circumcision",
@@ -1415,6 +1673,9 @@
     "Place": "Canaan",
     "Significance": "The covenant of circumcision sealed God's everlasting promise with a sign in the flesh, renamed Abram and Sarai as Abraham and Sarah, and named Isaac as the child through whom the covenant would continue.",
     "DateApprox": "c. 2000 BC",
-    "TimelineEra": "Primeval / Patriarchs"
+    "TimelineEra": "Primeval / Patriarchs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

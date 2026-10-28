@@ -10,5 +10,8 @@
   "RelatedBooks": "Joshua; 1 Kings",
   "RelatedPeople": "Joshua; King Solomon",
   "Slug": "gibeon",
-  "Places": "Jerusalem"
+  "Places": "Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

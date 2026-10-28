@@ -6,5 +6,8 @@
   "RelatedPeople": "Simon Peter; Paul; Barnabas",
   "RelatedEvents": "Pentecost; Jerusalem Council",
   "Slug": "church-growth",
-  "Places": "Jerusalem"
+  "Places": "Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

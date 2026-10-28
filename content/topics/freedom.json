@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Paul; Moses",
   "RelatedEvents": "The Exodus and the Red Sea; The Passover",
   "Slug": "freedom",
-  "Places": "Egypt; Goshen"
+  "Places": "Egypt; Goshen",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -10,5 +10,8 @@
   "RelatedPeople": "Jezebel",
   "RelatedPlaces": "Tyre",
   "RelatedEvents": "Building of Solomon's Temple",
-  "Slug": "phoenicia"
+  "Slug": "phoenicia",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

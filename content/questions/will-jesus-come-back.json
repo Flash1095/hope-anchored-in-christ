@@ -20,5 +20,7 @@
   "Status": "Published",
   "LastUpdated": "2026-10-23",
   "RelatedPeople": "Jesus",
-  "RelatedEvents": "The Ascension"
+  "RelatedEvents": "The Ascension",
+  "VerificationStatus": "Awaiting Review",
+  "LastReviewed": ""
 }

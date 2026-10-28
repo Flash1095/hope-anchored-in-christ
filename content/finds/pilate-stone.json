@@ -18,5 +18,8 @@
   "Image": "assets/finds/pilate-stone.jpg",
   "ImageCredit": "Photo: BRBurton (CC0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/Pontius_Pilate_Inscription.JPG",
-  "Slug": "pilate-stone"
+  "Slug": "pilate-stone",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

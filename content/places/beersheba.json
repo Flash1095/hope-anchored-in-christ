@@ -10,5 +10,8 @@
   "RelatedBooks": "Genesis; 1 Kings",
   "RelatedPeople": "Abraham; Isaac",
   "Slug": "beersheba",
-  "Places": "Hebron"
+  "Places": "Hebron",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

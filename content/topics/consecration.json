@@ -6,5 +6,8 @@
   "RelatedPeople": "Moses; Aaron; Simon Peter",
   "RelatedEvents": "The Ten Commandments",
   "Slug": "consecration",
-  "Places": "Mount Sinai"
+  "Places": "Mount Sinai",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -6,5 +6,8 @@
   "RelatedPeople": "Cyrus the Great",
   "RelatedQuestions": "Is there archaeological evidence for King David?; What are the Dead Sea Scrolls?; Is there evidence for the Exodus?",
   "RelatedBooks": "1 Kings; Ezra; Luke",
-  "Slug": "archaeology"
+  "Slug": "archaeology",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

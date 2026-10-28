@@ -10,5 +10,8 @@
   "RelatedBooks": "1 Kings; Matthew",
   "RelatedPeople": "King Solomon; King Ahab; Jezebel; Jesus",
   "Slug": "tyre",
-  "Places": "Jerusalem"
+  "Places": "Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

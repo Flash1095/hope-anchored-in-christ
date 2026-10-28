@@ -10,5 +10,8 @@
   "RelatedBooks": "Matthew; Mark",
   "RelatedPeople": "Jesus; Simon Peter; Andrew; Matthew",
   "Slug": "capernaum",
-  "Places": "Galilee; Nazareth"
+  "Places": "Galilee; Nazareth",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

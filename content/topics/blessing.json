@@ -6,5 +6,8 @@
   "RelatedPeople": "Abraham; Moses; Jesus",
   "RelatedEvents": "The Call of Abraham; The Sermon on the Mount",
   "Slug": "blessing",
-  "Places": "Canaan; Galilee"
+  "Places": "Canaan; Galilee",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

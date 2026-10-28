@@ -6,5 +6,8 @@
   "RelatedPeople": "Adam; Eve; Jesus; Paul",
   "Slug": "marriage-covenant",
   "Places": "Garden of Eden; Jerusalem; Ephesus",
-  "RelatedEvents": "Creation; Ruth's Loyalty"
+  "RelatedEvents": "Creation; Ruth's Loyalty",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

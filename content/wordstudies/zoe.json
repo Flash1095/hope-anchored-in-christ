@@ -12,5 +12,8 @@
   "RelatedBooks": "John; 1 John",
   "Slug": "zoe",
   "RelatedPeople": "Jesus; John the Apostle",
-  "RelatedEvents": "The Resurrection"
+  "RelatedEvents": "The Resurrection",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

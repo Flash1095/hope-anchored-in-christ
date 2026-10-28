@@ -9,5 +9,8 @@
   "RelatedBooks": "Genesis; Psalms; John; Colossians; Hebrews",
   "Slug": "origins",
   "Places": "Garden of Eden",
-  "RelatedEvents": "Creation"
+  "RelatedEvents": "Creation",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

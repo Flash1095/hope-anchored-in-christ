@@ -5,5 +5,8 @@
   "RelatedBooks": "Genesis; Malachi; 2 Corinthians",
   "RelatedPeople": "Abraham; Melchizedek; Jacob; Paul",
   "Slug": "tithing",
-  "Places": "Jerusalem; Bethel"
+  "Places": "Jerusalem; Bethel",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

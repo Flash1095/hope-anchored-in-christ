@@ -8,5 +8,8 @@
   "RelatedBooks": "Genesis; Psalms; Romans",
   "Slug": "nature-and-creation",
   "Places": "Garden of Eden",
-  "RelatedEvents": "Creation"
+  "RelatedEvents": "Creation",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

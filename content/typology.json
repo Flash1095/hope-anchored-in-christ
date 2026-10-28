@@ -10,7 +10,10 @@
     "RelatedPeople": "Adam; Eve; Jesus; Paul",
     "RelatedEvents": "Creation; The Fall; The Crucifixion; The Resurrection",
     "Slug": "adam",
-    "Places": "Garden of Eden"
+    "Places": "Garden of Eden",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "Noah's Ark",
@@ -23,7 +26,10 @@
     "RelatedPeople": "Noah; Jesus; Simon Peter",
     "RelatedEvents": "Noah and the Flood; The Resurrection",
     "Slug": "noahs-ark",
-    "Places": "Mount Ararat"
+    "Places": "Mount Ararat",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "Isaac's Near-Sacrifice",
@@ -36,7 +42,10 @@
     "RelatedPeople": "Abraham; Isaac; Jesus",
     "RelatedEvents": "The Binding of Isaac; The Crucifixion",
     "Slug": "isaacs-near-sacrifice",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "Joseph",
@@ -49,7 +58,10 @@
     "RelatedPeople": "Joseph, Son of Jacob; Jesus; Stephen",
     "RelatedEvents": "Joseph and His Brothers; The Crucifixion",
     "Slug": "joseph",
-    "Places": "Egypt"
+    "Places": "Egypt",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "Moses",
@@ -62,7 +74,10 @@
     "RelatedPeople": "Moses; Aaron; Jesus",
     "RelatedEvents": "The Burning Bush; The Exodus and the Red Sea; The Ten Commandments; Transfiguration",
     "Slug": "moses",
-    "Places": "Egypt; Midian; Mount Sinai"
+    "Places": "Egypt; Midian; Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The Passover Lamb",
@@ -75,7 +90,10 @@
     "RelatedPeople": "Moses; Jesus; John the Baptist",
     "RelatedEvents": "The Passover; The Exodus and the Red Sea; The Crucifixion; The Last Supper",
     "Slug": "passover-lamb",
-    "Places": "Egypt"
+    "Places": "Egypt",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "Manna from Heaven",
@@ -87,7 +105,10 @@
     "RelatedBooks": "Exodus; Psalms; John",
     "RelatedPeople": "Moses; Aaron; Jesus",
     "RelatedEvents": "Wilderness Wanderings; The Feeding of the Five Thousand",
-    "Slug": "manna-from-heaven"
+    "Slug": "manna-from-heaven",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The Bronze Serpent",
@@ -99,7 +120,10 @@
     "RelatedBooks": "Numbers; John",
     "RelatedPeople": "Moses; Jesus; Nicodemus",
     "RelatedEvents": "Wilderness Wanderings; The Crucifixion",
-    "Slug": "bronze-serpent"
+    "Slug": "bronze-serpent",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The Tabernacle",
@@ -112,7 +136,10 @@
     "RelatedPeople": "Moses; Aaron; Jesus",
     "RelatedEvents": "Wilderness Wanderings; The Birth of Jesus",
     "Slug": "tabernacle",
-    "Places": "Mount Sinai"
+    "Places": "Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The Mercy Seat",
@@ -125,7 +152,10 @@
     "RelatedPeople": "Aaron; Moses; Jesus; Paul",
     "RelatedEvents": "The Ten Commandments; The Crucifixion",
     "Slug": "mercy-seat",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The High Priest",
@@ -138,7 +168,10 @@
     "RelatedPeople": "Aaron; Moses; Jesus",
     "RelatedEvents": "The Crucifixion; The Ascension",
     "Slug": "high-priest",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The Sacrificial System",
@@ -151,7 +184,10 @@
     "RelatedPeople": "Aaron; Moses; Jesus",
     "RelatedEvents": "The Ten Commandments; The Crucifixion",
     "Slug": "sacrificial-system",
-    "Places": "Mount Sinai; Jerusalem"
+    "Places": "Mount Sinai; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The Scapegoat",
@@ -164,7 +200,10 @@
     "RelatedPeople": "Aaron; Moses; Isaiah; Jesus",
     "RelatedEvents": "The Crucifixion",
     "Slug": "scapegoat",
-    "Places": "Mount Sinai"
+    "Places": "Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "Jonah",
@@ -177,7 +216,10 @@
     "RelatedPeople": "Jonah; Jesus",
     "RelatedEvents": "Jonah and Nineveh; The Resurrection",
     "Slug": "jonah",
-    "Places": "Nineveh"
+    "Places": "Nineveh",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "King David",
@@ -190,7 +232,10 @@
     "RelatedPeople": "King David; Jesus; Nathan",
     "RelatedEvents": "David Becomes King; Davidic Covenant; The Birth of Jesus; The Crucifixion; The Resurrection",
     "Slug": "king-david",
-    "Places": "Bethlehem; Jerusalem"
+    "Places": "Bethlehem; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "Solomon's Temple",
@@ -203,7 +248,10 @@
     "RelatedPeople": "King Solomon; King David; Jesus",
     "RelatedEvents": "Building of Solomon's Temple; The Binding of Isaac; The Resurrection",
     "Slug": "solomons-temple",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "Melchizedek",
@@ -216,7 +264,10 @@
     "RelatedPeople": "Melchizedek; Abraham; Jesus",
     "RelatedEvents": "The Call of Abraham; The Last Supper",
     "Slug": "melchizedek",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "Boaz the Kinsman-Redeemer",
@@ -229,7 +280,10 @@
     "RelatedPeople": "Ruth; Naomi; Boaz; King David; Jesus",
     "RelatedEvents": "Ruth's Loyalty; The Crucifixion",
     "Slug": "boaz-kinsman-redeemer",
-    "Places": "Bethlehem"
+    "Places": "Bethlehem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The Rock in the Wilderness",
@@ -242,7 +296,10 @@
     "RelatedPeople": "Moses; Aaron; Jesus; Paul",
     "RelatedEvents": "Wilderness Wanderings",
     "Slug": "rock-in-the-wilderness",
-    "Places": "Kadesh Barnea"
+    "Places": "Kadesh Barnea",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The Red Sea Crossing",
@@ -255,7 +312,10 @@
     "RelatedPeople": "Moses; Aaron; Jesus; Paul",
     "RelatedEvents": "The Exodus and the Red Sea; The Ten Plagues; The Baptism of Jesus; The Resurrection",
     "Slug": "red-sea-crossing",
-    "Places": "Egypt"
+    "Places": "Egypt",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "Joshua",
@@ -268,7 +328,10 @@
     "RelatedPeople": "Joshua; Moses; Caleb; Jesus",
     "RelatedEvents": "Crossing the Jordan; The Walls of Jericho",
     "Slug": "joshua",
-    "Places": "Jericho; Jordan River"
+    "Places": "Jericho; Jordan River",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The Suffering Servant",
@@ -281,7 +344,10 @@
     "RelatedPeople": "Isaiah; Joseph, Son of Jacob; Jesus; Philip",
     "RelatedEvents": "Joseph and His Brothers; The Crucifixion; The Resurrection",
     "Slug": "suffering-servant",
-    "Places": "Golgotha; Jerusalem"
+    "Places": "Golgotha; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The Ram in the Thicket",
@@ -294,7 +360,10 @@
     "RelatedPeople": "Abraham; Isaac; Jesus",
     "RelatedEvents": "The Binding of Isaac; The Crucifixion",
     "Slug": "ram-in-the-thicket",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The Veil of the Temple",
@@ -307,7 +376,10 @@
     "RelatedPeople": "Aaron; Jesus",
     "RelatedEvents": "The Crucifixion",
     "Slug": "veil-of-the-temple",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The Cities of Refuge",
@@ -319,7 +391,10 @@
     "RelatedBooks": "Numbers; Deuteronomy; Joshua; Hebrews",
     "RelatedPeople": "Moses; Joshua; Jesus",
     "RelatedEvents": "Crossing the Jordan",
-    "Slug": "cities-of-refuge"
+    "Slug": "cities-of-refuge",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The Year of Jubilee",
@@ -332,7 +407,10 @@
     "RelatedPeople": "Moses; Isaiah; Jesus",
     "RelatedEvents": "The Ten Commandments; The Sermon on the Mount",
     "Slug": "year-of-jubilee",
-    "Places": "Mount Sinai; Nazareth"
+    "Places": "Mount Sinai; Nazareth",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The Star out of Jacob",
@@ -345,7 +423,10 @@
     "RelatedPeople": "Jacob; Jesus",
     "RelatedEvents": "Wilderness Wanderings; The Birth of Jesus",
     "Slug": "star-out-of-jacob",
-    "Places": "Plains of Moab; Bethlehem"
+    "Places": "Plains of Moab; Bethlehem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The Ark of the Covenant",
@@ -358,7 +439,10 @@
     "RelatedPeople": "Moses; Aaron; Joshua; Jesus",
     "RelatedEvents": "Crossing the Jordan; Building of Solomon's Temple",
     "Slug": "ark-of-the-covenant",
-    "Places": "Jordan River; Jerusalem"
+    "Places": "Jordan River; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "Jacob's Ladder",
@@ -371,7 +455,10 @@
     "RelatedPeople": "Jacob; Jesus",
     "RelatedEvents": "Jacob Wrestles with God; The Birth of Jesus",
     "Slug": "jacobs-ladder",
-    "Places": "Bethel"
+    "Places": "Bethel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The Tree of Life",
@@ -384,7 +471,10 @@
     "RelatedPeople": "Adam; Eve; Jesus",
     "RelatedEvents": "Creation; The Fall; The Crucifixion",
     "Slug": "tree-of-life",
-    "Places": "Garden of Eden"
+    "Places": "Garden of Eden",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Type": "The Prophet Like Moses",
@@ -397,6 +487,9 @@
     "RelatedPeople": "Moses; Jesus; Simon Peter; Stephen",
     "RelatedEvents": "The Ten Commandments; The Feeding of the Five Thousand; Transfiguration",
     "Slug": "prophet-like-moses",
-    "Places": "Mount Sinai; Plains of Moab"
+    "Places": "Mount Sinai; Plains of Moab",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

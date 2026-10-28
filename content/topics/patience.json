@@ -6,5 +6,8 @@
   "RelatedPeople": "Abraham; Joseph; Job; Jesus; Paul",
   "RelatedEvents": "The Binding of Isaac; Joseph and His Brothers; The Birth of Jesus",
   "Slug": "patience",
-  "Places": "Jerusalem; Egypt; Bethlehem"
+  "Places": "Jerusalem; Egypt; Bethlehem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

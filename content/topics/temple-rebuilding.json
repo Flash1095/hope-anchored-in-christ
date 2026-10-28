@@ -6,5 +6,8 @@
   "RelatedPeople": "Zerubbabel; Ezra; Nehemiah",
   "RelatedEvents": "Rebuilding of the Temple; Nehemiah Rebuilds the Wall; Cyrus's Decree and Return from Exile",
   "Slug": "temple-rebuilding",
-  "Places": "Jerusalem; Babylon"
+  "Places": "Jerusalem; Babylon",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

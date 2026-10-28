@@ -1,11 +1,14 @@
 {
- "Topic": "Nations",
- "Category": "Theology",
- "Summary": "Nations in Scripture are more than political units: God made the peoples, scattered them, judges them, and promises to gather them. The Old Testament moves between God's particular love for Israel and His universal purpose for all nations, and Revelation ends with people from every tribe and tongue worshiping together. For Christians, this relativizes every national loyalty: our deepest citizenship is in heaven, and no nation is the kingdom of God.",
- "KeyPassages": "Genesis 10:32; Genesis 12:1-3; Psalm 2:1-12; Isaiah 2:2-4; Revelation 7:9-10",
- "RelatedPeople": "Abraham",
- "RelatedBooks": "Genesis; Psalms; Isaiah; Revelation",
- "Slug": "nations",
- "Places": "Babel; Jerusalem",
- "RelatedEvents": "The Tower of Babel; Pentecost"
+  "Topic": "Nations",
+  "Category": "Theology",
+  "Summary": "Nations in Scripture are more than political units: God made the peoples, scattered them, judges them, and promises to gather them. The Old Testament moves between God's particular love for Israel and His universal purpose for all nations, and Revelation ends with people from every tribe and tongue worshiping together. For Christians, this relativizes every national loyalty: our deepest citizenship is in heaven, and no nation is the kingdom of God.",
+  "KeyPassages": "Genesis 10:32; Genesis 12:1-3; Psalm 2:1-12; Isaiah 2:2-4; Revelation 7:9-10",
+  "RelatedPeople": "Abraham",
+  "RelatedBooks": "Genesis; Psalms; Isaiah; Revelation",
+  "Slug": "nations",
+  "Places": "Babel; Jerusalem",
+  "RelatedEvents": "The Tower of Babel; Pentecost",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

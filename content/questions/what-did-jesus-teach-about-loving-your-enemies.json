@@ -20,5 +20,7 @@
   "Status": "Published",
   "LastUpdated": "2026-10-23",
   "RelatedPeople": "Jesus",
-  "RelatedEvents": "The Sermon on the Mount"
+  "RelatedEvents": "The Sermon on the Mount",
+  "VerificationStatus": "Awaiting Review",
+  "LastReviewed": ""
 }

@@ -6,5 +6,8 @@
   "RelatedPeople": "King David; Jesus",
   "RelatedEvents": "Jesus Calms the Storm",
   "Slug": "plea",
-  "Places": "Galilee"
+  "Places": "Galilee",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

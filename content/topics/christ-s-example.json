@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Simon Peter; Paul",
   "RelatedEvents": "The Last Supper; The Crucifixion",
   "Slug": "christ-s-example",
-  "Places": "Jerusalem; Golgotha"
+  "Places": "Jerusalem; Golgotha",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

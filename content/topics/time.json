@@ -5,5 +5,8 @@
   "RelatedBooks": "Psalms; Ecclesiastes; Ephesians; James",
   "RelatedPeople": "Moses; King Solomon; Paul",
   "Slug": "time",
-  "Places": "Jerusalem; Ephesus"
+  "Places": "Jerusalem; Ephesus",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

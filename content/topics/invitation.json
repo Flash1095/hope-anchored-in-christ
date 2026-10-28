@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Isaiah; John the Apostle",
   "RelatedEvents": "The Sermon on the Mount; The Feeding of the Five Thousand",
   "Slug": "invitation",
-  "Places": "Galilee"
+  "Places": "Galilee",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

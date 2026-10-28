@@ -5,5 +5,8 @@
   "RelatedBooks": "Deuteronomy; Luke; James; Acts",
   "RelatedPeople": "Jesus; Simon Peter",
   "RelatedEvents": "The Prodigal Son; The Conversion of Paul",
-  "Slug": "return"
+  "Slug": "return",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

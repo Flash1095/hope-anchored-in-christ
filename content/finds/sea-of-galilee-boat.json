@@ -18,5 +18,8 @@
   "Image": "assets/finds/sea-of-galilee-boat.jpg",
   "ImageCredit": "Photo: Berthold Werner (Public domain)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3AGinosar_BW_7.jpg",
-  "Slug": "sea-of-galilee-boat"
+  "Slug": "sea-of-galilee-boat",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

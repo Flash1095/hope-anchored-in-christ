@@ -22,5 +22,7 @@
   "Significance": "Shows that in the 1st century AD the order and contents of the later part of the Psalter were not yet fixed: 11Q5 arranges Psalms 101-150 differently from the Masoretic Text and adds psalms known from the Syriac tradition (151, 154, 155), Sirach 51, and previously unknown hymns, alongside a prose passage crediting David with 4,050 compositions. At the same time it confirms that most of these psalms were already circulating in Hebrew long before the medieval manuscripts, and its strong Davidic emphasis fits the Qumran community's messianic hopes. It is a liturgical collection, not a straight copy of the Masoretic Psalter, and must not be presented as one.",
   "Slug": "great-psalms-scroll-11q5",
   "Sources": "https://en.wikipedia.org/wiki/Great_Psalms_Scroll; https://ccat.sas.upenn.edu/rak/courses/735/textcrit/Ps151.html; https://Journals.Plos.org/plosone/article?id=10.1371%2Fjournal.pone.0239831",
-  "Work": "Psalms"
+  "Work": "Psalms",
+  "VerificationStatus": "Verified",
+  "LastReviewed": "2026-10-27"
 }

@@ -6,5 +6,8 @@
   "RelatedPeople": "King David; Jesus; Paul",
   "RelatedEvents": "Triumphal Entry; The Crucifixion; The Resurrection",
   "Slug": "messiah-and-king",
-  "Places": "Bethany; Golgotha; Jerusalem"
+  "Places": "Bethany; Golgotha; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

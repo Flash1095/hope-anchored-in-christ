@@ -9,5 +9,8 @@
   "RelatedBooks": "Genesis; Proverbs; Malachi; Matthew; Ephesians",
   "Slug": "marriage",
   "Places": "Garden of Eden",
-  "RelatedEvents": "Creation"
+  "RelatedEvents": "Creation",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

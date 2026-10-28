@@ -15,5 +15,8 @@
   "Image": "assets/finds/chester-beatty-papyri.jpg",
   "ImageCredit": "Photo: Unknown authorUnknown author (Public domain)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3AP._Chester_Beatty_I%2C_folio_13-14%2C_recto.jpg",
-  "Slug": "chester-beatty-papyri"
+  "Slug": "chester-beatty-papyri",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

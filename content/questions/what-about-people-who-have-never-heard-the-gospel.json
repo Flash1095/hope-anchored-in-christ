@@ -20,5 +20,7 @@
   "Status": "Published",
   "LastUpdated": "2026-10-23",
   "RelatedPeople": "Philip",
-  "RelatedEvents": "Creation"
+  "RelatedEvents": "Creation",
+  "VerificationStatus": "Awaiting Review",
+  "LastReviewed": ""
 }

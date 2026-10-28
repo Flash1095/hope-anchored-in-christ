@@ -6,5 +6,8 @@
   "RelatedPeople": "Paul; Jesus",
   "RelatedEvents": "The Sermon on the Mount",
   "Slug": "works",
-  "Places": "Galilee"
+  "Places": "Galilee",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

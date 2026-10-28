@@ -9,5 +9,8 @@
   "RelatedBooks": "Matthew; Mark; Luke; John; 1 Corinthians",
   "Slug": "easter",
   "Places": "Jerusalem; Golgotha",
-  "RelatedEvents": "The Resurrection"
+  "RelatedEvents": "The Resurrection",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

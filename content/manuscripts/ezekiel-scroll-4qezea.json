@@ -22,5 +22,7 @@
   "Significance": "A proto-Masoretic witness that agrees substantially with the Masoretic Text of Ezekiel, including in the temple-vision and temple-measurement passages. Its value is as an early, pre-Christian Hebrew witness to the text of Ezekiel: it shows the book circulating in essentially the form later preserved in the Masoretic tradition, well before the medieval codices.",
   "Slug": "ezekiel-scroll-4qezea",
   "Sources": "https://en.wikipedia.org/wiki/List_of_manuscripts_from_Qumran_Cave_4; https://www.cjconroy.net/bib/ezek-text.htm",
-  "Work": "Ezekiel"
+  "Work": "Ezekiel",
+  "VerificationStatus": "Verified",
+  "LastReviewed": "2026-10-27"
 }

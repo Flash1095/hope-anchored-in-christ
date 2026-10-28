@@ -20,5 +20,7 @@
   "Status": "Published",
   "LastUpdated": "2026-10-23",
   "RelatedPeople": "King David",
-  "Places": "Jerusalem; Plains of Moab"
+  "Places": "Jerusalem; Plains of Moab",
+  "VerificationStatus": "Awaiting Review",
+  "LastReviewed": ""
 }

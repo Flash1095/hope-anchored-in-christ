@@ -262,6 +262,26 @@ FIELD_HOME = {"RelatedBooks": "books", "RelatedBook": "books", "BibleBooks": "bo
     "RelatedDoctrines": "doctrines", "RelatedQuestions": "questions", "RelatedFinds": "finds",
     "Places": "places", "Place": "places", "Course": "courses"}
 SKIP_FIELDS = ["Slug", "Maps", "Image", "ImageCredit", "ImageSource", "PanelImage", "PanelImageCredit"]
+VERIF_FIELDS = ["VerificationStatus", "Sources", "LastReviewed"]
+VERIF_MEANING = {
+    "Verified": "Checked against the sources listed below. Its core claims \u2014 identification, dates, and cited passages \u2014 were matched to a scholarly or primary source.",
+    "Awaiting Review": "Not yet checked against scholarly sources. Treat its claims as provisional until this entry is reviewed.",
+    "Scholarly Debate": "Scholars disagree about a key claim in this entry. The entry text states the disagreement; read it as contested, not settled.",
+}
+
+
+def verification_box(row):
+    status = (row.get("VerificationStatus") or "Awaiting Review").strip()
+    cls = "fulfilled" if status == "Verified" else ("debated" if status == "Scholarly Debate" else "future")
+    meaning = VERIF_MEANING.get(status, VERIF_MEANING["Awaiting Review"])
+    html = '<div class="verif-box"><span class="badge %s">%s</span> <span class="verif-meaning">%s</span> <a href="#/verification">About verification</a>' % (cls, esc(status), esc(meaning))
+    src = (row.get("Sources") or "").strip()
+    if src:
+        html += '<div class="verif-sources"><strong>Sources:</strong> ' + render_entry_field("Sources", src, None, None, None) + "</div>"
+    rev = (row.get("LastReviewed") or "").strip()
+    html += '<div class="verif-reviewed">Last reviewed: ' + (esc(rev) if rev else "not yet reviewed") + "</div></div>"
+    return html
+
 SNIPPET_FIELDS = ["Summary", "Description", "Story", "Definition", "ShortAnswer",
     "ProphecySummary", "Explanation", "BiblicalUsage", "Beliefs"]
 # Collections with no generic detail page: quizzes is an interactive
@@ -646,7 +666,7 @@ def entry_page(e, glob, home, quizzes_by_course):
         parts.append(fig)
     dl = []
     for field, v in row.items():
-        if field in SKIP_FIELDS:
+        if field in SKIP_FIELDS or field in VERIF_FIELDS:
             continue
         if field in STUDY_FIELDS or field == "StudyIntroduction":
             continue
@@ -657,7 +677,7 @@ def entry_page(e, glob, home, quizzes_by_course):
             continue
         dl.append("<dt>%s</dt><dd>%s</dd>" % (
             esc(label(field)), render_entry_field(field, v, coll, glob, home)))
-    body = "\n".join(parts) + '<div class="detail"><dl>' + "\n".join(dl) + "</dl>"
+    body = "\n".join(parts) + '<div class="detail"><dl>' + "\n".join(dl) + "</dl>" + verification_box(row)
     if any((row.get(f) or "").strip() for f in STUDY_FIELDS):
         body += '<div class="study">'
         intro = (row.get("StudyIntroduction") or "").strip()

@@ -5,5 +5,8 @@
   "RelatedBooks": "Romans; Ephesians; Luke; John",
   "RelatedPeople": "Jesus; Paul; Mary Magdalene",
   "RelatedEvents": "The Prodigal Son; Peter and Cornelius",
-  "Slug": "acceptance"
+  "Slug": "acceptance",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

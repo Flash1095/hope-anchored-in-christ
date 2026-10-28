@@ -16,5 +16,8 @@
   "Image": "assets/finds/magdala-stone.jpg",
   "ImageCredit": "Photo: Hanay (CC BY-SA 3.0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3AMagdala_Stone_%285%29.jpg",
-  "Slug": "magdala-stone"
+  "Slug": "magdala-stone",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

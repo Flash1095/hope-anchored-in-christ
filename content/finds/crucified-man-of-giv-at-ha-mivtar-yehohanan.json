@@ -15,5 +15,8 @@
   "RelatedBooks": "John; Matthew; Mark; Luke",
   "Places": "Jerusalem",
   "RelatedEvents": "The Crucifixion",
-  "Slug": "crucified-man-of-givat-ha-mivtar-yehohanan"
+  "Slug": "crucified-man-of-givat-ha-mivtar-yehohanan",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

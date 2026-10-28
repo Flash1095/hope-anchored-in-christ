@@ -11,5 +11,8 @@
   "RelatedPeople": "Jesus; Mary, Mother of Jesus; John the Apostle; Joseph of Arimathea",
   "Slug": "golgotha",
   "RelatedEvents": "The Crucifixion",
-  "Places": "Jerusalem; Bethany"
+  "Places": "Jerusalem; Bethany",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

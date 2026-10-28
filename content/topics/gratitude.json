@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Paul; King David",
   "RelatedEvents": "The Last Supper; The Feeding of the Five Thousand",
   "Slug": "gratitude",
-  "Places": "Jerusalem; Galilee"
+  "Places": "Jerusalem; Galilee",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

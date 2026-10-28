@@ -9,5 +9,8 @@
   "RelatedBooks": "Daniel; Matthew; Mark; Luke; John; Revelation",
   "Slug": "kingdom-of-god",
   "Places": "Galilee; Bethlehem; Golgotha; Jerusalem",
-  "RelatedEvents": "The Sermon on the Mount; The Birth of Jesus; The Crucifixion; The Resurrection; Pentecost"
+  "RelatedEvents": "The Sermon on the Mount; The Birth of Jesus; The Crucifixion; The Resurrection; Pentecost",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

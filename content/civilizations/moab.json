@@ -11,5 +11,8 @@
   "RelatedPlaces": "Plains of Moab",
   "RelatedEvents": "Ruth's Loyalty",
   "RelatedFinds": "Mesha Stele (Moabite Stone); Balaam Inscription (Deir Alla Inscription)",
-  "Slug": "moab"
+  "Slug": "moab",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

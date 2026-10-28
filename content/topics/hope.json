@@ -9,5 +9,8 @@
   "RelatedBooks": "Psalms; Lamentations; Romans; Hebrews; 1 Peter; Jeremiah",
   "Slug": "hope",
   "RelatedEvents": "The Resurrection; Fall of Jerusalem and the Exile; Cyrus's Decree and Return from Exile",
-  "Places": "Jerusalem; Babylon"
+  "Places": "Jerusalem; Babylon",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -21,5 +21,7 @@
   "LastUpdated": "2026-10-23",
   "RelatedPeople": "Adam; Eve",
   "Places": "Garden of Eden",
-  "RelatedEvents": "The Fall"
+  "RelatedEvents": "The Fall",
+  "VerificationStatus": "Awaiting Review",
+  "LastReviewed": ""
 }

@@ -18,5 +18,8 @@
   "Image": "assets/finds/cyrus-cylinder.jpg",
   "ImageCredit": "Photo: Photograph by Mike Peel (www.mikepeel.net). (CC BY-SA 4.0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3ACyrus_Cylinder_2.jpg",
-  "Slug": "cyrus-cylinder"
+  "Slug": "cyrus-cylinder",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

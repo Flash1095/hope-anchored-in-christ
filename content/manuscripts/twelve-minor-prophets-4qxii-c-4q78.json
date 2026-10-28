@@ -22,5 +22,7 @@
   "Significance": "Best-preserved Qumran biblical copy of Joel: its Joel coverage (Joel 1:10-20; 2:1, 8-23; 3:6, 8-10, 12-19, 21 in English numbering) is substantially larger than 4Q82's Joel coverage. It also preserves a large block of Hosea 4 and Amos 3 and 7, useful for checking the Masoretic Text, but it is not best for Hosea or Amos (both: 4Q82) or Zephaniah (4Q77) or Malachi (4Q76).",
   "Slug": "twelve-minor-prophets-4qxii-c-4q78",
   "Sources": "https://en.wikipedia.org/wiki/List_of_manuscripts_from_Qumran_Cave_4; https://bible.streetwitnessing.org/dead-sea-scrolls-dss/neviim-dss/12-minor-prophets-dss",
-  "Work": "Hosea; Joel; Amos; Zephaniah"
+  "Work": "Hosea; Joel; Amos; Zephaniah",
+  "VerificationStatus": "Verified",
+  "LastReviewed": "2026-10-27"
 }

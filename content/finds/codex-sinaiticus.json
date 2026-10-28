@@ -14,5 +14,8 @@
   "Image": "assets/finds/codex-sinaiticus.jpg",
   "ImageCredit": "Photo: Unknown authorUnknown author (Public domain)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3ACodex_Sinaiticus_Matthew_6%2C4-32.JPG",
-  "Slug": "codex-sinaiticus"
+  "Slug": "codex-sinaiticus",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

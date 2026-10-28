@@ -12,5 +12,8 @@
   "RelatedBooks": "Matthew; Romans; 2 Corinthians",
   "Slug": "dikaiosyne",
   "RelatedPeople": "Paul; Abraham",
-  "RelatedEvents": "The Crucifixion"
+  "RelatedEvents": "The Crucifixion",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

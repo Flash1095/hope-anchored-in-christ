@@ -10,5 +10,8 @@
   "RelatedBooks": "Genesis; John",
   "RelatedPeople": "Jacob; Abraham",
   "Slug": "bethel",
-  "Places": "Shechem; Samaria"
+  "Places": "Shechem; Samaria",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

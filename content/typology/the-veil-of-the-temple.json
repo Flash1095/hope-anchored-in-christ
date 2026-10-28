@@ -9,5 +9,8 @@
   "RelatedPeople": "Aaron; Jesus",
   "RelatedEvents": "The Crucifixion",
   "Slug": "veil-of-the-temple",
-  "Places": "Jerusalem"
+  "Places": "Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

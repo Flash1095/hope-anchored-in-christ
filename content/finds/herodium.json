@@ -15,5 +15,8 @@
   "Image": "assets/finds/herodium.jpg",
   "ImageCredit": "Photo: Asaf T. (Public domain)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3AHerodium_from_above_2.jpg",
-  "Slug": "herodium"
+  "Slug": "herodium",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

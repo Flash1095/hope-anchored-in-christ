@@ -8,7 +8,10 @@
     "RelatedTopics": "World Religions; Truth; Jesus Christ",
     "Slug": "all-religions-lead-to-god",
     "RelatedPeople": "Jesus",
-    "RelatedEvents": "The Resurrection"
+    "RelatedEvents": "The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "Christianity Copied Pagan Myths",
@@ -20,7 +23,10 @@
     "Slug": "christianity-copied-pagan-myths",
     "RelatedPeople": "Jesus; Paul",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Crucifixion; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "Evolution Makes God Unnecessary",
@@ -32,7 +38,10 @@
     "Slug": "evolution-makes-god-unnecessary",
     "RelatedPeople": "Adam",
     "Places": "Garden of Eden",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "Faith Is Just Wish Fulfillment",
@@ -43,7 +52,10 @@
     "RelatedTopics": "Faith; Psychology; Truth",
     "Slug": "faith-is-just-wish-fulfillment",
     "RelatedPeople": "Paul",
-    "RelatedEvents": "The Conversion of Paul"
+    "RelatedEvents": "The Conversion of Paul",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "God Has No Partners: Tawhid vs Trinity",
@@ -54,7 +66,10 @@
     "RelatedTopics": "Trinity; Islam; God",
     "Slug": "god-has-no-partners-tawhid-vs-trinity",
     "RelatedPeople": "Jesus; Abraham",
-    "RelatedEvents": "The Baptism of Jesus"
+    "RelatedEvents": "The Baptism of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "God Is One, Not Three",
@@ -65,7 +80,10 @@
     "RelatedTopics": "Trinity; Monotheism; God",
     "Slug": "god-is-one-not-three",
     "RelatedPeople": "Moses; Jesus",
-    "RelatedEvents": "The Baptism of Jesus"
+    "RelatedEvents": "The Baptism of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "If God Exists, Why Is He Hidden?",
@@ -77,7 +95,10 @@
     "Slug": "if-god-exists-why-is-he-hidden",
     "RelatedPeople": "Job; Moses",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Burning Bush"
+    "RelatedEvents": "The Burning Bush",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "If God Is Good, Why Is There Evil?",
@@ -88,7 +109,10 @@
     "RelatedTopics": "Evil and Suffering; Free Will; Hope",
     "Slug": "if-god-is-good-why-is-there-evil",
     "RelatedPeople": "Job; Jesus",
-    "RelatedEvents": "The Fall; The Crucifixion"
+    "RelatedEvents": "The Fall; The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "Jesus Did Not Die on the Cross",
@@ -100,7 +124,10 @@
     "Slug": "jesus-did-not-die-on-the-cross",
     "RelatedPeople": "Jesus; Simon Peter; Joseph of Arimathea",
     "Places": "Golgotha; Jerusalem",
-    "RelatedEvents": "The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Crucifixion; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "Jesus Is Not the Messiah",
@@ -112,7 +139,10 @@
     "Slug": "jesus-is-not-the-messiah",
     "RelatedPeople": "Jesus; King David; Isaiah",
     "Places": "Bethlehem",
-    "RelatedEvents": "The Birth of Jesus; The Resurrection"
+    "RelatedEvents": "The Birth of Jesus; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "Jesus Never Claimed to Be God",
@@ -124,7 +154,10 @@
     "Slug": "jesus-never-claimed-to-be-god",
     "RelatedPeople": "Jesus; John the Apostle",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "Karma Explains Suffering Better",
@@ -134,7 +167,10 @@
     "Scripture": "Romans 3:23-24; Revelation 21:4; Galatians 6:7",
     "RelatedTopics": "Karma; Grace; Evil and Suffering",
     "Slug": "karma-explains-suffering-better",
-    "RelatedPeople": "Job"
+    "RelatedPeople": "Job",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "Liberation Comes Through Detachment",
@@ -145,7 +181,10 @@
     "RelatedTopics": "Desire; Salvation; Buddhism",
     "Slug": "liberation-comes-through-detachment",
     "RelatedPeople": "Jesus; Paul",
-    "RelatedEvents": "The Sermon on the Mount"
+    "RelatedEvents": "The Sermon on the Mount",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "Many Gods, One Truth",
@@ -157,7 +196,10 @@
     "Slug": "many-gods-one-truth",
     "RelatedPeople": "Elijah; Moses",
     "Places": "Mount Carmel",
-    "RelatedEvents": "Elijah on Mount Carmel"
+    "RelatedEvents": "Elijah on Mount Carmel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "Morality Doesn't Need God",
@@ -169,7 +211,10 @@
     "Slug": "morality-doesn-t-need-god",
     "RelatedPeople": "Moses; Paul",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments"
+    "RelatedEvents": "The Ten Commandments",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "Muhammad Is the Final Prophet",
@@ -180,7 +225,10 @@
     "RelatedTopics": "Jesus Christ; Prophecy; Islam",
     "Slug": "muhammad-is-the-final-prophet",
     "RelatedPeople": "Jesus; Moses",
-    "RelatedEvents": "Transfiguration"
+    "RelatedEvents": "Transfiguration",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "Prayer Doesn't Work",
@@ -192,7 +240,10 @@
     "Slug": "prayer-doesn-t-work",
     "RelatedPeople": "Hannah; Elijah",
     "Places": "Shiloh",
-    "RelatedEvents": "Elijah on Mount Carmel"
+    "RelatedEvents": "Elijah on Mount Carmel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "Science Has Disproved God",
@@ -202,7 +253,10 @@
     "Scripture": "Psalm 19:1; Romans 1:20; Colossians 1:16-17",
     "RelatedTopics": "Science and Faith; Creation; Reason",
     "Slug": "science-has-disproved-god",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "The Bible Contradicts Itself",
@@ -213,7 +267,10 @@
     "RelatedTopics": "Bible Reliability; Interpretation; Scripture",
     "Slug": "the-bible-contradicts-itself",
     "RelatedPeople": "Matthew; John the Apostle",
-    "RelatedEvents": "The Resurrection"
+    "RelatedEvents": "The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "The Bible Has Been Corrupted",
@@ -225,7 +282,10 @@
     "Slug": "the-bible-has-been-corrupted",
     "RelatedPeople": "Ezra",
     "Places": "Jerusalem",
-    "RelatedEvents": "Ezra Reads the Law"
+    "RelatedEvents": "Ezra Reads the Law",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "The Church Is Full of Hypocrites",
@@ -237,7 +297,10 @@
     "Slug": "the-church-is-full-of-hypocrites",
     "RelatedPeople": "Simon Peter; Judas Iscariot",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Crucifixion; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "The Church's Violent History",
@@ -249,7 +312,10 @@
     "Slug": "the-church-s-violent-history",
     "RelatedPeople": "Jesus; Stephen",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Crucifixion; Martyrdom of Stephen"
+    "RelatedEvents": "The Crucifixion; Martyrdom of Stephen",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "The Gospels Were Written Too Late to Trust",
@@ -261,7 +327,10 @@
     "Slug": "the-gospels-were-written-too-late-to-trust",
     "RelatedPeople": "Matthew; John the Apostle; Simon Peter",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Resurrection"
+    "RelatedEvents": "The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "The Messiah Must Bring World Peace",
@@ -273,7 +342,10 @@
     "Slug": "the-messiah-must-bring-world-peace",
     "RelatedPeople": "Jesus; Isaiah",
     "Places": "Bethlehem",
-    "RelatedEvents": "The Birth of Jesus; Triumphal Entry"
+    "RelatedEvents": "The Birth of Jesus; Triumphal Entry",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "The Old Testament God Is Violent",
@@ -285,7 +357,10 @@
     "Slug": "the-old-testament-god-is-violent",
     "RelatedPeople": "Moses; Joshua; Jesus",
     "Places": "Jericho",
-    "RelatedEvents": "The Walls of Jericho; The Crucifixion"
+    "RelatedEvents": "The Walls of Jericho; The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "The Qur'an Corrects the Bible",
@@ -297,7 +372,10 @@
     "Slug": "the-qur-an-corrects-the-bible",
     "RelatedPeople": "Jesus; Moses",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments"
+    "RelatedEvents": "The Ten Commandments",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "There Are No Miracles",
@@ -309,7 +387,10 @@
     "Slug": "there-are-no-miracles",
     "RelatedPeople": "Jesus; Moses; Elijah",
     "Places": "Egypt",
-    "RelatedEvents": "The Ten Plagues; The Resurrection"
+    "RelatedEvents": "The Ten Plagues; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "Who Created God?",
@@ -319,7 +400,10 @@
     "Scripture": "Psalm 90:2; Exodus 3:14; Revelation 1:8",
     "RelatedTopics": "Existence of God; Creation; Eternity",
     "Slug": "who-created-god",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "Why Do the Innocent Suffer?",
@@ -330,7 +414,10 @@
     "RelatedTopics": "Evil and Suffering; Comfort; Hope",
     "Slug": "why-do-the-innocent-suffer",
     "RelatedPeople": "Job; Jesus",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Objection": "Why Only One Way?",
@@ -342,6 +429,9 @@
     "Slug": "why-only-one-way",
     "RelatedPeople": "Jesus; Simon Peter",
     "Places": "Jerusalem",
-    "RelatedEvents": "Pentecost"
+    "RelatedEvents": "Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

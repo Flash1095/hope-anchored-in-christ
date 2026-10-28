@@ -12,5 +12,8 @@
   "RelatedBooks": "Matthew; John; 1 John",
   "Slug": "phos",
   "RelatedPeople": "Jesus; John the Apostle",
-  "RelatedEvents": "Transfiguration"
+  "RelatedEvents": "Transfiguration",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -8,5 +8,8 @@
   "RelatedBooks": "Numbers; John",
   "RelatedPeople": "Moses; Jesus; Nicodemus",
   "RelatedEvents": "Wilderness Wanderings; The Crucifixion",
-  "Slug": "bronze-serpent"
+  "Slug": "bronze-serpent",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

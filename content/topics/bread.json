@@ -6,5 +6,8 @@
   "RelatedPeople": "Moses; Elijah; Jesus; Paul",
   "RelatedEvents": "Wilderness Wanderings; The Feeding of the Five Thousand; The Last Supper",
   "Slug": "bread",
-  "Places": "Galilee; Jerusalem"
+  "Places": "Galilee; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Simon Peter; Paul",
   "RelatedEvents": "The Last Supper",
   "Slug": "service",
-  "Places": "Jerusalem"
+  "Places": "Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

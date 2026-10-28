@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Isaiah; Paul; John",
   "RelatedEvents": "Creation; The Birth of Jesus; Transfiguration",
   "Slug": "light",
-  "Places": "Garden of Eden; Bethlehem"
+  "Places": "Garden of Eden; Bethlehem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

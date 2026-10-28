@@ -9,5 +9,8 @@
   "RelatedPeople": "Aaron; Moses; Jesus",
   "RelatedEvents": "The Crucifixion; The Ascension",
   "Slug": "high-priest",
-  "Places": "Jerusalem"
+  "Places": "Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -6,5 +6,8 @@
   "RelatedPeople": "Moses; Noah; Jesus; The Samaritan Woman",
   "RelatedEvents": "Creation; Noah and the Flood; The Exodus and the Red Sea; The Baptism of Jesus",
   "Slug": "water",
-  "Places": "Garden of Eden; Mount Ararat; Egypt; Jordan River"
+  "Places": "Garden of Eden; Mount Ararat; Egypt; Jordan River",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -11,5 +11,8 @@
   "RelatedPlaces": "Canaan; Jericho; Hebron; Jerusalem",
   "RelatedEvents": "The Call of Abraham; The Walls of Jericho; Crossing the Jordan",
   "RelatedFinds": "Amarna Letters",
-  "Slug": "canaan"
+  "Slug": "canaan",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

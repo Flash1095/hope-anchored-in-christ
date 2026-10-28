@@ -1,12 +1,15 @@
 {
- "Topic": "Hebrew Language",
- "Category": "Language",
- "Summary": "Hebrew is the language of the Old Testament, a tongue whose words carry layers of meaning that translation can only partly convey.",
- "JewishBackground": "Biblical Hebrew's root system lets single words branch into families of meaning: shalom means peace, wholeness, and welfare; hesed means steadfast love, mercy, and loyalty. Wordplay runs through the text, from Adam formed from adamah, the ground, to names that tell a person's story.",
- "PointsToChrist": "The New Testament preserves the Hebrew world even in Greek: Jesus is Yeshua, a name meaning salvation, and Matthew ties that name to his mission, for he will save his people from their sins. Reading the Old Testament with Hebrew ears lets the Messiah's story sound in its original key.",
- "Scripture": "Genesis 2:7; Matthew 1:21; John 1:1",
- "RelatedTopics": "Wisdom; Prophecy; Faith",
- "Slug": "hebrew-language",
- "RelatedPeople": "Moses; Ezra",
- "RelatedEvents": "The Ten Commandments; Ezra Reads the Law"
+  "Topic": "Hebrew Language",
+  "Category": "Language",
+  "Summary": "Hebrew is the language of the Old Testament, a tongue whose words carry layers of meaning that translation can only partly convey.",
+  "JewishBackground": "Biblical Hebrew's root system lets single words branch into families of meaning: shalom means peace, wholeness, and welfare; hesed means steadfast love, mercy, and loyalty. Wordplay runs through the text, from Adam formed from adamah, the ground, to names that tell a person's story.",
+  "PointsToChrist": "The New Testament preserves the Hebrew world even in Greek: Jesus is Yeshua, a name meaning salvation, and Matthew ties that name to his mission, for he will save his people from their sins. Reading the Old Testament with Hebrew ears lets the Messiah's story sound in its original key.",
+  "Scripture": "Genesis 2:7; Matthew 1:21; John 1:1",
+  "RelatedTopics": "Wisdom; Prophecy; Faith",
+  "Slug": "hebrew-language",
+  "RelatedPeople": "Moses; Ezra",
+  "RelatedEvents": "The Ten Commandments; Ezra Reads the Law",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

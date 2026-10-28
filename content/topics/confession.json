@@ -6,5 +6,8 @@
   "RelatedPeople": "King David; John the Apostle",
   "RelatedBooks": "Psalms; Proverbs; 1 John; James",
   "Slug": "confession",
-  "RelatedEvents": "David and Bathsheba"
+  "RelatedEvents": "David and Bathsheba",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

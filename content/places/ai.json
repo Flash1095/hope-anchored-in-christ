@@ -10,5 +10,8 @@
   "RelatedBooks": "Joshua",
   "RelatedPeople": "Joshua",
   "Slug": "ai",
-  "Places": "Jericho; Bethel"
+  "Places": "Jericho; Bethel",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -22,5 +22,7 @@
   "Significance": "One of three Qumran copies of Judges (with 4QJudga, covering chapter 6, and 4QJudgb, covering chapters 19 and 21), and the fullest of the three. Its text is close to the Masoretic Text. It is a Hebrew original, not a translation.",
   "Slug": "1q6-judges-scroll",
   "Sources": "https://www.deadseascrolls.org.il/explore-the-archive/manuscript/1Q6-1; https://ia601507.us.archive.org/18/items/TheBiblicalQumranScrolls/61301866-The-Biblical-Qumran-Scrolls-Eugene-Charles-Ulrich.pdf; https://en.wikipedia.org/wiki/List_of_manuscripts_from_Qumran_Cave_1",
-  "Work": "Judges"
+  "Work": "Judges",
+  "VerificationStatus": "Verified",
+  "LastReviewed": "2026-10-27"
 }

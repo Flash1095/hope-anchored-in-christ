@@ -9,5 +9,8 @@
   "RelatedBooks": "Exodus; Ruth; Mark; Ephesians; 1 Peter; Psalms; Romans",
   "Slug": "redemption",
   "Places": "Egypt; Golgotha; Jerusalem",
-  "RelatedEvents": "The Exodus and the Red Sea; The Crucifixion; The Resurrection"
+  "RelatedEvents": "The Exodus and the Red Sea; The Crucifixion; The Resurrection",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

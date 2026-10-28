@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Paul; John the Apostle",
   "RelatedEvents": "The Crucifixion; The Resurrection",
   "Slug": "victory-of-christ",
-  "Places": "Golgotha; Jerusalem"
+  "Places": "Golgotha; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

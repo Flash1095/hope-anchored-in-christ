@@ -6,5 +6,8 @@
   "RelatedPeople": "Moses; Joshua; Jesus; Paul",
   "RelatedEvents": "The Passover; Crossing the Jordan; The Last Supper",
   "Slug": "remembrance",
-  "Places": "Egypt; Jordan River; Gilgal; Jerusalem"
+  "Places": "Egypt; Jordan River; Gilgal; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

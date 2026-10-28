@@ -6,5 +6,8 @@
   "RelatedPeople": "Paul; Simon Peter; Joshua",
   "RelatedEvents": "Crossing the Jordan; The Resurrection",
   "Slug": "inheritance",
-  "Places": "Jordan River; Gilgal; Jerusalem"
+  "Places": "Jordan River; Gilgal; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

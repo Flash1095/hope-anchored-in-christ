@@ -12,5 +12,8 @@
   "RelatedBooks": "Romans; 1 Corinthians; Hebrews; Revelation",
   "Slug": "thanatos",
   "RelatedPeople": "Jesus; Paul",
-  "RelatedEvents": "The Crucifixion; The Resurrection"
+  "RelatedEvents": "The Crucifixion; The Resurrection",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -18,5 +18,8 @@
   "Image": "assets/finds/mesha-stele.jpg",
   "ImageCredit": "Photo: Mbzt (CC BY-SA 4.0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3AF4171_Louvre_stele_de_Mesha_AO5066_rwk.jpg",
-  "Slug": "mesha-stele"
+  "Slug": "mesha-stele",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

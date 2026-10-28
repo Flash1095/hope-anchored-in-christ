@@ -6,5 +6,8 @@
   "RelatedPeople": "Paul",
   "RelatedDoctrines": "Creation",
   "RelatedBooks": "Genesis; Psalms; James; Galatians",
-  "Slug": "dignity"
+  "Slug": "dignity",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

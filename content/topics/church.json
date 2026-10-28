@@ -9,5 +9,8 @@
   "RelatedBooks": "Matthew; Acts; 1 Corinthians; Ephesians; 1 Peter",
   "Slug": "church",
   "Places": "Jerusalem",
-  "RelatedEvents": "Pentecost"
+  "RelatedEvents": "Pentecost",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

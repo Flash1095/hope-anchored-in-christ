@@ -9,5 +9,8 @@
   "RelatedBooks": "Acts; Romans; Hebrews; 1 John",
   "Slug": "community",
   "Places": "Jerusalem",
-  "RelatedEvents": "Pentecost"
+  "RelatedEvents": "Pentecost",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

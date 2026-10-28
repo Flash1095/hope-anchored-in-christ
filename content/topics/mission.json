@@ -8,5 +8,8 @@
   "RelatedBooks": "Matthew; Luke; John; Acts; Romans",
   "Slug": "mission",
   "Places": "Jerusalem; Antioch",
-  "RelatedEvents": "Pentecost; Paul's Missionary Journeys"
+  "RelatedEvents": "Pentecost; Paul's Missionary Journeys",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

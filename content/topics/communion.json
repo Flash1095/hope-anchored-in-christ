@@ -1,13 +1,16 @@
 {
- "Topic": "Communion",
- "Category": "Doctrine",
- "Summary": "Communion, or the Lord's Supper, is the meal Jesus instituted on the night before His death, in which believers eat bread and drink wine in remembrance of Him. Churches differ on exactly how Christ is present in the meal, but all agree it proclaims His death, nourishes faith, and binds believers to one another. It is both a backward look to the cross and a forward look to the marriage supper of the Lamb.",
- "KeyPassages": "Matthew 26:26-29; Luke 22:14-20; 1 Corinthians 11:23-29",
- "RelatedPeople": "Jesus; Paul",
- "RelatedDoctrines": "Lord's Supper; Atonement",
- "RelatedQuestions": "What is baptism and should I be baptized?",
- "RelatedBooks": "Matthew; Luke; 1 Corinthians",
- "Slug": "communion",
- "Places": "Jerusalem",
- "RelatedEvents": "The Last Supper"
+  "Topic": "Communion",
+  "Category": "Doctrine",
+  "Summary": "Communion, or the Lord's Supper, is the meal Jesus instituted on the night before His death, in which believers eat bread and drink wine in remembrance of Him. Churches differ on exactly how Christ is present in the meal, but all agree it proclaims His death, nourishes faith, and binds believers to one another. It is both a backward look to the cross and a forward look to the marriage supper of the Lamb.",
+  "KeyPassages": "Matthew 26:26-29; Luke 22:14-20; 1 Corinthians 11:23-29",
+  "RelatedPeople": "Jesus; Paul",
+  "RelatedDoctrines": "Lord's Supper; Atonement",
+  "RelatedQuestions": "What is baptism and should I be baptized?",
+  "RelatedBooks": "Matthew; Luke; 1 Corinthians",
+  "Slug": "communion",
+  "Places": "Jerusalem",
+  "RelatedEvents": "The Last Supper",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

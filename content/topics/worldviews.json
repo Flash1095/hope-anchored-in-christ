@@ -8,5 +8,8 @@
   "RelatedBooks": "Genesis; Romans; Colossians; 1 Peter; 2 Corinthians",
   "Slug": "worldviews",
   "Places": "Garden of Eden",
-  "RelatedEvents": "Creation; The Fall"
+  "RelatedEvents": "Creation; The Fall",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

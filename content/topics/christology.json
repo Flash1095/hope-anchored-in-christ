@@ -8,5 +8,8 @@
   "RelatedQuestions": "Who is Jesus Christ?",
   "RelatedBooks": "John; Philippians; Colossians; Hebrews",
   "Slug": "christology",
-  "RelatedEvents": "Transfiguration; The Resurrection"
+  "RelatedEvents": "Transfiguration; The Resurrection",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

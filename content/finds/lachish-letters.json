@@ -18,5 +18,8 @@
   "Image": "assets/finds/lachish-letters.jpg",
   "ImageCredit": "Photo: Dr Tim Bulkeley (CC SA 1.0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/Lakhish_Letters.jpg",
-  "Slug": "lachish-letters"
+  "Slug": "lachish-letters",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

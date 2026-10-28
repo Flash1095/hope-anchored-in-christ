@@ -11,5 +11,8 @@
   "RelatedPlaces": "Babylon; Babel",
   "RelatedEvents": "The Tower of Babel; Fall of Jerusalem and the Exile; Daniel in the Lions' Den",
   "RelatedFinds": "Babylonian Chronicle (Nebuchadnezzar's Chronicle); Code of Hammurabi; Nabonidus Cylinder; Jehoiachin's Rations Tablets; Al-Yahudu Tablets",
-  "Slug": "babylon"
+  "Slug": "babylon",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

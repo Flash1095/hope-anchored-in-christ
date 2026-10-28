@@ -14,5 +14,8 @@
   "Image": "assets/finds/codex-vaticanus.jpg",
   "ImageCredit": "Photo: Unknown authorUnknown author (Public domain)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3AVaticanus_codex_B_3773_page_24.jpg",
-  "Slug": "codex-vaticanus"
+  "Slug": "codex-vaticanus",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

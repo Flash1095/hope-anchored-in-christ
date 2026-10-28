@@ -9,5 +9,8 @@
   "RelatedBooks": "Acts; 1 Corinthians; 1 John; Hebrews",
   "Slug": "fellowship",
   "Places": "Jerusalem",
-  "RelatedEvents": "Pentecost"
+  "RelatedEvents": "Pentecost",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

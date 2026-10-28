@@ -9,5 +9,8 @@
   "RelatedBooks": "John; Romans; Ephesians; 2 Corinthians; Hebrews; Genesis; Psalms; Titus",
   "Slug": "grace",
   "Places": "Golgotha; Jerusalem",
-  "RelatedEvents": "The Prodigal Son; The Crucifixion; The Conversion of Paul; Pentecost"
+  "RelatedEvents": "The Prodigal Son; The Crucifixion; The Conversion of Paul; Pentecost",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

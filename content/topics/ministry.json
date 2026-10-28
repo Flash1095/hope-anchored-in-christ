@@ -6,5 +6,8 @@
   "RelatedPeople": "Paul; Jesus",
   "RelatedDoctrines": "Spiritual Gifts; Priesthood of Believers",
   "RelatedBooks": "Mark; Romans; Ephesians; 1 Peter",
-  "Slug": "ministry"
+  "Slug": "ministry",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

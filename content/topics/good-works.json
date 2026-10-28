@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Paul; Timothy",
   "RelatedEvents": "The Good Samaritan; The Sermon on the Mount",
   "Slug": "good-works",
-  "Places": "Jericho; Jerusalem; Galilee"
+  "Places": "Jericho; Jerusalem; Galilee",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

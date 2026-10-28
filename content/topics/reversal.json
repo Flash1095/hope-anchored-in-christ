@@ -6,5 +6,8 @@
   "RelatedPeople": "Hannah; Mary, Mother of Jesus; Jesus; Paul",
   "RelatedEvents": "The Crucifixion; The Resurrection",
   "Slug": "reversal",
-  "Places": "Golgotha; Jerusalem"
+  "Places": "Golgotha; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

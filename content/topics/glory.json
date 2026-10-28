@@ -6,5 +6,8 @@
   "RelatedPeople": "Moses; Jesus; Paul",
   "RelatedBooks": "Exodus; Psalms; John; Romans; Revelation",
   "Slug": "glory",
-  "RelatedEvents": "Transfiguration"
+  "RelatedEvents": "Transfiguration",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

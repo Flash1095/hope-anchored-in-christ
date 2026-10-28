@@ -1,13 +1,16 @@
 {
- "Type": "Melchizedek",
- "Category": "Person",
- "OldTestamentPassage": "Genesis 14:18-20; Psalm 110:4",
- "Fulfillment": "Melchizedek, king of Salem and priest of God Most High, appears without genealogy, beginning, or end in Scripture, blessed Abraham, and offered bread and wine. God swore that the coming Messiah would be a priest forever in Melchizedek's order, and Hebrews shows Jesus is that eternal priest-king.",
- "FulfillmentPassage": "Hebrews 5:6-10; Hebrews 6:20; Hebrews 7:1-25",
- "Explanation": "Unlike Aaron's priests, who died and were replaced, Melchizedek points to a priesthood that never ends and a king who is also a priest. Because Jesus lives forever in this order, He is able to save completely those who come to God through Him.",
- "RelatedBooks": "Genesis; Psalms; Hebrews",
- "RelatedPeople": "Melchizedek; Abraham; Jesus",
- "RelatedEvents": "The Call of Abraham; The Last Supper",
- "Slug": "melchizedek",
- "Places": "Jerusalem"
+  "Type": "Melchizedek",
+  "Category": "Person",
+  "OldTestamentPassage": "Genesis 14:18-20; Psalm 110:4",
+  "Fulfillment": "Melchizedek, king of Salem and priest of God Most High, appears without genealogy, beginning, or end in Scripture, blessed Abraham, and offered bread and wine. God swore that the coming Messiah would be a priest forever in Melchizedek's order, and Hebrews shows Jesus is that eternal priest-king.",
+  "FulfillmentPassage": "Hebrews 5:6-10; Hebrews 6:20; Hebrews 7:1-25",
+  "Explanation": "Unlike Aaron's priests, who died and were replaced, Melchizedek points to a priesthood that never ends and a king who is also a priest. Because Jesus lives forever in this order, He is able to save completely those who come to God through Him.",
+  "RelatedBooks": "Genesis; Psalms; Hebrews",
+  "RelatedPeople": "Melchizedek; Abraham; Jesus",
+  "RelatedEvents": "The Call of Abraham; The Last Supper",
+  "Slug": "melchizedek",
+  "Places": "Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

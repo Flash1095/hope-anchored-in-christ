@@ -1,11 +1,14 @@
 {
- "Topic": "Ethics",
- "Category": "Christian Living",
- "Summary": "Ethics is the study of right and wrong, and Christian ethics roots moral judgment in God's character revealed in Scripture. It asks not only what rules to follow but what kind of people to become: truthful, just, merciful, and pure. In a world of competing moral visions, Christian ethics offers both clarity about God's commands and grace for those who fail to keep them.",
- "KeyPassages": "Exodus 20:1-17; Micah 6:8; Matthew 22:37-40; Romans 13:8-10",
- "RelatedPeople": "Moses; Jesus; Paul",
- "RelatedBooks": "Exodus; Micah; Matthew; Romans",
- "Slug": "ethics",
- "Places": "Mount Sinai",
- "RelatedEvents": "The Ten Commandments; The Sermon on the Mount"
+  "Topic": "Ethics",
+  "Category": "Christian Living",
+  "Summary": "Ethics is the study of right and wrong, and Christian ethics roots moral judgment in God's character revealed in Scripture. It asks not only what rules to follow but what kind of people to become: truthful, just, merciful, and pure. In a world of competing moral visions, Christian ethics offers both clarity about God's commands and grace for those who fail to keep them.",
+  "KeyPassages": "Exodus 20:1-17; Micah 6:8; Matthew 22:37-40; Romans 13:8-10",
+  "RelatedPeople": "Moses; Jesus; Paul",
+  "RelatedBooks": "Exodus; Micah; Matthew; Romans",
+  "Slug": "ethics",
+  "Places": "Mount Sinai",
+  "RelatedEvents": "The Ten Commandments; The Sermon on the Mount",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

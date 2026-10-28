@@ -9,5 +9,8 @@
   "RelatedBooks": "Luke",
   "RelatedPeople": "Zechariah, Father of John the Baptist; Mary, Mother of Jesus; John the Baptist",
   "LifeLesson": "Elizabeth's long reproach ended in a testimony that encouraged a younger woman's faith. Your answered prayer may become someone else's confirmation — share it gladly.",
-  "Slug": "elizabeth"
+  "Slug": "elizabeth",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

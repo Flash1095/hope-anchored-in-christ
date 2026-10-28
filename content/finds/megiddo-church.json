@@ -15,5 +15,8 @@
   "Image": "assets/finds/megiddo-church.jpg",
   "ImageCredit": "Photo: Vesafis Tzferris (CC BY-SA 4.0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/Akeptous_Inscription_2.jpg",
-  "Slug": "megiddo-church"
+  "Slug": "megiddo-church",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

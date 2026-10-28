@@ -6,5 +6,8 @@
   "RelatedPeople": "Simon Peter; John the Apostle",
   "RelatedDoctrines": "Inspiration of Scripture",
   "RelatedBooks": "Luke; John; 2 Peter; Revelation",
-  "Slug": "canon"
+  "Slug": "canon",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

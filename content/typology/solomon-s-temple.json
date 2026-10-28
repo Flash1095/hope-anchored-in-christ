@@ -1,13 +1,16 @@
 {
- "Type": "Solomon's Temple",
- "Category": "Institution",
- "OldTestamentPassage": "1 Kings 6:1; 1 Kings 8:27-30; 2 Chronicles 3:1",
- "Fulfillment": "Jesus spoke of His own body as the temple that would be destroyed and raised in three days, and He claimed something greater than the temple was here. Through His resurrection, God's dwelling is no longer a building in Jerusalem but Christ Himself and, in Him, His people built together as a living temple.",
- "FulfillmentPassage": "Matthew 12:6; John 2:19-22; 1 Corinthians 3:16; Ephesians 2:21-22; 1 Peter 2:4-5",
- "Explanation": "Built on Mount Moriah, where Abraham once offered Isaac, the temple was the meeting place of heaven and earth, filled with God's glory at its dedication. Christ fulfills it by being the true meeting place, and one day the whole new creation becomes God's temple, with no building needed at all.",
- "RelatedBooks": "1 Kings; 2 Chronicles; Matthew; John; Ephesians; 1 Peter",
- "RelatedPeople": "King Solomon; King David; Jesus",
- "RelatedEvents": "Building of Solomon's Temple; The Binding of Isaac; The Resurrection",
- "Slug": "solomons-temple",
- "Places": "Jerusalem"
+  "Type": "Solomon's Temple",
+  "Category": "Institution",
+  "OldTestamentPassage": "1 Kings 6:1; 1 Kings 8:27-30; 2 Chronicles 3:1",
+  "Fulfillment": "Jesus spoke of His own body as the temple that would be destroyed and raised in three days, and He claimed something greater than the temple was here. Through His resurrection, God's dwelling is no longer a building in Jerusalem but Christ Himself and, in Him, His people built together as a living temple.",
+  "FulfillmentPassage": "Matthew 12:6; John 2:19-22; 1 Corinthians 3:16; Ephesians 2:21-22; 1 Peter 2:4-5",
+  "Explanation": "Built on Mount Moriah, where Abraham once offered Isaac, the temple was the meeting place of heaven and earth, filled with God's glory at its dedication. Christ fulfills it by being the true meeting place, and one day the whole new creation becomes God's temple, with no building needed at all.",
+  "RelatedBooks": "1 Kings; 2 Chronicles; Matthew; John; Ephesians; 1 Peter",
+  "RelatedPeople": "King Solomon; King David; Jesus",
+  "RelatedEvents": "Building of Solomon's Temple; The Binding of Isaac; The Resurrection",
+  "Slug": "solomons-temple",
+  "Places": "Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

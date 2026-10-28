@@ -17,5 +17,8 @@
   "Image": "assets/finds/ephesus-theater.jpg",
   "ImageCredit": "Photo: Furkan Akkurt (CC BY-SA 4.0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3AGreat_Theatre_of_Ephesus_2024.jpg",
-  "Slug": "ephesus-theater"
+  "Slug": "ephesus-theater",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

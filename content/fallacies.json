@@ -7,7 +7,10 @@
     "FaithDiscussionExample": "In a discussion someone says, 'You only believe the Bible because you were raised in church,' instead of engaging with what the Bible actually says.",
     "HowToRespond": "Thank the person for being honest, then gently separate the messenger from the message: 'My background is part of my story — could we look together at whether the claim itself holds up?'",
     "RelatedTopics": "Apologetics; Logic; Respectful Dialogue",
-    "Slug": "ad-hominem"
+    "Slug": "ad-hominem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Strawman",
@@ -17,7 +20,10 @@
     "FaithDiscussionExample": "A Christian who says faith and reason work together is told, 'So you think we should just believe blindly without any evidence,' which misstates their position.",
     "HowToRespond": "Restate your view calmly and check understanding: 'That is not quite what I meant — here is what I am actually saying. Does that version sound fair to discuss?'",
     "RelatedTopics": "Apologetics; Logic; Listening Well",
-    "Slug": "strawman"
+    "Slug": "strawman",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "False Dichotomy",
@@ -27,7 +33,10 @@
     "FaithDiscussionExample": "Someone says, 'You must choose science or the Bible — you cannot have both,' as if thoughtful Christians have not held both together for centuries.",
     "HowToRespond": "Name the missing options with kindness: 'I wonder if there might be a third way here that honors both concerns. Could we explore it together?'",
     "RelatedTopics": "Logic; Science and Faith; Worldviews",
-    "Slug": "false-dichotomy"
+    "Slug": "false-dichotomy",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Slippery Slope",
@@ -37,7 +46,10 @@
     "FaithDiscussionExample": "Someone warns, 'If you question one interpretation of a passage, soon you will not believe anything in the Bible,' without showing why careful study must lead there.",
     "HowToRespond": "Acknowledge the underlying concern, then ask for the links in the chain: 'I share your desire to stay faithful — can we look step by step at what actually follows?'",
     "RelatedTopics": "Logic; Biblical Interpretation; Wisdom",
-    "Slug": "slippery-slope"
+    "Slug": "slippery-slope",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Appeal to Authority",
@@ -47,7 +59,10 @@
     "FaithDiscussionExample": "A video claims, 'A famous scientist said the resurrection is impossible, so it is settled,' without examining the historical evidence itself.",
     "HowToRespond": "Respect expertise while asking for reasons: 'I value what experts say — could we look at the evidence and arguments they are pointing to, not just the conclusion?'",
     "RelatedTopics": "Apologetics; Evidence; Logic",
-    "Slug": "appeal-to-authority"
+    "Slug": "appeal-to-authority",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Appeal to Ignorance",
@@ -57,7 +72,10 @@
     "FaithDiscussionExample": "A skeptic says, 'Since you cannot prove God exists in a laboratory, God cannot exist,' and a believer might reply in reverse, 'You cannot disprove God, so that proves He exists.' Neither move is fair on its own.",
     "HowToRespond": "Agree that uncertainty is honest, then shift to what we do know: 'Not having a final proof either way invites us to weigh the evidence we actually have.'",
     "RelatedTopics": "Apologetics; Faith and Reason; Evidence",
-    "Slug": "appeal-to-ignorance"
+    "Slug": "appeal-to-ignorance",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Begging the Question",
@@ -67,7 +85,10 @@
     "FaithDiscussionExample": "In conversation: 'The Bible is true because it is God's Word, and we know it is God's Word because the Bible says so,' offered as the whole argument without any other reasons.",
     "HowToRespond": "Notice the circle gently and offer additional grounds: 'That states what I believe — let me also share historical and experiential reasons that support it.'",
     "RelatedTopics": "Logic; Apologetics; Biblical Authority",
-    "Slug": "begging-the-question"
+    "Slug": "begging-the-question",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Circular Reasoning",
@@ -77,7 +98,10 @@
     "FaithDiscussionExample": "Someone says, 'I know this interpretation is right because my teacher taught it, and I know my teacher is always right because he taught this interpretation.'",
     "HowToRespond": "Unpack the loop together without embarrassment: 'It sounds like we are using the same idea twice — is there an outside reason or passage we can test it against?'",
     "RelatedTopics": "Logic; Biblical Interpretation; Truth",
-    "Slug": "circular-reasoning"
+    "Slug": "circular-reasoning",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Genetic Fallacy",
@@ -87,7 +111,10 @@
     "FaithDiscussionExample": "Someone says, 'The Bible cannot be trusted because it was written by ancient people,' judging the message only by its age and authors rather than its content and evidence.",
     "HowToRespond": "Affirm that origins can raise good questions, then return to content: 'Ancient does not automatically mean untrue — could we examine what it says and the evidence for it?'",
     "RelatedTopics": "Apologetics; Logic; Origins",
-    "Slug": "genetic-fallacy"
+    "Slug": "genetic-fallacy",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "No True Scotsman",
@@ -97,7 +124,10 @@
     "FaithDiscussionExample": "When a professing Christian behaves badly, someone says, 'No true Christian would ever do that,' instead of honestly acknowledging failure and the need for repentance.",
     "HowToRespond": "Be honest about real examples: 'Christians, like everyone, can fail badly. Rather than redefine the word, let us look at what Christ actually calls His followers to be.'",
     "RelatedTopics": "Logic; Christian Witness; Repentance",
-    "Slug": "no-true-scotsman"
+    "Slug": "no-true-scotsman",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Red Herring",
@@ -107,7 +137,10 @@
     "FaithDiscussionExample": "Asked about a difficult Bible passage, someone changes the subject entirely: 'Well, what about all the bad things done in the name of religion?' — an important topic, but a different one.",
     "HowToRespond": "Honor the new topic while returning kindly: 'That is worth discussing too. Could we finish this question first, then come back to that one together?'",
     "RelatedTopics": "Apologetics; Logic; Respectful Dialogue",
-    "Slug": "red-herring"
+    "Slug": "red-herring",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Tu Quoque",
@@ -117,7 +150,10 @@
     "FaithDiscussionExample": "When the church is challenged on generosity, a reply comes, 'Well, secular charities waste money too,' which does not answer how the church itself should give.",
     "HowToRespond": "Own what is true first: 'You may be right that we fall short too — that is something we should fix. Can we still look at the original point on its own?'",
     "RelatedTopics": "Logic; Humility; Christian Witness",
-    "Slug": "tu-quoque"
+    "Slug": "tu-quoque",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Appeal to Emotion",
@@ -127,7 +163,10 @@
     "FaithDiscussionExample": "Someone says, 'How could a loving person ever believe in judgment? That idea just feels cruel,' letting a strong feeling settle a theological question by itself.",
     "HowToRespond": "Take feelings seriously without letting them decide alone: 'I understand why that feels hard — I feel it too. Could we look slowly at what Scripture teaches and why?'",
     "RelatedTopics": "Logic; Apologetics; Compassion",
-    "Slug": "appeal-to-emotion"
+    "Slug": "appeal-to-emotion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Hasty Generalization",
@@ -137,7 +176,10 @@
     "FaithDiscussionExample": "Someone meets two disinterested church members and concludes, 'Christians never really care about anyone outside their group,' based on a very narrow experience.",
     "HowToRespond": "Validate the experience, then widen the picture: 'I am sorry that was your experience. Would you be open to meeting other examples before we settle on the whole group?'",
     "RelatedTopics": "Logic; Stereotypes; Christian Witness",
-    "Slug": "hasty-generalization"
+    "Slug": "hasty-generalization",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Post Hoc Ergo Propter Hoc",
@@ -147,7 +189,10 @@
     "FaithDiscussionExample": "Someone prays for a job, receives an offer the next week, and while gratitude is fitting, a friend might too quickly claim prayer always works like a formula for getting what we want.",
     "HowToRespond": "Celebrate good outcomes while staying careful about causes: 'I am thankful for how this turned out. Let us be thoughtful about what we can and cannot claim caused it.'",
     "RelatedTopics": "Logic; Prayer; Providence",
-    "Slug": "post-hoc-ergo-propter-hoc"
+    "Slug": "post-hoc-ergo-propter-hoc",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Equivocation",
@@ -157,7 +202,10 @@
     "FaithDiscussionExample": "In a faith talk, 'faith' shifts between 'trust based on reasons' and 'believing without any reason,' so a claim about blind belief is used to dismiss trusting faith.",
     "HowToRespond": "Define terms together early: 'We may be using that word differently — could we pause and agree on what we each mean by it here?'",
     "RelatedTopics": "Logic; Word Studies; Definitions",
-    "Slug": "equivocation"
+    "Slug": "equivocation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Loaded Question",
@@ -167,7 +215,10 @@
     "FaithDiscussionExample": "Someone asks a pastor, 'Why does your church keep brainwashing young people?' — the question assumes manipulation before any evidence is discussed.",
     "HowToRespond": "Unpack the assumption politely before answering: 'There is an assumption tucked into that question — could we look at whether it is accurate first, then I will gladly answer?'",
     "RelatedTopics": "Logic; Respectful Dialogue; Apologetics",
-    "Slug": "loaded-question"
+    "Slug": "loaded-question",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Moving the Goalposts",
@@ -177,7 +228,10 @@
     "FaithDiscussionExample": "A skeptic asks for one good manuscript reason to trust a Gospel, is given several, then says none of it counts unless there is video evidence from the first century.",
     "HowToRespond": "Name the original standard with grace: 'We started with that first request — since we have looked at it, could we agree on what would count as a fair next step?'",
     "RelatedTopics": "Apologetics; Evidence; Logic",
-    "Slug": "moving-the-goalposts"
+    "Slug": "moving-the-goalposts",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Bandwagon",
@@ -187,7 +241,10 @@
     "FaithDiscussionExample": "Someone says, 'This new spiritual trend is everywhere online, so it must be true and good for you,' based on how fast it is spreading.",
     "HowToRespond": "Slow the momentum kindly: 'It is understandable to notice what is trending. Could we ask whether it is true and wise, apart from how popular it feels right now?'",
     "RelatedTopics": "Logic; Discernment; Culture",
-    "Slug": "bandwagon"
+    "Slug": "bandwagon",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Appeal to Nature",
@@ -197,7 +254,10 @@
     "FaithDiscussionExample": "In an ethics discussion someone says, 'That behavior occurs in nature, so it must be morally right for people,' skipping the step of asking what God intends for human flourishing.",
     "HowToRespond": "Appreciate creation while asking the deeper question: 'Nature teaches us a lot, but could we also ask what is good and purposeful, not only what occurs naturally?'",
     "RelatedTopics": "Christian Ethics; Logic; Nature and Creation",
-    "Slug": "appeal-to-nature"
+    "Slug": "appeal-to-nature",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Appeal to Popularity",
@@ -207,7 +267,10 @@
     "FaithDiscussionExample": "Someone says, 'Millions of people no longer believe the Bible is relevant, so it clearly is not,' or the reverse, 'So many people believe it, that alone proves it true.' Both rely on numbers alone.",
     "HowToRespond": "Respect people on all sides while returning to reasons: 'Numbers tell us what is common, not always what is true — could we weigh the actual claims together?'",
     "RelatedTopics": "Logic; Truth; Apologetics",
-    "Slug": "appeal-to-popularity"
+    "Slug": "appeal-to-popularity",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "False Cause",
@@ -217,7 +280,10 @@
     "FaithDiscussionExample": "A decline in church attendance and a social problem rise in the same decade, and someone blames one for the other without checking other causes or evidence.",
     "HowToRespond": "Look for other explanations together: 'They do rise together — could there be a third factor, or a different connection, that explains both more fairly?'",
     "RelatedTopics": "Logic; Evidence; Science and Faith",
-    "Slug": "false-cause"
+    "Slug": "false-cause",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Anecdotal Fallacy",
@@ -227,7 +293,10 @@
     "FaithDiscussionExample": "A person says, 'I prayed once and nothing happened, so prayer never works,' or, 'My friend had a powerful experience, so that proves every claim about that teaching.'",
     "HowToRespond": "Honor the story, then place it in context: 'Your experience matters and I want to hear it. Could we also look at the wider picture and what Scripture shows over time?'",
     "RelatedTopics": "Logic; Testimony; Evidence",
-    "Slug": "anecdotal-fallacy"
+    "Slug": "anecdotal-fallacy",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Cherry Picking",
@@ -237,7 +306,10 @@
     "FaithDiscussionExample": "Someone quotes a single verse about judgment to prove God is only angry, ignoring the many passages about His mercy — or quotes only comfort verses and ignores calls to repentance.",
     "HowToRespond": "Invite the whole picture: 'That passage is important — could we read it in context and alongside the other passages on this topic, so we hear the full counsel?'",
     "RelatedTopics": "Biblical Interpretation; Logic; Context",
-    "Slug": "cherry-picking"
+    "Slug": "cherry-picking",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Texas Sharpshooter",
@@ -247,7 +319,10 @@
     "FaithDiscussionExample": "Someone collects scattered numbers and dates from unrelated passages after an event and presents them as a precise prophecy of that event, having chosen only the fitting pieces afterward.",
     "HowToRespond": "Ask what was predicted beforehand: 'That is an interesting pattern — was it identified before the event, and does it hold up when we include the pieces that do not fit?'",
     "RelatedTopics": "Logic; Prophecy; Biblical Interpretation",
-    "Slug": "texas-sharpshooter"
+    "Slug": "texas-sharpshooter",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Appeal to Novelty",
@@ -257,7 +332,10 @@
     "FaithDiscussionExample": "Someone dismisses historic Christian teaching with, 'That belief is centuries old — it is time we moved past it,' as if age alone proved it wrong.",
     "HowToRespond": "Welcome fresh insight while testing it: 'New ideas can be a gift. Could we judge this one by its truth and fruit, rather than by its date?'",
     "RelatedTopics": "Logic; Church History; Discernment",
-    "Slug": "appeal-to-novelty"
+    "Slug": "appeal-to-novelty",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Appeal to Tradition",
@@ -267,7 +345,10 @@
     "FaithDiscussionExample": "Someone says, 'Our church has always interpreted this passage this way, so there is no need to ever re-examine it,' closing the door on careful study of the text itself.",
     "HowToRespond": "Honor tradition as a starting point: 'Tradition often preserves real wisdom — could we also test our practice against Scripture together, as earlier generations did?'",
     "RelatedTopics": "Logic; Tradition; Biblical Interpretation",
-    "Slug": "appeal-to-tradition"
+    "Slug": "appeal-to-tradition",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Composition",
@@ -277,7 +358,10 @@
     "FaithDiscussionExample": "Someone argues, 'Each verse in this chapter is encouraging, so the whole Bible must never contain anything challenging or hard,' moving from a part to the whole too quickly.",
     "HowToRespond": "Distinguish parts and whole gently: 'That may be true of the parts — could we check whether it still holds when we consider the whole together?'",
     "RelatedTopics": "Logic; Biblical Interpretation; Reasoning",
-    "Slug": "composition"
+    "Slug": "composition",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Division",
@@ -287,7 +371,10 @@
     "FaithDiscussionExample": "Someone says, 'The early church was generous, so every individual early Christian must have been generous in every way,' flattening a general description into a claim about each person.",
     "HowToRespond": "Keep the whole and the parts distinct: 'A true description of the group does not always describe each member — could we look at the individuals on their own evidence?'",
     "RelatedTopics": "Logic; Biblical Interpretation; Reasoning",
-    "Slug": "division"
+    "Slug": "division",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Fallacy": "Middle Ground",
@@ -297,6 +384,9 @@
     "FaithDiscussionExample": "In a doctrinal disagreement, someone says, 'One side says Jesus rose bodily and the other says He did not, so the truth is probably somewhere in between,' treating a factual claim as a compromise.",
     "HowToRespond": "Seek truth over symmetry: 'Compromise can be kind in preferences, but for factual claims could we follow the evidence, even if it lands closer to one side?'",
     "RelatedTopics": "Logic; Truth; Apologetics",
-    "Slug": "middle-ground"
+    "Slug": "middle-ground",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

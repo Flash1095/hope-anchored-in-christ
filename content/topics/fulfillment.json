@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Paul; John the Apostle",
   "RelatedEvents": "The Resurrection; The Birth of Jesus",
   "Slug": "fulfillment",
-  "Places": "Jerusalem; Bethlehem"
+  "Places": "Jerusalem; Bethlehem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

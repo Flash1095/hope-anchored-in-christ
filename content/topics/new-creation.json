@@ -6,5 +6,8 @@
   "RelatedPeople": "Isaiah; Jesus; Paul; John",
   "RelatedEvents": "Creation; The Resurrection; Pentecost",
   "Slug": "new-creation",
-  "Places": "Garden of Eden; Jerusalem"
+  "Places": "Garden of Eden; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

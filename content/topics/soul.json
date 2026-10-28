@@ -6,5 +6,8 @@
   "RelatedPeople": "King David; Jesus",
   "RelatedDoctrines": "Heaven; Hell",
   "RelatedBooks": "Genesis; Psalms; Matthew; Mark; 1 Thessalonians",
-  "Slug": "soul"
+  "Slug": "soul",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

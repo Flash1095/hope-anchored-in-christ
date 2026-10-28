@@ -22,5 +22,7 @@
   "Significance": "One of the oldest textual witnesses to the Hebrew book of Job, which reached its final redaction in the 3rd century BC. Its value is as an early Hebrew witness to the text of Job's speeches and Elihu's speeches (chapters 31-37) centuries before the medieval Masoretic manuscripts; its fragmentary condition means it cannot settle the book's textual history on its own, and its few corrections away from the Masoretic Text are noted rather than treated as a separate edition.",
   "Slug": "job-scroll-4q99",
   "Sources": "https://en.wikipedia.org/wiki/List_of_manuscripts_from_Qumran_Cave_4; https://orion-bibliography.huji.ac.il/node/81682; https://pdfs.semanticscholar.org/2f66/cae0c815d425b75ff438e999ad868c78fabe.pdf",
-  "Work": "Job"
+  "Work": "Job",
+  "VerificationStatus": "Verified",
+  "LastReviewed": "2026-10-27"
 }

@@ -9,5 +9,8 @@
   "RelatedBooks": "Genesis; Psalms; Romans",
   "Slug": "original-sin",
   "Places": "Garden of Eden",
-  "RelatedEvents": "The Fall"
+  "RelatedEvents": "The Fall",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

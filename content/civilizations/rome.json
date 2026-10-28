@@ -11,5 +11,8 @@
   "RelatedPlaces": "Rome; Antioch",
   "RelatedEvents": "The Birth of Jesus; The Crucifixion; Paul in Rome",
   "RelatedFinds": "Pilate Stone; Herodium (Herod's Tomb); Ephesus Theater; Sergius Paulus Inscription",
-  "Slug": "rome"
+  "Slug": "rome",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

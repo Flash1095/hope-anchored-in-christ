@@ -22,5 +22,7 @@
   "Significance": "The most important Qumran witness to Samuel. Many of its readings differ from the Masoretic Text but agree with the Septuagint / Old Greek. Its most famous contribution is the longer Nahash paragraph before 1 Samuel 11:1, attested by 4QSama — where the scribe first skipped part of it by homoioteleuton and then inserted the missing words between the lines — and by Josephus, Antiquities 6.68–71; the paragraph is absent from the Masoretic Text. It is a Hebrew original, not a translation.",
   "Slug": "4q51-samuel-scroll",
   "Sources": "https://en.wikipedia.org/wiki/The_Samuel_Scroll; https://www.deadseascrolls.org.il/explore-the-archive/manuscript/4Q51-2; https://ia601507.us.archive.org/18/items/TheBiblicalQumranScrolls/61301866-The-Biblical-Qumran-Scrolls-Eugene-Charles-Ulrich.pdf; https://bible-history.com/net/1-samuel-11",
-  "Work": "1 Samuel; 2 Samuel"
+  "Work": "1 Samuel; 2 Samuel",
+  "VerificationStatus": "Verified",
+  "LastReviewed": "2026-10-27"
 }

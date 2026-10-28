@@ -5,5 +5,8 @@
   "RelatedBooks": "Philippians; John; 2 Peter; Ephesians",
   "RelatedPeople": "Paul; Jesus; Simon Peter",
   "RelatedEvents": "Transfiguration; The Conversion of Paul",
-  "Slug": "knowledge-of-christ"
+  "Slug": "knowledge-of-christ",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

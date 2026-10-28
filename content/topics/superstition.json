@@ -6,5 +6,8 @@
   "RelatedPeople": "King Saul",
   "RelatedDoctrines": "Demons; Providence",
   "RelatedBooks": "Leviticus; Deuteronomy; 1 Samuel; Isaiah; Acts",
-  "Slug": "superstition"
+  "Slug": "superstition",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

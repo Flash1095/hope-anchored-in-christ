@@ -9,5 +9,8 @@
   "RelatedBooks": "Genesis; Romans; 1 Corinthians",
   "Slug": "the-fall",
   "Places": "Garden of Eden",
-  "RelatedEvents": "The Fall"
+  "RelatedEvents": "The Fall",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

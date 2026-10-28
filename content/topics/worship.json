@@ -9,5 +9,8 @@
   "RelatedBooks": "Exodus; Psalms; John; Romans; Revelation; Genesis",
   "Slug": "worship",
   "Places": "Jerusalem",
-  "RelatedEvents": "The Binding of Isaac; Building of Solomon's Temple; Pentecost"
+  "RelatedEvents": "The Binding of Isaac; Building of Solomon's Temple; Pentecost",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

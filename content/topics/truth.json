@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus",
   "RelatedDoctrines": "Inspiration of Scripture",
   "RelatedBooks": "Psalms; John; Ephesians",
-  "Slug": "truth"
+  "Slug": "truth",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

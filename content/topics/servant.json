@@ -6,5 +6,8 @@
   "RelatedPeople": "Isaiah; Jesus; Paul",
   "RelatedEvents": "The Last Supper; The Crucifixion",
   "Slug": "servant",
-  "Places": "Jerusalem; Golgotha"
+  "Places": "Jerusalem; Golgotha",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

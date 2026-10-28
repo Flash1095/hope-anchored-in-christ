@@ -19,5 +19,8 @@
   "Image": "assets/finds/temple-warning-inscription.jpg",
   "ImageCredit": "Photo: oncenawhile (CC BY-SA 3.0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3AJerusalem_Temple_Warning_Inscription.jpg",
-  "Slug": "temple-warning-inscription"
+  "Slug": "temple-warning-inscription",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

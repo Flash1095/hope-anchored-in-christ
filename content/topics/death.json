@@ -8,5 +8,8 @@
   "RelatedBooks": "Genesis; Psalms; John; 1 Corinthians",
   "Slug": "death",
   "Places": "Golgotha",
-  "RelatedEvents": "The Crucifixion; The Resurrection"
+  "RelatedEvents": "The Crucifixion; The Resurrection",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

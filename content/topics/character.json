@@ -6,5 +6,8 @@
   "RelatedPeople": "Paul; Simon Peter; Joseph, Son of Jacob",
   "RelatedEvents": "Joseph and His Brothers; The Temptation in the Wilderness",
   "Slug": "character",
-  "Places": "Egypt"
+  "Places": "Egypt",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

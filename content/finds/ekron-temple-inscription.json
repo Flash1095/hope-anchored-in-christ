@@ -17,5 +17,8 @@
   "Image": "assets/finds/ekron-temple-inscription.jpg",
   "ImageCredit": "Photo: Oren Rozen (CC BY-SA 4.0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3AJRSLM_300116_Ekron_inscription.jpg",
-  "Slug": "ekron-temple-inscription"
+  "Slug": "ekron-temple-inscription",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

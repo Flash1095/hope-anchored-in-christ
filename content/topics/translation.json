@@ -6,5 +6,8 @@
   "RelatedPeople": "Paul",
   "RelatedDoctrines": "Inspiration of Scripture; Inerrancy of Scripture",
   "RelatedBooks": "Nehemiah; Luke; Acts; 1 Corinthians; Revelation",
-  "Slug": "translation"
+  "Slug": "translation",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

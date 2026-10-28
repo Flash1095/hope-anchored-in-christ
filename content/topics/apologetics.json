@@ -6,5 +6,8 @@
   "RelatedPeople": "Simon Peter; Paul",
   "RelatedQuestions": "Is Jesus the only way to God?; Is the Bible reliable and true?",
   "RelatedBooks": "1 Peter; Acts; Jude; Colossians",
-  "Slug": "apologetics"
+  "Slug": "apologetics",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

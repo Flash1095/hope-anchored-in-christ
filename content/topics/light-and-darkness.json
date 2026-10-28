@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Isaiah; Paul; John",
   "RelatedEvents": "Creation; The Birth of Jesus; The Crucifixion; The Resurrection",
   "Slug": "light-and-darkness",
-  "Places": "Garden of Eden; Bethlehem; Golgotha; Jerusalem"
+  "Places": "Garden of Eden; Bethlehem; Golgotha; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

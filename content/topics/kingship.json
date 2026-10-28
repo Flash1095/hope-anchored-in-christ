@@ -6,5 +6,8 @@
   "RelatedPeople": "King David; Paul; Isaiah",
   "RelatedEvents": "David Becomes King; Triumphal Entry",
   "Slug": "kingship",
-  "Places": "Hebron; Bethany; Jerusalem"
+  "Places": "Hebron; Bethany; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

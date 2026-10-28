@@ -9,5 +9,8 @@
   "RelatedBooks": "Job; Psalms; Proverbs; Ecclesiastes; James; 1 Corinthians",
   "Slug": "wisdom",
   "Places": "Jerusalem; Bethlehem",
-  "RelatedEvents": "Building of Solomon's Temple; The Birth of Jesus"
+  "RelatedEvents": "Building of Solomon's Temple; The Birth of Jesus",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

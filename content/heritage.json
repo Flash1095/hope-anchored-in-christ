@@ -10,7 +10,10 @@
     "Scripture": "John 1:1",
     "RelatedTopics": "Christology; Nicene Creed; Courage",
     "RelatedBooks": "John; Colossians",
-    "Slug": "athanasius"
+    "Slug": "athanasius",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Augustine of Hippo",
@@ -23,7 +26,10 @@
     "Scripture": "Romans 7:24-25",
     "RelatedTopics": "Grace; Conversion; Sin",
     "RelatedBooks": "Romans; Psalms",
-    "Slug": "augustine-of-hippo"
+    "Slug": "augustine-of-hippo",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "C. S. Lewis",
@@ -36,7 +42,10 @@
     "Scripture": "Ecclesiastes 3:11",
     "RelatedTopics": "Imagination; Apologetics; Conversion",
     "RelatedBooks": "Ecclesiastes; Romans",
-    "Slug": "c-s-lewis"
+    "Slug": "c-s-lewis",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Charles Spurgeon",
@@ -49,7 +58,10 @@
     "Scripture": "Isaiah 45:22",
     "RelatedTopics": "Preaching; Evangelism; Grace",
     "RelatedBooks": "Isaiah; Romans",
-    "Slug": "charles-spurgeon"
+    "Slug": "charles-spurgeon",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Confessions",
@@ -62,7 +74,10 @@
     "Scripture": "Psalm 51:17",
     "RelatedTopics": "Confession; Conversion; Grace",
     "RelatedBooks": "Psalms; Romans",
-    "Slug": "confessions"
+    "Slug": "confessions",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Corrie ten Boom",
@@ -75,7 +90,10 @@
     "Scripture": "Ephesians 4:32",
     "RelatedTopics": "Forgiveness; Suffering; Courage",
     "RelatedBooks": "Ephesians; Romans",
-    "Slug": "corrie-ten-boom"
+    "Slug": "corrie-ten-boom",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Council of Chalcedon",
@@ -88,7 +106,10 @@
     "Scripture": "John 1:14",
     "RelatedTopics": "Christology; Creeds; Church Councils",
     "RelatedBooks": "John; Philippians",
-    "Slug": "council-of-chalcedon"
+    "Slug": "council-of-chalcedon",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Council of Nicaea",
@@ -101,7 +122,10 @@
     "Scripture": "John 1:1",
     "RelatedTopics": "Creeds; Christology; Church Councils",
     "RelatedBooks": "John; Colossians",
-    "Slug": "council-of-nicaea"
+    "Slug": "council-of-nicaea",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Dietrich Bonhoeffer",
@@ -114,7 +138,10 @@
     "Scripture": "Matthew 16:24-25",
     "RelatedTopics": "Discipleship; Courage; Suffering",
     "RelatedBooks": "Matthew; Romans",
-    "Slug": "dietrich-bonhoeffer"
+    "Slug": "dietrich-bonhoeffer",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Foxe's Book of Martyrs",
@@ -127,7 +154,10 @@
     "Scripture": "Revelation 12:11",
     "RelatedTopics": "Martyrdom; Persecution; Courage",
     "RelatedBooks": "Revelation; Acts",
-    "Slug": "foxe-s-book-of-martyrs"
+    "Slug": "foxe-s-book-of-martyrs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Institutes of the Christian Religion",
@@ -140,7 +170,10 @@
     "Scripture": "Romans 11:36",
     "RelatedTopics": "Reformation; Theology; Sovereignty",
     "RelatedBooks": "Romans; Ephesians",
-    "Slug": "institutes-of-the-christian-religion"
+    "Slug": "institutes-of-the-christian-religion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "John Calvin",
@@ -153,7 +186,10 @@
     "Scripture": "Romans 11:36",
     "RelatedTopics": "Sovereignty; Reformation; Scripture",
     "RelatedBooks": "Romans; Ephesians",
-    "Slug": "john-calvin"
+    "Slug": "john-calvin",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "John Newton",
@@ -166,7 +202,10 @@
     "Scripture": "1 Timothy 1:15",
     "RelatedTopics": "Grace; Redemption; Conversion",
     "RelatedBooks": "1 Timothy; Romans",
-    "Slug": "john-newton"
+    "Slug": "john-newton",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "John Wesley",
@@ -179,7 +218,10 @@
     "Scripture": "Romans 8:15-16",
     "RelatedTopics": "Revival; Holiness; Assurance",
     "RelatedBooks": "Romans; Galatians",
-    "Slug": "john-wesley"
+    "Slug": "john-wesley",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Martin Luther",
@@ -192,7 +234,10 @@
     "Scripture": "Romans 1:17",
     "RelatedTopics": "Reformation; Justification; Grace",
     "RelatedBooks": "Romans; Galatians",
-    "Slug": "martin-luther"
+    "Slug": "martin-luther",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Mere Christianity",
@@ -205,7 +250,10 @@
     "Scripture": "Romans 2:14-15",
     "RelatedTopics": "Apologetics; Morality; Conversion",
     "RelatedBooks": "Romans; John",
-    "Slug": "mere-christianity"
+    "Slug": "mere-christianity",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Summa Theologica",
@@ -218,7 +266,10 @@
     "Scripture": "Romans 1:20",
     "RelatedTopics": "Theology; Reason; Doctrine",
     "RelatedBooks": "Romans; Psalms",
-    "Slug": "summa-theologica"
+    "Slug": "summa-theologica",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "The Abolition Movement",
@@ -231,7 +282,10 @@
     "Scripture": "Amos 5:24",
     "RelatedTopics": "Justice; Abolition; Dignity",
     "RelatedBooks": "Amos; Galatians",
-    "Slug": "the-abolition-movement"
+    "Slug": "the-abolition-movement",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "The Cost of Discipleship",
@@ -244,7 +298,10 @@
     "Scripture": "Luke 9:23",
     "RelatedTopics": "Discipleship; Grace; Obedience",
     "RelatedBooks": "Luke; Matthew",
-    "Slug": "the-cost-of-discipleship"
+    "Slug": "the-cost-of-discipleship",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "The Great Awakening",
@@ -257,7 +314,10 @@
     "Scripture": "Acts 2:37-41",
     "RelatedTopics": "Revival; Conversion; Evangelism",
     "RelatedBooks": "Acts; Romans",
-    "Slug": "the-great-awakening"
+    "Slug": "the-great-awakening",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "The Imitation of Christ",
@@ -270,7 +330,10 @@
     "Scripture": "Matthew 11:29",
     "RelatedTopics": "Devotion; Humility; Prayer",
     "RelatedBooks": "Matthew; Philippians",
-    "Slug": "the-imitation-of-christ"
+    "Slug": "the-imitation-of-christ",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "The Methodist Movement",
@@ -283,7 +346,10 @@
     "Scripture": "James 2:17",
     "RelatedTopics": "Methodism; Holiness; Revival",
     "RelatedBooks": "James; Romans",
-    "Slug": "the-methodist-movement"
+    "Slug": "the-methodist-movement",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "The Modern Missions Movement",
@@ -296,7 +362,10 @@
     "Scripture": "Matthew 28:19-20",
     "RelatedTopics": "Missions; Translation; Evangelism",
     "RelatedBooks": "Matthew; Acts",
-    "Slug": "the-modern-missions-movement"
+    "Slug": "the-modern-missions-movement",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "The Moravian Missions",
@@ -309,7 +378,10 @@
     "Scripture": "Revelation 5:9",
     "RelatedTopics": "Missions; Sacrifice; Prayer",
     "RelatedBooks": "Revelation; Matthew",
-    "Slug": "the-moravian-missions"
+    "Slug": "the-moravian-missions",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "The Pilgrim's Progress",
@@ -322,7 +394,10 @@
     "Scripture": "Hebrews 11:13-16",
     "RelatedTopics": "Pilgrimage; Perseverance; Allegory",
     "RelatedBooks": "Hebrews; Psalms",
-    "Slug": "the-pilgrim-s-progress"
+    "Slug": "the-pilgrim-s-progress",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "The Reformation",
@@ -335,7 +410,10 @@
     "Scripture": "Romans 1:17",
     "RelatedTopics": "Reformation; Grace; Scripture",
     "RelatedBooks": "Romans; Galatians",
-    "Slug": "the-reformation"
+    "Slug": "the-reformation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "The Second Great Awakening",
@@ -348,7 +426,10 @@
     "Scripture": "Acts 2:17",
     "RelatedTopics": "Revival; Reform; Evangelism",
     "RelatedBooks": "Acts; Joel",
-    "Slug": "the-second-great-awakening"
+    "Slug": "the-second-great-awakening",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "The Westminster Confession",
@@ -361,7 +442,10 @@
     "Scripture": "Romans 11:36",
     "RelatedTopics": "Confessions; Reformed Theology; Doctrine",
     "RelatedBooks": "Romans; Ephesians",
-    "Slug": "the-westminster-confession"
+    "Slug": "the-westminster-confession",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Thomas Aquinas",
@@ -374,7 +458,10 @@
     "Scripture": "Romans 1:20",
     "RelatedTopics": "Reason; Theology; Faith and Reason",
     "RelatedBooks": "Romans; Psalms",
-    "Slug": "thomas-aquinas"
+    "Slug": "thomas-aquinas",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "William Wilberforce",
@@ -387,6 +474,9 @@
     "Scripture": "Amos 5:24",
     "RelatedTopics": "Justice; Abolition; Compassion",
     "RelatedBooks": "Amos; Isaiah",
-    "Slug": "william-wilberforce"
+    "Slug": "william-wilberforce",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

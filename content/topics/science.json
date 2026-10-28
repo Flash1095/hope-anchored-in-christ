@@ -6,5 +6,8 @@
   "RelatedPeople": "King David; Paul",
   "RelatedDoctrines": "Creation",
   "RelatedBooks": "Genesis; Psalms; Proverbs; Romans; Colossians",
-  "Slug": "science"
+  "Slug": "science",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

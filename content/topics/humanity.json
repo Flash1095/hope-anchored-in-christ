@@ -8,5 +8,8 @@
   "RelatedBooks": "Genesis; Psalms; Hebrews; Revelation",
   "Slug": "humanity",
   "Places": "Garden of Eden",
-  "RelatedEvents": "Creation; The Fall"
+  "RelatedEvents": "Creation; The Fall",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

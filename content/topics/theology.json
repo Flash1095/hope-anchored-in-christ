@@ -6,5 +6,8 @@
   "RelatedPeople": "Moses; Paul",
   "RelatedDoctrines": "Trinity",
   "RelatedBooks": "Deuteronomy; Romans; 1 Corinthians; 2 Timothy",
-  "Slug": "theology"
+  "Slug": "theology",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

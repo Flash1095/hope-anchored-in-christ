@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Lazarus; Mary Magdalene; Paul; Peter",
   "RelatedEvents": "The Resurrection; Raising of Lazarus; Pentecost",
   "Slug": "resurrection-life",
-  "Places": "Jerusalem; Bethany"
+  "Places": "Jerusalem; Bethany",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

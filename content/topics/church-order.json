@@ -6,5 +6,8 @@
   "RelatedPeople": "Paul; Timothy; Stephen",
   "RelatedEvents": "Jerusalem Council; Pentecost",
   "Slug": "church-order",
-  "Places": "Jerusalem"
+  "Places": "Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

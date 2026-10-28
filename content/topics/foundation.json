@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Paul; Simon Peter",
   "RelatedEvents": "The Sermon on the Mount; Rebuilding of the Temple",
   "Slug": "foundation",
-  "Places": "Galilee; Jerusalem"
+  "Places": "Galilee; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -7,7 +7,10 @@
     "Interpretations": "All historic Christian traditions affirm the Trinity, though they differ in explaining the procession of the Spirit, including the Eastern Orthodox and Roman Catholic debate over the filioque clause.",
     "RelatedTopics": "God; Jesus Christ; Holy Spirit; Monotheism",
     "RelatedPeople": "Athanasius; Augustine; Basil of Caesarea; Aquinas",
-    "Slug": "trinity"
+    "Slug": "trinity",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Incarnation",
@@ -19,7 +22,10 @@
     "RelatedPeople": "Athanasius; Cyril of Alexandria; Leo the Great; Augustine",
     "Slug": "incarnation",
     "Places": "Bethlehem; Nazareth",
-    "RelatedEvents": "The Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Atonement",
@@ -31,7 +37,10 @@
     "RelatedPeople": "Irenaeus; Anselm; Aquinas; Calvin; Luther",
     "Slug": "atonement",
     "Places": "Golgotha",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Justification",
@@ -42,7 +51,10 @@
     "RelatedTopics": "Salvation; Faith; Grace; Righteousness; Sanctification",
     "RelatedPeople": "Augustine; Luther; Calvin; Council of Trent",
     "Slug": "justification",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Sanctification",
@@ -52,7 +64,10 @@
     "Interpretations": "Christians differ on whether a distinct second blessing or entire sanctification is taught in Scripture, and on how instantaneous and progressive aspects of holiness relate, while agreeing growth in holiness is essential.",
     "RelatedTopics": "Holiness; Holy Spirit; Christian Life; Discipleship",
     "RelatedPeople": "Augustine; Calvin; John Wesley; Charles Wesley",
-    "Slug": "sanctification"
+    "Slug": "sanctification",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Original Sin",
@@ -64,7 +79,10 @@
     "RelatedPeople": "Augustine; Pelagius; Aquinas; Calvin",
     "Slug": "original-sin",
     "Places": "Garden of Eden",
-    "RelatedEvents": "The Fall"
+    "RelatedEvents": "The Fall",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Total Depravity",
@@ -76,7 +94,10 @@
     "RelatedPeople": "Augustine; Calvin; Dort Synod; John Wesley",
     "Slug": "total-depravity",
     "Places": "Garden of Eden",
-    "RelatedEvents": "The Fall"
+    "RelatedEvents": "The Fall",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Election",
@@ -86,7 +107,10 @@
     "Interpretations": "Christians differ on whether election is unconditional and individual, conditional on foreseen faith, or primarily corporate in Christ, with Reformed, Arminian, and Lutheran views stated in their confessions.",
     "RelatedTopics": "Predestination; Salvation; Grace; Sovereignty",
     "RelatedPeople": "Augustine; Aquinas; Calvin; Jacobus Arminius",
-    "Slug": "election"
+    "Slug": "election",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Perseverance of the Saints",
@@ -96,7 +120,10 @@
     "Interpretations": "Reformed Christians teach true believers cannot finally fall away, while Arminian, Wesleyan, and many other Christians warn that believers should heed Scripture's warnings and may teach the possibility of apostasy.",
     "RelatedTopics": "Assurance; Salvation; Eternal Security; Faith",
     "RelatedPeople": "Augustine; Calvin; Dort Synod; John Owen",
-    "Slug": "perseverance-of-the-saints"
+    "Slug": "perseverance-of-the-saints",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Resurrection",
@@ -108,7 +135,10 @@
     "RelatedPeople": "Irenaeus; Tertullian; Augustine; Aquinas",
     "Slug": "resurrection",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Resurrection"
+    "RelatedEvents": "The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Second Coming",
@@ -118,7 +148,10 @@
     "Interpretations": "Christians agree Christ will return personally and visibly, while differing on the timing of the rapture and tribulation and on millennial views, including premillennial, amillennial, and postmillennial readings.",
     "RelatedTopics": "Eschatology; Judgment; Millennial Views; Hope; Kingdom of God",
     "RelatedPeople": "Irenaeus; Augustine; Calvin; John Darby",
-    "Slug": "second-coming"
+    "Slug": "second-coming",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Baptism",
@@ -130,7 +163,10 @@
     "RelatedPeople": "Zwingli; Luther; Calvin; Menno Simons",
     "Slug": "baptism",
     "Places": "Jordan River",
-    "RelatedEvents": "The Baptism of Jesus"
+    "RelatedEvents": "The Baptism of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Lord's Supper",
@@ -142,7 +178,10 @@
     "RelatedPeople": "Justin Martyr; Aquinas; Luther; Zwingli; Calvin",
     "Slug": "lords-supper",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Last Supper"
+    "RelatedEvents": "The Last Supper",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Inspiration of Scripture",
@@ -152,7 +191,10 @@
     "Interpretations": "Christians agree Scripture is inspired, while differing on models of inspiration, the precise relationship between divine and human authorship, and how inspiration applies to translations and textual variants.",
     "RelatedTopics": "Bible; Inerrancy of Scripture; Revelation; Canon",
     "RelatedPeople": "Irenaeus; Augustine; Calvin; B. B. Warfield",
-    "Slug": "inspiration-of-scripture"
+    "Slug": "inspiration-of-scripture",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Inerrancy of Scripture",
@@ -162,7 +204,10 @@
     "Interpretations": "Many evangelicals affirm inerrancy as defined in Chicago, while other Christians prefer terms such as infallibility or trustworthiness, and Christians differ on how genre, phenomenological language, and textual questions should be handled.",
     "RelatedTopics": "Bible; Inspiration of Scripture; Authority; Truth",
     "RelatedPeople": "Augustine; Aquinas; B. B. Warfield; Charles Hodge",
-    "Slug": "inerrancy-of-scripture"
+    "Slug": "inerrancy-of-scripture",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "The Church",
@@ -174,7 +219,10 @@
     "RelatedPeople": "Ignatius of Antioch; Cyprian; Augustine; Calvin",
     "Slug": "the-church",
     "Places": "Jerusalem; Antioch",
-    "RelatedEvents": "Pentecost; Jerusalem Council"
+    "RelatedEvents": "Pentecost; Jerusalem Council",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Angels",
@@ -184,7 +232,10 @@
     "Interpretations": "Christians agree angels are real created servants of God, while differing on details such as ranks and orders of angels, guardian angels, and how much can be known beyond what Scripture states.",
     "RelatedTopics": "Creation; Heaven; Spiritual Warfare; Demons",
     "RelatedPeople": "Pseudo-Dionysius; Aquinas; Augustine; Calvin",
-    "Slug": "angels"
+    "Slug": "angels",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Demons",
@@ -194,7 +245,10 @@
     "Interpretations": "Christians agree on the reality of evil spiritual powers and Christ's victory, while differing on explanations of demon possession, territorial spirits, and the methods emphasized in deliverance ministry.",
     "RelatedTopics": "Angels; Satan; Spiritual Warfare; Sin; Atonement",
     "RelatedPeople": "Augustine; Aquinas; Martin Luther; C. S. Lewis",
-    "Slug": "demons"
+    "Slug": "demons",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Heaven",
@@ -204,7 +258,10 @@
     "Interpretations": "Christians agree on eternal life with God, while differing on the intermediate state between death and resurrection and on how literally to read biblical images of heaven and the new creation.",
     "RelatedTopics": "Resurrection; Eternal Life; Second Coming; Hope",
     "RelatedPeople": "Augustine; Aquinas; Jonathan Edwards; C. S. Lewis",
-    "Slug": "heaven"
+    "Slug": "heaven",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Hell",
@@ -214,7 +271,10 @@
     "Interpretations": "Christians who affirm final judgment differ on the nature and duration of punishment, with traditional eternal conscious punishment, conditional immortality or annihilationism, and other views discussed, while universalism is rejected by historic confessions.",
     "RelatedTopics": "Judgment; Sin; Justice; Salvation; Second Coming",
     "RelatedPeople": "Augustine; Aquinas; Jonathan Edwards; C. S. Lewis",
-    "Slug": "hell"
+    "Slug": "hell",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Creation",
@@ -226,7 +286,10 @@
     "RelatedPeople": "Irenaeus; Augustine; Aquinas; Calvin",
     "Slug": "creation",
     "Places": "Garden of Eden",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Providence",
@@ -238,7 +301,10 @@
     "RelatedPeople": "Augustine; Aquinas; Calvin; John Wesley",
     "Slug": "providence",
     "Places": "Egypt",
-    "RelatedEvents": "Joseph and His Brothers"
+    "RelatedEvents": "Joseph and His Brothers",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Virgin Birth",
@@ -250,7 +316,10 @@
     "RelatedPeople": "Ignatius of Antioch; Irenaeus; Athanasius; Augustine",
     "Slug": "virgin-birth",
     "Places": "Bethlehem; Nazareth",
-    "RelatedEvents": "The Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Ascension",
@@ -262,7 +331,10 @@
     "RelatedPeople": "Irenaeus; Augustine; Calvin; Aquinas",
     "Slug": "ascension",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Ascension"
+    "RelatedEvents": "The Ascension",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Priesthood of Believers",
@@ -272,7 +344,10 @@
     "Interpretations": "Protestants strongly emphasize this doctrine, while Roman Catholic and Orthodox traditions affirm a common priesthood of the baptized alongside a distinct ministerial priesthood, differing on how the two relate.",
     "RelatedTopics": "The Church; Worship; Ministry; Spiritual Gifts",
     "RelatedPeople": "Luther; Calvin; Erasmus; Vatican II",
-    "Slug": "priesthood-of-believers"
+    "Slug": "priesthood-of-believers",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Spiritual Gifts",
@@ -284,7 +359,10 @@
     "RelatedPeople": "Irenaeus; Augustine; Calvin; John Wesley",
     "Slug": "spiritual-gifts",
     "Places": "Corinth",
-    "RelatedEvents": "Pentecost"
+    "RelatedEvents": "Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Millennial Views",
@@ -294,7 +372,10 @@
     "Interpretations": "Premillennialists expect Christ to return before a literal millennium, amillennialists read the millennium as Christ's present reign, and postmillennialists expect gospel progress before Christ returns; Christians hold these as secondary views.",
     "RelatedTopics": "Second Coming; Eschatology; Kingdom of God; Resurrection",
     "RelatedPeople": "Irenaeus; Augustine; Jonathan Edwards; John Darby",
-    "Slug": "millennial-views"
+    "Slug": "millennial-views",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Predestination",
@@ -304,7 +385,10 @@
     "Interpretations": "Reformed Christians teach unconditional predestination to salvation, Arminians teach predestination based on God's foreknowledge of faith, and Lutherans and others frame it in distinct ways, while all orthodox views reject salvation by merit.",
     "RelatedTopics": "Election; Salvation; Grace; Providence; Free Will",
     "RelatedPeople": "Augustine; Aquinas; Calvin; Jacobus Arminius",
-    "Slug": "predestination"
+    "Slug": "predestination",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Free Will",
@@ -316,7 +400,10 @@
     "RelatedPeople": "Pelagius; Augustine; Erasmus; Luther; John Wesley",
     "Slug": "free-will",
     "Places": "Garden of Eden",
-    "RelatedEvents": "The Fall"
+    "RelatedEvents": "The Fall",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Doctrine": "Holy Spirit",
@@ -328,6 +415,9 @@
     "RelatedPeople": "Basil of Caesarea; Augustine; Calvin; John Wesley",
     "Slug": "holy-spirit",
     "Places": "Jerusalem",
-    "RelatedEvents": "Pentecost"
+    "RelatedEvents": "Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

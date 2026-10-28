@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Paul",
   "RelatedEvents": "Pentecost; Jerusalem Council",
   "Slug": "unity",
-  "Places": "Jerusalem"
+  "Places": "Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

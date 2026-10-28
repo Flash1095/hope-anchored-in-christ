@@ -8,7 +8,10 @@
     "RelatedTopics": "Archaeology; Bible History; Ancient Israel",
     "RelatedBooks": "1 Kings; 2 Samuel; Luke",
     "Slug": "archaeological-confirmation",
-    "RelatedPeople": "King David"
+    "RelatedPeople": "King David",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "Changed Lives",
@@ -20,7 +23,10 @@
     "RelatedBooks": "John; Acts; 2 Corinthians",
     "Slug": "changed-lives",
     "RelatedPeople": "Paul",
-    "RelatedEvents": "The Conversion of Paul"
+    "RelatedEvents": "The Conversion of Paul",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "Design in Biology",
@@ -31,7 +37,10 @@
     "RelatedTopics": "Creation; Intelligent Design; Life",
     "RelatedBooks": "Genesis; Psalms; Romans",
     "Slug": "design-in-biology",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "Early Christian Worship",
@@ -44,7 +53,10 @@
     "Slug": "early-christian-worship",
     "RelatedPeople": "Simon Peter; Paul",
     "Places": "Jerusalem",
-    "RelatedEvents": "Pentecost"
+    "RelatedEvents": "Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "Fulfilled Prophecy",
@@ -57,7 +69,10 @@
     "Slug": "fulfilled-prophecy",
     "RelatedPeople": "Jesus; Isaiah; Micah",
     "Places": "Bethlehem",
-    "RelatedEvents": "The Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "Human Dignity",
@@ -70,7 +85,10 @@
     "Slug": "human-dignity",
     "RelatedPeople": "Adam",
     "Places": "Garden of Eden",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "Manuscript Reliability",
@@ -80,7 +98,10 @@
     "Scripture": "2 Timothy 3:16; 2 Peter 1:21; Matthew 24:35",
     "RelatedTopics": "Bible Reliability; Manuscripts; Scripture",
     "RelatedBooks": "Matthew; 2 Timothy; 2 Peter",
-    "Slug": "manuscript-reliability"
+    "Slug": "manuscript-reliability",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "Reliability of the Gospels",
@@ -93,7 +114,10 @@
     "Slug": "reliability-of-the-gospels",
     "RelatedPeople": "Matthew; John the Apostle; Simon Peter",
     "Places": "Galilee; Jerusalem",
-    "RelatedEvents": "The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Crucifixion; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "Religious Experience",
@@ -105,7 +129,10 @@
     "RelatedBooks": "Psalms; John; Acts",
     "Slug": "religious-experience",
     "RelatedPeople": "Paul; Isaiah",
-    "RelatedEvents": "The Conversion of Paul"
+    "RelatedEvents": "The Conversion of Paul",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Argument from Beauty",
@@ -116,7 +143,10 @@
     "RelatedTopics": "Beauty; Worship; Creation",
     "RelatedBooks": "Psalms; Ecclesiastes; Philippians",
     "Slug": "the-argument-from-beauty",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Argument from Consciousness",
@@ -127,7 +157,10 @@
     "RelatedTopics": "Human Nature; Soul; Image of God",
     "RelatedBooks": "Genesis; Ecclesiastes; Romans",
     "Slug": "the-argument-from-consciousness",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Argument from Desire",
@@ -137,7 +170,10 @@
     "Scripture": "Ecclesiastes 3:11; Psalm 42:1-2; Philippians 3:20",
     "RelatedTopics": "Longing; Heaven; Human Nature",
     "RelatedBooks": "Psalms; Ecclesiastes; Philippians",
-    "Slug": "the-argument-from-desire"
+    "Slug": "the-argument-from-desire",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Argument from Free Will",
@@ -150,7 +186,10 @@
     "Slug": "the-argument-from-free-will",
     "RelatedPeople": "Adam; Eve",
     "Places": "Garden of Eden",
-    "RelatedEvents": "The Fall"
+    "RelatedEvents": "The Fall",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Argument from Love",
@@ -162,7 +201,10 @@
     "RelatedBooks": "John; 1 Corinthians; 1 John",
     "Slug": "the-argument-from-love",
     "RelatedPeople": "Jesus; John the Apostle",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Argument from Mathematics",
@@ -173,7 +215,10 @@
     "RelatedTopics": "Science and Faith; Creation; Wisdom",
     "RelatedBooks": "Job; Psalms; Romans",
     "Slug": "the-argument-from-mathematics",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Argument from Miracles",
@@ -186,7 +231,10 @@
     "Slug": "the-argument-from-miracles",
     "RelatedPeople": "Jesus; Moses",
     "Places": "Egypt",
-    "RelatedEvents": "The Ten Plagues; The Resurrection"
+    "RelatedEvents": "The Ten Plagues; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Argument from Reason",
@@ -197,7 +245,10 @@
     "RelatedTopics": "Reason; Truth; Image of God",
     "RelatedBooks": "Proverbs; Isaiah; Romans",
     "Slug": "the-argument-from-reason",
-    "RelatedPeople": "Paul"
+    "RelatedPeople": "Paul",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Argument from Truth",
@@ -208,7 +259,10 @@
     "RelatedTopics": "Truth; Reason; Jesus Christ",
     "RelatedBooks": "Psalms; John; 1 John",
     "Slug": "the-argument-from-truth",
-    "RelatedPeople": "Jesus"
+    "RelatedPeople": "Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Bible's Unity",
@@ -220,7 +274,10 @@
     "RelatedBooks": "Luke; 2 Timothy; 2 Peter",
     "Slug": "the-bible-s-unity",
     "RelatedPeople": "Moses; King David; Paul",
-    "RelatedEvents": "Creation; The Resurrection"
+    "RelatedEvents": "Creation; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Church's Survival and Growth",
@@ -233,7 +290,10 @@
     "Slug": "the-church-s-survival-and-growth",
     "RelatedPeople": "Simon Peter; Paul; Stephen",
     "Places": "Jerusalem; Rome",
-    "RelatedEvents": "Pentecost; Martyrdom of Stephen; Paul's Missionary Journeys"
+    "RelatedEvents": "Pentecost; Martyrdom of Stephen; Paul's Missionary Journeys",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Cosmological Argument",
@@ -244,7 +304,10 @@
     "RelatedTopics": "Creation; Existence of God; The Universe",
     "RelatedBooks": "Genesis; Psalms; Romans",
     "Slug": "the-cosmological-argument",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Cumulative Case",
@@ -255,7 +318,10 @@
     "RelatedTopics": "Apologetics; Evidence; Faith and Reason",
     "RelatedBooks": "Psalms; Romans; 1 Peter",
     "Slug": "the-cumulative-case",
-    "RelatedEvents": "Creation; The Resurrection"
+    "RelatedEvents": "Creation; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Fine-Tuning Argument",
@@ -266,7 +332,10 @@
     "RelatedTopics": "Creation; Science and Faith; The Universe",
     "RelatedBooks": "Job; Psalms; Romans",
     "Slug": "the-fine-tuning-argument",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Longing for Justice",
@@ -277,7 +346,10 @@
     "RelatedTopics": "Justice; Judgment; Evil and Suffering",
     "RelatedBooks": "Ecclesiastes; Acts; Revelation",
     "Slug": "the-longing-for-justice",
-    "RelatedPeople": "Amos"
+    "RelatedPeople": "Amos",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Moral Argument",
@@ -290,7 +362,10 @@
     "Slug": "the-moral-argument",
     "RelatedPeople": "Moses; Paul",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments"
+    "RelatedEvents": "The Ten Commandments",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Ontological Argument",
@@ -300,7 +375,10 @@
     "Scripture": "Psalm 14:1; Romans 1:19-20; Hebrews 11:6",
     "RelatedTopics": "Existence of God; Philosophy; Faith and Reason",
     "RelatedBooks": "Psalms; Romans; Hebrews",
-    "Slug": "the-ontological-argument"
+    "Slug": "the-ontological-argument",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Origin of Life",
@@ -311,7 +389,10 @@
     "RelatedTopics": "Creation; Life; Science and Faith",
     "RelatedBooks": "Genesis; Job; Psalms",
     "Slug": "the-origin-of-life",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Resurrection of Jesus",
@@ -324,7 +405,10 @@
     "Slug": "the-resurrection-of-jesus",
     "RelatedPeople": "Jesus; Mary Magdalene; Simon Peter; Paul",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Crucifixion; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Universe Had a Beginning",
@@ -335,7 +419,10 @@
     "RelatedTopics": "Creation; The Universe; Science and Faith",
     "RelatedBooks": "Genesis; Psalms; Hebrews",
     "Slug": "the-universe-had-a-beginning",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Argument": "The Universe Is Intelligible",
@@ -346,6 +433,9 @@
     "RelatedTopics": "Science and Faith; Creation; Wisdom",
     "RelatedBooks": "Psalms; Proverbs; Romans",
     "Slug": "the-universe-is-intelligible",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

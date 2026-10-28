@@ -10,5 +10,8 @@
   "RelatedBooks": "Daniel; John; Matthew",
   "RelatedPeople": "Daniel; Jesus",
   "RelatedEvents": "The Resurrection",
-  "Slug": "resurrection-and-final-judgment"
+  "Slug": "resurrection-and-final-judgment",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

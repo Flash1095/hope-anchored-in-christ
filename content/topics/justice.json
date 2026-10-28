@@ -9,5 +9,8 @@
   "RelatedBooks": "Genesis; Deuteronomy; Psalms; Micah; Amos; Romans; Isaiah",
   "Slug": "justice",
   "Places": "Golgotha; Mount Sinai; Jerusalem",
-  "RelatedEvents": "The Crucifixion; The Ten Commandments"
+  "RelatedEvents": "The Crucifixion; The Ten Commandments",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

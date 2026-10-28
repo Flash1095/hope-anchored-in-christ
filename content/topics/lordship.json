@@ -6,5 +6,8 @@
   "RelatedPeople": "King David; Jesus; Paul",
   "RelatedBooks": "Psalms; Matthew; Romans; Philippians; Colossians",
   "Slug": "lordship",
-  "RelatedEvents": "The Resurrection"
+  "RelatedEvents": "The Resurrection",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

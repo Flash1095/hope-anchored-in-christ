@@ -15,5 +15,8 @@
   "Status": "Published",
   "LastUpdated": "2026-10-25",
   "RelatedPeople": "Thomas",
-  "RelatedEvents": "The Resurrection"
+  "RelatedEvents": "The Resurrection",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

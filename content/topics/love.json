@@ -9,5 +9,8 @@
   "RelatedBooks": "Deuteronomy; Matthew; John; Romans; 1 Corinthians; 1 John; Psalms",
   "Slug": "love",
   "Places": "Golgotha; Jerusalem; Garden of Eden",
-  "RelatedEvents": "The Good Samaritan; The Crucifixion; The Last Supper; Creation"
+  "RelatedEvents": "The Good Samaritan; The Crucifixion; The Last Supper; Creation",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -8,5 +8,8 @@
   "RelatedBooks": "Luke; John; Acts; 1 Corinthians; 1 John",
   "Slug": "eyewitnesses",
   "Places": "Jerusalem",
-  "RelatedEvents": "The Resurrection"
+  "RelatedEvents": "The Resurrection",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

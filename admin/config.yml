@@ -42,6 +42,9 @@ collections:
       - {label: "Archaeological Finds", name: "ArchaeologicalFinds", widget: "list"}
       - {label: "Scripture Reference", name: "ScriptureReference", widget: "list"}
       - {label: "Blog Post Link", name: "BlogPostLink", widget: "string"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "books"
     label: "Books of the Bible"
     folder: "content/books"
@@ -104,6 +107,9 @@ collections:
       - {label: "Related Blog Posts & Articles", name: "StudyRelatedPosts", widget: "text", required: false}
       - {label: "Scholarly Sources, References & Further Reading", name: "StudySources", widget: "text", required: false}
       - {label: "Key Takeaways & Book Summary", name: "StudyTakeaways", widget: "text", required: false}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "questions"
     label: "Questions and Answers"
     folder: "content/questions"
@@ -137,6 +143,9 @@ collections:
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "people"
     label: "Biblical People"
     folder: "content/people"
@@ -161,6 +170,9 @@ collections:
       - {label: "Slug", name: "Slug", widget: "string"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "finds"
     label: "Ancient Discoveries"
     folder: "content/finds"
@@ -191,6 +203,9 @@ collections:
       - {label: "Image", name: "Image", widget: "image", required: false}
       - {label: "Image Credit", name: "ImageCredit", widget: "string", required: false}
       - {label: "Image Source", name: "ImageSource", widget: "string", required: false}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "manuscripts"
     label: "Dead Sea Scrolls Manuscripts"
     folder: "content/manuscripts"
@@ -224,6 +239,9 @@ collections:
       - {label: "Image Credit", name: "ImageCredit", widget: "string", required: false}
       - {label: "Image Source", name: "ImageSource", widget: "string", required: false}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "places"
     label: "Biblical Places"
     folder: "content/places"
@@ -246,6 +264,9 @@ collections:
       - {label: "Slug", name: "Slug", widget: "string"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "civilizations"
     label: "Ancient Civilizations"
     folder: "content/civilizations"
@@ -268,6 +289,9 @@ collections:
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
       - {label: "Related Finds", name: "RelatedFinds", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "topics"
     label: "Topics and Themes"
     folder: "content/topics"
@@ -288,6 +312,9 @@ collections:
       - {label: "Slug", name: "Slug", widget: "string"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "doctrines"
     label: "Theology and Doctrine"
     folder: "content/doctrines"
@@ -307,6 +334,9 @@ collections:
       - {label: "Slug", name: "Slug", widget: "string"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "heresies"
     label: "Heretical Teachings"
     folder: "content/heresies"
@@ -327,6 +357,9 @@ collections:
       - {label: "Slug", name: "Slug", widget: "string"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "wordstudies"
     label: "Word Studies"
     folder: "content/wordstudies"
@@ -351,6 +384,9 @@ collections:
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "prophecies"
     label: "Biblical Prophecies"
     folder: "content/prophecies"
@@ -373,6 +409,9 @@ collections:
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
       - {label: "Related Places", name: "Places", widget: "list"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "typology"
     label: "Foreshadows of Christ"
     folder: "content/typology"
@@ -393,6 +432,9 @@ collections:
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
       - {label: "Related Places", name: "Places", widget: "list"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "fallacies"
     label: "Logical Fallacies"
     folder: "content/fallacies"
@@ -410,6 +452,9 @@ collections:
       - {label: "How To Respond", name: "HowToRespond", widget: "text"}
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "courses"
     label: "Courses"
     folder: "content/courses"
@@ -427,6 +472,9 @@ collections:
       - {label: "Key Topics", name: "KeyTopics", widget: "list"}
       - {label: "Related Books", name: "RelatedBooks", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "quizzes"
     label: "Quizzes"
     folder: "content/quizzes"
@@ -450,6 +498,9 @@ collections:
       - {label: "Reading Title", name: "ReadingTitle", widget: "string"}
       - {label: "Reading Link", name: "ReadingLink", widget: "string"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "hymns"
     label: "Hymns"
     folder: "content/hymns"
@@ -469,6 +520,9 @@ collections:
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Related Books", name: "RelatedBooks", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "nature"
     label: "Nature & Creation"
     folder: "content/nature"
@@ -489,6 +543,9 @@ collections:
       - {label: "Image Source", name: "ImageSource", widget: "string"}
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "apologetics"
     label: "Apologetics"
     folder: "content/apologetics"
@@ -509,6 +566,9 @@ collections:
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "objections"
     label: "Objections & Answers"
     folder: "content/objections"
@@ -528,6 +588,9 @@ collections:
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "perspectives"
     label: "Different Perspectives"
     folder: "content/perspectives"
@@ -544,6 +607,9 @@ collections:
       - {label: "Key Work", name: "KeyWork", widget: "string"}
       - {label: "Scripture", name: "Scripture", widget: "string"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "heritage"
     label: "Christian Heritage"
     folder: "content/heritage"
@@ -564,6 +630,9 @@ collections:
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Related Books", name: "RelatedBooks", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "politics"
     label: "Faith & Politics"
     folder: "content/politics"
@@ -580,6 +649,9 @@ collections:
       - {label: "Scripture", name: "Scripture", widget: "string"}
       - {label: "Pitfalls", name: "Pitfalls", widget: "text"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "socialmedia"
     label: "Social Media Responses"
     folder: "content/socialmedia"
@@ -596,6 +668,9 @@ collections:
       - {label: "Scripture", name: "Scripture", widget: "string"}
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "stories"
     label: "Biblical Stories & Events"
     folder: "content/stories"
@@ -622,6 +697,9 @@ collections:
       - {label: "Related Finds", name: "RelatedFinds", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "hermeneutics"
     label: "Biblical Hermeneutics"
     folder: "content/hermeneutics"
@@ -640,6 +718,9 @@ collections:
       - {label: "Scripture", name: "Scripture", widget: "string"}
       - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
       - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "jewishculture"
     label: "Jewish Cultural Backgrounds"
     folder: "content/jewishculture"
@@ -660,6 +741,9 @@ collections:
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "studyguides"
     label: "Bible Study Guides"
     folder: "content/studyguides"
@@ -682,6 +766,9 @@ collections:
       - {label: "Related People", name: "RelatedPeople", widget: "list"}
       - {label: "Related Places", name: "Places", widget: "list"}
       - {label: "Related Events", name: "RelatedEvents", widget: "list"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "pages"
     label: "Site Pages"
     files:

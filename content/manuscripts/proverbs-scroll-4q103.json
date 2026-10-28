@@ -22,5 +22,7 @@
   "Significance": "An early Hebrew witness to Proverbs, about a thousand years older than the medieval Masoretic manuscripts. The surviving text stands close to the Masoretic Text, with only minor variation in the published count, so its chief value is confirming the early stability of these proverb collections rather than revealing a different edition of the book.",
   "Slug": "proverbs-scroll-4q103",
   "Sources": "https://en.wikipedia.org/wiki/List_of_manuscripts_from_Qumran_Cave_4; https://www.academia.edu/822497/The_Biblical_Scrolls_from_Qumran_and_the_Masoretic_Text_A_Statistical_Approach",
-  "Work": "Proverbs"
+  "Work": "Proverbs",
+  "VerificationStatus": "Verified",
+  "LastReviewed": "2026-10-27"
 }

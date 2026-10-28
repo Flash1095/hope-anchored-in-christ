@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Paul; Simon Peter",
   "RelatedEvents": "The Crucifixion; The Passover",
   "Slug": "full-payment",
-  "Places": "Golgotha; Jerusalem; Egypt"
+  "Places": "Golgotha; Jerusalem; Egypt",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

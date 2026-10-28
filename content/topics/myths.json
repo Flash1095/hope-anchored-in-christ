@@ -7,5 +7,8 @@
   "RelatedBooks": "Genesis; Exodus; 2 Timothy; 2 Peter",
   "Slug": "myths",
   "Places": "Mount Ararat",
-  "RelatedEvents": "Noah and the Flood; Creation"
+  "RelatedEvents": "Noah and the Flood; Creation",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

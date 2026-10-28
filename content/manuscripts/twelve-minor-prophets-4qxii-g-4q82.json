@@ -22,5 +22,7 @@
   "Significance": "Textually important against the Masoretic Text: not counting reconstructed variants, 69 cases of variation between the Masoretic Text, the Septuagint and 4QXIIg are preserved; 4QXIIg agrees with the Masoretic Text 15 times and against it 54 times (44 clear readings, a 4.80% deviation among 916 identifiable words), and also attests 39 non-aligned readings. Its orthography is slightly more plene than the Masoretic Text and uses some Qumran spellings. For Hosea, Amos, Obadiah, Jonah, Micah and Nahum it is the best-preserved Qumran biblical copy; for Habakkuk it is only a questionable single-verse fragment (see Description).",
   "Slug": "twelve-minor-prophets-4qxii-g-4q82",
   "Sources": "https://en.wikipedia.org/wiki/List_of_manuscripts_from_Qumran_Cave_4; https://bibleproject.huji.ac.il/sites/default/files/he_bible_project/files/a._lange.pdf",
-  "Work": "Hosea; Joel; Amos; Obadiah; Jonah; Micah; Nahum; Zephaniah; Zechariah"
+  "Work": "Hosea; Joel; Amos; Obadiah; Jonah; Micah; Nahum; Zephaniah; Zechariah",
+  "VerificationStatus": "Verified",
+  "LastReviewed": "2026-10-27"
 }

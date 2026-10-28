@@ -6,5 +6,8 @@
   "RelatedPeople": "King David; Nathan; Jesus",
   "RelatedEvents": "Davidic Covenant; David Becomes King",
   "Slug": "davidic-covenant",
-  "Places": "Hebron; Jerusalem"
+  "Places": "Hebron; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

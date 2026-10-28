@@ -11,5 +11,8 @@
   "RelatedPlaces": "Corinth; Philippi; Ephesus",
   "RelatedEvents": "Paul's Missionary Journeys; The Conversion of Paul",
   "RelatedFinds": "Gallio Inscription; Corinth Bema (Judgment Seat); Politarch Inscription; Erastus Inscription",
-  "Slug": "greece"
+  "Slug": "greece",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

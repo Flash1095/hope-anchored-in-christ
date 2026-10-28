@@ -11,7 +11,10 @@
     "RelatedTopics": "Love; Church",
     "Slug": "1-corinthians-13",
     "RelatedPeople": "Paul; Jesus",
-    "Places": "Corinth"
+    "Places": "Corinth",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Anxiety",
@@ -25,7 +28,10 @@
     "RelatedTopics": "Anxiety; Fear; Prayer",
     "Slug": "anxiety",
     "RelatedPeople": "Jesus; King David; Elijah",
-    "RelatedEvents": "Jesus Prays in Gethsemane"
+    "RelatedEvents": "Jesus Prays in Gethsemane",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "David",
@@ -40,7 +46,10 @@
     "Slug": "david",
     "RelatedPeople": "King David; Jonathan; Samuel",
     "Places": "Bethlehem; Hebron; Jerusalem",
-    "RelatedEvents": "David and Goliath; David Becomes King; David and Bathsheba; Davidic Covenant"
+    "RelatedEvents": "David and Goliath; David Becomes King; David and Bathsheba; Davidic Covenant",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Esther",
@@ -55,7 +64,10 @@
     "Slug": "esther",
     "RelatedPeople": "Queen Esther; Mordecai",
     "Places": "Susa",
-    "RelatedEvents": "Esther Saves Her People"
+    "RelatedEvents": "Esther Saves Her People",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Faith",
@@ -70,7 +82,10 @@
     "Slug": "faith",
     "RelatedPeople": "Abraham; Moses; Paul",
     "Places": "Canaan",
-    "RelatedEvents": "The Call of Abraham"
+    "RelatedEvents": "The Call of Abraham",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Forgiveness",
@@ -85,7 +100,10 @@
     "Slug": "forgiveness",
     "RelatedPeople": "Jesus; Joseph, Son of Jacob; Stephen",
     "Places": "Egypt",
-    "RelatedEvents": "Joseph and His Brothers; The Crucifixion"
+    "RelatedEvents": "Joseph and His Brothers; The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Genesis",
@@ -100,7 +118,10 @@
     "Slug": "genesis",
     "RelatedPeople": "Adam; Eve; Noah; Abraham; Joseph, Son of Jacob",
     "Places": "Garden of Eden; Babel; Ur; Canaan; Egypt",
-    "RelatedEvents": "Creation; The Fall; Noah and the Flood; The Call of Abraham; Joseph and His Brothers"
+    "RelatedEvents": "Creation; The Fall; Noah and the Flood; The Call of Abraham; Joseph and His Brothers",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Hebrews 11",
@@ -114,7 +135,10 @@
     "RelatedTopics": "Faith; Hope",
     "Slug": "hebrews-11",
     "RelatedPeople": "Abel; Noah; Abraham; Moses; Rahab",
-    "RelatedEvents": "Creation; Noah and the Flood; The Call of Abraham"
+    "RelatedEvents": "Creation; Noah and the Flood; The Call of Abraham",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Hope",
@@ -128,7 +152,10 @@
     "RelatedTopics": "Hope; Suffering",
     "Slug": "hope",
     "RelatedPeople": "Abraham; Paul; Jeremiah",
-    "RelatedEvents": "The Resurrection"
+    "RelatedEvents": "The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Inductive Bible Study Method",
@@ -142,7 +169,10 @@
     "RelatedTopics": "Discipleship; Wisdom",
     "Slug": "inductive-bible-study-method",
     "RelatedPeople": "Ezra",
-    "RelatedEvents": "Ezra Reads the Law"
+    "RelatedEvents": "Ezra Reads the Law",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "James",
@@ -157,7 +187,10 @@
     "Slug": "james",
     "RelatedPeople": "Jesus",
     "Places": "Jerusalem",
-    "RelatedEvents": "Jerusalem Council; The Sermon on the Mount"
+    "RelatedEvents": "Jerusalem Council; The Sermon on the Mount",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "John",
@@ -172,7 +205,10 @@
     "Slug": "john",
     "RelatedPeople": "John the Apostle; Jesus",
     "Places": "Jerusalem; Galilee; Bethany",
-    "RelatedEvents": "The Baptism of Jesus; Raising of Lazarus; The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Baptism of Jesus; Raising of Lazarus; The Crucifixion; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Joseph",
@@ -187,7 +223,10 @@
     "Slug": "joseph",
     "RelatedPeople": "Joseph, Son of Jacob; Jacob; Judah",
     "Places": "Canaan; Egypt",
-    "RelatedEvents": "Joseph and His Brothers"
+    "RelatedEvents": "Joseph and His Brothers",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "The Lord's Prayer",
@@ -201,7 +240,10 @@
     "RelatedTopics": "Prayer; Kingdom of God",
     "Slug": "lords-prayer",
     "RelatedPeople": "Jesus",
-    "RelatedEvents": "The Sermon on the Mount"
+    "RelatedEvents": "The Sermon on the Mount",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Love",
@@ -216,7 +258,10 @@
     "Slug": "love",
     "RelatedPeople": "Jesus; John the Apostle; Paul",
     "Places": "Corinth",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Mark",
@@ -231,7 +276,10 @@
     "Slug": "mark",
     "RelatedPeople": "Simon Peter; Jesus",
     "Places": "Galilee; Jerusalem; Capernaum",
-    "RelatedEvents": "The Baptism of Jesus; The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Baptism of Jesus; The Crucifixion; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Mary",
@@ -246,7 +294,10 @@
     "Slug": "mary",
     "RelatedPeople": "Mary, Mother of Jesus; Jesus; Elizabeth; Joseph, Husband of Mary",
     "Places": "Nazareth; Bethlehem",
-    "RelatedEvents": "The Birth of Jesus; Jesus Turns Water into Wine at Cana; The Crucifixion"
+    "RelatedEvents": "The Birth of Jesus; Jesus Turns Water into Wine at Cana; The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Moses",
@@ -261,7 +312,10 @@
     "Slug": "moses",
     "RelatedPeople": "Moses; Aaron; Miriam; Joshua",
     "Places": "Egypt; Mount Sinai; Plains of Moab",
-    "RelatedEvents": "The Burning Bush; The Ten Plagues; The Exodus and the Red Sea; The Ten Commandments; Wilderness Wanderings"
+    "RelatedEvents": "The Burning Bush; The Ten Plagues; The Exodus and the Red Sea; The Ten Commandments; Wilderness Wanderings",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Paul",
@@ -276,7 +330,10 @@
     "Slug": "paul",
     "RelatedPeople": "Paul; Barnabas; Timothy; Stephen",
     "Places": "Jerusalem; Antioch; Corinth; Rome",
-    "RelatedEvents": "The Conversion of Paul; Paul's Missionary Journeys; Paul in Rome; Martyrdom of Stephen"
+    "RelatedEvents": "The Conversion of Paul; Paul's Missionary Journeys; Paul in Rome; Martyrdom of Stephen",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Philippians",
@@ -291,7 +348,10 @@
     "Slug": "philippians",
     "RelatedPeople": "Paul; Timothy; Lydia",
     "Places": "Philippi",
-    "RelatedEvents": "Paul's Missionary Journeys"
+    "RelatedEvents": "Paul's Missionary Journeys",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Prayer",
@@ -306,7 +366,10 @@
     "Slug": "prayer",
     "RelatedPeople": "Hannah; Daniel; Jesus; Paul",
     "Places": "Shiloh; Jerusalem",
-    "RelatedEvents": "Jesus Prays in Gethsemane; Daniel in the Lions' Den"
+    "RelatedEvents": "Jesus Prays in Gethsemane; Daniel in the Lions' Den",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Proverbs",
@@ -320,7 +383,10 @@
     "RelatedTopics": "Wisdom; Fear",
     "Slug": "proverbs",
     "RelatedPeople": "King Solomon",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Psalm 23",
@@ -334,7 +400,10 @@
     "RelatedTopics": "Worship; Suffering; Hope",
     "Slug": "psalm-23",
     "RelatedPeople": "King David; Jesus",
-    "Places": "Bethlehem"
+    "Places": "Bethlehem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Psalms",
@@ -349,7 +418,10 @@
     "Slug": "psalms",
     "RelatedPeople": "King David; Moses",
     "Places": "Jerusalem",
-    "RelatedEvents": "David and Bathsheba"
+    "RelatedEvents": "David and Bathsheba",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Revelation",
@@ -364,7 +436,10 @@
     "Slug": "revelation",
     "RelatedPeople": "John the Apostle; Jesus",
     "Places": "Patmos; Jerusalem",
-    "RelatedEvents": "The Resurrection"
+    "RelatedEvents": "The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Romans 8",
@@ -379,7 +454,10 @@
     "Slug": "romans-8",
     "RelatedPeople": "Paul",
     "Places": "Rome",
-    "RelatedEvents": "The Resurrection"
+    "RelatedEvents": "The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Romans",
@@ -394,7 +472,10 @@
     "Slug": "romans",
     "RelatedPeople": "Paul; Abraham; Adam",
     "Places": "Rome; Corinth",
-    "RelatedEvents": "The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Crucifixion; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Ruth",
@@ -409,7 +490,10 @@
     "Slug": "ruth",
     "RelatedPeople": "Ruth; Naomi; Boaz",
     "Places": "Bethlehem",
-    "RelatedEvents": "Ruth's Loyalty"
+    "RelatedEvents": "Ruth's Loyalty",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "The Sermon on the Mount",
@@ -424,7 +508,10 @@
     "Slug": "sermon-on-the-mount",
     "RelatedPeople": "Jesus",
     "Places": "Galilee",
-    "RelatedEvents": "The Sermon on the Mount"
+    "RelatedEvents": "The Sermon on the Mount",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Guide": "Wisdom",
@@ -438,6 +525,9 @@
     "RelatedTopics": "Wisdom; Fear",
     "Slug": "wisdom",
     "RelatedPeople": "King Solomon",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

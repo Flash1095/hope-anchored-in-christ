@@ -6,5 +6,8 @@
   "RelatedPeople": "Adam; Eve; Paul",
   "RelatedDoctrines": "Free Will; Original Sin",
   "RelatedBooks": "Genesis; Deuteronomy; Ezekiel; Romans; Galatians",
-  "Slug": "moral-responsibility"
+  "Slug": "moral-responsibility",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -11,5 +11,8 @@
   "RelatedPeople": "Paul; Priscilla; Aquila",
   "Slug": "rome",
   "RelatedEvents": "Paul in Rome",
-  "Places": "Corinth; Philippi"
+  "Places": "Corinth; Philippi",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

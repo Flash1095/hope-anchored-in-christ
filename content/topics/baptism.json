@@ -1,13 +1,16 @@
 {
- "Topic": "Baptism",
- "Category": "Christian Living",
- "Summary": "Baptism is the public sign Jesus gave His church marking a believer's union with Him in His death and resurrection and their entry into His people. Going under the water pictures being washed clean; rising pictures new life in Christ. Baptism does not save by itself, but it joyfully obeys the Savior who saves.",
- "KeyPassages": "Matthew 3:13-17; Matthew 28:19; Acts 2:38-41; Acts 8:36-38; Romans 6:3-4; Colossians 2:12; 1 Peter 3:21",
- "RelatedPeople": "Jesus; John the Baptist; Peter; Philip; Paul",
- "RelatedDoctrines": "Baptism; New Birth; Church Ordinances",
- "RelatedQuestions": "Why do Christians get baptized?; Should babies be baptized?",
- "RelatedBooks": "Matthew; Acts; Romans; Colossians; 1 Peter",
- "Slug": "baptism",
- "Places": "Jordan River",
- "RelatedEvents": "The Baptism of Jesus"
+  "Topic": "Baptism",
+  "Category": "Christian Living",
+  "Summary": "Baptism is the public sign Jesus gave His church marking a believer's union with Him in His death and resurrection and their entry into His people. Going under the water pictures being washed clean; rising pictures new life in Christ. Baptism does not save by itself, but it joyfully obeys the Savior who saves.",
+  "KeyPassages": "Matthew 3:13-17; Matthew 28:19; Acts 2:38-41; Acts 8:36-38; Romans 6:3-4; Colossians 2:12; 1 Peter 3:21",
+  "RelatedPeople": "Jesus; John the Baptist; Peter; Philip; Paul",
+  "RelatedDoctrines": "Baptism; New Birth; Church Ordinances",
+  "RelatedQuestions": "Why do Christians get baptized?; Should babies be baptized?",
+  "RelatedBooks": "Matthew; Acts; Romans; Colossians; 1 Peter",
+  "Slug": "baptism",
+  "Places": "Jordan River",
+  "RelatedEvents": "The Baptism of Jesus",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -10,5 +10,8 @@
   "RelatedBooks": "Matthew; Luke; John",
   "RelatedPeople": "Jesus; Mary, Mother of Jesus; Joseph, Husband of Mary",
   "Slug": "nazareth",
-  "Places": "Bethlehem; Capernaum"
+  "Places": "Bethlehem; Capernaum",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

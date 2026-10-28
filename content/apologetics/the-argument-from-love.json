@@ -8,5 +8,8 @@
   "RelatedBooks": "John; 1 Corinthians; 1 John",
   "Slug": "the-argument-from-love",
   "RelatedPeople": "Jesus; John the Apostle",
-  "RelatedEvents": "The Crucifixion"
+  "RelatedEvents": "The Crucifixion",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

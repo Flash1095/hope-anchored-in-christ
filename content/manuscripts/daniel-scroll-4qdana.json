@@ -22,5 +22,7 @@
   "Significance": "The widest single Qumran witness to Daniel, and the clearest single-copy proof that Daniel's Hebrew-Aramaic-Hebrew structure already existed in a first-century BC Hebrew/Aramaic copy. It agrees in substance with the Masoretic Text. It is NOT the oldest Daniel copy (that distinction belongs to 4QDanc, 4Q114, late 2nd century BC, preserving Daniel 10-11); its claim is extent, not age. Across all eight Qumran Daniel manuscripts every chapter except Daniel 12 is represented; Daniel 12:10 is quoted as Scripture in the Florilegium (4Q174), so the absence of chapter 12 from the surviving Daniel fragments is not evidence the book lacked it at Qumran.",
   "Slug": "daniel-scroll-4qdana",
   "Sources": "https://www.journals.uchicago.edu/doi/epdf/10.2307/1357050; https://evidenceforchristianity.org/in-your-book-daniel-prophet-to-the-nations-you-make-the-inaccurate-claim-that-much-of-daniel-is-found-in-the-dead-sea-scrolls-why-do-you-make-this-inaccurate-claim/",
-  "Work": "Daniel"
+  "Work": "Daniel",
+  "VerificationStatus": "Verified",
+  "LastReviewed": "2026-10-27"
 }

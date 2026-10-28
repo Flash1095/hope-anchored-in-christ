@@ -11,5 +11,8 @@
   "Slug": "romans",
   "RelatedPeople": "Paul; Abraham; Adam",
   "Places": "Rome; Corinth",
-  "RelatedEvents": "The Crucifixion; The Resurrection"
+  "RelatedEvents": "The Crucifixion; The Resurrection",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

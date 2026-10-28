@@ -16,5 +16,8 @@
   "Image": "assets/finds/elephantine-papyri.jpg",
   "ImageCredit": "Photo: Charles Edwin Wilbour (No restrictions)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3AAnaniah_Gives_Yehoishema_a_House%2C_Marh_10%2C_402_B.C.E%2C_47.218.88.jpg",
-  "Slug": "elephantine-papyri"
+  "Slug": "elephantine-papyri",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

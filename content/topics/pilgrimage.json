@@ -6,5 +6,8 @@
   "RelatedPeople": "Abraham; King David",
   "RelatedBooks": "Psalms; Hebrews; 1 Peter",
   "Slug": "pilgrimage",
-  "Places": "Jerusalem"
+  "Places": "Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

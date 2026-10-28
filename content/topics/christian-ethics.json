@@ -1,11 +1,14 @@
 {
- "Topic": "Christian Ethics",
- "Category": "Christian Living",
- "Summary": "Christian ethics asks how followers of Jesus should live, grounding right and wrong in God's character and commands rather than in shifting opinion. The Ten Commandments, the Sermon on the Mount, and the call to love neighbor give shape to decisions about money, work, speech, sexuality, and power. Christian ethics is not mere rule-keeping; it flows from a heart renewed by grace and aims at human flourishing under God.",
- "KeyPassages": "Exodus 20:1-17; Micah 6:8; Matthew 5:1-12; Romans 12:1-2",
- "RelatedPeople": "Moses; Jesus; Paul",
- "RelatedBooks": "Exodus; Micah; Matthew; Romans",
- "Slug": "christian-ethics",
- "Places": "Mount Sinai",
- "RelatedEvents": "The Ten Commandments; The Sermon on the Mount"
+  "Topic": "Christian Ethics",
+  "Category": "Christian Living",
+  "Summary": "Christian ethics asks how followers of Jesus should live, grounding right and wrong in God's character and commands rather than in shifting opinion. The Ten Commandments, the Sermon on the Mount, and the call to love neighbor give shape to decisions about money, work, speech, sexuality, and power. Christian ethics is not mere rule-keeping; it flows from a heart renewed by grace and aims at human flourishing under God.",
+  "KeyPassages": "Exodus 20:1-17; Micah 6:8; Matthew 5:1-12; Romans 12:1-2",
+  "RelatedPeople": "Moses; Jesus; Paul",
+  "RelatedBooks": "Exodus; Micah; Matthew; Romans",
+  "Slug": "christian-ethics",
+  "Places": "Mount Sinai",
+  "RelatedEvents": "The Ten Commandments; The Sermon on the Mount",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

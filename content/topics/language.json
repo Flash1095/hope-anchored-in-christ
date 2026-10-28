@@ -6,5 +6,8 @@
   "RelatedPeople": "Paul; Simon Peter; Moses",
   "RelatedEvents": "The Tower of Babel; Pentecost",
   "Slug": "language",
-  "Places": "Babel; Jerusalem"
+  "Places": "Babel; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

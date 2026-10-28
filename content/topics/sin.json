@@ -6,5 +6,8 @@
   "RelatedPeople": "Adam; Eve; David; Paul; Jesus",
   "RelatedEvents": "The Fall; David and Bathsheba; The Crucifixion",
   "Slug": "sin",
-  "Places": "Garden of Eden; Jerusalem; Golgotha"
+  "Places": "Garden of Eden; Jerusalem; Golgotha",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Mary, Mother of Jesus; Paul",
   "RelatedEvents": "The Crucifixion; The Last Supper",
   "Slug": "cross",
-  "Places": "Golgotha; Jerusalem"
+  "Places": "Golgotha; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

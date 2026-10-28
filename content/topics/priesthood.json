@@ -6,5 +6,8 @@
   "RelatedPeople": "Aaron; Moses; Jesus; Simon Peter",
   "RelatedEvents": "The Crucifixion",
   "Slug": "priesthood",
-  "Places": "Mount Sinai; Golgotha; Jerusalem"
+  "Places": "Mount Sinai; Golgotha; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

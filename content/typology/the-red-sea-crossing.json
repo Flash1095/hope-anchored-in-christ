@@ -1,13 +1,16 @@
 {
- "Type": "The Red Sea Crossing",
- "Category": "Event",
- "OldTestamentPassage": "Exodus 14:13-31",
- "Fulfillment": "Israel passed through the sea, rescued from Pharaoh's army, on their way from slavery to the promised land, and Paul calls this experience a kind of baptism into Moses. In Christ, believers pass through the waters of baptism into a greater exodus, freed from sin's tyranny and raised to walk in newness of life.",
- "FulfillmentPassage": "Romans 6:3-4; 1 Corinthians 10:1-2; Colossians 2:12",
- "Explanation": "The sea that saved Israel destroyed the power that enslaved them; God made a way where there was no way, through water no one could cross alone. Baptism proclaims the same pattern: behind us, a defeated enemy and a buried old life; ahead of us, resurrection life with Christ.",
- "RelatedBooks": "Exodus; Romans; 1 Corinthians; Colossians",
- "RelatedPeople": "Moses; Aaron; Jesus; Paul",
- "RelatedEvents": "The Exodus and the Red Sea; The Ten Plagues; The Baptism of Jesus; The Resurrection",
- "Slug": "red-sea-crossing",
- "Places": "Egypt"
+  "Type": "The Red Sea Crossing",
+  "Category": "Event",
+  "OldTestamentPassage": "Exodus 14:13-31",
+  "Fulfillment": "Israel passed through the sea, rescued from Pharaoh's army, on their way from slavery to the promised land, and Paul calls this experience a kind of baptism into Moses. In Christ, believers pass through the waters of baptism into a greater exodus, freed from sin's tyranny and raised to walk in newness of life.",
+  "FulfillmentPassage": "Romans 6:3-4; 1 Corinthians 10:1-2; Colossians 2:12",
+  "Explanation": "The sea that saved Israel destroyed the power that enslaved them; God made a way where there was no way, through water no one could cross alone. Baptism proclaims the same pattern: behind us, a defeated enemy and a buried old life; ahead of us, resurrection life with Christ.",
+  "RelatedBooks": "Exodus; Romans; 1 Corinthians; Colossians",
+  "RelatedPeople": "Moses; Aaron; Jesus; Paul",
+  "RelatedEvents": "The Exodus and the Red Sea; The Ten Plagues; The Baptism of Jesus; The Resurrection",
+  "Slug": "red-sea-crossing",
+  "Places": "Egypt",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

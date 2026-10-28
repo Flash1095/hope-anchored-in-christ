@@ -6,5 +6,8 @@
   "RelatedPeople": "Paul; John the Apostle; Judas Iscariot",
   "RelatedEvents": "The Golden Calf; The Kingdom Divides",
   "Slug": "apostasy",
-  "Places": "Mount Sinai; Samaria"
+  "Places": "Mount Sinai; Samaria",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

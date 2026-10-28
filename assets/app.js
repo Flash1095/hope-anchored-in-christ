@@ -8,28 +8,28 @@
   var COLLECTIONS = [
     { id: "timeline", label: "Timeline", file: "content/timeline.json", primary: "Title",
       blurb: "The whole story, era by era, from Creation to the Early Church.",
-      filters: [{ label: "Era", field: "Era" }], meta: ["DateApprox", "Era"] },
+      filters: [{ label: "Era", field: "Era" }, { label: "Verification", field: "VerificationStatus" }], meta: ["DateApprox", "Era"] },
     { id: "books", label: "Books of the Bible", file: "content/books.json", primary: "Book",
       blurb: "All 66 books: author, date, theme, outline, and context.",
-      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }],
+      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Verification", field: "VerificationStatus" }],
       meta: ["Testament", "Category", "DateApprox"] },
     { id: "questions", label: "Questions and Answers", file: "content/questions.json", primary: "Question",
       blurb: "Searchable Bible Q&A — short answers and full studies.",
-      filters: [{ label: "Category", field: "Category" }], meta: ["Category", "Subcategory"] },
+      filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category", "Subcategory"] },
     { id: "people", label: "Biblical People", file: "content/people.json", primary: "Name",
       blurb: "Every major person of Scripture, from Adam to the apostles.",
-      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }],
+      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Verification", field: "VerificationStatus" }],
       meta: ["Role", "Testament"] },
     { id: "finds", label: "Ancient Discoveries", file: "content/finds.json", primary: "FindName",
       blurb: "Archaeological finds that illuminate the Bible.",
-      filters: [{ label: "Era", field: "TimelineEra" }, { label: "Evidence", field: "EvidenceClass" }], meta: ["DiscoveryLocation", "ArtifactDate"] },
+      filters: [{ label: "Era", field: "TimelineEra" }, { label: "Evidence", field: "EvidenceClass" }, { label: "Verification", field: "VerificationStatus" }], meta: ["DiscoveryLocation", "ArtifactDate"] },
     { id: "places", label: "Biblical Places", file: "content/places.json", primary: "Name",
       blurb: "Where the story happened, and where those places are today.",
-      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }],
+      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Verification", field: "VerificationStatus" }],
       meta: ["ModernLocation", "Testament"] },
     { id: "topics", label: "Topics and Themes", file: "content/topics.json", primary: "Topic",
       blurb: "Central topics and the great themes woven through Scripture, linking passages, people, doctrines, and questions.",
-      filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
+      filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category"] },
     { id: "doctrines", label: "Theology and Doctrine", file: "content/doctrines.json", primary: "Doctrine",
       blurb: "What Christians believe, with biblical support and history." },
     { id: "heresies", label: "Heretical Teachings", file: "content/heresies.json", primary: "Heresy",
@@ -37,20 +37,20 @@
       meta: ["Founder"] },
     { id: "wordstudies", label: "Word Studies", file: "content/wordstudies.json", primary: "Transliteration",
       blurb: "Hebrew and Greek words, with Strong's numbers and meaning.",
-      filters: [{ label: "Language", field: "Language" }], meta: ["Language", "StrongsNumber", "PartOfSpeech"] },
+      filters: [{ label: "Language", field: "Language" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Language", "StrongsNumber", "PartOfSpeech"] },
     { id: "prophecies", label: "Biblical Prophecies", file: "content/prophecies.json", primary: "Prophecy",
       blurb: "What was foretold, how it was fulfilled — marked honestly.",
-      filters: [{ label: "Status", field: "FulfillmentStatus" }, { label: "Era", field: "TimelineEra" }],
+      filters: [{ label: "Status", field: "FulfillmentStatus" }, { label: "Era", field: "TimelineEra" }, { label: "Verification", field: "VerificationStatus" }],
       meta: ["Prophet", "DateApprox"] },
     { id: "typology", label: "Foreshadows of Christ", file: "content/typology.json", primary: "Type",
       blurb: "Old Testament shadows fulfilled in Christ.",
-      filters: [{ label: "Category", field: "Category" }] },
+      filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }] },
     { id: "fallacies", label: "Logical Fallacies", file: "content/fallacies.json", primary: "Fallacy",
       blurb: "Spot bad reasoning in faith discussions — and answer graciously.",
-      filters: [{ label: "Category", field: "Category" }] },
+      filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }] },
     { id: "courses", label: "Courses", file: "content/courses.json", primary: "Course",
       blurb: "Guided studies, from Foundations of Faith to Hebrew and Greek.",
-      filters: [{ label: "Level", field: "Level" }], meta: ["Level", "Duration"] },
+      filters: [{ label: "Level", field: "Level" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Level", "Duration"] },
     { id: "quizzes", label: "Quizzes", file: "content/quizzes.json", primary: "Question",
     blurb: "Test what you've learned — every answer teaches.", special: "quizzes" },
   { id: "hymns", label: "Hymns", file: "content/hymns.json", primary: "Hymn",
@@ -61,39 +61,39 @@
     meta: ["Category"] },
   { id: "apologetics", label: "Apologetics", file: "content/apologetics.json", primary: "Argument",
     blurb: "Why Christianity best explains reality — the cumulative case from philosophy, science, history, and experience.",
-    filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
+    filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category"] },
   { id: "objections", label: "Objections & Answers", file: "content/objections.json", primary: "Objection",
     blurb: "Honest objections from atheists, Muslims, Jews, and others — stated fairly and answered with grace and truth.",
-    filters: [{ label: "Worldview", field: "Worldview" }], meta: ["Worldview"] },
+    filters: [{ label: "Worldview", field: "Worldview" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Worldview"] },
   { id: "perspectives", label: "Different Perspectives", file: "content/perspectives.json", primary: "Profession",
     blurb: "How journalists, detectives, doctors, and other professionals shed light on the truth of the Bible.",
     meta: ["Exemplar"] },
   { id: "heritage", label: "Christian Heritage", file: "content/heritage.json", primary: "Name",
     blurb: "Writings, commentaries, church history, and the men and women whose testimonies shaped Christianity.",
-    filters: [{ label: "Type", field: "Type" }], meta: ["Type", "Era"] },
+    filters: [{ label: "Type", field: "Type" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Type", "Era"] },
   { id: "politics", label: "Faith & Politics", file: "content/politics.json", primary: "Issue",
     blurb: "Political issues and current events — and how to respond to them biblically." },
   { id: "socialmedia", label: "Social Media Responses", file: "content/socialmedia.json", primary: "Post",
     blurb: "Viral posts, trends, and hot takes from TikTok, X, Facebook, Instagram, and beyond — addressed with grace and truth.",
-    filters: [{ label: "Platform", field: "Platform" }], meta: ["Platform"] },
+    filters: [{ label: "Platform", field: "Platform" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Platform"] },
   { id: "stories", label: "Biblical Stories & Events", file: "content/stories.json", primary: "Story",
     blurb: "Beloved Bible stories and events retold in detail — with the people, the meaning, and what they mean for us today.",
-    filters: [{ label: "Testament", field: "Testament" }], meta: ["Testament"] },
+    filters: [{ label: "Testament", field: "Testament" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Testament"] },
   { id: "hermeneutics", label: "Biblical Hermeneutics", file: "content/hermeneutics.json", primary: "Principle",
     blurb: "How to interpret Scripture rightly — context, literary genres, literary devices, and principles for handling God's Word with care.",
-    filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
+    filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category"] },
   { id: "jewishculture", label: "Jewish Cultural Backgrounds", file: "content/jewishculture.json", primary: "Topic",
     blurb: "Jewish culture, feasts, and traditions \u2014 and how each one points to Jesus the Messiah.",
-    filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
+    filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category"] },
   { id: "studyguides", label: "Bible Study Guides", file: "content/studyguides.json", primary: "Guide",
     blurb: "Step-by-step guides for studying a book, a topic, a person, or a passage — with questions and application for every study.",
-    filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
+    filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category"] },
   { id: "civilizations", label: "Ancient Civilizations", file: "content/civilizations.json", primary: "Civilization",
     blurb: "The empires and peoples around Israel — Egypt, Assyria, Babylon, Persia, Greece, Rome, and their neighbors — and how each one touches the Bible story.",
-    filters: [{ label: "Region", field: "Region" }], meta: ["Region"] },
+    filters: [{ label: "Region", field: "Region" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Region"] },
   { id: "manuscripts", label: "Dead Sea Scrolls Manuscripts", file: "content/manuscripts.json", primary: "Manuscript",
     blurb: "Qumran manuscripts of the Bible — the best-preserved copy of each book, with its cave, date, language, material, and the passages that actually survive. Search by book, cave, period, language, or completeness.",
-    filters: [{ label: "Book", field: "Work" }, { label: "Cave", field: "Cave" }, { label: "Period", field: "Period" }, { label: "Language", field: "Language" }, { label: "Category", field: "Category" }, { label: "Completeness", field: "Completeness" }], meta: ["ManuscriptID", "Cave", "DateApprox"] },
+    filters: [{ label: "Book", field: "Work" }, { label: "Cave", field: "Cave" }, { label: "Period", field: "Period" }, { label: "Language", field: "Language" }, { label: "Category", field: "Category" }, { label: "Completeness", field: "Completeness" }, { label: "Verification", field: "VerificationStatus" }], meta: ["ManuscriptID", "Cave", "DateApprox"] },
 ];
   /* Explore tile order, as a study journey: the story first, then the
      world behind it, then deeper study, then discernment, then the
@@ -175,6 +175,7 @@
   var SNIPPET_FIELDS = ["Summary", "Description", "Story", "Definition", "ShortAnswer",
     "ProphecySummary", "Explanation", "BiblicalUsage", "Beliefs"];
   var SKIP_FIELDS = ["Slug", "Maps", "Image", "ImageCredit", "ImageSource", "PanelImage", "PanelImageCredit"];
+  var VERIF_FIELDS = ["VerificationStatus", "Sources", "LastReviewed"];
 
   var data = {};      // collection id -> array of rows
   var posts = [];     // blog manifest
@@ -183,7 +184,7 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "137";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "138";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -811,12 +812,14 @@
     html += '<div class="detail"><dl>';
     Object.keys(row).forEach(function (field) {
       if (SKIP_FIELDS.indexOf(field) !== -1) return;
+      if (VERIF_FIELDS.indexOf(field) !== -1) return;
       if (STUDY_FIELDS.indexOf(field) !== -1 || field === "StudyIntroduction") return;
       var v = val(row, field);
       if (isEmpty(v)) return;
       html += "<dt>" + esc(label(field)) + "</dt><dd>" + renderValue(field, v) + "</dd>";
     });
     html += "</dl>";
+    html += verificationBox(row);
     if (STUDY_FIELDS.some(function (f) { return !isEmpty(val(row, f)); })) {
       html += '<div class="study">';
       var intro = val(row, "StudyIntroduction");
@@ -2202,6 +2205,48 @@
   /* ---------- terms, privacy, FAQ ---------- */
   /* These pages are written in code, like the About page — they are not
      Decap-editable. Wording changes go through chat. */
+
+  var VERIF_MEANING = {
+    "Verified": "Checked against the sources listed below. Its core claims — identification, dates, and cited passages — were matched to a scholarly or primary source.",
+    "Awaiting Review": "Not yet checked against scholarly sources. Treat its claims as provisional until this entry is reviewed.",
+    "Scholarly Debate": "Scholars disagree about a key claim in this entry. The entry text states the disagreement; read it as contested, not settled."
+  };
+  function verificationBox(row) {
+    var status = val(row, "VerificationStatus") || "Awaiting Review";
+    var cls = status === "Verified" ? "fulfilled" : (status === "Scholarly Debate" ? "debated" : "future");
+    var html = '<div class="verif-box"><span class="badge ' + cls + '">' + esc(status) + '</span> ' +
+      '<span class="verif-meaning">' + esc(VERIF_MEANING[status] || VERIF_MEANING["Awaiting Review"]) + '</span> ' +
+      '<a href="#/verification">About verification</a>';
+    var src = val(row, "Sources");
+    if (src) html += '<div class="verif-sources"><strong>Sources:</strong> ' + renderValue("Sources", src) + '</div>';
+    var rev = val(row, "LastReviewed");
+    html += '<div class="verif-reviewed">Last reviewed: ' + (rev ? esc(rev) : 'not yet reviewed') + '</div>';
+    return html + '</div>';
+  }
+  function viewVerification() {
+    var html = "<h2>Source Verification</h2><div class='post-body'>" +
+      "<p class='page-intro'>Every factual entry on this site carries a verification status. Nothing here is marked verified by default — a status is earned by checking the entry against a traceable source.</p>" +
+      "<h3>The three statuses</h3>" +
+      "<p><span class='badge fulfilled'>Verified</span> — the entry's core claims (identification, dates, cited passages) were checked against a scholarly or primary source, and that source is listed on the entry page.</p>" +
+      "<p><span class='badge future'>Awaiting Review</span> — the entry has not yet been checked against scholarly sources. This is the default for all new and unreviewed entries. It does not mean the entry is wrong; it means its claims should still be treated as provisional.</p>" +
+      "<p><span class='badge debated'>Scholarly Debate</span> — scholars disagree about a key claim in the entry. The entry itself states the disagreement, so readers can see what is contested rather than settled.</p>" +
+      "<h3>What counts as a source</h3>" +
+      "<p>Sources are ranked. First: primary sources and official records — the biblical text itself, the Discoveries in the Judaean Desert (DJD) volumes, museum and archive catalogues such as the Israel Antiquities Authority's Leon Levy Dead Sea Scrolls Digital Library, and excavation reports. Second: peer-reviewed scholarship and recognised academic institutions. Third: reference works, used only as cross-checks, never as the sole basis for a Verified status.</p>" +
+      "<h3>What the statuses distinguish</h3>" +
+      "<p>Established evidence (an inscription, a manuscript, a dated artefact) is not the same as a scholarly interpretation of it, and neither is the same as a theological conclusion drawn from Scripture. Entries keep those apart: evidence is stated as evidence, interpretations are attributed, disputed points are flagged Scholarly Debate, and theological reflections are presented as reflections, not as historical proof.</p>" +
+      "<h3>Nothing invented, nothing auto-verified</h3>" +
+      "<p>No discovery, date, biblical reference, manuscript identification, or citation is invented to fill a gap. Where adequate sources have not been found, the field stays blank and the entry stays Awaiting Review. Content drafted with AI assistance is never automatically marked verified — it earns Verified only after a source check, like any other entry.</p>" +
+      "<h3>Coverage today</h3>" +
+      "<p>Of 2,945 database entries, 24 are Verified, 6 are Scholarly Debate, and 2,915 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
+      "<p>Browse the statuses: <a href='#/manuscripts?f_VerificationStatus=Verified'>Verified manuscripts</a> &middot; <a href='#/manuscripts?f_VerificationStatus=Scholarly Debate'>Debated manuscripts</a> &middot; <a href='#/finds?f_VerificationStatus=Scholarly Debate'>Debated finds</a></p>" +
+      "<h3>Corrections</h3>" +
+      "<p>Entries can be corrected and updated at any time. Corrections go through the site editor or through the site owner, and a corrected entry keeps its sources and review date visible so readers can see what changed and when it was last checked.</p>" +
+      "<h3>What is not status-tagged</h3>" +
+      "<p>The Bible reader text is the primary source itself, so it carries no status. Blog posts are study writing rather than database entries, and their Scripture references link into the reader for checking. Store products and gallery pieces are products and artwork, not factual claims.</p>" +
+      "</div>";
+    app.innerHTML = html;
+    window.scrollTo(0, 0);
+  }
   function viewTerms() {
     var html = "<h2>Terms &amp; Conditions</h2><div class='post-body'>" +
       "<p class='page-intro'>Last updated: October 25, 2026.</p>" +
@@ -2446,6 +2491,7 @@
     if (path[0] === "terms") return viewTerms();
     if (path[0] === "privacy") return viewPrivacy();
     if (path[0] === "faq") return viewFaq();
+    if (path[0] === "verification") return viewVerification();
     if (path[0] === "search") return viewSearch(params);
     if (path[0] === "quizzes" && path[1] === "play") return viewQuizPlay(path[2] ? decodeURIComponent(path[2]) : "", params);
     if (path[0] === "storybook") return viewStorybook(path[1] ? decodeURIComponent(path[1]) : null, path[2] ? decodeURIComponent(path[2]) : null, params);

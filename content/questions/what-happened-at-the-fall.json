@@ -16,5 +16,8 @@
   "Status": "Published",
   "LastUpdated": "2026-10-25",
   "RelatedPeople": "Adam; Eve",
-  "RelatedEvents": "The Fall"
+  "RelatedEvents": "The Fall",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

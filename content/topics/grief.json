@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; King David; Mary of Bethany",
   "RelatedEvents": "Raising of Lazarus; The Crucifixion",
   "Slug": "grief",
-  "Places": "Bethany; Golgotha; Jerusalem"
+  "Places": "Bethany; Golgotha; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

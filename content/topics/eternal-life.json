@@ -8,5 +8,8 @@
   "RelatedBooks": "John; Romans; 1 John",
   "Slug": "eternal-life",
   "Places": "Bethany",
-  "RelatedEvents": "The Resurrection; Raising of Lazarus"
+  "RelatedEvents": "The Resurrection; Raising of Lazarus",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

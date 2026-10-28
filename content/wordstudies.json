@@ -13,7 +13,10 @@
     "RelatedBooks": "Exodus; Psalms; Lamentations; Micah",
     "Slug": "hesed",
     "RelatedPeople": "King David; Moses",
-    "RelatedEvents": "The Golden Calf"
+    "RelatedEvents": "The Golden Calf",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "שָׁלוֹם",
@@ -29,7 +32,10 @@
     "RelatedBooks": "Numbers; Isaiah; Jeremiah",
     "Slug": "shalom",
     "RelatedPeople": "Jesus; Aaron",
-    "RelatedEvents": "The Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "בְּרִית",
@@ -46,7 +52,10 @@
     "Slug": "berit",
     "RelatedPeople": "Noah; Abraham; Moses; King David; Jesus",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments; Davidic Covenant"
+    "RelatedEvents": "The Ten Commandments; Davidic Covenant",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "אֱמוּנָה",
@@ -62,7 +71,10 @@
     "RelatedBooks": "Deuteronomy; Psalms; Habakkuk; Lamentations",
     "Slug": "emunah",
     "RelatedPeople": "Abraham; Moses",
-    "RelatedEvents": "The Call of Abraham"
+    "RelatedEvents": "The Call of Abraham",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "תּוֹרָה",
@@ -79,7 +91,10 @@
     "Slug": "torah",
     "RelatedPeople": "Moses; Ezra; King David",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments; Ezra Reads the Law"
+    "RelatedEvents": "The Ten Commandments; Ezra Reads the Law",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "רוּחַ",
@@ -95,7 +110,10 @@
     "RelatedBooks": "Genesis; Psalms; Ezekiel; Joel",
     "Slug": "ruach",
     "RelatedPeople": "Ezekiel",
-    "RelatedEvents": "Creation; Pentecost"
+    "RelatedEvents": "Creation; Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "נֶפֶשׁ",
@@ -112,7 +130,10 @@
     "Slug": "nephesh",
     "RelatedPeople": "Adam; King David",
     "Places": "Garden of Eden",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "קָדוֹשׁ",
@@ -129,7 +150,10 @@
     "Slug": "qadosh",
     "RelatedPeople": "Moses; Isaiah",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Burning Bush; The Ten Commandments"
+    "RelatedEvents": "The Burning Bush; The Ten Commandments",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "צֶדֶק",
@@ -145,7 +169,10 @@
     "RelatedBooks": "Deuteronomy; Psalms; Isaiah; Amos",
     "Slug": "tsedeq",
     "RelatedPeople": "Amos",
-    "Places": "Bethel"
+    "Places": "Bethel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "אַהֲבָה",
@@ -161,7 +188,10 @@
     "RelatedBooks": "Deuteronomy; Song of Solomon; Jeremiah",
     "Slug": "ahavah",
     "RelatedPeople": "Moses; King Solomon",
-    "Places": "Plains of Moab"
+    "Places": "Plains of Moab",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "יָדַע",
@@ -178,7 +208,10 @@
     "Slug": "yada",
     "RelatedPeople": "Adam; Abraham; Jeremiah",
     "Places": "Garden of Eden",
-    "RelatedEvents": "Creation"
+    "RelatedEvents": "Creation",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "שׁוּב",
@@ -195,7 +228,10 @@
     "Slug": "shuv",
     "RelatedPeople": "Jonah",
     "Places": "Nineveh",
-    "RelatedEvents": "Jonah and Nineveh"
+    "RelatedEvents": "Jonah and Nineveh",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "קָוָה",
@@ -210,7 +246,10 @@
     "RelatedTopics": "Hope; Perseverance; Trust",
     "RelatedBooks": "Psalms; Isaiah; Lamentations",
     "Slug": "kavah",
-    "RelatedPeople": "Isaiah; King David"
+    "RelatedPeople": "Isaiah; King David",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "גֹּאֵל",
@@ -227,7 +266,10 @@
     "Slug": "goel",
     "RelatedPeople": "Boaz; Ruth; Naomi; Job",
     "Places": "Bethlehem",
-    "RelatedEvents": "Ruth's Loyalty"
+    "RelatedEvents": "Ruth's Loyalty",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "סֶלָה",
@@ -242,7 +284,10 @@
     "RelatedTopics": "Worship; Prayer; Psalms",
     "RelatedBooks": "Psalms; Habakkuk",
     "Slug": "selah",
-    "RelatedPeople": "King David"
+    "RelatedPeople": "King David",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "דָּבָר",
@@ -259,7 +304,10 @@
     "Slug": "dabar",
     "RelatedPeople": "Moses; Isaiah",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments"
+    "RelatedEvents": "The Ten Commandments",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "כָּבוֹד",
@@ -276,7 +324,10 @@
     "Slug": "kabod",
     "RelatedPeople": "Moses; Isaiah",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments"
+    "RelatedEvents": "The Ten Commandments",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "מִשְׁפָּט",
@@ -293,7 +344,10 @@
     "Slug": "mishpat",
     "RelatedPeople": "Moses; Amos; Micah",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments"
+    "RelatedEvents": "The Ten Commandments",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "ἐλπίς",
@@ -309,7 +363,10 @@
     "RelatedBooks": "Romans; Colossians; Hebrews; 1 Peter",
     "Slug": "elpis",
     "RelatedPeople": "Simon Peter; Paul",
-    "RelatedEvents": "The Resurrection"
+    "RelatedEvents": "The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "ἄγκυρα",
@@ -325,7 +382,10 @@
     "RelatedBooks": "Acts; Hebrews",
     "Slug": "agkura",
     "RelatedPeople": "Paul",
-    "RelatedEvents": "Paul Shipwrecked on Malta"
+    "RelatedEvents": "Paul Shipwrecked on Malta",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "ἀγάπη",
@@ -341,7 +401,10 @@
     "RelatedBooks": "John; Romans; 1 Corinthians; 1 John",
     "Slug": "agape",
     "RelatedPeople": "Jesus; John the Apostle",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "χάρις",
@@ -357,7 +420,10 @@
     "RelatedBooks": "John; Romans; Ephesians; 2 Corinthians",
     "Slug": "charis",
     "RelatedPeople": "Paul",
-    "RelatedEvents": "The Conversion of Paul"
+    "RelatedEvents": "The Conversion of Paul",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "πίστις",
@@ -373,7 +439,10 @@
     "RelatedBooks": "Romans; Ephesians; Hebrews",
     "Slug": "pistis",
     "RelatedPeople": "Abraham; Paul",
-    "RelatedEvents": "The Call of Abraham"
+    "RelatedEvents": "The Call of Abraham",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "λόγος",
@@ -389,7 +458,10 @@
     "RelatedBooks": "John; Luke; Hebrews",
     "Slug": "logos",
     "RelatedPeople": "Jesus; John the Apostle",
-    "RelatedEvents": "The Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "πνεῦμα",
@@ -406,7 +478,10 @@
     "Slug": "pneuma",
     "RelatedPeople": "Jesus; Simon Peter",
     "Places": "Jerusalem",
-    "RelatedEvents": "Pentecost"
+    "RelatedEvents": "Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "ἐκκλησία",
@@ -423,7 +498,10 @@
     "Slug": "ekklesia",
     "RelatedPeople": "Simon Peter; Paul",
     "Places": "Jerusalem",
-    "RelatedEvents": "Pentecost; Jerusalem Council"
+    "RelatedEvents": "Pentecost; Jerusalem Council",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "σωτηρία",
@@ -440,7 +518,10 @@
     "Slug": "soteria",
     "RelatedPeople": "Jesus; Zacchaeus; Paul",
     "Places": "Jericho",
-    "RelatedEvents": "The Resurrection"
+    "RelatedEvents": "The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "δικαιοσύνη",
@@ -456,7 +537,10 @@
     "RelatedBooks": "Matthew; Romans; 2 Corinthians",
     "Slug": "dikaiosyne",
     "RelatedPeople": "Paul; Abraham",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "μετάνοια",
@@ -473,7 +557,10 @@
     "Slug": "metanoia",
     "RelatedPeople": "John the Baptist; Jesus",
     "Places": "Jordan River",
-    "RelatedEvents": "The Baptism of Jesus"
+    "RelatedEvents": "The Baptism of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "κοινωνία",
@@ -490,7 +577,10 @@
     "Slug": "koinonia",
     "RelatedPeople": "Simon Peter; Paul",
     "Places": "Jerusalem",
-    "RelatedEvents": "Pentecost; Jerusalem Council"
+    "RelatedEvents": "Pentecost; Jerusalem Council",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "εἰρήνη",
@@ -506,7 +596,10 @@
     "RelatedBooks": "John; Romans; Ephesians; Philippians",
     "Slug": "eirene",
     "RelatedPeople": "Jesus; Paul",
-    "RelatedEvents": "The Last Supper"
+    "RelatedEvents": "The Last Supper",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "δόξα",
@@ -523,7 +616,10 @@
     "Slug": "doxa",
     "RelatedPeople": "Jesus; Moses",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments; Transfiguration"
+    "RelatedEvents": "The Ten Commandments; Transfiguration",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "ἁμαρτία",
@@ -540,7 +636,10 @@
     "Slug": "hamartia",
     "RelatedPeople": "Adam; Paul",
     "Places": "Garden of Eden",
-    "RelatedEvents": "The Fall"
+    "RelatedEvents": "The Fall",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "εὐαγγέλιον",
@@ -557,7 +656,10 @@
     "Slug": "euangelion",
     "RelatedPeople": "Jesus; Paul",
     "Places": "Galilee",
-    "RelatedEvents": "The Conversion of Paul"
+    "RelatedEvents": "The Conversion of Paul",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "κύριος",
@@ -573,7 +675,10 @@
     "RelatedBooks": "Luke; Acts; Romans; Philippians",
     "Slug": "kurios",
     "RelatedPeople": "Jesus; Paul",
-    "RelatedEvents": "The Resurrection; The Conversion of Paul"
+    "RelatedEvents": "The Resurrection; The Conversion of Paul",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "Χριστός",
@@ -590,7 +695,10 @@
     "Slug": "christos",
     "RelatedPeople": "Jesus; King David",
     "Places": "Bethlehem",
-    "RelatedEvents": "The Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "βάπτισμα",
@@ -607,7 +715,10 @@
     "Slug": "baptisma",
     "RelatedPeople": "Jesus; John the Baptist; Paul",
     "Places": "Jordan River",
-    "RelatedEvents": "The Baptism of Jesus"
+    "RelatedEvents": "The Baptism of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "μάρτυς",
@@ -624,7 +735,10 @@
     "Slug": "martys",
     "RelatedPeople": "Stephen; Paul",
     "Places": "Jerusalem",
-    "RelatedEvents": "Martyrdom of Stephen"
+    "RelatedEvents": "Martyrdom of Stephen",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "παράκλητος",
@@ -641,7 +755,10 @@
     "Slug": "parakletos",
     "RelatedPeople": "Jesus",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Last Supper; Pentecost"
+    "RelatedEvents": "The Last Supper; Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "ἀλήθεια",
@@ -656,7 +773,10 @@
     "RelatedTopics": "Truth; Jesus Christ; Word of God",
     "RelatedBooks": "John; Ephesians",
     "Slug": "aletheia",
-    "RelatedPeople": "Jesus"
+    "RelatedPeople": "Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "ζωή",
@@ -672,7 +792,10 @@
     "RelatedBooks": "John; 1 John",
     "Slug": "zoe",
     "RelatedPeople": "Jesus; John the Apostle",
-    "RelatedEvents": "The Resurrection"
+    "RelatedEvents": "The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "θάνατος",
@@ -688,7 +811,10 @@
     "RelatedBooks": "Romans; 1 Corinthians; Hebrews; Revelation",
     "Slug": "thanatos",
     "RelatedPeople": "Jesus; Paul",
-    "RelatedEvents": "The Crucifixion; The Resurrection"
+    "RelatedEvents": "The Crucifixion; The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "ὁδός",
@@ -704,7 +830,10 @@
     "RelatedBooks": "Psalms; John; Acts",
     "Slug": "hodos",
     "RelatedPeople": "Jesus; Paul",
-    "RelatedEvents": "The Conversion of Paul"
+    "RelatedEvents": "The Conversion of Paul",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "φῶς",
@@ -720,7 +849,10 @@
     "RelatedBooks": "Matthew; John; 1 John",
     "Slug": "phos",
     "RelatedPeople": "Jesus; John the Apostle",
-    "RelatedEvents": "Transfiguration"
+    "RelatedEvents": "Transfiguration",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "σκοτία",
@@ -736,7 +868,10 @@
     "RelatedBooks": "John; Colossians; 1 John",
     "Slug": "skotia",
     "RelatedPeople": "Jesus; John the Apostle",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "ἅγιος",
@@ -753,7 +888,10 @@
     "Slug": "hagios",
     "RelatedPeople": "Paul; Moses",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments"
+    "RelatedEvents": "The Ten Commandments",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "ψυχή",
@@ -768,7 +906,10 @@
     "RelatedTopics": "Soul; Salvation; Rest",
     "RelatedBooks": "Matthew; Mark; 3 John",
     "Slug": "psuche",
-    "RelatedPeople": "Jesus"
+    "RelatedPeople": "Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "θεός",
@@ -785,7 +926,10 @@
     "Slug": "theos",
     "RelatedPeople": "Moses",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Burning Bush"
+    "RelatedEvents": "The Burning Bush",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "σάρξ",
@@ -802,7 +946,10 @@
     "Slug": "sarx",
     "RelatedPeople": "Paul; Jesus",
     "Places": "Bethlehem",
-    "RelatedEvents": "The Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Word": "καιρός",
@@ -819,6 +966,9 @@
     "Slug": "kairos",
     "RelatedPeople": "Jesus; Paul",
     "Places": "Galilee",
-    "RelatedEvents": "The Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

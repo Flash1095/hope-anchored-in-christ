@@ -6,5 +6,8 @@
   "RelatedPeople": "Paul; Simon Peter; Jesus",
   "RelatedEvents": "The Conversion of Paul; The Baptism of Jesus",
   "Slug": "identity-in-christ",
-  "Places": "Jordan River"
+  "Places": "Jordan River",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

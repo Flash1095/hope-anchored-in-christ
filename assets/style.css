@@ -375,3 +375,7 @@ a:hover { color: var(--gold-dark); }
 @media (prefers-reduced-motion: reduce) {
   .is-home .banner img, .is-home #app > h2, .is-home #app > .page-intro, .is-home .stats, .is-home .verse-band, .is-home .home-grid .card { animation: none !important; }
 }
+.verif-box { border: 1px solid var(--line); border-radius: 12px; background: var(--cream); padding: 0.9rem 1rem; margin: 1rem 0; }
+.verif-box .badge { font-size: 0.85rem; }
+.verif-meaning { margin-left: 0.4rem; }
+.verif-sources, .verif-reviewed { margin-top: 0.5rem; font-size: 0.95rem; overflow-wrap: anywhere; }

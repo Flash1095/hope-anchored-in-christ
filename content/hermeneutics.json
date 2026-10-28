@@ -8,7 +8,10 @@
     "CommonMistake": "Literalistic decoding — identifying the beast, the mark, or the dates with specific modern figures and technologies, and building fear or speculation on the guesses.",
     "Scripture": "Revelation 13:1-18; Daniel 7:1-28; Revelation 1:1-3",
     "RelatedTopics": "Prophecy; Second Coming",
-    "Slug": "apocalyptic"
+    "Slug": "apocalyptic",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Authorial Intent",
@@ -19,7 +22,10 @@
     "CommonMistake": "Replacing the author's meaning with 'what this verse means to me,' which makes every reader's feelings the authority and lets one text mean opposite things to different people.",
     "Scripture": "John 20:30-31; 2 Peter 1:20-21; Nehemiah 8:8",
     "RelatedTopics": "Faith; Evangelism",
-    "Slug": "authorial-intent"
+    "Slug": "authorial-intent",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Avoid Proof-Texting",
@@ -30,7 +36,10 @@
     "CommonMistake": "Verse-sniping in debates, where isolated lines get deployed as weapons without any regard for what their passages actually say — and listeners walk away believing the Bible said something it never did.",
     "Scripture": "Matthew 18:15-20; 2 Timothy 2:15; Acts 17:11",
     "RelatedTopics": "Church; Prayer",
-    "Slug": "avoid-proof-texting"
+    "Slug": "avoid-proof-texting",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Canonical Context",
@@ -41,7 +50,10 @@
     "CommonMistake": "Treating a passage as an isolated island, so that an Old Testament promise or command is applied without any reference to how Christ and the apostles later handle it.",
     "Scripture": "Luke 24:27; Isaiah 53:1-12; Romans 15:4",
     "RelatedTopics": "Redemption; Covenant",
-    "Slug": "canonical-context"
+    "Slug": "canonical-context",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Chiasm",
@@ -52,7 +64,10 @@
     "CommonMistake": "Missing the center and treating a chiastic passage as a flat list, so that the author's highlighted turning point goes unnoticed.",
     "Scripture": "Genesis 8:1; John 1:1-18; Matthew 6:9-13",
     "RelatedTopics": "Creation; Prayer",
-    "Slug": "chiasm"
+    "Slug": "chiasm",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Christ-Centered Reading",
@@ -63,7 +78,10 @@
     "CommonMistake": "Moralistic reading that never reaches Christ — reducing every passage to 'be brave like David' — or fanciful allegory that finds Jesus hiding in every detail of every story.",
     "Scripture": "Luke 24:27; John 5:39; Colossians 1:15-20",
     "RelatedTopics": "Redemption; Kingdom of God",
-    "Slug": "christ-centered-reading"
+    "Slug": "christ-centered-reading",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Cultural Context",
@@ -74,7 +92,10 @@
     "CommonMistake": "Judging ancient customs by modern standards, or assuming a culturally shaped practice (like a greeting, a garment, or a seating custom) carries exactly the same meaning today.",
     "Scripture": "Luke 15:11-32; Ruth 3:1-13; 1 Corinthians 11:2-16",
     "RelatedTopics": "Forgiveness; Grace",
-    "Slug": "cultural-context"
+    "Slug": "cultural-context",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Descriptive vs. Prescriptive",
@@ -85,7 +106,10 @@
     "CommonMistake": "Copying everything Bible characters did — polygamy, deception, vengeance — simply because it appears in the narrative, as if description were endorsement.",
     "Scripture": "Judges 6:36-40; Genesis 16:1-16; Acts 2:44-45",
     "RelatedTopics": "Wisdom; Discipleship",
-    "Slug": "descriptive-vs-prescriptive"
+    "Slug": "descriptive-vs-prescriptive",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Epistle",
@@ -96,7 +120,10 @@
     "CommonMistake": "Lifting a single verse out of a letter's argument — for example, quoting a corrective about one church's disorder as if it were a timeless rule for every church in every age.",
     "Scripture": "Galatians 1:6-9; Romans 12:1-21; Philippians 4:1-20",
     "RelatedTopics": "Church; Grace",
-    "Slug": "epistle"
+    "Slug": "epistle",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Genre Determines the Rules",
@@ -107,7 +134,10 @@
     "CommonMistake": "Reading every genre by the same rules: treating Proverbs as promises, Revelation as a newspaper, or a parable as a history report — and then wondering why the Bible seems to contradict itself.",
     "Scripture": "Revelation 1:1-3; Romans 1:16-17; Proverbs 26:4-5",
     "RelatedTopics": "Prophecy; Wisdom",
-    "Slug": "genre-determines-the-rules"
+    "Slug": "genre-determines-the-rules",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Gospel",
@@ -118,7 +148,10 @@
     "CommonMistake": "Forcing the four Gospels into one flat harmony and calling every difference a contradiction, or ignoring an author's emphasis and reading all four as if they were identical.",
     "Scripture": "Matthew 1:1-17; Luke 15:1-32; John 20:30-31",
     "RelatedTopics": "Redemption; Kingdom of God",
-    "Slug": "gospel"
+    "Slug": "gospel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Historical Context",
@@ -129,7 +162,10 @@
     "CommonMistake": "Reading as if every verse were written directly to the modern reader, so that promises made to a specific people in a specific crisis get claimed as instant personal guarantees.",
     "Scripture": "Jeremiah 29:4-14; Galatians 4:4; 2 Timothy 3:16",
     "RelatedTopics": "Exile; Hope",
-    "Slug": "historical-context"
+    "Slug": "historical-context",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Hyperbole",
@@ -140,7 +176,10 @@
     "CommonMistake": "Obeying hyperbole literally (and harming oneself or others) or, at the other extreme, shrugging it off as mere colorful talk and missing the urgent point entirely.",
     "Scripture": "Matthew 5:27-30; Luke 14:26; 1 Corinthians 13:1-3",
     "RelatedTopics": "Holiness; Love",
-    "Slug": "hyperbole"
+    "Slug": "hyperbole",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Law",
@@ -151,7 +190,10 @@
     "CommonMistake": "Cherry-picking laws — enforcing one (like a dress or diet rule) while ignoring its neighbors — or else imposing the whole Mosaic code on Christians as if the new covenant had not come.",
     "Scripture": "Leviticus 19:1-37; Mark 7:14-23; Acts 10:9-16; Matthew 5:17",
     "RelatedTopics": "Covenant; Holiness",
-    "Slug": "law"
+    "Slug": "law",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Literal vs. Literalistic",
@@ -162,7 +204,10 @@
     "CommonMistake": "Flattening figures into facts (God has wings, Jesus is a wooden door) or, at the other extreme, dissolving plain historical claims into mere symbolism whenever they are inconvenient.",
     "Scripture": "Psalm 91:4; John 6:35; Galatians 4:24-26",
     "RelatedTopics": "Faith; Wisdom",
-    "Slug": "literal-vs-literalistic"
+    "Slug": "literal-vs-literalistic",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Literary Context",
@@ -173,7 +218,10 @@
     "CommonMistake": "Cherry-picking a favorite verse and building a meaning on it that the surrounding passage never intended — the classic source of slogans the Bible never actually teaches.",
     "Scripture": "Philippians 4:10-20; 2 Timothy 2:15; Luke 10:38-42",
     "RelatedTopics": "Discipleship; Prayer",
-    "Slug": "literary-context"
+    "Slug": "literary-context",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Metaphor and Simile",
@@ -184,7 +232,10 @@
     "CommonMistake": "Literalizing a metaphor ('Jesus is a door, so what are the hinges?') or pressing every detail of an image until the comparison collapses under weight it was never meant to bear.",
     "Scripture": "John 15:1-8; Psalm 23:1; Matthew 5:13-14",
     "RelatedTopics": "Discipleship; Prayer",
-    "Slug": "metaphor-and-simile"
+    "Slug": "metaphor-and-simile",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Narrative",
@@ -195,7 +246,10 @@
     "CommonMistake": "Treating every character as a direct role model, or mining each detail for a moral, so that even villains' actions get copied because 'it's in the Bible.'",
     "Scripture": "2 Samuel 11:1-12:25; Genesis 37:1-36; Luke 15:11-32",
     "RelatedTopics": "The Fall; Forgiveness",
-    "Slug": "narrative"
+    "Slug": "narrative",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "One Meaning, Many Applications",
@@ -206,7 +260,10 @@
     "CommonMistake": "Claiming 'it means whatever it means to me' so that a text can mean opposite things, or else insisting that only one approved application counts and every other use is misuse.",
     "Scripture": "Mark 12:28-34; James 1:22-25; 2 Timothy 3:16-17",
     "RelatedTopics": "Love; Discipleship",
-    "Slug": "one-meaning-many-applications"
+    "Slug": "one-meaning-many-applications",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Original Audience",
@@ -217,7 +274,10 @@
     "CommonMistake": "Assuming every command applies to us identically, so that a first-century church practice or a personal instruction to one individual gets imposed as a universal law.",
     "Scripture": "1 Corinthians 1:10-13; Romans 16:16; Revelation 2:1-3:22",
     "RelatedTopics": "Church; Worship",
-    "Slug": "original-audience"
+    "Slug": "original-audience",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Parable",
@@ -228,7 +288,10 @@
     "CommonMistake": "Allegorizing every detail — the oil becomes the Holy Spirit, the inn becomes the church, the coins become sacraments — until the parable's plain punch is buried under invented meanings.",
     "Scripture": "Luke 10:25-37; Luke 15:11-32; Matthew 13:3-9",
     "RelatedTopics": "Mercy; Love",
-    "Slug": "parable"
+    "Slug": "parable",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Parallelism",
@@ -239,7 +302,10 @@
     "CommonMistake": "Reading each poetic line as a separate new idea, so that restatements get counted as additional promises or contrasts get missed entirely.",
     "Scripture": "Psalm 1:1-6; Proverbs 10:1; Isaiah 55:8-9",
     "RelatedTopics": "Worship; Wisdom",
-    "Slug": "parallelism"
+    "Slug": "parallelism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Poetry",
@@ -250,7 +316,10 @@
     "CommonMistake": "Reading poetic exaggeration as literal promise — for example, turning Psalm 91's imagery of protection into a guarantee that no harm will ever touch a believer.",
     "Scripture": "Psalm 23:1-6; Psalm 91:1-16; Song of Solomon 2:7",
     "RelatedTopics": "Worship; Prayer",
-    "Slug": "poetry"
+    "Slug": "poetry",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Prophecy",
@@ -261,7 +330,10 @@
     "CommonMistake": "Reading every prophecy as a coded newspaper prediction about current events, so that ancient oracles get forced onto modern headlines they were never addressing.",
     "Scripture": "Isaiah 7:14; Matthew 1:22-23; Amos 5:24",
     "RelatedTopics": "Prophecy; Justice",
-    "Slug": "prophecy"
+    "Slug": "prophecy",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Read the Whole Counsel",
@@ -272,7 +344,10 @@
     "CommonMistake": "Keeping a canon within the canon — only Paul, only the red letters, only the passages that comfort — until a lopsided Bible produces a lopsided faith.",
     "Scripture": "Acts 20:27; 2 Timothy 3:16; Psalm 119:160",
     "RelatedTopics": "Faith; Holiness",
-    "Slug": "read-the-whole-counsel"
+    "Slug": "read-the-whole-counsel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Repetition and Emphasis",
@@ -283,7 +358,10 @@
     "CommonMistake": "Skimming repeated material as filler or redundancy, and so walking past the very point the author was working hardest to make.",
     "Scripture": "Isaiah 6:3; Psalm 136:1-26; John 21:15-17",
     "RelatedTopics": "Holiness; Worship",
-    "Slug": "repetition-and-emphasis"
+    "Slug": "repetition-and-emphasis",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Scripture Interprets Scripture",
@@ -294,7 +372,10 @@
     "CommonMistake": "Building an entire doctrine on one obscure or isolated text, or quoting a verse against the grain of everything else Scripture says on the subject.",
     "Scripture": "1 Corinthians 15:29; 2 Peter 3:15-16; Acts 17:11",
     "RelatedTopics": "Faith; Church",
-    "Slug": "scripture-interprets-scripture"
+    "Slug": "scripture-interprets-scripture",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Symbolism",
@@ -305,7 +386,10 @@
     "CommonMistake": "Assigning fixed codebook meanings to every number or color everywhere ('seven always means perfection, so this verse about seven days means...'), or inventing symbolism Scripture never suggests.",
     "Scripture": "Revelation 5:6; Exodus 12:1-13; John 1:29",
     "RelatedTopics": "Redemption; Worship",
-    "Slug": "symbolism"
+    "Slug": "symbolism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Typology",
@@ -316,7 +400,10 @@
     "CommonMistake": "Finding types everywhere — every piece of wood becomes the cross, every meal becomes the Lord's Supper — until typology becomes allegory with no anchor in the text.",
     "Scripture": "1 Corinthians 5:7; Hebrews 10:1; Luke 24:27",
     "RelatedTopics": "Redemption; Covenant",
-    "Slug": "typology"
+    "Slug": "typology",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Principle": "Wisdom Literature",
@@ -327,6 +414,9 @@
     "CommonMistake": "Turning proverbs into guarantees and then blaming people when life does not follow the formula, or quoting Job's comforters as if their speeches were God's verdict.",
     "Scripture": "Proverbs 22:6; Job 1:1-2:13; Ecclesiastes 3:1-8",
     "RelatedTopics": "Wisdom; Suffering",
-    "Slug": "wisdom-literature"
+    "Slug": "wisdom-literature",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

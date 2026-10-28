@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Ezra; Ruth",
   "RelatedEvents": "The Prodigal Son; Cyrus's Decree and Return from Exile",
   "Slug": "homecoming",
-  "Places": "Babylon; Jerusalem"
+  "Places": "Babylon; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -16,5 +16,8 @@
   "Image": "assets/finds/arad-temple.jpg",
   "ImageCredit": "Photo: יעקב (CC BY-SA 4.0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3ATel_arad_fortress_temple1957.jpg",
-  "Slug": "arad-temple"
+  "Slug": "arad-temple",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

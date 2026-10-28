@@ -5,5 +5,8 @@
   "KeyPassages": "Genesis 1:27; 2 Corinthians 5:17; Galatians 2:20; Ephesians 1:3-6; 1 Peter 2:9-10",
   "RelatedPeople": "Paul; Simon Peter",
   "RelatedBooks": "Genesis; 2 Corinthians; Galatians; Ephesians; 1 Peter",
-  "Slug": "identity"
+  "Slug": "identity",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

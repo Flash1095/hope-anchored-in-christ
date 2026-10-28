@@ -8,5 +8,8 @@
   "RelatedBooks": "Genesis; Romans; 1 Corinthians",
   "Slug": "adam-and-eve",
   "Places": "Garden of Eden",
-  "RelatedEvents": "Creation; The Fall"
+  "RelatedEvents": "Creation; The Fall",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

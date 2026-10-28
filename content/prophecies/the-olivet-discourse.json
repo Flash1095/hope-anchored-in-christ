@@ -11,5 +11,8 @@
   "RelatedPeople": "Jesus; Peter; Andrew",
   "RelatedEvents": "Fall of Jerusalem and the Exile; Triumphal Entry",
   "Slug": "olivet-discourse",
-  "Places": "Jerusalem"
+  "Places": "Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -18,5 +18,8 @@
   "Image": "assets/finds/erastus-inscription.jpg",
   "ImageCredit": "Photo: Ktiv (CC BY-SA 4.0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3AErastus_Inschrift.jpg",
-  "Slug": "erastus-inscription"
+  "Slug": "erastus-inscription",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

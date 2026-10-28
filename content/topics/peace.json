@@ -6,5 +6,8 @@
   "RelatedPeople": "Isaiah; Jesus; Paul",
   "RelatedEvents": "The Birth of Jesus; The Crucifixion; The Resurrection",
   "Slug": "peace",
-  "Places": "Bethlehem; Golgotha; Jerusalem"
+  "Places": "Bethlehem; Golgotha; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

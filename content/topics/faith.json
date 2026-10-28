@@ -9,5 +9,8 @@
   "RelatedBooks": "Genesis; Habakkuk; Romans; Ephesians; Hebrews; James",
   "Slug": "faith",
   "RelatedEvents": "The Binding of Isaac; Noah and the Flood; The Resurrection",
-  "Places": "Mount Ararat; Jerusalem"
+  "Places": "Mount Ararat; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

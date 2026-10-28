@@ -1,13 +1,16 @@
 {
- "Topic": "Discipleship",
- "Category": "Christian Living",
- "Summary": "Discipleship is following Jesus daily, learning from His word, obeying His commands, and helping others do the same. It is more than believing facts about Christ; it is a whole life reordered around Him, whatever the cost. The Great Commission makes disciple-making the normal mission of every believer, not just church leaders.",
- "KeyPassages": "Matthew 4:19; Matthew 28:18-20; Luke 9:23; John 15:8; Acts 2:42; 2 Timothy 2:2",
- "RelatedPeople": "Jesus; Peter; Andrew; Paul; Timothy; Barnabas",
- "RelatedDoctrines": "Discipleship; Great Commission; Spiritual Growth",
- "RelatedQuestions": "What does it mean to be a disciple of Jesus?; How do I disciple someone else?",
- "RelatedBooks": "Matthew; Luke; John; Acts; 2 Timothy",
- "Slug": "discipleship",
- "Places": "Galilee",
- "RelatedEvents": "The Sermon on the Mount"
+  "Topic": "Discipleship",
+  "Category": "Christian Living",
+  "Summary": "Discipleship is following Jesus daily, learning from His word, obeying His commands, and helping others do the same. It is more than believing facts about Christ; it is a whole life reordered around Him, whatever the cost. The Great Commission makes disciple-making the normal mission of every believer, not just church leaders.",
+  "KeyPassages": "Matthew 4:19; Matthew 28:18-20; Luke 9:23; John 15:8; Acts 2:42; 2 Timothy 2:2",
+  "RelatedPeople": "Jesus; Peter; Andrew; Paul; Timothy; Barnabas",
+  "RelatedDoctrines": "Discipleship; Great Commission; Spiritual Growth",
+  "RelatedQuestions": "What does it mean to be a disciple of Jesus?; How do I disciple someone else?",
+  "RelatedBooks": "Matthew; Luke; John; Acts; 2 Timothy",
+  "Slug": "discipleship",
+  "Places": "Galilee",
+  "RelatedEvents": "The Sermon on the Mount",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

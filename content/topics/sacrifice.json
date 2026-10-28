@@ -6,5 +6,8 @@
   "RelatedPeople": "Abraham; Isaac; Aaron; Jesus; John the Baptist",
   "RelatedEvents": "The Binding of Isaac; The Passover; The Crucifixion",
   "Slug": "sacrifice",
-  "Places": "Jerusalem; Egypt; Golgotha"
+  "Places": "Jerusalem; Egypt; Golgotha",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -16,5 +16,8 @@
   "Image": "assets/finds/samaria-ostraca.jpg",
   "ImageCredit": "Photo: George Andrew Reisner (Public domain)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3ASamaria_Ostraca_House.jpg",
-  "Slug": "samaria-ostraca"
+  "Slug": "samaria-ostraca",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

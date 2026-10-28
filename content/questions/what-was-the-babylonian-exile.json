@@ -20,5 +20,7 @@
   "Status": "Published",
   "LastUpdated": "2026-10-23",
   "RelatedPeople": "Cyrus the Great; Ezra; Jeremiah; King Nebuchadnezzar; King Solomon; Nehemiah; Zerubbabel",
-  "Places": "Jerusalem; Babylon"
+  "Places": "Jerusalem; Babylon",
+  "VerificationStatus": "Awaiting Review",
+  "LastReviewed": ""
 }

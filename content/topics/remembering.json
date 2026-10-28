@@ -6,5 +6,8 @@
   "RelatedPeople": "Moses; Jesus",
   "RelatedEvents": "The Passover; The Last Supper; The Exodus and the Red Sea",
   "Slug": "remembering",
-  "Places": "Egypt; Goshen; Jerusalem"
+  "Places": "Egypt; Goshen; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

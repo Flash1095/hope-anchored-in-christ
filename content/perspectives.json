@@ -6,7 +6,10 @@
     "BiblicalInsight": "The Bible's people and places keep turning up in the dirt. Archaeology does not prove faith, but it keeps showing the story is rooted in real ground.",
     "KeyWork": "The Message of the Scrolls",
     "Scripture": "Joshua 4:20-24",
-    "Slug": "archaeologist"
+    "Slug": "archaeologist",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Artist",
@@ -15,7 +18,10 @@
     "BiblicalInsight": "Beauty is a way of knowing. A God who made a beautiful world invites us to meet Him through beauty.",
     "KeyWork": "Beauty and Truth",
     "Scripture": "Psalm 27:4",
-    "Slug": "artist"
+    "Slug": "artist",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Astronomer",
@@ -24,7 +30,10 @@
     "BiblicalInsight": "The heavens declare a Maker. A universe with a beginning points to a Beginner.",
     "KeyWork": "The Cosmic Beginning",
     "Scripture": "Psalm 19:1",
-    "Slug": "astronomer"
+    "Slug": "astronomer",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Bedside Physician",
@@ -33,7 +42,10 @@
     "BiblicalInsight": "Healing is holy work, and its limits point beyond medicine to the One who will wipe every tear.",
     "KeyWork": "The Great Physician",
     "Scripture": "Matthew 9:35",
-    "Slug": "bedside-physician"
+    "Slug": "bedside-physician",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Biologist",
@@ -42,7 +54,10 @@
     "BiblicalInsight": "Life is information-rich. Information, in every observed case, comes from a mind.",
     "KeyWork": "The Code of Life",
     "Scripture": "Genesis 1:27",
-    "Slug": "biologist"
+    "Slug": "biologist",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Detective",
@@ -51,7 +66,10 @@
     "BiblicalInsight": "Christianity's claims can be investigated like a case: the evidence for the resurrection, taken together, points to one conclusion - the risen Jesus.",
     "KeyWork": "Cold-Case Christianity",
     "Scripture": "1 Corinthians 15:3-8",
-    "Slug": "detective"
+    "Slug": "detective",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Engineer",
@@ -60,7 +78,10 @@
     "BiblicalInsight": "Design is recognized by its marks, not by its maker being visible. The world's machinery bears those marks.",
     "KeyWork": "Design and Information",
     "Scripture": "Psalm 139:14",
-    "Slug": "engineer"
+    "Slug": "engineer",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Farmer",
@@ -69,7 +90,10 @@
     "BiblicalInsight": "The kingdom grows like seed: slowly, mysteriously, and surely. Farming teaches faith's patience.",
     "KeyWork": "Sowing and Reaping",
     "Scripture": "Mark 4:26-29",
-    "Slug": "farmer"
+    "Slug": "farmer",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Historian",
@@ -78,7 +102,10 @@
     "BiblicalInsight": "The Gospels pass the same tests historians apply to any ancient document - and pass them unusually well.",
     "KeyWork": "The Historical Method",
     "Scripture": "Luke 1:1-4",
-    "Slug": "historian"
+    "Slug": "historian",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Journalist",
@@ -87,7 +114,10 @@
     "BiblicalInsight": "The Gospels survive journalistic scrutiny: multiple witnesses, early testimony, and details that ring true under cross-examination. Faith need not fear questions; it can invite them.",
     "KeyWork": "The Case for Christ",
     "Scripture": "Luke 1:1-4",
-    "Slug": "journalist"
+    "Slug": "journalist",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Lawyer",
@@ -96,7 +126,10 @@
     "BiblicalInsight": "Christianity stakes everything on a public, checkable event. It invites cross-examination rather than fearing it.",
     "KeyWork": "Rules of Evidence",
     "Scripture": "Deuteronomy 19:15",
-    "Slug": "lawyer"
+    "Slug": "lawyer",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Linguist",
@@ -105,7 +138,10 @@
     "BiblicalInsight": "God speaks our language - literally. The incarnation is translation perfected.",
     "KeyWork": "The Word in Translation",
     "Scripture": "John 1:14",
-    "Slug": "linguist"
+    "Slug": "linguist",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Mathematician",
@@ -114,7 +150,10 @@
     "BiblicalInsight": "Reason is a gift, not an accident. The universe's mathematical order reflects the mind of its Maker.",
     "KeyWork": "God's Undertaker",
     "Scripture": "Romans 1:20",
-    "Slug": "mathematician"
+    "Slug": "mathematician",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Parent",
@@ -123,7 +162,10 @@
     "BiblicalInsight": "Human parenthood faintly pictures divine fatherhood: love that waits, runs, and restores.",
     "KeyWork": "The Prodigal Son",
     "Scripture": "Luke 15:20-24",
-    "Slug": "parent"
+    "Slug": "parent",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Philosopher",
@@ -132,7 +174,10 @@
     "BiblicalInsight": "Faith and reason are allies. A worldview that undercuts trust in reason undercuts itself.",
     "KeyWork": "Where the Conflict Really Lies",
     "Scripture": "Isaiah 1:18",
-    "Slug": "philosopher"
+    "Slug": "philosopher",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Physician and Geneticist",
@@ -141,7 +186,10 @@
     "BiblicalInsight": "The human genome's elegance and the moral law within us both speak of a Mind behind nature. Science and faith answer different questions about the same reality.",
     "KeyWork": "The Language of God",
     "Scripture": "Psalm 139:13-16",
-    "Slug": "physician-and-geneticist"
+    "Slug": "physician-and-geneticist",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Psychologist",
@@ -150,7 +198,10 @@
     "BiblicalInsight": "The Bible's picture of the human heart - guilty, longing, restless - matches what therapists meet every day, and its cure is grace.",
     "KeyWork": "The Healing of Persons",
     "Scripture": "Psalm 32:1-5",
-    "Slug": "psychologist"
+    "Slug": "psychologist",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Soldier",
@@ -159,7 +210,10 @@
     "BiblicalInsight": "Faith is not passive. It has an enemy, a cost, and a Commander worth following.",
     "KeyWork": "The Armor of God",
     "Scripture": "Ephesians 6:10-18",
-    "Slug": "soldier"
+    "Slug": "soldier",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Teacher",
@@ -168,7 +222,10 @@
     "BiblicalInsight": "Truth is not only stated; it is taught. Jesus' method shows that how we teach matters as much as what we teach.",
     "KeyWork": "The Parables of Jesus",
     "Scripture": "Matthew 13:10-17",
-    "Slug": "teacher"
+    "Slug": "teacher",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Profession": "Writer",
@@ -177,6 +234,9 @@
     "BiblicalInsight": "Imagination is not the enemy of truth; it is one way truth reaches the heart. The Gospel is the true story every other story echoes.",
     "KeyWork": "Mere Christianity",
     "Scripture": "Ecclesiastes 3:11",
-    "Slug": "writer"
+    "Slug": "writer",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

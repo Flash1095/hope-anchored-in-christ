@@ -18,5 +18,8 @@
   "Image": "assets/finds/gallio-inscription.jpg",
   "ImageCredit": "Photo: Gérard (CC BY-SA 4.0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3ADelphes_Gallion.jpg",
-  "Slug": "gallio-inscription"
+  "Slug": "gallio-inscription",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

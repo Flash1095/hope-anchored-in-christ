@@ -1,12 +1,15 @@
 {
- "Doctrine": "Baptism",
- "Summary": "Baptism is the Christian rite of initiation with water, commanded by Christ, signifying union with Him in His death and resurrection, cleansing from sin, and welcome into the church. It is an outward sign of God's gracious covenant promise.",
- "BiblicalSupport": "Matthew 28:19; Acts 2:38; Romans 6:3-4; Colossians 2:12; 1 Peter 3:21",
- "HistoricalDevelopment": "Practiced from the New Testament onward and described in the Didache (c. AD 100), baptism was debated at the Reformation, when Anabaptists defended believer's baptism and Reformers such as Luther, Calvin, and Zwingli gave differing accounts.",
- "Interpretations": "Christians differ on subjects and mode: Baptist and many evangelical churches baptize professing believers by immersion, while Presbyterian, Methodist, Lutheran, Catholic, and Orthodox churches also baptize infants, by pouring, sprinkling, or immersion.",
- "RelatedTopics": "The Church; Sacraments and Ordinances; Covenant; Christian Life",
- "RelatedPeople": "Zwingli; Luther; Calvin; Menno Simons",
- "Slug": "baptism",
- "Places": "Jordan River",
- "RelatedEvents": "The Baptism of Jesus"
+  "Doctrine": "Baptism",
+  "Summary": "Baptism is the Christian rite of initiation with water, commanded by Christ, signifying union with Him in His death and resurrection, cleansing from sin, and welcome into the church. It is an outward sign of God's gracious covenant promise.",
+  "BiblicalSupport": "Matthew 28:19; Acts 2:38; Romans 6:3-4; Colossians 2:12; 1 Peter 3:21",
+  "HistoricalDevelopment": "Practiced from the New Testament onward and described in the Didache (c. AD 100), baptism was debated at the Reformation, when Anabaptists defended believer's baptism and Reformers such as Luther, Calvin, and Zwingli gave differing accounts.",
+  "Interpretations": "Christians differ on subjects and mode: Baptist and many evangelical churches baptize professing believers by immersion, while Presbyterian, Methodist, Lutheran, Catholic, and Orthodox churches also baptize infants, by pouring, sprinkling, or immersion.",
+  "RelatedTopics": "The Church; Sacraments and Ordinances; Covenant; Christian Life",
+  "RelatedPeople": "Zwingli; Luther; Calvin; Menno Simons",
+  "Slug": "baptism",
+  "Places": "Jordan River",
+  "RelatedEvents": "The Baptism of Jesus",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

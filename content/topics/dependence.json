@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Paul; King David",
   "RelatedEvents": "The Temptation in the Wilderness; Jesus Prays in Gethsemane",
   "Slug": "dependence",
-  "Places": "Jerusalem"
+  "Places": "Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

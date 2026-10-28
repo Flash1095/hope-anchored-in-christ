@@ -1,13 +1,16 @@
 {
- "Type": "Joshua",
- "Category": "Person",
- "OldTestamentPassage": "Joshua 1:1-9; Joshua 24:15; Numbers 13:16",
- "Fulfillment": "Joshua shares Jesus' very name: Yehoshua, 'the Lord saves,' rendered Yeshua in Jesus' day. Joshua led Israel into the rest of the promised land after Moses could not, and Jesus, our greater Joshua, gives the true and lasting rest that the land could only picture.",
- "FulfillmentPassage": "Matthew 1:21; Hebrews 4:8-11; Acts 7:45",
- "Explanation": "Hosea's name was changed to Joshua as a declaration that salvation belongs to the Lord, not to human strength. The conquest's victories and the land's rest were real gifts, yet Hebrews insists a greater rest remained, and it is found only in Christ, who leads His people home for good.",
- "RelatedBooks": "Joshua; Numbers; Matthew; Hebrews; Acts",
- "RelatedPeople": "Joshua; Moses; Caleb; Jesus",
- "RelatedEvents": "Crossing the Jordan; The Walls of Jericho",
- "Slug": "joshua",
- "Places": "Jericho; Jordan River"
+  "Type": "Joshua",
+  "Category": "Person",
+  "OldTestamentPassage": "Joshua 1:1-9; Joshua 24:15; Numbers 13:16",
+  "Fulfillment": "Joshua shares Jesus' very name: Yehoshua, 'the Lord saves,' rendered Yeshua in Jesus' day. Joshua led Israel into the rest of the promised land after Moses could not, and Jesus, our greater Joshua, gives the true and lasting rest that the land could only picture.",
+  "FulfillmentPassage": "Matthew 1:21; Hebrews 4:8-11; Acts 7:45",
+  "Explanation": "Hosea's name was changed to Joshua as a declaration that salvation belongs to the Lord, not to human strength. The conquest's victories and the land's rest were real gifts, yet Hebrews insists a greater rest remained, and it is found only in Christ, who leads His people home for good.",
+  "RelatedBooks": "Joshua; Numbers; Matthew; Hebrews; Acts",
+  "RelatedPeople": "Joshua; Moses; Caleb; Jesus",
+  "RelatedEvents": "Crossing the Jordan; The Walls of Jericho",
+  "Slug": "joshua",
+  "Places": "Jericho; Jordan River",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

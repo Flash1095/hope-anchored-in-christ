@@ -8,5 +8,8 @@
   "RelatedBooks": "Isaiah; Acts; 1 Peter; Revelation",
   "Slug": "witness",
   "Places": "Jerusalem",
-  "RelatedEvents": "Pentecost; The Resurrection"
+  "RelatedEvents": "Pentecost; The Resurrection",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

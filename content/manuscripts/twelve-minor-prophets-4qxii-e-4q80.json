@@ -22,5 +22,7 @@
   "Significance": "Best-preserved Qumran biblical copy of Zechariah: it preserves parts of Zechariah 1, 2, 3, 4, 5, 6, 8 and 12, far more than 4Q76 (Zechariah 14:18 only) or 4Q82 (Zechariah 10-12 fragments). Its text is described as of a textual type related to the Septuagint. For Haggai it is the runner-up, not the best: Haggai 2:18-21 (four verses) against 4Q77's Haggai 1:1-2; 2:2-4 (five verses).",
   "Slug": "twelve-minor-prophets-4qxii-e-4q80",
   "Sources": "https://en.wikipedia.org/wiki/List_of_manuscripts_from_Qumran_Cave_4; https://dssenglishbible.com/scroll4Q80.htm",
-  "Work": "Haggai; Zechariah"
+  "Work": "Haggai; Zechariah",
+  "VerificationStatus": "Verified",
+  "LastReviewed": "2026-10-27"
 }

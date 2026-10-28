@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Jeremiah; Paul",
   "RelatedEvents": "The Sermon on the Mount; Wilderness Wanderings",
   "Slug": "daily-faith",
-  "Places": "Galilee; Mount Sinai"
+  "Places": "Galilee; Mount Sinai",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

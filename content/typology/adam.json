@@ -9,5 +9,8 @@
   "RelatedPeople": "Adam; Eve; Jesus; Paul",
   "RelatedEvents": "Creation; The Fall; The Crucifixion; The Resurrection",
   "Slug": "adam",
-  "Places": "Garden of Eden"
+  "Places": "Garden of Eden",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

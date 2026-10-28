@@ -10,7 +10,10 @@
     "RelatedDoctrines": "Original Sin; Grace",
     "Slug": "pelagianism",
     "Places": "Ephesus",
-    "RelatedEvents": "The Fall"
+    "RelatedEvents": "The Fall",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Semi-Pelagianism",
@@ -21,7 +24,10 @@
     "ChristianResponse": "The church taught that faith itself begins by grace, pointing to Philippians 2:13 and John 6:44, while still affirming human responsibility to respond.",
     "RelatedPeople": "John Cassian; Augustine; Prosper of Aquitaine",
     "RelatedDoctrines": "Grace; Free Will; Original Sin",
-    "Slug": "semi-pelagianism"
+    "Slug": "semi-pelagianism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Arianism",
@@ -32,7 +38,10 @@
     "ChristianResponse": "The church affirmed that the Son is of one substance with the Father and eternally begotten, not made, citing John 1:1 and Colossians 1:15-17.",
     "RelatedPeople": "Arius; Athanasius; Constantine I",
     "RelatedDoctrines": "Trinity; Deity of Christ; Incarnation",
-    "Slug": "arianism"
+    "Slug": "arianism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Gnosticism",
@@ -43,7 +52,10 @@
     "ChristianResponse": "The church affirmed that creation is good, salvation is by grace through faith in Christ, and the gospel is openly proclaimed, citing Genesis 1 and John 1.",
     "RelatedPeople": "Valentinus; Marcion; Irenaeus",
     "RelatedDoctrines": "Creation; Salvation; Incarnation",
-    "Slug": "gnosticism"
+    "Slug": "gnosticism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Docetism",
@@ -55,7 +67,10 @@
     "RelatedPeople": "Ignatius of Antioch; John the Apostle",
     "RelatedDoctrines": "Incarnation; Atonement; Resurrection",
     "Slug": "docetism",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Marcionism",
@@ -67,7 +82,10 @@
     "RelatedPeople": "Marcion; Tertullian; Irenaeus",
     "RelatedDoctrines": "Canon of Scripture; Nature of God; Old Testament",
     "Slug": "marcionism",
-    "Places": "Rome"
+    "Places": "Rome",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Montanism",
@@ -78,7 +96,10 @@
     "ChristianResponse": "The church affirmed the work of the Holy Spirit while teaching that prophecy must be tested by Scripture and that Christ's return is not tied to one place, citing 1 Thessalonians 5:20-21.",
     "RelatedPeople": "Montanus; Priscilla; Maximilla; Tertullian",
     "RelatedDoctrines": "Holy Spirit; Prophecy; Eschatology",
-    "Slug": "montanism"
+    "Slug": "montanism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Sabellianism (Modalism)",
@@ -91,7 +112,10 @@
     "RelatedDoctrines": "Trinity; Nature of God",
     "Slug": "sabellianism-modalism",
     "Places": "Rome",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Nestorianism",
@@ -103,7 +127,10 @@
     "RelatedPeople": "Nestorius; Cyril of Alexandria",
     "RelatedDoctrines": "Incarnation; Deity of Christ; Hypostatic Union",
     "Slug": "nestorianism",
-    "Places": "Ephesus"
+    "Places": "Ephesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Monophysitism (Eutychianism)",
@@ -114,7 +141,10 @@
     "ChristianResponse": "The church affirmed that Jesus is fully God and fully man in one person, citing Hebrews 4:15 and Colossians 2:9.",
     "RelatedPeople": "Eutyches; Leo I; Flavian",
     "RelatedDoctrines": "Incarnation; Hypostatic Union; Humanity of Christ",
-    "Slug": "monophysitism-eutychianism"
+    "Slug": "monophysitism-eutychianism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Donatism",
@@ -125,7 +155,10 @@
     "ChristianResponse": "The church taught that the validity of baptism and communion rests on Christ, not the moral worth of the minister, citing Matthew 13 on wheat and weeds growing together.",
     "RelatedPeople": "Donatus Magnus; Augustine; Constantine I",
     "RelatedDoctrines": "Church; Baptism; Grace",
-    "Slug": "donatism"
+    "Slug": "donatism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Manichaeism",
@@ -136,7 +169,10 @@
     "ChristianResponse": "The church affirmed one sovereign Creator and that creation was made good, citing Genesis 1 and Colossians 1:16-17.",
     "RelatedPeople": "Mani; Augustine",
     "RelatedDoctrines": "Creation; Nature of God; Evil",
-    "Slug": "manichaeism"
+    "Slug": "manichaeism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Ebionism",
@@ -147,7 +183,10 @@
     "ChristianResponse": "The church affirmed Jesus as Lord and God and taught justification by faith, while honoring the law's role in Israel's history, citing Acts 15 and Galatians 2-3.",
     "RelatedPeople": "Irenaeus; Origen",
     "RelatedDoctrines": "Deity of Christ; Justification; Law and Grace",
-    "Slug": "ebionism"
+    "Slug": "ebionism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Apollinarianism",
@@ -158,7 +197,10 @@
     "ChristianResponse": "The church affirmed that Jesus assumed full humanity, including a human mind, to redeem the whole person, citing Hebrews 2:17 and Luke 2:52.",
     "RelatedPeople": "Apollinaris; Gregory of Nazianzus",
     "RelatedDoctrines": "Incarnation; Humanity of Christ; Atonement",
-    "Slug": "apollinarianism"
+    "Slug": "apollinarianism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Socinianism",
@@ -169,7 +211,10 @@
     "ChristianResponse": "Historic churches affirmed the Trinity and Christ's atoning death, citing John 1, Matthew 28:19, and Isaiah 53.",
     "RelatedPeople": "Fausto Sozzini; Laelio Sozzini",
     "RelatedDoctrines": "Trinity; Deity of Christ; Atonement",
-    "Slug": "socinianism"
+    "Slug": "socinianism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Deism",
@@ -180,7 +225,10 @@
     "ChristianResponse": "The church affirmed a God who acts in history, answers prayer, and revealed himself in Scripture and in Christ, citing Exodus, the Psalms, and Hebrews 1.",
     "RelatedPeople": "Thomas Paine; John Locke; Joseph Butler",
     "RelatedDoctrines": "Nature of God; Revelation; Miracles",
-    "Slug": "deism"
+    "Slug": "deism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Pelagianism (Modern Echoes)",
@@ -191,7 +239,10 @@
     "ChristianResponse": "The church response emphasizes both human responsibility and the need for grace and new birth, citing Jeremiah 17:9, John 3, and Titus 3:5.",
     "RelatedPeople": "Pelagius; Augustine",
     "RelatedDoctrines": "Original Sin; Grace; Sanctification",
-    "Slug": "pelagianism-modern-echoes"
+    "Slug": "pelagianism-modern-echoes",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Prosperity Gospel",
@@ -202,7 +253,10 @@
     "ChristianResponse": "The church response affirms God's goodness and care while teaching contentment, generosity, and trust in suffering, citing Philippians 4, 1 Timothy 6, and the book of Job.",
     "RelatedPeople": "Kenneth Hagin; Kenneth Copeland",
     "RelatedDoctrines": "Faith; Suffering; Stewardship",
-    "Slug": "prosperity-gospel"
+    "Slug": "prosperity-gospel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Albigensianism (Catharism)",
@@ -213,7 +267,10 @@
     "ChristianResponse": "The church affirmed one good Creator and the goodness of creation and marriage, citing Genesis 1 and 1 Timothy 4, while later historians note the tragedy of violence in the response.",
     "RelatedPeople": "Pope Innocent III; Dominic",
     "RelatedDoctrines": "Creation; Nature of God; Salvation",
-    "Slug": "albigensianism-catharism"
+    "Slug": "albigensianism-catharism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Jansenism",
@@ -224,7 +281,10 @@
     "ChristianResponse": "Responses varied; critics argued it understated God's universal saving will, citing 1 Timothy 2:4, while others valued its emphasis on grace and holiness.",
     "RelatedPeople": "Cornelius Jansen; Blaise Pascal; Antoine Arnauld",
     "RelatedDoctrines": "Grace; Predestination; Free Will",
-    "Slug": "jansenism"
+    "Slug": "jansenism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Mormonism (Latter-day Saints)",
@@ -235,7 +295,10 @@
     "ChristianResponse": "Historic churches respond by affirming the Trinity as defined at Nicaea and the sufficiency of the biblical canon, citing Deuteronomy and Revelation on adding to Scripture, while encouraging respectful dialogue.",
     "RelatedPeople": "Joseph Smith; Brigham Young",
     "RelatedDoctrines": "Trinity; Revelation; Canon of Scripture",
-    "Slug": "mormonism-latter-day-saints"
+    "Slug": "mormonism-latter-day-saints",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Jehovah's Witnesses",
@@ -246,7 +309,10 @@
     "ChristianResponse": "Historic churches affirm Jesus as fully God and the Spirit as a divine person, citing John 1, Acts 5, and Matthew 28:19, while encouraging respectful and factual conversation.",
     "RelatedPeople": "Charles Taze Russell; Joseph Rutherford",
     "RelatedDoctrines": "Trinity; Deity of Christ; Holy Spirit",
-    "Slug": "jehovahs-witnesses"
+    "Slug": "jehovahs-witnesses",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Adoptionism",
@@ -259,7 +325,10 @@
     "RelatedDoctrines": "Deity of Christ; Incarnation; Sonship",
     "Slug": "adoptionism",
     "Places": "Rome",
-    "RelatedEvents": "The Baptism of Jesus"
+    "RelatedEvents": "The Baptism of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Monothelitism",
@@ -270,7 +339,10 @@
     "ChristianResponse": "The church affirmed that Jesus has a true human will as well as a divine will, citing Luke 22:42 where Jesus prays not my will but yours be done.",
     "RelatedPeople": "Sergius I; Maximus the Confessor; Pope Martin I",
     "RelatedDoctrines": "Incarnation; Humanity of Christ; Hypostatic Union",
-    "Slug": "monothelitism"
+    "Slug": "monothelitism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Heresy": "Unitarianism",
@@ -281,6 +353,9 @@
     "ChristianResponse": "Historic churches affirm one God in three persons and salvation through Christ's death and resurrection, citing Matthew 28:19, John 20:28, and 1 Corinthians 15.",
     "RelatedPeople": "Michael Servetus; Fausto Sozzini; Joseph Priestley",
     "RelatedDoctrines": "Trinity; Deity of Christ; Atonement",
-    "Slug": "unitarianism"
+    "Slug": "unitarianism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

@@ -22,5 +22,7 @@
   "Significance": "The sole Qumran witness to the Ezra-Nehemiah work, and therefore the best-preserved by default. Its surviving text is consistent with the Masoretic Text tradition. No Nehemiah verse text survives in any identified Qumran manuscript, so Nehemiah has no entry of its own; an earlier reported Nehemiah fragment was challenged as a forgery.",
   "Slug": "4q117-ezra-fragment",
   "Sources": "https://en.wikipedia.org/wiki/List_of_manuscripts_from_Qumran_Cave_4; http://dssenglishbible.com/Scroll4Q117.htm; https://fromthedesk.org/ezra-and-the-dead-sea-scrolls-charlotte-hempel/; https://doczz.net/doc/2544235/the-dead-sea-scrolls-and-the-bible",
-  "Work": "Ezra"
+  "Work": "Ezra",
+  "VerificationStatus": "Verified",
+  "LastReviewed": "2026-10-27"
 }

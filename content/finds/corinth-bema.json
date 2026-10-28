@@ -17,5 +17,8 @@
   "Image": "assets/finds/corinth-bema.jpg",
   "ImageCredit": "Photo: Zde (CC BY-SA 4.0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3ABema_of_Corinth%2C_203034.jpg",
-  "Slug": "corinth-bema"
+  "Slug": "corinth-bema",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

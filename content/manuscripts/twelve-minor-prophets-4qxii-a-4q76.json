@@ -22,5 +22,7 @@
   "Significance": "Best-preserved Qumran biblical copy of Malachi by a wide margin: Malachi 2:10-4:6 (English numbering) survives here, including the closing Elijah passage (Malachi 4:5-6, Hebrew 3:23-24), against only a questionable Malachi 3:6-7 fragment in 4Q78. It is also important for the history of the Twelve as a collection: a 2015 study argues it probably contained only three or four of the shortest books, not all twelve, and that Malachi was followed by another composition that was in all likelihood NOT Jonah — so Malachi was not always the last book in a Twelve scroll, and the Twelve could be copied in sets as well as as a single collection.",
   "Slug": "twelve-minor-prophets-4qxii-a-4q76",
   "Sources": "https://en.wikipedia.org/wiki/List_of_manuscripts_from_Qumran_Cave_4; https://orion-bibliography.huji.ac.il/node/69701; https://ixtheo.de/Record/1580943543; https://jhsonline.org/index.php/jhs/article/download/5643/4696/12675",
-  "Work": "Zechariah; Malachi"
+  "Work": "Zechariah; Malachi",
+  "VerificationStatus": "Verified",
+  "LastReviewed": "2026-10-27"
 }

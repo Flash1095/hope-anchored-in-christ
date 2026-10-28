@@ -6,5 +6,8 @@
   "RelatedPeople": "King David; Paul; Jesus",
   "RelatedEvents": "The Crucifixion; The Resurrection",
   "Slug": "shelter-in-christ",
-  "Places": "Golgotha; Jerusalem"
+  "Places": "Golgotha; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

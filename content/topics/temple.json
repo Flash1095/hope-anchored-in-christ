@@ -6,5 +6,8 @@
   "RelatedPeople": "Moses; Solomon; Jesus; Paul",
   "RelatedEvents": "Building of Solomon's Temple; Pentecost; Rebuilding of the Temple",
   "Slug": "temple",
-  "Places": "Jerusalem"
+  "Places": "Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

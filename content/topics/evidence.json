@@ -6,5 +6,8 @@
   "RelatedPeople": "Paul; Simon Peter",
   "RelatedQuestions": "Is the Bible reliable and true?; Did Jesus really rise from the dead?",
   "RelatedBooks": "Luke; Acts; 1 Corinthians; 1 Peter",
-  "Slug": "evidence"
+  "Slug": "evidence",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

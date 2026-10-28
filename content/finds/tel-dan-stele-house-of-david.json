@@ -17,5 +17,8 @@
   "Image": "assets/finds/tel-dan-stele.jpg",
   "ImageCredit": "Photo: Oren Rozen (CC BY-SA 4.0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3AJRSLM_300116_Tel_Dan_Stele_01.jpg",
-  "Slug": "tel-dan-stele"
+  "Slug": "tel-dan-stele",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

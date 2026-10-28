@@ -6,5 +6,8 @@
   "RelatedPeople": "Adam; Eve; Moses; Aaron",
   "RelatedEvents": "The Fall; The Golden Calf",
   "Slug": "rebellion",
-  "Places": "Garden of Eden; Mount Sinai"
+  "Places": "Garden of Eden; Mount Sinai",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

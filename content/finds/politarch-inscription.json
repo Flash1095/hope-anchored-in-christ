@@ -15,5 +15,8 @@
   "RelatedPeople": "Paul",
   "RelatedBooks": "Acts",
   "Places": "Thessalonica",
-  "Slug": "politarch-inscription"
+  "Slug": "politarch-inscription",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

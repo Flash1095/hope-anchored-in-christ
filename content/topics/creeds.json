@@ -6,5 +6,8 @@
   "RelatedPeople": "Moses; Paul",
   "RelatedDoctrines": "Trinity; Incarnation",
   "RelatedBooks": "Deuteronomy; Matthew; 1 Corinthians; 1 Timothy",
-  "Slug": "creeds"
+  "Slug": "creeds",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -1,13 +1,16 @@
 {
- "Type": "The Passover Lamb",
- "Category": "Object",
- "OldTestamentPassage": "Exodus 12:1-13; Exodus 12:21-27; Exodus 12:46",
- "Fulfillment": "John the Baptist announced Jesus as 'the Lamb of God, who takes away the sin of the world,' and Paul calls Christ our Passover lamb, sacrificed for us. At the cross, not one of Jesus' bones was broken, just as the Passover lamb's bones were to remain unbroken.",
- "FulfillmentPassage": "John 1:29; John 19:33-36; 1 Corinthians 5:7",
- "Explanation": "The blood on the doorposts turned God's judgment aside and set a captive people free to journey toward the promised land. Christ's blood does far more: it cleanses the conscience, frees us from slavery to sin, and marks us as God's own for the journey home.",
- "RelatedBooks": "Exodus; John; 1 Corinthians",
- "RelatedPeople": "Moses; Jesus; John the Baptist",
- "RelatedEvents": "The Passover; The Exodus and the Red Sea; The Crucifixion; The Last Supper",
- "Slug": "passover-lamb",
- "Places": "Egypt"
+  "Type": "The Passover Lamb",
+  "Category": "Object",
+  "OldTestamentPassage": "Exodus 12:1-13; Exodus 12:21-27; Exodus 12:46",
+  "Fulfillment": "John the Baptist announced Jesus as 'the Lamb of God, who takes away the sin of the world,' and Paul calls Christ our Passover lamb, sacrificed for us. At the cross, not one of Jesus' bones was broken, just as the Passover lamb's bones were to remain unbroken.",
+  "FulfillmentPassage": "John 1:29; John 19:33-36; 1 Corinthians 5:7",
+  "Explanation": "The blood on the doorposts turned God's judgment aside and set a captive people free to journey toward the promised land. Christ's blood does far more: it cleanses the conscience, frees us from slavery to sin, and marks us as God's own for the journey home.",
+  "RelatedBooks": "Exodus; John; 1 Corinthians",
+  "RelatedPeople": "Moses; Jesus; John the Baptist",
+  "RelatedEvents": "The Passover; The Exodus and the Red Sea; The Crucifixion; The Last Supper",
+  "Slug": "passover-lamb",
+  "Places": "Egypt",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

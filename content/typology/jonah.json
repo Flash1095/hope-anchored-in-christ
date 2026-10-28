@@ -1,13 +1,16 @@
 {
- "Type": "Jonah",
- "Category": "Person",
- "OldTestamentPassage": "Jonah 1:17; Jonah 2:10; Jonah 3:1-5",
- "Fulfillment": "Jesus Himself named the sign of Jonah: 'Just as Jonah was three days and three nights in the belly of a huge fish, so the Son of Man will be three days and three nights in the heart of the earth.' Jonah's emergence from the fish pointed to Jesus rising from the grave, and Jesus adds that one greater than Jonah is here.",
- "FulfillmentPassage": "Matthew 12:39-41; Luke 11:29-32",
- "Explanation": "Jonah was, in a sense, given up to death to calm a storm and save sailors, then 'resurrected' to preach repentance to the nations. Jesus truly died to save others, truly rose, and sends a message of repentance far wider than Nineveh, to the ends of the earth.",
- "RelatedBooks": "Jonah; Matthew; Luke",
- "RelatedPeople": "Jonah; Jesus",
- "RelatedEvents": "Jonah and Nineveh; The Resurrection",
- "Slug": "jonah",
- "Places": "Nineveh"
+  "Type": "Jonah",
+  "Category": "Person",
+  "OldTestamentPassage": "Jonah 1:17; Jonah 2:10; Jonah 3:1-5",
+  "Fulfillment": "Jesus Himself named the sign of Jonah: 'Just as Jonah was three days and three nights in the belly of a huge fish, so the Son of Man will be three days and three nights in the heart of the earth.' Jonah's emergence from the fish pointed to Jesus rising from the grave, and Jesus adds that one greater than Jonah is here.",
+  "FulfillmentPassage": "Matthew 12:39-41; Luke 11:29-32",
+  "Explanation": "Jonah was, in a sense, given up to death to calm a storm and save sailors, then 'resurrected' to preach repentance to the nations. Jesus truly died to save others, truly rose, and sends a message of repentance far wider than Nineveh, to the ends of the earth.",
+  "RelatedBooks": "Jonah; Matthew; Luke",
+  "RelatedPeople": "Jonah; Jesus",
+  "RelatedEvents": "Jonah and Nineveh; The Resurrection",
+  "Slug": "jonah",
+  "Places": "Nineveh",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -6,5 +6,8 @@
   "RelatedPeople": "Moses",
   "RelatedQuestions": "How did the world begin according to Genesis?; What was the Exodus from Egypt?",
   "RelatedBooks": "Exodus; Luke; Acts; 1 Corinthians",
-  "Slug": "bible-history"
+  "Slug": "bible-history",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

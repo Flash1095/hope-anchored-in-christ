@@ -6,5 +6,8 @@
   "RelatedPeople": "David; Ezekiel; Jesus; Peter",
   "RelatedEvents": "David Becomes King; The Birth of Jesus; The Crucifixion",
   "Slug": "shepherd",
-  "Places": "Bethlehem; Hebron; Jerusalem; Golgotha"
+  "Places": "Bethlehem; Hebron; Jerusalem; Golgotha",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -11,7 +11,10 @@
     "RelatedBooks": "Genesis; Revelation",
     "RelatedPeople": "Adam; Eve",
     "Slug": "garden-of-eden",
-    "RelatedEvents": "Creation; The Fall; Cain Murders Abel"
+    "RelatedEvents": "Creation; The Fall; Cain Murders Abel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Mount Ararat",
@@ -25,7 +28,10 @@
     "RelatedBooks": "Genesis; Isaiah",
     "RelatedPeople": "Noah",
     "Slug": "mount-ararat",
-    "RelatedEvents": "Noah and the Flood"
+    "RelatedEvents": "Noah and the Flood",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Babel",
@@ -39,7 +45,10 @@
     "RelatedBooks": "Genesis; Acts",
     "Slug": "babel",
     "RelatedEvents": "The Tower of Babel",
-    "Places": "Babylon"
+    "Places": "Babylon",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Ur",
@@ -54,7 +63,10 @@
     "RelatedPeople": "Abraham; Sarah",
     "Slug": "ur",
     "RelatedEvents": "The Call of Abraham",
-    "Places": "Haran; Canaan"
+    "Places": "Haran; Canaan",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Haran",
@@ -69,7 +81,10 @@
     "RelatedPeople": "Abraham; Sarah; Jacob; Rachel; Leah",
     "Slug": "haran",
     "RelatedEvents": "The Call of Abraham",
-    "Places": "Ur; Canaan"
+    "Places": "Ur; Canaan",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Canaan",
@@ -84,7 +99,10 @@
     "RelatedPeople": "Abraham; Isaac; Jacob",
     "Slug": "canaan",
     "RelatedEvents": "The Call of Abraham; The Twelve Spies and Israel's Unbelief",
-    "Places": "Shechem; Bethel; Hebron"
+    "Places": "Shechem; Bethel; Hebron",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Shechem",
@@ -99,7 +117,10 @@
     "RelatedPeople": "Abraham; Jacob; Joshua; Joseph, Son of Jacob",
     "Slug": "shechem",
     "RelatedEvents": "The Kingdom Divides",
-    "Places": "Jerusalem; Bethel"
+    "Places": "Jerusalem; Bethel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Bethel",
@@ -113,7 +134,10 @@
     "RelatedBooks": "Genesis; John",
     "RelatedPeople": "Jacob; Abraham",
     "Slug": "bethel",
-    "Places": "Shechem; Samaria"
+    "Places": "Shechem; Samaria",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Hebron",
@@ -128,7 +152,10 @@
     "RelatedPeople": "Abraham; Sarah; King David",
     "Slug": "hebron",
     "RelatedEvents": "David Becomes King",
-    "Places": "Jerusalem; Beersheba"
+    "Places": "Jerusalem; Beersheba",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Beersheba",
@@ -142,7 +169,10 @@
     "RelatedBooks": "Genesis; 1 Kings",
     "RelatedPeople": "Abraham; Isaac",
     "Slug": "beersheba",
-    "Places": "Hebron"
+    "Places": "Hebron",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Egypt",
@@ -157,7 +187,10 @@
     "RelatedPeople": "Joseph, Son of Jacob; Moses; Aaron; Miriam",
     "Slug": "egypt",
     "RelatedEvents": "Joseph and His Brothers; The Passover; The Ten Plagues; The Exodus and the Red Sea",
-    "Places": "Goshen; Midian; Mount Sinai"
+    "Places": "Goshen; Midian; Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Goshen",
@@ -172,7 +205,10 @@
     "RelatedPeople": "Joseph, Son of Jacob; Moses",
     "Slug": "goshen",
     "RelatedEvents": "The Passover",
-    "Places": "Egypt"
+    "Places": "Egypt",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Midian",
@@ -187,7 +223,10 @@
     "RelatedPeople": "Moses",
     "Slug": "midian",
     "RelatedEvents": "The Burning Bush; Gideon's Victory over Midian",
-    "Places": "Egypt; Mount Sinai"
+    "Places": "Egypt; Mount Sinai",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Mount Sinai",
@@ -202,7 +241,10 @@
     "RelatedPeople": "Moses; Aaron",
     "Slug": "mount-sinai",
     "RelatedEvents": "The Ten Commandments; The Golden Calf; The Burning Bush",
-    "Places": "Egypt; Midian; Kadesh Barnea"
+    "Places": "Egypt; Midian; Kadesh Barnea",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Kadesh Barnea",
@@ -217,7 +259,10 @@
     "RelatedPeople": "Moses; Caleb; Joshua",
     "Slug": "kadesh-barnea",
     "RelatedEvents": "The Twelve Spies and Israel's Unbelief; Wilderness Wanderings",
-    "Places": "Mount Sinai; Plains of Moab"
+    "Places": "Mount Sinai; Plains of Moab",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Jordan River",
@@ -232,7 +277,10 @@
     "RelatedPeople": "Joshua; Elijah; Elisha; John the Baptist; Jesus",
     "Slug": "jordan-river",
     "RelatedEvents": "The Baptism of Jesus; Crossing the Jordan",
-    "Places": "Gilgal; Jericho; Plains of Moab"
+    "Places": "Gilgal; Jericho; Plains of Moab",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Plains of Moab",
@@ -246,7 +294,10 @@
     "RelatedBooks": "Numbers; Deuteronomy",
     "RelatedPeople": "Moses; Joshua",
     "Slug": "plains-of-moab",
-    "Places": "Jordan River; Jericho"
+    "Places": "Jordan River; Jericho",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Jericho",
@@ -261,7 +312,10 @@
     "RelatedPeople": "Joshua; Rahab; Jesus; Zacchaeus",
     "Slug": "jericho",
     "RelatedEvents": "The Walls of Jericho",
-    "Places": "Jordan River; Gilgal; Jerusalem"
+    "Places": "Jordan River; Gilgal; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Gilgal",
@@ -276,7 +330,10 @@
     "RelatedPeople": "Joshua",
     "Slug": "gilgal",
     "RelatedEvents": "Crossing the Jordan",
-    "Places": "Jordan River; Jericho"
+    "Places": "Jordan River; Jericho",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Ai",
@@ -290,7 +347,10 @@
     "RelatedBooks": "Joshua",
     "RelatedPeople": "Joshua",
     "Slug": "ai",
-    "Places": "Jericho; Bethel"
+    "Places": "Jericho; Bethel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Shiloh",
@@ -305,7 +365,10 @@
     "RelatedPeople": "Hannah; Eli; Samuel",
     "Slug": "shiloh",
     "RelatedEvents": "Calling of Samuel",
-    "Places": "Jerusalem; Ramah"
+    "Places": "Jerusalem; Ramah",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Gibeon",
@@ -319,7 +382,10 @@
     "RelatedBooks": "Joshua; 1 Kings",
     "RelatedPeople": "Joshua; King Solomon",
     "Slug": "gibeon",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Gibeah",
@@ -333,7 +399,10 @@
     "RelatedBooks": "Judges; 1 Samuel",
     "RelatedPeople": "King Saul; Jonathan",
     "Slug": "gibeah",
-    "Places": "Ramah; Mizpah"
+    "Places": "Ramah; Mizpah",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Mizpah",
@@ -348,7 +417,10 @@
     "RelatedPeople": "Samuel",
     "Slug": "mizpah",
     "RelatedEvents": "Anointing of Saul as King",
-    "Places": "Ramah; Gibeah"
+    "Places": "Ramah; Gibeah",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Ramah",
@@ -363,7 +435,10 @@
     "RelatedPeople": "Samuel; Deborah",
     "Slug": "ramah",
     "RelatedEvents": "Anointing of Saul as King",
-    "Places": "Mizpah; Gibeah; Shiloh"
+    "Places": "Mizpah; Gibeah; Shiloh",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Jerusalem",
@@ -378,7 +453,10 @@
     "RelatedPeople": "King David; King Solomon; Jesus; Simon Peter",
     "Slug": "jerusalem",
     "RelatedEvents": "The Binding of Isaac; Building of Solomon's Temple; David Becomes King; Davidic Covenant; David and Bathsheba; The Kingdom Divides; Hezekiah and Sennacherib's Invasion; Ezra Reads the Law; Fall of Jerusalem and the Exile; Cyrus's Decree and Return from Exile; Rebuilding of the Temple; Nehemiah Rebuilds the Wall; Triumphal Entry; The Last Supper; Jesus Prays in Gethsemane; The Crucifixion; The Resurrection; The Ascension; Pentecost; Jerusalem Council; Martyrdom of Stephen",
-    "Places": "Bethlehem; Bethany; Golgotha; Hebron; Jericho"
+    "Places": "Bethlehem; Bethany; Golgotha; Hebron; Jericho",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Mount Carmel",
@@ -393,7 +471,10 @@
     "RelatedPeople": "Elijah",
     "Slug": "mount-carmel",
     "RelatedEvents": "Elijah on Mount Carmel",
-    "Places": "Samaria"
+    "Places": "Samaria",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Tyre",
@@ -407,7 +488,10 @@
     "RelatedBooks": "1 Kings; Matthew",
     "RelatedPeople": "King Solomon; King Ahab; Jezebel; Jesus",
     "Slug": "tyre",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Samaria",
@@ -422,7 +506,10 @@
     "RelatedPeople": "King Ahab; Elijah; Elisha; Jesus; The Samaritan Woman; Philip",
     "Slug": "samaria",
     "RelatedEvents": "Fall of Samaria",
-    "Places": "Jerusalem; Shechem; Mount Carmel"
+    "Places": "Jerusalem; Shechem; Mount Carmel",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Nineveh",
@@ -437,7 +524,10 @@
     "RelatedPeople": "Jonah",
     "Slug": "nineveh",
     "RelatedEvents": "Jonah and Nineveh",
-    "Places": "Samaria"
+    "Places": "Samaria",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Babylon",
@@ -452,7 +542,10 @@
     "RelatedPeople": "Daniel; King Nebuchadnezzar; Shadrach, Meshach, and Abednego; Ezekiel",
     "Slug": "babylon",
     "RelatedEvents": "The Tower of Babel; Daniel in the Lions' Den; Shadrach, Meshach and Abednego in the Fiery Furnace; Cyrus's Decree and Return from Exile",
-    "Places": "Susa; Jerusalem"
+    "Places": "Susa; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Susa",
@@ -467,7 +560,10 @@
     "RelatedPeople": "Queen Esther; Mordecai; Nehemiah",
     "Slug": "susa",
     "RelatedEvents": "Esther Saves Her People",
-    "Places": "Babylon; Jerusalem"
+    "Places": "Babylon; Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "River Chebar",
@@ -481,7 +577,10 @@
     "RelatedBooks": "Ezekiel; Psalms",
     "RelatedPeople": "Ezekiel",
     "Slug": "river-chebar",
-    "Places": "Babylon"
+    "Places": "Babylon",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Bethlehem",
@@ -496,7 +595,10 @@
     "RelatedPeople": "Ruth; Boaz; King David; Jesus; Mary, Mother of Jesus; Joseph, Husband of Mary",
     "Slug": "bethlehem",
     "RelatedEvents": "The Birth of Jesus; Ruth's Loyalty",
-    "Places": "Jerusalem; Hebron; Nazareth"
+    "Places": "Jerusalem; Hebron; Nazareth",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Nazareth",
@@ -510,7 +612,10 @@
     "RelatedBooks": "Matthew; Luke; John",
     "RelatedPeople": "Jesus; Mary, Mother of Jesus; Joseph, Husband of Mary",
     "Slug": "nazareth",
-    "Places": "Bethlehem; Capernaum"
+    "Places": "Bethlehem; Capernaum",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Capernaum",
@@ -524,7 +629,10 @@
     "RelatedBooks": "Matthew; Mark",
     "RelatedPeople": "Jesus; Simon Peter; Andrew; Matthew",
     "Slug": "capernaum",
-    "Places": "Galilee; Nazareth"
+    "Places": "Galilee; Nazareth",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Galilee",
@@ -539,7 +647,10 @@
     "RelatedPeople": "Jesus; Simon Peter; Andrew; James, Son of Zebedee; John the Apostle",
     "Slug": "galilee",
     "RelatedEvents": "The Sermon on the Mount; Jesus Calms the Storm; The Feeding of the Five Thousand; Jesus Turns Water into Wine at Cana",
-    "Places": "Capernaum; Nazareth"
+    "Places": "Capernaum; Nazareth",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Bethany",
@@ -554,7 +665,10 @@
     "RelatedPeople": "Jesus; Mary of Bethany; Martha; Lazarus",
     "Slug": "bethany",
     "RelatedEvents": "Raising of Lazarus; The Ascension",
-    "Places": "Jerusalem; Golgotha"
+    "Places": "Jerusalem; Golgotha",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Golgotha",
@@ -569,7 +683,10 @@
     "RelatedPeople": "Jesus; Mary, Mother of Jesus; John the Apostle; Joseph of Arimathea",
     "Slug": "golgotha",
     "RelatedEvents": "The Crucifixion",
-    "Places": "Jerusalem; Bethany"
+    "Places": "Jerusalem; Bethany",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Antioch",
@@ -584,7 +701,10 @@
     "RelatedPeople": "Paul; Barnabas",
     "Slug": "antioch",
     "RelatedEvents": "Paul's Missionary Journeys",
-    "Places": "Corinth; Ephesus"
+    "Places": "Corinth; Ephesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Ephesus",
@@ -599,7 +719,10 @@
     "RelatedPeople": "Paul; Priscilla; Aquila; Timothy",
     "Slug": "ephesus",
     "RelatedEvents": "Paul's Missionary Journeys",
-    "Places": "Corinth; Antioch"
+    "Places": "Corinth; Antioch",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Corinth",
@@ -614,7 +737,10 @@
     "RelatedPeople": "Paul; Priscilla; Aquila",
     "Slug": "corinth",
     "RelatedEvents": "Paul's Missionary Journeys",
-    "Places": "Ephesus; Antioch"
+    "Places": "Ephesus; Antioch",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Philippi",
@@ -629,7 +755,10 @@
     "RelatedPeople": "Paul; Timothy; Lydia",
     "Slug": "philippi",
     "RelatedEvents": "Paul's Missionary Journeys",
-    "Places": "Corinth; Ephesus"
+    "Places": "Corinth; Ephesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Thessalonica",
@@ -644,7 +773,10 @@
     "RelatedPeople": "Paul; Timothy",
     "Slug": "thessalonica",
     "RelatedEvents": "Paul's Missionary Journeys",
-    "Places": "Philippi; Corinth"
+    "Places": "Philippi; Corinth",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Colossae",
@@ -658,7 +790,10 @@
     "RelatedBooks": "Colossians",
     "RelatedPeople": "Paul",
     "Slug": "colossae",
-    "Places": "Ephesus"
+    "Places": "Ephesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Patmos",
@@ -672,7 +807,10 @@
     "RelatedBooks": "Revelation",
     "RelatedPeople": "John the Apostle",
     "Slug": "patmos",
-    "Places": "Ephesus"
+    "Places": "Ephesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Name": "Rome",
@@ -687,6 +825,9 @@
     "RelatedPeople": "Paul; Priscilla; Aquila",
     "Slug": "rome",
     "RelatedEvents": "Paul in Rome",
-    "Places": "Corinth; Philippi"
+    "Places": "Corinth; Philippi",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

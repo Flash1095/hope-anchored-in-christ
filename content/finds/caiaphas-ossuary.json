@@ -18,5 +18,8 @@
   "Image": "assets/finds/caiaphas-ossuary.jpg",
   "ImageCredit": "Photo: deror_avi (CC BY-SA 3.0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/File%3AOssuary_of_the_high_priest_Joseph_Caiaphas_P1180839.JPG",
-  "Slug": "caiaphas-ossuary"
+  "Slug": "caiaphas-ossuary",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

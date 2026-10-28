@@ -6,5 +6,8 @@
   "RelatedPeople": "Jesus; Paul",
   "RelatedDoctrines": "Inspiration of Scripture",
   "RelatedBooks": "Matthew; Acts; Romans; 2 Timothy",
-  "Slug": "authority"
+  "Slug": "authority",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -6,5 +6,8 @@
   "RelatedPeople": "Paul; Simon Peter; Timothy",
   "RelatedEvents": "The Sermon on the Mount; Pentecost",
   "Slug": "godliness",
-  "Places": "Galilee; Jerusalem"
+  "Places": "Galilee; Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

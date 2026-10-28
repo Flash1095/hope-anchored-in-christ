@@ -10,5 +10,8 @@
   "RelatedBooks": "Revelation",
   "RelatedPeople": "John the Apostle",
   "Slug": "patmos",
-  "Places": "Ephesus"
+  "Places": "Ephesus",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

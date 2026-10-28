@@ -10,7 +10,10 @@
     "Slug": "circumcision",
     "RelatedPeople": "Abraham; Paul",
     "Places": "Canaan",
-    "RelatedEvents": "The Call of Abraham"
+    "RelatedEvents": "The Call of Abraham",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Day of Atonement",
@@ -23,7 +26,10 @@
     "Slug": "day-of-atonement",
     "RelatedPeople": "Aaron; Moses",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Ten Commandments; The Crucifixion"
+    "RelatedEvents": "The Ten Commandments; The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Feast of Tabernacles",
@@ -36,7 +42,10 @@
     "Slug": "feast-of-tabernacles",
     "RelatedPeople": "Moses; Nehemiah",
     "Places": "Jerusalem",
-    "RelatedEvents": "Wilderness Wanderings"
+    "RelatedEvents": "Wilderness Wanderings",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Feast of Trumpets",
@@ -49,7 +58,10 @@
     "Slug": "feast-of-trumpets",
     "RelatedPeople": "Moses",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments"
+    "RelatedEvents": "The Ten Commandments",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Firstfruits",
@@ -62,7 +74,10 @@
     "Slug": "firstfruits",
     "RelatedPeople": "Jesus; Paul",
     "Places": "Canaan",
-    "RelatedEvents": "The Resurrection"
+    "RelatedEvents": "The Resurrection",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Hanukkah",
@@ -73,7 +88,10 @@
     "Scripture": "1 Maccabees 4:36-59; John 10:22-23; John 8:12",
     "RelatedTopics": "Worship; Hope; Suffering",
     "Slug": "hanukkah",
-    "Places": "Jerusalem"
+    "Places": "Jerusalem",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Hebrew Language",
@@ -85,7 +103,10 @@
     "RelatedTopics": "Wisdom; Prophecy; Faith",
     "Slug": "hebrew-language",
     "RelatedPeople": "Moses; Ezra",
-    "RelatedEvents": "The Ten Commandments; Ezra Reads the Law"
+    "RelatedEvents": "The Ten Commandments; Ezra Reads the Law",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Isaiah 53: The Suffering Servant",
@@ -98,7 +119,10 @@
     "Slug": "isaiah-53-the-suffering-servant",
     "RelatedPeople": "Isaiah; Jesus",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Jewish Wedding Customs",
@@ -110,7 +134,10 @@
     "RelatedTopics": "Marriage; Second Coming; Church",
     "Slug": "jewish-wedding-customs",
     "RelatedPeople": "Jesus; John the Baptist",
-    "RelatedEvents": "Jesus Turns Water into Wine at Cana"
+    "RelatedEvents": "Jesus Turns Water into Wine at Cana",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Kosher",
@@ -122,7 +149,10 @@
     "RelatedTopics": "Holiness; Covenant; Church",
     "Slug": "kosher",
     "RelatedPeople": "Moses; Daniel",
-    "Places": "Babylon"
+    "Places": "Babylon",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Mezuzah",
@@ -133,7 +163,10 @@
     "Scripture": "Deuteronomy 6:4-9; Deuteronomy 11:20; John 1:14",
     "RelatedTopics": "Covenant; Worship; Faith",
     "Slug": "mezuzah",
-    "RelatedPeople": "Moses"
+    "RelatedPeople": "Moses",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Micah 5:2: Born in Bethlehem",
@@ -146,7 +179,10 @@
     "Slug": "micah-5-2-born-in-bethlehem",
     "RelatedPeople": "Micah; Jesus; King David",
     "Places": "Bethlehem",
-    "RelatedEvents": "The Birth of Jesus"
+    "RelatedEvents": "The Birth of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Mikveh",
@@ -159,7 +195,10 @@
     "Slug": "mikveh",
     "RelatedPeople": "John the Baptist; Jesus",
     "Places": "Jordan River",
-    "RelatedEvents": "The Baptism of Jesus"
+    "RelatedEvents": "The Baptism of Jesus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Passover Seder",
@@ -172,7 +211,10 @@
     "Slug": "passover-seder",
     "RelatedPeople": "Moses; Jesus",
     "Places": "Egypt; Jerusalem",
-    "RelatedEvents": "The Passover; The Last Supper"
+    "RelatedEvents": "The Passover; The Last Supper",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Passover",
@@ -185,7 +227,10 @@
     "Slug": "passover",
     "RelatedPeople": "Moses; Aaron",
     "Places": "Egypt",
-    "RelatedEvents": "The Passover; The Ten Plagues"
+    "RelatedEvents": "The Passover; The Ten Plagues",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Pharisees",
@@ -198,7 +243,10 @@
     "Slug": "pharisees",
     "RelatedPeople": "Paul; Nicodemus; Jesus",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Psalm 22",
@@ -211,7 +259,10 @@
     "Slug": "psalm-22",
     "RelatedPeople": "King David; Jesus",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Purim",
@@ -224,7 +275,10 @@
     "Slug": "purim",
     "RelatedPeople": "Queen Esther; Mordecai",
     "Places": "Susa",
-    "RelatedEvents": "Esther Saves Her People"
+    "RelatedEvents": "Esther Saves Her People",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Sadducees",
@@ -236,7 +290,10 @@
     "RelatedTopics": "Resurrection; Church; Doubt",
     "Slug": "sadducees",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Second Temple Judaism",
@@ -249,7 +306,10 @@
     "Slug": "second-temple-judaism",
     "RelatedPeople": "Jesus; Ezra; Nehemiah",
     "Places": "Jerusalem",
-    "RelatedEvents": "Rebuilding of the Temple; The Crucifixion"
+    "RelatedEvents": "Rebuilding of the Temple; The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Shabbat",
@@ -262,7 +322,10 @@
     "Slug": "shabbat",
     "RelatedPeople": "Moses; Jesus",
     "Places": "Mount Sinai",
-    "RelatedEvents": "Creation; The Ten Commandments"
+    "RelatedEvents": "Creation; The Ten Commandments",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Shavuot",
@@ -275,7 +338,10 @@
     "Slug": "shavuot",
     "RelatedPeople": "Moses; Simon Peter",
     "Places": "Mount Sinai; Jerusalem",
-    "RelatedEvents": "The Ten Commandments; Pentecost"
+    "RelatedEvents": "The Ten Commandments; Pentecost",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Synagogue",
@@ -287,7 +353,10 @@
     "RelatedTopics": "Worship; Church; Discipleship",
     "Slug": "synagogue",
     "RelatedPeople": "Jesus; Paul",
-    "Places": "Nazareth; Capernaum"
+    "Places": "Nazareth; Capernaum",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Temple and Sacrifices",
@@ -300,7 +369,10 @@
     "Slug": "temple-and-sacrifices",
     "RelatedPeople": "King Solomon; Aaron",
     "Places": "Jerusalem",
-    "RelatedEvents": "Building of Solomon's Temple; The Crucifixion"
+    "RelatedEvents": "Building of Solomon's Temple; The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "The Menorah",
@@ -313,7 +385,10 @@
     "Slug": "the-menorah",
     "RelatedPeople": "Moses; Aaron",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments"
+    "RelatedEvents": "The Ten Commandments",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "The Passover Lamb",
@@ -326,7 +401,10 @@
     "Slug": "the-passover-lamb",
     "RelatedPeople": "Moses; Jesus",
     "Places": "Egypt",
-    "RelatedEvents": "The Passover; The Crucifixion"
+    "RelatedEvents": "The Passover; The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "The Scapegoat",
@@ -338,7 +416,10 @@
     "RelatedTopics": "Atonement; Forgiveness; Holiness",
     "Slug": "the-scapegoat",
     "RelatedPeople": "Aaron; Jesus",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "The Shema",
@@ -350,7 +431,10 @@
     "RelatedTopics": "Covenant; Faith; Prayer",
     "Slug": "the-shema",
     "RelatedPeople": "Moses; Jesus",
-    "Places": "Plains of Moab"
+    "Places": "Plains of Moab",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Torah",
@@ -363,7 +447,10 @@
     "Slug": "torah-the-five-books-of-moses",
     "RelatedPeople": "Moses; Ezra",
     "Places": "Mount Sinai",
-    "RelatedEvents": "The Ten Commandments; Ezra Reads the Law"
+    "RelatedEvents": "The Ten Commandments; Ezra Reads the Law",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Topic": "Zechariah 12:10: The Pierced One",
@@ -376,6 +463,9 @@
     "Slug": "zechariah-12-10-the-pierced-one",
     "RelatedPeople": "Zechariah the Prophet; Jesus",
     "Places": "Jerusalem",
-    "RelatedEvents": "The Crucifixion"
+    "RelatedEvents": "The Crucifixion",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

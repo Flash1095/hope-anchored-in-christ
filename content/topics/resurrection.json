@@ -9,5 +9,8 @@
   "RelatedBooks": "Matthew; John; Romans; 1 Corinthians; 1 Peter",
   "Slug": "resurrection",
   "Places": "Bethany; Jerusalem",
-  "RelatedEvents": "The Resurrection; Raising of Lazarus"
+  "RelatedEvents": "The Resurrection; Raising of Lazarus",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -12,5 +12,8 @@
   "RelatedBooks": "John; Colossians; 1 John",
   "Slug": "skotia",
   "RelatedPeople": "Jesus; John the Apostle",
-  "RelatedEvents": "The Crucifixion"
+  "RelatedEvents": "The Crucifixion",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

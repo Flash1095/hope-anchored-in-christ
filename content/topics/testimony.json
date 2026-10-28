@@ -8,5 +8,8 @@
   "RelatedBooks": "Mark; John; Acts; 1 John; Revelation",
   "Slug": "testimony",
   "Places": "Jerusalem",
-  "RelatedEvents": "The Resurrection; Pentecost"
+  "RelatedEvents": "The Resurrection; Pentecost",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -12,7 +12,10 @@
     "RelatedPlaces": "Egypt; Goshen",
     "RelatedEvents": "Abram in Egypt; Joseph and His Brothers; The Exodus and the Red Sea",
     "RelatedFinds": "Merneptah Stele",
-    "Slug": "egypt"
+    "Slug": "egypt",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Civilization": "Canaan",
@@ -27,7 +30,10 @@
     "RelatedPlaces": "Canaan; Jericho; Hebron; Jerusalem",
     "RelatedEvents": "The Call of Abraham; The Walls of Jericho; Crossing the Jordan",
     "RelatedFinds": "Amarna Letters",
-    "Slug": "canaan"
+    "Slug": "canaan",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Civilization": "Philistia",
@@ -41,7 +47,10 @@
     "RelatedPeople": "Samson; Delilah",
     "RelatedEvents": "Samson and Delilah; David and Goliath",
     "RelatedFinds": "Ekron Temple Inscription",
-    "Slug": "philistia"
+    "Slug": "philistia",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Civilization": "Phoenicia",
@@ -55,7 +64,10 @@
     "RelatedPeople": "Jezebel",
     "RelatedPlaces": "Tyre",
     "RelatedEvents": "Building of Solomon's Temple",
-    "Slug": "phoenicia"
+    "Slug": "phoenicia",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Civilization": "Aram",
@@ -69,7 +81,10 @@
     "RelatedPeople": "Naaman; Elisha; Laban",
     "RelatedPlaces": "Haran",
     "RelatedFinds": "Tel Dan Stele (House of David)",
-    "Slug": "aram"
+    "Slug": "aram",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Civilization": "Moab",
@@ -84,7 +99,10 @@
     "RelatedPlaces": "Plains of Moab",
     "RelatedEvents": "Ruth's Loyalty",
     "RelatedFinds": "Mesha Stele (Moabite Stone); Balaam Inscription (Deir Alla Inscription)",
-    "Slug": "moab"
+    "Slug": "moab",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Civilization": "Ammon",
@@ -96,7 +114,10 @@
     "BibleConnection": "Jephthah defeated Ammon; Saul's first victory as king was against Ammon's siege of Jabesh-gilead; David's war with Ammon frames the Bathsheba story.",
     "KeyScriptures": "Judges 11; 1 Samuel 11; 2 Samuel 10",
     "RelatedPeople": "Lot",
-    "Slug": "ammon"
+    "Slug": "ammon",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Civilization": "Edom",
@@ -109,7 +130,10 @@
     "KeyScriptures": "Genesis 25:29-34; Genesis 36; Numbers 20:14-21; Obadiah 1",
     "RelatedPeople": "Esau",
     "RelatedEvents": "Esau Sells His Birthright",
-    "Slug": "edom"
+    "Slug": "edom",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Civilization": "Hittite Empire",
@@ -124,7 +148,10 @@
     "RelatedPlaces": "Hebron",
     "RelatedEvents": "Abraham Buys the Burial Cave",
     "RelatedFinds": "Ain Dara Temple",
-    "Slug": "hittite-empire"
+    "Slug": "hittite-empire",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Civilization": "Assyria",
@@ -139,7 +166,10 @@
     "RelatedPlaces": "Nineveh",
     "RelatedEvents": "Jonah and Nineveh; Hezekiah and Sennacherib's Invasion; Fall of Samaria",
     "RelatedFinds": "Sennacherib Prism (Taylor Prism); Lachish Reliefs; Black Obelisk of Shalmaneser III; Kurkh Monolith of Shalmaneser III",
-    "Slug": "assyria"
+    "Slug": "assyria",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Civilization": "Babylon",
@@ -154,7 +184,10 @@
     "RelatedPlaces": "Babylon; Babel",
     "RelatedEvents": "The Tower of Babel; Fall of Jerusalem and the Exile; Daniel in the Lions' Den",
     "RelatedFinds": "Babylonian Chronicle (Nebuchadnezzar's Chronicle); Code of Hammurabi; Nabonidus Cylinder; Jehoiachin's Rations Tablets; Al-Yahudu Tablets",
-    "Slug": "babylon"
+    "Slug": "babylon",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Civilization": "Persia",
@@ -169,7 +202,10 @@
     "RelatedPlaces": "Susa",
     "RelatedEvents": "Cyrus's Decree and Return from Exile; Esther Saves Her People; Nehemiah Rebuilds the Wall; Rebuilding of the Temple; Ezra Reads the Law",
     "RelatedFinds": "Cyrus Cylinder",
-    "Slug": "persia"
+    "Slug": "persia",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Civilization": "Greece",
@@ -184,7 +220,10 @@
     "RelatedPlaces": "Corinth; Philippi; Ephesus",
     "RelatedEvents": "Paul's Missionary Journeys; The Conversion of Paul",
     "RelatedFinds": "Gallio Inscription; Corinth Bema (Judgment Seat); Politarch Inscription; Erastus Inscription",
-    "Slug": "greece"
+    "Slug": "greece",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "Civilization": "Rome",
@@ -199,6 +238,9 @@
     "RelatedPlaces": "Rome; Antioch",
     "RelatedEvents": "The Birth of Jesus; The Crucifixion; Paul in Rome",
     "RelatedFinds": "Pilate Stone; Herodium (Herod's Tomb); Ephesus Theater; Sergius Paulus Inscription",
-    "Slug": "rome"
+    "Slug": "rome",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

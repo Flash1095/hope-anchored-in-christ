@@ -6,5 +6,8 @@
   "RelatedPeople": "Paul; Jesus",
   "RelatedDoctrines": "Inspiration of Scripture",
   "RelatedBooks": "Mark; 1 Corinthians; 2 Thessalonians; Colossians",
-  "Slug": "tradition"
+  "Slug": "tradition",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

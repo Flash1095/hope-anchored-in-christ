@@ -6,5 +6,8 @@
   "RelatedPeople": "Adam; Paul",
   "RelatedDoctrines": "Creation",
   "RelatedBooks": "Genesis; Ecclesiastes; 1 Corinthians; Philippians",
-  "Slug": "technology"
+  "Slug": "technology",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

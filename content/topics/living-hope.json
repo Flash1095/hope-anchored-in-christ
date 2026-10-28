@@ -6,5 +6,8 @@
   "RelatedPeople": "Simon Peter; Paul; Jesus",
   "RelatedEvents": "The Resurrection; Pentecost",
   "Slug": "living-hope",
-  "Places": "Jerusalem"
+  "Places": "Jerusalem",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

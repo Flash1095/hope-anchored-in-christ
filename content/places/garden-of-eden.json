@@ -10,5 +10,8 @@
   "RelatedBooks": "Genesis; Revelation",
   "RelatedPeople": "Adam; Eve",
   "Slug": "garden-of-eden",
-  "RelatedEvents": "Creation; The Fall; Cain Murders Abel"
+  "RelatedEvents": "Creation; The Fall; Cain Murders Abel",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

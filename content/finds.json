@@ -17,7 +17,10 @@
     "Image": "assets/finds/dead-sea-scrolls.jpg",
     "ImageCredit": "Photo: Unknown artistUnknown artist (Public domain)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AThe_Great_Isaiah_Scroll_MS_A_%281QIsa%29_-_Google_Art_Project.jpg",
-    "Slug": "dead-sea-scrolls"
+    "Slug": "dead-sea-scrolls",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Tel Dan Stele (House of David)",
@@ -38,7 +41,10 @@
     "Image": "assets/finds/tel-dan-stele.jpg",
     "ImageCredit": "Photo: Oren Rozen (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AJRSLM_300116_Tel_Dan_Stele_01.jpg",
-    "Slug": "tel-dan-stele"
+    "Slug": "tel-dan-stele",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Mesha Stele (Moabite Stone)",
@@ -60,7 +66,10 @@
     "Image": "assets/finds/mesha-stele.jpg",
     "ImageCredit": "Photo: Mbzt (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AF4171_Louvre_stele_de_Mesha_AO5066_rwk.jpg",
-    "Slug": "mesha-stele"
+    "Slug": "mesha-stele",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Merneptah Stele",
@@ -82,7 +91,10 @@
     "Image": "assets/finds/merneptah-stele.jpg",
     "ImageCredit": "Photo: 𐰇𐱅𐰚𐰤 (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AMerneptah_Steli_%28cropped%29.jpg",
-    "Slug": "merneptah-stele"
+    "Slug": "merneptah-stele",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Cyrus Cylinder",
@@ -104,7 +116,10 @@
     "Image": "assets/finds/cyrus-cylinder.jpg",
     "ImageCredit": "Photo: Photograph by Mike Peel (www.mikepeel.net). (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ACyrus_Cylinder_2.jpg",
-    "Slug": "cyrus-cylinder"
+    "Slug": "cyrus-cylinder",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Ketef Hinnom Silver Scrolls",
@@ -126,7 +141,10 @@
     "Image": "assets/finds/ketef-hinnom-silver-scrolls.jpg",
     "ImageCredit": "Photo: Ketef Hinnom Silver Scrolls (Public domain)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AKetef_Hinnom_KH2_Scroll.jpg",
-    "Slug": "ketef-hinnom-silver-scrolls"
+    "Slug": "ketef-hinnom-silver-scrolls",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Hezekiah's Tunnel and Siloam Inscription",
@@ -148,7 +166,10 @@
     "Image": "assets/finds/hezekiahs-tunnel-and-siloam-inscription.jpg",
     "ImageCredit": "Photo: Davidbena (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AHezekiah%27s_Tunnel_enlightened.jpg",
-    "Slug": "hezekiahs-tunnel-and-siloam-inscription"
+    "Slug": "hezekiahs-tunnel-and-siloam-inscription",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Sennacherib Prism (Taylor Prism)",
@@ -170,7 +191,10 @@
     "Image": "assets/finds/sennacherib-prism.jpg",
     "ImageCredit": "Photo: This image was produced by me, David Castor (user:dcastor). The pictures I submi (Public domain)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ATaylor_Prism-3.jpg",
-    "Slug": "sennacherib-prism"
+    "Slug": "sennacherib-prism",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Lachish Reliefs",
@@ -192,7 +216,10 @@
     "Image": "assets/finds/lachish-reliefs.jpg",
     "ImageCredit": "Photo: Osama Shukir Muhammed Amin FRCP(Glasg) (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AThe_fall_of_Lachish%2C_King_Sennacherib_reviews_Judaean_prisoners..JPG",
-    "Slug": "lachish-reliefs"
+    "Slug": "lachish-reliefs",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Lachish Letters",
@@ -214,7 +241,10 @@
     "Image": "assets/finds/lachish-letters.jpg",
     "ImageCredit": "Photo: Dr Tim Bulkeley (CC SA 1.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/Lakhish_Letters.jpg",
-    "Slug": "lachish-letters"
+    "Slug": "lachish-letters",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Black Obelisk of Shalmaneser III",
@@ -236,7 +266,10 @@
     "Image": "assets/finds/black-obelisk-of-shalmaneser-iii.jpg",
     "ImageCredit": "Photo: Osama Shukir Muhammed Amin FRCP(Glasg) (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AThe_Black_Obelisk_of_Shalmaneser_III%2C_9th_century_BC%2C_from_Nimrud%2C_Iraq._The_British_Museum.jpg",
-    "Slug": "black-obelisk-of-shalmaneser-iii"
+    "Slug": "black-obelisk-of-shalmaneser-iii",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Babylonian Chronicle (Nebuchadnezzar's Chronicle)",
@@ -255,7 +288,10 @@
     "RelatedBooks": "2 Kings; Jeremiah; 2 Chronicles",
     "Places": "Babylon; Jerusalem",
     "RelatedEvents": "Fall of Jerusalem and the Exile",
-    "Slug": "babylonian-chronicle-nebuchadnezzar"
+    "Slug": "babylonian-chronicle-nebuchadnezzar",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Pilate Stone",
@@ -277,7 +313,10 @@
     "Image": "assets/finds/pilate-stone.jpg",
     "ImageCredit": "Photo: BRBurton (CC0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/Pontius_Pilate_Inscription.JPG",
-    "Slug": "pilate-stone"
+    "Slug": "pilate-stone",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Gallio Inscription",
@@ -299,7 +338,10 @@
     "Image": "assets/finds/gallio-inscription.jpg",
     "ImageCredit": "Photo: Gérard (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ADelphes_Gallion.jpg",
-    "Slug": "gallio-inscription"
+    "Slug": "gallio-inscription",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Erastus Inscription",
@@ -321,7 +363,10 @@
     "Image": "assets/finds/erastus-inscription.jpg",
     "ImageCredit": "Photo: Ktiv (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AErastus_Inschrift.jpg",
-    "Slug": "erastus-inscription"
+    "Slug": "erastus-inscription",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Caiaphas Ossuary",
@@ -343,7 +388,10 @@
     "Image": "assets/finds/caiaphas-ossuary.jpg",
     "ImageCredit": "Photo: deror_avi (CC BY-SA 3.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AOssuary_of_the_high_priest_Joseph_Caiaphas_P1180839.JPG",
-    "Slug": "caiaphas-ossuary"
+    "Slug": "caiaphas-ossuary",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Crucified Man of Giv'at ha-Mivtar (Yehohanan)",
@@ -362,7 +410,10 @@
     "RelatedBooks": "John; Matthew; Mark; Luke",
     "Places": "Jerusalem",
     "RelatedEvents": "The Crucifixion",
-    "Slug": "crucified-man-of-givat-ha-mivtar-yehohanan"
+    "Slug": "crucified-man-of-givat-ha-mivtar-yehohanan",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Hezekiah's Royal Seal (Bulla)",
@@ -384,7 +435,10 @@
     "Image": "assets/finds/hezekiahs-royal-seal-bulla.jpg",
     "ImageCredit": "Photo: Tamir Zegman (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3A%D7%98%D7%91%D7%99%D7%A2%D7%AA_%D7%97%D7%95%D7%AA%D7%9D_%D7%94%D7%9E%D7%9C%D7%9A_%D7%97%D7%96%D7%A7%D7%99%D7%94%D7%95.jpg",
-    "Slug": "hezekiahs-royal-seal-bulla"
+    "Slug": "hezekiahs-royal-seal-bulla",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Seal of Isaiah",
@@ -403,7 +457,10 @@
     "RelatedBooks": "Isaiah; 2 Kings; 2 Chronicles",
     "Places": "Jerusalem",
     "RelatedEvents": "Hezekiah and Sennacherib's Invasion",
-    "Slug": "seal-of-isaiah"
+    "Slug": "seal-of-isaiah",
+    "VerificationStatus": "Scholarly Debate",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Uzziah Tablet",
@@ -425,7 +482,10 @@
     "Image": "assets/finds/uzziah-tablet.jpg",
     "ImageCredit": "Photo: אחיה פ. at Hebrew Wikipedia\n\nThe original uploader was אחיה פ. at Hebrew Wikiped (Public domain)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ATsioon_Uzia.JPG",
-    "Slug": "uzziah-tablet"
+    "Slug": "uzziah-tablet",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Ekron Temple Inscription",
@@ -446,7 +506,10 @@
     "Image": "assets/finds/ekron-temple-inscription.jpg",
     "ImageCredit": "Photo: Oren Rozen (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AJRSLM_300116_Ekron_inscription.jpg",
-    "Slug": "ekron-temple-inscription"
+    "Slug": "ekron-temple-inscription",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Temple Warning Inscription",
@@ -469,7 +532,10 @@
     "Image": "assets/finds/temple-warning-inscription.jpg",
     "ImageCredit": "Photo: oncenawhile (CC BY-SA 3.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AJerusalem_Temple_Warning_Inscription.jpg",
-    "Slug": "temple-warning-inscription"
+    "Slug": "temple-warning-inscription",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Trumpeting Place Inscription",
@@ -491,7 +557,10 @@
     "Image": "assets/finds/trumpeting-place-inscription.jpg",
     "ImageCredit": "Photo: Andrey Zeigarnik from Raanana, Israel (CC BY-SA 2.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ATrumpeting_place_Zeigarnik.jpg",
-    "Slug": "trumpeting-place-inscription"
+    "Slug": "trumpeting-place-inscription",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Theodotus Synagogue Inscription",
@@ -513,7 +582,10 @@
     "Image": "assets/finds/theodotus-synagogue-inscription.jpg",
     "ImageCredit": "Photo: Sodabottle (CC BY-SA 3.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ATheodotus_inscription.jpg",
-    "Slug": "theodotus-synagogue-inscription"
+    "Slug": "theodotus-synagogue-inscription",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Pool of Siloam",
@@ -534,7 +606,10 @@
     "Image": "assets/finds/pool-of-siloam.jpg",
     "ImageCredit": "Photo: Davidbena (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AThe_Upper_Pool_of_Siloam_%28Shiloah%29.jpg",
-    "Slug": "pool-of-siloam"
+    "Slug": "pool-of-siloam",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Pool of Bethesda",
@@ -555,7 +630,10 @@
     "Image": "assets/finds/pool-of-bethesda.jpg",
     "ImageCredit": "Photo: Berthold Werner (Public domain)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AJerusalem_Bethesda_BW_1.JPG",
-    "Slug": "pool-of-bethesda"
+    "Slug": "pool-of-bethesda",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Capernaum - Peter's House and Synagogue",
@@ -577,7 +655,10 @@
     "Image": "assets/finds/capernaum-peters-house-and-synagogue.jpg",
     "ImageCredit": "Photo: Berthold Werner (Public domain)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AKafarnaum_BW_20.jpg",
-    "Slug": "capernaum-peters-house-and-synagogue"
+    "Slug": "capernaum-peters-house-and-synagogue",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Megiddo Gates",
@@ -597,7 +678,10 @@
     "Image": "assets/finds/megiddo-gates.jpg",
     "ImageCredit": "Photo: Ian Scott (CC BY-SA 2.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AChambered_Gate_of_Megiddo_%2820726303061%29.jpg",
-    "Slug": "megiddo-gates"
+    "Slug": "megiddo-gates",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Hazor",
@@ -618,7 +702,10 @@
     "Image": "assets/finds/hazor.jpg",
     "ImageCredit": "Photo: Bukvoed (CC BY 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/Tel-Hazor-2004.jpg",
-    "Slug": "hazor"
+    "Slug": "hazor",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Gezer Calendar",
@@ -638,7 +725,10 @@
     "Image": "assets/finds/gezer-calendar.jpg",
     "ImageCredit": "Photo: oncenawhile (CC BY-SA 3.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AGezer_calendar_close_up.jpg",
-    "Slug": "gezer-calendar"
+    "Slug": "gezer-calendar",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Amarna Letters",
@@ -660,7 +750,10 @@
     "Image": "assets/finds/amarna-letters.jpg",
     "ImageCredit": "Photo: Osama Shukir Muhammed Amin FRCP(Glasg) (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AAmarna_letter._Letter_from_Yapahu_%28ruler_of_Gezer%29_to_the_Egyptian_pharaoh_Amenhotep_III_or_son_Akhenaten.jpg",
-    "Slug": "amarna-letters"
+    "Slug": "amarna-letters",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Code of Hammurabi",
@@ -682,7 +775,10 @@
     "Image": "assets/finds/code-of-hammurabi.jpg",
     "ImageCredit": "Photo: Mbzt (CC BY 3.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AP1050763_Louvre_code_Hammurabi_face_rwk.JPG",
-    "Slug": "code-of-hammurabi"
+    "Slug": "code-of-hammurabi",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Nabonidus Cylinder",
@@ -703,7 +799,10 @@
     "Image": "assets/finds/nabonidus-cylinder.jpg",
     "ImageCredit": "Photo: Wikimedia Commons (Public domain)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ANabonidus_cylinder_sippar_bm1.jpg",
-    "Slug": "nabonidus-cylinder"
+    "Slug": "nabonidus-cylinder",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Balaam Inscription (Deir Alla Inscription)",
@@ -724,7 +823,10 @@
     "Image": "assets/finds/balaam-inscription-deir-alla.png",
     "ImageCredit": "Photo: Disdero (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ADeir_%27Alla_Inscription.png",
-    "Slug": "balaam-inscription-deir-alla"
+    "Slug": "balaam-inscription-deir-alla",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Kurkh Monolith of Shalmaneser III",
@@ -747,7 +849,10 @@
     "Image": "assets/finds/kurkh-monolith-of-shalmaneser-iii.jpg",
     "ImageCredit": "Photo: Osama Shukir Muhammed Amin FRCP(Glasg) (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AKurkh_stele_of_Shalmaneser_III._From_Diyarbak%C4%B1r%2C_southern_Turkey._British_Museum.jpg",
-    "Slug": "kurkh-monolith-of-shalmaneser-iii"
+    "Slug": "kurkh-monolith-of-shalmaneser-iii",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Rylands Library Papyrus P52",
@@ -769,7 +874,10 @@
     "Image": "assets/finds/rylands-library-papyrus-p52.jpg",
     "ImageCredit": "Photo: Raxom (CC BY-SA 3.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ARylands_papyrus.jpg",
-    "Slug": "rylands-library-papyrus-p52"
+    "Slug": "rylands-library-papyrus-p52",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "James Ossuary",
@@ -787,7 +895,10 @@
     "RelatedPeople": "James; Jesus; Joseph",
     "RelatedBooks": "Matthew; Galatians; James; Acts",
     "Places": "Jerusalem",
-    "Slug": "james-ossuary"
+    "Slug": "james-ossuary",
+    "VerificationStatus": "Scholarly Debate",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Ebla Tablets",
@@ -808,7 +919,10 @@
     "Image": "assets/finds/ebla-tablets.jpg",
     "ImageCredit": "Photo: Davide Mauro (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ACalco_di_tavoletta_in_terracotta_da_Ebla_-_Museo_d%27Arte_Orientale_Roma.jpg",
-    "Slug": "ebla-tablets"
+    "Slug": "ebla-tablets",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Ain Dara Temple",
@@ -827,7 +941,10 @@
     "Image": "assets/finds/ain-dara-temple.jpg",
     "ImageCredit": "Photo: Dosseman (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AAin_Dara_temple_front_side_right_of_entrance_03_sphinx_0559.jpg",
-    "Slug": "ain-dara-temple"
+    "Slug": "ain-dara-temple",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Al-Yahudu Tablets",
@@ -846,7 +963,10 @@
     "Image": "assets/finds/al-yahudu-tablets.jpg",
     "ImageCredit": "Photo: עמית אבידן (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AAl-Yahudu_Tablets2.jpg",
-    "Slug": "al-yahudu-tablets"
+    "Slug": "al-yahudu-tablets",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Arad Ostraca",
@@ -866,7 +986,10 @@
     "Image": "assets/finds/arad-ostraca.jpg",
     "ImageCredit": "Photo: פעמי-עליון (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3A%D7%9E%D7%9B%D7%AA%D7%91_18_%D7%9E%D7%A2%D7%A8%D7%93%2C_2.jpg",
-    "Slug": "arad-ostraca"
+    "Slug": "arad-ostraca",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Arad Temple",
@@ -886,7 +1009,10 @@
     "Image": "assets/finds/arad-temple.jpg",
     "ImageCredit": "Photo: יעקב (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ATel_arad_fortress_temple1957.jpg",
-    "Slug": "arad-temple"
+    "Slug": "arad-temple",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Chester Beatty Papyri",
@@ -905,7 +1031,10 @@
     "Image": "assets/finds/chester-beatty-papyri.jpg",
     "ImageCredit": "Photo: Unknown authorUnknown author (Public domain)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AP._Chester_Beatty_I%2C_folio_13-14%2C_recto.jpg",
-    "Slug": "chester-beatty-papyri"
+    "Slug": "chester-beatty-papyri",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Codex Sinaiticus",
@@ -923,7 +1052,10 @@
     "Image": "assets/finds/codex-sinaiticus.jpg",
     "ImageCredit": "Photo: Unknown authorUnknown author (Public domain)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ACodex_Sinaiticus_Matthew_6%2C4-32.JPG",
-    "Slug": "codex-sinaiticus"
+    "Slug": "codex-sinaiticus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Codex Vaticanus",
@@ -941,7 +1073,10 @@
     "Image": "assets/finds/codex-vaticanus.jpg",
     "ImageCredit": "Photo: Unknown authorUnknown author (Public domain)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AVaticanus_codex_B_3773_page_24.jpg",
-    "Slug": "codex-vaticanus"
+    "Slug": "codex-vaticanus",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Corinth Bema (Judgment Seat)",
@@ -962,7 +1097,10 @@
     "Image": "assets/finds/corinth-bema.jpg",
     "ImageCredit": "Photo: Zde (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ABema_of_Corinth%2C_203034.jpg",
-    "Slug": "corinth-bema"
+    "Slug": "corinth-bema",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Dura-Europos Church",
@@ -982,7 +1120,10 @@
     "Image": "assets/finds/dura-europos-church.jpg",
     "ImageCredit": "Photo: anonymous (CC0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ADura-Europos_archival_photograph%2C_YUAG_negative_number_h304b_-object-id-3852.jpg",
-    "Slug": "dura-europos-church"
+    "Slug": "dura-europos-church",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Elephantine Papyri",
@@ -1002,7 +1143,10 @@
     "Image": "assets/finds/elephantine-papyri.jpg",
     "ImageCredit": "Photo: Charles Edwin Wilbour (No restrictions)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AAnaniah_Gives_Yehoishema_a_House%2C_Marh_10%2C_402_B.C.E%2C_47.218.88.jpg",
-    "Slug": "elephantine-papyri"
+    "Slug": "elephantine-papyri",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Ephesus Theater",
@@ -1023,7 +1167,10 @@
     "Image": "assets/finds/ephesus-theater.jpg",
     "ImageCredit": "Photo: Furkan Akkurt (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AGreat_Theatre_of_Ephesus_2024.jpg",
-    "Slug": "ephesus-theater"
+    "Slug": "ephesus-theater",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Gemariah Son of Shaphan Bulla",
@@ -1041,7 +1188,10 @@
     "RelatedPeople": "Jeremiah",
     "RelatedBooks": "Jeremiah",
     "Places": "Jerusalem",
-    "Slug": "gemariah-son-of-shaphan-bulla"
+    "Slug": "gemariah-son-of-shaphan-bulla",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Herodium (Herod's Tomb)",
@@ -1060,7 +1210,10 @@
     "Image": "assets/finds/herodium.jpg",
     "ImageCredit": "Photo: Asaf T. (Public domain)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AHerodium_from_above_2.jpg",
-    "Slug": "herodium"
+    "Slug": "herodium",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Jehoiachin's Rations Tablets",
@@ -1080,7 +1233,10 @@
     "Image": "assets/finds/jehoiachins-rations-tablets.jpg",
     "ImageCredit": "Photo: Scallaham (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AJehoiachin_Ration_Tablet_detail.jpg",
-    "Slug": "jehoiachins-rations-tablets"
+    "Slug": "jehoiachins-rations-tablets",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Khirbet Qeiyafa Ostracon",
@@ -1100,7 +1256,10 @@
     "Image": "assets/finds/khirbet-qeiyafa-ostracon.jpg",
     "ImageCredit": "Photo: MichaelNetzer (CC BY-SA 3.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AKhirbet_Qeiyafa_Ostracon.jpg",
-    "Slug": "khirbet-qeiyafa-ostracon"
+    "Slug": "khirbet-qeiyafa-ostracon",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Kuntillet Ajrud Inscriptions",
@@ -1119,7 +1278,10 @@
     "Image": "assets/finds/kuntillet-ajrud-inscriptions.jpg",
     "ImageCredit": "Photo: Unknown authorUnknown author (Public domain)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AAjrud.jpg",
-    "Slug": "kuntillet-ajrud-inscriptions"
+    "Slug": "kuntillet-ajrud-inscriptions",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Large Stone Structure (City of David)",
@@ -1140,7 +1302,10 @@
     "Image": "assets/finds/large-stone-structure.jpg",
     "ImageCredit": "Photo: Jprg1966 (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ALarge_and_stepped_stone_structures.jpg",
-    "Slug": "large-stone-structure"
+    "Slug": "large-stone-structure",
+    "VerificationStatus": "Scholarly Debate",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "LMLK Jar-Handle Seals",
@@ -1160,7 +1325,10 @@
     "Image": "assets/finds/lmlk-jar-handle-seals.jpg",
     "ImageCredit": "Photo: Tom Bahar (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ALMLK_Seals_on_Jar_Handles.jpg",
-    "Slug": "lmlk-jar-handle-seals"
+    "Slug": "lmlk-jar-handle-seals",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Magdala Stone",
@@ -1180,7 +1348,10 @@
     "Image": "assets/finds/magdala-stone.jpg",
     "ImageCredit": "Photo: Hanay (CC BY-SA 3.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AMagdala_Stone_%285%29.jpg",
-    "Slug": "magdala-stone"
+    "Slug": "magdala-stone",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Megiddo Church",
@@ -1199,7 +1370,10 @@
     "Image": "assets/finds/megiddo-church.jpg",
     "ImageCredit": "Photo: Vesafis Tzferris (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/Akeptous_Inscription_2.jpg",
-    "Slug": "megiddo-church"
+    "Slug": "megiddo-church",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Megiddo Seal (Shema Seal)",
@@ -1218,7 +1392,10 @@
     "Image": "assets/finds/megiddo-seal.jpg",
     "ImageCredit": "Replica of the Shema Seal (original lost). Photo: Fred Cherrygarden (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/Shema_Seal_%28Replica%29.jpg",
-    "Slug": "megiddo-seal"
+    "Slug": "megiddo-seal",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Nabonidus Chronicle",
@@ -1240,7 +1417,10 @@
     "Image": "assets/finds/nabonidus-chronicle.jpg",
     "ImageCredit": "Photo: Osama Shukir Muhammed Amin FRCP(Glasg) (CC BY-SA 4.0)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ANabonidus%27s_faults_and_absences_were_recorded_alongside_events_of_his_reign._By_the_autumn_of_539_BCE%2C_Babylon_had_surrendered_to_the_army_of_king_Cyrus_to_become_part_of_the_growing_Achaemenid_Empire._From_Babylon%2C_Iraq%2C_530-400_BCE.jpg",
-    "Slug": "nabonidus-chronicle"
+    "Slug": "nabonidus-chronicle",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Politarch Inscription",
@@ -1259,7 +1439,10 @@
     "RelatedPeople": "Paul",
     "RelatedBooks": "Acts",
     "Places": "Thessalonica",
-    "Slug": "politarch-inscription"
+    "Slug": "politarch-inscription",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Samaria Ostraca",
@@ -1279,7 +1462,10 @@
     "Image": "assets/finds/samaria-ostraca.jpg",
     "ImageCredit": "Photo: George Andrew Reisner (Public domain)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3ASamaria_Ostraca_House.jpg",
-    "Slug": "samaria-ostraca"
+    "Slug": "samaria-ostraca",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Sea of Galilee Boat",
@@ -1301,7 +1487,10 @@
     "Image": "assets/finds/sea-of-galilee-boat.jpg",
     "ImageCredit": "Photo: Berthold Werner (Public domain)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AGinosar_BW_7.jpg",
-    "Slug": "sea-of-galilee-boat"
+    "Slug": "sea-of-galilee-boat",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Sergius Paulus Inscription",
@@ -1318,7 +1507,10 @@
     "ScriptureIlluminated": "Acts 13:6-12",
     "RelatedPeople": "Paul",
     "RelatedBooks": "Acts",
-    "Slug": "sergius-paulus-inscription"
+    "Slug": "sergius-paulus-inscription",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Tel Moza Temple",
@@ -1334,7 +1526,10 @@
     "Interpretations": "Scholars agree the temple is a genuine ninth- to eighth-century Judahite sanctuary near Jerusalem; debate concerns its implications — how a temple so close to Jerusalem operated alongside Solomon’s.",
     "ScriptureIlluminated": "Deuteronomy 12:11; 2 Kings 23:8",
     "RelatedBooks": "Deuteronomy; 2 Kings",
-    "Slug": "tel-moza-temple"
+    "Slug": "tel-moza-temple",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   },
   {
     "FindName": "Tel Zayit Abecedary",
@@ -1353,6 +1548,9 @@
     "Image": "assets/finds/tel-zayit-abecedary.jpg",
     "ImageCredit": "Photo: Zeitah Excavations and Israel Antiquities (Public domain)",
     "ImageSource": "https://commons.wikimedia.org/wiki/File%3AOldest_Hebrew_Inscription_X_BC.jpg",
-    "Slug": "tel-zayit-abecedary"
+    "Slug": "tel-zayit-abecedary",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]

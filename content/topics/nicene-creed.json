@@ -6,5 +6,8 @@
   "RelatedPeople": "Paul",
   "RelatedDoctrines": "Trinity; Incarnation",
   "RelatedBooks": "John; Colossians; Hebrews; 1 Corinthians",
-  "Slug": "nicene-creed"
+  "Slug": "nicene-creed",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

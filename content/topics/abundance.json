@@ -6,5 +6,8 @@
   "RelatedPeople": "Moses; King David; Jesus; Paul",
   "RelatedEvents": "Wilderness Wanderings; The Feeding of the Five Thousand",
   "Slug": "abundance",
-  "Places": "Galilee"
+  "Places": "Galilee",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

@@ -20,5 +20,7 @@
   "Status": "Published",
   "LastUpdated": "2026-10-23",
   "RelatedPeople": "Job",
-  "RelatedEvents": "The Fall; Creation"
+  "RelatedEvents": "The Fall; Creation",
+  "VerificationStatus": "Awaiting Review",
+  "LastReviewed": ""
 }

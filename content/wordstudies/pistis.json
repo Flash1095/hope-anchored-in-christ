@@ -12,5 +12,8 @@
   "RelatedBooks": "Romans; Ephesians; Hebrews",
   "Slug": "pistis",
   "RelatedPeople": "Abraham; Paul",
-  "RelatedEvents": "The Call of Abraham"
+  "RelatedEvents": "The Call of Abraham",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

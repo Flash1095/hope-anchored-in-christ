@@ -8,5 +8,8 @@
   "RelatedBooks": "Matthew; Acts; 1 Peter; Colossians",
   "Slug": "christian-witness",
   "Places": "Jerusalem",
-  "RelatedEvents": "Pentecost"
+  "RelatedEvents": "Pentecost",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }

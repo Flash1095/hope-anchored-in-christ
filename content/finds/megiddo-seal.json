@@ -15,5 +15,8 @@
   "Image": "assets/finds/megiddo-seal.jpg",
   "ImageCredit": "Replica of the Shema Seal (original lost). Photo: Fred Cherrygarden (CC BY-SA 4.0)",
   "ImageSource": "https://commons.wikimedia.org/wiki/Shema_Seal_%28Replica%29.jpg",
-  "Slug": "megiddo-seal"
+  "Slug": "megiddo-seal",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
 }
