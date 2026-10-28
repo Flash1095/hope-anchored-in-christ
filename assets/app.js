@@ -185,7 +185,7 @@
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
-  var ASSET_V = "149";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "150";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -494,6 +494,12 @@
       var p = currentParams().toString();
       history.replaceState(null, "", "#/" + id + (p ? "?" + p : ""));
     }
+    /* Search haystacks, built once per list view: rebuilding them from
+       every field on every keystroke is what made huge lists (Word
+       Studies, 14,197 entries) crawl while typing. */
+    var haystacks = rows.map(function (r) {
+      return Object.keys(r).map(function (k) { return val(r, k); }).join(" ").toLowerCase();
+    });
     function filteredRows() {
       var q = state.q.toLowerCase();
       return rows.map(function (r, i) { return { row: r, idx: i }; }).filter(function (item) {
@@ -502,23 +508,46 @@
           var f = filterDefs[j], want = state.filters[f.field];
           if (want && splitList(val(r, f.field)).indexOf(want) === -1) return false;
         }
-        if (q) {
-          var hay = Object.keys(r).map(function (k) { return val(r, k); }).join(" ").toLowerCase();
-          if (hay.indexOf(q) === -1) return false;
-        }
+        if (q && haystacks[item.idx].indexOf(q) === -1) return false;
         return true;
       });
     }
+    /* Lists render in batches of 100 with a "Show more" button: dumping
+       all 14,197 Word Studies cards into the page at once hung the tab
+       for minutes (found by the live check of the Strong's publish). */
+    var LIST_BATCH = 100;
     function renderGrid() {
       var wrap = document.getElementById("gridWrap");
       if (!wrap) return;
       var filtered = filteredRows();
       if (!filtered.length) {
         wrap.innerHTML = '<p class="empty">Nothing matches. Try clearing the search or filters.</p>';
-      } else {
-        wrap.innerHTML = '<div class="card-grid">' + filtered.map(function (item) {
-          return cardFor(c, item.row, item.idx);
-        }).join("") + "</div>";
+        return;
+      }
+      var shown = Math.min(LIST_BATCH, filtered.length);
+      var html = '<div class="card-grid" id="listGrid">' + filtered.slice(0, shown).map(function (item) {
+        return cardFor(c, item.row, item.idx);
+      }).join("") + "</div>";
+      if (filtered.length > shown) {
+        html += '<p><button class="btn" id="loadMoreBtn">Show more (' + shown + " of " + filtered.length + ")</button></p>";
+      }
+      wrap.innerHTML = html;
+      var btn = document.getElementById("loadMoreBtn");
+      if (btn) {
+        btn.addEventListener("click", function () {
+          var grid = document.getElementById("listGrid");
+          if (!grid) return;
+          var next = Math.min(shown + LIST_BATCH, filtered.length);
+          grid.insertAdjacentHTML("beforeend", filtered.slice(shown, next).map(function (item) {
+            return cardFor(c, item.row, item.idx);
+          }).join(""));
+          shown = next;
+          if (shown >= filtered.length) {
+            if (btn.parentNode) btn.parentNode.remove();
+          } else {
+            btn.textContent = "Show more (" + shown + " of " + filtered.length + ")";
+          }
+        });
       }
     }
 
