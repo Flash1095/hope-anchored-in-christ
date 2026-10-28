@@ -185,7 +185,7 @@
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
-  var ASSET_V = "154";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "155";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -980,6 +980,7 @@
         '<p class="page-intro">Test your Bible knowledge &mdash; every answer teaches. Answer each question and you will see right away whether you got it right, with an explanation from Scripture.</p>' +
         (group.course ? '<p class="meta"><strong>Theme:</strong> ' + esc(group.course) + "</p>" : "") +
         '<p class="meta">' + group.qs.length + " questions &middot; " + esc(diffBreakdown(group.qs)) + "</p>" +
+        verificationBox(group.qs[0]) +
         (function () {
           var reading = null;
           group.qs.forEach(function (q) { if (!reading && !isEmpty(val(q, "ReadingLink"))) reading = q; });
@@ -3154,7 +3155,7 @@ function genBindInteractive(node) {
       "<p>" + NEEDS.map(function (n) {
         return '<button class="chip bible-topic-need" data-need="' + esc(n.toLowerCase()) + '">' + esc(n) + "</button>";
       }).join(" ") + "</p>" +
-      "<p class='meta'>" + rows.length + " topics</p>" +
+      "<p class='meta' id='bibleTopicCount'>" + rows.length + " topics</p>" +
       "<div class='card-grid' id='bibleTopicGrid'>" + rows.map(card).join("") + "</div>" +
       "<p id='bibleTopicEmpty' style='display:none'>No topics match that search.</p></div>";
     app.innerHTML = html;
@@ -3168,6 +3169,7 @@ function genBindInteractive(node) {
         if (ok) shown++;
       });
       document.getElementById("bibleTopicEmpty").style.display = shown ? "none" : "";
+      document.getElementById("bibleTopicCount").textContent = shown === rows.length ? rows.length + " topics" : shown + " of " + rows.length + " topics";
     }
     input.addEventListener("input", filter);
     Array.prototype.forEach.call(document.querySelectorAll(".bible-topic-need"), function (btn) {
@@ -3567,7 +3569,7 @@ function genBindInteractive(node) {
       "<h3>Nothing invented, nothing auto-verified</h3>" +
       "<p>No discovery, date, biblical reference, manuscript identification, or citation is invented to fill a gap. Where adequate sources have not been found, the field stays blank and the entry stays Awaiting Review. Content drafted with AI assistance is never automatically marked verified — it earns Verified only after a source check, like any other entry.</p>" +
       "<h3>Coverage today</h3>" +
-      "<p>Of 2,945 database entries, 24 are Verified, 6 are Scholarly Debate, and 2,915 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
+      "<p>Of 20,416 database entries, 24 are Verified, 6 are Scholarly Debate, and 20,386 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
       "<p>Browse the statuses: <a href='#/manuscripts?f_VerificationStatus=Verified'>Verified manuscripts</a> &middot; <a href='#/manuscripts?f_VerificationStatus=Scholarly Debate'>Debated manuscripts</a> &middot; <a href='#/finds?f_VerificationStatus=Scholarly Debate'>Debated finds</a></p>" +
       "<h3>Corrections</h3>" +
       "<p>Entries can be corrected and updated at any time. Corrections go through the site editor or through the site owner, and a corrected entry keeps its sources and review date visible so readers can see what changed and when it was last checked.</p>" +
