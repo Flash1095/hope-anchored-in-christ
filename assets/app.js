@@ -180,7 +180,7 @@
   var petStories = [];  // storybook shelf: pet stories (content/petstories.json)
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
-  var ASSET_V = "131";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "132";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1913,7 +1913,7 @@
       var c = coll(id);
       if (!c) return;
       (data[id] || []).forEach(function (row, i) {
-        var hit = ["Scripture"].concat(SCRIPTURE_FIELDS).some(function (f) {
+        var hit = ["Scripture", "BiblicalSupport"].concat(SCRIPTURE_FIELDS).some(function (f) {
           var v = val(row, f);
           if (isEmpty(v)) return false;
           return refsInValue(v).some(function (r) { return r.name === bookName && r.chapter === chapter; });
@@ -1923,6 +1923,47 @@
     });
     return out;
   }
+  function textMatchForChapter(row, bookName, chapter) {
+    /* articlesForChapter's prose fallback, for collections whose refs live
+       in prose rather than scripture fields (Heretical Teachings): a
+       "Book chapter" mention counts, except a numbered book's chapter is
+       never claimed from its numbered sibling's reference. */
+    var numbered = ["Samuel", "Kings", "Chronicles", "Corinthians",
+      "Thessalonians", "Timothy", "Peter", "John"];
+    var stripRe = numbered.indexOf(bookName) !== -1
+      ? new RegExp("[123] " + escapeRegExp(bookName) + " " + chapter + "(?![0-9])", "gi") : null;
+    var variants = [bookName];
+    if (bookName === "Psalms") variants.push("Psalm");
+    if (bookName === "Song of Solomon") variants.push("Song of Songs", "Song");
+    var res = variants.map(function (v) {
+      return new RegExp("(^|[^0-9A-Za-z])" + escapeRegExp(v) + " " + chapter + "(?![0-9])", "i");
+    });
+    return Object.keys(row).some(function (k) {
+      if (["Scripture", "BiblicalSupport"].concat(SCRIPTURE_FIELDS).indexOf(k) !== -1) return false;
+      var text = " " + val(row, k);
+      if (stripRe) text = text.replace(stripRe, " ");
+      return res.some(function (re) { return re.test(text); });
+    });
+  }
+  function notesForChapterText(bookName, chapter, collId) {
+    var out = [];
+    var c = coll(collId);
+    if (!c) return out;
+    (data[collId] || []).forEach(function (row, i) {
+      if (textMatchForChapter(row, bookName, chapter)) out.push({ c: c, row: row, idx: i });
+    });
+    return out;
+  }
+  /* The six study-Bible layers on chapter pages. colls = parsed scripture
+     refs (chapter + verse); textColls = prose mentions (chapter only). */
+  var STUDY_LAYERS = [
+    { title: "Apologetics study notes", empty: "No apologetics notes cite this chapter yet.", colls: ["apologetics", "objections"], textColls: [], panel: "Apologetics" },
+    { title: "Cultural background notes", empty: "No cultural background notes cite this chapter yet.", colls: ["jewishculture"], textColls: [], panel: "Cultural backgrounds" },
+    { title: "Life application notes", empty: "No life application notes cite this chapter yet.", colls: ["people", "studyguides"], textColls: [], panel: "Life application" },
+    { title: "Archaeology notes", empty: "No archaeology notes cite this chapter yet.", colls: ["finds"], textColls: [], panel: "Archaeology" },
+    { title: "Biblical theology notes", empty: "No biblical theology notes cite this chapter yet.", colls: ["topics", "doctrines"], textColls: [], panel: "Biblical theology" },
+    { title: "Hermeneutics notes", empty: "No hermeneutics notes cite this chapter yet.", colls: ["hermeneutics", "perspectives"], textColls: ["heresies"], panel: "Hermeneutics" }
+  ];
   function verseRefsInValue(value) {
     /* Like refsInValue, but returns explicit verses: {slug, name, chapter, verse}.
        Bare-chapter refs mark no verse (they stay chapter-level); verse ranges
@@ -1974,7 +2015,7 @@
       var c = coll(id);
       if (!c) return;
       (data[id] || []).forEach(function (row, i) {
-        var hit = ["Scripture"].concat(SCRIPTURE_FIELDS).some(function (f) {
+        var hit = ["Scripture", "BiblicalSupport"].concat(SCRIPTURE_FIELDS).some(function (f) {
           var v = val(row, f);
           if (isEmpty(v)) return false;
           return verseRefsInValue(v).some(function (r) { return r.name === bookName && r.chapter === chapter && r.verse === verse; });
@@ -2001,9 +2042,9 @@
       /* Verses with study notes (apologetics or cultural entries citing the
          exact verse) get a † marker; tapping it opens the notes panel. */
       var marked = {};
-      ["apologetics", "objections", "jewishculture"].forEach(function (id) {
+      ["apologetics", "objections", "jewishculture", "people", "studyguides", "finds", "topics", "doctrines", "hermeneutics", "perspectives"].forEach(function (id) {
         (data[id] || []).forEach(function (row) {
-          ["Scripture"].concat(SCRIPTURE_FIELDS).forEach(function (f) {
+          ["Scripture", "BiblicalSupport"].concat(SCRIPTURE_FIELDS).forEach(function (f) {
             var v = val(row, f);
             if (isEmpty(v)) return;
             verseRefsInValue(v).forEach(function (r) {
@@ -2049,19 +2090,17 @@
           return "<a class='card' href='#/" + a.c.id + "/" + a.idx + "'><h3>" + esc(val(a.row, a.c.primary)) + "</h3><p class='meta'>" + esc(a.c.label) + "</p></a>";
         }).join("") + "</div>";
       };
-      var apols = notesForChapter(book.name, +chapter, ["apologetics", "objections"]);
-      html += "<h3>Apologetics study notes</h3>" +
-        (apols.length ? noteCards(apols) : "<p class='page-intro'>No apologetics notes cite this chapter yet.</p>");
-      var cults = notesForChapter(book.name, +chapter, ["jewishculture"]);
-      html += "<h3>Cultural background notes</h3>" +
-        (cults.length ? noteCards(cults) : "<p class='page-intro'>No cultural background notes cite this chapter yet.</p>");
+      STUDY_LAYERS.forEach(function (L) {
+        var list = notesForChapter(book.name, +chapter, L.colls);
+        L.textColls.forEach(function (id) { list = list.concat(notesForChapterText(book.name, +chapter, id)); });
+        html += '<details class="study-section"><summary>' + L.title + (list.length ? ' (' + list.length + ')' : '') + '</summary><div class="study-body">' +
+          (list.length ? noteCards(list) : '<p>' + L.empty + '</p>') + '</div></details>';
+      });
       html += "</div>";
       app.innerHTML = html;
       app.querySelectorAll(".verse-note").forEach(function (btn) {
         btn.addEventListener("click", function () {
           var vn = +btn.getAttribute("data-v");
-          var a = notesForVerse(book.name, +chapter, vn, ["apologetics", "objections"]);
-          var cu = notesForVerse(book.name, +chapter, vn, ["jewishculture"]);
           var panel = document.getElementById("verseStudy");
           if (!panel) return;
           var group = function (title, list) {
@@ -2070,7 +2109,11 @@
               return "<li><a href='#/" + x.c.id + "/" + x.idx + "'>" + esc(val(x.row, x.c.primary)) + "</a> <span class='meta'>" + esc(x.c.label) + "</span></li>";
             }).join("") + "</ul>";
           };
-          panel.innerHTML = '<details class="study-section" open><summary>Study notes for ' + esc(book.name) + ' ' + chapter + ':' + vn + '</summary><div class="study-body">' + group("Apologetics", a) + group("Cultural backgrounds", cu) + '</div></details>';
+          var groups = "";
+          STUDY_LAYERS.forEach(function (L) {
+            groups += group(L.panel, notesForVerse(book.name, +chapter, vn, L.colls));
+          });
+          panel.innerHTML = '<details class="study-section" open><summary>Study notes for ' + esc(book.name) + ' ' + chapter + ':' + vn + '</summary><div class="study-body">' + groups + '</div></details>';
           panel.scrollIntoView();
         });
       });
