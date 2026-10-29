@@ -24,7 +24,7 @@ collections:
       - {label: "Scripture", name: "scripture", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "timeline"
-    label: "Timeline"
+    label: "Biblical Timeline"
     folder: "content/timeline"
     create: true
     slug: "{{fields.Title}}"

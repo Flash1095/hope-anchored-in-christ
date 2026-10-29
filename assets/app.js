@@ -6,7 +6,7 @@
   "use strict";
 
   var COLLECTIONS = [
-    { id: "timeline", label: "Timeline", file: "content/timeline.json", primary: "Title",
+    { id: "timeline", label: "Biblical Timeline", file: "content/timeline.json", primary: "Title",
       blurb: "The whole story, era by era, from Creation to the Early Church.",
       filters: [{ label: "Era", field: "Era" }, { label: "Verification", field: "VerificationStatus" }], meta: ["DateApprox", "Era"] },
     { id: "books", label: "Books of the Bible", file: "content/books.json", primary: "Book",
@@ -186,7 +186,7 @@
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
-  var ASSET_V = "162";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "163";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -767,7 +767,7 @@
       var s = p.toString();
       history.replaceState(null, "", "#/timeline" + (s ? "?" + s : ""));
     }
-    var html = "<h2>Timeline</h2><p class='page-intro'>The whole story, era by era, from Creation to the Early Church — " +
+    var html = "<h2>Biblical Timeline</h2><p class='page-intro'>The whole story, era by era, from Creation to the Early Church — " +
       "with the people, places, events, and discoveries connected at every step. &middot; " + rows.length + " entries</p>";
     html += '<div class="controls"><input type="search" id="tlSearch" placeholder="Search the timeline…" value="' + esc(state.q) + '">';
     html += '<div class="chips"><span class="chip-label">Era:</span>';
