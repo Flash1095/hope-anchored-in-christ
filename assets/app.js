@@ -186,7 +186,7 @@
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
-  var ASSET_V = "164";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "165";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1133,6 +1133,11 @@
     }
     html += "<h3>Explore the collections</h3><div class='card-grid home-grid'>" +
       COLLECTIONS.map(collectionCard).join("") + "</div>";
+    html += "<h3>More to explore</h3><p class='page-intro'>Pages beyond the collections — readers, tools, and ways to support the ministry.</p>" +
+      "<p>" + [["#/bible", "Bible"], ["#/blog", "Blog"], ["#/art", "Art Gallery"],
+      ["#/storybook", "Storybook Reader"], ["#/genealogy", "Biblical Genealogies"],
+      ["#/lookup", "Manuscript Lookup"], ["#/store", "Store"], ["#/give", "Give"],
+      ["#/connect", "Connect"]].map(function (l) { return "<a class='btn' href='" + l[0] + "'>" + l[1] + "</a>"; }).join(" ") + "</p>";
     app.innerHTML = html;
     /* Animated home: stat numbers count up on load (instant under
        reduced-motion, where the final values simply stay put). */
