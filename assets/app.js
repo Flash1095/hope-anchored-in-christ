@@ -110,8 +110,8 @@
     "nature"];
   /* Section headings for the Explore tiles, keyed by the collection that
      starts each section. The first section combines the story and the
-     world behind it under one title, Foundations. */
-  var SECTION_HEADINGS = { timeline: "Biblical Foundations", questions: "Ask and Understand",
+     world behind it under one title, Discover the Bible. */
+  var SECTION_HEADINGS = { timeline: "Discover the Bible", questions: "Ask and Understand",
     courses: "Learn and Practice",
     hymns: "Worship and Wonder" };
 
@@ -186,7 +186,7 @@
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
-  var ASSET_V = "163";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "164";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -2304,9 +2304,6 @@ function genBindInteractive(node) {
       STORYBOOK_SHELVES.map(function (s) {
         return '<a class="btn" href="#/storybook/' + s.key + '">' + esc(s.label) + '</a>';
       }).join(" ") + "</p></div>";
-    html += "<div class='card genealogy-card'><h3>Biblical Genealogies</h3>" +
-      "<p class='snippet'>Every parent, child, and spouse named in the Bible's genealogy passages — linked to their profiles and to the passages.</p><p>" +
-      "<a class='btn' href='#/genealogy'>Explore Biblical Genealogies</a></p></div>";
     var ordered = EXPLORE_ORDER.map(function (id) { return coll(id); }).filter(Boolean)
       .concat(COLLECTIONS.filter(function (c) { return EXPLORE_ORDER.indexOf(c.id) === -1; }));
     var gridHtml = "";
@@ -2322,6 +2319,11 @@ function genBindInteractive(node) {
         openGrid = true;
       }
       gridHtml += collectionCard(c);
+      if (c.id === "people") {
+        gridHtml += "<div class='card genealogy-card'><h3>Biblical Genealogies</h3>" +
+          "<p class='snippet'>Every parent, child, and spouse named in the Bible's genealogy passages — linked to their profiles and to the passages.</p><p>" +
+          "<a class='btn' href='#/genealogy'>Explore Biblical Genealogies</a></p></div>";
+      }
     });
     if (openGrid) gridHtml += "</div>";
     html += gridHtml;
