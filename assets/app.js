@@ -186,7 +186,7 @@
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
-  var ASSET_V = "161";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "162";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -2304,9 +2304,6 @@ function genBindInteractive(node) {
       STORYBOOK_SHELVES.map(function (s) {
         return '<a class="btn" href="#/storybook/' + s.key + '">' + esc(s.label) + '</a>';
       }).join(" ") + "</p></div>";
-    html += "<div class='card gallery-card'><h3>Art</h3>" +
-      "<p class='snippet'>Art, verse cards, and other pieces — and the ones for sale link through to the store.</p><p>" +
-      "<a class='btn' href='#/art'>Browse the art</a></p></div>";
     html += "<div class='card genealogy-card'><h3>Biblical Genealogies</h3>" +
       "<p class='snippet'>Every parent, child, and spouse named in the Bible's genealogy passages — linked to their profiles and to the passages.</p><p>" +
       "<a class='btn' href='#/genealogy'>Explore Biblical Genealogies</a></p></div>";
@@ -4093,6 +4090,20 @@ function genBindInteractive(node) {
     var q = document.getElementById("headerSearchInput").value.trim();
     if (q) location.hash = "#/search?q=" + encodeURIComponent(q);
   });
+  var navToggle = document.getElementById("navToggle");
+  var mainNav = document.getElementById("mainNav");
+  if (navToggle && mainNav) {
+    navToggle.addEventListener("click", function () {
+      var open = mainNav.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    mainNav.addEventListener("click", function (e) {
+      if (e.target && e.target.tagName === "A") {
+        mainNav.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
   document.getElementById("footerNav").innerHTML =
     COLLECTIONS.map(function (c) { return '<a href="#/' + c.id + '">' + esc(c.label) + "</a>"; }).join("") +
     '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/art">Art</a><a href="#/genealogy">Biblical Genealogies</a><a href="#/lookup">Manuscript Lookup</a>';

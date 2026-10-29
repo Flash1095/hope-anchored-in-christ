@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://flash1095.github.io/hope-anchored-in-christ/assets/banner.jpg?v=19">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=161">
+<link rel="stylesheet" href="assets/style.css?v=162">
 <link rel="icon" type="image/png" href="assets/favicon.png?v=76">
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -25,7 +25,8 @@
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="#/"><img class="brand-logo" src="assets/logo.jpg?v=76" alt="">Hope Anchored in Christ</a>
-    <nav class="main-nav" aria-label="Main">
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">☰ Menu</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main">
       <a href="#/">Home</a>
       <a href="#/explore">Explore</a>
       <a href="#/bible">Bible</a>
@@ -62,7 +63,7 @@
 </footer>
 
 <noscript><p style="text-align:center;padding:2rem">This site needs JavaScript to browse the collections.</p></noscript>
-<script src="assets/app.js?v=161"></script>
+<script src="assets/app.js?v=162"></script>
 <script>
   if (window.netlifyIdentity) {
     window.netlifyIdentity.init({ APIUrl: 'https://hope-anchored-in-christ.netlify.app/.netlify/identity' });
