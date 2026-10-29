@@ -186,7 +186,7 @@
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
-  var ASSET_V = "160";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "161";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1182,7 +1182,7 @@
       var wrap = document.getElementById("galleryGrid");
       if (!wrap) return;
       if (!galleryItems.length) {
-        wrap.innerHTML = "<p class='empty'>The gallery is coming soon — new art, verse cards, and other pieces will appear here as they are added.</p>";
+        wrap.innerHTML = "<p class='empty'>The art page is coming soon — new art, verse cards, and other pieces will appear here as they are added.</p>";
         return;
       }
       var items = galleryItems.filter(function (it) {
@@ -1194,7 +1194,7 @@
       }
       wrap.innerHTML = "<div class='card-grid'>" + items.map(cardHTML).join("") + "</div>";
     }
-    var html = '<a class="back-link" href="#/explore">&larr; Explore</a><h2>Art Gallery</h2>' +
+    var html = '<a class="back-link" href="#/explore">&larr; Explore</a><h2>Art</h2>' +
       "<p class='page-intro'>Art, verse cards, and other pieces — displayed here, and connected to the store where they can be bought.</p>" +
       '<div class="controls"><div class="chips"><span class="chip-label">Show:</span>' +
       '<button class="chip active" data-kind="">All</button>' +
@@ -2304,9 +2304,9 @@ function genBindInteractive(node) {
       STORYBOOK_SHELVES.map(function (s) {
         return '<a class="btn" href="#/storybook/' + s.key + '">' + esc(s.label) + '</a>';
       }).join(" ") + "</p></div>";
-    html += "<div class='card gallery-card'><h3>Art Gallery</h3>" +
+    html += "<div class='card gallery-card'><h3>Art</h3>" +
       "<p class='snippet'>Art, verse cards, and other pieces — and the ones for sale link through to the store.</p><p>" +
-      "<a class='btn' href='#/gallery'>Browse the gallery</a></p></div>";
+      "<a class='btn' href='#/art'>Browse the art</a></p></div>";
     html += "<div class='card genealogy-card'><h3>Biblical Genealogies</h3>" +
       "<p class='snippet'>Every parent, child, and spouse named in the Bible's genealogy passages — linked to their profiles and to the passages.</p><p>" +
       "<a class='btn' href='#/genealogy'>Explore Biblical Genealogies</a></p></div>";
@@ -2465,7 +2465,7 @@ function genBindInteractive(node) {
         "Every physical item is printed on demand — nothing is mass-produced or warehoused — so your purchase supports this ministry " +
         "and arrives made just for you. Digital items download instantly for you to print at home.</p>";
       if (STORE_URL) html += "<p><a class='btn' href='" + esc(STORE_URL) + "' target='_blank' rel='noopener'>Visit our shop</a></p>";
-      html += "<p><a class='btn' href='#/gallery'>Browse the art gallery</a></p>";
+      html += "<p><a class='btn' href='#/art'>Browse the art</a></p>";
       if (DIGITAL_SHOP_URL) html += "<p><a class='btn' href='" + esc(DIGITAL_SHOP_URL) + "' target='_blank' rel='noopener'>Browse digital downloads</a></p>";
       html += '<div class="controls"><input type="search" id="storeSearch" placeholder="Search the store…">' +
         '<div class="chips"><span class="chip-label">Type:</span>' +
@@ -4081,7 +4081,7 @@ function genBindInteractive(node) {
     if (path[0] === "search") return viewSearch(params);
     if (path[0] === "quizzes" && path[1] === "play") return viewQuizPlay(path[2] ? decodeURIComponent(path[2]) : "", params);
     if (path[0] === "storybook") return viewStorybook(path[1] ? decodeURIComponent(path[1]) : null, path[2] ? decodeURIComponent(path[2]) : null, params);
-    if (path[0] === "gallery") return viewGallery();
+    if (path[0] === "gallery" || path[0] === "art") return viewGallery();
     if (path[0] === "lookup") return viewLookup(params);
     if (path[0] === "genealogy") return viewGenealogy(path[1] ? decodeURIComponent(path[1]) : null, params);
     var c = coll(path[0]);
@@ -4095,7 +4095,7 @@ function genBindInteractive(node) {
   });
   document.getElementById("footerNav").innerHTML =
     COLLECTIONS.map(function (c) { return '<a href="#/' + c.id + '">' + esc(c.label) + "</a>"; }).join("") +
-    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/gallery">Gallery</a><a href="#/genealogy">Biblical Genealogies</a><a href="#/lookup">Manuscript Lookup</a>';
+    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/art">Art</a><a href="#/genealogy">Biblical Genealogies</a><a href="#/lookup">Manuscript Lookup</a>';
 
   app.innerHTML = '<p class="loading">Loading the collections…</p>';
   var jobs = COLLECTIONS.map(function (c) {
