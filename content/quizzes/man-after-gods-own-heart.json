@@ -1,0 +1,17 @@
+{
+  "Quiz": "Men of the Bible Quiz",
+  "Course": "Men of the Bible",
+  "Question": "Which king did God describe as 'a man after his own heart'?",
+  "OptionA": "Saul",
+  "OptionB": "Solomon",
+  "OptionC": "David",
+  "OptionD": "Hezekiah",
+  "CorrectAnswer": "C",
+  "Explanation": "God chose David not for his size or strength but for his heart. Even after great failures, David kept coming back to God.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "1 Samuel 13:14",
+  "Slug": "man-after-gods-own-heart",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

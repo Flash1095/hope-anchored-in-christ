@@ -1,0 +1,17 @@
+{
+  "Quiz": "Men of the Bible Quiz",
+  "Course": "Men of the Bible",
+  "Question": "To whom did God say, 'I will make thee a father of many nations'?",
+  "OptionA": "Isaac",
+  "OptionB": "Jacob",
+  "OptionC": "Lot",
+  "OptionD": "Abraham",
+  "CorrectAnswer": "D",
+  "Explanation": "God changed Abram's name to Abraham — 'father of many nations' — before he had even one son by Sarah. God's promises come before the proof.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 17:5",
+  "Slug": "father-of-many-nations",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

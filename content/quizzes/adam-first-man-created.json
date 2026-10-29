@@ -1,0 +1,17 @@
+{
+  "Quiz": "Men of the Bible Quiz",
+  "Course": "Men of the Bible",
+  "Question": "Who was the first man God created?",
+  "OptionA": "Adam",
+  "OptionB": "Abel",
+  "OptionC": "Cain",
+  "OptionD": "Seth",
+  "CorrectAnswer": "A",
+  "Explanation": "God formed Adam from the dust of the ground and breathed life into him. Every human story starts with this one man.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 2:7",
+  "Slug": "adam-first-man-created",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

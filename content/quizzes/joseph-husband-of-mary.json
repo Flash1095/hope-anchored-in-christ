@@ -1,0 +1,17 @@
+{
+  "Quiz": "Men of the Bible Quiz",
+  "Course": "Men of the Bible",
+  "Question": "Who was the husband of Mary and the earthly father of Jesus?",
+  "OptionA": "Simeon",
+  "OptionB": "Joseph",
+  "OptionC": "Nicodemus",
+  "OptionD": "Joseph of Arimathea",
+  "CorrectAnswer": "B",
+  "Explanation": "Joseph believed God's word through the angel and protected Mary and the child Jesus. Quiet obedience can carry the greatest story.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Matthew 1:16",
+  "Slug": "joseph-husband-of-mary",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

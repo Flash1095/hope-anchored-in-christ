@@ -1,0 +1,17 @@
+{
+  "Quiz": "Men of the Bible Quiz",
+  "Course": "Men of the Bible",
+  "Question": "Who was the first Christian martyr, stoned for preaching about Jesus?",
+  "OptionA": "James",
+  "OptionB": "Stephen",
+  "OptionC": "Barnabas",
+  "OptionD": "Philip",
+  "CorrectAnswer": "B",
+  "Explanation": "Stephen saw Jesus standing at God's right hand even as the stones fell, and prayed for those killing him. His death scattered the church — and spread the gospel.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Acts 7:59",
+  "Slug": "stephen-first-christian-martyr",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

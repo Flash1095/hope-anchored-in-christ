@@ -1,0 +1,17 @@
+{
+  "Quiz": "Men of the Bible Quiz",
+  "Course": "Men of the Bible",
+  "Question": "Who was the father of John the Baptist?",
+  "OptionA": "Simeon",
+  "OptionB": "Joseph of Arimathea",
+  "OptionC": "Nicodemus",
+  "OptionD": "Zacharias",
+  "CorrectAnswer": "D",
+  "Explanation": "Zacharias (Zechariah in many modern Bibles) doubted the angel's news and lost his voice until the baby was born. Then his first words were praise.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Luke 1:13",
+  "Slug": "zacharias-father-of-john-the-baptist",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

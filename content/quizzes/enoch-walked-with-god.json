@@ -1,0 +1,17 @@
+{
+  "Quiz": "Men of the Bible Quiz",
+  "Course": "Men of the Bible",
+  "Question": "Which man 'walked with God: and he was not; for God took him'?",
+  "OptionA": "Methuselah",
+  "OptionB": "Noah",
+  "OptionC": "Enoch",
+  "OptionD": "Lamech",
+  "CorrectAnswer": "C",
+  "Explanation": "Enoch never died — God simply took him. A life walked closely with God is the Bible's picture of the deepest friendship.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "Genesis 5:24",
+  "Slug": "enoch-walked-with-god",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

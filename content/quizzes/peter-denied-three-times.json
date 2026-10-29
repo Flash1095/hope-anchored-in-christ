@@ -1,0 +1,17 @@
+{
+  "Quiz": "Men of the Bible Quiz",
+  "Course": "Men of the Bible",
+  "Question": "Which apostle denied Jesus three times before the rooster crowed?",
+  "OptionA": "John",
+  "OptionB": "Thomas",
+  "OptionC": "Peter",
+  "OptionD": "Andrew",
+  "CorrectAnswer": "C",
+  "Explanation": "Peter swore he would never deny Jesus, then did it three times — and was restored three times. Failure is not the end of the story with Jesus.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 26:75",
+  "Slug": "peter-denied-three-times",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

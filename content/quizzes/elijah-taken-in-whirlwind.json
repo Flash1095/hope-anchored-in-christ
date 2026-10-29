@@ -1,0 +1,17 @@
+{
+  "Quiz": "Men of the Bible Quiz",
+  "Course": "Men of the Bible",
+  "Question": "Which prophet was taken up to heaven in a whirlwind?",
+  "OptionA": "Elisha",
+  "OptionB": "Moses",
+  "OptionC": "Isaiah",
+  "OptionD": "Elijah",
+  "CorrectAnswer": "D",
+  "Explanation": "Elisha watched as a chariot of fire carried Elijah away in a whirlwind. Elijah never tasted death — and later appeared with Moses beside Jesus.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "2 Kings 2:11",
+  "Slug": "elijah-taken-in-whirlwind",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

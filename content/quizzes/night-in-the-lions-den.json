@@ -1,0 +1,17 @@
+{
+  "Quiz": "Men of the Bible Quiz",
+  "Course": "Men of the Bible",
+  "Question": "Who spent a night in the lions' den and came out unharmed?",
+  "OptionA": "Daniel",
+  "OptionB": "Jeremiah",
+  "OptionC": "Ezekiel",
+  "OptionD": "Shadrach",
+  "CorrectAnswer": "A",
+  "Explanation": "Daniel kept praying openly even when it was outlawed, and God shut the lions' mouths. Faithfulness before the crisis carries you through it.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Daniel 6:22",
+  "Slug": "night-in-the-lions-den",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}
