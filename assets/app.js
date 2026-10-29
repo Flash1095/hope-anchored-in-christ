@@ -59,7 +59,7 @@
   { id: "nature", label: "Nature & Creation", file: "content/nature.json", primary: "Name",
     blurb: "Birds, plants, and animals that point to the Creator — with photos from Lorraine.",
     meta: ["Category"] },
-  { id: "apologetics", label: "Apologetics", file: "content/apologetics.json", primary: "Argument",
+  { id: "apologetics", label: "Defend your faith", file: "content/apologetics.json", primary: "Argument",
     blurb: "Why Christianity best explains reality — the cumulative case from philosophy, science, history, and experience.",
     filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category"] },
   { id: "objections", label: "Objections & Answers", file: "content/objections.json", primary: "Objection",
@@ -186,7 +186,7 @@
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
-  var ASSET_V = "165";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "166";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a

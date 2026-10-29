@@ -547,7 +547,7 @@ collections:
       - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
       - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "apologetics"
-    label: "Apologetics"
+    label: "Defend your faith"
     folder: "content/apologetics"
     create: true
     slug: "{{fields.Argument}}"
