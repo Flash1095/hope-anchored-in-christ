@@ -1,0 +1,13 @@
+{
+  "Category": "Formal",
+  "Definition": "Confusing the necessity of a whole conditional with the necessity of its consequent. 'Necessarily, if P then Q' does not mean 'if P, then necessarily Q'.",
+  "Example": "Someone argues, 'It is necessarily true that if I am sitting, I am seated — so if I am sitting, I am necessarily seated.'",
+  "FaithDiscussionExample": "Someone argues, 'If God knows what I will do, then I must necessarily do it' — but the 'must' belongs to the whole statement, not to the person choosing.",
+  "Fallacy": "Modal Fallacy",
+  "HowToRespond": "Move the 'must' back where it belongs: 'Knowledge of what someone freely chooses doesn't force the choice.'",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics; Biblical Interpretation",
+  "Slug": "modal-fallacy",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

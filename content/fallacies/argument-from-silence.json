@@ -1,0 +1,13 @@
+{
+  "Category": "Relevance",
+  "Definition": "Treating the absence of a mention as evidence that something did not happen or is not true. Silence is only weak evidence, and only when a mention would be expected.",
+  "Example": "Someone argues, 'The report never mentions safety problems, so there were none.'",
+  "FaithDiscussionExample": "Someone argues, 'The Gospels never record Jesus laughing, so Jesus never laughed.'",
+  "Fallacy": "Argument from Silence",
+  "HowToRespond": "Ask what silence can carry: \"Silence isn't evidence unless we'd expect a mention — and even then it's weak.\"",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics; Biblical Interpretation",
+  "Slug": "argument-from-silence",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

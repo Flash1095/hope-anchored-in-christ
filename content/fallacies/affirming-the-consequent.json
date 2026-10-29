@@ -1,0 +1,13 @@
+{
+  "Category": "Formal",
+  "Definition": "An invalid deductive form: if P then Q; Q is true; therefore P must be true. The consequent being true does not prove the antecedent, since something else could cause Q.",
+  "Example": "Someone argues, 'If it rains, the grass is wet. The grass is wet, so it must have rained' — forgetting the sprinkler could explain it.",
+  "FaithDiscussionExample": "Someone argues, 'If God is real, people experience peace. I feel peace, so God must be real' — the feeling is real, but other causes of peace exist too.",
+  "Fallacy": "Affirming the Consequent",
+  "HowToRespond": "Honor the experience, then ask for independent support: 'That peace matters — could we also look for reasons that point the same way on their own?'",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics",
+  "Slug": "affirming-the-consequent",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

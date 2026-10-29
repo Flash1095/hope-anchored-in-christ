@@ -1,0 +1,13 @@
+{
+  "Category": "Formal",
+  "Definition": "An invalid syllogism: all A are B; no C is A; therefore no C is B. The conclusion reaches further than the premises allow, because C could still be B another way.",
+  "Example": "Someone argues, 'All dogs are mammals. No cats are dogs, so no cats are mammals.'",
+  "FaithDiscussionExample": "Someone argues, 'All prophets spoke for God. No poet is a prophet, so no poet speaks for God' — though poets can still speak truthfully about God.",
+  "Fallacy": "Illicit Major",
+  "HowToRespond": "Show the overreach: 'The conclusion goes further than the premises allow — let's see what actually follows.'",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics",
+  "Slug": "illicit-major",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

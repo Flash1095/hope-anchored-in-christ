@@ -1,0 +1,13 @@
+{
+  "Category": "Weak Induction",
+  "Definition": "Applying a concept to the wrong kind of thing, so the question itself is malformed. The error lies in the categories, not in the answer.",
+  "Example": "Someone asks, 'What color is the number seven?'",
+  "FaithDiscussionExample": "Someone asks, 'How much does God weigh?'",
+  "Fallacy": "Category Error",
+  "HowToRespond": "Reframe the question: 'The question mixes categories — let's ask it in terms that fit.'",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics",
+  "Slug": "category-error",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

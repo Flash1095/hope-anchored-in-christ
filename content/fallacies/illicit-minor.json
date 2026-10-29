@@ -1,0 +1,13 @@
+{
+  "Category": "Formal",
+  "Definition": "An invalid syllogism: all A are B; all A are C; therefore all C are B. The minor term is distributed in the conclusion but not in the premises.",
+  "Example": "Someone argues, 'All cats are mammals. All cats are four-legged, so all four-legged things are mammals.'",
+  "FaithDiscussionExample": "Someone argues, 'All apostles were Jews. All apostles were men, so all Jewish men are apostles.'",
+  "Fallacy": "Illicit Minor",
+  "HowToRespond": "Flip it to expose the error: 'By that pattern, every shared trait would prove membership — let's check the direction.'",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics",
+  "Slug": "illicit-minor",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

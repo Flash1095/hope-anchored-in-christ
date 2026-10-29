@@ -1,0 +1,13 @@
+{
+  "Category": "Relevance",
+  "Definition": "A conclusion that simply does not follow from its premises — no stated connection, just a leap. Specific forms of this leap have their own entries elsewhere in this collection.",
+  "Example": "Someone argues, 'She is a great singer, so she would make a great mayor.'",
+  "FaithDiscussionExample": "Someone argues, 'He knows Greek, so his theology must be right.'",
+  "Fallacy": "Non Sequitur",
+  "HowToRespond": "Ask for the missing link: 'The conclusion may be true, but it needs its own support — what connects these?'",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics",
+  "Slug": "non-sequitur",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

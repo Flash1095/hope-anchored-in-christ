@@ -1,0 +1,13 @@
+{
+  "Category": "Formal",
+  "Definition": "Drawing a conclusion from two negative premises. Two 'no' statements together prove nothing about the relationship between the remaining terms.",
+  "Example": "Someone argues, 'No birds are fish. No penguins are fish, so penguins are not birds' — yet penguins are birds.",
+  "FaithDiscussionExample": "Someone argues, 'No angel is human. No demon is human, so demons are not angels' — yet demons are fallen angels.",
+  "Fallacy": "Fallacy of Exclusive Premises",
+  "HowToRespond": "Note the shared gap: 'Two negatives leave the connection open — we'd need a positive premise to settle it.'",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics",
+  "Slug": "fallacy-of-exclusive-premises",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

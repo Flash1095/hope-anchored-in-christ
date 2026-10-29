@@ -1,0 +1,13 @@
+{
+  "Category": "Formal",
+  "Definition": "An invalid syllogism: two affirmative premises cannot yield a negative conclusion. If all A are B and all C are A, then all C are B — not none.",
+  "Example": "Someone argues, 'All cats are mammals. All Siamese are cats, so no Siamese are mammals.'",
+  "FaithDiscussionExample": "Someone argues, 'All believers are forgiven. All new believers are believers, so no new believers are forgiven' — the premises actually point the other way.",
+  "Fallacy": "Negative Conclusion from Affirmative Premises",
+  "HowToRespond": "Follow the premises to their real conclusion: 'Affirmative premises can't prove a negative — they actually point the other way here.'",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics",
+  "Slug": "negative-conclusion-from-affirmative-premises",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

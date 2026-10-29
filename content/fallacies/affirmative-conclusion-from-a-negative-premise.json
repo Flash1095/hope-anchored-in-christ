@@ -1,0 +1,13 @@
+{
+  "Category": "Formal",
+  "Definition": "An invalid syllogism: a negative premise ('no A is B') combined with another premise cannot yield an affirmative conclusion ('some C is B').",
+  "Example": "Someone argues, 'No fish are mammals. Some pets are fish, so some pets are mammals.'",
+  "FaithDiscussionExample": "Someone argues, 'No work earns salvation. Some church activities are works, so some church activities earn salvation' — the form cannot carry that conclusion.",
+  "Fallacy": "Affirmative Conclusion from a Negative Premise",
+  "HowToRespond": "Point to the form, not the faith: 'A negative premise can't yield that positive conclusion — let's rebuild the argument.'",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics",
+  "Slug": "affirmative-conclusion-from-a-negative-premise",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

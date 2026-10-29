@@ -1,0 +1,13 @@
+{
+  "Category": "Formal",
+  "Definition": "Arguing 'A or B; A; therefore not B' when the 'or' is not exclusive. Unless the options genuinely exclude each other, one being true does not rule out the other.",
+  "Example": "Someone argues, 'You can have tea or coffee. You chose tea, so you cannot have coffee.'",
+  "FaithDiscussionExample": "Someone argues, 'Worship can be in spirit or in truth. This service worships in spirit, so it cannot be in truth' — yet John 4:24 joins both.",
+  "Fallacy": "Affirming a Disjunct",
+  "HowToRespond": "Check the 'or': \"'Or' often means 'and/or' — could both be true together here?\"",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics",
+  "Slug": "affirming-a-disjunct",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

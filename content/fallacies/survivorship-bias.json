@@ -1,0 +1,13 @@
+{
+  "Category": "Weak Induction",
+  "Definition": "Judging by the survivors while ignoring the failures. The visible winners are a biased sample, because the losers are no longer around to be counted.",
+  "Example": "Someone argues, 'Every successful CEO wakes at 5am, so waking at 5am causes success' — ignoring the many who woke early and failed.",
+  "FaithDiscussionExample": "Someone argues, 'Every thriving church uses this method, so the method guarantees thriving' — ignoring the churches that used it and closed.",
+  "Fallacy": "Survivorship Bias",
+  "HowToRespond": "Count the missing: \"Let's also count the cases that didn't make it.\"",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics; Evidence",
+  "Slug": "survivorship-bias",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

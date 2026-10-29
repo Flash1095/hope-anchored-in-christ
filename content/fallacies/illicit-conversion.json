@@ -1,0 +1,13 @@
+{
+  "Category": "Formal",
+  "Definition": "Illegitimately converting 'all A are B' into 'all B are A'. Conversion works for 'some' and 'no' statements, but not for universal affirmatives.",
+  "Example": "Someone argues, 'All roses are flowers, so all flowers are roses.'",
+  "FaithDiscussionExample": "Someone argues, 'All prayers in the Bible are inspired, so all inspired words are prayers in the Bible.'",
+  "Fallacy": "Illicit Conversion",
+  "HowToRespond": "Keep the direction straight: 'Conversion only works one way for all-statements — let's not flip it.'",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics",
+  "Slug": "illicit-conversion",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

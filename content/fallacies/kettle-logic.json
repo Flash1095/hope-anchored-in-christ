@@ -1,0 +1,13 @@
+{
+  "Category": "Presumption",
+  "Definition": "Offering several defenses that contradict each other, so that at least one always seems available. If the defenses cannot all be true, they cannot jointly support the claim.",
+  "Example": "Someone argues, 'I never borrowed the pot; it was broken when I got it; I returned it undamaged.'",
+  "FaithDiscussionExample": "Someone argues, 'The text means this; also it means the opposite; also it means nothing at all.'",
+  "Fallacy": "Kettle Logic",
+  "HowToRespond": "Pick one: \"These defenses can't all be true — which one are we actually claiming?\"",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics",
+  "Slug": "kettle-logic",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

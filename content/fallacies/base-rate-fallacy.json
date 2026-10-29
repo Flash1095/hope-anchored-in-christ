@@ -1,0 +1,13 @@
+{
+  "Category": "Weak Induction",
+  "Definition": "Ignoring how common something is when judging a probability. Even an accurate test misleads when the condition itself is rare.",
+  "Example": "Someone argues, 'This test is 95% accurate and you tested positive, so you are 95% likely ill' — ignoring how rare the illness is.",
+  "FaithDiscussionExample": "Someone argues a fulfilled detail proves a prophecy, without asking how often such details come true by chance.",
+  "Fallacy": "Base Rate Fallacy",
+  "HowToRespond": "Ask the base rate: 'How often does this happen anyway? The base rate changes the math.'",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics; Evidence",
+  "Slug": "base-rate-fallacy",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

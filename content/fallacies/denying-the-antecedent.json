@@ -1,0 +1,13 @@
+{
+  "Category": "Formal",
+  "Definition": "An invalid deductive form: if P then Q; P is false; therefore Q must be false. Denying the antecedent does not deny the consequent, since Q could hold for other reasons.",
+  "Example": "Someone argues, 'If you study, you will pass. You did not study, so you will fail' — though you might pass anyway.",
+  "FaithDiscussionExample": "Someone argues, 'If someone truly believes, they never doubt. She doubts, so she does not believe' — though doubt and faith often live together.",
+  "Fallacy": "Denying the Antecedent",
+  "HowToRespond": "Test the first claim itself: 'Doubt and faith often live together — let's check whether never doubting is really the mark of belief.'",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics",
+  "Slug": "denying-the-antecedent",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

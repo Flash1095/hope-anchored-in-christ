@@ -1,0 +1,13 @@
+{
+  "Category": "Formal",
+  "Definition": "Illegitimately moving from 'every A has some B' to 'there is some B that fits every A'. Each person having something does not mean one thing serves everyone.",
+  "Example": "Someone argues, 'Every student has a favorite teacher, so there is one teacher who is every student's favorite.'",
+  "FaithDiscussionExample": "Someone argues, 'Every believer has a spiritual gift, so there is one gift every believer has.'",
+  "Fallacy": "Quantifier Shift",
+  "HowToRespond": "Separate the two claims: 'Each person having something doesn't mean one thing serves everyone.'",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics",
+  "Slug": "quantifier-shift",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

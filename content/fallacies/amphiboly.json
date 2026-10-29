@@ -1,0 +1,13 @@
+{
+  "Category": "Ambiguity",
+  "Definition": "Ambiguity arising from sentence structure rather than from a single word's meaning. The grammar itself allows two readings, and the argument leans on only one.",
+  "Example": "Someone argues from 'I saw the man with the telescope' without saying who held the telescope.",
+  "FaithDiscussionExample": "Someone quotes 'Judge not' to mean never discern anything, leaning on one possible reading of the sentence rather than its context.",
+  "Fallacy": "Amphiboly",
+  "HowToRespond": "Pause on the structure: 'When a sentence can be read two ways, let's check the context before building on one reading.'",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Biblical Interpretation; Definitions",
+  "Slug": "amphiboly",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

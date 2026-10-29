@@ -1,0 +1,13 @@
+{
+  "Category": "Formal",
+  "Definition": "An invalid syllogism: all A are B; C is B; therefore C is A. Sharing a property with a group does not place something inside that group.",
+  "Example": "Someone argues, 'All birds have wings. Bats have wings, so bats are birds.'",
+  "FaithDiscussionExample": "Someone argues, 'All Christians pray. He prays, so he must be a Christian' — prayer alone does not establish it.",
+  "Fallacy": "Undistributed Middle",
+  "HowToRespond": "Name the gap gently: 'That shows a shared trait, not the same group — what else would confirm it?'",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics",
+  "Slug": "undistributed-middle",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

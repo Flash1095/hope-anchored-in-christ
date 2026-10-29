@@ -1,0 +1,13 @@
+{
+  "Category": "Presumption",
+  "Definition": "Overwhelming an opponent with a rapid flood of weak arguments, so no single one can be answered in the time available. Quantity is used to simulate strength.",
+  "Example": "Someone fires fifty flimsy reasons in two minutes and declares victory when only three get answered.",
+  "FaithDiscussionExample": "A debate opponent fires twenty objections in two minutes, leaving no time to test any one properly.",
+  "Fallacy": "Gish Gallop",
+  "HowToRespond": "Slow it down: \"Let's take one argument at a time and test it properly.\"",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics",
+  "Slug": "gish-gallop",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

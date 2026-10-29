@@ -1,0 +1,13 @@
+{
+  "Category": "Weak Induction",
+  "Definition": "Mistaking a natural return to the average for the effect of an intervention. Extreme readings drift back on their own, with or without what followed them.",
+  "Example": "Someone argues, 'I scolded him and his performance improved — scolding works.'",
+  "FaithDiscussionExample": "Someone argues, 'After the fast, attendance rose — the fast caused it,' when attendance was at a low point it would likely leave anyway.",
+  "Fallacy": "Regression Fallacy",
+  "HowToRespond": "Compare with a control: 'Extreme readings drift back on their own — let's compare with a control.'",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics; Evidence",
+  "Slug": "regression-fallacy",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

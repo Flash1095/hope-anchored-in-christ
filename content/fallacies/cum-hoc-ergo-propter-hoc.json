@@ -1,0 +1,13 @@
+{
+  "Category": "Weak Induction",
+  "Definition": "Treating correlation as causation when two things occur together. 'With this, therefore because of this' — simultaneous events need a separate causal link.",
+  "Example": "Someone argues, 'Towns with more churches have more crime, so churches cause crime' — population explains both.",
+  "FaithDiscussionExample": "Someone argues, 'Churches with guitars grow faster, so guitars cause growth.'",
+  "Fallacy": "Cum Hoc Ergo Propter Hoc",
+  "HowToRespond": "Look for the third factor: \"Two things rising together doesn't mean one causes the other — what else could explain both?\"",
+  "LastReviewed": "",
+  "RelatedTopics": "Logic; Apologetics; Evidence",
+  "Slug": "cum-hoc-ergo-propter-hoc",
+  "Sources": "",
+  "VerificationStatus": "Awaiting Review"
+}

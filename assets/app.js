@@ -186,7 +186,7 @@
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
-  var ASSET_V = "157";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "158";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
