@@ -186,7 +186,7 @@
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
-  var ASSET_V = "158";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "159";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -2352,7 +2352,7 @@ function genBindInteractive(node) {
     if (idx >= 0 && idx < parts.length - 1) bits.push("Next part: <a href='#/blog/" + esc(parts[idx + 1].slug) + "'>" + esc(parts[idx + 1].title) + "</a> &rarr;");
     return '<p class="post-meta">' + bits.join(" &nbsp;|&nbsp; ") + "</p>";
   }
-  function viewBlog(slug) {
+  function viewBlog(slug, params) {
     if (slug) {
       var post = posts.filter(function (p) { return p.slug === slug; })[0];
       if (!post) return viewBlog(null);
@@ -2382,8 +2382,36 @@ function genBindInteractive(node) {
         }).join("<br>") + "</p>";
       }).join("") + "</div>";
     }
-    html += "<div class='post-row-list'>" + posts.map(function (p) { return postRowCard(p); }).join("") + "</div>";
+    var blogCats = [];
+    posts.forEach(function (p) {
+      var c = (p.category || "From the blog").trim();
+      if (blogCats.indexOf(c) === -1) blogCats.push(c);
+    });
+    var blogSel = params ? (params.get("category") || "") : "";
+    if (blogSel && blogCats.indexOf(blogSel) === -1) blogSel = "";
+    function blogCards(cat) {
+      var list = cat ? posts.filter(function (p) { return (p.category || "From the blog").trim() === cat; }) : posts;
+      if (!list.length) return '<p class="empty">No posts in this category yet.</p>';
+      return list.map(function (p) { return postRowCard(p); }).join("");
+    }
+    function blogCount(cat) {
+      return posts.filter(function (p) { return (p.category || "From the blog").trim() === cat; }).length;
+    }
+    html += "<div class='chips' id='blogCatChips'><span class='chip-label'>Category:</span>" +
+      "<button class='chip" + (blogSel === "" ? " active" : "") + "' data-cat=''>All (" + posts.length + ")</button>" +
+      blogCats.map(function (c) {
+        return "<button class='chip" + (blogSel === c ? " active" : "") + "' data-cat='" + esc(c) + "'>" + esc(c) + " (" + blogCount(c) + ")</button>";
+      }).join("") + "</div>";
+    html += "<div class='post-row-list' id='blogPostList'>" + blogCards(blogSel) + "</div>";
     app.innerHTML = html;
+    var blogBar = document.getElementById("blogCatChips");
+    if (blogBar) blogBar.addEventListener("click", function (ev) {
+      var btn = ev.target.closest ? ev.target.closest("button[data-cat]") : null;
+      if (!btn) return;
+      blogBar.querySelectorAll(".chip").forEach(function (b) { b.classList.toggle("active", b === btn); });
+      document.getElementById("blogPostList").innerHTML = blogCards(btn.getAttribute("data-cat"));
+      loadExcerpts();
+    });
     loadExcerpts();
     window.scrollTo(0, 0);
   }
@@ -4035,7 +4063,7 @@ function genBindInteractive(node) {
     document.body.classList.toggle("is-home", path.length === 0);
     if (path.length === 0) return viewHome();
     if (path[0] === "explore") return viewExplore();
-    if (path[0] === "blog") return viewBlog(path[1] ? decodeURIComponent(path[1]) : null);
+    if (path[0] === "blog") return viewBlog(path[1] ? decodeURIComponent(path[1]) : null, params);
     if (path[0] === "about") return viewAbout();
     if (path[0] === "store") return viewStore();
     if (path[0] === "connect") return viewConnect();
