@@ -1,0 +1,1856 @@
+[
+ {
+  "manuscriptId": "4Q101 (4QpaleoJobc)",
+  "manuscriptName": "Paleo-Hebrew Job Fragment (4QpaleoJobc)",
+  "dateMin": -323,
+  "dateMax": -150,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Early Hellenistic period'; period-derived using the report mapping (-323 to -150); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "5QDeut / 5Q1",
+  "manuscriptName": "Deuteronomy Scroll (5QDeut)",
+  "dateMin": -323,
+  "dateMax": -150,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Early Hellenistic' using the report mapping (-323 to -150); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "6QpaleoGen / 6Q1",
+  "manuscriptName": "Paleo-Hebrew Genesis Fragment (6QpaleoGen)",
+  "dateMin": -323,
+  "dateMax": -150,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Early Hellenistic' using the report mapping (-323 to -150); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "6QpaleoLev / 6Q2",
+  "manuscriptName": "Paleo-Hebrew Leviticus Fragment (6QpaleoLev)",
+  "dateMin": -323,
+  "dateMax": -150,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Early Hellenistic' using the report mapping (-323 to -150); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "1QDeuta / 1Q4",
+  "manuscriptName": "Deuteronomy Scroll (1QDeuta)",
+  "dateMin": -323,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hellenistic-Roman' using the report mapping (-323 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "1QDeutb / 1Q5",
+  "manuscriptName": "Deuteronomy Scroll (1QDeutb)",
+  "dateMin": -323,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hellenistic-Roman' using the report mapping (-323 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "1QExod / 1Q2",
+  "manuscriptName": "Exodus Scroll (1QExod)",
+  "dateMin": -323,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hellenistic-Roman' using the report mapping (-323 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "1QEzek / 1Q9",
+  "manuscriptName": "Ezekiel Scroll (1QEzek)",
+  "dateMin": -323,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Hellenistic-Roman period'; period-derived using the report mapping (-323 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "1QpaleoLev / 1Q3",
+  "manuscriptName": "Paleo-Hebrew Leviticus-Numbers Scroll (1QpaleoLev)",
+  "dateMin": -323,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hellenistic-Roman' using the report mapping (-323 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "2QExodc / 2Q4",
+  "manuscriptName": "Exodus Scroll (2QExodc)",
+  "dateMin": -323,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hellenistic-Roman' using the report mapping (-323 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "2QNumd / 2Q9",
+  "manuscriptName": "Numbers Fragment, Possibly (2QNumd)",
+  "dateMin": -323,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hellenistic-Roman' using the report mapping (-323 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QLevc / 4Q25",
+  "manuscriptName": "Leviticus Scroll (4QLevc)",
+  "dateMin": -323,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hellenistic-Roman' using the report mapping (-323 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QLevd / 4Q26",
+  "manuscriptName": "Leviticus Scroll (4QLevd)",
+  "dateMin": -323,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hellenistic-Roman' using the report mapping (-323 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QLeve / 4Q26a",
+  "manuscriptName": "Leviticus Scroll (4QLeve)",
+  "dateMin": -323,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hellenistic-Roman' using the report mapping (-323 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QLevg / 4Q26b",
+  "manuscriptName": "Leviticus Fragment (4QLevg)",
+  "dateMin": -323,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hellenistic-Roman' using the report mapping (-323 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "6QDeut / 6Q20",
+  "manuscriptName": "Deuteronomy Fragment, Possibly (6QDeut)",
+  "dateMin": -323,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hellenistic-Roman' using the report mapping (-323 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "6QpapDeut / 6Q3",
+  "manuscriptName": "Papyrus Deuteronomy Fragment (6QpapDeut)",
+  "dateMin": -323,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hellenistic-Roman' using the report mapping (-323 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q52 / 4QSamb",
+  "manuscriptName": "4QSamb (Samuel Scroll, copy b)",
+  "dateMin": -250,
+  "dateMax": -250,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 250 BCE' parsed to -250 to -250. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "4QExod-Levf / 4Q17",
+  "manuscriptName": "Exodus-Leviticus Scroll (4QExod-Levf)",
+  "dateMin": -250,
+  "dateMax": -250,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "DateApprox blank; Description states 'Dated by some lists to c. 250 BCE'. Circa point date from that published-list dating, not from the entry's Period label (Early Hellenistic)."
+ },
+ {
+  "manuscriptId": "4QpaleoDeuts / 4Q46",
+  "manuscriptName": "Paleo-Hebrew Deuteronomy Fragment (4QpaleoDeuts)",
+  "dateMin": -250,
+  "dateMax": -200,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 250-200 BCE' parsed to -250 to -200."
+ },
+ {
+  "manuscriptId": "4QJera / 4Q70",
+  "manuscriptName": "Jeremiah Scroll (4QJera)",
+  "dateMin": -225,
+  "dateMax": -175,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 225-175 BC' parsed to -225 to -175."
+ },
+ {
+  "manuscriptId": "4QJerb / 4Q71",
+  "manuscriptName": "Jeremiah Scroll (4QJerb)",
+  "dateMin": -200,
+  "dateMax": -150,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 200-150 BC' parsed to -200 to -150."
+ },
+ {
+  "manuscriptId": "4QJerd / 4Q72a",
+  "manuscriptName": "Jeremiah Scroll (4QJerd)",
+  "dateMin": -200,
+  "dateMax": -150,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 200-150 BC' parsed to -200 to -150."
+ },
+ {
+  "manuscriptId": "4QLXXDeut / 4Q122",
+  "manuscriptName": "Greek Deuteronomy Fragment (4QLXXDeut)",
+  "dateMin": -200,
+  "dateMax": -150,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 200-150 BCE' parsed to -200 to -150."
+ },
+ {
+  "manuscriptId": "4Q109 (4QQoha)",
+  "manuscriptName": "Ecclesiastes Scroll (4QQoha)",
+  "dateMin": -175,
+  "dateMax": -150,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 175-150 BC' parsed to -175 to -150. Audit-history note (not in the entry text): the Batch 1 audit recorded a dating tension for this manuscript (USC c. 175-150 BC vs a Cave 4 list 'Hasmonean' label); the entry adopts the USC range."
+ },
+ {
+  "manuscriptId": "4QDeuta / 4Q28",
+  "manuscriptName": "Deuteronomy Scroll (4QDeuta)",
+  "dateMin": -175,
+  "dateMax": -150,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 175-150 BCE' parsed to -175 to -150."
+ },
+ {
+  "manuscriptId": "4QDeutd / 4Q31",
+  "manuscriptName": "Deuteronomy Scroll (4QDeutd)",
+  "dateMin": -175,
+  "dateMax": -124,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 175-124 BCE' parsed to -175 to -124."
+ },
+ {
+  "manuscriptId": "4Q83 (4QPsa)",
+  "manuscriptName": "Psalms Fragment (4QPsa)",
+  "dateMin": -150,
+  "dateMax": -150,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 150 BC' parsed to -150 to -150. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "4Q76 (4QXIIa)",
+  "manuscriptName": "The Twelve Minor Prophets (4QXIIa)",
+  "dateMin": -150,
+  "dateMax": -125,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 150-125 BC' parsed to -150 to -125. Alternative palaeographic discussion gives c. 150-100 BC for the semicursive hand (Description); the entry's 150-125 BC range is kept."
+ },
+ {
+  "manuscriptId": "4Q77 (4QXIIb)",
+  "manuscriptName": "The Twelve Minor Prophets (4QXIIb)",
+  "dateMin": -150,
+  "dateMax": -125,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 150-125 BC' parsed to -150 to -125."
+ },
+ {
+  "manuscriptId": "4QDeutb / 4Q29",
+  "manuscriptName": "Deuteronomy Scroll (4QDeutb)",
+  "dateMin": -150,
+  "dateMax": -100,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 150-100 BCE' parsed to -150 to -100."
+ },
+ {
+  "manuscriptId": "4QDeutc / 4Q30",
+  "manuscriptName": "Deuteronomy Scroll (4QDeutc)",
+  "dateMin": -150,
+  "dateMax": -100,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 150-100 BCE' parsed to -150 to -100."
+ },
+ {
+  "manuscriptId": "4QLev-Numa / 4Q23",
+  "manuscriptName": "Leviticus-Numbers Scroll (4QLev-Numa)",
+  "dateMin": -150,
+  "dateMax": -100,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 150-100 BCE' parsed to -150 to -100."
+ },
+ {
+  "manuscriptId": "6Q4 / 6QpapKgs",
+  "manuscriptName": "6QpapKgs (Kings Papyrus Scroll)",
+  "dateMin": -150,
+  "dateMax": -75,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 150-75 BCE' parsed to -150 to -75."
+ },
+ {
+  "manuscriptId": "5Q2 / 5QKgs",
+  "manuscriptName": "5QKgs (Kings Scroll, Cave 5)",
+  "dateMin": -150,
+  "dateMax": -50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 150-50 BCE' parsed to -150 to -50."
+ },
+ {
+  "manuscriptId": "2QpaleoLev / 2Q5",
+  "manuscriptName": "Paleo-Hebrew Leviticus Fragment (2QpaleoLev)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hasmonean' using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q86 (4QPsd)",
+  "manuscriptName": "Psalms Fragment (4QPsd)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Hasmonean period'; period-derived using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q88 (4QPsf)",
+  "manuscriptName": "Psalms Fragment (4QPsf)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Hasmonean period'; period-derived using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q92 (4QPsk)",
+  "manuscriptName": "Psalms Fragment (4QPsk)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Hasmonean period'; period-derived using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q98d (4QPsu)",
+  "manuscriptName": "Psalms Fragment (4QPsu)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Hasmonean period'; period-derived using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q98e (4QPsv)",
+  "manuscriptName": "Psalms Fragment (4QPsv)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Hasmonean period'; period-derived using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q98f (4QPsw)",
+  "manuscriptName": "Psalms Fragment (4QPsw)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Hasmonean period'; period-derived using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q99 (4QJoba)",
+  "manuscriptName": "Job Scroll (4QJoba)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Hasmonean period'; period-derived using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QExodd / 4Q15",
+  "manuscriptName": "Exodus Scroll (4QExodd)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hasmonean' using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QExode / 4Q16",
+  "manuscriptName": "Exodus Scroll (4QExode)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hasmonean' using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QExodg / 4Q18",
+  "manuscriptName": "Exodus Scroll (4QExodg)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hasmonean' using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QGen-Exoda / 4Q1",
+  "manuscriptName": "Genesis-Exodus Scroll (4QGen-Exoda)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hasmonean' using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QGend / 4Q4",
+  "manuscriptName": "Genesis Scroll (4QGend)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hasmonean' using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QGenf / 4Q6",
+  "manuscriptName": "Genesis Scroll (4QGenf)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hasmonean' using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QGeng / 4Q7",
+  "manuscriptName": "Genesis Scroll (4QGeng)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hasmonean' using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QGenn / 4Q576",
+  "manuscriptName": "Genesis Fragment (4QGenn)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hasmonean' using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QJere / 4Q72b",
+  "manuscriptName": "Jeremiah Scroll (4QJere)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Hasmonean period'; period-derived using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QLevb / 4Q24",
+  "manuscriptName": "Leviticus Scroll (4QLevb)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hasmonean' using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QpaleoGen-Exodl / 4Q11",
+  "manuscriptName": "Paleo-Hebrew Genesis-Exodus Scroll (4QpaleoGen-Exodl)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hasmonean' using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QpaleoGenm / 4Q12",
+  "manuscriptName": "Paleo-Hebrew Genesis Fragment (4QpaleoGenm)",
+  "dateMin": -150,
+  "dateMax": -30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Hasmonean' using the report mapping (-150 to -30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QDanc / 4Q114",
+  "manuscriptName": "Daniel Scroll (4QDanc)",
+  "dateMin": -134,
+  "dateMax": -101,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'Late 2nd century BC' parsed to -134 to -101."
+ },
+ {
+  "manuscriptId": "4QDane / 4Q116",
+  "manuscriptName": "Daniel Scroll (4QDane)",
+  "dateMin": -134,
+  "dateMax": -101,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'Late 2nd century BC' parsed to -134 to -101."
+ },
+ {
+  "manuscriptId": "1QIsaa",
+  "manuscriptName": "Great Isaiah Scroll",
+  "dateMin": -125,
+  "dateMax": -125,
+  "datingBasis": "palaeography + radiocarbon",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 125 BC' parsed to -125 to -125. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "11QpaleoLeva / 11Q1",
+  "manuscriptName": "Paleo-Hebrew Leviticus Scroll (11QpaleoLev a)",
+  "dateMin": -125,
+  "dateMax": 100,
+  "datingBasis": "palaeography",
+  "confidence": "disputed",
+  "note": "Entry DateApprox itself states dating is debated: 'c. late 2nd century BC - 1st century AD (dating debated)'. Range spans the full debated interval; no side picked."
+ },
+ {
+  "manuscriptId": "4Q47 / 4QJosha",
+  "manuscriptName": "4QJosha (Joshua Scroll)",
+  "dateMin": -100,
+  "dateMax": -100,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'Hasmonean, c. 100 BCE' parsed to -100 to -100. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "7QpapLXXExod / 7Q1",
+  "manuscriptName": "Greek Exodus Fragment (7QpapLXXExod)",
+  "dateMin": -100,
+  "dateMax": -100,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100 BCE' parsed to -100 to -100. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "4Q53 / 4QSamc",
+  "manuscriptName": "4QSamc (Samuel Scroll, copy c)",
+  "dateMin": -100,
+  "dateMax": -75,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100-75 BCE' parsed to -100 to -75."
+ },
+ {
+  "manuscriptId": "1QIsab / 1Q8",
+  "manuscriptName": "Isaiah Scroll (1QIsab)",
+  "dateMin": -100,
+  "dateMax": -50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100-50 BC' parsed to -100 to -50."
+ },
+ {
+  "manuscriptId": "4Q48 / 4QJoshb",
+  "manuscriptName": "4QJoshb (Joshua Scroll, copy b)",
+  "dateMin": -100,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100-50 BCE' parsed to -100 to -50."
+ },
+ {
+  "manuscriptId": "4QDeuti / 4Q36",
+  "manuscriptName": "Deuteronomy Scroll (4QDeuti)",
+  "dateMin": -100,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100-50 BCE' parsed to -100 to -50."
+ },
+ {
+  "manuscriptId": "4QEzekc / 4Q75",
+  "manuscriptName": "Ezekiel Scroll (4QEzekc)",
+  "dateMin": -100,
+  "dateMax": -50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100-50 BC' parsed to -100 to -50."
+ },
+ {
+  "manuscriptId": "4QIsaf / 4Q60",
+  "manuscriptName": "Isaiah Scroll (4QIsaf)",
+  "dateMin": -100,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100-50 BC' parsed to -100 to -50."
+ },
+ {
+  "manuscriptId": "4QIsah / 4Q62",
+  "manuscriptName": "Isaiah Scroll (4QIsah)",
+  "dateMin": -100,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "disputed",
+  "note": "Entry DateApprox 'c. 100-50 BC' parsed to -100 to -50. CONFLICT INSIDE THE ENTRY: Period label 'Herodian' maps to -30 to 70, which does not overlap the DateApprox range; the DateApprox range is adopted and the Period label is left for the editor to reconcile."
+ },
+ {
+  "manuscriptId": "4QIsai / 4Q62a",
+  "manuscriptName": "Isaiah Scroll (4QIsai)",
+  "dateMin": -100,
+  "dateMax": -50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100-50 BC' parsed to -100 to -50."
+ },
+ {
+  "manuscriptId": "4QIsal / 4Q65",
+  "manuscriptName": "Isaiah Scroll (4QIsal)",
+  "dateMin": -100,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100-50 BC' parsed to -100 to -50."
+ },
+ {
+  "manuscriptId": "4QIsam / 4Q66",
+  "manuscriptName": "Isaiah Scroll (4QIsam)",
+  "dateMin": -100,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100-50 BC' parsed to -100 to -50."
+ },
+ {
+  "manuscriptId": "4QIsan / 4Q67",
+  "manuscriptName": "Isaiah Scroll (4QIsan)",
+  "dateMin": -100,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100-50 BC' parsed to -100 to -50."
+ },
+ {
+  "manuscriptId": "4QIsao / 4Q68",
+  "manuscriptName": "Isaiah Scroll (4QIsao)",
+  "dateMin": -100,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100-50 BC' parsed to -100 to -50."
+ },
+ {
+  "manuscriptId": "4QIsar / 4Q69b",
+  "manuscriptName": "Isaiah Scroll (4QIsar)",
+  "dateMin": -100,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100-50 BC' parsed to -100 to -50."
+ },
+ {
+  "manuscriptId": "4QpapIsap / 4Q69",
+  "manuscriptName": "Papyrus Isaiah Scroll (4QpapIsap)",
+  "dateMin": -100,
+  "dateMax": -50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100-50 BC' parsed to -100 to -50."
+ },
+ {
+  "manuscriptId": "4QpaleoDeutr / 4Q45",
+  "manuscriptName": "Paleo-Hebrew Deuteronomy Scroll (4QpaleoDeutr)",
+  "dateMin": -100,
+  "dateMax": -25,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100-25 BCE' parsed to -100 to -25."
+ },
+ {
+  "manuscriptId": "4QpaleoExodm / 4Q22",
+  "manuscriptName": "Paleo-Exodus Scroll (4QpaleoExod m)",
+  "dateMin": -100,
+  "dateMax": -25,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100-25 BC' parsed to -100 to -25."
+ },
+ {
+  "manuscriptId": "1Q10 (1QPsa)",
+  "manuscriptName": "Psalms Fragment (1QPsa)",
+  "dateMin": -100,
+  "dateMax": -1,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox '1st century BC' parsed to -100 to -1."
+ },
+ {
+  "manuscriptId": "4Q72 (4QJerc)",
+  "manuscriptName": "Jeremiah Scroll (4QJerc)",
+  "dateMin": -100,
+  "dateMax": -1,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 1st century BC' parsed to -100 to -1."
+ },
+ {
+  "manuscriptId": "4QpapLXXLevb / 4Q120",
+  "manuscriptName": "Greek Leviticus Papyrus (4QpapLXXLevb)",
+  "dateMin": -100,
+  "dateMax": -1,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100-1 BCE' parsed to -100 to -1."
+ },
+ {
+  "manuscriptId": "4QLXXLeva / 4Q119",
+  "manuscriptName": "Greek Leviticus Scroll (4QLXXLeva)",
+  "dateMin": -100,
+  "dateMax": 1,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 100 BCE-1 CE' parsed to -100 to 1."
+ },
+ {
+  "manuscriptId": "4Q78 (4QXIIc)",
+  "manuscriptName": "The Twelve Minor Prophets (4QXIIc)",
+  "dateMin": -75,
+  "dateMax": -50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 75-50 BC' parsed to -75 to -50."
+ },
+ {
+  "manuscriptId": "4Q80 (4QXIIe)",
+  "manuscriptName": "The Twelve Minor Prophets (4QXIIe)",
+  "dateMin": -75,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 75-50 BC' parsed to -75 to -50."
+ },
+ {
+  "manuscriptId": "4QDeutf / 4Q33",
+  "manuscriptName": "Deuteronomy Scroll (4QDeutf)",
+  "dateMin": -75,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 75-50 BCE' parsed to -75 to -50."
+ },
+ {
+  "manuscriptId": "4QDeuto / 4Q42",
+  "manuscriptName": "Deuteronomy Scroll (4QDeuto)",
+  "dateMin": -75,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 75-50 BCE' parsed to -75 to -50."
+ },
+ {
+  "manuscriptId": "4QDeutp / 4Q43",
+  "manuscriptName": "Deuteronomy Scroll (4QDeutp)",
+  "dateMin": -75,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 75-50 BCE' parsed to -75 to -50."
+ },
+ {
+  "manuscriptId": "4QIsaa / 4Q55",
+  "manuscriptName": "Isaiah Scroll (4QIsaa)",
+  "dateMin": -75,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 75-50 BC' parsed to -75 to -50."
+ },
+ {
+  "manuscriptId": "4QIsaj / 4Q63",
+  "manuscriptName": "Isaiah Scroll (4QIsaj)",
+  "dateMin": -75,
+  "dateMax": -50,
+  "datingBasis": "palaeography",
+  "confidence": "disputed",
+  "note": "Entry DateApprox 'c. 75-50 BC' parsed to -75 to -50. CONFLICT INSIDE THE ENTRY: Period label 'Herodian' maps to -30 to 70, which does not overlap the DateApprox range; the DateApprox range is adopted and the Period label is left for the editor to reconcile."
+ },
+ {
+  "manuscriptId": "4QIsak / 4Q64",
+  "manuscriptName": "Isaiah Scroll (4QIsak)",
+  "dateMin": -75,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 75-50 BC' parsed to -75 to -50."
+ },
+ {
+  "manuscriptId": "4QIsab / 4Q56",
+  "manuscriptName": "Isaiah Scroll (4QIsab)",
+  "dateMin": -75,
+  "dateMax": -30,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 75-30 BC' parsed to -75 to -30."
+ },
+ {
+  "manuscriptId": "4Q112 (4QDana)",
+  "manuscriptName": "Daniel Scroll (4QDana)",
+  "dateMin": -75,
+  "dateMax": -25,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 75-25 BC' parsed to -75 to -25."
+ },
+ {
+  "manuscriptId": "4QDand / 4Q115",
+  "manuscriptName": "Daniel Scroll (4QDand)",
+  "dateMin": -67,
+  "dateMax": -35,
+  "datingBasis": "palaeography",
+  "confidence": "disputed",
+  "note": "Entry DateApprox 'c. mid-1st century BC' parsed to -67 to -35. CONFLICT INSIDE THE ENTRY: Period label 'Herodian' maps to -30 to 70, which does not overlap the DateApprox range; the DateApprox range is adopted and the Period label is left for the editor to reconcile."
+ },
+ {
+  "manuscriptId": "4QExodk / 4Q21",
+  "manuscriptName": "Exodus Scroll (4QExodk)",
+  "dateMin": -63,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Roman' using the report mapping (-63 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "2Q17 / 2QRuthb",
+  "manuscriptName": "2QRuthb (Ruth Scroll, copy b)",
+  "dateMin": -50,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50 BCE' parsed to -50 to -50. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "4Q104 / 4QRutha",
+  "manuscriptName": "4QRutha (Ruth Scroll, copy a, Cave 4)",
+  "dateMin": -50,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50 BCE' parsed to -50 to -50. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "4Q117 / 4QEzra",
+  "manuscriptName": "4QEzra (Ezra Fragment)",
+  "dateMin": -50,
+  "dateMax": -50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50 BCE' parsed to -50 to -50. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "4Q81 (4QXIIf)",
+  "manuscriptName": "The Twelve Minor Prophets (4QXIIf)",
+  "dateMin": -50,
+  "dateMax": -50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50 BC' parsed to -50 to -50. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "4QIsac / 4Q57",
+  "manuscriptName": "Isaiah Scroll (4QIsac)",
+  "dateMin": -50,
+  "dateMax": -50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50 BC' parsed to -50 to -50. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "1Q6 / 1QJudg",
+  "manuscriptName": "1QJudg (Judges Scroll)",
+  "dateMin": -50,
+  "dateMax": -25,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50-25 BCE' parsed to -50 to -25."
+ },
+ {
+  "manuscriptId": "2QDeuta / 2Q10",
+  "manuscriptName": "Deuteronomy Scroll (2QDeuta)",
+  "dateMin": -50,
+  "dateMax": -25,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50-25 BCE' parsed to -50 to -25."
+ },
+ {
+  "manuscriptId": "4Q49 / 4QJudga",
+  "manuscriptName": "4QJudga (Judges Scroll, copy a)",
+  "dateMin": -50,
+  "dateMax": -25,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50-25 BCE' parsed to -50 to -25."
+ },
+ {
+  "manuscriptId": "4Q51 / 4QSama",
+  "manuscriptName": "4QSama (Samuel Scroll)",
+  "dateMin": -50,
+  "dateMax": -25,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50-25 BCE' parsed to -50 to -25."
+ },
+ {
+  "manuscriptId": "4Q54 / 4QKgs",
+  "manuscriptName": "4QKgs (Kings Scroll, Cave 4)",
+  "dateMin": -50,
+  "dateMax": -25,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50-25 BCE' parsed to -50 to -25."
+ },
+ {
+  "manuscriptId": "4Q73 (4QEzeka)",
+  "manuscriptName": "Ezekiel Scroll (4QEzeka)",
+  "dateMin": -50,
+  "dateMax": -25,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50-25 BC' parsed to -50 to -25."
+ },
+ {
+  "manuscriptId": "4QDeute / 4Q32",
+  "manuscriptName": "Deuteronomy Scroll (4QDeute)",
+  "dateMin": -50,
+  "dateMax": -25,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50-25 BCE' parsed to -50 to -25."
+ },
+ {
+  "manuscriptId": "4QIsag / 4Q61",
+  "manuscriptName": "Isaiah Scroll (4QIsag)",
+  "dateMin": -50,
+  "dateMax": -25,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50-25 BC' parsed to -50 to -25."
+ },
+ {
+  "manuscriptId": "4QDeuth / 4Q35",
+  "manuscriptName": "Deuteronomy Scroll (4QDeuth)",
+  "dateMin": -50,
+  "dateMax": -1,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50-1 BCE' parsed to -50 to -1."
+ },
+ {
+  "manuscriptId": "4QDeutm / 4Q40",
+  "manuscriptName": "Deuteronomy Scroll (4QDeutm)",
+  "dateMin": -50,
+  "dateMax": -1,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50-1 BCE' parsed to -50 to -1."
+ },
+ {
+  "manuscriptId": "4QNumb / 4Q27",
+  "manuscriptName": "Numbers Scroll (4QNum b)",
+  "dateMin": -50,
+  "dateMax": -1,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50-1 BC' parsed to -50 to -1."
+ },
+ {
+  "manuscriptId": "4QDeutq / 4Q44",
+  "manuscriptName": "Deuteronomy Scroll (4QDeutq)",
+  "dateMin": -50,
+  "dateMax": 25,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50 BCE-25 CE' parsed to -50 to 25."
+ },
+ {
+  "manuscriptId": "11QEzek / 11Q4",
+  "manuscriptName": "Ezekiel Scroll (11QEzek)",
+  "dateMin": -50,
+  "dateMax": 50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50 BC-AD 50' parsed to -50 to 50."
+ },
+ {
+  "manuscriptId": "4QEzekb / 4Q74",
+  "manuscriptName": "Ezekiel Scroll (4QEzekb)",
+  "dateMin": -50,
+  "dateMax": 50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50 BC-AD 50' parsed to -50 to 50."
+ },
+ {
+  "manuscriptId": "4Q79 (4QXIId)",
+  "manuscriptName": "The Twelve Minor Prophets (4QXIId)",
+  "dateMin": -34,
+  "dateMax": -1,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'late 1st century BC' parsed to -34 to -1."
+ },
+ {
+  "manuscriptId": "4Q111 (4QLam)",
+  "manuscriptName": "Lamentations Scroll (4QLam)",
+  "dateMin": -30,
+  "dateMax": -1,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 30-1 BC' parsed to -30 to -1."
+ },
+ {
+  "manuscriptId": "4Q50 / 4QJudgb",
+  "manuscriptName": "4QJudgb (Judges Scroll, copy b)",
+  "dateMin": -30,
+  "dateMax": -1,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 30-1 BCE' parsed to -30 to -1."
+ },
+ {
+  "manuscriptId": "4Q82 (4QXIIg)",
+  "manuscriptName": "The Twelve Minor Prophets (4QXIIg)",
+  "dateMin": -30,
+  "dateMax": -1,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 30-1 BC' parsed to -30 to -1."
+ },
+ {
+  "manuscriptId": "4QDeutk1 / 4Q38",
+  "manuscriptName": "Deuteronomy Scroll (4QDeutk1)",
+  "dateMin": -30,
+  "dateMax": -1,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 30-1 BCE' parsed to -30 to -1."
+ },
+ {
+  "manuscriptId": "4QDeutk2 / 4Q38a",
+  "manuscriptName": "Deuteronomy Scroll (4QDeutk2)",
+  "dateMin": -30,
+  "dateMax": -1,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 30-1 BCE' parsed to -30 to -1."
+ },
+ {
+  "manuscriptId": "4QDeutn / 4Q41",
+  "manuscriptName": "All Souls Deuteronomy (4QDeut n)",
+  "dateMin": -30,
+  "dateMax": -1,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 30-1 BC' parsed to -30 to -1."
+ },
+ {
+  "manuscriptId": "4QIsae / 4Q59",
+  "manuscriptName": "Isaiah Scroll (4QIsae)",
+  "dateMin": -30,
+  "dateMax": -1,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 30-1 BC' parsed to -30 to -1."
+ },
+ {
+  "manuscriptId": "4QIsaq / 4Q69a",
+  "manuscriptName": "Isaiah Scroll (4QIsaq)",
+  "dateMin": -30,
+  "dateMax": -1,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 30-1 BC' parsed to -30 to -1."
+ },
+ {
+  "manuscriptId": "1Q7 / 1QSam",
+  "manuscriptName": "1QSam (Samuel Scroll, Cave 1)",
+  "dateMin": -30,
+  "dateMax": 30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Early Herodian period'; period-derived using the report mapping (-30 to 30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q106 (4QCanta)",
+  "manuscriptName": "Song of Solomon Fragment (4QCanta)",
+  "dateMin": -30,
+  "dateMax": 30,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Early Herodian period'; period-derived using the report mapping (-30 to 30); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q107 (4QCantb)",
+  "manuscriptName": "Song of Solomon Scroll (4QCantb)",
+  "dateMin": -30,
+  "dateMax": 30,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 30 BC-AD 30 (early Herodian)' parsed to -30 to 30."
+ },
+ {
+  "manuscriptId": "3Q3 (3QLam)",
+  "manuscriptName": "Lamentations Fragment (3QLam)",
+  "dateMin": -30,
+  "dateMax": 50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 30 BC-AD 50' parsed to -30 to 50."
+ },
+ {
+  "manuscriptId": "5Q7 (5QLamb)",
+  "manuscriptName": "Lamentations Fragment (5QLamb)",
+  "dateMin": -30,
+  "dateMax": 50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 30 BC-AD 50' parsed to -30 to 50."
+ },
+ {
+  "manuscriptId": "2QDeutb / 2Q11",
+  "manuscriptName": "Deuteronomy Scroll (2QDeutb)",
+  "dateMin": -30,
+  "dateMax": 68,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 30 BCE-68 CE' parsed to -30 to 68."
+ },
+ {
+  "manuscriptId": "3QEzek / 3Q1",
+  "manuscriptName": "Ezekiel Scroll (3QEzek)",
+  "dateMin": -30,
+  "dateMax": 68,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 30 BC-AD 68' parsed to -30 to 68."
+ },
+ {
+  "manuscriptId": "4Q105 / 4QRuthb",
+  "manuscriptName": "4QRuthb (Ruth Scroll, copy b, Cave 4)",
+  "dateMin": -30,
+  "dateMax": 68,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox '30 BCE-68 CE' parsed to -30 to 68."
+ },
+ {
+  "manuscriptId": "5QIsa / 5Q3",
+  "manuscriptName": "Isaiah Scroll (5QIsa)",
+  "dateMin": -30,
+  "dateMax": 68,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 30 BC-AD 68' parsed to -30 to 68."
+ },
+ {
+  "manuscriptId": "11Q7 (11QPsc)",
+  "manuscriptName": "Psalms Fragment (11QPsc)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "11Q8 (11QPsd)",
+  "manuscriptName": "Psalms Fragment (11QPsd)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "11Q9 (11QPse?)",
+  "manuscriptName": "Psalms Fragment (11QPse?)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "1Q12 (1QPsc)",
+  "manuscriptName": "Psalms Fragment (1QPsc)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "1QDana / 1Q71",
+  "manuscriptName": "Daniel Scroll (1QDana)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "1QDanb / 1Q72",
+  "manuscriptName": "Daniel Scroll (1QDanb)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "1QGen / 1Q1",
+  "manuscriptName": "Genesis Scroll (1QGen)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Herodian' using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "2QGen / 2Q1",
+  "manuscriptName": "Genesis Scroll (2QGen)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Herodian' using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "2QNuma / 2Q6",
+  "manuscriptName": "Numbers Scroll (2QNuma)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Herodian' using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q100 (4QJobb)",
+  "manuscriptName": "Job Fragment (4QJobb)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q102 (4QProva)",
+  "manuscriptName": "Proverbs Fragment (4QProva)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q103 (4QProvb)",
+  "manuscriptName": "Proverbs Scroll (4QProvb)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q108 (4QCantc)",
+  "manuscriptName": "Song of Solomon Fragment (4QCantc)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q110 (4QQohb)",
+  "manuscriptName": "Ecclesiastes Fragment (4QQohb)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q118 / 4QChr",
+  "manuscriptName": "4QChr (Chronicles Fragment)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q157 (4QtgJob)",
+  "manuscriptName": "Targum of Job Fragment (4QtgJob)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q84 (4QPsb)",
+  "manuscriptName": "Psalms Fragment (4QPsb)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q85 (4QPsc)",
+  "manuscriptName": "Psalms Fragment (4QPsc)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q87 (4QPse)",
+  "manuscriptName": "Psalms Fragment (4QPse)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q89 (4QPsg)",
+  "manuscriptName": "Psalms Fragment (4QPsg)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q90 (4QPsh)",
+  "manuscriptName": "Psalms Fragment (4QPsh)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q91 (4QPsj)",
+  "manuscriptName": "Psalms Fragment (4QPsj)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q93 (4QPsl)",
+  "manuscriptName": "Psalms Fragment (4QPsl)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q94 (4QPsm)",
+  "manuscriptName": "Psalms Fragment (4QPsm)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q95 (4QPsn)",
+  "manuscriptName": "Psalms Fragment (4QPsn)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q96 (4QPso)",
+  "manuscriptName": "Psalms Fragment (4QPso)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q97 (4QPsp)",
+  "manuscriptName": "Psalms Fragment (4QPsp)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q98 (4QPsq)",
+  "manuscriptName": "Psalms Fragment (4QPsq)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4Q98b (4QPss)",
+  "manuscriptName": "Psalms Fragment (4QPss)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox is the period label 'Herodian period'; period-derived using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QExodb / 4Q13",
+  "manuscriptName": "Exodus Scroll (4QExodb)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Herodian' using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QExodc / 4Q14",
+  "manuscriptName": "Exodus Scroll (4QExodc)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Herodian' using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QExodh / 4Q19",
+  "manuscriptName": "Exodus Scroll (4QExodh)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Herodian' using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QExodj / 4Q20",
+  "manuscriptName": "Exodus Scroll (4QExodj)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Herodian' using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QGenc / 4Q3",
+  "manuscriptName": "Genesis Scroll (4QGenc)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Herodian' using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QGene / 4Q5",
+  "manuscriptName": "Genesis Scroll (4QGgene)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Herodian' using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QGenh / 4Q8",
+  "manuscriptName": "Genesis Scroll (4QGenh)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Herodian' using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QGenj / 4Q9",
+  "manuscriptName": "Genesis Scroll (4QGenj)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Herodian' using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QGenk / 4Q10",
+  "manuscriptName": "Genesis Scroll (4QGenk)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Herodian' using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QLXXNumb / 4Q121",
+  "manuscriptName": "Greek Numbers Scroll (4QLXXNumb)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Herodian' using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QpapGen / 4Q483",
+  "manuscriptName": "Papyrus Genesis or Jubilees Fragment (4QpapGen)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Herodian' using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "8QGen / 8Q1",
+  "manuscriptName": "Genesis Scroll (8QGen)",
+  "dateMin": -30,
+  "dateMax": 70,
+  "datingBasis": "period label",
+  "confidence": "approximate",
+  "note": "DateApprox blank; period-derived from entry Period 'Herodian' using the report mapping (-30 to 70); a period span, not a precise date."
+ },
+ {
+  "manuscriptId": "4QDeutg / 4Q34",
+  "manuscriptName": "Deuteronomy Scroll (4QDeutg)",
+  "dateMin": 1,
+  "dateMax": 25,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 1-25 CE' parsed to 1 to 25."
+ },
+ {
+  "manuscriptId": "11Q10 (11QtgJob)",
+  "manuscriptName": "Targum of Job Scroll (11QtgJob)",
+  "dateMin": 1,
+  "dateMax": 50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. first half of 1st century AD' parsed to 1 to 50."
+ },
+ {
+  "manuscriptId": "11Q6 (11QPsb)",
+  "manuscriptName": "Psalms Fragment (11QPsb)",
+  "dateMin": 1,
+  "dateMax": 50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox '1st half of 1st century AD' parsed to 1 to 50."
+ },
+ {
+  "manuscriptId": "1Q11 (1QPsb)",
+  "manuscriptName": "Psalms Fragment (1QPsb)",
+  "dateMin": 1,
+  "dateMax": 50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'Early to mid-1st century AD' parsed to 1 to 50."
+ },
+ {
+  "manuscriptId": "2QJer / 2Q13",
+  "manuscriptName": "Jeremiah Scroll (2QJer)",
+  "dateMin": 1,
+  "dateMax": 50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox '1st half of the 1st century AD' parsed to 1 to 50."
+ },
+ {
+  "manuscriptId": "2QDeutc / 2Q12",
+  "manuscriptName": "Deuteronomy Scroll (2QDeutc)",
+  "dateMin": 1,
+  "dateMax": 68,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 1-68 CE' parsed to 1 to 68."
+ },
+ {
+  "manuscriptId": "2Q14 (2QPs)",
+  "manuscriptName": "Psalms Fragment (2QPs)",
+  "dateMin": 1,
+  "dateMax": 100,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox '1st century AD' parsed to 1 to 100."
+ },
+ {
+  "manuscriptId": "3Q2 (3QPs)",
+  "manuscriptName": "Psalms Fragment (3QPs)",
+  "dateMin": 1,
+  "dateMax": 100,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox '1st century AD' parsed to 1 to 100."
+ },
+ {
+  "manuscriptId": "5Q4 (5QAmos)",
+  "manuscriptName": "Amos Fragment (5QAmos)",
+  "dateMin": 1,
+  "dateMax": 100,
+  "datingBasis": "palaeography",
+  "confidence": "disputed",
+  "note": "Entry DateApprox '1st century AD' adopted, but Description records a competing summary range of 50 BC-AD 50 (DJD III: 1st century CE). Competing range noted, not silently merged."
+ },
+ {
+  "manuscriptId": "5Q5 (5QPs)",
+  "manuscriptName": "Psalms Fragment (5QPs)",
+  "dateMin": 1,
+  "dateMax": 100,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox '1st century AD' parsed to 1 to 100."
+ },
+ {
+  "manuscriptId": "8Q2 (8QPs)",
+  "manuscriptName": "Psalms Fragment (8QPs)",
+  "dateMin": 1,
+  "dateMax": 100,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox '1st century AD' parsed to 1 to 100."
+ },
+ {
+  "manuscriptId": "4QDanb / 4Q113",
+  "manuscriptName": "Daniel Scroll (4QDanb)",
+  "dateMin": 20,
+  "dateMax": 50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. AD 20-50' parsed to 20 to 50."
+ },
+ {
+  "manuscriptId": "11Q5 (11QPsa)",
+  "manuscriptName": "Great Psalms Scroll",
+  "dateMin": 30,
+  "dateMax": 50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. AD 30-50' parsed to 30 to 50."
+ },
+ {
+  "manuscriptId": "4QIsad / 4Q58",
+  "manuscriptName": "Isaiah Scroll (4QIsad)",
+  "dateMin": 30,
+  "dateMax": 68,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. AD 30-68' parsed to 30 to 68."
+ },
+ {
+  "manuscriptId": "11QDeut / 11Q3",
+  "manuscriptName": "Deuteronomy Scroll (11QDeut)",
+  "dateMin": 50,
+  "dateMax": 50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50 CE' parsed to 50 to 50. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "11QLevb / 11Q2",
+  "manuscriptName": "Leviticus Scroll (11QLevb)",
+  "dateMin": 50,
+  "dateMax": 50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50 CE' parsed to 50 to 50. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "2Q16 / 2QRutha",
+  "manuscriptName": "2QRutha (Ruth Scroll, copy a)",
+  "dateMin": 50,
+  "dateMax": 50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50 CE' parsed to 50 to 50. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "4QDeutj / 4Q37",
+  "manuscriptName": "Exodus-Deuteronomy Excerpt Scroll (4QDeutj)",
+  "dateMin": 50,
+  "dateMax": 50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50 CE' parsed to 50 to 50. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "4QDeutk3 / 4Q38b",
+  "manuscriptName": "Deuteronomy Fragment (4QDeutk3)",
+  "dateMin": 50,
+  "dateMax": 50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. 50 CE' parsed to 50 to 50. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "4QDeutl / 4Q39",
+  "manuscriptName": "Deuteronomy Scroll (4QDeutl)",
+  "dateMin": 50,
+  "dateMax": 50,
+  "datingBasis": "unknown",
+  "confidence": "disputed",
+  "note": "Entry DateApprox 'c. 50 CE' parsed to 50 to 50. Circa point date from the entry. CONFLICT INSIDE THE ENTRY: Period label 'Late Hasmonean' maps to -100 to -30, which does not overlap the DateApprox range; the DateApprox range is adopted and the Period label is left for the editor to reconcile."
+ },
+ {
+  "manuscriptId": "5Q6 (5QLama)",
+  "manuscriptName": "Lamentations Fragment (5QLama)",
+  "dateMin": 50,
+  "dateMax": 50,
+  "datingBasis": "unknown",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. AD 50' parsed to 50 to 50. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "6Q6 (6QCant)",
+  "manuscriptName": "Song of Solomon Fragment (6QCant)",
+  "dateMin": 50,
+  "dateMax": 50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. AD 50' parsed to 50 to 50. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "Pap6QDan / 6Q7",
+  "manuscriptName": "Papyrus Daniel Scroll (Pap6QDan)",
+  "dateMin": 50,
+  "dateMax": 50,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'c. AD 50' parsed to 50 to 50. Circa point date from the entry."
+ },
+ {
+  "manuscriptId": "4QGenb / 4Q2",
+  "manuscriptName": "Genesis Scroll (4QGen b)",
+  "dateMin": 50,
+  "dateMax": 135,
+  "datingBasis": "palaeography",
+  "confidence": "approximate",
+  "note": "Entry DateApprox 'Late Herodian, possibly post-Herodian' mapped to Late Herodian (AD 50-70) extended to AD 135 (Bar Kokhba horizon) for the post-Herodian possibility. NOTE: editor suspected a Wadi Murabba'at origin (provenance disputed), which does not change the script date but affects the cave claim."
+ },
+ {
+  "manuscriptId": "2Q15 (2QJob)",
+  "manuscriptName": "Job Fragment (2QJob)",
+  "dateMin": null,
+  "dateMax": null,
+  "datingBasis": "unknown",
+  "confidence": "unknown",
+  "note": "No DateApprox and no Period in the entry; Description states no date is given. No range invented."
+ },
+ {
+  "manuscriptId": "2QExoda / 2Q2",
+  "manuscriptName": "Exodus Scroll (2QExoda)",
+  "dateMin": null,
+  "dateMax": null,
+  "datingBasis": "unknown",
+  "confidence": "unknown",
+  "note": "No DateApprox and no Period in the entry; Description states no date is given. No range invented."
+ },
+ {
+  "manuscriptId": "2QExodb / 2Q3",
+  "manuscriptName": "Exodus Scroll (2QExodb)",
+  "dateMin": null,
+  "dateMax": null,
+  "datingBasis": "unknown",
+  "confidence": "unknown",
+  "note": "No DateApprox and no Period in the entry; Description states no date is given. No range invented."
+ },
+ {
+  "manuscriptId": "2QNumb / 2Q7",
+  "manuscriptName": "Numbers Scroll (2QNumb)",
+  "dateMin": null,
+  "dateMax": null,
+  "datingBasis": "unknown",
+  "confidence": "unknown",
+  "note": "No DateApprox and no Period in the entry; Description states no date is given. No range invented."
+ },
+ {
+  "manuscriptId": "2QNumc / 2Q8",
+  "manuscriptName": "Numbers Fragment (2QNumc)",
+  "dateMin": null,
+  "dateMax": null,
+  "datingBasis": "unknown",
+  "confidence": "unknown",
+  "note": "No DateApprox and no Period in the entry; Description states no date is given. No range invented."
+ },
+ {
+  "manuscriptId": "4Q98a (4QPsr)",
+  "manuscriptName": "Psalms Fragment (4QPsr)",
+  "dateMin": null,
+  "dateMax": null,
+  "datingBasis": "unknown",
+  "confidence": "unknown",
+  "note": "No DateApprox and no Period in the entry; Description states no date is given. No range invented."
+ },
+ {
+  "manuscriptId": "4Q98g (4QPsx)",
+  "manuscriptName": "Psalms Fragment (4QPsx)",
+  "dateMin": null,
+  "dateMax": null,
+  "datingBasis": "unknown",
+  "confidence": "unknown",
+  "note": "No DateApprox and no Period in the entry; Description states no date is given. No range invented."
+ },
+ {
+  "manuscriptId": "4Q98h (4QPsy)",
+  "manuscriptName": "Psalms Fragment (4QPsy)",
+  "dateMin": null,
+  "dateMax": null,
+  "datingBasis": "unknown",
+  "confidence": "unknown",
+  "note": "No DateApprox and no Period in the entry; Description states no date is given. No range invented."
+ },
+ {
+  "manuscriptId": "4QGenh2 / 4Q8a",
+  "manuscriptName": "Genesis Fragment (4QGenh2)",
+  "dateMin": null,
+  "dateMax": null,
+  "datingBasis": "unknown",
+  "confidence": "unknown",
+  "note": "No DateApprox and no Period in the entry; Description states no date is given. No range invented."
+ },
+ {
+  "manuscriptId": "4QtgLev / 4Q156",
+  "manuscriptName": "Targum of Leviticus (4QtgLev)",
+  "dateMin": null,
+  "dateMax": null,
+  "datingBasis": "unknown",
+  "confidence": "unknown",
+  "note": "No DateApprox and no Period in the entry; Description states no date is given. No range invented."
+ },
+ {
+  "manuscriptId": "6Q5 (pap6QPs?)",
+  "manuscriptName": "Psalms Papyrus Fragment (pap6QPs?)",
+  "dateMin": null,
+  "dateMax": null,
+  "datingBasis": "unknown",
+  "confidence": "unknown",
+  "note": "Entry DateApprox 'Date uncertain'; Description states both the Psalms identification and the date are uncertain (Flint). No range invented."
+ }
+]

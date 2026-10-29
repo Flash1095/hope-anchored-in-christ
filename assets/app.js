@@ -185,7 +185,8 @@
   var childStories = []; // storybook shelf: children's stories (content/childrenstories.json)
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
-  var ASSET_V = "155";  // bump when site code or content changes, so browsers fetch fresh copies
+  var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
+  var ASSET_V = "156";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -553,6 +554,7 @@
 
     var html = "<h2>" + esc(c.label) + "</h2><p class='page-intro'>" + esc(c.blurb) +
       " &middot; " + rows.length + " entries</p>";
+    if (id === "manuscripts") html += '<p><a class="btn" href="#/lookup">Find a manuscript by passage</a> Type a passage to see the earliest manuscripts that preserve it.</p>';
     html += '<div class="controls"><input type="search" id="listSearch" placeholder="Search ' +
       esc(c.label.toLowerCase()) + '…" value="' + esc(state.q) + '">';
     filterDefs.forEach(function (f) {
@@ -3177,6 +3179,229 @@ function genBindInteractive(node) {
     });
     window.scrollTo(0, 0);
   }
+  /* ---------- Dead Sea Scrolls passage lookup ---------- */
+  /* Type a passage; list the manuscripts whose preserved passages cover
+     it, earliest first. Verse-aware, where refsInValue records chapters
+     only: it mirrors refsInValue's context rules (book names carry
+     across ";" segments, chapter/verse context resets at each ";"
+     segment, a bare number after a chapter:verse item is a verse of
+     that chapter, a bare range with no verse context is a chapter
+     range), plus verse ranges, cross-chapter ranges, single-chapter
+     books cited by verse alone, and the one prose range in the data
+     ("Chiefly Psalms 101-150"). Parenthetical notes are dropped
+     unless they hold a passage of their own; a "[lacking ...]" note
+     subtracts exactly those verses. A "?" reading matches like any
+     other; the card always shows the manuscript's own preserved
+     text, so readers see the uncertainty mark themselves. */
+  function parsePreserved(value) {
+    var out = [];
+    function push(book, ch, vs, ve) {
+      if (ch < 1 || ch > book.chapters) return;
+      out.push({ slug: book.slug, chapter: ch, vs: vs, ve: ve });
+    }
+    /* Parenthetical passages become segments of their own; other
+       parenthetical notes are dropped. */
+    var text = String(value).replace(/[–—]/g, "-").replace(/\(([^)]*)\)/g, function (m, inner) {
+      var t = inner.trim();
+      return bibleBookByNameStart(t) ? "; " + t + " ;" : "";
+    });
+    var lastBook = null;
+    text.split(";").forEach(function (part) {
+      var p = part.trim();
+      if (!p) return;
+      var found = bibleBookByNameStart(p);
+      var book = found ? found.book : lastBook;
+      if (found) lastBook = book;
+      if (!book) {
+        /* Prose range with no book at the start, e.g. "Chiefly Psalms
+           101-150": take every Psalm chapter or range named in it. */
+        var ps = bookByName("Psalms");
+        var m2, any = false, re = /psalms?\s+(\d+)(?:\s*-\s*(\d+))?/gi;
+        while ((m2 = re.exec(p)) !== null) {
+          any = true;
+          var a = +m2[1], b = m2[2] ? +m2[2] : a;
+          for (var k = a; k <= b; k++) push(ps, k, null, null);
+        }
+        return;
+      }
+      var rest = found ? found.rest : p;
+      if (!rest) return;
+      var lastChapter = null, lastHadVerse = false;
+      rest.split(",").forEach(function (item) {
+        var it = item.trim();
+        if (!it) return;
+        /* A "[lacking ...]" note subtracts exactly those verses. */
+        var lacking = null, bm = it.match(/\[([^\]]*)\]/);
+        if (bm) {
+          var lm = bm[1].match(/lacking\s+(?:(\d+):)?(\d+)\s*-\s*(\d+)/i);
+          if (lm) lacking = { ch: lm[1] ? +lm[1] : null, vs: +lm[2], ve: +lm[3] };
+          it = it.replace(/\[[^\]]*\]/g, "").trim();
+        }
+        it = it.replace(/\?/g, "");
+        if (!it) return;
+        var m = it.match(/^(\d+)(?::(\d+))?(?:\s*-\s*(\d+)(?::(\d+))?)?$/);
+        if (!m) return;
+        var a = +m[1], b = m[2] ? +m[2] : null, c = m[3] ? +m[3] : null, d = m[4] ? +m[4] : null;
+        var before = out.length;
+        if (b !== null) {
+          if (d !== null) {
+            push(book, a, b, null);
+            for (var k = a + 1; k < c; k++) push(book, k, null, null);
+            push(book, c, 1, d);
+            lastChapter = c; lastHadVerse = true;
+          } else if (c !== null) {
+            push(book, a, b, c);
+            lastChapter = a; lastHadVerse = true;
+          } else {
+            push(book, a, b, b);
+            lastChapter = a; lastHadVerse = true;
+          }
+        } else if (lastHadVerse) {
+          if (d !== null) {
+            /* "27-21:4" after chapter 20 verses: 20:27 to 21:4. */
+            push(book, lastChapter, a, null);
+            for (var j = lastChapter + 1; j < c; j++) push(book, j, null, null);
+            push(book, c, 1, d);
+            lastChapter = c; lastHadVerse = true;
+          } else {
+            push(book, lastChapter, a, c !== null ? c : a);
+          }
+        } else if (book.chapters === 1) {
+          /* Single-chapter book cited by verse alone ("Obadiah 1-5"). */
+          push(book, 1, a, c !== null ? c : a);
+          lastChapter = 1; lastHadVerse = true;
+        } else if (c !== null) {
+          for (var n = a; n <= c; n++) push(book, n, null, null);
+          lastChapter = null; lastHadVerse = false;
+        } else {
+          push(book, a, null, null);
+          lastChapter = a; lastHadVerse = false;
+        }
+        if (lacking) {
+          var lc = lacking.ch !== null ? lacking.ch : lastChapter;
+          var kept = [];
+          for (var s2 = before; s2 < out.length; s2++) {
+            var seg = out[s2];
+            if (seg.chapter !== lc || seg.vs === null) { kept.push(seg); continue; }
+            var lo = seg.vs, hi = seg.ve === null ? 9999 : seg.ve;
+            if (lacking.ve < lo || lacking.vs > hi) { kept.push(seg); continue; }
+            if (lacking.vs > lo) kept.push({ slug: seg.slug, chapter: seg.chapter, vs: lo, ve: lacking.vs - 1 });
+            if (lacking.ve < hi) kept.push({ slug: seg.slug, chapter: seg.chapter, vs: lacking.ve + 1, ve: seg.ve });
+          }
+          out.splice.apply(out, [before, out.length - before].concat(kept));
+        }
+      });
+    });
+    return out;
+  }
+  function viewLookup(params) {
+    var rows = data.manuscripts || [];
+    var dates = {};
+    (lookupDates || []).forEach(function (d) { dates[d.manuscriptId] = d; });
+    var BASIS_RANK = { "palaeography + radiocarbon": 0, "palaeography": 1, "unknown": 2, "period label": 3 };
+    function yearText(y) { return y < 0 ? (-y) + " BC" : "AD " + y; }
+    function rangeText(d) {
+      if (d.dateMin === null || d.dateMin === undefined || d.dateMax === null || d.dateMax === undefined) return "";
+      if (d.dateMin === d.dateMax) return yearText(d.dateMin);
+      if (d.dateMin < 0 && d.dateMax < 0) return (-d.dateMin) + "–" + (-d.dateMax) + " BC";
+      if (d.dateMin < 0) return (-d.dateMin) + " BC–" + yearText(d.dateMax);
+      return "AD " + d.dateMin + "–" + d.dateMax;
+    }
+    function bookName(slug) {
+      var n = "";
+      BIBLE_BOOKS.forEach(function (b) { if (b.slug === slug) n = b.name; });
+      return n;
+    }
+    function run(q) {
+      var out = document.getElementById("lookupResults");
+      var ref = parseBibleRef(q);
+      if (!ref) {
+        out.innerHTML = '<p class="empty">Enter a passage like Isaiah 53:5 or Psalm 22.</p>';
+        return;
+      }
+      if (!lookupDates.length) {
+        out.innerHTML = '<p class="empty">The manuscript date data is not available right now.</p>';
+        return;
+      }
+      var dated = [], undated = [];
+      rows.forEach(function (row, i) {
+        var hit = parsePreserved(val(row, "PreservedPassages")).some(function (s) {
+          if (s.slug !== ref.slug || s.chapter !== ref.chapter) return false;
+          if (ref.verse === null) return true;
+          if (s.vs === null) return true;
+          if (s.ve === null) return ref.verse >= s.vs;
+          return ref.verse >= s.vs && ref.verse <= s.ve;
+        });
+        if (!hit) return;
+        var d = dates[val(row, "ManuscriptID")] || null;
+        var item = { row: row, idx: i, d: d };
+        if (d && d.dateMin !== null && d.dateMin !== undefined) dated.push(item);
+        else undated.push(item);
+      });
+      dated.sort(function (x, y) {
+        return (x.d.dateMin - y.d.dateMin) ||
+          ((BASIS_RANK[x.d.datingBasis] === undefined ? 9 : BASIS_RANK[x.d.datingBasis]) - (BASIS_RANK[y.d.datingBasis] === undefined ? 9 : BASIS_RANK[y.d.datingBasis])) ||
+          (val(x.row, "Manuscript") < val(y.row, "Manuscript") ? -1 : (val(x.row, "Manuscript") > val(y.row, "Manuscript") ? 1 : 0));
+      });
+      undated.sort(function (x, y) { return val(x.row, "Manuscript") < val(y.row, "Manuscript") ? -1 : 1; });
+      var label = bookName(ref.slug) + " " + ref.chapter + (ref.verse ? ":" + ref.verse : "");
+      var reader = "#/bible/" + ref.slug + "/" + ref.chapter + (ref.verse ? "?v=" + ref.verse : "");
+      function card(item) {
+        var row = item.row, d = item.d;
+        var dateParts = [];
+        var da = val(row, "DateApprox");
+        if (da) dateParts.push(esc(da));
+        if (d) {
+          var r = rangeText(d);
+          if (r) dateParts.push(esc(r));
+          if (d.datingBasis === "period label") dateParts.push("period-derived date");
+          if (d.confidence === "disputed") dateParts.push("<strong>Dating disputed</strong>");
+        }
+        var dateLine = dateParts.join(" · ");
+        return "<div class='card'><h3><a href='#/manuscripts/" + item.idx + "'>" + esc(val(row, "Manuscript")) + "</a></h3>" +
+          "<p class='meta'>" + esc(val(row, "ManuscriptID")) + " · " + esc(val(row, "Cave")) + " · " + esc(val(row, "Completeness")) + "</p>" +
+          "<p class='meta'>" + dateLine + "</p>" +
+          (d && d.confidence === "disputed" && d.note ? "<p>" + esc(d.note) + "</p>" : "") +
+          "<p>Preserves: " + linkifyScriptureRefs(val(row, "PreservedPassages")) + "</p>" +
+          "<p><a href='" + reader + "'>Read " + esc(label) + " in the Bible reader</a></p></div>";
+      }
+      var html = "";
+      if (!dated.length && !undated.length) {
+        html += "<p class='empty'>No manuscript in this database preserves " + esc(label) + ". That means no catalogued Qumran biblical manuscript here preserves it — it may survive in no Qumran copy, or in one not yet catalogued here.</p>";
+      } else {
+        if (dated.length) {
+          html += "<p class='meta'>Earliest among manuscripts currently in this database — " + dated.length + " dated manuscript" + (dated.length === 1 ? "" : "s") + " preserve" + (dated.length === 1 ? "s" : "") + " " + esc(label) + ".</p>";
+          html += "<div class='card-grid'>" + dated.map(card).join("") + "</div>";
+        } else {
+          html += "<p class='meta'>No dated manuscript preserves " + esc(label) + ", but undated ones do — listed below.</p>";
+        }
+        if (undated.length) {
+          html += "<h3>Undated manuscripts that preserve " + esc(label) + "</h3><p class='meta'>These manuscripts have no date range in the data, so they are listed separately instead of being guessed into the order.</p><div class='card-grid'>" + undated.map(card).join("") + "</div>";
+        }
+      }
+      out.innerHTML = html;
+      window.scrollTo(0, 0);
+    }
+    var q0 = params.get("q") || "";
+    var html = "<h2>Manuscript Passage Lookup</h2><div class='post-body'>" +
+      "<p>Type a passage to find the earliest surviving manuscripts that contain it. Results are sorted earliest first, and labelled honestly: these are the earliest among the manuscripts currently in this database — not a claim about manuscripts not yet catalogued here.</p>" +
+      '<div class="controls"><input type="search" id="lookupInput" placeholder="e.g. Isaiah 53:5" value="' + esc(q0) + '">' +
+      '<button class="btn" id="lookupGo">Find manuscripts</button></div>' +
+      "<p class='meta'>Try: <button class='chip lookup-example' data-q='Isaiah 53:5'>Isaiah 53:5</button> <button class='chip lookup-example' data-q='Psalm 22'>Psalm 22</button> <button class='chip lookup-example' data-q='Genesis 1:1'>Genesis 1:1</button></p>" +
+      "<div id='lookupResults'></div></div>";
+    app.innerHTML = html;
+    function go() {
+      var q = document.getElementById("lookupInput").value.trim();
+      if (q) run(q); else document.getElementById("lookupInput").focus();
+    }
+    document.getElementById("lookupGo").addEventListener("click", go);
+    document.getElementById("lookupInput").addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); go(); } });
+    Array.prototype.forEach.call(document.querySelectorAll(".lookup-example"), function (btn) {
+      btn.addEventListener("click", function () { document.getElementById("lookupInput").value = btn.getAttribute("data-q"); go(); });
+    });
+    if (q0) run(q0);
+    window.scrollTo(0, 0);
+  }
   function viewBibleBook(slug) {
     var book = bibleBookBySlug(slug);
     if (!book) return viewBible();
@@ -3829,6 +4054,7 @@ function genBindInteractive(node) {
     if (path[0] === "quizzes" && path[1] === "play") return viewQuizPlay(path[2] ? decodeURIComponent(path[2]) : "", params);
     if (path[0] === "storybook") return viewStorybook(path[1] ? decodeURIComponent(path[1]) : null, path[2] ? decodeURIComponent(path[2]) : null, params);
     if (path[0] === "gallery") return viewGallery();
+    if (path[0] === "lookup") return viewLookup(params);
     if (path[0] === "genealogy") return viewGenealogy(path[1] ? decodeURIComponent(path[1]) : null, params);
     var c = coll(path[0]);
     if (c) return viewCollection(c.id, path[1] ? decodeURIComponent(path[1]) : null, params);
@@ -3841,7 +4067,7 @@ function genBindInteractive(node) {
   });
   document.getElementById("footerNav").innerHTML =
     COLLECTIONS.map(function (c) { return '<a href="#/' + c.id + '">' + esc(c.label) + "</a>"; }).join("") +
-    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/gallery">Gallery</a><a href="#/genealogy">Biblical Genealogies</a>';
+    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/gallery">Gallery</a><a href="#/genealogy">Biblical Genealogies</a><a href="#/lookup">Manuscript Lookup</a>';
 
   app.innerHTML = '<p class="loading">Loading the collections…</p>';
   var jobs = COLLECTIONS.map(function (c) {
@@ -3858,6 +4084,7 @@ function genBindInteractive(node) {
   jobs.push(fetch("content/petstories.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (p) { petStories = p; }).catch(function () { petStories = []; }));
   jobs.push(fetch("content/childrenstories.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (p) { childStories = p; }).catch(function () { childStories = []; }));
   jobs.push(fetch("content/gallery.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (g) { galleryItems = g; }).catch(function () { galleryItems = []; }));
+  jobs.push(fetch("content/dss_lookup_dates.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (d) { lookupDates = d; }).catch(function () { lookupDates = []; }));
   jobs.push(fetch("content/genealogy.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : { nodes: [], edges: [] }; }).then(function (g) { genealogyData = g; }).catch(function () { genealogyData = { nodes: [], edges: [] }; }));
   Promise.all(jobs).then(function () {
     buildLinkIndex();
