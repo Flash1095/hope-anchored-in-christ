@@ -186,7 +186,7 @@
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
-  var ASSET_V = "166";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "167";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -457,7 +457,7 @@
     if (field === "LeonLevyLink") {
       return '<a href="' + esc(value) + '" target="_blank" rel="noopener">View in the Leon Levy Dead Sea Scrolls Digital Library</a>';
     }
-    if (field === "DetailedAnswer") {
+    if (field === "DetailedAnswer" || field === "Response") {
       return value.split(/\n\s*\n/).filter(function (p) { return p.trim() !== ""; }).map(function (para) {
         return "<p>" + esc(para).replace(/\n/g, "<br>") + "</p>";
       }).join("");
