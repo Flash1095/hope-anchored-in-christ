@@ -1,0 +1,17 @@
+{
+  "Quiz": "Who Said It? Quiz",
+  "Course": "General Bible Trivia",
+  "Question": "Who said, \"Here am I; send me\"?",
+  "OptionA": "Jeremiah",
+  "OptionB": "Ezekiel",
+  "OptionC": "Isaiah",
+  "OptionD": "Samuel",
+  "CorrectAnswer": "C",
+  "Explanation": "When the Lord asked, \"Whom shall I send, and who will go for us?\" Isaiah answered, \"Here am I; send me.\"",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Isaiah 6:8",
+  "Slug": "who-said-it-here-am-i-send-me",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

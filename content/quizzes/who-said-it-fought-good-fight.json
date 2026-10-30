@@ -1,0 +1,17 @@
+{
+  "Quiz": "Who Said It? Quiz",
+  "Course": "General Bible Trivia",
+  "Question": "Who said, \"I have fought a good fight, I have finished my course, I have kept the faith\"?",
+  "OptionA": "Peter",
+  "OptionB": "Paul",
+  "OptionC": "Barnabas",
+  "OptionD": "Timothy",
+  "CorrectAnswer": "B",
+  "Explanation": "Paul wrote these words near the end of his life, in his final letter to Timothy.",
+  "Difficulty": "Hard",
+  "ScriptureReference": "2 Timothy 4:7",
+  "Slug": "who-said-it-fought-good-fight",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

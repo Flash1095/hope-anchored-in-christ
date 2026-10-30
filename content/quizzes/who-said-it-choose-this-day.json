@@ -1,0 +1,17 @@
+{
+  "Quiz": "Who Said It? Quiz",
+  "Course": "General Bible Trivia",
+  "Question": "Who said, \"Choose you this day whom ye will serve\"?",
+  "OptionA": "Moses",
+  "OptionB": "Joshua",
+  "OptionC": "Caleb",
+  "OptionD": "Samuel",
+  "CorrectAnswer": "B",
+  "Explanation": "Near the end of his life, Joshua challenged Israel to choose the LORD, adding, \"but as for me and my house, we will serve the LORD.\"",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Joshua 24:15",
+  "Slug": "who-said-it-choose-this-day",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

@@ -1,0 +1,17 @@
+{
+  "Quiz": "Who Said It? Quiz",
+  "Course": "General Bible Trivia",
+  "Question": "Who said, \"Let there be light\"?",
+  "OptionA": "God",
+  "OptionB": "Adam",
+  "OptionC": "Moses",
+  "OptionD": "Noah",
+  "CorrectAnswer": "A",
+  "Explanation": "On the first day of creation, God spoke light into being: \"And God said, Let there be light: and there was light.\"",
+  "Difficulty": "Easy",
+  "ScriptureReference": "Genesis 1:3",
+  "Slug": "who-said-it-let-there-be-light",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

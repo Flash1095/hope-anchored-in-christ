@@ -1,0 +1,17 @@
+{
+  "Quiz": "Who Said It? Quiz",
+  "Course": "General Bible Trivia",
+  "Question": "Who said, \"What is truth?\"",
+  "OptionA": "Herod",
+  "OptionB": "Caiaphas",
+  "OptionC": "Pontius Pilate",
+  "OptionD": "Felix",
+  "CorrectAnswer": "C",
+  "Explanation": "Pilate asked Jesus, \"What is truth?\" during his trial, then told the Jews, \"I find in him no fault at all.\"",
+  "Difficulty": "Hard",
+  "ScriptureReference": "John 18:38",
+  "Slug": "who-said-it-what-is-truth",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

@@ -1,0 +1,17 @@
+{
+  "Quiz": "Who Said It? Quiz",
+  "Course": "General Bible Trivia",
+  "Question": "Who said, \"The LORD gave, and the LORD hath taken away; blessed be the name of the LORD\"?",
+  "OptionA": "David",
+  "OptionB": "Job",
+  "OptionC": "Solomon",
+  "OptionD": "Abraham",
+  "CorrectAnswer": "B",
+  "Explanation": "Job spoke these words after losing his children and possessions, still blessing the name of the LORD.",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Job 1:21",
+  "Slug": "who-said-it-lord-gave-taken-away",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

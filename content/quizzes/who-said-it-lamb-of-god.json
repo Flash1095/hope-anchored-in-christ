@@ -1,0 +1,17 @@
+{
+  "Quiz": "Who Said It? Quiz",
+  "Course": "General Bible Trivia",
+  "Question": "Who said, \"Behold the Lamb of God, which taketh away the sin of the world\"?",
+  "OptionA": "Andrew",
+  "OptionB": "John the Baptist",
+  "OptionC": "Philip",
+  "OptionD": "Peter",
+  "CorrectAnswer": "B",
+  "Explanation": "John the Baptist said this when he saw Jesus coming to him the day after he had baptized him.",
+  "Difficulty": "Easy",
+  "ScriptureReference": "John 1:29",
+  "Slug": "who-said-it-lamb-of-god",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

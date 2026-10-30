@@ -1,0 +1,17 @@
+{
+  "Quiz": "Who Said It? Quiz",
+  "Course": "General Bible Trivia",
+  "Question": "Who said, \"I am the way, the truth, and the life\"?",
+  "OptionA": "Peter",
+  "OptionB": "Jesus",
+  "OptionC": "Paul",
+  "OptionD": "John the Baptist",
+  "CorrectAnswer": "B",
+  "Explanation": "Jesus spoke these words to his disciples at the Last Supper: \"no man cometh unto the Father, but by me.\"",
+  "Difficulty": "Easy",
+  "ScriptureReference": "John 14:6",
+  "Slug": "who-said-it-way-truth-life",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

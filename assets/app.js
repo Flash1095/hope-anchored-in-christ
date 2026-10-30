@@ -187,7 +187,7 @@
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
-  var ASSET_V = "176";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "177";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -972,7 +972,7 @@
     if (key === "nt") return g.course === "New Testament Survey";
     if (key === "stories") return / Story Quiz$/.test(g.name);
     if (key === "topics") return !/ Story Quiz$/.test(g.name);
-    if (key === "people") return ["Old Testament People Quiz", "New Testament People Quiz", "Women of the Bible Quiz", "Men of the Bible Quiz"].indexOf(g.name) !== -1;
+    if (key === "people") return ["Old Testament People Quiz", "New Testament People Quiz", "Women of the Bible Quiz", "Men of the Bible Quiz", "Who Said It? Quiz"].indexOf(g.name) !== -1;
     if (key === "blog") return g.qs.some(function (q) { return (val(q, "ReadingLink") || "").indexOf("#/blog/") === 0; });
     return true;
   }

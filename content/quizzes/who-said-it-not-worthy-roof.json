@@ -1,0 +1,17 @@
+{
+  "Quiz": "Who Said It? Quiz",
+  "Course": "General Bible Trivia",
+  "Question": "Who said, \"Lord, I am not worthy that thou shouldest come under my roof\"?",
+  "OptionA": "The centurion at Capernaum",
+  "OptionB": "Jairus",
+  "OptionC": "Nicodemus",
+  "OptionD": "The Philippian jailer",
+  "CorrectAnswer": "A",
+  "Explanation": "The centurion said this to Jesus when asking him to heal his servant, trusting that Jesus need only \"speak the word only.\"",
+  "Difficulty": "Medium",
+  "ScriptureReference": "Matthew 8:8",
+  "Slug": "who-said-it-not-worthy-roof",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}
