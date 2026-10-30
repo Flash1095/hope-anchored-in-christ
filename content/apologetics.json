@@ -479,5 +479,47 @@
     "Sources": "",
     "Summary": "Every argument — including arguments against God — borrows tools it cannot account for: the laws of logic, the uniformity of nature, and objective moral standards. These preconditions of intelligible thought only make sense if the universe is the product of a rational, orderly Mind. The transcendental argument turns the tables: it is not that God is one explanation among others, but that without God, reasoning itself has no foundation.",
     "VerificationStatus": "Awaiting Review"
+  },
+  {
+    "Argument": "The Argument from Abstract Objects",
+    "Category": "Philosophy",
+    "Summary": "Numbers, logical truths, and propositions are real — 2 + 2 = 4 was true before any mind counted — yet they are not physical things, have no location, and cannot be caused by anything material. Such necessary, non-physical realities need a ground outside the physical world, and a divine mind that eternally knows them is the only adequate ground.",
+    "KeyPoints": "Numbers and logical truths are real but not physical; They exist necessarily, not by material causes; A divine mind eternally knowing them is the adequate ground",
+    "Scripture": "John 1:1-3; Colossians 1:16-17; Psalm 90:2",
+    "RelatedTopics": "Apologetics; Truth; Reason",
+    "RelatedBooks": "John; Colossians; Psalms",
+    "Slug": "the-argument-from-abstract-objects",
+    "RelatedPeople": "",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
+  },
+  {
+    "Argument": "The Argument from Common Consent",
+    "Category": "Philosophy",
+    "Summary": "In nearly every culture and era, human beings have believed in a God or gods — a universality no other belief about an unseen reality enjoys. Such a widespread, spontaneous conviction is unlikely to be a pure accident of culture; it hints at a real referent behind the belief, a God whom people everywhere have sensed, however imperfectly.",
+    "KeyPoints": "Belief in God appears across cultures and eras; Such universality is unlikely to be pure cultural accident; The best explanation is a real God whom people everywhere have sensed",
+    "Scripture": "Romans 1:19-20; Acts 17:26-27; Psalm 19:1-4",
+    "RelatedTopics": "Apologetics; Human Nature; Reason",
+    "RelatedBooks": "Romans; Acts; Psalms",
+    "Slug": "the-argument-from-common-consent",
+    "RelatedPeople": "",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
+  },
+  {
+    "Argument": "The Argument from Jewish Survival",
+    "Category": "History",
+    "Summary": "No other people has survived what the Jewish people have survived: exile, dispersion among the nations, centuries of persecution, and repeated attempts at extermination — yet they remain a distinct people, still in their ancient land, still keeping their ancient law. Scripture promised exactly this preservation; history delivered it.",
+    "KeyPoints": "The Jewish people survived exile, dispersion, and persecution; They remain distinct, in their land, keeping their law; Scripture promised this preservation in advance",
+    "Scripture": "Jeremiah 31:35-37; Leviticus 26:44; Deuteronomy 30:3-5",
+    "RelatedTopics": "Apologetics; Prophecy; Persecution",
+    "RelatedBooks": "Jeremiah; Leviticus; Deuteronomy",
+    "Slug": "the-argument-from-jewish-survival",
+    "RelatedPeople": "",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
   }
 ]
