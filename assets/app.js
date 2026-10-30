@@ -187,7 +187,7 @@
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
-  var ASSET_V = "169";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "170";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3413,23 +3413,32 @@ function genBindInteractive(node) {
     });
   }
   function atlasRow(it) {
-    return "<div class='atlas-row'><a href='#/places/" + it.placeIndex + "'><strong>" + esc(it.placeName) + "</strong></a>" +
-      "<span class='atlas-badge'>" + esc(it.evidence) + "</span>" +
+    var known = it.lat !== null && it.lat !== undefined && it.lon !== null && it.lon !== undefined;
+    var nameHtml = known
+      ? "<button class='atlas-name-btn' data-idx='" + it.placeIndex + "' title='Show on map'><strong>" + esc(it.placeName) + "</strong></button>"
+      : "<a href='#/places/" + it.placeIndex + "'><strong>" + esc(it.placeName) + "</strong></a>";
+    return "<div class='atlas-row'>" + nameHtml +
+      "<span class='atlas-badge" + (it.evidence === "Unknown" ? " unknown" : "") + "'>" + esc(it.evidence) + "</span>" +
       "<p class='meta'>" + esc(it.modernName) + " · " + esc((it.periods || []).join(", ")) + "</p>" +
       "<p class='atlas-note'>" + esc(it.confidenceNote) + "</p>" +
       "<p><a href='#/places/" + it.placeIndex + "'>View place page →</a></p></div>";
   }
+  var atlasMarkerByIndex = {};
   function atlasRefreshMarkers(rows) {
     if (!atlasMap || !window.L) return;
     if (atlasMarkerLayer) atlasMap.removeLayer(atlasMarkerLayer);
     atlasMarkerLayer = window.L.layerGroup();
+    atlasMarkerByIndex = {};
     var bounds = [];
     rows.forEach(function (it) {
+      if (it.lat === null || it.lat === undefined || it.lon === null || it.lon === undefined) return;
       var icon = window.L.divIcon({ className: "atlas-pin-wrap", html: '<span class="atlas-pin' + (it.evidence === "Probable" ? " probable" : "") + '"></span>', iconSize: [22, 22], iconAnchor: [11, 11] });
       var popup = "<strong>" + esc(it.placeName) + "</strong><br>" + esc(it.modernName) +
         "<br><span class='atlas-badge'>" + esc(it.evidence) + "</span><br><span class='atlas-note'>" + esc(it.confidenceNote) + "</span>" +
         "<br><a href='#/places/" + it.placeIndex + "'>View place page →</a>";
-      window.L.marker([it.lat, it.lon], { icon: icon }).bindPopup(popup).addTo(atlasMarkerLayer);
+      var marker = window.L.marker([it.lat, it.lon], { icon: icon }).bindPopup(popup);
+      marker.addTo(atlasMarkerLayer);
+      atlasMarkerByIndex[it.placeIndex] = marker;
       bounds.push([it.lat, it.lon]);
     });
     atlasMarkerLayer.addTo(atlasMap);
@@ -3443,6 +3452,20 @@ function genBindInteractive(node) {
     var rows = atlasFiltered();
     if (count) count.textContent = "Showing " + rows.length + " of " + atlasItems.length + " places";
     list.innerHTML = rows.length ? rows.map(atlasRow).join("") : "<p class='empty'>No places match those filters.</p>";
+    list.querySelectorAll(".atlas-name-btn").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var idx = +b.getAttribute("data-idx");
+        var it = null;
+        for (var k = 0; k < atlasItems.length; k++) if (atlasItems[k].placeIndex === idx) { it = atlasItems[k]; break; }
+        var mapEl = document.getElementById("atlasMap");
+        if (mapEl) {
+          var top = mapEl.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo(0, top < 0 ? 0 : top);
+        }
+        var marker = atlasMarkerByIndex[idx];
+        if (atlasMap && marker && it) { atlasMap.setView([it.lat, it.lon], 10); marker.openPopup(); }
+      });
+    });
     atlasRefreshMarkers(rows);
   }
   function atlasInitMap() {
@@ -3476,12 +3499,12 @@ function genBindInteractive(node) {
     var eras = ATLAS_ERA_ORDER.filter(function (e) {
       return atlasItems.some(function (it) { return (it.periods || []).indexOf(e) !== -1; });
     });
-    var html = "<h2>Biblical Atlas</h2><p class='page-intro'>Real places on a real map — every marker links to its place page. Locations come from OpenBible.info's Bible Geocoding data, with each identification labelled by how certain it is.</p>";
+    var html = "<h2>Biblical Atlas</h2><p class='page-intro'>All 426 places from Biblical Places. Markers show the places whose locations are verified; every row links to its place page, and tapping a place name shows it on the map.</p>";
     if (!atlasItems.length) {
       html += "<p class='empty'>The atlas data is not available right now.</p>";
     } else {
       html += "<div class='atlas-map' id='atlasMap'></div>" +
-        "<p class='meta'>Rose = Confirmed · Navy = Probable — Capernaum's marker shows its primary candidate, Tell Hum.</p>" +
+        "<p class='meta'>Rose = Confirmed · Navy = Probable — Capernaum's marker shows its primary candidate, Tell Hum. Tap a place name to show it on the map.</p>" +
         "<div class='controls'><input id='atlasSearch' type='search' placeholder='Search places…' value='" + esc(atlasQuery).replace(/'/g, "&#39;") + "'>" +
         "<span class='chip-label'>Testament:</span>" +
         [["all", "All"], ["old", "Old Testament"], ["new", "New Testament"], ["both", "Both Testaments"]].map(function (t) {
