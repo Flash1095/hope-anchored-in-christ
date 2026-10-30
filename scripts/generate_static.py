@@ -846,6 +846,7 @@ def entry_page(e, glob, home, quizzes_by_course):
 <main class="content">
 <a class="back-link" href="../../#/{coll}">&larr; All {label}</a>
 <h1>{title}</h1>
+{maplink}
 {body}
 <p><a class="btn" href="../../#/{coll}/{idx}">View on the full site &rarr;</a></p>
 </main>
@@ -855,6 +856,7 @@ def entry_page(e, glob, home, quizzes_by_course):
 """.format(title=esc(title), desc=esc(desc), url=url, site=SITE_URL,
            banner_v=BANNER_V, header=HEADER.format(banner_v=BANNER_V),
            coll=coll, label=esc(e["label"]), body=body, idx=e["idx"], footer=FOOTER,
+           maplink=('<p><a class="btn" href="../../#/atlas?place=%d">View on map &rarr;</a></p>' % e["idx"]) if coll == "places" else "",
            jsonld=entry_jsonld(title, desc, url, coll, row))
 
 

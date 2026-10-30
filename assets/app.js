@@ -187,7 +187,7 @@
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
-  var ASSET_V = "175";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "176";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -879,6 +879,9 @@
       html += "<h2>" + esc(val(row, "Transliteration")) + ' <span class="word-script">' + esc(val(row, "Word")) + "</span></h2>";
     } else {
       html += "<h2>" + esc(val(row, c.primary)) + "</h2>";
+    }
+    if (c.id === "places") {
+      html += '<p><a class="btn" href="#/atlas?place=' + idx + '">View on map &rarr;</a></p>';
     }
     var mapIds = splitList(val(row, "Maps"));
     if (mapIds.length) {
@@ -2387,7 +2390,17 @@ function genBindInteractive(node) {
         gridHtml += "<div class='card-grid'>";
         openGrid = true;
       }
-      gridHtml += collectionCard(c);
+      if (c.id === "places") {
+        var pn = (data.places || []).length;
+        var pblurb = c.blurb;
+        (explorePage.blurbs || []).forEach(function (b) { if (b.collection === "places" && b.blurb) pblurb = b.blurb; });
+        var part = TILE_ART.places ? "<img class='card-art' src='" + esc(TILE_ART.places) + "' alt=''>" : "";
+        gridHtml += "<div class='card'><a href='#/places'>" + part + "<h3>" + esc(c.label) + "</h3>" +
+          "<p class='meta'>" + pn + " entries</p><p class='snippet'>" + esc(pblurb) + "</p></a>" +
+          "<p><a class='btn' href='#/atlas'>View on map &rarr;</a></p></div>";
+      } else {
+        gridHtml += collectionCard(c);
+      }
       if (c.id === "people") {
         gridHtml += "<div class='card genealogy-card'><h3>Biblical Genealogies</h3>" +
           "<p class='snippet'>Every parent, child, and spouse named in the Bible's genealogy passages — linked to their profiles and to the passages.</p><p>" +
@@ -3397,6 +3410,7 @@ function genBindInteractive(node) {
   var ATLAS_ERA_ORDER = ["Primeval / Patriarchs", "Exodus and Wilderness", "Conquest and Judges", "United Monarchy", "Divided Monarchy", "Exile", "Return and Second Temple", "Life of Christ", "Early Church"];
   var atlasTestament = "all", atlasEvidence = "all", atlasEra = "all", atlasQuery = "";
   var atlasMap = null, atlasMarkerLayer = null, atlasLeafletState = "idle";
+  var atlasPendingFocus = null;
   function atlasFiltered() {
     var q = atlasQuery.toLowerCase();
     return atlasItems.filter(function (it) {
@@ -3444,6 +3458,12 @@ function genBindInteractive(node) {
     atlasMarkerLayer.addTo(atlasMap);
     if (bounds.length > 1) atlasMap.fitBounds(bounds, { padding: [30, 30] });
     else if (bounds.length === 1) atlasMap.setView(bounds[0], 8);
+    if (atlasPendingFocus !== null && atlasMarkerByIndex[atlasPendingFocus]) {
+      var fIt = null;
+      for (var k = 0; k < atlasItems.length; k++) if (atlasItems[k].placeIndex === atlasPendingFocus) { fIt = atlasItems[k]; break; }
+      if (fIt) { atlasMap.setView([fIt.lat, fIt.lon], 10); atlasMarkerByIndex[atlasPendingFocus].openPopup(); }
+      atlasPendingFocus = null;
+    }
   }
   function atlasRefresh() {
     var list = document.getElementById("atlasList");
@@ -3501,7 +3521,16 @@ function genBindInteractive(node) {
     window.L.control.layers({ "Ancient": ancientLayer, "Modern": modernLayer }).addTo(atlasMap);
     atlasRefreshMarkers(atlasFiltered());
   }
-  function viewAtlas() {
+  function viewAtlas(params) {
+    atlasPendingFocus = null;
+    var focusItem = null;
+    if (params) {
+      var p = parseInt(params.get("place"), 10);
+      if (!isNaN(p)) {
+        for (var fi = 0; fi < atlasItems.length; fi++) if (atlasItems[fi].placeIndex === p) { focusItem = atlasItems[fi]; break; }
+      }
+    }
+    if (focusItem) { atlasTestament = "all"; atlasEvidence = "all"; atlasEra = "all"; atlasQuery = (focusItem.lat === null || focusItem.lat === undefined) ? focusItem.placeName : ""; }
     var eras = ATLAS_ERA_ORDER.filter(function (e) {
       return atlasItems.some(function (it) { return (it.periods || []).indexOf(e) !== -1; });
     });
@@ -3528,6 +3557,7 @@ function genBindInteractive(node) {
     app.innerHTML = html;
     if (atlasItems.length) {
       atlasRefresh();
+      if (focusItem && focusItem.lat !== null && focusItem.lat !== undefined) atlasPendingFocus = focusItem.placeIndex;
       atlasInitMap();
       var search = document.getElementById("atlasSearch");
       if (search) search.addEventListener("input", function () { atlasQuery = search.value.trim(); atlasRefresh(); });
@@ -3549,6 +3579,10 @@ function genBindInteractive(node) {
       });
     }
     window.scrollTo(0, 0);
+    if (focusItem && (focusItem.lat === null || focusItem.lat === undefined)) {
+      var listEl = document.getElementById("atlasList");
+      if (listEl && listEl.scrollIntoView) listEl.scrollIntoView();
+    }
   }
   function viewLookup(params) {
     var rows = data.manuscripts || [];
@@ -4312,7 +4346,7 @@ function genBindInteractive(node) {
     if (path[0] === "gallery" || path[0] === "art") return viewGallery();
     if (path[0] === "lookup") return viewLookup(params);
     if (path[0] === "genealogy") return viewGenealogy(path[1] ? decodeURIComponent(path[1]) : null, params);
-    if (path[0] === "atlas") return viewAtlas();
+    if (path[0] === "atlas") return viewAtlas(params);
     var c = coll(path[0]);
     if (c) return viewCollection(c.id, path[1] ? decodeURIComponent(path[1]) : null, params);
     return viewHome();
