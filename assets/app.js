@@ -186,7 +186,8 @@
   var galleryItems = []; // art gallery (content/gallery.json)
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
-  var ASSET_V = "167";  // bump when site code or content changes, so browsers fetch fresh copies
+  var atlasItems = []; // biblical atlas (content/atlas.json)
+  var ASSET_V = "168";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -2309,6 +2310,9 @@ function genBindInteractive(node) {
       STORYBOOK_SHELVES.map(function (s) {
         return '<a class="btn" href="#/storybook/' + s.key + '">' + esc(s.label) + '</a>';
       }).join(" ") + "</p></div>";
+    html += "<div class='card atlas-card'><h3>Biblical Atlas</h3>" +
+      "<p class='snippet'>Real places on a real map — every marker links to its place page.</p><p>" +
+      "<a class='btn' href='#/atlas'>Open the Atlas</a></p></div>";
     var ordered = EXPLORE_ORDER.map(function (id) { return coll(id); }).filter(Boolean)
       .concat(COLLECTIONS.filter(function (c) { return EXPLORE_ORDER.indexOf(c.id) === -1; }));
     var gridHtml = "";
@@ -3326,6 +3330,137 @@ function genBindInteractive(node) {
     });
     return out;
   }
+  /* Biblical Atlas: 12 verified places on a Leaflet map + filterable list.
+     Leaflet loads lazily on first #/atlas visit so every other page stays
+     untouched; the text list below the map is the fallback if the map CDN
+     is unreachable, and the only atlas-side action is "View place page". */
+  var ATLAS_ERA_ORDER = ["Primeval / Patriarchs", "Exodus and Wilderness", "Conquest and Judges", "United Monarchy", "Divided Monarchy", "Exile", "Return and Second Temple", "Life of Christ", "Early Church"];
+  var atlasTestament = "all", atlasEvidence = "all", atlasEra = "all", atlasQuery = "";
+  var atlasMap = null, atlasMarkerLayer = null, atlasLeafletState = "idle";
+  function atlasFiltered() {
+    var q = atlasQuery.toLowerCase();
+    return atlasItems.filter(function (it) {
+      if (q) {
+        var hay = (it.placeName + " " + it.modernName + " " + (it.altNames || []).join(" ")).toLowerCase();
+        if (hay.indexOf(q) === -1) return false;
+      }
+      if (atlasTestament === "old" && !(it.testament === "Old" || it.testament === "Both")) return false;
+      if (atlasTestament === "new" && !(it.testament === "New" || it.testament === "Both")) return false;
+      if (atlasTestament === "both" && it.testament !== "Both") return false;
+      if (atlasEra !== "all" && (it.periods || []).indexOf(atlasEra) === -1) return false;
+      if (atlasEvidence !== "all" && it.evidence !== atlasEvidence) return false;
+      return true;
+    });
+  }
+  function atlasRow(it) {
+    return "<div class='atlas-row'><a href='#/places/" + it.placeIndex + "'><strong>" + esc(it.placeName) + "</strong></a>" +
+      "<span class='atlas-badge'>" + esc(it.evidence) + "</span>" +
+      "<p class='meta'>" + esc(it.modernName) + " · " + esc((it.periods || []).join(", ")) + "</p>" +
+      "<p class='atlas-note'>" + esc(it.confidenceNote) + "</p>" +
+      "<p><a href='#/places/" + it.placeIndex + "'>View place page →</a></p></div>";
+  }
+  function atlasRefreshMarkers(rows) {
+    if (!atlasMap || !window.L) return;
+    if (atlasMarkerLayer) atlasMap.removeLayer(atlasMarkerLayer);
+    atlasMarkerLayer = window.L.layerGroup();
+    var bounds = [];
+    rows.forEach(function (it) {
+      var icon = window.L.divIcon({ className: "atlas-pin-wrap", html: '<span class="atlas-pin' + (it.evidence === "Probable" ? " probable" : "") + '"></span>', iconSize: [22, 22], iconAnchor: [11, 11] });
+      var popup = "<strong>" + esc(it.placeName) + "</strong><br>" + esc(it.modernName) +
+        "<br><span class='atlas-badge'>" + esc(it.evidence) + "</span><br><span class='atlas-note'>" + esc(it.confidenceNote) + "</span>" +
+        "<br><a href='#/places/" + it.placeIndex + "'>View place page →</a>";
+      window.L.marker([it.lat, it.lon], { icon: icon }).bindPopup(popup).addTo(atlasMarkerLayer);
+      bounds.push([it.lat, it.lon]);
+    });
+    atlasMarkerLayer.addTo(atlasMap);
+    if (bounds.length > 1) atlasMap.fitBounds(bounds, { padding: [30, 30] });
+    else if (bounds.length === 1) atlasMap.setView(bounds[0], 8);
+  }
+  function atlasRefresh() {
+    var list = document.getElementById("atlasList");
+    var count = document.getElementById("atlasCount");
+    if (!list) return;
+    var rows = atlasFiltered();
+    if (count) count.textContent = "Showing " + rows.length + " of " + atlasItems.length + " places";
+    list.innerHTML = rows.length ? rows.map(atlasRow).join("") : "<p class='empty'>No places match those filters.</p>";
+    atlasRefreshMarkers(rows);
+  }
+  function atlasInitMap() {
+    var el = document.getElementById("atlasMap");
+    if (!el) return;
+    if (atlasLeafletState === "failed") { el.innerHTML = "<p class='empty'>The map could not load — the list below still works.</p>"; return; }
+    if (!window.L) {
+      if (atlasLeafletState === "loading") return;
+      atlasLeafletState = "loading";
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+      document.head.appendChild(link);
+      var script = document.createElement("script");
+      script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+      script.onload = function () { atlasLeafletState = "ready"; atlasInitMap(); };
+      script.onerror = function () { atlasLeafletState = "failed"; atlasInitMap(); };
+      document.head.appendChild(script);
+      return;
+    }
+    atlasLeafletState = "ready";
+    if (atlasMap) { atlasMap.remove(); atlasMap = null; atlasMarkerLayer = null; }
+    atlasMap = window.L.map(el).setView([35, 30], 4);
+    window.L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 18,
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(atlasMap);
+    atlasRefreshMarkers(atlasFiltered());
+  }
+  function viewAtlas() {
+    var eras = ATLAS_ERA_ORDER.filter(function (e) {
+      return atlasItems.some(function (it) { return (it.periods || []).indexOf(e) !== -1; });
+    });
+    var html = "<h2>Biblical Atlas</h2><p class='page-intro'>Real places on a real map — every marker links to its place page. Locations come from OpenBible.info's Bible Geocoding data, with each identification labelled by how certain it is.</p>";
+    if (!atlasItems.length) {
+      html += "<p class='empty'>The atlas data is not available right now.</p>";
+    } else {
+      html += "<div class='atlas-map' id='atlasMap'></div>" +
+        "<p class='meta'>Rose = Confirmed · Navy = Probable — Capernaum's marker shows its primary candidate, Tell Hum.</p>" +
+        "<div class='controls'><input id='atlasSearch' type='search' placeholder='Search places…' value='" + esc(atlasQuery).replace(/'/g, "&#39;") + "'>" +
+        "<span class='chip-label'>Testament:</span>" +
+        [["all", "All"], ["old", "Old Testament"], ["new", "New Testament"], ["both", "Both Testaments"]].map(function (t) {
+          return "<button class='chip atlas-test-chip" + (atlasTestament === t[0] ? " active" : "") + "' data-t='" + t[0] + "'>" + t[1] + "</button>";
+        }).join("") +
+        "<span class='chip-label'>Era:</span><select id='atlasEra'><option value='all'>All eras</option>" +
+        eras.map(function (e) { return "<option value='" + esc(e) + "'" + (atlasEra === e ? " selected" : "") + ">" + esc(e) + "</option>"; }).join("") + "</select>" +
+        "<span class='chip-label'>Evidence:</span>" +
+        [["all", "All"], ["Confirmed", "Confirmed"], ["Probable", "Probable"], ["Disputed", "Disputed"], ["Unknown", "Unknown"]].map(function (t) {
+          return "<button class='chip atlas-ev-chip" + (atlasEvidence === t[0] ? " active" : "") + "' data-v='" + t[0] + "'>" + t[1] + "</button>";
+        }).join("") + "</div>" +
+        "<p class='meta' id='atlasCount'></p><div id='atlasList'></div>";
+    }
+    html += "<p class='meta'>Place locations: <a href='https://www.openbible.info/geo/'>OpenBible.info Bible Geocoding</a> (CC BY 4.0). Cross-checks: <a href='https://pleiades.stoa.org/'>Pleiades</a> (CC BY 3.0). Base map © OpenStreetMap contributors (ODbL). Ancient geography is approximate; disputed locations are labelled, never hidden.</p>";
+    app.innerHTML = html;
+    if (atlasItems.length) {
+      atlasRefresh();
+      atlasInitMap();
+      var search = document.getElementById("atlasSearch");
+      if (search) search.addEventListener("input", function () { atlasQuery = search.value.trim(); atlasRefresh(); });
+      var era = document.getElementById("atlasEra");
+      if (era) era.addEventListener("change", function () { atlasEra = era.value; atlasRefresh(); });
+      document.querySelectorAll(".atlas-test-chip").forEach(function (b) {
+        b.addEventListener("click", function () {
+          atlasTestament = b.getAttribute("data-t");
+          document.querySelectorAll(".atlas-test-chip").forEach(function (x) { x.classList.toggle("active", x === b); });
+          atlasRefresh();
+        });
+      });
+      document.querySelectorAll(".atlas-ev-chip").forEach(function (b) {
+        b.addEventListener("click", function () {
+          atlasEvidence = b.getAttribute("data-v");
+          document.querySelectorAll(".atlas-ev-chip").forEach(function (x) { x.classList.toggle("active", x === b); });
+          atlasRefresh();
+        });
+      });
+    }
+    window.scrollTo(0, 0);
+  }
   function viewLookup(params) {
     var rows = data.manuscripts || [];
     var dates = {};
@@ -4088,6 +4223,7 @@ function genBindInteractive(node) {
     if (path[0] === "gallery" || path[0] === "art") return viewGallery();
     if (path[0] === "lookup") return viewLookup(params);
     if (path[0] === "genealogy") return viewGenealogy(path[1] ? decodeURIComponent(path[1]) : null, params);
+    if (path[0] === "atlas") return viewAtlas();
     var c = coll(path[0]);
     if (c) return viewCollection(c.id, path[1] ? decodeURIComponent(path[1]) : null, params);
     return viewHome();
@@ -4113,7 +4249,7 @@ function genBindInteractive(node) {
   }
   document.getElementById("footerNav").innerHTML =
     COLLECTIONS.map(function (c) { return '<a href="#/' + c.id + '">' + esc(c.label) + "</a>"; }).join("") +
-    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/art">Art</a><a href="#/genealogy">Biblical Genealogies</a><a href="#/lookup">Manuscript Lookup</a>';
+    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/art">Art</a><a href="#/genealogy">Biblical Genealogies</a><a href="#/lookup">Manuscript Lookup</a><a href="#/atlas">Atlas</a>';
 
   app.innerHTML = '<p class="loading">Loading the collections…</p>';
   var jobs = COLLECTIONS.map(function (c) {
@@ -4132,6 +4268,7 @@ function genBindInteractive(node) {
   jobs.push(fetch("content/gallery.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (g) { galleryItems = g; }).catch(function () { galleryItems = []; }));
   jobs.push(fetch("content/dss_lookup_dates.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (d) { lookupDates = d; }).catch(function () { lookupDates = []; }));
   jobs.push(fetch("content/genealogy.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : { nodes: [], edges: [] }; }).then(function (g) { genealogyData = g; }).catch(function () { genealogyData = { nodes: [], edges: [] }; }));
+  jobs.push(fetch("content/atlas.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (a) { atlasItems = a; }).catch(function () { atlasItems = []; }));
   Promise.all(jobs).then(function () {
     buildLinkIndex();
     window.addEventListener("hashchange", render);
