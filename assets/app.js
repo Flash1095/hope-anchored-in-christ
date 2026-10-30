@@ -187,7 +187,7 @@
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
-  var ASSET_V = "172";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "173";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3493,9 +3493,9 @@ function genBindInteractive(node) {
       maxZoom: 11,
       attribution: 'Ancient map: <a href="http://imperium.ahlfeldt.se">Digital Atlas of the Roman Empire</a> (CC BY-SA 3.0)'
     });
-    var modernLayer = window.L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png", {
+    var modernLayer = window.L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
       maxZoom: 18,
-      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://www.hotosm.org/">Humanitarian OpenStreetMap Team</a>'
     });
     ancientLayer.addTo(atlasMap);
     window.L.control.layers({ "Ancient": ancientLayer, "Modern": modernLayer }).addTo(atlasMap);
@@ -3524,7 +3524,7 @@ function genBindInteractive(node) {
         }).join("") + "</div>" +
         "<p class='meta' id='atlasCount'></p><div id='atlasList'></div>";
     }
-    html += "<p class='meta'>Place locations: <a href='https://www.openbible.info/geo/'>OpenBible.info Bible Geocoding</a> (CC BY 4.0). Cross-checks: <a href='https://pleiades.stoa.org/'>Pleiades</a> (CC BY 3.0). Ancient base map: <a href='http://imperium.ahlfeldt.se'>Digital Atlas of the Roman Empire</a> (CC BY-SA 3.0); modern base map: CARTO Voyager (© OpenStreetMap contributors, © CARTO). Ancient geography is approximate; disputed locations are labelled, never hidden.</p>";
+    html += "<p class='meta'>Place locations: <a href='https://www.openbible.info/geo/'>OpenBible.info Bible Geocoding</a> (CC BY 4.0). Cross-checks: <a href='https://pleiades.stoa.org/'>Pleiades</a> (CC BY 3.0). Ancient base map: <a href='http://imperium.ahlfeldt.se'>Digital Atlas of the Roman Empire</a> (CC BY-SA 3.0); modern base map: Humanitarian OpenStreetMap (© OpenStreetMap contributors). Ancient geography is approximate; disputed locations are labelled, never hidden.</p>";
     app.innerHTML = html;
     if (atlasItems.length) {
       atlasRefresh();
