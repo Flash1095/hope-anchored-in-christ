@@ -634,6 +634,80 @@ def linkify_scripture_refs(value):
     return "; ".join(out_parts)
 
 
+# Prose scripture links, for long-form Response text only: finds a Bible book
+# name followed by chapter:verse (with an optional range) and links it to
+# the reader. Anything else stays plain text. The list-style
+# linkify_scripture_refs is NOT used here -- it splits on ";" and would
+# mangle prose.
+_PROSE_BOOKS = None
+_REF_RE = re.compile(r"^\s*(\d+):(\d+)(?:\s*[–—-]\s*(\d+)(?::(\d+))?)?")
+_URL_RE = re.compile(r"https?://[^\s<>\"']+")
+
+
+def _prose_books():
+    global _PROSE_BOOKS
+    if _PROSE_BOOKS is None:
+        by_name = {b["name"]: b for b in BIBLE_BOOKS}
+        names = [{"name": b["name"], "book": b} for b in BIBLE_BOOKS]
+        names.append({"name": "Psalm", "book": by_name.get("Psalms")})
+        names.append({"name": "Song of Songs", "book": by_name.get("Song of Solomon")})
+        names.append({"name": "Song", "book": by_name.get("Song of Solomon")})
+        names.sort(key=lambda n: -len(n["name"]))
+        _PROSE_BOOKS = names
+    return _PROSE_BOOKS
+
+
+def linkify_scripture_prose(text):
+    books = _prose_books()
+    out = []
+    i = 0
+    n = len(text)
+    while i < n:
+        matched = False
+        for entry in books:
+            nm = entry["name"]
+            if text[i:i + len(nm)].lower() != nm.lower():
+                continue
+            before = text[i - 1] if i > 0 else ""
+            if before and before.isalnum():
+                continue
+            after = text[i + len(nm)] if i + len(nm) < n else ""
+            if after and after.isalpha():
+                continue
+            m = _REF_RE.match(text[i + len(nm):])
+            if not m:
+                continue
+            book = entry["book"]
+            if not book:
+                continue
+            ch, vs = int(m.group(1)), int(m.group(2))
+            if ch < 1 or ch > book["chapters"] or vs < 1:
+                continue
+            label = text[i:i + len(nm) + m.end()]
+            out.append('<a href="%s/#/bible/%s/%d?v=%d">%s</a>' % (SITE_URL, book["slug"], ch, vs, esc(label)))
+            i += len(nm) + m.end()
+            matched = True
+            break
+        if not matched:
+            out.append(esc(text[i]))
+            i += 1
+    return "".join(out)
+
+
+def linkify_urls(html):
+    def _link(m):
+        u = m.group(0)
+        trail = ""
+        while u and u[-1] in ".,;:!?)":
+            trail = u[-1] + trail
+            u = u[:-1]
+        if not u:
+            return trail
+        return '<a href="%s" target="_blank" rel="noopener">%s</a>%s' % (u, u, trail)
+    parts = re.split(r"(<[^>]*>)", html)
+    return "".join(_URL_RE.sub(_link, p) if not p.startswith("<") else p for p in parts)
+
+
 def render_entry_field(field, value, cur_coll, glob, home):
     toks = [t.strip() for t in value.split(";") if t.strip()]
     if field == "Steps":
@@ -650,7 +724,10 @@ def render_entry_field(field, value, cur_coll, glob, home):
         return '<a href="%s" target="_blank" rel="noopener">View in the Leon Levy Dead Sea Scrolls Digital Library</a>' % esc(value)
     if field in REL_FIELDS:
         return '<span class="related">' + static_linkify(field, value, cur_coll, glob, home) + "</span>"
-    if field in ("DetailedAnswer", "Response"):
+    if field == "Response":
+        paras = [p for p in re.split(r"\n\s*\n", value) if p.strip()]
+        return "".join("<p>%s</p>" % linkify_urls(linkify_scripture_prose(p)).replace("\n", "<br>") for p in paras)
+    if field == "DetailedAnswer":
         paras = [p for p in re.split(r"\n\s*\n", value) if p.strip()]
         return "".join("<p>%s</p>" % esc(p).replace("\n", "<br>") for p in paras)
     return esc(value)

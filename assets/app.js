@@ -187,7 +187,7 @@
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
-  var ASSET_V = "168";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "169";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -434,6 +434,61 @@
       }).join(", ");
     }).join("; ");
   }
+  /* Prose scripture links, for long-form Response text only: finds a Bible
+     book name followed by chapter:verse (with an optional range) and links
+     it to the reader. Anything else stays plain text. The list-style
+     linkifyScriptureRefs is NOT used here — it splits on ";" and would
+     mangle prose. */
+  var proseBooksCache = null;
+  function proseBooks() {
+    if (proseBooksCache) return proseBooksCache;
+    var names = BIBLE_BOOKS.map(function (b) { return { name: b.name, book: b }; });
+    names.push({ name: "Psalm", book: bookByName("Psalms") });
+    names.push({ name: "Song of Songs", book: bookByName("Song of Solomon") });
+    names.push({ name: "Song", book: bookByName("Song of Solomon") });
+    names.sort(function (a, b) { return b.name.length - a.name.length; });
+    proseBooksCache = names;
+    return names;
+  }
+  function linkifyScriptureProse(text) {
+    var books = proseBooks();
+    var out = "", i = 0;
+    while (i < text.length) {
+      var matched = false;
+      for (var k = 0; k < books.length; k++) {
+        var nm = books[k].name;
+        if (text.slice(i, i + nm.length).toLowerCase() !== nm.toLowerCase()) continue;
+        var before = i === 0 ? "" : text[i - 1];
+        if (before && /[A-Za-z0-9]/.test(before)) continue;
+        var after = text[i + nm.length] || "";
+        if (after && /[A-Za-z]/.test(after)) continue;
+        var m = text.slice(i + nm.length).match(/^\s*(\d+):(\d+)(?:\s*[–—-]\s*(\d+)(?::(\d+))?)?/);
+        if (!m) continue;
+        var book = books[k].book;
+        if (!book) continue;
+        var ch = +m[1], vs = +m[2];
+        if (ch < 1 || ch > book.chapters || vs < 1) continue;
+        var label = text.slice(i, i + nm.length + m[0].length);
+        out += '<a href="#/bible/' + book.slug + '/' + ch + '?v=' + vs + '">' + esc(label) + '</a>';
+        i += nm.length + m[0].length;
+        matched = true;
+        break;
+      }
+      if (!matched) { out += esc(text[i]); i++; }
+    }
+    return out;
+  }
+  function linkifyUrls(html) {
+    return html.split(/(<[^>]*>)/g).map(function (seg) {
+      if (seg.charAt(0) === "<") return seg;
+      return seg.replace(/https?:\/\/[^\s<>"']+/g, function (u) {
+        var trail = "";
+        while (u.length && ".,;:!?)".indexOf(u[u.length - 1]) !== -1) { trail = u[u.length - 1] + trail; u = u.slice(0, -1); }
+        if (!u) return trail;
+        return '<a href="' + u + '" target="_blank" rel="noopener">' + u + '</a>' + trail;
+      });
+    }).join("");
+  }
   function renderValue(field, value) {
     if (field === "Lessons") {
       return "<ul>" + splitList(value).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>";
@@ -458,7 +513,12 @@
     if (field === "LeonLevyLink") {
       return '<a href="' + esc(value) + '" target="_blank" rel="noopener">View in the Leon Levy Dead Sea Scrolls Digital Library</a>';
     }
-    if (field === "DetailedAnswer" || field === "Response") {
+    if (field === "Response") {
+      return value.split(/\n\s*\n/).filter(function (p) { return p.trim() !== ""; }).map(function (para) {
+        return "<p>" + linkifyUrls(linkifyScriptureProse(para)).replace(/\n/g, "<br>") + "</p>";
+      }).join("");
+    }
+    if (field === "DetailedAnswer") {
       return value.split(/\n\s*\n/).filter(function (p) { return p.trim() !== ""; }).map(function (para) {
         return "<p>" + esc(para).replace(/\n/g, "<br>") + "</p>";
       }).join("");
