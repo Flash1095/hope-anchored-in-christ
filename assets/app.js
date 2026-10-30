@@ -187,7 +187,7 @@
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
-  var ASSET_V = "170";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "171";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3489,10 +3489,16 @@ function genBindInteractive(node) {
     atlasLeafletState = "ready";
     if (atlasMap) { atlasMap.remove(); atlasMap = null; atlasMarkerLayer = null; }
     atlasMap = window.L.map(el).setView([35, 30], 4);
-    window.L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    var ancientLayer = window.L.tileLayer("https://dh.gu.se/tiles/imperium/{z}/{x}/{y}.png", {
+      maxZoom: 11,
+      attribution: 'Ancient map: <a href="http://imperium.ahlfeldt.se">Digital Atlas of the Roman Empire</a> (CC BY-SA 3.0)'
+    });
+    var modernLayer = window.L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 18,
       attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(atlasMap);
+    });
+    ancientLayer.addTo(atlasMap);
+    window.L.control.layers({ "Ancient": ancientLayer, "Modern": modernLayer }).addTo(atlasMap);
     atlasRefreshMarkers(atlasFiltered());
   }
   function viewAtlas() {
@@ -3504,7 +3510,7 @@ function genBindInteractive(node) {
       html += "<p class='empty'>The atlas data is not available right now.</p>";
     } else {
       html += "<div class='atlas-map' id='atlasMap'></div>" +
-        "<p class='meta'>Rose = Confirmed · Navy = Probable — Capernaum's marker shows its primary candidate, Tell Hum. Tap a place name to show it on the map.</p>" +
+        "<p class='meta'>Rose = Confirmed · Navy = Probable — Capernaum's marker shows its primary candidate, Tell Hum. Tap a place name to show it on the map. Switch Ancient / Modern with the layers button at the top right of the map.</p>" +
         "<div class='controls'><input id='atlasSearch' type='search' placeholder='Search places…' value='" + esc(atlasQuery).replace(/'/g, "&#39;") + "'>" +
         "<span class='chip-label'>Testament:</span>" +
         [["all", "All"], ["old", "Old Testament"], ["new", "New Testament"], ["both", "Both Testaments"]].map(function (t) {
@@ -3518,7 +3524,7 @@ function genBindInteractive(node) {
         }).join("") + "</div>" +
         "<p class='meta' id='atlasCount'></p><div id='atlasList'></div>";
     }
-    html += "<p class='meta'>Place locations: <a href='https://www.openbible.info/geo/'>OpenBible.info Bible Geocoding</a> (CC BY 4.0). Cross-checks: <a href='https://pleiades.stoa.org/'>Pleiades</a> (CC BY 3.0). Base map © OpenStreetMap contributors (ODbL). Ancient geography is approximate; disputed locations are labelled, never hidden.</p>";
+    html += "<p class='meta'>Place locations: <a href='https://www.openbible.info/geo/'>OpenBible.info Bible Geocoding</a> (CC BY 4.0). Cross-checks: <a href='https://pleiades.stoa.org/'>Pleiades</a> (CC BY 3.0). Ancient base map: <a href='http://imperium.ahlfeldt.se'>Digital Atlas of the Roman Empire</a> (CC BY-SA 3.0); modern base map © OpenStreetMap contributors (ODbL). Ancient geography is approximate; disputed locations are labelled, never hidden.</p>";
     app.innerHTML = html;
     if (atlasItems.length) {
       atlasRefresh();
