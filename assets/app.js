@@ -187,7 +187,7 @@
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
-  var ASSET_V = "181";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "182";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -586,6 +586,28 @@
         wrap.innerHTML = '<p class="empty">Nothing matches. Try clearing the search or filters.</p>';
         return;
       }
+      if (id === "apologetics") {
+        /* Defend your faith renders grouped under its category headings.
+           The collection is small (36 entries), so all filtered items
+           render grouped — batching is skipped here because incremental
+           appends do not mix with group headings. The category filter
+           still applies: filteredRows() runs first, so a filtered view
+           shows only the groups that still have items. */
+        var groups = {}, order = [];
+        filtered.forEach(function (item) {
+          var g = val(item.row, "Category") || "Uncategorized";
+          if (!groups[g]) { groups[g] = []; order.push(g); }
+          groups[g].push(item);
+        });
+        order.sort();
+        wrap.innerHTML = order.map(function (g) {
+          return "<h3>" + esc(g) + " (" + groups[g].length + ")</h3>" +
+            '<div class="card-grid">' + groups[g].map(function (item) {
+              return cardFor(c, item.row, item.idx);
+            }).join("") + "</div>";
+        }).join("");
+        return;
+      }
       var shown = Math.min(LIST_BATCH, filtered.length);
       var html = '<div class="card-grid" id="listGrid">' + filtered.slice(0, shown).map(function (item) {
         return cardFor(c, item.row, item.idx);
@@ -616,6 +638,7 @@
     var html = "<h2>" + esc(c.label) + "</h2><p class='page-intro'>" + esc(c.blurb) +
       " &middot; " + rows.length + " entries</p>";
     if (id === "manuscripts") html += '<p><a class="btn" href="#/lookup">Find a manuscript by passage</a> Type a passage to see the earliest manuscripts that preserve it.</p>';
+    if (id === "objections") html += '<p><a class="btn" href="#/objections/examine">Examine the Evidence &rarr;</a> Pick an objection and work through it step by step — the passages, the evidence and context, the competing arguments, and the conclusion.</p>';
     html += '<div class="controls"><input type="search" id="listSearch" placeholder="Search ' +
       esc(c.label.toLowerCase()) + '…" value="' + esc(state.q) + '">';
     filterDefs.forEach(function (f) {
@@ -1202,6 +1225,9 @@
     }
     if (c.id === "places") {
       html += '<p><a class="btn" href="#/atlas?place=' + idx + '">View on map &rarr;</a></p>';
+    }
+    if (c.id === "objections") {
+      html += '<p><a class="btn" href="#/objections/examine/' + idx + '">Work through this step by step &rarr;</a></p>';
     }
     var mapIds = splitList(val(row, "Maps"));
     if (mapIds.length) {
@@ -4638,6 +4664,129 @@ function genBindInteractive(node) {
     return out.join("\n");
   }
 
+  /* ---------- Examine the Evidence (Objections & Answers) ----------
+     App-only views (no static pages, no sitemap change), same pattern
+     as storybook/atlas/lookup. The walkthrough teaches reasoning: the
+     objection is stated fairly first, then the passages, then related
+     evidence, then both sides at their strongest, and only then the
+     site's conclusion. Nothing is invented here — related material
+     comes only from fields already on the entries, and a slot with no
+     related material says so honestly. Step 4 quotes the reply rather
+     than paraphrasing it, so no new claims are introduced. ---------- */
+  function examineRelatedSlot(row, field, labelText) {
+    var v = val(row, field);
+    if (isEmpty(v)) return "<h4>" + esc(labelText) + "</h4><p>No related entry on this point yet.</p>";
+    return "<h4>" + esc(labelText) + "</h4><p>" + renderValue(field, v) + "</p>";
+  }
+  function examineFirstParagraph(response) {
+    var paras = String(response).split(/\n\s*\n/).filter(function (p) { return p.trim() !== ""; });
+    if (!paras.length) return "";
+    var para = paras[0];
+    return "<p>" + linkifyUrls(linkifyScriptureProse(para)).replace(/\n/g, "<br>") + "</p>";
+  }
+  function viewExamineLanding() {
+    var rows = data.objections || [];
+    var html = '<a class="back-link" href="#/objections">&larr; Objections &amp; Answers</a>';
+    html += "<h2>Examine the Evidence</h2>";
+    html += "<p class='page-intro'>Pick an objection and work through it step by step: the objection at its strongest, the passages it rests on, the evidence and context, the competing arguments, and only then the conclusion. The point is to learn how to weigh each step for yourself — not simply to accept the ending.</p>";
+    html += "<p class='page-intro'>Each walkthrough states the objection fairly first, shows what the Bible actually says, brings in related evidence, sets out both sides at their strongest, and ends with where this site lands and why. At every step, ask what would count for or against each side before you move on.</p>";
+    if (!rows.length) {
+      html += '<p class="empty">No objections to examine yet.</p>';
+    } else {
+      html += '<div class="card-grid">' + rows.map(function (r, i) {
+        var s = val(r, "ObjectionSummary");
+        if (s.length > 170) s = s.slice(0, 170).replace(/\s+\S*$/, "") + "…";
+        return '<a class="card" href="#/objections/examine/' + i + '">' +
+          "<h3>" + esc(val(r, "Objection")) + "</h3>" +
+          '<p class="meta">' + esc(val(r, "Worldview")) + "</p>" +
+          "<p class='snippet'>" + esc(s) + "</p></a>";
+      }).join("") + "</div>";
+    }
+    app.innerHTML = html;
+    window.scrollTo(0, 0);
+  }
+  function viewExamineWalkthrough(idx, params) {
+    var rows = data.objections || [];
+    var row = rows[idx];
+    if (!row) return viewExamineLanding();
+    var step = parseInt(params.get("step") || "1", 10);
+    if (!(step >= 1 && step <= 5)) step = 1;
+    var title = val(row, "Objection");
+    var stepTitles = ["The objection, stated fairly", "What the Bible actually says", "Evidence and context", "Competing arguments", "Conclusion"];
+    var html = '<a class="back-link" href="#/objections/examine">&larr; Back to all objections</a>';
+    html += "<h2>Examine the Evidence: " + esc(title) + "</h2>";
+    html += "<p class='page-intro'>Step " + step + " of 5 — " + esc(stepTitles[step - 1]) + "</p>";
+    if (step === 1) {
+      html += "<h3>Step 1 — The objection, stated fairly</h3>";
+      html += "<p>Here is the challenge at its strongest, as its own side would state it — not a weakened version. Read it on its own terms before anything answers it.</p>";
+      html += "<p><strong>" + esc(title) + "</strong></p>";
+      html += "<p>" + esc(val(row, "ObjectionSummary")) + "</p>";
+      html += "<p>Objection raised from: <strong>" + esc(val(row, "Worldview")) + "</strong></p>";
+    } else if (step === 2) {
+      html += "<h3>Step 2 — What the Bible actually says</h3>";
+      html += "<p>The passages this question turns on. Each reference opens in the Bible reader, so you can read the passage in its own context rather than taking a quotation on trust.</p>";
+      var scr = val(row, "Scripture");
+      if (isEmpty(scr)) html += "<p>No passages listed for this objection yet.</p>";
+      else html += '<p><span class="related">' + linkifyScriptureRefs(scr) + "</span></p>";
+    } else if (step === 3) {
+      html += "<h3>Step 3 — Evidence and context</h3>";
+      html += "<p>Related material already on this site that bears on the question. Nothing here is new evidence invented for this walkthrough — every link goes to an existing page.</p>";
+      html += examineRelatedSlot(row, "RelatedTopics", "Related topics");
+      html += examineRelatedSlot(row, "RelatedPeople", "Related people");
+      html += examineRelatedSlot(row, "RelatedEvents", "Related events");
+      var myTopics = splitList(val(row, "RelatedTopics"));
+      var bearing = [];
+      (data.apologetics || []).forEach(function (a, ai) {
+        var at = splitList(val(a, "RelatedTopics"));
+        if (myTopics.some(function (t) { return at.indexOf(t) !== -1; })) bearing.push({ idx: ai, title: val(a, "Argument") });
+      });
+      if (!bearing.length) {
+        html += "<h4>Arguments that bear on this question</h4><p>No related entry on this point yet.</p>";
+      } else {
+        html += "<h4>Arguments that bear on this question</h4><ul>" + bearing.map(function (b) {
+          return '<li><a href="#/apologetics/' + b.idx + '">' + esc(b.title) + "</a></li>";
+        }).join("") + "</ul>";
+      }
+    } else if (step === 4) {
+      html += "<h3>Step 4 — Competing arguments</h3>";
+      html += "<p>Both sides at their strongest, before any conclusion. Weigh each one — and ask what would count against it — before you move to Step 5.</p>";
+      html += "<h4>The case for the objection</h4>";
+      html += "<p>" + esc(val(row, "ObjectionSummary")) + "</p>";
+      html += "<h4>The case in reply</h4>";
+      var resp = val(row, "Response");
+      if (isEmpty(resp)) {
+        html += "<p>No related entry on this point yet.</p>";
+      } else {
+        html += "<p><em>The reply in its own words — its opening. The full reply is Step 5.</em></p>";
+        html += examineFirstParagraph(resp);
+      }
+      html += "<h4>How to reason about this</h4>";
+      html += "<p>Apply these questions to “" + esc(title) + "” before you decide:</p><ul>" +
+        "<li>What does the passage actually say, in its own context — not just the quoted line?</li>" +
+        "<li>What is the strongest form of the objection, and what would have to be true for it to hold?</li>" +
+        "<li>What would count against each side — what evidence would change your mind either way?</li>" +
+        "<li>Are you weighing the strongest version of each side, or the weakest?</li></ul>";
+    } else {
+      html += "<h3>Step 5 — Conclusion</h3>";
+      html += "<p><em>Where this site lands, and why — the site's reasoned position after the steps above. It is not presented as neutral, and not as the only possible reading: it is the conclusion this site reaches from the passages, evidence, and arguments you have just worked through.</em></p>";
+      html += renderValue("Response", val(row, "Response"));
+      html += "<h4>Go further</h4><ul>";
+      html += '<li><a href="#/objections/' + idx + '">Read the full objection page</a></li>';
+      if (!isEmpty(val(row, "RelatedTopics"))) html += "<li>Related topics: " + renderValue("RelatedTopics", val(row, "RelatedTopics")) + "</li>";
+      if (idx + 1 < rows.length) html += '<li><a href="#/objections/examine/' + (idx + 1) + '">Next objection to examine: ' + esc(val(rows[idx + 1], "Objection")) + "</a></li>";
+      else html += '<li><a href="#/objections/examine">Back to all objections</a></li>';
+      html += "</ul>";
+    }
+    var nav = "<p>";
+    if (step > 1) nav += '<a class="btn" href="#/objections/examine/' + idx + "?step=" + (step - 1) + '">&larr; Previous step</a> ';
+    if (step < 5) nav += '<a class="btn" href="#/objections/examine/' + idx + "?step=" + (step + 1) + '">Next step &rarr;</a>';
+    else nav += '<a class="btn" href="#/objections/examine">Back to all objections</a>';
+    nav += "</p>";
+    html += nav;
+    app.innerHTML = html;
+    window.scrollTo(0, 0);
+  }
+
   /* ---------- router + boot ---------- */
   function render() {
     var raw = (location.hash || "#/").replace(/^#/, "");
@@ -4669,6 +4818,7 @@ function genBindInteractive(node) {
     if (path[0] === "lookup") return viewLookup(params);
     if (path[0] === "genealogy") return viewGenealogy(path[1] ? decodeURIComponent(path[1]) : null, params);
     if (path[0] === "atlas") return viewAtlas(params);
+    if (path[0] === "objections" && path[1] === "examine") return path[2] ? viewExamineWalkthrough(parseInt(decodeURIComponent(path[2]), 10), params) : viewExamineLanding();
     var c = coll(path[0]);
     if (c) return viewCollection(c.id, path[1] ? decodeURIComponent(path[1]) : null, params);
     return viewHome();
