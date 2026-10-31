@@ -118,7 +118,7 @@
      decides link-index tie-breaking. Any collection missing here falls
      back to the end of the tiles, so nothing can ever disappear. */
   var EXPLORE_ORDER = ["timeline", "books", "stories", "people", "groups", "places",
-    "journeys", "finds", "manuscripts", "civilizations", "questions", "hermeneutics", "jewishculture",
+    "finds", "manuscripts", "civilizations", "questions", "hermeneutics", "jewishculture",
     "topics", "wordstudies", "doctrines", "prophecies", "typology", "apologetics",
     "objections", "heresies", "fallacies", "perspectives", "heritage",
     "politics", "socialmedia", "courses", "studyguides", "quizzes", "hymns",
@@ -203,7 +203,7 @@
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
-  var ASSET_V = "188";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "189";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -2989,8 +2989,12 @@ function genBindInteractive(node) {
     html += "<div class='card atlas-card'><h3>Biblical Atlas</h3>" +
       "<p class='snippet'>Real places on a real map — every marker links to its place page.</p><p>" +
       "<a class='btn' href='#/atlas'>Open the Atlas</a></p></div>";
+    /* Journeys lives in the Atlas now, not on Explore: the concat fallback
+       below would re-append any collection missing from EXPLORE_ORDER at
+       the end, so journeys is filtered out of the rendered order outright. */
     var ordered = EXPLORE_ORDER.map(function (id) { return coll(id); }).filter(Boolean)
-      .concat(COLLECTIONS.filter(function (c) { return EXPLORE_ORDER.indexOf(c.id) === -1; }));
+      .concat(COLLECTIONS.filter(function (c) { return EXPLORE_ORDER.indexOf(c.id) === -1; }))
+      .filter(function (c) { return c.id !== "journeys"; });
     var gridHtml = "";
     var openGrid = false;
     ordered.forEach(function (c, i) {
@@ -4024,6 +4028,56 @@ function genBindInteractive(node) {
   var atlasTestament = "all", atlasEvidence = "all", atlasEra = "all", atlasQuery = "";
   var atlasMap = null, atlasMarkerLayer = null, atlasLeafletState = "idle";
   var atlasPendingFocus = null;
+  var atlasJourney = "all"; // "all" or a journeys index: the Atlas journey picker
+  function atlasRowForPlaceName(name) {
+    var n = (name || "").trim();
+    var i;
+    for (i = 0; i < atlasItems.length; i++) if (atlasItems[i].placeName === n) return atlasItems[i];
+    for (i = 0; i < atlasItems.length; i++) if ((atlasItems[i].altNames || []).indexOf(n) !== -1) return atlasItems[i];
+    var slug = n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+    for (i = 0; i < atlasItems.length; i++) if (atlasItems[i].placeSlug === slug) return atlasItems[i];
+    return null;
+  }
+  function atlasJourneySelected() {
+    if (atlasJourney === "all") return null;
+    var rows = data.journeys || [];
+    var idx = parseInt(atlasJourney, 10);
+    if (isNaN(idx) || idx < 0 || idx >= rows.length) return null;
+    return { row: rows[idx], idx: idx };
+  }
+  function atlasJourneyStages() {
+    var sel = atlasJourneySelected();
+    if (!sel) return [];
+    return val(sel.row, "Stages").split(";").map(function (s) { return s.trim(); }).filter(function (s) { return !!s; }).map(function (name) {
+      var row = atlasRowForPlaceName(name);
+      var mapped = !!(row && row.lat !== null && row.lat !== undefined && row.lon !== null && row.lon !== undefined);
+      return { name: name, row: row, mapped: mapped };
+    });
+  }
+  function atlasJourneyPanelHTML() {
+    var sel = atlasJourneySelected();
+    if (!sel) return "";
+    var row = sel.row;
+    var stages = atlasJourneyStages();
+    var who = [];
+    var trav = val(row, "Travelers"), grp = val(row, "Group");
+    if (trav) who.push("Travelers: " + esc(trav));
+    if (grp && grp !== "No") who.push("Group: " + esc(grp));
+    function placeLink(name) {
+      var r = atlasRowForPlaceName(name);
+      return r ? "<a href='#/places/" + r.placeIndex + "'>" + esc(name) + "</a>" : esc(name);
+    }
+    var html = "<div class='card'><h3>" + esc(val(row, "Journey")) + "</h3>";
+    if (who.length) html += "<p class='meta'>" + who.join(" · ") + "</p>";
+    html += "<p class='meta'>" + placeLink(val(row, "FromPlace")) + " &rarr; " + placeLink(val(row, "ToPlace")) + "</p>";
+    html += "<ol>" + stages.map(function (st) {
+      var link = st.row ? "<a href='#/places/" + st.row.placeIndex + "'>" + esc(st.name) + "</a>" : esc(st.name);
+      return "<li>" + link + (st.row && !st.mapped ? " <span class='meta'>(no map marker)</span>" : "") + "</li>";
+    }).join("") + "</ol>";
+    html += "<p>Scripture: " + linkifyScriptureRefs(val(row, "Scripture")) + "</p>";
+    html += "<p><a class='btn' href='#/journeys/" + sel.idx + "'>Open full journey page &rarr;</a></p></div>";
+    return html;
+  }
   function atlasFiltered() {
     var q = atlasQuery.toLowerCase();
     return atlasItems.filter(function (it) {
@@ -4056,20 +4110,36 @@ function genBindInteractive(node) {
     if (atlasMarkerLayer) atlasMap.removeLayer(atlasMarkerLayer);
     atlasMarkerLayer = window.L.layerGroup();
     atlasMarkerByIndex = {};
+    /* Journey highlight (markers only — no route lines: a straight line
+       would imply an unverified path). Stage markers get a navy pin with
+       a rose ring, sit above the other markers, and name their stage in
+       the popup; stages with no map point get no marker at all. */
+    var journeySel = atlasJourneySelected();
+    var stageSet = {}, stageNum = {};
+    var stages = atlasJourneyStages();
+    stages.forEach(function (st, n) { if (st.mapped) { stageSet[st.row.placeIndex] = true; stageNum[st.row.placeIndex] = n + 1; } });
+    var markerRows = rows.slice();
+    if (journeySel) stages.forEach(function (st) { if (st.mapped && markerRows.indexOf(st.row) === -1) markerRows.push(st.row); });
     var bounds = [];
-    rows.forEach(function (it) {
+    var stageBounds = [];
+    markerRows.forEach(function (it) {
       if (it.lat === null || it.lat === undefined || it.lon === null || it.lon === undefined) return;
-      var icon = window.L.divIcon({ className: "atlas-pin-wrap", html: '<span class="atlas-pin' + (it.evidence === "Probable" ? " probable" : "") + '"></span>', iconSize: [22, 22], iconAnchor: [11, 11] });
+      var isStage = !!stageSet[it.placeIndex];
+      var icon = window.L.divIcon({ className: "atlas-pin-wrap", html: '<span class="atlas-pin' + (it.evidence === "Probable" ? " probable" : "") + '"' + (isStage ? ' style="background:#1B2A4E;border:3px solid #e91e63;"' : "") + '></span>', iconSize: [22, 22], iconAnchor: [11, 11] });
       var popup = "<strong>" + esc(it.placeName) + "</strong><br>" + esc(it.modernName) +
         "<br><span class='atlas-badge'>" + esc(it.evidence) + "</span><br><span class='atlas-note'>" + esc(it.confidenceNote) + "</span>" +
+        (isStage ? "<br><span class='meta'>Stage " + stageNum[it.placeIndex] + " of " + esc(val(journeySel.row, "Journey")) + "</span>" : "") +
         "<br><a href='#/places/" + it.placeIndex + "'>View place page →</a>";
-      var marker = window.L.marker([it.lat, it.lon], { icon: icon }).bindPopup(popup);
+      var marker = window.L.marker([it.lat, it.lon], { icon: icon, zIndexOffset: isStage ? 1000 : 0 }).bindPopup(popup);
       marker.addTo(atlasMarkerLayer);
       atlasMarkerByIndex[it.placeIndex] = marker;
       bounds.push([it.lat, it.lon]);
+      if (isStage) stageBounds.push([it.lat, it.lon]);
     });
     atlasMarkerLayer.addTo(atlasMap);
-    if (bounds.length > 1) atlasMap.fitBounds(bounds, { padding: [30, 30] });
+    if (stageBounds.length > 1) atlasMap.fitBounds(stageBounds, { padding: [30, 30] });
+    else if (stageBounds.length === 1) atlasMap.setView(stageBounds[0], 8);
+    else if (bounds.length > 1) atlasMap.fitBounds(bounds, { padding: [30, 30] });
     else if (bounds.length === 1) atlasMap.setView(bounds[0], 8);
     if (atlasPendingFocus !== null && atlasMarkerByIndex[atlasPendingFocus]) {
       var fIt = null;
@@ -4085,6 +4155,8 @@ function genBindInteractive(node) {
     var rows = atlasFiltered();
     if (count) count.textContent = "Showing " + rows.length + " of " + atlasItems.length + " places";
     list.innerHTML = rows.length ? rows.map(atlasRow).join("") : "<p class='empty'>No places match those filters.</p>";
+    var jp = document.getElementById("atlasJourneyPanel");
+    if (jp) jp.innerHTML = atlasJourneyPanelHTML();
     list.querySelectorAll(".atlas-name-btn").forEach(function (b) {
       b.addEventListener("click", function () {
         var idx = +b.getAttribute("data-idx");
@@ -4147,7 +4219,7 @@ function genBindInteractive(node) {
     var eras = ATLAS_ERA_ORDER.filter(function (e) {
       return atlasItems.some(function (it) { return (it.periods || []).indexOf(e) !== -1; });
     });
-    var html = "<h2>Biblical Atlas</h2><p class='page-intro'>All 459 places from Biblical Places. Markers show the places whose locations are verified; every row links to its place page, and tapping a place name shows it on the map.</p>";
+    var html = "<h2>Biblical Atlas</h2><p class='page-intro'>All 459 places from Biblical Places. Markers show the places whose locations are verified; every row links to its place page, tapping a place name shows it on the map, and the Journey picker below highlights one journey's stages on the map.</p>";
     if (!atlasItems.length) {
       html += "<p class='empty'>The atlas data is not available right now.</p>";
     } else {
@@ -4163,7 +4235,14 @@ function genBindInteractive(node) {
         "<span class='chip-label'>Evidence:</span>" +
         [["all", "All"], ["Confirmed", "Confirmed"], ["Probable", "Probable"], ["Disputed", "Disputed"], ["Unknown", "Unknown"]].map(function (t) {
           return "<button class='chip atlas-ev-chip" + (atlasEvidence === t[0] ? " active" : "") + "' data-v='" + t[0] + "'>" + t[1] + "</button>";
-        }).join("") + "</div>" +
+        }).join("") +
+        "<span class='chip-label'>Journey:</span><select id='atlasJourney'><option value='all'" + (atlasJourney === "all" ? " selected" : "") + ">All places</option>" +
+        (data.journeys || []).map(function (j, ji) {
+          var grp = val(j, "Group"), trav = val(j, "Travelers");
+          var who = (grp && grp !== "No") ? grp : trav;
+          return "<option value='" + ji + "'" + (atlasJourney === String(ji) ? " selected" : "") + ">" + esc(val(j, "Journey")) + (who ? " — " + esc(who) : "") + "</option>";
+        }).join("") + "</select></div>" +
+        "<div id='atlasJourneyPanel'></div>" +
         "<p class='meta' id='atlasCount'></p><div id='atlasList'></div>";
     }
     html += "<p class='meta'>Place locations: <a href='https://www.openbible.info/geo/'>OpenBible.info Bible Geocoding</a> (CC BY 4.0). Cross-checks: <a href='https://pleiades.stoa.org/'>Pleiades</a> (CC BY 3.0). Ancient base map: <a href='http://imperium.ahlfeldt.se'>Digital Atlas of the Roman Empire</a> (CC BY-SA 3.0); modern base map: Humanitarian OpenStreetMap (© OpenStreetMap contributors). Ancient geography is approximate; disputed locations are labelled, never hidden.</p>";
@@ -4176,6 +4255,8 @@ function genBindInteractive(node) {
       if (search) search.addEventListener("input", function () { atlasQuery = search.value.trim(); atlasRefresh(); });
       var era = document.getElementById("atlasEra");
       if (era) era.addEventListener("change", function () { atlasEra = era.value; atlasRefresh(); });
+      var jsel = document.getElementById("atlasJourney");
+      if (jsel) jsel.addEventListener("change", function () { atlasJourney = jsel.value; atlasRefresh(); });
       document.querySelectorAll(".atlas-test-chip").forEach(function (b) {
         b.addEventListener("click", function () {
           atlasTestament = b.getAttribute("data-t");
