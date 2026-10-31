@@ -521,5 +521,33 @@
     "VerificationStatus": "Awaiting Review",
     "Sources": "",
     "LastReviewed": ""
+  },
+  {
+    "Argument": "Christianity by Elimination",
+    "Category": "Philosophy",
+    "Summary": "This argument works in four steps, and it applies the same standard at every step: evidence, logical coherence, and explanatory scope. First, God's existence is established logically, not assumed — the collection's arguments from Contingency, Degrees, the Transcendental Argument, Abstract Objects, and Necessary Attributes converge on a necessary, intelligent, moral ground of reality. Second, the major rival worldviews are tested against that same standard, each stated as its own adherents hold it: atheism and naturalism, pantheism, polytheism, deism, Buddhism, Hinduism, Judaism, and Islam. Each is found, in this site's reasoned assessment, to fall short somewhere — unable to explain existence itself, or moral obligation, or consciousness, or evil, or history — and where scholars genuinely debate a point, that debate is named rather than hidden. Third, Christianity's own positive evidence is weighed: the resurrection of Jesus, fulfilled prophecy, the reliability of the New Testament manuscripts, and a church that began in Jerusalem under persecution. Fourth, the conclusion: Christianity is the worldview that survives the scrutiny applied to the others and explains the most — one God, a moral order, a rational universe, a historical redemption, and an answer to evil that neither denies suffering nor leaves it meaningless. The verdict is offered as a reasoned judgment for the reader to weigh step by step, not as a claim everyone already concedes.",
+    "KeyPoints": "First establish God's existence: the collection's arguments from Contingency, Degrees, the Transcendental Argument, Abstract Objects, and Necessary Attributes converge on a necessary, intelligent, moral ground of reality; Test every rival by the same standard: evidence, logical coherence, and explanatory scope; Atheism and naturalism, fairly stated, struggle to explain existence itself, an intelligible universe, objective moral obligation, and reason that reliably tracks truth; Pantheism, fairly stated, struggles with personal moral accountability, evil as more than illusion, and a God personal enough to act in history; Polytheism, fairly stated, struggles with one ordered universe, one moral order, and a first cause needing no cause; Deism keeps a Creator but gives up revelation, miracles, and a God who acts, leaving history's claims unevaluated; Buddhism and Hinduism, in their classical forms and with real internal diversity, speak powerfully to suffering but set aside a personal Creator and a once-for-all historical redemption; Judaism shares Christianity's God and Scriptures — the dividing question is historical — whether Jesus is the promised Messiah; Islam shares strict monotheism — the dividing questions are historical and theological — whether Jesus died and rose, and whether God is triune and incarnate; Christianity's positive evidence: the resurrection, fulfilled prophecy, manuscript reliability, and a church born under persecution in Jerusalem; Conclusion, as this site's reasoned assessment: Christianity survives the same scrutiny and explains the most — one God, moral order, a rational universe, historical redemption, and an answer to evil",
+    "Scripture": "Romans 1:19-20; 1 Peter 3:15; Acts 17:26-27; John 14:6; 1 Corinthians 15:3-8; Isaiah 53:5-6",
+    "RelatedTopics": "Apologetics; Evidence; Faith and Reason; Worldviews; Existence of God; Resurrection; Jesus Christ; Prophecy; Morality; Evil and Suffering",
+    "RelatedBooks": "Romans; 1 Peter; Acts; John; 1 Corinthians; Isaiah",
+    "Slug": "christianity-by-elimination",
+    "RelatedPeople": "Jesus; Simon Peter; Paul",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
+  },
+  {
+    "Argument": "The Necessary Attributes of God",
+    "Category": "Philosophy",
+    "Summary": "Suppose, as the argument from contingency concludes, that a necessary Being stands behind everything that exists. What must that Being be like? The answer can be read off what we observe. A cause of time itself cannot be bound by time, so it must be timeless and eternal. A cause of space cannot be located inside space, so it must be spaceless, not confined to any place. A cause of matter cannot itself be material, so it must be immaterial spirit. A cause that produced a universe of staggering power and precise, intelligible order must be immensely powerful and intelligent. And a cause that produced conscious persons who know right from wrong must itself be personal and good, since an impersonal force does not explain minds or morals. Scripture names the same profile: the 'I AM' who inhabits eternity, who is Spirit, and who is love. The limits are stated honestly: philosophers debate how tightly some of these steps follow, and this argument on its own establishes the classical profile of God rather than the full Christian doctrine of the Trinity or the Incarnation — it tells us what kind of God the rest of the Christian case must then identify.",
+    "KeyPoints": "A cause of time must stand outside time: timeless and eternal; A cause of space is not contained by space: spaceless, not confined to any place; A cause of matter is not made of matter: immaterial spirit; A cause of a powerful, ordered universe must be immensely powerful and intelligent; A cause of conscious, moral persons must itself be personal and good; Limits stated honestly: some steps are debated, and this argument alone does not prove the Trinity or the Incarnation",
+    "Scripture": "Exodus 3:14; Psalm 90:2; Isaiah 57:15; John 4:24; Romans 1:19-20; 1 John 4:8",
+    "RelatedTopics": "Apologetics; Creation; Eternity; Reason",
+    "RelatedBooks": "Exodus; Psalms; Isaiah; John; Romans",
+    "Slug": "the-necessary-attributes-of-god",
+    "RelatedPeople": "",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "Holy Bible (King James Version); Thomas Aquinas, Summa Theologiae, Part I (on the divine attributes generally)",
+    "LastReviewed": ""
   }
 ]
