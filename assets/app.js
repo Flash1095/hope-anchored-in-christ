@@ -196,7 +196,7 @@
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
-  var ASSET_V = "185";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "186";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1016,15 +1016,16 @@
       (meta ? '<p class="meta">' + esc(meta) + "</p>" : "") +
       (snip ? '<p class="snippet">' + esc(snip) + "</p>" : "") + "</a>";
   }
-  /* ---------- people profile extra sections: Life timeline, Family,
-     Verses mentioning this person. Added for the "add these to each
-     person" request (Oct 2026): the sections mirror another Bible app's
-     profile page, but every item comes from data the site already has
-     — genealogy edges, stories, timeline entries, and the verse-text
-     link index. Nothing is invented: no per-place actions (the site
-     has no such data), no family for unmapped profiles, no verses the
-     reader itself does not link to the profile. Computed lazily, one
-     profile at a time, and cached per profile for the session. ---------- */
+  /* ---------- people profile extra sections: Places, Events,
+     Civilizations, Family, Verses mentioning this person. Every item
+     comes from data the site already has — genealogy edges, stories,
+     timeline entries, places, civilizations, and the verse-text link
+     index. Nothing is invented: a place's purpose is the event that
+     puts the person there, profile-field places with no event are
+     listed plainly without a claimed purpose, no family for unmapped
+     profiles, no verses the reader itself does not link to the
+     profile. Computed lazily, one profile at a time, and cached per
+     profile for the session. ---------- */
   var personExtraCache = {};
   var bibleBooksPromise = null;
   function escRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
@@ -1265,12 +1266,14 @@
     if (!any) html += "<p>No family connections recorded in the genealogies for this person.</p>";
     return html;
   }
-  /* Life timeline for one profile, from existing data only: timeline
-     entries whose KeyPersons names the person (in timeline order),
-     then stories whose KeyPeople names the person (in canonical book
-     order via the story's first RelatedBook). A token counts only on
-     an exact match with the profile Name — a bare "Mary" in a story
-     does not claim Mary, Mother of Jesus. */
+  /* Timeline + story items for one profile, from existing data only:
+     timeline entries whose KeyPersons names the person (in timeline
+     order), then stories whose KeyPeople names the person (in
+     canonical book order via the story's first RelatedBook). Each
+     item also carries the places it names (timeline Places, story
+     Place), so the Places section can group events by place. A token
+     counts only on an exact match with the profile Name — a bare
+     "Mary" in a story does not claim Mary, Mother of Jesus. */
   function bookOrderOf(relatedBooks) {
     var first = splitList(relatedBooks)[0];
     if (!first) return 999;
@@ -1282,7 +1285,7 @@
     var items = [];
     (data.timeline || []).forEach(function (row, i) {
       if (splitList(val(row, "KeyPersons")).indexOf(name) !== -1) {
-        items.push({ kind: "timeline", idx: i, title: val(row, "Title"), ref: val(row, "ScriptureReference"), era: val(row, "Era"), date: val(row, "DateApprox") });
+        items.push({ kind: "timeline", idx: i, title: val(row, "Title"), ref: val(row, "ScriptureReference"), era: val(row, "Era"), date: val(row, "DateApprox"), places: splitList(val(row, "Places")) });
       }
     });
     var stories = [];
@@ -1293,7 +1296,7 @@
       return (bookOrderOf(val(a.row, "RelatedBooks")) - bookOrderOf(val(b.row, "RelatedBooks"))) || (a.idx - b.idx);
     });
     stories.forEach(function (s) {
-      items.push({ kind: "story", idx: s.idx, title: val(s.row, "Story"), ref: val(s.row, "Scripture") });
+      items.push({ kind: "story", idx: s.idx, title: val(s.row, "Story"), ref: val(s.row, "Scripture"), places: splitList(val(s.row, "Place")) });
     });
     return items;
   }
@@ -1302,18 +1305,15 @@
     return "<li><a href='" + href + "'>" + esc(it.title) + "</a>" +
       (it.ref ? ' <span class="gen-refs">(' + linkifyScriptureRefs(it.ref) + ")</span>" : "") + "</li>";
   }
-  /* ---------- "When They Lived" (Oct 2026): a toggle between two
-     lenses on the same question — Timeline mode (the person's era
-     plus their dated timeline moments) and Eras & Civilizations
-     mode (the civilizations and peoples of that era). The era lists
-     are era-level contemporaries only, never peoples the person
-     personally met or lived under; every name is an exact
-     civilizations entry, verified against content/civilizations.json.
-     Individual Israelite tribes are omitted (covered by Israel /
-     Judah); entries dated only "1st century AD" sit in Early
-     Church, the era of the Acts narratives that name them. Mode
-     lives in memory only and resets to Timeline on each render,
-     like the genealogy Tree | Timeline toggle. ---------- */
+  /* ---------- ERA_CIVILIZATIONS: the civilizations and peoples of
+     each era, as era-level contemporaries only — never peoples a
+     given person personally met or lived under. Every name is an
+     exact civilizations entry, verified against
+     content/civilizations.json. Individual Israelite tribes are
+     omitted (covered by Israel / Judah); entries dated only
+     "1st century AD" sit in Early Church, the era of the Acts
+     narratives that name them. Used by the Civilizations section of
+     people pages and by the timeline visualization. ---------- */
   var ERA_CIVILIZATIONS = {
     "Primeval / Patriarchs": ["Egypt", "Canaan", "Elam", "Babylon", "Israel", "Amorites", "Hivites", "Perizzites", "Jebusites", "Girgashites", "Midianites", "Ishmaelites", "Amalekites", "Cush", "Kenites", "Kenizzites", "Horites", "Kadmonites", "Rephaim", "Nephilim"],
     "Exodus and Wilderness": ["Egypt", "Canaan", "Phoenicia", "Hittite Empire", "Amorites", "Hivites", "Perizzites", "Jebusites", "Girgashites", "Midianites", "Ishmaelites", "Amalekites", "Anakim", "Edom", "Moab", "Ammon", "Elam", "Cush", "Israel", "Kenites", "Kenizzites", "Rephaim", "Nephilim"],
@@ -1325,89 +1325,131 @@
     "Life of Christ": ["Rome", "Parthians", "Arabia", "Sheba", "Cush", "Galatians", "Israel", "Judah", "Samaritans"],
     "Early Church": ["Rome", "Parthians", "Arabia", "Sheba", "Cush", "Galatians", "Israel", "Judah", "Samaritans", "Alexandrians", "Cappadocians", "Cilicians", "Cretans", "Cypriots", "Cyrenians", "Lycaonians", "Mesopotamians", "Pamphylians", "Phrygians", "Pontians", "Scythians", "Syrophoenicians"]
   };
-  function personWhenLivedHTML(idx) {
+  /* Places for one profile, derived from existing data only:
+     timeline entries whose KeyPersons names the person (exact match)
+     combined with those entries' Places, plus stories whose KeyPeople
+     names the person combined with the story's Place. Grouped by
+     place, in order of first appearance; under each place, the events
+     that put the person there, each with its linked Scripture. Places
+     from the profile's own Places field with no derived event are
+     listed plainly at the end — no purpose is claimed for them. A
+     place name with no matching place entry renders as plain text,
+     never a broken link. */
+  function personPlacesHTML(idx) {
     var row = (data.people || [])[idx] || {};
-    var era = (val(row, "TimelineEra") || "").trim();
     var cache = personExtraCache[idx] || (personExtraCache[idx] = {});
     if (!cache.timeline) cache.timeline = personTimelineItems(idx);
-    var dated = cache.timeline.filter(function (it) { return it.kind === "timeline"; });
-    var html = "<h3>When They Lived</h3>";
-    html += '<div class="chips"><span class="chip-label">Show:</span>' +
-      '<button type="button" class="chip active" id="personWhenTimelineBtn">Timeline</button>' +
-      '<button type="button" class="chip" id="personWhenErasBtn">Eras &amp; Civilizations</button></div>';
-    html += '<div id="personWhenTimeline">';
-    if (era) html += "<p>Era: <strong>" + esc(era) + "</strong></p>";
-    if (!era && !dated.length) {
-      html += "<p>No timeline record for this person yet.</p>";
-    } else if (!dated.length) {
-      html += "<p>No dated timeline moments recorded for this person yet.</p>";
-    } else {
-      html += "<ol>" + dated.map(function (it) {
-        var h = "<li><a href='#/timeline/" + it.idx + "'>" + esc(it.title) + "</a>";
-        var bits = [];
-        if (it.era) bits.push(esc(it.era));
-        if (it.date) bits.push(esc(it.date));
-        if (bits.length) h += ' <span class="gen-refs">(' + bits.join(" · ") + ")</span>";
-        if (it.ref) h += ' <span class="gen-refs">(' + linkifyScriptureRefs(it.ref) + ")</span>";
-        return h + "</li>";
-      }).join("") + "</ol>";
+    var pmap = {};
+    (data.places || []).forEach(function (pr, pi) { pmap[val(pr, "Name")] = pi; });
+    var groups = [], byName = {};
+    cache.timeline.forEach(function (it) {
+      (it.places || []).forEach(function (pname) {
+        if (!byName[pname]) { byName[pname] = []; groups.push(pname); }
+        byName[pname].push(it);
+      });
+    });
+    function placeNameHTML(pname) {
+      if (pmap[pname] !== undefined) return '<a href="#/places/' + pmap[pname] + '">' + esc(pname) + "</a>";
+      return esc(pname);
     }
-    html += "</div>";
-    html += '<div id="personWhenEras" style="display:none">';
-    var civs = ERA_CIVILIZATIONS[era];
-    if (!era || !civs) {
+    function placeEventHTML(it) {
+      var href = it.kind === "story" ? "#/stories/" + it.idx : "#/timeline/" + it.idx;
+      return "<li><a href='" + href + "'>" + esc(it.title) + "</a>" +
+        (it.ref ? ' <span class="gen-refs">(' + linkifyScriptureRefs(it.ref) + ")</span>" : "") + "</li>";
+    }
+    var html = "<h3>Places</h3>";
+    groups.forEach(function (pname) {
+      html += "<h4>" + placeNameHTML(pname) + "</h4><ul>" +
+        byName[pname].map(placeEventHTML).join("") + "</ul>";
+    });
+    var others = splitList(val(row, "Places")).filter(function (pname) { return !byName[pname]; });
+    if (others.length) {
+      html += "<h4>Other places named in this profile</h4><ul>" +
+        others.map(function (pname) { return "<li>" + placeNameHTML(pname) + "</li>"; }).join("") + "</ul>";
+    }
+    if (!groups.length && !others.length) {
+      html += "<p>No places recorded for this person yet.</p>";
+    }
+    return html;
+  }
+  /* Events of the person's life: the old Life timeline content in a
+     plain list — timeline events in timeline order, then stories in
+     canonical book order, each with its linked Scripture. First 50
+     render inline, the rest behind Show more. */
+  function personEventsHTML(idx) {
+    var cache = personExtraCache[idx] || (personExtraCache[idx] = {});
+    if (!cache.timeline) cache.timeline = personTimelineItems(idx);
+    var items = cache.timeline;
+    var html = "<h3>Events</h3>";
+    if (!items.length) {
+      html += "<p>No events recorded for this person yet.</p>";
+    } else {
+      html += "<p class='page-intro'>Timeline events in timeline order, then Bible stories in canonical book order.</p>";
+      html += '<ol id="personEventsList">' + items.slice(0, 50).map(timelineItemHTML).join("") + "</ol>";
+      if (items.length > 50) html += '<p><button class="btn" id="personEventsMore">Show more (50 of ' + items.length + ")</button></p>";
+    }
+    return html;
+  }
+  /* Civilizations, Nations & Tribes for one profile, in two labeled
+     groups. "Of their time" reuses the ERA_CIVILIZATIONS table (era-
+     level contemporaries only, never peoples the person personally
+     met or lived under). "Connected with this person" lists
+     civilizations whose RelatedPeople names the person exactly; a
+     civilization in both groups appears once, in the connected
+     group. Tribe entries live in the civilizations collection, so
+     they are covered by the same mechanism. */
+  function personCivHTML(idx) {
+    var row = (data.people || [])[idx] || {};
+    var name = val(row, "Name");
+    var era = (val(row, "TimelineEra") || "").trim();
+    var cmap = {};
+    (data.civilizations || []).forEach(function (cr, ci) { cmap[val(cr, "Civilization")] = ci; });
+    var connected = [];
+    (data.civilizations || []).forEach(function (cr) {
+      if (splitList(val(cr, "RelatedPeople")).indexOf(name) !== -1) connected.push(val(cr, "Civilization"));
+    });
+    var connSet = {};
+    connected.forEach(function (n) { connSet[n] = true; });
+    function civNameHTML(n) {
+      if (cmap[n] !== undefined) return '<a href="#/civilizations/' + cmap[n] + '">' + esc(n) + "</a>";
+      return esc(n);
+    }
+    var html = "<h3>Civilizations, Nations &amp; Tribes</h3>";
+    html += "<h4>Of their time</h4>";
+    var eraCivs = ERA_CIVILIZATIONS[era];
+    if (!era || !eraCivs) {
       html += "<p>No era recorded for this person yet.</p>";
     } else {
       html += "<p>Civilizations of the " + esc(era) + " era. These shared the person's era — they are not necessarily peoples this person met or lived under.</p>";
-      var cmap = {};
-      (data.civilizations || []).forEach(function (cr, ci) { cmap[val(cr, "Civilization")] = ci; });
-      html += "<ul>" + civs.map(function (name) {
-        var ci = cmap[name];
-        if (ci === undefined) return "<li>" + esc(name) + "</li>";
-        return '<li><a href="#/civilizations/' + ci + '">' + esc(name) + "</a></li>";
-      }).join("") + "</ul>";
+      var rest = eraCivs.filter(function (n) { return !connSet[n]; });
+      if (!rest.length) {
+        html += "<p>Every civilization of this era is listed under Connected with this person.</p>";
+      } else {
+        html += "<ul>" + rest.map(function (n) { return "<li>" + civNameHTML(n) + "</li>"; }).join("") + "</ul>";
+      }
     }
-    html += "</div>";
+    html += "<h4>Connected with this person</h4>";
+    if (!connected.length) {
+      html += "<p>No civilizations or nations are directly linked to this person yet.</p>";
+    } else {
+      html += "<ul>" + connected.map(function (n) { return "<li>" + civNameHTML(n) + "</li>"; }).join("") + "</ul>";
+    }
     return html;
-  }
-  function bindPersonWhenToggle() {
-    var tBtn = document.getElementById("personWhenTimelineBtn");
-    var eBtn = document.getElementById("personWhenErasBtn");
-    var tBody = document.getElementById("personWhenTimeline");
-    var eBody = document.getElementById("personWhenEras");
-    if (!tBtn || !eBtn || !tBody || !eBody) return;
-    function show(mode) {
-      var tl = mode === "timeline";
-      tBody.style.display = tl ? "" : "none";
-      eBody.style.display = tl ? "none" : "";
-      tBtn.className = "chip" + (tl ? " active" : "");
-      eBtn.className = "chip" + (tl ? "" : " active");
-    }
-    tBtn.addEventListener("click", function () { show("timeline"); });
-    eBtn.addEventListener("click", function () { show("eras"); });
   }
   function personSectionsHTML(idx) {
     var cache = personExtraCache[idx] || (personExtraCache[idx] = {});
     if (!cache.timeline) cache.timeline = personTimelineItems(idx);
-    var items = cache.timeline;
-    var html = "<h3>Life timeline</h3>";
-    if (!items.length) {
-      html += "<p>No timeline moments recorded for this person yet.</p>";
-    } else {
-      html += "<p class='page-intro'>Timeline events in timeline order, then Bible stories in canonical book order.</p>";
-      html += '<ol id="personTimelineList">' + items.slice(0, 50).map(timelineItemHTML).join("") + "</ol>";
-      if (items.length > 50) html += '<p><button class="btn" id="personTimelineMore">Show more (50 of ' + items.length + ")</button></p>";
-    }
-    html += personWhenLivedHTML(idx);
+    var html = personPlacesHTML(idx);
+    html += personEventsHTML(idx);
+    html += personCivHTML(idx);
     html += personFamilyHTML(idx);
     html += '<h3>Verses mentioning this person</h3><div id="personVersesWrap"><p class="loading">Loading verses…</p></div>';
     return html;
   }
   function bindPersonSections(idx) {
-    bindPersonWhenToggle();
     var cache = personExtraCache[idx] || {};
     if (cache.timeline && cache.timeline.length > 50) {
-      bindBatchedMore("personTimelineList", "personTimelineMore", cache.timeline, 50, timelineItemHTML);
+      bindBatchedMore("personEventsList", "personEventsMore", cache.timeline, 50, timelineItemHTML);
     }
     computePersonVerses(idx).then(function (verses) {
       var wrap = document.getElementById("personVersesWrap");
@@ -5095,7 +5137,9 @@ function genBindInteractive(node) {
     __hopeStatic.computePersonVerses = computePersonVerses;
     __hopeStatic.personTimelineItems = personTimelineItems;
     __hopeStatic.personFamilyHTML = personFamilyHTML;
-    __hopeStatic.personWhenLivedHTML = personWhenLivedHTML;
+    __hopeStatic.personPlacesHTML = personPlacesHTML;
+    __hopeStatic.personEventsHTML = personEventsHTML;
+    __hopeStatic.personCivHTML = personCivHTML;
     __hopeStatic.timelineVizData = timelineVizData;
     __hopeStatic.timelineVizDetail = timelineVizDetail;
     __hopeStatic.personSectionsHTML = personSectionsHTML;

@@ -909,8 +909,9 @@ def people_family_html(idx, genealogy, people_slugs):
     return html
 
 
-def people_timeline_html(idx, people_rows, story_entries, timeline_entries, bible_books):
-    """Life timeline for one people static page: timeline entries whose
+def people_events_html(idx, people_rows, story_entries, timeline_entries, bible_books):
+    """Events of one person's life for a people static page: the old
+    Life timeline content in a plain list — timeline entries whose
     KeyPersons names the person (aggregate order), then stories whose
     KeyPeople names the person (canonical book order via the story's
     first RelatedBook). Exact token matches only, same rule as the SPA."""
@@ -934,7 +935,7 @@ def people_timeline_html(idx, people_rows, story_entries, timeline_entries, bibl
         items.append(("story", e["slug"], (row.get("Story") or "").strip(),
                       (row.get("Scripture") or "").strip()))
     if not items:
-        return "<h3>Life timeline</h3><p>No timeline moments recorded for this person yet.</p>"
+        return "<h3>Events</h3><p>No events recorded for this person yet.</p>"
 
     def item_html(it):
         kind, slug, title, ref = it
@@ -945,12 +946,79 @@ def people_timeline_html(idx, people_rows, story_entries, timeline_entries, bibl
         return h + "</li>"
 
     first, rest = items[:50], items[50:]
-    html = "<h3>Life timeline</h3>"
+    html = "<h3>Events</h3>"
     html += "<p class='page-intro'>Timeline events in timeline order, then Bible stories in canonical book order.</p>"
     html += "<ol>" + "".join(item_html(it) for it in first) + "</ol>"
     if rest:
         html += '<details><summary>Show more (50 of %d)</summary><ol>' % len(items)
         html += "".join(item_html(it) for it in rest) + "</ol></details>"
+    return html
+
+
+def people_places_html(idx, people_rows, story_entries, timeline_entries, bible_books, place_slugs):
+    """Places for one people static page, porting the SPA section:
+    timeline entries whose KeyPersons names the person combined with
+    those entries' Places, plus stories whose KeyPeople names the
+    person combined with the story's Place. Grouped by place in order
+    of first appearance; under each place, the events that put the
+    person there, each with its linked Scripture. Places from the
+    profile's own Places field with no derived event are listed
+    plainly at the end, with no purpose claimed. A place name with no
+    matching place entry renders as plain text, never a broken link."""
+    name = (people_rows[idx].get("Name") or "").strip()
+    groups = []
+    by_name = {}
+
+    def add_event(pname, kind, slug, title, ref):
+        if pname not in by_name:
+            by_name[pname] = []
+            groups.append(pname)
+        by_name[pname].append((kind, slug, title, ref))
+
+    for e in timeline_entries:
+        row = e["row"]
+        if name in split_tokens(row.get("KeyPersons")):
+            for pname in split_tokens(row.get("Places")):
+                add_event(pname, "timeline", e["slug"], (row.get("Title") or "").strip(),
+                          (row.get("ScriptureReference") or "").strip())
+    order = {b["name"]: k for k, b in enumerate(bible_books)}
+    scored = []
+    for e in story_entries:
+        row = e["row"]
+        if name in split_tokens(row.get("KeyPeople")):
+            toks = split_tokens(row.get("RelatedBooks"))
+            scored.append((order.get(toks[0], 999) if toks else 999, e["idx"], e))
+    scored.sort(key=lambda t: (t[0], t[1]))
+    for _, _, e in scored:
+        row = e["row"]
+        for pname in split_tokens(row.get("Place")):
+            add_event(pname, "story", e["slug"], (row.get("Story") or "").strip(),
+                      (row.get("Scripture") or "").strip())
+
+    def place_name_html(pname):
+        slug = place_slugs.get(pname)
+        if slug:
+            return '<a href="../../places/%s/">%s</a>' % (esc(slug), esc(pname))
+        return esc(pname)
+
+    def event_html(it):
+        kind, slug, title, ref = it
+        href = "../../stories/%s/" % esc(slug) if kind == "story" else "../../timeline/%s/" % esc(slug)
+        h = '<li><a href="%s">%s</a>' % (href, esc(title))
+        if ref:
+            h += ' <span class="gen-refs">(' + linkify_scripture_refs(ref) + ")</span>"
+        return h + "</li>"
+
+    html = "<h3>Places</h3>"
+    for pname in groups:
+        html += "<h4>" + place_name_html(pname) + "</h4><ul>"
+        html += "".join(event_html(it) for it in by_name[pname]) + "</ul>"
+    others = [p for p in split_tokens(people_rows[idx].get("Places")) if p not in by_name]
+    if others:
+        html += "<h4>Other places named in this profile</h4><ul>"
+        html += "".join("<li>" + place_name_html(p) + "</li>" for p in others) + "</ul>"
+    if not groups and not others:
+        html += "<p>No places recorded for this person yet.</p>"
     return html
 
 
@@ -967,59 +1035,47 @@ ERA_CIVILIZATIONS = {
 }
 
 
-def people_when_lived_html(idx, people_rows, timeline_entries, civ_slugs):
-    """'When They Lived' for one people static page, porting the SPA
-    section: Timeline mode by default (era badge + the person's dated
-    timeline-entry moments, each with its Era and DateApprox), and the
-    Eras & Civilizations mode inside a <details> block. The civilization
-    list is era-level contemporaries only — never peoples the person
-    personally met or lived under — and every name is an exact
-    civilizations entry. A blank or unknown era gets the honest line,
-    never an invented placement."""
+def people_civ_html(idx, people_rows, civ_entries, civ_slugs):
+    """'Civilizations, Nations & Tribes' for one people static page,
+    porting the SPA section: 'Of their time' reuses the
+    ERA_CIVILIZATIONS table (era-level contemporaries only — never
+    peoples the person personally met or lived under), and 'Connected
+    with this person' lists civilizations whose RelatedPeople names
+    the person exactly. A civilization in both groups appears once,
+    in the connected group. Tribe entries live in the civilizations
+    collection, so they are covered by the same mechanism."""
     row = people_rows[idx]
     era = (row.get("TimelineEra") or "").strip()
     name = (row.get("Name") or "").strip()
-    dated = []
-    for e in timeline_entries:
-        r = e["row"]
-        if name in split_tokens(r.get("KeyPersons")):
-            dated.append((e["slug"], (r.get("Title") or "").strip(),
-                          (r.get("Era") or "").strip(),
-                          (r.get("DateApprox") or "").strip(),
-                          (r.get("ScriptureReference") or "").strip()))
-    html = "<h3>When They Lived</h3>"
-    if era:
-        html += "<p>Era: <strong>%s</strong></p>" % esc(era)
-    if not era and not dated:
-        html += "<p>No timeline record for this person yet.</p>"
-    elif not dated:
-        html += "<p>No dated timeline moments recorded for this person yet.</p>"
-    else:
-        items = []
-        for slug, title, e_era, date, ref in dated:
-            h = '<li><a href="../../timeline/%s/">%s</a>' % (esc(slug), esc(title))
-            bits = [b for b in (e_era, date) if b]
-            if bits:
-                h += ' <span class="gen-refs">(%s)</span>' % " · ".join(esc(b) for b in bits)
-            if ref:
-                h += ' <span class="gen-refs">(' + linkify_scripture_refs(ref) + ")</span>"
-            items.append(h + "</li>")
-        html += "<ol>" + "".join(items) + "</ol>"
-    html += '<details><summary>Eras &amp; Civilizations</summary>'
+    connected = []
+    for e in civ_entries:
+        if name in split_tokens(e["row"].get("RelatedPeople")):
+            connected.append((e["row"].get("Civilization") or "").strip())
+    conn_set = set(connected)
+
+    def civ_name_html(civ_name):
+        slug = civ_slugs.get(civ_name)
+        if slug:
+            return '<a href="../../civilizations/%s/">%s</a>' % (esc(slug), esc(civ_name))
+        return esc(civ_name)
+
+    html = "<h3>Civilizations, Nations &amp; Tribes</h3>"
+    html += "<h4>Of their time</h4>"
     civs = ERA_CIVILIZATIONS.get(era)
     if not era or not civs:
         html += "<p>No era recorded for this person yet.</p>"
     else:
         html += "<p>Civilizations of the %s era. These shared the person's era — they are not necessarily peoples this person met or lived under.</p>" % esc(era)
-        lis = []
-        for civ_name in civs:
-            slug = civ_slugs.get(civ_name)
-            if slug:
-                lis.append('<li><a href="../../civilizations/%s/">%s</a></li>' % (esc(slug), esc(civ_name)))
-            else:
-                lis.append("<li>%s</li>" % esc(civ_name))
-        html += "<ul>" + "".join(lis) + "</ul>"
-    html += "</details>"
+        rest = [n for n in civs if n not in conn_set]
+        if not rest:
+            html += "<p>Every civilization of this era is listed under Connected with this person.</p>"
+        else:
+            html += "<ul>" + "".join("<li>" + civ_name_html(n) + "</li>" for n in rest) + "</ul>"
+    html += "<h4>Connected with this person</h4>"
+    if not connected:
+        html += "<p>No civilizations or nations are directly linked to this person yet.</p>"
+    else:
+        html += "<ul>" + "".join("<li>" + civ_name_html(n) + "</li>" for n in connected) + "</ul>"
     return html
 
 
