@@ -954,6 +954,75 @@ def people_timeline_html(idx, people_rows, story_entries, timeline_entries, bibl
     return html
 
 
+ERA_CIVILIZATIONS = {
+    "Primeval / Patriarchs": ["Egypt", "Canaan", "Elam", "Babylon", "Israel", "Amorites", "Hivites", "Perizzites", "Jebusites", "Girgashites", "Midianites", "Ishmaelites", "Amalekites", "Cush", "Kenites", "Kenizzites", "Horites", "Kadmonites", "Rephaim", "Nephilim"],
+    "Exodus and Wilderness": ["Egypt", "Canaan", "Phoenicia", "Hittite Empire", "Amorites", "Hivites", "Perizzites", "Jebusites", "Girgashites", "Midianites", "Ishmaelites", "Amalekites", "Anakim", "Edom", "Moab", "Ammon", "Elam", "Cush", "Israel", "Kenites", "Kenizzites", "Rephaim", "Nephilim"],
+    "Conquest and Judges": ["Egypt", "Canaan", "Philistia", "Phoenicia", "Hittite Empire", "Aram", "Amorites", "Hivites", "Perizzites", "Jebusites", "Girgashites", "Midianites", "Ishmaelites", "Amalekites", "Anakim", "Geshurites", "Maacathites", "Moab", "Ammon", "Edom", "Elam", "Cush", "Israel", "Judah", "Kenites", "Kenizzites", "Rephaim", "Lydia"],
+    "United Monarchy": ["Egypt", "Canaan", "Philistia", "Phoenicia", "Aram", "Moab", "Ammon", "Edom", "Elam", "Cush", "Israel", "Judah", "Amalekites", "Geshurites", "Maacathites", "Kenites", "Rephaim", "Jebusites", "Lydia", "Libya", "Put", "Sheba", "Arabia"],
+    "Divided Monarchy": ["Egypt", "Philistia", "Phoenicia", "Aram", "Moab", "Ammon", "Edom", "Assyria", "Babylon", "Greece", "Rome", "Elam", "Cush", "Israel", "Judah", "Samaritans", "Amalekites", "Maacathites", "Media", "Lydia", "Libya", "Put", "Sheba", "Arabia", "Avites", "Cuthah", "Sepharvaim"],
+    "Exile": ["Egypt", "Philistia", "Phoenicia", "Babylon", "Persia", "Greece", "Rome", "Elam", "Cush", "Israel", "Judah", "Samaritans", "Moab", "Ammon", "Edom", "Media", "Lydia", "Libya", "Put", "Sheba", "Arabia"],
+    "Return and Second Temple": ["Egypt", "Phoenicia", "Persia", "Greece", "Rome", "Cush", "Israel", "Judah", "Samaritans", "Moab", "Ammon", "Edom", "Libya", "Put", "Sheba", "Arabia", "Parthians", "Galatians"],
+    "Life of Christ": ["Rome", "Parthians", "Arabia", "Sheba", "Cush", "Galatians", "Israel", "Judah", "Samaritans"],
+    "Early Church": ["Rome", "Parthians", "Arabia", "Sheba", "Cush", "Galatians", "Israel", "Judah", "Samaritans", "Alexandrians", "Cappadocians", "Cilicians", "Cretans", "Cypriots", "Cyrenians", "Lycaonians", "Mesopotamians", "Pamphylians", "Phrygians", "Pontians", "Scythians", "Syrophoenicians"],
+}
+
+
+def people_when_lived_html(idx, people_rows, timeline_entries, civ_slugs):
+    """'When They Lived' for one people static page, porting the SPA
+    section: Timeline mode by default (era badge + the person's dated
+    timeline-entry moments, each with its Era and DateApprox), and the
+    Eras & Civilizations mode inside a <details> block. The civilization
+    list is era-level contemporaries only — never peoples the person
+    personally met or lived under — and every name is an exact
+    civilizations entry. A blank or unknown era gets the honest line,
+    never an invented placement."""
+    row = people_rows[idx]
+    era = (row.get("TimelineEra") or "").strip()
+    name = (row.get("Name") or "").strip()
+    dated = []
+    for e in timeline_entries:
+        r = e["row"]
+        if name in split_tokens(r.get("KeyPersons")):
+            dated.append((e["slug"], (r.get("Title") or "").strip(),
+                          (r.get("Era") or "").strip(),
+                          (r.get("DateApprox") or "").strip(),
+                          (r.get("ScriptureReference") or "").strip()))
+    html = "<h3>When They Lived</h3>"
+    if era:
+        html += "<p>Era: <strong>%s</strong></p>" % esc(era)
+    if not era and not dated:
+        html += "<p>No timeline record for this person yet.</p>"
+    elif not dated:
+        html += "<p>No dated timeline moments recorded for this person yet.</p>"
+    else:
+        items = []
+        for slug, title, e_era, date, ref in dated:
+            h = '<li><a href="../../timeline/%s/">%s</a>' % (esc(slug), esc(title))
+            bits = [b for b in (e_era, date) if b]
+            if bits:
+                h += ' <span class="gen-refs">(%s)</span>' % " · ".join(esc(b) for b in bits)
+            if ref:
+                h += ' <span class="gen-refs">(' + linkify_scripture_refs(ref) + ")</span>"
+            items.append(h + "</li>")
+        html += "<ol>" + "".join(items) + "</ol>"
+    html += '<details><summary>Eras &amp; Civilizations</summary>'
+    civs = ERA_CIVILIZATIONS.get(era)
+    if not era or not civs:
+        html += "<p>No era recorded for this person yet.</p>"
+    else:
+        html += "<p>Civilizations of the %s era. These shared the person's era — they are not necessarily peoples this person met or lived under.</p>" % esc(era)
+        lis = []
+        for civ_name in civs:
+            slug = civ_slugs.get(civ_name)
+            if slug:
+                lis.append('<li><a href="../../civilizations/%s/">%s</a></li>' % (esc(slug), esc(civ_name)))
+            else:
+                lis.append("<li>%s</li>" % esc(civ_name))
+        html += "<ul>" + "".join(lis) + "</ul>"
+    html += "</details>"
+    return html
+
+
 def people_verses_html(verses):
     """Verses mentioning this person, from the Node-computed verse list
     (same linker as the live reader). Batched: first 100 chips, the

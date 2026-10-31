@@ -187,7 +187,7 @@
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
-  var ASSET_V = "183";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "184";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1159,7 +1159,7 @@
     var items = [];
     (data.timeline || []).forEach(function (row, i) {
       if (splitList(val(row, "KeyPersons")).indexOf(name) !== -1) {
-        items.push({ kind: "timeline", idx: i, title: val(row, "Title"), ref: val(row, "ScriptureReference") });
+        items.push({ kind: "timeline", idx: i, title: val(row, "Title"), ref: val(row, "ScriptureReference"), era: val(row, "Era"), date: val(row, "DateApprox") });
       }
     });
     var stories = [];
@@ -1179,6 +1179,90 @@
     return "<li><a href='" + href + "'>" + esc(it.title) + "</a>" +
       (it.ref ? ' <span class="gen-refs">(' + linkifyScriptureRefs(it.ref) + ")</span>" : "") + "</li>";
   }
+  /* ---------- "When They Lived" (Oct 2026): a toggle between two
+     lenses on the same question — Timeline mode (the person's era
+     plus their dated timeline moments) and Eras & Civilizations
+     mode (the civilizations and peoples of that era). The era lists
+     are era-level contemporaries only, never peoples the person
+     personally met or lived under; every name is an exact
+     civilizations entry, verified against content/civilizations.json.
+     Individual Israelite tribes are omitted (covered by Israel /
+     Judah); entries dated only "1st century AD" sit in Early
+     Church, the era of the Acts narratives that name them. Mode
+     lives in memory only and resets to Timeline on each render,
+     like the genealogy Tree | Timeline toggle. ---------- */
+  var ERA_CIVILIZATIONS = {
+    "Primeval / Patriarchs": ["Egypt", "Canaan", "Elam", "Babylon", "Israel", "Amorites", "Hivites", "Perizzites", "Jebusites", "Girgashites", "Midianites", "Ishmaelites", "Amalekites", "Cush", "Kenites", "Kenizzites", "Horites", "Kadmonites", "Rephaim", "Nephilim"],
+    "Exodus and Wilderness": ["Egypt", "Canaan", "Phoenicia", "Hittite Empire", "Amorites", "Hivites", "Perizzites", "Jebusites", "Girgashites", "Midianites", "Ishmaelites", "Amalekites", "Anakim", "Edom", "Moab", "Ammon", "Elam", "Cush", "Israel", "Kenites", "Kenizzites", "Rephaim", "Nephilim"],
+    "Conquest and Judges": ["Egypt", "Canaan", "Philistia", "Phoenicia", "Hittite Empire", "Aram", "Amorites", "Hivites", "Perizzites", "Jebusites", "Girgashites", "Midianites", "Ishmaelites", "Amalekites", "Anakim", "Geshurites", "Maacathites", "Moab", "Ammon", "Edom", "Elam", "Cush", "Israel", "Judah", "Kenites", "Kenizzites", "Rephaim", "Lydia"],
+    "United Monarchy": ["Egypt", "Canaan", "Philistia", "Phoenicia", "Aram", "Moab", "Ammon", "Edom", "Elam", "Cush", "Israel", "Judah", "Amalekites", "Geshurites", "Maacathites", "Kenites", "Rephaim", "Jebusites", "Lydia", "Libya", "Put", "Sheba", "Arabia"],
+    "Divided Monarchy": ["Egypt", "Philistia", "Phoenicia", "Aram", "Moab", "Ammon", "Edom", "Assyria", "Babylon", "Greece", "Rome", "Elam", "Cush", "Israel", "Judah", "Samaritans", "Amalekites", "Maacathites", "Media", "Lydia", "Libya", "Put", "Sheba", "Arabia", "Avites", "Cuthah", "Sepharvaim"],
+    "Exile": ["Egypt", "Philistia", "Phoenicia", "Babylon", "Persia", "Greece", "Rome", "Elam", "Cush", "Israel", "Judah", "Samaritans", "Moab", "Ammon", "Edom", "Media", "Lydia", "Libya", "Put", "Sheba", "Arabia"],
+    "Return and Second Temple": ["Egypt", "Phoenicia", "Persia", "Greece", "Rome", "Cush", "Israel", "Judah", "Samaritans", "Moab", "Ammon", "Edom", "Libya", "Put", "Sheba", "Arabia", "Parthians", "Galatians"],
+    "Life of Christ": ["Rome", "Parthians", "Arabia", "Sheba", "Cush", "Galatians", "Israel", "Judah", "Samaritans"],
+    "Early Church": ["Rome", "Parthians", "Arabia", "Sheba", "Cush", "Galatians", "Israel", "Judah", "Samaritans", "Alexandrians", "Cappadocians", "Cilicians", "Cretans", "Cypriots", "Cyrenians", "Lycaonians", "Mesopotamians", "Pamphylians", "Phrygians", "Pontians", "Scythians", "Syrophoenicians"]
+  };
+  function personWhenLivedHTML(idx) {
+    var row = (data.people || [])[idx] || {};
+    var era = (val(row, "TimelineEra") || "").trim();
+    var cache = personExtraCache[idx] || (personExtraCache[idx] = {});
+    if (!cache.timeline) cache.timeline = personTimelineItems(idx);
+    var dated = cache.timeline.filter(function (it) { return it.kind === "timeline"; });
+    var html = "<h3>When They Lived</h3>";
+    html += '<div class="chips"><span class="chip-label">Show:</span>' +
+      '<button type="button" class="chip active" id="personWhenTimelineBtn">Timeline</button>' +
+      '<button type="button" class="chip" id="personWhenErasBtn">Eras &amp; Civilizations</button></div>';
+    html += '<div id="personWhenTimeline">';
+    if (era) html += "<p>Era: <strong>" + esc(era) + "</strong></p>";
+    if (!era && !dated.length) {
+      html += "<p>No timeline record for this person yet.</p>";
+    } else if (!dated.length) {
+      html += "<p>No dated timeline moments recorded for this person yet.</p>";
+    } else {
+      html += "<ol>" + dated.map(function (it) {
+        var h = "<li><a href='#/timeline/" + it.idx + "'>" + esc(it.title) + "</a>";
+        var bits = [];
+        if (it.era) bits.push(esc(it.era));
+        if (it.date) bits.push(esc(it.date));
+        if (bits.length) h += ' <span class="gen-refs">(' + bits.join(" · ") + ")</span>";
+        if (it.ref) h += ' <span class="gen-refs">(' + linkifyScriptureRefs(it.ref) + ")</span>";
+        return h + "</li>";
+      }).join("") + "</ol>";
+    }
+    html += "</div>";
+    html += '<div id="personWhenEras" style="display:none">';
+    var civs = ERA_CIVILIZATIONS[era];
+    if (!era || !civs) {
+      html += "<p>No era recorded for this person yet.</p>";
+    } else {
+      html += "<p>Civilizations of the " + esc(era) + " era. These shared the person's era — they are not necessarily peoples this person met or lived under.</p>";
+      var cmap = {};
+      (data.civilizations || []).forEach(function (cr, ci) { cmap[val(cr, "Civilization")] = ci; });
+      html += "<ul>" + civs.map(function (name) {
+        var ci = cmap[name];
+        if (ci === undefined) return "<li>" + esc(name) + "</li>";
+        return '<li><a href="#/civilizations/' + ci + '">' + esc(name) + "</a></li>";
+      }).join("") + "</ul>";
+    }
+    html += "</div>";
+    return html;
+  }
+  function bindPersonWhenToggle() {
+    var tBtn = document.getElementById("personWhenTimelineBtn");
+    var eBtn = document.getElementById("personWhenErasBtn");
+    var tBody = document.getElementById("personWhenTimeline");
+    var eBody = document.getElementById("personWhenEras");
+    if (!tBtn || !eBtn || !tBody || !eBody) return;
+    function show(mode) {
+      var tl = mode === "timeline";
+      tBody.style.display = tl ? "" : "none";
+      eBody.style.display = tl ? "none" : "";
+      tBtn.className = "chip" + (tl ? " active" : "");
+      eBtn.className = "chip" + (tl ? "" : " active");
+    }
+    tBtn.addEventListener("click", function () { show("timeline"); });
+    eBtn.addEventListener("click", function () { show("eras"); });
+  }
   function personSectionsHTML(idx) {
     var cache = personExtraCache[idx] || (personExtraCache[idx] = {});
     if (!cache.timeline) cache.timeline = personTimelineItems(idx);
@@ -1191,11 +1275,13 @@
       html += '<ol id="personTimelineList">' + items.slice(0, 50).map(timelineItemHTML).join("") + "</ol>";
       if (items.length > 50) html += '<p><button class="btn" id="personTimelineMore">Show more (50 of ' + items.length + ")</button></p>";
     }
+    html += personWhenLivedHTML(idx);
     html += personFamilyHTML(idx);
     html += '<h3>Verses mentioning this person</h3><div id="personVersesWrap"><p class="loading">Loading verses…</p></div>';
     return html;
   }
   function bindPersonSections(idx) {
+    bindPersonWhenToggle();
     var cache = personExtraCache[idx] || {};
     if (cache.timeline && cache.timeline.length > 50) {
       bindBatchedMore("personTimelineList", "personTimelineMore", cache.timeline, 50, timelineItemHTML);
@@ -4882,6 +4968,7 @@ function genBindInteractive(node) {
     __hopeStatic.computePersonVerses = computePersonVerses;
     __hopeStatic.personTimelineItems = personTimelineItems;
     __hopeStatic.personFamilyHTML = personFamilyHTML;
+    __hopeStatic.personWhenLivedHTML = personWhenLivedHTML;
     __hopeStatic.personSectionsHTML = personSectionsHTML;
   }
 })();
