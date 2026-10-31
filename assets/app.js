@@ -203,7 +203,7 @@
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
-  var ASSET_V = "190";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "191";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -778,12 +778,12 @@
   var TL_DOT_COLORS = { story: "#1B2A4E", person: "#e91e63", civ: "#00695c" };
   /* Timeline visualization data (Oct 2026): dots derive from existing
      timeline, people, and civilizations data only — nothing invented. */
-  function timelineVizData(era) {
+  function timelineVizData(era, items, civFilter) {
     var rows = data.timeline || [];
     var peopleByName = {}, civByName = {};
     (data.people || []).forEach(function (r, i) { var p = val(r, "Name"); if (p && peopleByName[p] === undefined) peopleByName[p] = i; });
     (data.civilizations || []).forEach(function (r, i) { var p = val(r, "Civilization"); if (p && civByName[p] === undefined) civByName[p] = i; });
-    var stories = rows.map(function (r, i) { return { row: r, idx: i }; }).filter(function (item) {
+    var stories = items || rows.map(function (r, i) { return { row: r, idx: i }; }).filter(function (item) {
       return !era || val(item.row, "Era") === era;
     });
     var seenPeople = {}, people = [];
@@ -796,19 +796,25 @@
         }
       });
     });
-    var eraList = [];
-    rows.forEach(function (r) { var e = val(r, "Era"); if (e && eraList.indexOf(e) === -1) eraList.push(e); });
-    var civNames = [], seenCiv = {};
-    (era ? [era] : eraList).forEach(function (e) {
-      (ERA_CIVILIZATIONS[e] || []).forEach(function (n) {
-        if (!seenCiv[n]) { seenCiv[n] = true; civNames.push(n); }
+    var civs;
+    if (civFilter && civByName[civFilter] !== undefined) {
+      var ci = civByName[civFilter];
+      civs = [{ idx: ci, name: civFilter, region: val((data.civilizations || [])[ci], "Region") }];
+    } else {
+      var eraList = [];
+      rows.forEach(function (r) { var e = val(r, "Era"); if (e && eraList.indexOf(e) === -1) eraList.push(e); });
+      var civNames = [], seenCiv = {};
+      (era ? [era] : eraList).forEach(function (e) {
+        (ERA_CIVILIZATIONS[e] || []).forEach(function (n) {
+          if (!seenCiv[n]) { seenCiv[n] = true; civNames.push(n); }
+        });
       });
-    });
-    var civs = civNames.map(function (n) {
-      var i = civByName[n];
-      if (i === undefined) return null;
-      return { idx: i, name: n, region: val((data.civilizations || [])[i], "Region") };
-    }).filter(Boolean);
+      civs = civNames.map(function (n) {
+        var i = civByName[n];
+        if (i === undefined) return null;
+        return { idx: i, name: n, region: val((data.civilizations || [])[i], "Region") };
+      }).filter(Boolean);
+    }
     return { stories: stories, people: people, civs: civs };
   }
   function timelineVizDetail(kind, idx) {
@@ -831,9 +837,68 @@
   }
   function viewTimeline(params) {
     var rows = data.timeline || [];
-    var state = { q: (params.get("q") || ""), era: (params.get("f_Era") || "") };
     var eras = [];
     rows.forEach(function (r) { var e = val(r, "Era"); if (!isEmpty(e) && eras.indexOf(e) === -1) eras.push(e); });
+    /* Timeline filter name sets (Oct 2026): deep-link params naming
+       nothing valid fall back to the "All" default, never an error. */
+    function nameSet(collId, primary) {
+      var m = {};
+      (data[collId] || []).forEach(function (r) { var p = val(r, primary); if (!isEmpty(p)) m[p] = true; });
+      return m;
+    }
+    var peopleNames = nameSet("people", "Name");
+    var placesNames = nameSet("places", "Name");
+    var civNames = nameSet("civilizations", "Civilization");
+    var groupNames = nameSet("groups", "Group");
+    var eraSet = {};
+    eras.forEach(function (e) { eraSet[e] = true; });
+    function validParam(v, map) { return v && map[v] ? v : ""; }
+    var state = {
+      q: (params.get("q") || ""),
+      era: validParam(params.get("f_Era"), eraSet),
+      civ: validParam(params.get("f_Civ"), civNames),
+      group: validParam(params.get("f_Group"), groupNames),
+      person: validParam(params.get("f_Person"), peopleNames),
+      place: validParam(params.get("f_Place"), placesNames)
+    };
+    /* Timeline filter derivations (Oct 2026): computed at render time
+       from data already loaded — no new fields. A timeline entry
+       matches a civilization when its Title equals one of the
+       civilization's RelatedEvents titles or its Places share a place
+       with the civilization's RelatedPlaces; it matches a group when
+       its KeyPersons include any of the group's KeyMembers (exact). */
+    var civIndex = {};
+    (data.civilizations || []).forEach(function (cv) {
+      var name = val(cv, "Civilization");
+      if (isEmpty(name)) return;
+      var ev = {}, pl = {};
+      splitList(val(cv, "RelatedEvents")).forEach(function (t) { ev[t] = true; });
+      splitList(val(cv, "RelatedPlaces")).forEach(function (t) { pl[t] = true; });
+      civIndex[name] = { events: ev, places: pl };
+    });
+    var groupMembers = {};
+    (data.groups || []).forEach(function (g) {
+      var name = val(g, "Group");
+      if (isEmpty(name)) return;
+      var m = {};
+      splitList(val(g, "KeyMembers")).forEach(function (n) { m[n] = true; });
+      groupMembers[name] = m;
+    });
+    function matchesCiv(row, civName) {
+      var c = civIndex[civName];
+      if (!c) return false;
+      if (c.events[val(row, "Title")]) return true;
+      var pls = splitList(val(row, "Places"));
+      for (var i = 0; i < pls.length; i++) if (c.places[pls[i]]) return true;
+      return false;
+    }
+    function matchesGroup(row, groupName) {
+      var m = groupMembers[groupName];
+      if (!m) return false;
+      var kps = splitList(val(row, "KeyPersons"));
+      for (var i = 0; i < kps.length; i++) if (m[kps[i]]) return true;
+      return false;
+    }
     function nameMap(collId, primary) {
       var m = {};
       (data[collId] || []).forEach(function (r, i) { var p = val(r, primary); if (!isEmpty(p) && m[p] === undefined) m[p] = i; });
@@ -892,9 +957,17 @@
     }
     function filtered() {
       var q = state.q.toLowerCase();
+      var personInvalid = state.person && !peopleNames[state.person];
+      var placeInvalid = state.place && !placesNames[state.place];
       return rows.map(function (r, i) { return { row: r, idx: i }; }).filter(function (item) {
         var r = item.row;
         if (state.era && val(r, "Era") !== state.era) return false;
+        if (state.civ && !matchesCiv(r, state.civ)) return false;
+        if (state.group && !matchesGroup(r, state.group)) return false;
+        if (personInvalid) return false;
+        if (state.person && splitList(val(r, "KeyPersons")).indexOf(state.person) === -1) return false;
+        if (placeInvalid) return false;
+        if (state.place && splitList(val(r, "Places")).indexOf(state.place) === -1) return false;
         if (q) {
           var hay = Object.keys(r).map(function (k) { return val(r, k); }).join(" ").toLowerCase();
           if (hay.indexOf(q) === -1) return false;
@@ -906,7 +979,15 @@
       var wrap = document.getElementById("tlWrap");
       if (!wrap) return;
       var items = filtered();
-      if (!items.length) { wrap.innerHTML = '<p class="empty">Nothing matches. Try clearing the search or filters.</p>'; return; }
+      if (!items.length) {
+        var msg = "No events match these filters.";
+        if (state.person && !peopleNames[state.person]) msg = "No person by that name.";
+        else if (state.place && !placesNames[state.place]) msg = "No place by that name.";
+        wrap.innerHTML = '<p class="empty">' + msg + '</p><p><button type="button" class="btn" id="tlClearFiltersEmpty">Clear all filters</button></p>';
+        var cb = document.getElementById("tlClearFiltersEmpty");
+        if (cb) cb.addEventListener("click", clearAll);
+        return;
+      }
       var html = '<p class="tl-showing">Showing ' + items.length + ' of ' + rows.length + ' events.</p><div class="tl">', lastEra = null;
       items.forEach(function (item) {
         var r = item.row;
@@ -931,6 +1012,10 @@
       var p = new URLSearchParams();
       if (state.q) p.set("q", state.q);
       if (state.era) p.set("f_Era", state.era);
+      if (state.civ) p.set("f_Civ", state.civ);
+      if (state.group) p.set("f_Group", state.group);
+      if (state.person && peopleNames[state.person]) p.set("f_Person", state.person);
+      if (state.place && placesNames[state.place]) p.set("f_Place", state.place);
       var s = p.toString();
       history.replaceState(null, "", "#/timeline" + (s ? "?" + s : ""));
     }
@@ -938,12 +1023,14 @@
        Era bar (one color per era, clickable), era chips with counts,
        scrollable dot rows for stories & events, people, and
        civilizations, and a detail panel. Era selection filters both
-       the dots and the list below. */
+       the dots and the list below. The filter row (civilization,
+       group, person, place) combines with the era selection and
+       filters dots and list together. */
     function eraCount(e) { var n = 0; rows.forEach(function (r) { if (val(r, "Era") === e) n++; }); return n; }
     function renderViz() {
       var wrap = document.getElementById("tlViz");
       if (!wrap) return;
-      var d = timelineVizData(state.era);
+      var d = timelineVizData(state.era, filtered(), state.civ);
       var bar = '<div style="display:flex;overflow-x:auto;margin:8px 0">';
       eras.forEach(function (e) {
         var active = state.era === e;
@@ -962,7 +1049,7 @@
         '<span>Eras: the bar above (one color per era). Click an era to zoom in. Click any dot for details.</span></p>';
       function dotRow(labelText, items, kind) {
         var rowHtml = '<div style="display:flex;align-items:center;gap:6px;margin:6px 0"><span style="min-width:130px;font-weight:600;font-size:13px">' + labelText + "</span>";
-        if (!items.length) { rowHtml += '<span class="empty" style="font-size:13px">None in this era.</span>'; }
+        if (!items.length) { rowHtml += '<span class="empty" style="font-size:13px">' + (state.civ || state.group || state.person || state.place ? "None match these filters." : "None in this era.") + '</span>'; }
         else {
           rowHtml += '<div style="display:flex;overflow-x:auto;white-space:nowrap;flex:1">';
           items.forEach(function (it) {
@@ -994,14 +1081,67 @@
       state.era = e;
       syncUrl(); renderViz(); renderTl();
     }
+    /* ---------- timeline filter row (Oct 2026) ----------
+       One row above the era bar: civilization + group dropdowns,
+       person + place search boxes with native datalist autocomplete,
+       and a Clear all filters button. Every control combines (AND)
+       with the others and with the era selection, and filters the
+       dots and the list together. The row is rendered once; later
+       renders only touch #tlViz, #tlDetail, and #tlWrap, so typed
+       values survive filtering. */
+    function filterStatusText() {
+      var parts = [];
+      if (state.civ) parts.push("Events connected to " + state.civ);
+      if (state.group) parts.push("Events featuring members of " + state.group);
+      if (state.person && peopleNames[state.person]) parts.push("Events featuring " + state.person);
+      if (state.place && placesNames[state.place]) parts.push("Events in " + state.place);
+      return parts.join(" · ");
+    }
+    function updateFilterStatus() {
+      var el = document.getElementById("tlFilterStatus");
+      if (el) el.textContent = filterStatusText();
+    }
+    function applyFilters() { syncUrl(); renderViz(); renderTl(); updateFilterStatus(); }
+    function clearAll() {
+      state.era = ""; state.civ = ""; state.group = ""; state.person = ""; state.place = ""; state.q = "";
+      ["tlSearch", "tlCiv", "tlGroup", "tlPerson", "tlPlace"].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) el.value = "";
+      });
+      syncUrl(); renderViz(); renderTl(); updateFilterStatus();
+    }
+    function filterRowHtml() {
+      var civOpts = '<option value="">All civilizations</option>' + Object.keys(civNames).sort().map(function (n) {
+        return '<option value="' + esc(n) + '"' + (state.civ === n ? " selected" : "") + ">" + esc(n) + "</option>";
+      }).join("");
+      var groupOpts = '<option value="">All groups</option>' + Object.keys(groupNames).sort().map(function (n) {
+        return '<option value="' + esc(n) + '"' + (state.group === n ? " selected" : "") + ">" + esc(n) + "</option>";
+      }).join("");
+      var personOpts = Object.keys(peopleNames).sort().map(function (n) { return '<option value="' + esc(n) + '">'; }).join("");
+      var placeOpts = Object.keys(placesNames).sort().map(function (n) { return '<option value="' + esc(n) + '">'; }).join("");
+      return '<div class="controls" id="tlFilters">' +
+        '<label>Civilization <select id="tlCiv">' + civOpts + "</select></label> " +
+        '<label>People group <select id="tlGroup">' + groupOpts + "</select></label> " +
+        '<label>Person <input type="search" id="tlPerson" list="tlPersonList" placeholder="Search people…" value="' + esc(state.person) + '"><datalist id="tlPersonList">' + personOpts + "</datalist></label> " +
+        '<label>Place <input type="search" id="tlPlace" list="tlPlaceList" placeholder="Search places…" value="' + esc(state.place) + '"><datalist id="tlPlaceList">' + placeOpts + "</datalist></label> " +
+        '<button type="button" class="btn" id="tlClearFilters">Clear all filters</button>' +
+        '<p id="tlFilterStatus">' + esc(filterStatusText()) + "</p></div>";
+    }
     var html = "<h2>Biblical Timeline</h2><p class='page-intro'>The whole story, era by era, from Creation to the Early Church — " +
       "with the people, places, events, and discoveries connected at every step. &middot; " + rows.length + " entries</p>";
+    html += filterRowHtml();
     html += '<div id="tlViz"></div><div id="tlDetail"></div>';
     html += '<div class="controls"><input type="search" id="tlSearch" placeholder="Search the timeline…" value="' + esc(state.q) + '"></div><div id="tlWrap"></div>';
     app.innerHTML = html;
     renderViz();
     renderTl();
+    updateFilterStatus();
     document.getElementById("tlSearch").addEventListener("input", function (e) { state.q = e.target.value; syncUrl(); renderTl(); });
+    document.getElementById("tlCiv").addEventListener("change", function () { state.civ = document.getElementById("tlCiv").value; applyFilters(); });
+    document.getElementById("tlGroup").addEventListener("change", function () { state.group = document.getElementById("tlGroup").value; applyFilters(); });
+    document.getElementById("tlPerson").addEventListener("input", function () { state.person = document.getElementById("tlPerson").value; applyFilters(); });
+    document.getElementById("tlPlace").addEventListener("input", function () { state.place = document.getElementById("tlPlace").value; applyFilters(); });
+    document.getElementById("tlClearFilters").addEventListener("click", clearAll);
     window.scrollTo(0, 0);
   }
   function navigate(hash, replace) {
