@@ -203,7 +203,8 @@
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
-  var ASSET_V = "191";  // bump when site code or content changes, so browsers fetch fresh copies
+  var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
+  var ASSET_V = "192";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -4198,7 +4199,10 @@ function genBindInteractive(node) {
   /* Verified route segments: adjacent stage pairs where BOTH stops have a
      Confirmed/Probable map point. A segment never touches a Disputed or
      Unknown stop and never skips over an unverified stop, so a gap in the
-     line honestly shows where the mapped route breaks. */
+     line honestly shows where the mapped route breaks. Each entry carries
+     its stage index i so the drawing code can look up legs[i] in the
+     road-paths data (pair objects are rebuilt on every call, so object
+     identity must NOT be used to match pairs back to stages). */
   function atlasJourneyVerifiedSegments() {
     var stages = atlasJourneyStages();
     var out = [];
@@ -4207,7 +4211,7 @@ function genBindInteractive(node) {
       if (!a.mapped || !b.mapped) continue;
       if ((a.row.evidence !== "Confirmed" && a.row.evidence !== "Probable") ||
           (b.row.evidence !== "Confirmed" && b.row.evidence !== "Probable")) continue;
-      out.push([a, b]);
+      out.push({ a: a, b: b, i: i });
     }
     return out;
   }
@@ -4234,6 +4238,24 @@ function genBindInteractive(node) {
     var verifiedCount = stages.filter(function (st) { return st.mapped && (st.row.evidence === "Confirmed" || st.row.evidence === "Probable"); }).length;
     html += "<p class='meta'>" + verifiedCount + " of " + stages.length + " stages verified on the map.</p>";
     html += "<p class='meta'>Lines join verified stops only — a gap means a stop between them isn't verified on the map.</p>";
+    if (journeyRoadPaths && journeyRoadPaths.journeys) {
+      var roadEntryForPanel = journeyRoadPaths.journeys[val(row, "Slug")];
+      var roadLegsForPanel = (roadEntryForPanel && roadEntryForPanel.legs) ? roadEntryForPanel.legs : [];
+      var roadDrawn = 0;
+      for (var ri = 0; ri + 1 < stages.length; ri++) {
+        var rs = stages[ri], rn = stages[ri + 1];
+        var rVerified = rs.mapped && rn.mapped &&
+          (rs.row.evidence === "Confirmed" || rs.row.evidence === "Probable") &&
+          (rn.row.evidence === "Confirmed" || rn.row.evidence === "Probable");
+        if (rVerified && roadLegsForPanel[ri] && roadLegsForPanel[ri].outcome === "road") roadDrawn++;
+      }
+      if (roadDrawn > 0) {
+        html += "<p class='meta'>" + roadDrawn + (roadDrawn === 1 ? " leg follows reconstructed Roman roads." : " legs follow reconstructed Roman roads.") + "</p>";
+        html += "<p class='meta'>Route follows reconstructed Roman roads (Itiner-e, CC BY 4.0). Road reconstructions are scholarly reconstructions, mostly conjectural — a plausible route, not the exact road taken.</p>";
+      } else {
+        html += "<p class='meta'>No road-following path is available for this journey — straight lines join verified stops only.</p>";
+      }
+    }
     html += "<p>Scripture: " + linkifyScriptureRefs(val(row, "Scripture")) + "</p>";
     html += "<p><a class='btn' href='#/journeys/" + sel.idx + "'>Open full journey page &rarr;</a></p></div>";
     return html;
@@ -4302,10 +4324,30 @@ function genBindInteractive(node) {
        (see atlasJourneyVerifiedSegments). No segment touches or skips
        over an unverified stop, so gaps stay open on purpose. */
     var segments = atlasJourneyVerifiedSegments();
+    /* Road-following lines (v192): for each qualifying adjacent pair, a
+       road path from content/journey_road_paths.json replaces the straight
+       segment when that leg's outcome is "road". Paths are stored [lon, lat]
+       and converted to Leaflet [lat, lon]. Each pair already passed the
+       Confirmed/Probable check inside atlasJourneyVerifiedSegments; the
+       evidence check below re-verifies it before any road path is drawn.
+       Missing data falls back to the v190 straight segments. */
+    var roadLegs = null;
+    if (journeySel && journeyRoadPaths && journeyRoadPaths.journeys) {
+      var roadEntry = journeyRoadPaths.journeys[val(journeySel.row, "Slug")];
+      if (roadEntry && roadEntry.legs) roadLegs = roadEntry.legs;
+    }
     if (segments.length) {
       atlasJourneyLineLayer = window.L.layerGroup();
-      segments.forEach(function (pair) {
-        window.L.polyline([[pair[0].row.lat, pair[0].row.lon], [pair[1].row.lat, pair[1].row.lon]], { color: "#e91e63", weight: 3, opacity: 0.8 }).addTo(atlasJourneyLineLayer);
+      segments.forEach(function (seg) {
+        var pair = [seg.a, seg.b];
+        var leg = roadLegs ? (roadLegs[seg.i] || null) : null;
+        var bothVerified = (pair[0].row.evidence === "Confirmed" || pair[0].row.evidence === "Probable") &&
+          (pair[1].row.evidence === "Confirmed" || pair[1].row.evidence === "Probable");
+        if (leg && leg.outcome === "road" && leg.path && leg.path.length && bothVerified) {
+          window.L.polyline(leg.path.map(function (pt) { return [pt[1], pt[0]]; }), { color: "#e91e63", weight: 3, opacity: 0.8 }).addTo(atlasJourneyLineLayer);
+        } else {
+          window.L.polyline([[pair[0].row.lat, pair[0].row.lon], [pair[1].row.lat, pair[1].row.lon]], { color: "#e91e63", weight: 3, opacity: 0.8 }).addTo(atlasJourneyLineLayer);
+        }
       });
       atlasJourneyLineLayer.addTo(atlasMap);
     }
@@ -5382,6 +5424,7 @@ function genBindInteractive(node) {
   jobs.push(fetch("content/dss_lookup_dates.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (d) { lookupDates = d; }).catch(function () { lookupDates = []; }));
   jobs.push(fetch("content/genealogy.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : { nodes: [], edges: [] }; }).then(function (g) { genealogyData = g; }).catch(function () { genealogyData = { nodes: [], edges: [] }; }));
   jobs.push(fetch("content/atlas.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (a) { atlasItems = a; }).catch(function () { atlasItems = []; }));
+  jobs.push(fetch("content/journey_road_paths.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) { journeyRoadPaths = d; }).catch(function () { journeyRoadPaths = null; }));
   Promise.all(jobs).then(function () {
     buildLinkIndex();
     window.addEventListener("hashchange", render);
