@@ -204,7 +204,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "192";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "193";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -4433,7 +4433,7 @@ function genBindInteractive(node) {
     var eras = ATLAS_ERA_ORDER.filter(function (e) {
       return atlasItems.some(function (it) { return (it.periods || []).indexOf(e) !== -1; });
     });
-    var html = "<h2>Biblical Atlas</h2><p class='page-intro'>All 459 places from Biblical Places. Markers show the places whose locations are verified; every row links to its place page, tapping a place name shows it on the map, and the Journey picker below highlights one journey's stages on the map.</p>";
+    var html = "<h2>Biblical Atlas</h2><p class='page-intro'>All 744 places from Biblical Places. Markers show the places whose locations are verified; every row links to its place page, tapping a place name shows it on the map, and the Journey picker below highlights one journey's stages on the map.</p>";
     if (!atlasItems.length) {
       html += "<p class='empty'>The atlas data is not available right now.</p>";
     } else {
@@ -4992,7 +4992,7 @@ function genBindInteractive(node) {
       "<h3>Nothing invented, nothing auto-verified</h3>" +
       "<p>No discovery, date, biblical reference, manuscript identification, or citation is invented to fill a gap. Where adequate sources have not been found, the field stays blank and the entry stays Awaiting Review. Content drafted with AI assistance is never automatically marked verified — it earns Verified only after a source check, like any other entry.</p>" +
       "<h3>Coverage today</h3>" +
-      "<p>Of 20,980 database entries, 24 are Verified, 6 are Scholarly Debate, and 20,950 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
+      "<p>Of 21,265 database entries, 24 are Verified, 6 are Scholarly Debate, and 21,235 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
       "<p>Browse the statuses: <a href='#/manuscripts?f_VerificationStatus=Verified'>Verified manuscripts</a> &middot; <a href='#/manuscripts?f_VerificationStatus=Scholarly Debate'>Debated manuscripts</a> &middot; <a href='#/finds?f_VerificationStatus=Scholarly Debate'>Debated finds</a></p>" +
       "<h3>Corrections</h3>" +
       "<p>Entries can be corrected and updated at any time. Corrections go through the site editor or through the site owner, and a corrected entry keeps its sources and review date visible so readers can see what changed and when it was last checked.</p>" +
