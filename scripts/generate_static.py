@@ -1038,15 +1038,16 @@ ERA_CIVILIZATIONS = {
 }
 
 
-def people_civ_html(idx, people_rows, civ_entries, civ_slugs):
+def people_civ_html(idx, people_rows, civ_entries, civ_slugs, peoples_entries=None, peoples_slugs=None):
     """'Civilizations, Nations & Tribes' for one people static page,
     porting the SPA section: 'Of their time' reuses the
     ERA_CIVILIZATIONS table (era-level contemporaries only — never
     peoples the person personally met or lived under), and 'Connected
     with this person' lists civilizations whose RelatedPeople names
     the person exactly. A civilization in both groups appears once,
-    in the connected group. Tribe entries live in the civilizations
-    collection, so they are covered by the same mechanism."""
+    in the connected group. Tribe entries now live in the People Groups
+    collection; both collections are searched, so moved names link to
+    their people-group pages and remaining names to civilization pages."""
     row = people_rows[idx]
     era = (row.get("TimelineEra") or "").strip()
     name = (row.get("Name") or "").strip()
@@ -1054,12 +1055,18 @@ def people_civ_html(idx, people_rows, civ_entries, civ_slugs):
     for e in civ_entries:
         if name in split_tokens(e["row"].get("RelatedPeople")):
             connected.append((e["row"].get("Civilization") or "").strip())
+    for e in (peoples_entries or []):
+        if name in split_tokens(e["row"].get("RelatedPeople")):
+            connected.append((e["row"].get("PeopleGroup") or "").strip())
     conn_set = set(connected)
 
     def civ_name_html(civ_name):
         slug = civ_slugs.get(civ_name)
         if slug:
             return '<a href="../../civilizations/%s/">%s</a>' % (esc(slug), esc(civ_name))
+        slug = (peoples_slugs or {}).get(civ_name)
+        if slug:
+            return '<a href="../../peoples/%s/">%s</a>' % (esc(slug), esc(civ_name))
         return esc(civ_name)
 
     html = "<h3>Civilizations, Nations &amp; Tribes</h3>"
@@ -1068,7 +1075,7 @@ def people_civ_html(idx, people_rows, civ_entries, civ_slugs):
     if not era or not civs:
         html += "<p>No era recorded for this person yet.</p>"
     else:
-        html += "<p>Civilizations of the %s era. These shared the person's era — they are not necessarily peoples this person met or lived under.</p>" % esc(era)
+        html += "<p>Civilizations and peoples of the %s era. These shared the person's era — they are not necessarily peoples this person met or lived under.</p>" % esc(era)
         rest = [n for n in civs if n not in conn_set]
         if not rest:
             html += "<p>Every civilization of this era is listed under Connected with this person.</p>"

@@ -91,6 +91,9 @@
   { id: "civilizations", label: "Ancient Civilizations", file: "content/civilizations.json", primary: "Civilization",
     blurb: "The empires and peoples around Israel — Egypt, Assyria, Babylon, Persia, Greece, Rome, and their neighbors — and how each one touches the Bible story.",
     filters: [{ label: "Region", field: "Region" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Region"] },
+  { id: "peoples", label: "People Groups", file: "content/peoples.json", primary: "PeopleGroup",
+    blurb: "The tribes, peoples, and ethnic groups of the Bible — from the twelve tribes of Israel to the nations around them — and how each one touches the Bible story.",
+    filters: [{ label: "Region", field: "Region" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Region"] },
   { id: "manuscripts", label: "Dead Sea Scrolls Manuscripts", file: "content/manuscripts.json", primary: "Manuscript",
     blurb: "Qumran manuscripts of the Bible — the best-preserved copy of each book, with its cave, date, language, material, and the passages that actually survive. Search by book, cave, period, language, or completeness.",
     filters: [{ label: "Book", field: "Work" }, { label: "Cave", field: "Cave" }, { label: "Period", field: "Period" }, { label: "Language", field: "Language" }, { label: "Category", field: "Category" }, { label: "Completeness", field: "Completeness" }, { label: "Verification", field: "VerificationStatus" }], meta: ["ManuscriptID", "Cave", "DateApprox"] },
@@ -118,7 +121,7 @@
      decides link-index tie-breaking. Any collection missing here falls
      back to the end of the tiles, so nothing can ever disappear. */
   var EXPLORE_ORDER = ["timeline", "books", "stories", "people", "groups", "places",
-    "finds", "manuscripts", "civilizations", "questions", "hermeneutics", "jewishculture",
+    "finds", "manuscripts", "civilizations", "peoples", "questions", "hermeneutics", "jewishculture",
     "topics", "wordstudies", "doctrines", "prophecies", "typology", "apologetics",
     "objections", "heresies", "fallacies", "perspectives", "heritage",
     "politics", "socialmedia", "courses", "studyguides", "quizzes", "hymns",
@@ -204,7 +207,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "193";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "194";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -783,7 +786,8 @@
     var rows = data.timeline || [];
     var peopleByName = {}, civByName = {};
     (data.people || []).forEach(function (r, i) { var p = val(r, "Name"); if (p && peopleByName[p] === undefined) peopleByName[p] = i; });
-    (data.civilizations || []).forEach(function (r, i) { var p = val(r, "Civilization"); if (p && civByName[p] === undefined) civByName[p] = i; });
+    (data.civilizations || []).forEach(function (r, i) { var p = val(r, "Civilization"); if (p && civByName[p] === undefined) civByName[p] = { coll: "civilizations", idx: i }; });
+    (data.peoples || []).forEach(function (r, i) { var p = val(r, "PeopleGroup"); if (p && civByName[p] === undefined) civByName[p] = { coll: "peoples", idx: i }; });
     var stories = items || rows.map(function (r, i) { return { row: r, idx: i }; }).filter(function (item) {
       return !era || val(item.row, "Era") === era;
     });
@@ -799,8 +803,9 @@
     });
     var civs;
     if (civFilter && civByName[civFilter] !== undefined) {
-      var ci = civByName[civFilter];
-      civs = [{ idx: ci, name: civFilter, region: val((data.civilizations || [])[ci], "Region") }];
+      var hit = civByName[civFilter];
+      var src = hit.coll === "peoples" ? (data.peoples || []) : (data.civilizations || []);
+      civs = [{ idx: hit.idx, coll: hit.coll, name: civFilter, region: val(src[hit.idx], "Region") }];
     } else {
       var eraList = [];
       rows.forEach(function (r) { var e = val(r, "Era"); if (e && eraList.indexOf(e) === -1) eraList.push(e); });
@@ -811,14 +816,15 @@
         });
       });
       civs = civNames.map(function (n) {
-        var i = civByName[n];
-        if (i === undefined) return null;
-        return { idx: i, name: n, region: val((data.civilizations || [])[i], "Region") };
+        var hit = civByName[n];
+        if (!hit) return null;
+        var src = hit.coll === "peoples" ? (data.peoples || []) : (data.civilizations || []);
+        return { idx: hit.idx, coll: hit.coll, name: n, region: val(src[hit.idx], "Region") };
       }).filter(Boolean);
     }
     return { stories: stories, people: people, civs: civs };
   }
-  function timelineVizDetail(kind, idx) {
+  function timelineVizDetail(kind, idx, coll) {
     if (kind === "story") {
       var r = (data.timeline || [])[idx] || {};
       return "<h4>" + esc(val(r, "Title")) + "</h4>" +
@@ -831,10 +837,14 @@
         "<p>" + esc(val(p, "Role")) + (isEmpty(val(p, "TimelineEra")) ? "" : " · " + esc(val(p, "TimelineEra"))) + "</p>" +
         '<p><a class="btn" href="#/people/' + idx + '">Open profile &rarr;</a></p>';
     }
-    var cv = (data.civilizations || [])[idx] || {};
-    return "<h4>" + esc(val(cv, "Civilization")) + "</h4>" +
+    var src = coll === "peoples" ? (data.peoples || []) : (data.civilizations || []);
+    var cv = src[idx] || {};
+    var prim = coll === "peoples" ? "PeopleGroup" : "Civilization";
+    var dest = coll === "peoples" ? "peoples" : "civilizations";
+    var label = coll === "peoples" ? "Open people group &rarr;" : "Open civilization &rarr;";
+    return "<h4>" + esc(val(cv, prim)) + "</h4>" +
       "<p>" + esc(val(cv, "Region")) + "</p>" +
-      '<p><a class="btn" href="#/civilizations/' + idx + '">Open civilization &rarr;</a></p>';
+      '<p><a class="btn" href="#/' + dest + '/' + idx + '">' + label + "</a></p>";
   }
   function viewTimeline(params) {
     var rows = data.timeline || [];
@@ -1046,7 +1056,7 @@
       chipsHtml += "</div>";
       var legend = '<p style="font-size:13px"><span style="display:inline-block;width:12px;height:12px;background:#1B2A4E;border-radius:50%"></span> Stories &amp; Events &nbsp; ' +
         '<span style="display:inline-block;width:12px;height:12px;background:#e91e63;border-radius:50%"></span> People &nbsp; ' +
-        '<span style="display:inline-block;width:12px;height:12px;background:#00695c;border-radius:50%"></span> Civilizations &nbsp; ' +
+        '<span style="display:inline-block;width:12px;height:12px;background:#00695c;border-radius:50%"></span> Civilizations &amp; Peoples &nbsp; ' +
         '<span>Eras: the bar above (one color per era). Click an era to zoom in. Click any dot for details.</span></p>';
       function dotRow(labelText, items, kind) {
         var rowHtml = '<div style="display:flex;align-items:center;gap:6px;margin:6px 0"><span style="min-width:130px;font-weight:600;font-size:13px">' + labelText + "</span>";
@@ -1055,7 +1065,7 @@
           rowHtml += '<div style="display:flex;overflow-x:auto;white-space:nowrap;flex:1">';
           items.forEach(function (it) {
             var ttl = kind === "story" ? val(it.row, "Title") : it.name;
-            rowHtml += '<button type="button" data-dot="' + kind + '" data-idx="' + it.idx + '" title="' + esc(ttl) + '" aria-label="' + esc(ttl) + '" style="display:inline-block;width:14px;height:14px;border-radius:50%;background:' + TL_DOT_COLORS[kind] + ';border:none;margin:2px;cursor:pointer;flex:0 0 auto"></button>';
+            rowHtml += '<button type="button" data-dot="' + kind + '" data-idx="' + it.idx + '" data-coll="' + (it.coll || "") + '" title="' + esc(ttl) + '" aria-label="' + esc(ttl) + '" style="display:inline-block;width:14px;height:14px;border-radius:50%;background:' + TL_DOT_COLORS[kind] + ';border:none;margin:2px;cursor:pointer;flex:0 0 auto"></button>';
           });
           rowHtml += "</div>";
         }
@@ -1064,7 +1074,7 @@
       wrap.innerHTML = bar + chipsHtml + legend +
         dotRow("Stories &amp; Events", d.stories, "story") +
         dotRow("People", d.people, "person") +
-        dotRow("Civilizations", d.civs, "civ");
+        dotRow("Civilizations &amp; Peoples", d.civs, "civ");
       wrap.querySelectorAll("[data-viz-era]").forEach(function (btn) {
         btn.addEventListener("click", function () { selectEra(btn.getAttribute("data-viz-era")); });
       });
@@ -1074,7 +1084,7 @@
       wrap.querySelectorAll("[data-dot]").forEach(function (btn) {
         btn.addEventListener("click", function () {
           var detail = document.getElementById("tlDetail");
-          if (detail) detail.innerHTML = timelineVizDetail(btn.getAttribute("data-dot"), parseInt(btn.getAttribute("data-idx"), 10));
+          if (detail) detail.innerHTML = timelineVizDetail(btn.getAttribute("data-dot"), parseInt(btn.getAttribute("data-idx"), 10), btn.getAttribute("data-coll"));
         });
       });
     }
@@ -1458,8 +1468,9 @@
   /* ---------- ERA_CIVILIZATIONS: the civilizations and peoples of
      each era, as era-level contemporaries only — never peoples a
      given person personally met or lived under. Every name is an
-     exact civilizations entry, verified against
-     content/civilizations.json. Individual Israelite tribes are
+     exact civilizations or people-groups entry,
+     verified against content/civilizations.json and
+     content/peoples.json. Individual Israelite tribes are
      omitted (covered by Israel / Judah); entries dated only
      "1st century AD" sit in Early Church, the era of the Acts
      narratives that name them. Used by the Civilizations section of
@@ -1546,22 +1557,28 @@
      met or lived under). "Connected with this person" lists
      civilizations whose RelatedPeople names the person exactly; a
      civilization in both groups appears once, in the connected
-     group. Tribe entries live in the civilizations collection, so
-     they are covered by the same mechanism. */
+     group. Tribe entries now live in the People Groups collection,
+     so both collections are searched: moved names link to their
+     people-group pages, remaining names to civilization pages. */
   function personCivHTML(idx) {
     var row = (data.people || [])[idx] || {};
     var name = val(row, "Name");
     var era = (val(row, "TimelineEra") || "").trim();
     var cmap = {};
-    (data.civilizations || []).forEach(function (cr, ci) { cmap[val(cr, "Civilization")] = ci; });
+    (data.civilizations || []).forEach(function (cr, ci) { cmap[val(cr, "Civilization")] = { coll: "civilizations", idx: ci }; });
+    (data.peoples || []).forEach(function (pr, pi) { cmap[val(pr, "PeopleGroup")] = { coll: "peoples", idx: pi }; });
     var connected = [];
     (data.civilizations || []).forEach(function (cr) {
       if (splitList(val(cr, "RelatedPeople")).indexOf(name) !== -1) connected.push(val(cr, "Civilization"));
     });
+    (data.peoples || []).forEach(function (pr) {
+      if (splitList(val(pr, "RelatedPeople")).indexOf(name) !== -1) connected.push(val(pr, "PeopleGroup"));
+    });
     var connSet = {};
     connected.forEach(function (n) { connSet[n] = true; });
     function civNameHTML(n) {
-      if (cmap[n] !== undefined) return '<a href="#/civilizations/' + cmap[n] + '">' + esc(n) + "</a>";
+      var hit = cmap[n];
+      if (hit) return '<a href="#/' + hit.coll + '/' + hit.idx + '">' + esc(n) + "</a>";
       return esc(n);
     }
     var html = "<h3>Civilizations, Nations &amp; Tribes</h3>";
@@ -1570,7 +1587,7 @@
     if (!era || !eraCivs) {
       html += "<p>No era recorded for this person yet.</p>";
     } else {
-      html += "<p>Civilizations of the " + esc(era) + " era. These shared the person's era — they are not necessarily peoples this person met or lived under.</p>";
+      html += "<p>Civilizations and peoples of the " + esc(era) + " era. These shared the person's era — they are not necessarily peoples this person met or lived under.</p>";
       var rest = eraCivs.filter(function (n) { return !connSet[n]; });
       if (!rest.length) {
         html += "<p>Every civilization of this era is listed under Connected with this person.</p>";
@@ -4992,7 +5009,7 @@ function genBindInteractive(node) {
       "<h3>Nothing invented, nothing auto-verified</h3>" +
       "<p>No discovery, date, biblical reference, manuscript identification, or citation is invented to fill a gap. Where adequate sources have not been found, the field stays blank and the entry stays Awaiting Review. Content drafted with AI assistance is never automatically marked verified — it earns Verified only after a source check, like any other entry.</p>" +
       "<h3>Coverage today</h3>" +
-      "<p>Of 21,265 database entries, 24 are Verified, 6 are Scholarly Debate, and 21,235 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
+      "<p>Of 21,287 database entries, 24 are Verified, 6 are Scholarly Debate, and 21,257 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
       "<p>Browse the statuses: <a href='#/manuscripts?f_VerificationStatus=Verified'>Verified manuscripts</a> &middot; <a href='#/manuscripts?f_VerificationStatus=Scholarly Debate'>Debated manuscripts</a> &middot; <a href='#/finds?f_VerificationStatus=Scholarly Debate'>Debated finds</a></p>" +
       "<h3>Corrections</h3>" +
       "<p>Entries can be corrected and updated at any time. Corrections go through the site editor or through the site owner, and a corrected entry keeps its sources and review date visible so readers can see what changed and when it was last checked.</p>" +
