@@ -1,0 +1,18 @@
+{
+  "Journey": "Paul's Voyage to Rome",
+  "Travelers": "Paul; Luke; Julius, the Centurion",
+  "Group": "No",
+  "FromPlace": "Caesarea",
+  "ToPlace": "Rome",
+  "Stages": "Caesarea; Sidon; Myra; Cnidus; Fair Havens; Clauda; Melita; Syracuse; Rhegium; Puteoli; Appii Forum; Three Taverns; Rome",
+  "Scripture": "Acts 27:1-44; Acts 28:1-31",
+  "Summary": "As a prisoner appealing to Caesar, Paul sailed from Caesarea under Julius, changed ships at Myra, was driven by a storm past Cnidus and Fair Havens, was shipwrecked on Malta (listed here as Melita, the place entry's name), wintered there, and sailed on through Syracuse, Rhegium, and Puteoli to Rome, where brethren met him at Appii Forum and Three Taverns. The stages follow Acts' ports in order; the storm's drift is summarized, not charted.",
+  "Significance": "The voyage ends Acts where it aimed from the start: Paul preaching the kingdom in Rome, unhindered.",
+  "RelatedStories": "Paul in Rome",
+  "RelatedEvents": "Paul Shipwrecked on Malta",
+  "RelatedPeople": "Paul; Luke; Julius, the Centurion",
+  "Slug": "pauls-voyage-to-rome",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "Holy Bible (King James Version)",
+  "LastReviewed": ""
+}

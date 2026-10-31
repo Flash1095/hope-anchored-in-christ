@@ -103,6 +103,12 @@
     { id: "identity", label: "Identity in Christ", file: "content/identity.json", primary: "Title",
       blurb: "Who you are in Christ — and what changes because of it.",
       filters: [{ label: "Verification", field: "VerificationStatus" }] },
+    { id: "journeys", label: "Journeys", file: "content/journeys.json", primary: "Journey",
+      blurb: "The roads of the Bible — every journey of God's people, from Abraham's call to Paul's voyage to Rome, traced stop by stop through Scripture.",
+      filters: [{ label: "Verification", field: "VerificationStatus" }], meta: ["FromPlace", "ToPlace"] },
+    { id: "groups", label: "Groups & Factions", file: "content/groups.json", primary: "Group",
+      blurb: "The parties, classes, and circles of the Bible world — scribes, Pharisees, the Sanhedrin, the Twelve, and the early church — who they were and what they believed.",
+      filters: [{ label: "Period", field: "Period" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Period"] },
 ];
   /* Explore tile order, as a study journey: the story first, then the
      world behind it, then deeper study, then discernment, then the
@@ -111,8 +117,8 @@
      display-only: COLLECTIONS itself stays untouched, because its order
      decides link-index tie-breaking. Any collection missing here falls
      back to the end of the tiles, so nothing can ever disappear. */
-  var EXPLORE_ORDER = ["timeline", "books", "stories", "people", "places",
-    "finds", "manuscripts", "civilizations", "questions", "hermeneutics", "jewishculture",
+  var EXPLORE_ORDER = ["timeline", "books", "stories", "people", "groups", "places",
+    "journeys", "finds", "manuscripts", "civilizations", "questions", "hermeneutics", "jewishculture",
     "topics", "wordstudies", "doctrines", "prophecies", "typology", "apologetics",
     "objections", "heresies", "fallacies", "perspectives", "heritage",
     "politics", "socialmedia", "courses", "studyguides", "quizzes", "hymns",
@@ -128,7 +134,8 @@
     "RelatedDoctrines", "RelatedQuestions", "RelatedFinds", "RelatedBook",
     "KeyPersons", "KeyPeople", "BibleBooks", "Places", "Events",
     "KeyScriptures", "KeyPassages", "KeyVerses", "ScriptureReference",
-    "ScriptureIlluminated", "BibleReferences", "Tags", "Themes", "Place", "Prophet", "Course"];
+    "ScriptureIlluminated", "BibleReferences", "Tags", "Themes", "Place", "Prophet", "Course",
+    "RelatedStories", "Travelers", "FromPlace", "ToPlace", "Stages", "KeyMembers"];
   /* Bible book study sections (Genesis page): full markdown sections
      rendered as expandable <details> blocks below the overview. The
      section titles come from STUDY_LABELS; nothing here is hand-listed
@@ -196,7 +203,7 @@
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
-  var ASSET_V = "186";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "187";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -206,7 +213,9 @@
     RelatedPeople: "people", KeyPeople: "people", KeyPersons: "people", Prophet: "people",
     RelatedEvents: "stories", Events: "stories", RelatedTopics: "topics", Themes: "topics",
     RelatedDoctrines: "doctrines", RelatedQuestions: "questions", RelatedFinds: "finds",
-    Places: "places", Place: "places", Course: "courses" };
+    Places: "places", Place: "places", Course: "courses", RelatedStories: "stories",
+    Travelers: "people", FromPlace: "places", ToPlace: "places", Stages: "places",
+    KeyMembers: "people" };
   var app = document.getElementById("app");
 
   function esc(s) {
@@ -1509,6 +1518,7 @@
       if (STUDY_FIELDS.indexOf(field) !== -1 || field === "StudyIntroduction") return;
       var v = val(row, field);
       if (isEmpty(v)) return;
+      if (field === "Group" && v === "No") return;  // journeys: individuals carry Group "No"; don't show it
       html += "<dt>" + esc(label(field)) + "</dt><dd>" + renderValue(field, v) + "</dd>";
     });
     html += "</dl>";
@@ -4687,7 +4697,7 @@ function genBindInteractive(node) {
       "<h3>Nothing invented, nothing auto-verified</h3>" +
       "<p>No discovery, date, biblical reference, manuscript identification, or citation is invented to fill a gap. Where adequate sources have not been found, the field stays blank and the entry stays Awaiting Review. Content drafted with AI assistance is never automatically marked verified — it earns Verified only after a source check, like any other entry.</p>" +
       "<h3>Coverage today</h3>" +
-      "<p>Of 20,846 database entries, 24 are Verified, 6 are Scholarly Debate, and 20,816 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
+      "<p>Of 20,947 database entries, 24 are Verified, 6 are Scholarly Debate, and 20,917 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
       "<p>Browse the statuses: <a href='#/manuscripts?f_VerificationStatus=Verified'>Verified manuscripts</a> &middot; <a href='#/manuscripts?f_VerificationStatus=Scholarly Debate'>Debated manuscripts</a> &middot; <a href='#/finds?f_VerificationStatus=Scholarly Debate'>Debated finds</a></p>" +
       "<h3>Corrections</h3>" +
       "<p>Entries can be corrected and updated at any time. Corrections go through the site editor or through the site owner, and a corrected entry keeps its sources and review date visible so readers can see what changed and when it was last checked.</p>" +

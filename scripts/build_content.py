@@ -66,6 +66,8 @@ SOURCES = [
     ("god", "", "Name"),
     ("promises", "", "Title"),
     ("identity", "", "Title"),
+    ("journeys", "", "Journey"),
+    ("groups", "", "Group"),
 ]
 
 

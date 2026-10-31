@@ -277,12 +277,15 @@ REL_FIELDS = ["RelatedBooks", "RelatedPeople", "RelatedEvents", "RelatedTopics",
     "RelatedDoctrines", "RelatedQuestions", "RelatedFinds", "RelatedBook",
     "KeyPersons", "KeyPeople", "BibleBooks", "Places", "Events",
     "KeyScriptures", "KeyPassages", "KeyVerses", "ScriptureReference",
-    "ScriptureIlluminated", "BibleReferences", "Tags", "Themes", "Place", "Prophet", "Course"]
+    "ScriptureIlluminated", "BibleReferences", "Tags", "Themes", "Place", "Prophet", "Course",
+    "RelatedStories", "Travelers", "FromPlace", "ToPlace", "Stages", "KeyMembers"]
 FIELD_HOME = {"RelatedBooks": "books", "RelatedBook": "books", "BibleBooks": "books",
     "RelatedPeople": "people", "KeyPeople": "people", "KeyPersons": "people", "Prophet": "people",
     "RelatedEvents": "stories", "Events": "stories", "RelatedTopics": "topics", "Themes": "topics",
     "RelatedDoctrines": "doctrines", "RelatedQuestions": "questions", "RelatedFinds": "finds",
-    "Places": "places", "Place": "places", "Course": "courses"}
+    "Places": "places", "Place": "places", "Course": "courses", "RelatedStories": "stories",
+    "Travelers": "people", "FromPlace": "places", "ToPlace": "places", "Stages": "places",
+    "KeyMembers": "people"}
 SKIP_FIELDS = ["Slug", "Maps", "Image", "ImageCredit", "ImageSource", "PanelImage", "PanelImageCredit"]
 VERIF_FIELDS = ["VerificationStatus", "Sources", "LastReviewed"]
 VERIF_MEANING = {
@@ -1145,6 +1148,8 @@ def entry_page(e, glob, home, quizzes_by_course, people_extra=None):
         v = "" if v is None else str(v)
         if not v.strip():
             continue
+        if field == "Group" and v == "No":
+            continue  # journeys: individuals carry Group "No"; don't show it
         dl.append("<dt>%s</dt><dd>%s</dd>" % (
             esc(label(field)), render_entry_field(field, v, coll, glob, home)))
     body = "\n".join(parts) + '<div class="detail"><dl>' + "\n".join(dl) + "</dl>" + verification_box(row)

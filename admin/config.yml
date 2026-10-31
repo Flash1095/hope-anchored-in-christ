@@ -862,3 +862,52 @@ collections:
       - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
       - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
       - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
+  - name: "journeys"
+    label: "Journeys"
+    folder: "content/journeys"
+    create: true
+    slug: "{{fields.Journey}}"
+    identifier_field: "Journey"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Journey", name: "Journey", widget: "string"}
+      - {label: "Travelers", name: "Travelers", widget: "list", required: false}
+      - {label: "Group", name: "Group", widget: "string", required: false, hint: "Group name for a group journey; \"No\" for an individual journey."}
+      - {label: "From Place", name: "FromPlace", widget: "string", required: false}
+      - {label: "To Place", name: "ToPlace", widget: "string", required: false}
+      - {label: "Stages", name: "Stages", widget: "list", required: false, hint: "Place names in Scripture's order."}
+      - {label: "Scripture", name: "Scripture", widget: "list"}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Significance", name: "Significance", widget: "text", required: false}
+      - {label: "Related Stories", name: "RelatedStories", widget: "list", required: false}
+      - {label: "Related Events", name: "RelatedEvents", widget: "list", required: false}
+      - {label: "Related People", name: "RelatedPeople", widget: "list", required: false}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
+  - name: "groups"
+    label: "Groups & Factions"
+    folder: "content/groups"
+    create: true
+    slug: "{{fields.Group}}"
+    identifier_field: "Group"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Group", name: "Group", widget: "string"}
+      - {label: "Also Called", name: "AlsoCalled", widget: "list", required: false}
+      - {label: "Period", name: "Period", widget: "string", required: false}
+      - {label: "Origin", name: "Origin", widget: "text"}
+      - {label: "Beliefs", name: "Beliefs", widget: "text", required: false}
+      - {label: "Practices", name: "Practices", widget: "text", required: false}
+      - {label: "Role", name: "Role", widget: "text", required: false}
+      - {label: "Relationship to Jesus", name: "RelationshipToJesus", widget: "text", required: false}
+      - {label: "Key Members", name: "KeyMembers", widget: "list", required: false}
+      - {label: "Scripture", name: "Scripture", widget: "list", required: false}
+      - {label: "Summary", name: "Summary", widget: "text"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list", required: false}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list", required: false}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
