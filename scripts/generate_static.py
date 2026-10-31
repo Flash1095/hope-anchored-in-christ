@@ -306,7 +306,7 @@ def verification_box(row):
 
 SNIPPET_FIELDS = ["Summary", "Description", "Retelling", "Discussion", "Story",
     "Definition", "ShortAnswer",
-    "ProphecySummary", "Explanation", "BiblicalUsage", "Beliefs"]
+    "ProphecySummary", "Explanation", "BiblicalUsage", "Beliefs", "Meaning", "Promise"]
 # Collections with no generic detail page: quizzes is an interactive
 # player. Everything else gets a static page.
 SKIP_COLLECTIONS = {"quizzes"}
@@ -503,7 +503,7 @@ BIBLE_BOOKS = []
 
 SCRIPTURE_FIELDS = ["KeyVerses", "KeyPassages", "KeyScriptures", "ScriptureReference",
                     "ScriptureIlluminated", "BibleReferences", "Scripture", "BiblicalSupport",
-                    "PreservedPassages"]
+                    "PreservedPassages", "FulfillmentScriptures"]
 # Bible book study sections (Genesis page): full markdown sections,
 # rendered as expandable <details> blocks below the overview (see
 # entry_page). The titles come from STUDY_LABELS.
@@ -1092,6 +1092,11 @@ def entry_page(e, glob, home, quizzes_by_course, people_extra=None):
         dl.append("<dt>%s</dt><dd>%s</dd>" % (
             esc(label(field)), render_entry_field(field, v, coll, glob, home)))
     body = "\n".join(parts) + '<div class="detail"><dl>' + "\n".join(dl) + "</dl>" + verification_box(row)
+    if coll == "promises":
+        if not (row.get("Condition") or "").strip():
+            body += '<p class="promise-note"><strong>Condition:</strong> None stated in Scripture.</p>'
+        if not (row.get("Fulfillment") or "").strip():
+            body += '<p class="promise-note"><strong>Fulfillment:</strong> Not stated in Scripture for this promise.</p>'
     if coll == "people" and people_extra is not None:
         body += people_extra
     if any((row.get(f) or "").strip() for f in STUDY_FIELDS):

@@ -801,3 +801,64 @@ collections:
               - {label: "Description", name: "desc", widget: "text", required: false}
               - {label: "Image URL", name: "image", widget: "string", required: false}
               - {label: "Buy Link", name: "url", widget: "string"}
+  - name: "god"
+    label: "God"
+    folder: "content/god"
+    create: true
+    slug: "{{fields.Name}}"
+    identifier_field: "Name"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Name", name: "Name", widget: "string"}
+      - {label: "Category", name: "Category", widget: "select", options: ["Name", "Title", "Attribute", "Role", "Action"]}
+      - {label: "Subject", name: "Subject", widget: "string", required: false}
+      - {label: "Form", name: "Form", widget: "string", required: false}
+      - {label: "Meaning", name: "Meaning", widget: "text"}
+      - {label: "Key Scriptures", name: "KeyScriptures", widget: "list"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list", required: false}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list", required: false}
+      - {label: "Related People", name: "RelatedPeople", widget: "list", required: false}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
+  - name: "promises"
+    label: "Promises of God"
+    folder: "content/promises"
+    create: true
+    slug: "{{fields.Title}}"
+    identifier_field: "Title"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Title", name: "Title", widget: "string"}
+      - {label: "Promise", name: "Promise", widget: "text"}
+      - {label: "Condition", name: "Condition", widget: "text", required: false}
+      - {label: "Fulfillment", name: "Fulfillment", widget: "text", required: false}
+      - {label: "Key Scriptures", name: "KeyScriptures", widget: "list"}
+      - {label: "Fulfillment Scriptures", name: "FulfillmentScriptures", widget: "list", required: false}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list", required: false}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list", required: false}
+      - {label: "Related People", name: "RelatedPeople", widget: "list", required: false}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
+  - name: "identity"
+    label: "Identity in Christ"
+    folder: "content/identity"
+    create: true
+    slug: "{{fields.Title}}"
+    identifier_field: "Title"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Title", name: "Title", widget: "string"}
+      - {label: "Meaning", name: "Meaning", widget: "text"}
+      - {label: "Practical Change", name: "PracticalChange", widget: "text"}
+      - {label: "Key Scriptures", name: "KeyScriptures", widget: "list"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list", required: false}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list", required: false}
+      - {label: "Related People", name: "RelatedPeople", widget: "list", required: false}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "list", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}

@@ -62,6 +62,10 @@ SOURCES = [
     ("studyguides", "studyguides-cms/Study Guides CMS.csv", "Guide"),
     ("civilizations", "civilizations-cms/Civilizations CMS.csv", "Civilization"),
     ("manuscripts", "manuscripts-cms/Manuscripts CMS.csv", "Manuscript"),
+    # Entries-only collections (no CSV source; built from per-entry files):
+    ("god", "", "Name"),
+    ("promises", "", "Title"),
+    ("identity", "", "Title"),
 ]
 
 

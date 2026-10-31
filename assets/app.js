@@ -94,6 +94,15 @@
   { id: "manuscripts", label: "Dead Sea Scrolls Manuscripts", file: "content/manuscripts.json", primary: "Manuscript",
     blurb: "Qumran manuscripts of the Bible — the best-preserved copy of each book, with its cave, date, language, material, and the passages that actually survive. Search by book, cave, period, language, or completeness.",
     filters: [{ label: "Book", field: "Work" }, { label: "Cave", field: "Cave" }, { label: "Period", field: "Period" }, { label: "Language", field: "Language" }, { label: "Category", field: "Category" }, { label: "Completeness", field: "Completeness" }, { label: "Verification", field: "VerificationStatus" }], meta: ["ManuscriptID", "Cave", "DateApprox"] },
+    { id: "god", label: "God", file: "content/god.json", primary: "Name",
+      blurb: "The names, titles, attributes, roles, and actions of God — who he is, what he is called, and what he does.",
+      filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category", "Subject"] },
+    { id: "promises", label: "Promises of God", file: "content/promises.json", primary: "Title",
+      blurb: "Every promise of God in Scripture — what he pledged, on what condition, and where it was fulfilled.",
+      filters: [{ label: "Verification", field: "VerificationStatus" }] },
+    { id: "identity", label: "Identity in Christ", file: "content/identity.json", primary: "Title",
+      blurb: "Who you are in Christ — and what changes because of it.",
+      filters: [{ label: "Verification", field: "VerificationStatus" }] },
 ];
   /* Explore tile order, as a study journey: the story first, then the
      world behind it, then deeper study, then discernment, then the
@@ -107,13 +116,13 @@
     "topics", "wordstudies", "doctrines", "prophecies", "typology", "apologetics",
     "objections", "heresies", "fallacies", "perspectives", "heritage",
     "politics", "socialmedia", "courses", "studyguides", "quizzes", "hymns",
-    "nature"];
+    "nature", "god", "promises", "identity"];
   /* Section headings for the Explore tiles, keyed by the collection that
      starts each section. The first section combines the story and the
      world behind it under one title, Discover the Bible. */
   var SECTION_HEADINGS = { timeline: "Discover the Bible", questions: "Ask and Understand",
     courses: "Learn and Practice",
-    hymns: "Worship and Wonder" };
+    hymns: "Worship and Wonder", god: "Know God" };
 
   var REL_FIELDS = ["RelatedBooks", "RelatedPeople", "RelatedEvents", "RelatedTopics",
     "RelatedDoctrines", "RelatedQuestions", "RelatedFinds", "RelatedBook",
@@ -173,7 +182,7 @@
     "StudyTakeaways": "Key Takeaways & Book Summary"
   };
   var SNIPPET_FIELDS = ["Summary", "Description", "Story", "Definition", "ShortAnswer",
-    "ProphecySummary", "Explanation", "BiblicalUsage", "Beliefs"];
+    "ProphecySummary", "Explanation", "BiblicalUsage", "Beliefs", "Meaning", "Promise"];
   var SKIP_FIELDS = ["Slug", "Maps", "Image", "ImageCredit", "ImageSource", "PanelImage", "PanelImageCredit"];
   var VERIF_FIELDS = ["VerificationStatus", "Sources", "LastReviewed"];
 
@@ -187,7 +196,7 @@
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
-  var ASSET_V = "184";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "185";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -374,7 +383,7 @@
      "Numbers 22-24" links to its first chapter. Anything unparseable
      stays plain text, never a broken link. */
   var SCRIPTURE_FIELDS = ["KeyVerses", "KeyPassages", "KeyScriptures", "ScriptureReference",
-    "ScriptureIlluminated", "BibleReferences", "Scripture", "BiblicalSupport", "PreservedPassages"];
+    "ScriptureIlluminated", "BibleReferences", "Scripture", "BiblicalSupport", "PreservedPassages", "FulfillmentScriptures"];
   function bibleBookByNameStart(text) {
     var low = text.toLowerCase();
     var books = BIBLE_BOOKS.slice().sort(function (a, b) { return b.name.length - a.name.length; });
@@ -746,6 +755,71 @@
     window.scrollTo(0, 0);
   }
   /* ---------- timeline: a real vertical timeline with connections ---------- */
+  var TL_ERA_COLORS = {
+    "Primeval / Patriarchs": "#8d6e63",
+    "Exodus and Wilderness": "#c62828",
+    "Conquest and Judges": "#ef6c00",
+    "United Monarchy": "#7b1fa2",
+    "Divided Monarchy": "#1565c0",
+    "Exile": "#00897b",
+    "Return and Second Temple": "#558b2f",
+    "Life of Christ": "#ec407a",
+    "Early Church": "#f9a825"
+  };
+  var TL_DOT_COLORS = { story: "#1B2A4E", person: "#e91e63", civ: "#00695c" };
+  /* Timeline visualization data (Oct 2026): dots derive from existing
+     timeline, people, and civilizations data only — nothing invented. */
+  function timelineVizData(era) {
+    var rows = data.timeline || [];
+    var peopleByName = {}, civByName = {};
+    (data.people || []).forEach(function (r, i) { var p = val(r, "Name"); if (p && peopleByName[p] === undefined) peopleByName[p] = i; });
+    (data.civilizations || []).forEach(function (r, i) { var p = val(r, "Civilization"); if (p && civByName[p] === undefined) civByName[p] = i; });
+    var stories = rows.map(function (r, i) { return { row: r, idx: i }; }).filter(function (item) {
+      return !era || val(item.row, "Era") === era;
+    });
+    var seenPeople = {}, people = [];
+    stories.forEach(function (item) {
+      splitList(val(item.row, "KeyPersons")).forEach(function (n) {
+        var i = peopleByName[n];
+        if (i !== undefined && !seenPeople[i]) {
+          seenPeople[i] = true;
+          people.push({ idx: i, name: n, role: val((data.people || [])[i], "Role"), era: val((data.people || [])[i], "TimelineEra") });
+        }
+      });
+    });
+    var eraList = [];
+    rows.forEach(function (r) { var e = val(r, "Era"); if (e && eraList.indexOf(e) === -1) eraList.push(e); });
+    var civNames = [], seenCiv = {};
+    (era ? [era] : eraList).forEach(function (e) {
+      (ERA_CIVILIZATIONS[e] || []).forEach(function (n) {
+        if (!seenCiv[n]) { seenCiv[n] = true; civNames.push(n); }
+      });
+    });
+    var civs = civNames.map(function (n) {
+      var i = civByName[n];
+      if (i === undefined) return null;
+      return { idx: i, name: n, region: val((data.civilizations || [])[i], "Region") };
+    }).filter(Boolean);
+    return { stories: stories, people: people, civs: civs };
+  }
+  function timelineVizDetail(kind, idx) {
+    if (kind === "story") {
+      var r = (data.timeline || [])[idx] || {};
+      return "<h4>" + esc(val(r, "Title")) + "</h4>" +
+        "<p>" + esc(val(r, "Era")) + (isEmpty(val(r, "DateApprox")) ? "" : " · " + esc(val(r, "DateApprox"))) + "</p>" +
+        '<p><a class="btn" href="#/timeline/' + idx + '">Open timeline entry &rarr;</a></p>';
+    }
+    if (kind === "person") {
+      var p = (data.people || [])[idx] || {};
+      return "<h4>" + esc(val(p, "Name")) + "</h4>" +
+        "<p>" + esc(val(p, "Role")) + (isEmpty(val(p, "TimelineEra")) ? "" : " · " + esc(val(p, "TimelineEra"))) + "</p>" +
+        '<p><a class="btn" href="#/people/' + idx + '">Open profile &rarr;</a></p>';
+    }
+    var cv = (data.civilizations || [])[idx] || {};
+    return "<h4>" + esc(val(cv, "Civilization")) + "</h4>" +
+      "<p>" + esc(val(cv, "Region")) + "</p>" +
+      '<p><a class="btn" href="#/civilizations/' + idx + '">Open civilization &rarr;</a></p>';
+  }
   function viewTimeline(params) {
     var rows = data.timeline || [];
     var state = { q: (params.get("q") || ""), era: (params.get("f_Era") || "") };
@@ -824,7 +898,7 @@
       if (!wrap) return;
       var items = filtered();
       if (!items.length) { wrap.innerHTML = '<p class="empty">Nothing matches. Try clearing the search or filters.</p>'; return; }
-      var html = '<div class="tl">', lastEra = null;
+      var html = '<p class="tl-showing">Showing ' + items.length + ' of ' + rows.length + ' events.</p><div class="tl">', lastEra = null;
       items.forEach(function (item) {
         var r = item.row;
         var era = val(r, "Era");
@@ -851,25 +925,74 @@
       var s = p.toString();
       history.replaceState(null, "", "#/timeline" + (s ? "?" + s : ""));
     }
+    /* ---------- color-coded timeline visualization (Oct 2026) ----------
+       Era bar (one color per era, clickable), era chips with counts,
+       scrollable dot rows for stories & events, people, and
+       civilizations, and a detail panel. Era selection filters both
+       the dots and the list below. */
+    function eraCount(e) { var n = 0; rows.forEach(function (r) { if (val(r, "Era") === e) n++; }); return n; }
+    function renderViz() {
+      var wrap = document.getElementById("tlViz");
+      if (!wrap) return;
+      var d = timelineVizData(state.era);
+      var bar = '<div style="display:flex;overflow-x:auto;margin:8px 0">';
+      eras.forEach(function (e) {
+        var active = state.era === e;
+        bar += '<button type="button" data-viz-era="' + esc(e) + '" title="' + esc(e) + '" style="flex:1 0 120px;background:' + (TL_ERA_COLORS[e] || "#999") + ';color:#fff;border:none;padding:10px 4px;cursor:pointer;font-size:12px' + (active ? ';outline:3px solid #1B2A4E;outline-offset:-3px' : '') + '">' + esc(e) + "</button>";
+      });
+      bar += "</div>";
+      var chipsHtml = '<div class="chips"><span class="chip-label">Era:</span>';
+      chipsHtml += '<button class="chip' + (state.era === "" ? " active" : "") + '" data-era="">All time (' + rows.length + ")</button>";
+      eras.forEach(function (e) {
+        chipsHtml += '<button class="chip' + (state.era === e ? " active" : "") + '" data-era="' + esc(e) + '">' + esc(e) + " (" + eraCount(e) + ")</button>";
+      });
+      chipsHtml += "</div>";
+      var legend = '<p style="font-size:13px"><span style="display:inline-block;width:12px;height:12px;background:#1B2A4E;border-radius:50%"></span> Stories &amp; Events &nbsp; ' +
+        '<span style="display:inline-block;width:12px;height:12px;background:#e91e63;border-radius:50%"></span> People &nbsp; ' +
+        '<span style="display:inline-block;width:12px;height:12px;background:#00695c;border-radius:50%"></span> Civilizations &nbsp; ' +
+        '<span>Eras: the bar above (one color per era). Click an era to zoom in. Click any dot for details.</span></p>';
+      function dotRow(labelText, items, kind) {
+        var rowHtml = '<div style="display:flex;align-items:center;gap:6px;margin:6px 0"><span style="min-width:130px;font-weight:600;font-size:13px">' + labelText + "</span>";
+        if (!items.length) { rowHtml += '<span class="empty" style="font-size:13px">None in this era.</span>'; }
+        else {
+          rowHtml += '<div style="display:flex;overflow-x:auto;white-space:nowrap;flex:1">';
+          items.forEach(function (it) {
+            var ttl = kind === "story" ? val(it.row, "Title") : it.name;
+            rowHtml += '<button type="button" data-dot="' + kind + '" data-idx="' + it.idx + '" title="' + esc(ttl) + '" aria-label="' + esc(ttl) + '" style="display:inline-block;width:14px;height:14px;border-radius:50%;background:' + TL_DOT_COLORS[kind] + ';border:none;margin:2px;cursor:pointer;flex:0 0 auto"></button>';
+          });
+          rowHtml += "</div>";
+        }
+        return rowHtml + "</div>";
+      }
+      wrap.innerHTML = bar + chipsHtml + legend +
+        dotRow("Stories &amp; Events", d.stories, "story") +
+        dotRow("People", d.people, "person") +
+        dotRow("Civilizations", d.civs, "civ");
+      wrap.querySelectorAll("[data-viz-era]").forEach(function (btn) {
+        btn.addEventListener("click", function () { selectEra(btn.getAttribute("data-viz-era")); });
+      });
+      wrap.querySelectorAll("[data-era]").forEach(function (btn) {
+        btn.addEventListener("click", function () { selectEra(btn.getAttribute("data-era")); });
+      });
+      wrap.querySelectorAll("[data-dot]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var detail = document.getElementById("tlDetail");
+          if (detail) detail.innerHTML = timelineVizDetail(btn.getAttribute("data-dot"), parseInt(btn.getAttribute("data-idx"), 10));
+        });
+      });
+    }
+    function selectEra(e) {
+      state.era = e;
+      syncUrl(); renderViz(); renderTl();
+    }
     var html = "<h2>Biblical Timeline</h2><p class='page-intro'>The whole story, era by era, from Creation to the Early Church — " +
       "with the people, places, events, and discoveries connected at every step. &middot; " + rows.length + " entries</p>";
-    html += '<div class="controls"><input type="search" id="tlSearch" placeholder="Search the timeline…" value="' + esc(state.q) + '">';
-    html += '<div class="chips"><span class="chip-label">Era:</span>';
-    html += '<button class="chip' + (state.era === "" ? " active" : "") + '" data-era="">All</button>';
-    eras.forEach(function (e) {
-      html += '<button class="chip' + (state.era === e ? " active" : "") + '" data-era="' + esc(e) + '">' + esc(e) + "</button>";
-    });
-    html += "</div></div><div id='tlWrap'></div>";
+    html += '<div id="tlViz"></div><div id="tlDetail"></div>';
+    html += '<div class="controls"><input type="search" id="tlSearch" placeholder="Search the timeline…" value="' + esc(state.q) + '"></div><div id="tlWrap"></div>';
     app.innerHTML = html;
+    renderViz();
     renderTl();
     document.getElementById("tlSearch").addEventListener("input", function (e) { state.q = e.target.value; syncUrl(); renderTl(); });
-    app.querySelectorAll("[data-era]").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        state.era = btn.getAttribute("data-era");
-        btn.parentNode.querySelectorAll("[data-era]").forEach(function (b) { b.classList.toggle("active", b.getAttribute("data-era") === state.era); });
-        syncUrl(); renderTl();
-      });
-    });
     window.scrollTo(0, 0);
   }
   function navigate(hash, replace) {
@@ -1347,6 +1470,10 @@
       html += "<dt>" + esc(label(field)) + "</dt><dd>" + renderValue(field, v) + "</dd>";
     });
     html += "</dl>";
+    if (c.id === "promises") {
+      if (isEmpty(val(row, "Condition"))) html += '<p class="promise-note"><strong>Condition:</strong> None stated in Scripture.</p>';
+      if (isEmpty(val(row, "Fulfillment"))) html += '<p class="promise-note"><strong>Fulfillment:</strong> Not stated in Scripture for this promise.</p>';
+    }
     html += verificationBox(row);
     if (STUDY_FIELDS.some(function (f) { return !isEmpty(val(row, f)); })) {
       html += '<div class="study">';
@@ -4518,7 +4645,7 @@ function genBindInteractive(node) {
       "<h3>Nothing invented, nothing auto-verified</h3>" +
       "<p>No discovery, date, biblical reference, manuscript identification, or citation is invented to fill a gap. Where adequate sources have not been found, the field stays blank and the entry stays Awaiting Review. Content drafted with AI assistance is never automatically marked verified — it earns Verified only after a source check, like any other entry.</p>" +
       "<h3>Coverage today</h3>" +
-      "<p>Of 20,693 database entries, 24 are Verified, 6 are Scholarly Debate, and 20,663 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
+      "<p>Of 20,846 database entries, 24 are Verified, 6 are Scholarly Debate, and 20,816 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
       "<p>Browse the statuses: <a href='#/manuscripts?f_VerificationStatus=Verified'>Verified manuscripts</a> &middot; <a href='#/manuscripts?f_VerificationStatus=Scholarly Debate'>Debated manuscripts</a> &middot; <a href='#/finds?f_VerificationStatus=Scholarly Debate'>Debated finds</a></p>" +
       "<h3>Corrections</h3>" +
       "<p>Entries can be corrected and updated at any time. Corrections go through the site editor or through the site owner, and a corrected entry keeps its sources and review date visible so readers can see what changed and when it was last checked.</p>" +
@@ -4969,6 +5096,8 @@ function genBindInteractive(node) {
     __hopeStatic.personTimelineItems = personTimelineItems;
     __hopeStatic.personFamilyHTML = personFamilyHTML;
     __hopeStatic.personWhenLivedHTML = personWhenLivedHTML;
+    __hopeStatic.timelineVizData = timelineVizData;
+    __hopeStatic.timelineVizDetail = timelineVizDetail;
     __hopeStatic.personSectionsHTML = personSectionsHTML;
   }
 })();
