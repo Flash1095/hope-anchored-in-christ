@@ -187,7 +187,7 @@
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
-  var ASSET_V = "180";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "181";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -870,6 +870,326 @@
       (meta ? '<p class="meta">' + esc(meta) + "</p>" : "") +
       (snip ? '<p class="snippet">' + esc(snip) + "</p>" : "") + "</a>";
   }
+  /* ---------- people profile extra sections: Life timeline, Family,
+     Verses mentioning this person. Added for the "add these to each
+     person" request (Oct 2026): the sections mirror another Bible app's
+     profile page, but every item comes from data the site already has
+     — genealogy edges, stories, timeline entries, and the verse-text
+     link index. Nothing is invented: no per-place actions (the site
+     has no such data), no family for unmapped profiles, no verses the
+     reader itself does not link to the profile. Computed lazily, one
+     profile at a time, and cached per profile for the session. ---------- */
+  var personExtraCache = {};
+  var bibleBooksPromise = null;
+  function escRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+  function loadBibleBooks() {
+    if (bibleBooksPromise) return bibleBooksPromise;
+    bibleBooksPromise = Promise.all(BIBLE_BOOKS.map(function (b) {
+      return fetch("content/bible/" + b.slug + ".json?v=" + ASSET_V).then(function (r) {
+        if (!r.ok) throw new Error("book " + b.slug);
+        return r.json();
+      }).then(function (bj) { return { name: bj.book || b.name, slug: b.slug, chapters: bj.chapters }; });
+    }));
+    return bibleBooksPromise;
+  }
+  /* Candidate search terms for one profile: every verse-link term that
+     resolves to this profile (exact primaries and sole-owner aliases
+     from the link index), plus the override, context-rule, and
+     link-only forms that target it, plus its own name and comma-first
+     part (so "Joseph the son of Jacob" is found for Joseph, Son of
+     Jacob). Candidates only narrow the scan — linkifyVerseText makes
+     the final call, so a candidate that means someone else in a given
+     verse (Acts "Saul" for King Saul) is filtered out there. */
+  function personVerseTerms(idx) {
+    var row = (data.people || [])[idx];
+    if (!row) return [];
+    var name = val(row, "Name");
+    var terms = {};
+    function add(t) { if (t) terms[t.toLowerCase()] = true; }
+    var d = bibleLinkData();
+    Object.keys(d.map).forEach(function (k) {
+      var t = d.map[k];
+      if (t && t.coll === "people" && t.idx === idx) add(k);
+    });
+    Object.keys(BIBLE_PEOPLE_OVERRIDE).forEach(function (form) {
+      var t = overrideTarget(form);
+      if (t && t.idx === idx) add(form);
+    });
+    BIBLE_CONTEXT_RULES.forEach(function (r) {
+      if (r.target && peopleIndexByName(r.target) === idx) add(r.form);
+    });
+    Object.keys(BIBLE_LINK_ONLY).forEach(function (form) {
+      if (peopleIndexByName(BIBLE_LINK_ONLY[form].target) === idx) add(form);
+    });
+    add(name);
+    add(name.split(",")[0].trim());
+    return Object.keys(terms).sort(function (a, b) { return b.length - a.length; });
+  }
+  /* All verses whose verse text the reader links to this profile, in
+     canonical book order. The scan is one regex test per verse; only
+     candidate-hit verses run the full linker, so heavy profiles stay
+     fast. Result: [{book, slug, chapter, verse}]. */
+  function computePersonVerses(idx) {
+    var cache = personExtraCache[idx] || (personExtraCache[idx] = {});
+    if (cache.verses) return Promise.resolve(cache.verses);
+    if (cache.versesPromise) return cache.versesPromise;
+    var terms = personVerseTerms(idx);
+    var p = loadBibleBooks().then(function (books) {
+      var out = [];
+      if (!terms.length) return out;
+      var re = new RegExp("\\b(?:" + terms.map(escRe).join("|") + ")\\b", "i");
+      books.forEach(function (bk) {
+        Object.keys(bk.chapters).map(function (n) { return +n; }).sort(function (a, b) { return a - b; }).forEach(function (ch) {
+          var chData = bk.chapters[String(ch)];
+          Object.keys(chData).map(function (n) { return +n; }).sort(function (a, b) { return a - b; }).forEach(function (vn) {
+            var txt = chData[String(vn)];
+            if (typeof txt !== "string" || !re.test(txt)) return;
+            var linked = linkifyVerseText(txt, bk.name, ch, vn);
+            if (linked.indexOf('href="#/people/' + idx + '"') !== -1) {
+              out.push({ book: bk.name, slug: bk.slug, chapter: ch, verse: vn });
+            }
+          });
+        });
+      });
+      return out;
+    });
+    cache.versesPromise = p;
+    p.then(function (v) { cache.verses = v; });
+    return p;
+  }
+  function verseChipHTML(v) {
+    return '<a class="chip" href="#/bible/' + v.slug + "/" + v.chapter + "?v=" + v.verse + '">' +
+      esc(v.book) + " " + v.chapter + ":" + v.verse + "</a>";
+  }
+  /* Show-more binding for a list whose first batch is already in the
+     page (same pattern as viewCollection's loadMoreBtn): the button
+     appends the next batch and removes itself at the end. */
+  function bindBatchedMore(listId, btnId, items, batch, itemHTML) {
+    var list = document.getElementById(listId);
+    var btn = document.getElementById(btnId);
+    if (!list || !btn) return;
+    var shown = Math.min(batch, items.length);
+    btn.textContent = "Show more (" + shown + " of " + items.length + ")";
+    btn.addEventListener("click", function () {
+      var next = Math.min(shown + batch, items.length);
+      list.insertAdjacentHTML("beforeend", items.slice(shown, next).map(itemHTML).join(""));
+      shown = next;
+      if (shown >= items.length) {
+        if (btn.parentNode) btn.parentNode.remove();
+      } else {
+        btn.textContent = "Show more (" + shown + " of " + items.length + ")";
+      }
+    });
+  }
+  /* Family for one profile, mirroring viewGenealogy's relations /
+     familyMaps logic exactly (same edges, same closest-relationship-
+     wins rules), but with profile-page links: a mapped name links to
+     its people profile, an unmapped name to its genealogy panel
+     (?id=, always, so ambiguous names never land on a disambiguation
+     page). Sections render only where a connection genuinely exists;
+     unmapped profiles get the honest line, never invented family. */
+  function personFamilyHTML(idx) {
+    var G = genealogyData || { nodes: [], edges: [] };
+    var nodes = G.nodes || [], edges = G.edges || [];
+    var node = null;
+    for (var j = 0; j < nodes.length; j++) if (nodes[j].profileIndex === idx) { node = nodes[j]; break; }
+    if (!node) return "<h3>Family</h3><p>No genealogy record for this person yet.</p>";
+    var byId = {};
+    nodes.forEach(function (n) { byId[n.id] = n; });
+    function mergeRefs(list) {
+      var out = [];
+      list.forEach(function (r) { if (out.indexOf(r) === -1) out.push(r); });
+      return out;
+    }
+    function famNameHTML(n) {
+      if (n.profileIndex !== null && n.profileIndex !== undefined) {
+        return '<a href="#/people/' + n.profileIndex + '">' + esc(n.name) + "</a>";
+      }
+      return '<a href="#/genealogy/' + encodeURIComponent(n.name) + "?id=" + encodeURIComponent(n.id) + '">' + esc(n.name) + "</a>";
+    }
+    function famRefsHTML(refs) {
+      if (!refs || !refs.length) return "";
+      return ' <span class="gen-refs">' + linkifyScriptureRefs(refs.join("; ")) + "</span>";
+    }
+    function famListHTML(map) {
+      var ids = Object.keys(map);
+      if (!ids.length) return "";
+      return '<ul class="gen-rel-list">' + ids.map(function (pid) {
+        var n = byId[pid];
+        if (!n) return "";
+        return "<li>" + famNameHTML(n) + famRefsHTML(map[pid]) + "</li>";
+      }).join("") + "</ul>";
+    }
+    function relations(id) {
+      var fathers = {}, mothers = {}, spouses = {}, children = {};
+      edges.forEach(function (e) {
+        if (e.child === id) {
+          if (e.father) fathers[e.father] = mergeRefs((fathers[e.father] || []).concat(e.refs || []));
+          if (e.mother) mothers[e.mother] = mergeRefs((mothers[e.mother] || []).concat(e.refs || []));
+          (e.spouses || []).forEach(function (s) {
+            spouses[s] = mergeRefs((spouses[s] || []).concat(e.refs || []));
+          });
+        }
+        (e.spouses || []).forEach(function (s) {
+          if (s === id) spouses[e.child] = mergeRefs((spouses[e.child] || []).concat(e.refs || []));
+        });
+        if (e.father === id || e.mother === id) {
+          children[e.child] = mergeRefs((children[e.child] || []).concat(e.refs || []));
+        }
+      });
+      return { fathers: fathers, mothers: mothers, spouses: spouses, children: children };
+    }
+    function familyMaps(nd) {
+      var parentSet = {}, childSet = {};
+      edges.forEach(function (e) {
+        if (e.child === nd.id) {
+          if (e.father) parentSet[e.father] = true;
+          if (e.mother) parentSet[e.mother] = true;
+        }
+        if (e.father === nd.id || e.mother === nd.id) childSet[e.child] = true;
+      });
+      function kidsOf(pid) {
+        var m = {};
+        edges.forEach(function (e) {
+          if (e.father === pid || e.mother === pid) m[e.child] = mergeRefs((m[e.child] || []).concat(e.refs || []));
+        });
+        return m;
+      }
+      function parentsOf(id) {
+        var m = {};
+        edges.forEach(function (e) {
+          if (e.child === id) {
+            if (e.father) m[e.father] = mergeRefs((m[e.father] || []).concat(e.refs || []));
+            if (e.mother) m[e.mother] = mergeRefs((m[e.mother] || []).concat(e.refs || []));
+          }
+        });
+        return m;
+      }
+      function absorb(into, from) {
+        Object.keys(from).forEach(function (k) {
+          into[k] = mergeRefs((into[k] || []).concat(from[k]));
+        });
+      }
+      var sibs = {}, grandkids = {}, grandps = {}, aunts = {}, nieces = {}, cousins = {};
+      Object.keys(parentSet).forEach(function (pid) {
+        absorb(sibs, kidsOf(pid));
+        absorb(grandps, parentsOf(pid));
+      });
+      delete sibs[nd.id];
+      Object.keys(childSet).forEach(function (c) { absorb(grandkids, kidsOf(c)); });
+      Object.keys(grandps).forEach(function (gid) {
+        var gk = kidsOf(gid);
+        Object.keys(gk).forEach(function (c) {
+          if (!parentSet[c]) aunts[c] = mergeRefs((aunts[c] || []).concat(gk[c]));
+        });
+      });
+      Object.keys(sibs).forEach(function (s) { absorb(nieces, kidsOf(s)); });
+      Object.keys(aunts).forEach(function (a) { absorb(cousins, kidsOf(a)); });
+      [grandkids, grandps, aunts, nieces, cousins].forEach(function (m) { delete m[nd.id]; });
+      Object.keys(parentSet).forEach(function (p) {
+        delete grandkids[p]; delete aunts[p]; delete nieces[p]; delete cousins[p];
+      });
+      Object.keys(childSet).forEach(function (c) {
+        delete nieces[c]; delete cousins[c]; delete aunts[c];
+      });
+      Object.keys(sibs).forEach(function (s) { delete cousins[s]; });
+      return { siblings: sibs, grandchildren: grandkids, grandparents: grandps,
+               aunts: aunts, nieces: nieces, cousins: cousins };
+    }
+    var rel = relations(node.id);
+    var fam = familyMaps(node);
+    var sections = [
+      ["Parents", famListHTML(rel.fathers) + famListHTML(rel.mothers)],
+      ["Siblings", famListHTML(fam.siblings)],
+      ["Spouse(s)", famListHTML(rel.spouses)],
+      ["Children", famListHTML(rel.children)],
+      ["Grandchildren", famListHTML(fam.grandchildren)],
+      ["Grandparents", famListHTML(fam.grandparents)],
+      ["Aunts &amp; Uncles", famListHTML(fam.aunts)],
+      ["Nieces &amp; Nephews", famListHTML(fam.nieces)],
+      ["Cousins", famListHTML(fam.cousins)]
+    ];
+    var html = "<h3>Family</h3>";
+    var any = false;
+    sections.forEach(function (s) {
+      if (!s[1]) return;
+      any = true;
+      html += "<h4>" + s[0] + "</h4>" + s[1];
+    });
+    if (!any) html += "<p>No family connections recorded in the genealogies for this person.</p>";
+    return html;
+  }
+  /* Life timeline for one profile, from existing data only: timeline
+     entries whose KeyPersons names the person (in timeline order),
+     then stories whose KeyPeople names the person (in canonical book
+     order via the story's first RelatedBook). A token counts only on
+     an exact match with the profile Name — a bare "Mary" in a story
+     does not claim Mary, Mother of Jesus. */
+  function bookOrderOf(relatedBooks) {
+    var first = splitList(relatedBooks)[0];
+    if (!first) return 999;
+    for (var i = 0; i < BIBLE_BOOKS.length; i++) if (BIBLE_BOOKS[i].name === first) return i;
+    return 999;
+  }
+  function personTimelineItems(idx) {
+    var name = val((data.people || [])[idx], "Name");
+    var items = [];
+    (data.timeline || []).forEach(function (row, i) {
+      if (splitList(val(row, "KeyPersons")).indexOf(name) !== -1) {
+        items.push({ kind: "timeline", idx: i, title: val(row, "Title"), ref: val(row, "ScriptureReference") });
+      }
+    });
+    var stories = [];
+    (data.stories || []).forEach(function (row, i) {
+      if (splitList(val(row, "KeyPeople")).indexOf(name) !== -1) stories.push({ row: row, idx: i });
+    });
+    stories.sort(function (a, b) {
+      return (bookOrderOf(val(a.row, "RelatedBooks")) - bookOrderOf(val(b.row, "RelatedBooks"))) || (a.idx - b.idx);
+    });
+    stories.forEach(function (s) {
+      items.push({ kind: "story", idx: s.idx, title: val(s.row, "Story"), ref: val(s.row, "Scripture") });
+    });
+    return items;
+  }
+  function timelineItemHTML(it) {
+    var href = it.kind === "story" ? "#/stories/" + it.idx : "#/timeline/" + it.idx;
+    return "<li><a href='" + href + "'>" + esc(it.title) + "</a>" +
+      (it.ref ? ' <span class="gen-refs">(' + linkifyScriptureRefs(it.ref) + ")</span>" : "") + "</li>";
+  }
+  function personSectionsHTML(idx) {
+    var cache = personExtraCache[idx] || (personExtraCache[idx] = {});
+    if (!cache.timeline) cache.timeline = personTimelineItems(idx);
+    var items = cache.timeline;
+    var html = "<h3>Life timeline</h3>";
+    if (!items.length) {
+      html += "<p>No timeline moments recorded for this person yet.</p>";
+    } else {
+      html += "<p class='page-intro'>Timeline events in timeline order, then Bible stories in canonical book order.</p>";
+      html += '<ol id="personTimelineList">' + items.slice(0, 50).map(timelineItemHTML).join("") + "</ol>";
+      if (items.length > 50) html += '<p><button class="btn" id="personTimelineMore">Show more (50 of ' + items.length + ")</button></p>";
+    }
+    html += personFamilyHTML(idx);
+    html += '<h3>Verses mentioning this person</h3><div id="personVersesWrap"><p class="loading">Loading verses…</p></div>';
+    return html;
+  }
+  function bindPersonSections(idx) {
+    var cache = personExtraCache[idx] || {};
+    if (cache.timeline && cache.timeline.length > 50) {
+      bindBatchedMore("personTimelineList", "personTimelineMore", cache.timeline, 50, timelineItemHTML);
+    }
+    computePersonVerses(idx).then(function (verses) {
+      var wrap = document.getElementById("personVersesWrap");
+      if (!wrap) return;
+      if (!verses.length) {
+        wrap.innerHTML = "<p>No other verses indexed for this person yet.</p>";
+        return;
+      }
+      wrap.innerHTML = '<div class="chips" id="personVersesList">' + verses.slice(0, 100).map(verseChipHTML).join("") + "</div>" +
+        (verses.length > 100 ? '<p><button class="btn" id="personVersesMore">Show more (100 of ' + verses.length + ")</button></p>" : "");
+      if (verses.length > 100) bindBatchedMore("personVersesList", "personVersesMore", verses, 100, verseChipHTML);
+    });
+  }
+
   function viewDetail(c, idx) {
     var rows = data[c.id] || [];
     var row = rows[idx];
@@ -940,6 +1260,7 @@
         }).join("") + "</ul>";
       }
     }
+    if (c.id === "people") html += personSectionsHTML(idx);
     html += "</div>";
     app.innerHTML = html;
     var study = app.querySelector(".study");
@@ -953,6 +1274,7 @@
         study.querySelectorAll("details.study-section").forEach(function (d) { d.open = false; });
       });
     }
+    if (c.id === "people") bindPersonSections(idx);
     window.scrollTo(0, 0);
   }
 
@@ -4400,4 +4722,16 @@ function genBindInteractive(node) {
     app.innerHTML = '<p class="empty">Could not load site data (' + esc(err.message) + "). " +
       "This site must be served over http(s) — opening index.html directly from disk (file://) blocks the data files.</p>";
   });
+
+  /* Static-build hook: a vm harness may define __hopeStatic before this
+     script runs; the hook then exposes the people-section helpers for
+     the static generator and for validation harnesses. In browsers
+     __hopeStatic is undefined, so this block never runs and changes
+     nothing on the live site. */
+  if (typeof __hopeStatic !== "undefined" && __hopeStatic) {
+    __hopeStatic.computePersonVerses = computePersonVerses;
+    __hopeStatic.personTimelineItems = personTimelineItems;
+    __hopeStatic.personFamilyHTML = personFamilyHTML;
+    __hopeStatic.personSectionsHTML = personSectionsHTML;
+  }
 })();

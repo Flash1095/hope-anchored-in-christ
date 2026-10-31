@@ -753,7 +753,229 @@ def entry_jsonld(title, desc, url, coll, row):
     return "\n".join(blocks)
 
 
-def entry_page(e, glob, home, quizzes_by_course):
+def split_tokens(v):
+    return [t.strip() for t in str(v or "").split(";") if t.strip()]
+
+
+def people_family_html(idx, genealogy, people_slugs):
+    """Family section for one people static page, porting app.js's
+    relations/familyMaps logic exactly (same edges, same closest-
+    relationship-wins rules). Mapped names link to their static profile
+    page; unmapped names link to their genealogy panel (?id=, always).
+    Unmapped profiles get the honest line, never invented family."""
+    nodes = (genealogy or {}).get("nodes") or []
+    edges = (genealogy or {}).get("edges") or []
+    node = None
+    for n in nodes:
+        if n.get("profileIndex") == idx:
+            node = n
+            break
+    if node is None:
+        return "<h3>Family</h3><p>No genealogy record for this person yet.</p>"
+    by_id = {n["id"]: n for n in nodes}
+
+    def merge_refs(lst):
+        out = []
+        for r in lst:
+            if r not in out:
+                out.append(r)
+        return out
+
+    def fam_name(n):
+        pi = n.get("profileIndex")
+        if pi is not None:
+            return '<a href="../%s/">%s</a>' % (esc(people_slugs.get(pi, "")), esc(n["name"]))
+        return '<a href="../../#/genealogy/%s?id=%s">%s</a>' % (
+            quote(n["name"]), quote(n["id"]), esc(n["name"]))
+
+    def fam_refs(refs):
+        if not refs:
+            return ""
+        return ' <span class="gen-refs">' + linkify_scripture_refs("; ".join(refs)) + "</span>"
+
+    def fam_list(m):
+        if not m:
+            return ""
+        items = []
+        for pid, refs in m.items():
+            n = by_id.get(pid)
+            if not n:
+                continue
+            items.append("<li>" + fam_name(n) + fam_refs(refs) + "</li>")
+        return '<ul class="gen-rel-list">' + "".join(items) + "</ul>" if items else ""
+
+    def relations(nid):
+        fathers, mothers, spouses, children = {}, {}, {}, {}
+        for e in edges:
+            if e.get("child") == nid:
+                if e.get("father"):
+                    fathers[e["father"]] = merge_refs(fathers.get(e["father"], []) + (e.get("refs") or []))
+                if e.get("mother"):
+                    mothers[e["mother"]] = merge_refs(mothers.get(e["mother"], []) + (e.get("refs") or []))
+                for s in e.get("spouses") or []:
+                    spouses[s] = merge_refs(spouses.get(s, []) + (e.get("refs") or []))
+            for s in e.get("spouses") or []:
+                if s == nid:
+                    spouses[e["child"]] = merge_refs(spouses.get(e["child"], []) + (e.get("refs") or []))
+            if e.get("father") == nid or e.get("mother") == nid:
+                children[e["child"]] = merge_refs(children.get(e["child"], []) + (e.get("refs") or []))
+        return fathers, mothers, spouses, children
+
+    def family_maps(nd):
+        parent_set, child_set = {}, {}
+        for e in edges:
+            if e.get("child") == nd["id"]:
+                if e.get("father"):
+                    parent_set[e["father"]] = True
+                if e.get("mother"):
+                    parent_set[e["mother"]] = True
+            if e.get("father") == nd["id"] or e.get("mother") == nd["id"]:
+                child_set[e["child"]] = True
+
+        def kids_of(pid):
+            m = {}
+            for e in edges:
+                if e.get("father") == pid or e.get("mother") == pid:
+                    m[e["child"]] = merge_refs(m.get(e["child"], []) + (e.get("refs") or []))
+            return m
+
+        def parents_of(pid):
+            m = {}
+            for e in edges:
+                if e.get("child") == pid:
+                    if e.get("father"):
+                        m[e["father"]] = merge_refs(m.get(e["father"], []) + (e.get("refs") or []))
+                    if e.get("mother"):
+                        m[e["mother"]] = merge_refs(m.get(e["mother"], []) + (e.get("refs") or []))
+            return m
+
+        def absorb(into, frm):
+            for k, v in frm.items():
+                into[k] = merge_refs(into.get(k, []) + v)
+
+        sibs, grandkids, grandps, aunts, nieces, cousins = {}, {}, {}, {}, {}, {}
+        for pid in parent_set:
+            absorb(sibs, kids_of(pid))
+            absorb(grandps, parents_of(pid))
+        sibs.pop(nd["id"], None)
+        for c in child_set:
+            absorb(grandkids, kids_of(c))
+        for gid in grandps:
+            gk = kids_of(gid)
+            for c, refs in gk.items():
+                if c not in parent_set:
+                    aunts[c] = merge_refs(aunts.get(c, []) + refs)
+        for s in sibs:
+            absorb(nieces, kids_of(s))
+        for a in aunts:
+            absorb(cousins, kids_of(a))
+        for m in (grandkids, grandps, aunts, nieces, cousins):
+            m.pop(nd["id"], None)
+        for p in parent_set:
+            grandkids.pop(p, None)
+            aunts.pop(p, None)
+            nieces.pop(p, None)
+            cousins.pop(p, None)
+        for c in child_set:
+            nieces.pop(c, None)
+            cousins.pop(c, None)
+            aunts.pop(c, None)
+        for s in sibs:
+            cousins.pop(s, None)
+        return sibs, grandkids, grandps, aunts, nieces, cousins
+
+    fathers, mothers, spouses, children = relations(node["id"])
+    sibs, grandkids, grandps, aunts, nieces, cousins = family_maps(node)
+    sections = [
+        ("Parents", fam_list(fathers) + fam_list(mothers)),
+        ("Siblings", fam_list(sibs)),
+        ("Spouse(s)", fam_list(spouses)),
+        ("Children", fam_list(children)),
+        ("Grandchildren", fam_list(grandkids)),
+        ("Grandparents", fam_list(grandps)),
+        ("Aunts &amp; Uncles", fam_list(aunts)),
+        ("Nieces &amp; Nephews", fam_list(nieces)),
+        ("Cousins", fam_list(cousins)),
+    ]
+    html = "<h3>Family</h3>"
+    any_sec = False
+    for title, body in sections:
+        if not body:
+            continue
+        any_sec = True
+        html += "<h4>" + title + "</h4>" + body
+    if not any_sec:
+        html += "<p>No family connections recorded in the genealogies for this person.</p>"
+    return html
+
+
+def people_timeline_html(idx, people_rows, story_entries, timeline_entries, bible_books):
+    """Life timeline for one people static page: timeline entries whose
+    KeyPersons names the person (aggregate order), then stories whose
+    KeyPeople names the person (canonical book order via the story's
+    first RelatedBook). Exact token matches only, same rule as the SPA."""
+    name = (people_rows[idx].get("Name") or "").strip()
+    items = []
+    for e in timeline_entries:
+        row = e["row"]
+        if name in split_tokens(row.get("KeyPersons")):
+            items.append(("timeline", e["slug"], (row.get("Title") or "").strip(),
+                          (row.get("ScriptureReference") or "").strip()))
+    order = {b["name"]: k for k, b in enumerate(bible_books)}
+    scored = []
+    for e in story_entries:
+        row = e["row"]
+        if name in split_tokens(row.get("KeyPeople")):
+            toks = split_tokens(row.get("RelatedBooks"))
+            scored.append((order.get(toks[0], 999) if toks else 999, e["idx"], e))
+    scored.sort(key=lambda t: (t[0], t[1]))
+    for _, _, e in scored:
+        row = e["row"]
+        items.append(("story", e["slug"], (row.get("Story") or "").strip(),
+                      (row.get("Scripture") or "").strip()))
+    if not items:
+        return "<h3>Life timeline</h3><p>No timeline moments recorded for this person yet.</p>"
+
+    def item_html(it):
+        kind, slug, title, ref = it
+        href = "../../stories/%s/" % esc(slug) if kind == "story" else "../../timeline/%s/" % esc(slug)
+        h = '<li><a href="%s">%s</a>' % (href, esc(title))
+        if ref:
+            h += ' <span class="gen-refs">(' + linkify_scripture_refs(ref) + ")</span>"
+        return h + "</li>"
+
+    first, rest = items[:50], items[50:]
+    html = "<h3>Life timeline</h3>"
+    html += "<p class='page-intro'>Timeline events in timeline order, then Bible stories in canonical book order.</p>"
+    html += "<ol>" + "".join(item_html(it) for it in first) + "</ol>"
+    if rest:
+        html += '<details><summary>Show more (50 of %d)</summary><ol>' % len(items)
+        html += "".join(item_html(it) for it in rest) + "</ol></details>"
+    return html
+
+
+def people_verses_html(verses):
+    """Verses mentioning this person, from the Node-computed verse list
+    (same linker as the live reader). Batched: first 100 chips, the
+    rest behind a <details> block (the no-JS equivalent of Show more)."""
+    html = "<h3>Verses mentioning this person</h3>"
+    if not verses:
+        return html + "<p>No other verses indexed for this person yet.</p>"
+
+    def chip(v):
+        return '<a class="chip" href="%s/#/bible/%s/%s?v=%s">%s %s:%s</a>' % (
+            SITE_URL, esc(v["slug"]), v["chapter"], v["verse"],
+            esc(v["book"]), v["chapter"], v["verse"])
+
+    first, rest = verses[:100], verses[100:]
+    html += '<div class="chips">' + "".join(chip(v) for v in first) + "</div>"
+    if rest:
+        html += '<details><summary>Show more (100 of %d)</summary><div class="chips">' % len(verses)
+        html += "".join(chip(v) for v in rest) + "</div></details>"
+    return html
+
+
+def entry_page(e, glob, home, quizzes_by_course, people_extra=None):
     row = e["row"]
     coll = e["coll"]
     title = e["primary"]
@@ -801,6 +1023,8 @@ def entry_page(e, glob, home, quizzes_by_course):
         dl.append("<dt>%s</dt><dd>%s</dd>" % (
             esc(label(field)), render_entry_field(field, v, coll, glob, home)))
     body = "\n".join(parts) + '<div class="detail"><dl>' + "\n".join(dl) + "</dl>" + verification_box(row)
+    if coll == "people" and people_extra is not None:
+        body += people_extra
     if any((row.get(f) or "").strip() for f in STUDY_FIELDS):
         body += '<div class="study">'
         intro = (row.get("StudyIntroduction") or "").strip()
