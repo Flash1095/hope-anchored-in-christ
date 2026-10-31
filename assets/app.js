@@ -203,7 +203,7 @@
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
-  var ASSET_V = "189";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "190";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -4029,6 +4029,7 @@ function genBindInteractive(node) {
   var atlasMap = null, atlasMarkerLayer = null, atlasLeafletState = "idle";
   var atlasPendingFocus = null;
   var atlasJourney = "all"; // "all" or a journeys index: the Atlas journey picker
+  var atlasJourneyLineLayer = null; // Leaflet layer group holding the current journey's verified route segments
   function atlasRowForPlaceName(name) {
     var n = (name || "").trim();
     var i;
@@ -4054,6 +4055,22 @@ function genBindInteractive(node) {
       return { name: name, row: row, mapped: mapped };
     });
   }
+  /* Verified route segments: adjacent stage pairs where BOTH stops have a
+     Confirmed/Probable map point. A segment never touches a Disputed or
+     Unknown stop and never skips over an unverified stop, so a gap in the
+     line honestly shows where the mapped route breaks. */
+  function atlasJourneyVerifiedSegments() {
+    var stages = atlasJourneyStages();
+    var out = [];
+    for (var i = 0; i + 1 < stages.length; i++) {
+      var a = stages[i], b = stages[i + 1];
+      if (!a.mapped || !b.mapped) continue;
+      if ((a.row.evidence !== "Confirmed" && a.row.evidence !== "Probable") ||
+          (b.row.evidence !== "Confirmed" && b.row.evidence !== "Probable")) continue;
+      out.push([a, b]);
+    }
+    return out;
+  }
   function atlasJourneyPanelHTML() {
     var sel = atlasJourneySelected();
     if (!sel) return "";
@@ -4074,6 +4091,9 @@ function genBindInteractive(node) {
       var link = st.row ? "<a href='#/places/" + st.row.placeIndex + "'>" + esc(st.name) + "</a>" : esc(st.name);
       return "<li>" + link + (st.row && !st.mapped ? " <span class='meta'>(no map marker)</span>" : "") + "</li>";
     }).join("") + "</ol>";
+    var verifiedCount = stages.filter(function (st) { return st.mapped && (st.row.evidence === "Confirmed" || st.row.evidence === "Probable"); }).length;
+    html += "<p class='meta'>" + verifiedCount + " of " + stages.length + " stages verified on the map.</p>";
+    html += "<p class='meta'>Lines join verified stops only — a gap means a stop between them isn't verified on the map.</p>";
     html += "<p>Scripture: " + linkifyScriptureRefs(val(row, "Scripture")) + "</p>";
     html += "<p><a class='btn' href='#/journeys/" + sel.idx + "'>Open full journey page &rarr;</a></p></div>";
     return html;
@@ -4108,12 +4128,13 @@ function genBindInteractive(node) {
   function atlasRefreshMarkers(rows) {
     if (!atlasMap || !window.L) return;
     if (atlasMarkerLayer) atlasMap.removeLayer(atlasMarkerLayer);
+    if (atlasJourneyLineLayer) { atlasMap.removeLayer(atlasJourneyLineLayer); atlasJourneyLineLayer = null; }
     atlasMarkerLayer = window.L.layerGroup();
     atlasMarkerByIndex = {};
-    /* Journey highlight (markers only — no route lines: a straight line
-       would imply an unverified path). Stage markers get a navy pin with
-       a rose ring, sit above the other markers, and name their stage in
-       the popup; stages with no map point get no marker at all. */
+    /* Journey highlight: stage markers get a navy pin with a rose ring,
+       sit above the other markers, and name their stage in the popup;
+       stages with no map point get no marker at all. Verified route
+       lines are drawn separately below (adjacent verified stops only). */
     var journeySel = atlasJourneySelected();
     var stageSet = {}, stageNum = {};
     var stages = atlasJourneyStages();
@@ -4137,6 +4158,17 @@ function genBindInteractive(node) {
       if (isStage) stageBounds.push([it.lat, it.lon]);
     });
     atlasMarkerLayer.addTo(atlasMap);
+    /* Verified route lines, one segment per qualifying adjacent pair
+       (see atlasJourneyVerifiedSegments). No segment touches or skips
+       over an unverified stop, so gaps stay open on purpose. */
+    var segments = atlasJourneyVerifiedSegments();
+    if (segments.length) {
+      atlasJourneyLineLayer = window.L.layerGroup();
+      segments.forEach(function (pair) {
+        window.L.polyline([[pair[0].row.lat, pair[0].row.lon], [pair[1].row.lat, pair[1].row.lon]], { color: "#e91e63", weight: 3, opacity: 0.8 }).addTo(atlasJourneyLineLayer);
+      });
+      atlasJourneyLineLayer.addTo(atlasMap);
+    }
     if (stageBounds.length > 1) atlasMap.fitBounds(stageBounds, { padding: [30, 30] });
     else if (stageBounds.length === 1) atlasMap.setView(stageBounds[0], 8);
     else if (bounds.length > 1) atlasMap.fitBounds(bounds, { padding: [30, 30] });
@@ -4192,7 +4224,7 @@ function genBindInteractive(node) {
       return;
     }
     atlasLeafletState = "ready";
-    if (atlasMap) { atlasMap.remove(); atlasMap = null; atlasMarkerLayer = null; }
+    if (atlasMap) { atlasMap.remove(); atlasMap = null; atlasMarkerLayer = null; atlasJourneyLineLayer = null; }
     atlasMap = window.L.map(el).setView([35, 30], 4);
     var ancientLayer = window.L.tileLayer("https://dh.gu.se/tiles/imperium/{z}/{x}/{y}.png", {
       maxZoom: 11,
