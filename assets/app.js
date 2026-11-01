@@ -204,7 +204,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "207";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "208";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -4471,7 +4471,7 @@ function genBindInteractive(node) {
     var eras = ATLAS_ERA_ORDER.filter(function (e) {
       return atlasItems.some(function (it) { return (it.periods || []).indexOf(e) !== -1; });
     });
-    var html = "<h2>Biblical Atlas</h2><p class='page-intro'>All 744 places from Biblical Places. Markers show the places whose locations are verified; every row links to its place page, tapping a place name shows it on the map, and the Journey picker below highlights one journey's stages on the map.</p>";
+    var html = "<h2>Biblical Atlas</h2><p class='page-intro'>All " + atlasItems.length + " places from Biblical Places. Markers show the places whose locations are verified; every row links to its place page, tapping a place name shows it on the map, and the Journey picker below highlights one journey's stages on the map.</p>";
     if (!atlasItems.length) {
       html += "<p class='empty'>The atlas data is not available right now.</p>";
     } else {
