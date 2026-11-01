@@ -188,6 +188,14 @@ def article_ld(title, desc, url):
     })
 
 
+# Pre-paint theme script (v195): same localStorage key ('theme') and
+# data-theme attribute as the SPA shell in index.html, so a newly
+# generated static page honors a saved dark choice before first paint.
+# Static pages have no toggle button (no app.js runs there); the choice
+# is made in the full site. Inserted via a {theme_script} placeholder so
+# the braces in the script are never parsed by .format().
+THEME_SCRIPT = """<script>try{var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>"""
+
 HEADER = """<header class="site-header">
   <div class="header-inner">
     <a class="brand" href="../../#/">&#9875; Hope Anchored in Christ</a>
@@ -248,6 +256,7 @@ def post_page(slug, fm, body_html, desc, series_nav=""):
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="{site}/assets/banner.jpg?v={banner_v}">
 {jsonld}
+{theme_script}
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
@@ -270,6 +279,7 @@ def post_page(slug, fm, body_html, desc, series_nav=""):
            banner_v=BANNER_V, header=HEADER.format(banner_v=BANNER_V),
            meta=meta, body=body_html, slug=slug, footer=FOOTER,
            series_line=series_line, series_nav=series_nav,
+           theme_script=THEME_SCRIPT,
            jsonld=article_ld(title, desc, url))
 
 
@@ -1205,6 +1215,7 @@ def entry_page(e, glob, home, quizzes_by_course, people_extra=None):
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="{site}/assets/banner.jpg?v={banner_v}">
 {jsonld}
+{theme_script}
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
@@ -1222,6 +1233,7 @@ def entry_page(e, glob, home, quizzes_by_course, people_extra=None):
 """.format(title=esc(title), desc=esc(desc), url=url, site=SITE_URL,
            banner_v=BANNER_V, header=HEADER.format(banner_v=BANNER_V),
            coll=coll, label=esc(e["label"]), body=body, idx=e["idx"], footer=FOOTER,
+           theme_script=THEME_SCRIPT,
            maplink=('<p><a class="btn" href="../../#/atlas?place=%d">View on map &rarr;</a></p>' % e["idx"]) if coll == "places" else "",
            jsonld=entry_jsonld(title, desc, url, coll, row))
 
@@ -1314,6 +1326,7 @@ def main():
 <meta property="og:description" content="Reflections and studies from the anchored story.">
 <meta property="og:url" content="{site}/blog/">
 <meta property="og:image" content="{site}/assets/banner.jpg?v={banner_v}">
+{theme_script}
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -1329,7 +1342,7 @@ def main():
 </html>
 """.format(site=SITE_URL, banner_v=BANNER_V,
            header=HEADER.format(banner_v=BANNER_V).replace("../../", "../"),
-           items=items, footer=FOOTER)
+           items=items, footer=FOOTER, theme_script=THEME_SCRIPT)
     blog_dir = os.path.join(ROOT, "blog")
     os.makedirs(blog_dir, exist_ok=True)
     with open(os.path.join(blog_dir, "index.html"), "w", encoding="utf-8") as fh:

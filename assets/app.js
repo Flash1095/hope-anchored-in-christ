@@ -207,7 +207,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "194";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "195";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -5405,6 +5405,30 @@ function genBindInteractive(node) {
     var q = document.getElementById("headerSearchInput").value.trim();
     if (q) location.hash = "#/search?q=" + encodeURIComponent(q);
   });
+  /* Theme toggle: the pre-paint script in <head> already applied a saved
+     dark choice before first paint, so this only syncs the button label
+     and handles clicks. Default is light; nothing is stored until the
+     reader toggles. The documentElement guard keeps vm harnesses (no
+     documentElement stub) from tripping over this block. */
+  var themeToggle = document.getElementById("themeToggle");
+  var themeRoot = document.documentElement;
+  function syncThemeButton() {
+    if (!themeToggle || !themeRoot) return;
+    var dark = themeRoot.getAttribute("data-theme") === "dark";
+    themeToggle.setAttribute("aria-pressed", dark ? "true" : "false");
+    themeToggle.setAttribute("aria-label", dark ? "Switch to light view" : "Switch to dark view");
+    themeToggle.innerHTML = dark ? "☀️ Light" : "🌙 Dark";
+  }
+  if (themeToggle && themeRoot) {
+    syncThemeButton();
+    themeToggle.addEventListener("click", function () {
+      var dark = themeRoot.getAttribute("data-theme") !== "dark";
+      if (dark) themeRoot.setAttribute("data-theme", "dark");
+      else themeRoot.removeAttribute("data-theme");
+      try { localStorage.setItem("theme", dark ? "dark" : "light"); } catch (e) {}
+      syncThemeButton();
+    });
+  }
   var navToggle = document.getElementById("navToggle");
   var mainNav = document.getElementById("mainNav");
   if (navToggle && mainNav) {

@@ -475,3 +475,102 @@ a:hover { color: var(--gold-dark); }
 .gen-tl-current { border: 2px solid var(--gold); box-shadow: 0 4px 16px rgba(233, 30, 99, 0.15); }
 .gen-tl-conn { margin: 0 0 0.4rem 0.2rem; color: var(--gold-dark); font-size: 0.9rem; }
 .gen-tl-era { margin: 0.3rem 0; font-weight: 700; color: var(--gold-dark); font-size: 0.9rem; }
+
+/* ---------- Theme toggle (v195) ---------- */
+.theme-toggle {
+  background: transparent; color: var(--navy); border: 1px solid var(--gold);
+  border-radius: 999px; padding: 0.45rem 1rem; font-weight: 700; font-size: 0.95rem;
+  cursor: pointer; white-space: nowrap; font-family: inherit;
+}
+.theme-toggle:hover { background: var(--cream); }
+
+/* ---------- Dark view (v195) ----------
+   Everything below is scoped to html[data-theme="dark"], so light mode
+   renders exactly as before. Palette keeps the site's identity: deep
+   navy surfaces, near-white text, the rose accent kept (brightened only
+   where dark rose text would fail on dark). Images, artwork, and photos
+   are NEVER filtered or inverted — her art stays true. Raster map tiles
+   are untouched; only the atlas page chrome changes. */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --ivory: #0e1730;
+  --cream: #1b2747;
+  --sage-light: #1d3a2a;
+  --pastel-butter: #3a2f14;
+  --ink: #edf0f7;
+  --muted: #a9b2c6;
+  --line: #2e3d63;
+  --navy-light: #b9c6e4;
+  --gold-dark: #f06292;
+  --green-ok: #6fbf8f;
+  --red-no: #e57373;
+}
+/* Light text wherever the light theme used navy for text (--navy itself
+   stays #1B2A4E so navy-background components keep working). */
+html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3,
+html[data-theme="dark"] .brand, html[data-theme="dark"] .main-nav a,
+html[data-theme="dark"] .detail dt, html[data-theme="dark"] .stat strong,
+html[data-theme="dark"] .store-card .price, html[data-theme="dark"] .chip-label,
+html[data-theme="dark"] .chip, html[data-theme="dark"] .word-script,
+html[data-theme="dark"] .grade-big, html[data-theme="dark"] .tl-era,
+html[data-theme="dark"] .tl-node h3 a, html[data-theme="dark"] .study-section summary,
+html[data-theme="dark"] .study-body h3, html[data-theme="dark"] .study-body h4,
+html[data-theme="dark"] .study-table th, html[data-theme="dark"] .quiz-reading a,
+html[data-theme="dark"] .conn-chip, html[data-theme="dark"] .badge,
+html[data-theme="dark"] .gen-view-toggle button, html[data-theme="dark"] .nav-toggle,
+html[data-theme="dark"] .theme-toggle, html[data-theme="dark"] .about-lead::first-letter,
+html[data-theme="dark"] .site-footer, html[data-theme="dark"] .site-footer strong,
+html[data-theme="dark"] .banner-title p, html[data-theme="dark"] .post-body blockquote,
+html[data-theme="dark"] .card blockquote, html[data-theme="dark"] .study-body blockquote,
+html[data-theme="dark"] .gen-note, html[data-theme="dark"] .verse-band,
+html[data-theme="dark"] #quizCategorySelect, html[data-theme="dark"] #exploreJump {
+  color: #eef1f7;
+}
+/* Dark surfaces (was #fff). */
+html[data-theme="dark"] .site-header, html[data-theme="dark"] .stat,
+html[data-theme="dark"] .card, html[data-theme="dark"] .tl-node,
+html[data-theme="dark"] .nature-tile, html[data-theme="dark"] .detail,
+html[data-theme="dark"] .post-row-card, html[data-theme="dark"] .question-card,
+html[data-theme="dark"] .quiz-grade, html[data-theme="dark"] .study-section,
+html[data-theme="dark"] .storybook-page, html[data-theme="dark"] .gen-panel,
+html[data-theme="dark"] .gen-tree-scroll, html[data-theme="dark"] .atlas-row,
+html[data-theme="dark"] .about-photo-frame, html[data-theme="dark"] .main-nav.open,
+html[data-theme="dark"] .card-art, html[data-theme="dark"] .post-art {
+  background: #16213f;
+}
+html[data-theme="dark"] .header-search input,
+html[data-theme="dark"] .controls input[type="search"],
+html[data-theme="dark"] #quizCategorySelect, html[data-theme="dark"] #exploreJump,
+html[data-theme="dark"] #atlasSearch, html[data-theme="dark"] #genSearch,
+html[data-theme="dark"] .option-btn, html[data-theme="dark"] .gen-view-toggle button,
+html[data-theme="dark"] .gen-tree-ctrls button, html[data-theme="dark"] .nav-toggle {
+  background: #16213f; color: #edf0f7;
+}
+html[data-theme="dark"] .theme-toggle:hover { background: var(--cream); }
+/* Verse band + banner title: light gradients become deep navy ones. */
+html[data-theme="dark"] .verse-band {
+  background: linear-gradient(105deg, #3a1f33 0%, #2a2140 55%, #1d2542 100%);
+}
+html[data-theme="dark"] .banner-title { background: rgba(13, 22, 46, 0.94); }
+/* Footer: soft lavender gradient becomes a deep muted lavender-navy. */
+html[data-theme="dark"] .site-footer {
+  background: linear-gradient(180deg, #1a2140 0%, #232a4a 45%, #2b3358 100%);
+}
+html[data-theme="dark"] .footer-legal { border-top-color: rgba(255, 255, 255, 0.15); }
+/* Timeline spine dots: lighter navy so the dots stay visible on dark. */
+html[data-theme="dark"] .tl-era::before { border-color: #16213f; }
+html[data-theme="dark"] .tl-node::before { background: #3a4f7d; }
+/* Study tables + quiz answers: light fills become dark tints. */
+html[data-theme="dark"] .study-table th { background: #2a2440; }
+html[data-theme="dark"] .option-btn.correct { background: #1d3a2a; }
+html[data-theme="dark"] .option-btn.wrong { background: #3d1f24; }
+html[data-theme="dark"] .badge.fulfilled { background: #1d3a2a; }
+html[data-theme="dark"] .badge.partial { background: #3a2f14; color: #e8c66a; }
+html[data-theme="dark"] .badge.future { background: #22345a; }
+html[data-theme="dark"] .badge.debated { background: #3d1f24; }
+/* Genealogy SVG: fills follow the surfaces, text follows the ink. */
+html[data-theme="dark"] .gtn-box, html[data-theme="dark"] .gtn-box-loop,
+html[data-theme="dark"] .gtn-head { fill: #16213f; }
+html[data-theme="dark"] .gtn-box-center { fill: #2a2140; }
+html[data-theme="dark"] .gtn-head-none { fill: #232a44; }
+html[data-theme="dark"] .gtn-name, html[data-theme="dark"] .gtn-head-name { fill: #eef1f7; }
