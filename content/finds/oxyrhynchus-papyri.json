@@ -1,0 +1,20 @@
+{
+  "FindName": "Oxyrhynchus Papyri",
+  "HistoricalPeriod": "Roman",
+  "ArtifactDate": "Ptolemaic–Byzantine periods (archive; 1st–6th centuries AD for the biblical papyri)",
+  "DateDiscovered": "1896–1907 (excavations began); ongoing",
+  "DiscoveryLocation": "Oxyrhynchus (el-Bahnasa), Egypt",
+  "CurrentLocation": "Sackler Library, Oxford (papyri); various museums",
+  "TimelineEra": "Early Church",
+  "Description": "The vast papyrus archive recovered from the rubbish mounds of Oxyrhynchus by Bernard Grenfell and Arthur Hunt: hundreds of thousands of fragments covering tax receipts, private letters, and literature — including some of the earliest surviving New Testament papyri. This entry covers the archive itself; individual papyri already listed elsewhere are distinct entries and are not repeated here.",
+  "BiblicalSignificance": "Oxyrhynchus is how we know ordinary Christians owned, copied, and carried the Scriptures within a generation or two of the apostles. A rubbish mound preserved what persecution and time could not erase: the everyday paperwork of a church that wrote its faith down.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree the archive is the Oxyrhynchus rubbish-mound deposit; individual fragments are dated and identified case by case, and the archive as a whole illuminates early Christian book culture rather than any single passage.",
+  "Slug": "oxyrhynchus-papyri",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": "",
+  "Image": "assets/finds/oxyrhynchus-papyri.jpg",
+  "ImageCredit": "Photo: The Egypt Exploration Fund (Public domain)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File:P.Oxy._X_1224,_Fr._2._verso.jpg"
+}

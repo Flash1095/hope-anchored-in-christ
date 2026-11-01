@@ -1,0 +1,23 @@
+{
+  "FindName": "Library of Ashurbanipal",
+  "HistoricalPeriod": "Neo-Assyrian period, 7th century BC",
+  "ArtifactDate": "7th century BC (reign of Ashurbanipal, 669–631 BC)",
+  "DateDiscovered": "1849–1851 (excavated)",
+  "DiscoveryLocation": "Nineveh, Iraq",
+  "CurrentLocation": "British Museum, London (tablets)",
+  "TimelineEra": "Divided Monarchy",
+  "Description": "The ancient world's greatest library: some 30,000 cuneiform tablets gathered by King Ashurbanipal at Nineveh, excavated by Austen Henry Layard and Hormuzd Rassam. It holds royal annals, omens, hymns, and the Epic of Gilgamesh, whose flood tablet George Smith deciphered in 1872.",
+  "BiblicalSignificance": "The library opens the mind of the empire that swallowed Israel and threatened Judah. Its annals, prayers, and epics show the world Jonah walked into and Nahum pronounced judgment on — a great city, learned and powerful, and still accountable to God.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree the library is Ashurbanipal's royal collection at Nineveh; the individual tablets span many earlier centuries, so the library illuminates Assyrian culture broadly rather than a single biblical year.",
+  "ScriptureIlluminated": "Jonah 3:3",
+  "RelatedBooks": "Jonah",
+  "Places": "Nineveh",
+  "Slug": "library-of-ashurbanipal",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": "",
+  "Image": "assets/finds/library-of-ashurbanipal.jpg",
+  "ImageCredit": "Photo: Wikimedia Commons contributor (CC BY-SA 3.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File:Library_of_Ashurbanipal_The_Flood_Tablet.jpg"
+}

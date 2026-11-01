@@ -1,0 +1,22 @@
+{
+  "FindName": "Gamla",
+  "HistoricalPeriod": "Roman",
+  "ArtifactDate": "1st century BC–AD 67 (fortress; synagogue 1st century AD)",
+  "DateDiscovered": "1976–1989 (excavated)",
+  "DiscoveryLocation": "Gamla, Golan Heights",
+  "CurrentLocation": "In situ, Gamla Nature Reserve",
+  "TimelineEra": "Early Church",
+  "Description": "A Jewish town and revolt fortress on a camel-shaped ridge in the Golan, excavated by Shmarya Gutman. It holds one of the earliest known synagogues, built before AD 70, and fell to the Romans in AD 67 after a siege described by Josephus. Gamla is not named in the Bible; its value is the world it reveals.",
+  "BiblicalSignificance": "Gamla's synagogue shows what worship looked like in Jesus' lifetime: a plain hall where the law was read to a gathered town, without a Temple and without a priesthood. It is the ordinary religious life behind the Gospels' synagogue scenes, preserved in stone.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree Gamla is a 1st-century Jewish town with an early synagogue; debate concerns details of the siege narrative in Josephus, not the town's identity or its synagogue.",
+  "ScriptureIlluminated": "Luke 4:16; Mark 1:21",
+  "RelatedBooks": "Luke; Mark",
+  "Slug": "gamla",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": "",
+  "Image": "assets/finds/gamla.jpg",
+  "ImageCredit": "Photo: Davidbena (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File:Gamla_Synagogue_00.jpg"
+}

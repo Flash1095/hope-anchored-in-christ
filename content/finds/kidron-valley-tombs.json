@@ -1,0 +1,21 @@
+{
+  "FindName": "Kidron Valley Tombs",
+  "HistoricalPeriod": "Second Temple period",
+  "ArtifactDate": "2nd century BC–1st century AD (tombs)",
+  "DateDiscovered": "Standing monuments (Benei Hezir inscription studied from the 19th century)",
+  "DiscoveryLocation": "Kidron Valley, Jerusalem, Israel",
+  "CurrentLocation": "In situ, Kidron Valley, Jerusalem",
+  "TimelineEra": "Return and Second Temple",
+  "Description": "The monumental rock-cut tombs lining the Kidron Valley below Jerusalem's walls, including the tomb of the priestly Benei Hezir family, named by a genuine 2nd-century BC inscription. The most famous monument, popularly called 'Absalom's Pillar,' is not Absalom's tomb: it dates to the 1st century AD, a thousand years after Absalom, and the entry corrects that popular attribution rather than repeating it.",
+  "BiblicalSignificance": "The Kidron tombs are Second Temple Jerusalem's city of the dead, cut into the valley Jesus crossed to Gethsemane. They remind readers that the Jerusalem of the Gospels was ringed by the graves of priests and families who waited, like everyone, for resurrection — and that pious labels on old stones are not always true.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree the Benei Hezir tomb is a 2nd-century BC priestly tomb by its inscription; the 'Absalom's Pillar' name is a later tradition refuted by the monument's 1st-century AD date.",
+  "Places": "Jerusalem",
+  "Slug": "kidron-valley-tombs",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": "",
+  "Image": "assets/finds/kidron-valley-tombs.jpg",
+  "ImageCredit": "Photo: Unknown authorUnknown author (Public domain)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File:138132_jerusalem_tomb_of_absalom_in_the_kidron_valley_PikiWiki_Israel.jpg"
+}

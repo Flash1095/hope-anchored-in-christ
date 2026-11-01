@@ -1,0 +1,23 @@
+{
+  "FindName": "Machaerus",
+  "HistoricalPeriod": "Herodian Period",
+  "ArtifactDate": "1st century BC–1st century AD (rebuilt by Herod the Great)",
+  "DateDiscovered": "1960s (excavated); renewed excavations from 2009",
+  "DiscoveryLocation": "Machaerus, Jordan (east of the Dead Sea)",
+  "CurrentLocation": "In situ, Jordan",
+  "TimelineEra": "Life of Christ",
+  "Description": "Herod's eastern desert fortress, with palaces, baths, and siege works overlooking the Dead Sea. The Gospels do not name the place where John the Baptist was imprisoned and executed, but Josephus states it was Machaerus, and the excavated fortress matches his description of a stronghold where Herod Antipas could hold a prisoner securely.",
+  "BiblicalSignificance": "John's courage cost him his head, and this fortress is where tradition and Josephus place that cost. It gives the Baptist's final months a landscape: a palace prison in the desert, far from the Jordan crowds, where a prophet who would not flatter a king was silenced.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars accept Machaerus as a Herodian fortress; the identification as John's prison rests on Josephus rather than the Gospels, which name no location, so it is presented as Josephus's account, not as a Gospel statement.",
+  "ScriptureIlluminated": "Mark 6:17-29; Matthew 14:3-12",
+  "RelatedPeople": "John the Baptist; Herod Antipas",
+  "RelatedBooks": "Mark; Matthew",
+  "Slug": "machaerus",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": "",
+  "Image": "assets/finds/machaerus.jpg",
+  "ImageCredit": "Photo: Wikimedia Commons contributor (Public domain)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File:Machaerus_Panorama.jpg"
+}

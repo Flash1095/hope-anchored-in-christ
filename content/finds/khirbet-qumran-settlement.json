@@ -1,0 +1,20 @@
+{
+  "FindName": "Khirbet Qumran",
+  "HistoricalPeriod": "Second Temple period",
+  "ArtifactDate": "2nd century BC–AD 68 (settlement)",
+  "DateDiscovered": "1951–1956 (excavated)",
+  "DiscoveryLocation": "Khirbet Qumran, West Bank",
+  "CurrentLocation": "In situ, Qumran National Park",
+  "TimelineEra": "Return and Second Temple",
+  "Description": "The desert settlement behind the Dead Sea Scrolls: a complex of buildings with ritual baths, a communal dining hall, workshops, and a room with inkwells that excavator Roland de Vaux identified as a scriptorium. The settlement was destroyed by the Romans around AD 68, about when the scrolls were hidden in the nearby caves. This entry covers the settlement only; the manuscripts themselves have their own entries in the Dead Sea Scrolls collection.",
+  "BiblicalSignificance": "Qumran shows the intensity of Jewish devotion in the centuries before and around Jesus: a community that withdrew to the desert to keep the law purely, copy Scripture carefully, and wait for God's intervention. It is the world of Pharisees, Sadducees, and Essenes that the Gospels assume.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars broadly accept the settlement's outline and its link to the scrolls; the common association with the Essenes is debated, and some scholars argue the site was a villa or pottery works rather than a sectarian centre.",
+  "Slug": "khirbet-qumran-settlement",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": "",
+  "Image": "assets/finds/khirbet-qumran-settlement.jpg",
+  "ImageCredit": "Photo: Saintjennifer (CC BY-SA 3.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File:Qumran_Ruins.jpg"
+}

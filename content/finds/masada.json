@@ -1,0 +1,20 @@
+{
+  "FindName": "Masada",
+  "HistoricalPeriod": "Roman",
+  "ArtifactDate": "1st century BC–AD 73 (fortified by Herod c. 37–31 BC)",
+  "DateDiscovered": "1963–1965 (excavated)",
+  "DiscoveryLocation": "Masada, Judean Desert, Israel",
+  "CurrentLocation": "In situ, Masada National Park",
+  "TimelineEra": "Early Church",
+  "Description": "Herod the Great's desert mountain fortress above the Dead Sea, with palaces, storehouses, baths, and a synagogue. After Jerusalem fell in AD 70, Jewish rebels held it against Rome until the siege of AD 73, when, as Josephus recounts, the defenders chose death over surrender. Yigael Yadin's excavations of 1963–1965 uncovered the fortress in remarkable preservation.",
+  "BiblicalSignificance": "Masada is not named in the Bible, but it is the end of the world the New Testament describes: the same Rome that crucified Jesus and destroyed the Temple starved out this last stronghold within a generation of the resurrection. It shows the cost of the revolt and the world in which the early church survived and spread.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree on the fortress, the siege, and the excavated remains; debate concerns Josephus's account of the ending, including the numbers and the details of the final night, which some scholars read as partly rhetorical.",
+  "Slug": "masada",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": "",
+  "Image": "assets/finds/masada.jpg",
+  "ImageCredit": "Photo: Godot13 (CC BY-SA 4.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File:Israel-2013-Aerial_21-Masada.jpg"
+}

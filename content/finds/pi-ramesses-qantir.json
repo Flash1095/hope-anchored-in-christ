@@ -1,0 +1,23 @@
+{
+  "FindName": "Pi-Ramesses (Qantir)",
+  "HistoricalPeriod": "New Kingdom, Ramesside period",
+  "ArtifactDate": "13th century BC (capital of Ramesses II)",
+  "DateDiscovered": "1920s (identified); ongoing excavations",
+  "DiscoveryLocation": "Qantir, Nile Delta, Egypt",
+  "CurrentLocation": "In situ, Nile Delta, Egypt",
+  "TimelineEra": "Exodus and Wilderness",
+  "Description": "The sprawling Ramesside capital at Qantir, identified by excavation as the city of Ramesses II, with palaces, stables, workshops, and a port on the Pelusiac Nile. It is the standard identification for the biblical Raamses, the store city Israel is said to have built. That identification is the scholarly consensus, not proof of the Exodus, and the entry claims no more.",
+  "BiblicalSignificance": "If Israel built store cities for Pharaoh, this is what such a city looked like: vast, organised, and mighty. Pi-Ramesses gives the Exodus narrative a scale — and a reminder that the God who humbled such power did not need an army to do it.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars broadly identify Qantir as Pi-Ramesses and Pi-Ramesses as biblical Raamses; the identification illuminates the Exodus setting but does not by itself prove the Exodus events.",
+  "ScriptureIlluminated": "Exodus 1:11",
+  "RelatedBooks": "Exodus",
+  "Places": "Rameses",
+  "Slug": "pi-ramesses-qantir",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": "",
+  "Image": "assets/finds/pi-ramesses-qantir.jpg",
+  "ImageCredit": "Photo: Iri-en-achti (Public domain)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File:Kolossalstatue_Qantir.JPG"
+}

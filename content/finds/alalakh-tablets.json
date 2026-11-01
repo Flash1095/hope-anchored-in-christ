@@ -1,0 +1,22 @@
+{
+  "FindName": "Alalakh Tablets",
+  "HistoricalPeriod": "Late Bronze Age",
+  "ArtifactDate": "c. 18th–13th centuries BC (archive)",
+  "DateDiscovered": "1936–1949 (excavated)",
+  "DiscoveryLocation": "Tell Atchana (Alalakh), Turkey",
+  "CurrentLocation": "British Museum, London; Hatay Archaeology Museum, Turkey",
+  "TimelineEra": "Primeval / Patriarchs",
+  "Description": "A Late Bronze Age archive of several hundred tablets from the palace at Alalakh, excavated by Leonard Woolley. Like the Mari and Nuzi tablets, they record adoptions, marriages, debts, and inheritance disputes — the legal customs of the world the patriarchs inhabited.",
+  "BiblicalSignificance": "Alalakh belongs with Mari and Nuzi in showing that the customs behind Genesis — household gods as inheritance tokens, a barren wife's maid as surrogate, a servant as heir — were ordinary law in the ancient Near East, not inventions of a later storyteller.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree the tablets are a Late Bronze palace archive; their value for Genesis is as cultural background, in the same way as the Mari and Nuzi archives, not as direct records of the patriarchs.",
+  "ScriptureIlluminated": "Genesis 15:2-3; Genesis 16:1-4",
+  "RelatedBooks": "Genesis",
+  "Slug": "alalakh-tablets",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": "",
+  "Image": "assets/finds/alalakh-tablets.jpg",
+  "ImageCredit": "Photo: Wikimedia Commons contributor (CC BY-SA 3.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File:Tablet_BM131452.jpg"
+}

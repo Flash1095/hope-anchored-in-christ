@@ -1,0 +1,20 @@
+{
+  "FindName": "Nag Hammadi Library",
+  "HistoricalPeriod": "Roman",
+  "ArtifactDate": "4th century AD (Coptic copies of 2nd-century Greek texts)",
+  "DateDiscovered": "1945 (found)",
+  "DiscoveryLocation": "Jabal al-Tarif, near Nag Hammadi, Egypt",
+  "CurrentLocation": "Coptic Museum, Cairo, Egypt",
+  "TimelineEra": "Early Church",
+  "Description": "Thirteen leather-bound codices containing fifty-two texts, discovered by a farmer near Nag Hammadi in 1945. They preserve Gnostic writings, including the Gospel of Thomas, in 4th-century Coptic translations of 2nd-century Greek originals. These are non-canonical texts: their significance lies in the canon debate and in early Christian diversity, not in the biblical text itself, and no text here should be treated as Scripture.",
+  "BiblicalSignificance": "Nag Hammadi shows why the church had to ask which books were apostolic. Beside the four Gospels stood rival gospels with a different Jesus, and the church's answer — tested against the apostles' teaching — shaped the New Testament readers hold today.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree the codices are 4th-century Coptic copies of earlier Greek works; debate concerns the origins and dating of individual texts, not the library's existence or its non-canonical character.",
+  "Slug": "nag-hammadi-library",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": "",
+  "Image": "assets/finds/nag-hammadi-library.jpg",
+  "ImageCredit": "Photo: Unknown authorUnknown author (Public domain)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File:Nag_Hammadi_Codex_II.jpg"
+}

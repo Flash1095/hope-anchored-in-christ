@@ -1,0 +1,23 @@
+{
+  "FindName": "Tanis (Zoan)",
+  "HistoricalPeriod": "Third Intermediate Period, 22nd Dynasty, c. 925 BC",
+  "ArtifactDate": "11th–8th centuries BC (royal city; tombs c. 1000–900 BC)",
+  "DateDiscovered": "1929–1956 (excavated)",
+  "DiscoveryLocation": "Tanis, Nile Delta, Egypt",
+  "CurrentLocation": "In situ, Nile Delta, Egypt; finds in the Egyptian Museum, Cairo",
+  "TimelineEra": "Divided Monarchy",
+  "Description": "The Delta capital whose royal necropolis Pierre Montet uncovered intact, including the silver coffin of Psusennes I and the gold mask of Shoshenq II. Tanis is the biblical Zoan, the city named when Hebron's antiquity is measured and where the psalmist says God worked wonders in Egypt.",
+  "BiblicalSignificance": "Zoan is where Egypt's power was displayed and where, the psalm says, God displayed His. A royal tomb untouched by robbers, full of silver and gold, is a small parable of the Exodus itself: Egypt's wealth could not buy what Israel's God gave freely.",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree Tanis is biblical Zoan; the royal tombs are securely dated, and their value for the Bible is the Egyptian royal world of the Divided Monarchy period.",
+  "ScriptureIlluminated": "Numbers 13:22; Psalm 78:12",
+  "RelatedBooks": "Numbers; Psalms",
+  "Places": "Zoan",
+  "Slug": "tanis-zoan",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": "",
+  "Image": "assets/finds/tanis-zoan.jpg",
+  "ImageCredit": "Photo: Roland Unger (CC BY-SA 3.0)",
+  "ImageSource": "https://commons.wikimedia.org/wiki/File:TanisTombsGroup-Psusen2.jpg"
+}
