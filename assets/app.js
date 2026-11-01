@@ -109,6 +109,9 @@
     { id: "journeys", label: "Journeys", file: "content/journeys.json", primary: "Journey",
       blurb: "The roads of the Bible — every journey of God's people, from Abraham's call to Paul's voyage to Rome, traced stop by stop through Scripture.",
       filters: [{ label: "Verification", field: "VerificationStatus" }], meta: ["FromPlace", "ToPlace"] },
+    { id: "laws", label: "Biblical Laws and Commands", file: "content/laws.json", primary: "Command",
+      blurb: "God's laws and commands, from Sinai to the Sermon on the Mount — what each one says, and how Christ fulfills it.",
+      filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }] },
 ];
   /* Explore tile order, as a study journey: the story first, then the
      world behind it, then deeper study, then discernment, then the
@@ -121,12 +124,13 @@
     "finds", "manuscripts", "civilizations", "peoples", "wordstudies", "questions", "hermeneutics", "jewishculture",
     "topics", "doctrines", "prophecies", "typology", "apologetics",
     "objections", "heresies", "fallacies", "perspectives", "heritage",
-    "politics", "socialmedia", "courses", "studyguides", "quizzes", "hymns",
+    "politics", "socialmedia", "laws", "courses", "studyguides", "quizzes", "hymns",
     "nature", "god", "promises", "identity"];
   /* Section headings for the Explore tiles, keyed by the collection that
      starts each section. The first section combines the story and the
      world behind it under one title, Discover the Bible. */
   var SECTION_HEADINGS = { timeline: "Discover the Bible", questions: "Ask and Understand",
+    laws: "Understanding Biblical Laws and Commands",
     courses: "Learn and Practice",
     hymns: "Worship and Wonder", god: "Know God" };
 
@@ -204,7 +208,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "208";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "209";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -5030,7 +5034,7 @@ function genBindInteractive(node) {
       "<h3>Nothing invented, nothing auto-verified</h3>" +
       "<p>No discovery, date, biblical reference, manuscript identification, or citation is invented to fill a gap. Where adequate sources have not been found, the field stays blank and the entry stays Awaiting Review. Content drafted with AI assistance is never automatically marked verified — it earns Verified only after a source check, like any other entry.</p>" +
       "<h3>Coverage today</h3>" +
-      "<p>Of 22,301 database entries, 24 are Verified, 6 are Scholarly Debate, and 22,271 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
+      "<p>Of 22,354 database entries, 24 are Verified, 6 are Scholarly Debate, and 22,324 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
       "<p>Browse the statuses: <a href='#/manuscripts?f_VerificationStatus=Verified'>Verified manuscripts</a> &middot; <a href='#/manuscripts?f_VerificationStatus=Scholarly Debate'>Debated manuscripts</a> &middot; <a href='#/finds?f_VerificationStatus=Scholarly Debate'>Debated finds</a></p>" +
       "<h3>Corrections</h3>" +
       "<p>Entries can be corrected and updated at any time. Corrections go through the site editor or through the site owner, and a corrected entry keeps its sources and review date visible so readers can see what changed and when it was last checked.</p>" +
