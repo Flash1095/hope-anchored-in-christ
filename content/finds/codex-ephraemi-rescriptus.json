@@ -1,0 +1,23 @@
+{
+  "FindName": "Codex Ephraemi Rescriptus",
+  "Description": "A fifth-century Greek Bible, designated C or 04, and the last of the four great uncial codices. It is a palimpsest: its biblical parchment was washed and reused in the twelfth century for Greek translations of 38 treatises by Ephrem the Syrian, which gives the codex its name. Of 209 surviving leaves, 145 carry New Testament text (every book except 2 Thessalonians and 2 John) and 64 carry Old Testament text. Constantin von Tischendorf deciphered the faded undertext in 1840-1843 and published it in 1843-1845.",
+  "HistoricalPeriod": "Byzantine",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree it is a fifth-century palimpsest and a great uncial; some portions remain illegible, and Tischendorf's readings have not all been independently re-checked, so individual readings are taken with that caution.",
+  "AlternativeNames": "Codex C; Uncial 04",
+  "Places": "",
+  "RelatedBooks": "Ecclesiastes; John; Revelation",
+  "RelatedEvents": "",
+  "RelatedPeople": "",
+  "ScriptureIlluminated": "Ecclesiastes 12; John 1; Revelation 22",
+  "BiblicalSignificance": "Even washed, scraped, and overwritten, this fifth-century Bible could still be recovered and read, a vivid picture of how stubbornly the text survived. It is a major early witness to both Testaments in Greek and is cited in every modern critical edition of the Greek New Testament.",
+  "ArtifactDate": "c. AD 425-450",
+  "CurrentLocation": "Bibliothèque nationale de France, Paris",
+  "DateDiscovered": "1843",
+  "DiscoveryLocation": "Paris, France (Bibliothèque nationale de France, Grec 9; earlier history via Constantinople and Florence)",
+  "TimelineEra": "Early Church",
+  "Slug": "codex-ephraemi-rescriptus",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

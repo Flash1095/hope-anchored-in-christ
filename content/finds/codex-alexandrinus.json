@@ -1,0 +1,23 @@
+{
+  "FindName": "Codex Alexandrinus",
+  "Description": "A Greek manuscript of the whole Bible on parchment, designated A or 02, one of the four great uncial codices alongside Sinaiticus, Vaticanus, and Ephraemi Rescriptus. About 773 leaves survive, written in two columns of uncial script, containing most of the Septuagint and the New Testament plus 1 Clement and part of 2 Clement. Patriarch Cyril Lucar presented it to King Charles I of England in 1627; it is catalogued as Royal MS 1 D V-VIII.",
+  "HistoricalPeriod": "Byzantine",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree on the fifth-century date and on its standing among the great uncials; its text-type is mixed, Byzantine-leaning in the Gospels and Alexandrian elsewhere, and its exact place of origin (probably Egypt) is debated.",
+  "AlternativeNames": "Codex A; Uncial 02",
+  "Places": "Alexandria",
+  "RelatedBooks": "Revelation; John; Luke",
+  "RelatedEvents": "",
+  "RelatedPeople": "",
+  "ScriptureIlluminated": "Revelation 22; John 1; Luke 24",
+  "BiblicalSignificance": "With Sinaiticus and Vaticanus, Alexandrinus is one of the earliest nearly complete Bibles, showing that by the fifth century Christians were already copying the whole Greek Bible into single volumes. Its text is especially valued for Revelation, and it anchors confidence that the New Testament we read rests on very early, carefully made copies.",
+  "ArtifactDate": "c. AD 400-440",
+  "CurrentLocation": "British Library, London",
+  "DateDiscovered": "1627",
+  "DiscoveryLocation": "Alexandria, Egypt (place of long residence; original provenance unknown)",
+  "TimelineEra": "Early Church",
+  "Slug": "codex-alexandrinus",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

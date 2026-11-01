@@ -1,0 +1,23 @@
+{
+  "FindName": "Code of Lipit-Ishtar",
+  "Description": "A Sumerian law collection of Lipit-Ishtar, fifth king of the Dynasty of Isin, the second oldest surviving law code after Ur-Nammu and about a century older than Hammurabi's. Its diorite stele, erected at Nippur, survives only in fragments; most of the text comes from scribal-school tablets from Nippur, and about half the code is preserved. It has the classic shape of prologue, laws introduced by 'if', and epilogue with blessings for a king who honours the stele and curses for one who defaces it, covering property, inheritance, marriage, debt, slaves, and hired oxen.",
+  "HistoricalPeriod": "Bronze Age",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree on the code's date, structure, and position between Ur-Nammu and Hammurabi; reconstruction is incomplete, with about half the text lost and the placement of some fragments uncertain.",
+  "AlternativeNames": "Laws of Lipit-Ishtar",
+  "Places": "",
+  "RelatedBooks": "Exodus; Deuteronomy; Leviticus",
+  "RelatedEvents": "",
+  "RelatedPeople": "",
+  "ScriptureIlluminated": "Exodus 21:1-11; Deuteronomy 24:10-22; Leviticus 25:35-43",
+  "BiblicalSignificance": "Lipit-Ishtar shows that written, case-by-case law ('if a man...') was already ancient in Mesopotamia long before Moses, and it frames the question the Bible itself answers differently: here law comes from a king appointed by the gods, while in Scripture law comes directly from the Lord. Its parallels in family, debt, and injury law sharpen what is distinctive about Exodus and Deuteronomy.",
+  "ArtifactDate": "c. 1934-1924 BC",
+  "CurrentLocation": "Louvre, Paris (prologue fragment); other tablets in museum collections",
+  "DateDiscovered": "19th-20th century (Nippur excavations)",
+  "DiscoveryLocation": "Nippur, Iraq (stele erected there; prologue fragment Louvre AO 5473)",
+  "TimelineEra": "Primeval / Patriarchs",
+  "Slug": "code-of-lipit-ishtar",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

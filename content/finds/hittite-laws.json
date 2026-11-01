@@ -1,0 +1,23 @@
+{
+  "FindName": "Hittite Laws",
+  "Description": "The Code of the Nesilim, preserved on Hittite cuneiform tablets from Hattusa (CTH 291-292) listing about 200 laws, copied in Old, Middle, and Late Hittite across the empire's life (c. 1650-1100 BC). The laws are case laws ('if anyone...'), covering assault, theft, murder, marriage, divorce, witchcraft, and sexual offences, and are notably milder than Hammurabi's code, preferring fines and compensation to death. Unlike the Mesopotamian codes, the collection has no divine prologue attributing it to the gods.",
+  "HistoricalPeriod": "Bronze Age",
+  "EvidenceClass": "Contextual",
+  "Interpretations": "Scholars agree on the corpus and its long use; the parallels with biblical law are real but must not be overstated, since the Hittite code's penalties and theology differ, and a third tablet series may once have existed.",
+  "AlternativeNames": "Code of the Nesilim",
+  "Places": "",
+  "RelatedBooks": "Deuteronomy; Exodus; Leviticus; Numbers",
+  "RelatedEvents": "",
+  "RelatedPeople": "",
+  "ScriptureIlluminated": "Deuteronomy 22:28-29; Exodus 21:12-36; Leviticus 18:6-18; Numbers 35:31",
+  "BiblicalSignificance": "The Hittite Laws are the closest legal neighbours to biblical law: their case-law form matches Exodus 21-22, and individual provisions, such as the rape law of section 197, recall Deuteronomy 22. They show that Israel's laws were given in a world full of law codes, and the contrasts, above all that biblical law comes from God alone and never allows money to buy out a murderer's life (Numbers 35:31), stand out all the more sharply.",
+  "ArtifactDate": "c. 1650-1500 BC",
+  "CurrentLocation": "Museum collections (tablets from Hattusa)",
+  "DateDiscovered": "Early 1900s (Hattusa excavations)",
+  "DiscoveryLocation": "Hattusa, Turkey",
+  "TimelineEra": "Primeval / Patriarchs",
+  "Slug": "hittite-laws",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

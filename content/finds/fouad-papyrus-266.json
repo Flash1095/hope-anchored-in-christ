@@ -1,0 +1,23 @@
+{
+  "FindName": "Fouad Papyrus 266",
+  "Description": "A papyrus scroll of the Greek Septuagint, designated Rahlfs 847, 848, and 942, surviving in 117 fragments chiefly from Deuteronomy. It is the second oldest known Septuagint manuscript, and the oldest in which the divine name appears in Hebrew square script (the Tetragrammaton) written into the Greek text, over thirty times. The manuscript is named for Fouad I of Egypt.",
+  "HistoricalPeriod": "Hellenistic",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree on the first-century BC date and the presence of the Tetragrammaton; they debate whether the text is the original Old Greek or an early revision toward the Hebrew text, and whether the original Septuagint used the Tetragrammaton or the word Lord.",
+  "AlternativeNames": "Papyrus Fouad 266; Rahlfs 847, 848, 942",
+  "Places": "Egypt",
+  "RelatedBooks": "Deuteronomy",
+  "RelatedEvents": "",
+  "RelatedPeople": "Moses",
+  "ScriptureIlluminated": "Deuteronomy 31:28-32:6; Deuteronomy 32:3",
+  "BiblicalSignificance": "Written more than four centuries before Codex Vaticanus, Fouad 266 shows Greek-speaking Jews reading Deuteronomy in a careful, literal translation that still preserved the divine name in Hebrew characters rather than replacing it. It is a key witness to the earliest form of the Greek Old Testament that the apostles themselves would have known.",
+  "ArtifactDate": "1st century BC",
+  "CurrentLocation": "Société Royale de Papyrologie, Cairo",
+  "DateDiscovered": "1939",
+  "DiscoveryLocation": "Fayyum, Egypt",
+  "TimelineEra": "Return and Second Temple",
+  "Slug": "fouad-papyrus-266",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

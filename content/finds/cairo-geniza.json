@@ -1,0 +1,23 @@
+{
+  "FindName": "Cairo Geniza",
+  "Description": "A sacred storeroom (genizah) in the Ben Ezra Synagogue where the Jewish community of Fustat deposited worn-out books and writings for about a thousand years. In 1896-97 the Cambridge scholar Solomon Schechter, alerted by a Hebrew leaf of Ben Sira shown to him by Agnes Smith Lewis and Margaret Gibson, obtained permission to remove the contents and brought about 193,000 manuscripts and fragments to Cambridge, where they form the Taylor-Schechter Collection, the world's largest single collection of medieval Jewish manuscripts.",
+  "HistoricalPeriod": "Medieval",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree on the scale and importance of the collection; its exact original size is uncertain (estimates run to several hundred thousand fragments worldwide), and the traditional story that the chamber lay undisturbed for 800 years has been qualified by evidence of earlier removals.",
+  "AlternativeNames": "Cairo Genizah; Taylor-Schechter Collection",
+  "Places": "Egypt",
+  "RelatedBooks": "Psalms; Isaiah; Deuteronomy",
+  "RelatedEvents": "",
+  "RelatedPeople": "",
+  "ScriptureIlluminated": "Psalm 23; Isaiah 53; Deuteronomy 6",
+  "BiblicalSignificance": "The Geniza preserves thousands of biblical fragments, prayer books, and school exercises that show how the Masoretic text was actually copied, studied, and prayed in daily Jewish life, alongside the community's letters, contracts, and records. For Bible readers it is the largest accidental archive of the world that produced and preserved the Hebrew Scriptures.",
+  "ArtifactDate": "c. AD 900-1900 (deposits over a millennium)",
+  "CurrentLocation": "Cambridge University Library (Taylor-Schechter Collection); other libraries worldwide",
+  "DateDiscovered": "1896",
+  "DiscoveryLocation": "Ben Ezra Synagogue, Fustat (Old Cairo), Egypt",
+  "TimelineEra": "Return and Second Temple",
+  "Slug": "cairo-geniza",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

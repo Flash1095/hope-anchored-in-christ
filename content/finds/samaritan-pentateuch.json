@@ -1,0 +1,23 @@
+{
+  "FindName": "Samaritan Pentateuch",
+  "Description": "The form of the five books of Moses preserved by the Samaritan community, in Samaritan script resembling Paleo-Hebrew, with about six thousand variant readings against the Masoretic Text, including the command to worship on Mount Gerizim. Its most venerated copy, the Abisha Scroll at Nablus, claims in its own cryptogram to have been written by Abisha, son of Phinehas, son of Eleazar, son of Aaron, in the thirteenth year after Israel entered Canaan. Modern study shows the scroll is a composite of sections from different periods, patched over time, with its oldest portions dating to the medieval period, around the 11th or 12th century AD.",
+  "HistoricalPeriod": "Medieval",
+  "EvidenceClass": "Disputed",
+  "Interpretations": "DOUBT STATED: the Abisha Scroll's claim to Aaron's great-grandson as author is Samaritan tradition, not a historical date, and cannot be substantiated; scholars date its oldest portions to the 11th-12th century AD. The text tradition itself is real and ancient, but any entry built on the scroll must not present the Abisha dating as fact. No manuscript of the Samaritan Pentateuch is older than the tenth century.",
+  "AlternativeNames": "Samaritan Torah; Abisha Scroll",
+  "Places": "Mount Gerizim",
+  "RelatedBooks": "Deuteronomy; John; Joshua",
+  "RelatedEvents": "",
+  "RelatedPeople": "Moses; Aaron; Phinehas; Eleazar",
+  "ScriptureIlluminated": "Deuteronomy 27:4; John 4:20; Joshua 8:30-35",
+  "BiblicalSignificance": "As an independent textual tradition, the Samaritan Pentateuch is a genuine third witness alongside the Masoretic Text and the Septuagint, and Dead Sea Scrolls of a pre-Samaritan text-type show its roots reach back before Christ. Its Gerizim reading is also the direct background to the Samaritan woman's question in John 4 about the right mountain for worship.",
+  "ArtifactDate": "c. 11th-12th century AD (oldest portions of the Abisha Scroll; tradition older)",
+  "CurrentLocation": "Samaritan synagogue, Nablus; other manuscripts in libraries worldwide",
+  "DateDiscovered": "Unknown (in continuous Samaritan custody at Nablus)",
+  "DiscoveryLocation": "Nablus, West Bank (Samaritan synagogue)",
+  "TimelineEra": "Return and Second Temple",
+  "Slug": "samaritan-pentateuch",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

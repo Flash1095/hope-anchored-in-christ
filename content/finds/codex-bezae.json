@@ -1,0 +1,23 @@
+{
+  "FindName": "Codex Bezae",
+  "Description": "A bilingual Greek and Latin manuscript of the New Testament, designated D or 05, containing most of the four Gospels (in the Western order Matthew, John, Luke, Mark) and Acts, with a small fragment of 3 John, on 406 surviving parchment leaves. Greek stands on the left-hand page and Latin on the right. Theodore Beza presented it to Cambridge University in 1581, and it has remained there since.",
+  "HistoricalPeriod": "Byzantine",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree on the fifth-century date and bilingual layout; its place of origin (Gaul, southern Italy, Egypt, Palestine, or Beirut have all been proposed) and the value of its distinctive readings are debated, and most of its unique expansions are not preferred over the Alexandrian text.",
+  "AlternativeNames": "Codex Bezae Cantabrigiensis; Uncial 05",
+  "Places": "",
+  "RelatedBooks": "John; Acts; Luke",
+  "RelatedEvents": "",
+  "RelatedPeople": "",
+  "ScriptureIlluminated": "John 8:1-11; Acts 15; Luke 24",
+  "BiblicalSignificance": "Bezae is the leading Greek witness to the Western text, a form of the Gospels and Acts that is about a tenth longer in Acts than the Alexandrian text and preserves distinctive readings, including the story of the woman caught in adultery. It shows that the early church's copies of the Gospels and Acts were not all identical, and it forces careful, verse-by-verse comparison rather than blind trust in any single copy.",
+  "ArtifactDate": "c. AD 400",
+  "CurrentLocation": "Cambridge University Library, Cambridge",
+  "DateDiscovered": "1581",
+  "DiscoveryLocation": "Monastery of St Irenaeus, Lyon, France (where Theodore Beza obtained it)",
+  "TimelineEra": "Early Church",
+  "Slug": "codex-bezae",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}

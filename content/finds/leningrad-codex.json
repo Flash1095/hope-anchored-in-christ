@@ -1,0 +1,23 @@
+{
+  "FindName": "Leningrad Codex",
+  "Description": "The oldest complete manuscript of the Hebrew Bible in Hebrew, copied in Cairo in AD 1008 (or 1009) according to its colophon by the scribe Samuel ben Jacob, with consonants, Tiberian vowel points, accents, and Masoretic notes all in one hand. It has been housed at the National Library of Russia since 1863 (shelfmark Firkovich B 19 A) and is the Hebrew text reproduced in Biblia Hebraica, Biblia Hebraica Stuttgartensia, and Biblia Hebraica Quinta.",
+  "HistoricalPeriod": "Medieval",
+  "EvidenceClass": "Direct",
+  "Interpretations": "Scholars agree it is the oldest complete Tiberian codex; whether it was corrected against the Aleppo Codex or against other lost Ben Asher manuscripts is debated.",
+  "AlternativeNames": "Codex Leningradensis; St Petersburg Codex",
+  "Places": "",
+  "RelatedBooks": "Genesis; Psalms; Isaiah",
+  "RelatedEvents": "",
+  "RelatedPeople": "",
+  "ScriptureIlluminated": "Genesis 1; Psalm 23; Isaiah 53",
+  "BiblicalSignificance": "Because the older Aleppo Codex lost about 40 percent of its leaves, the Leningrad Codex is the complete Hebrew Bible that translators actually work from: nearly every printed Hebrew Bible and modern Old Testament translation is set from its pages. It proves that the Masoretic tradition survived intact from the Middle Ages into the modern study Bible.",
+  "ArtifactDate": "AD 1008",
+  "CurrentLocation": "National Library of Russia, St Petersburg",
+  "DateDiscovered": "1863",
+  "DiscoveryLocation": "St Petersburg, Russia (Imperial Public Library, from the Firkovich collection)",
+  "TimelineEra": "Return and Second Temple",
+  "Slug": "leningrad-codex",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": ""
+}
