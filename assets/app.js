@@ -118,8 +118,8 @@
      decides link-index tie-breaking. Any collection missing here falls
      back to the end of the tiles, so nothing can ever disappear. */
   var EXPLORE_ORDER = ["timeline", "books", "stories", "people", "places",
-    "finds", "manuscripts", "civilizations", "peoples", "questions", "hermeneutics", "jewishculture",
-    "topics", "wordstudies", "doctrines", "prophecies", "typology", "apologetics",
+    "finds", "manuscripts", "civilizations", "peoples", "wordstudies", "questions", "hermeneutics", "jewishculture",
+    "topics", "doctrines", "prophecies", "typology", "apologetics",
     "objections", "heresies", "fallacies", "perspectives", "heritage",
     "politics", "socialmedia", "courses", "studyguides", "quizzes", "hymns",
     "nature", "god", "promises", "identity"];
@@ -204,7 +204,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "200";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "201";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
