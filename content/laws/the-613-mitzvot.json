@@ -12,5 +12,7 @@
   "RelatedEvents": "",
   "VerificationStatus": "Awaiting Review",
   "Sources": "",
-  "LastReviewed": ""
+  "LastReviewed": "",
+  "Purpose": "Not a command at all but a study aid: the rabbinic tradition counting the Torah's commandments as 613 (248 positive, 365 negative), traced to Rabbi Simlai and codified by Maimonides. Scripture itself gives no count. See notes for the proposed handling: this row should NOT receive a Duration value.",
+  "Duration": ""
 }

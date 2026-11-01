@@ -1,0 +1,18 @@
+{
+  "Command": "Make Atonement with the Censer",
+  "Category": "One-time Commands",
+  "Summary": "Moses' command to Aaron in the plague: take a censer with altar fire and incense, go quickly, and make atonement for the congregation.",
+  "Commandment": "Take a censer, and put fire therein from off the altar, and put on incense, and go quickly unto the congregation, and make an atonement for them.",
+  "Scripture": "Numbers 16:46-48",
+  "Application": "Source flag for the parent: the immediate speaker is Moses to Aaron (Numbers 16:46), acting on God's instruction in the plague crisis, not a direct divine speech formula. Kept because the act (censer atonement) stopped the plague (16:48) and is presented as commanded obedience, but drop it if the parent requires direct divine-speech commands only.",
+  "RelatedTopics": "Atonement; Obedience",
+  "RelatedBooks": "Numbers",
+  "RelatedPeople": "Moses; Aaron",
+  "Slug": "make-atonement-with-the-censer-aaron",
+  "RelatedEvents": "",
+  "VerificationStatus": "Awaiting Review",
+  "Sources": "",
+  "LastReviewed": "",
+  "Purpose": "To make atonement for the congregation and stop the plague after Korah's rebellion (Numbers 16:46-48).",
+  "Duration": "One-time"
+}
