@@ -102,7 +102,7 @@
       filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category", "Subject"] },
     { id: "promises", label: "Promises of God", file: "content/promises.json", primary: "Title",
       blurb: "Every promise of God in Scripture — what he pledged, on what condition, and where it was fulfilled.",
-      filters: [{ label: "Verification", field: "VerificationStatus" }] },
+      filters: [{ label: "Covenant", field: "Covenant" }, { label: "Verification", field: "VerificationStatus" }] },
     { id: "identity", label: "Identity in Christ", file: "content/identity.json", primary: "Title",
       blurb: "Who you are in Christ — and what changes because of it.",
       filters: [{ label: "Verification", field: "VerificationStatus" }] },
@@ -204,7 +204,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "204";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "205";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -622,6 +622,30 @@
         wrap.innerHTML = order.map(function (g) {
           return "<h3>" + esc(g) + " (" + groups[g].length + ")</h3>" +
             '<div class="card-grid">' + groups[g].map(function (item) {
+              return cardFor(c, item.row, item.idx);
+            }).join("") + "</div>";
+        }).join("");
+        return;
+      }
+      if (id === "promises") {
+        /* Promises of God renders grouped under its covenant headings,
+           in covenant-history order (not alphabetical). All 320 items
+           render grouped — batching is skipped here because incremental
+           appends do not mix with group headings. Search and the
+           Covenant/Verification filters still apply: filteredRows()
+           runs first, so a filtered view shows only the groups that
+           still have items. */
+        var COVENANT_ORDER = ["Noahic", "Abrahamic", "Mosaic", "Davidic", "New Covenant", "General"];
+        var pgroups = {}, porder = [];
+        filtered.forEach(function (item) {
+          var g = val(item.row, "Covenant") || "General";
+          if (!pgroups[g]) { pgroups[g] = []; porder.push(g); }
+          pgroups[g].push(item);
+        });
+        porder.sort(function (a, b) { return COVENANT_ORDER.indexOf(a) - COVENANT_ORDER.indexOf(b); });
+        wrap.innerHTML = porder.map(function (g) {
+          return "<h3>" + esc(g) + " (" + pgroups[g].length + ")</h3>" +
+            '<div class="card-grid">' + pgroups[g].map(function (item) {
               return cardFor(c, item.row, item.idx);
             }).join("") + "</div>";
         }).join("");
@@ -5006,7 +5030,7 @@ function genBindInteractive(node) {
       "<h3>Nothing invented, nothing auto-verified</h3>" +
       "<p>No discovery, date, biblical reference, manuscript identification, or citation is invented to fill a gap. Where adequate sources have not been found, the field stays blank and the entry stays Awaiting Review. Content drafted with AI assistance is never automatically marked verified — it earns Verified only after a source check, like any other entry.</p>" +
       "<h3>Coverage today</h3>" +
-      "<p>Of 21,640 database entries, 24 are Verified, 6 are Scholarly Debate, and 21,610 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
+      "<p>Of 21,926 database entries, 24 are Verified, 6 are Scholarly Debate, and 21,896 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
       "<p>Browse the statuses: <a href='#/manuscripts?f_VerificationStatus=Verified'>Verified manuscripts</a> &middot; <a href='#/manuscripts?f_VerificationStatus=Scholarly Debate'>Debated manuscripts</a> &middot; <a href='#/finds?f_VerificationStatus=Scholarly Debate'>Debated finds</a></p>" +
       "<h3>Corrections</h3>" +
       "<p>Entries can be corrected and updated at any time. Corrections go through the site editor or through the site owner, and a corrected entry keeps its sources and review date visible so readers can see what changed and when it was last checked.</p>" +
