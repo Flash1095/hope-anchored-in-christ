@@ -204,7 +204,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "199";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "200";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1473,15 +1473,15 @@
      narratives that name them. Used by the Civilizations section of
      people pages and by the timeline visualization. ---------- */
   var ERA_CIVILIZATIONS = {
-    "Primeval / Patriarchs": ["Egypt", "Canaan", "Elam", "Babylon", "Israel", "Amorites", "Hivites", "Perizzites", "Jebusites", "Girgashites", "Midianites", "Ishmaelites", "Amalekites", "Cush", "Kenites", "Kenizzites", "Horites", "Kadmonites", "Rephaim", "Nephilim"],
-    "Exodus and Wilderness": ["Egypt", "Canaan", "Phoenicia", "Hittite Empire", "Amorites", "Hivites", "Perizzites", "Jebusites", "Girgashites", "Midianites", "Ishmaelites", "Amalekites", "Anakim", "Edom", "Moab", "Ammon", "Elam", "Cush", "Israel", "Kenites", "Kenizzites", "Rephaim", "Nephilim"],
-    "Conquest and Judges": ["Egypt", "Canaan", "Philistia", "Phoenicia", "Hittite Empire", "Aram", "Amorites", "Hivites", "Perizzites", "Jebusites", "Girgashites", "Midianites", "Ishmaelites", "Amalekites", "Anakim", "Geshurites", "Maacathites", "Moab", "Ammon", "Edom", "Elam", "Cush", "Israel", "Judah", "Kenites", "Kenizzites", "Rephaim", "Lydia"],
-    "United Monarchy": ["Egypt", "Canaan", "Philistia", "Phoenicia", "Aram", "Moab", "Ammon", "Edom", "Elam", "Cush", "Israel", "Judah", "Amalekites", "Geshurites", "Maacathites", "Kenites", "Rephaim", "Jebusites", "Lydia", "Libya", "Put", "Sheba", "Arabia"],
-    "Divided Monarchy": ["Egypt", "Philistia", "Phoenicia", "Aram", "Moab", "Ammon", "Edom", "Assyria", "Babylon", "Greece", "Rome", "Elam", "Cush", "Israel", "Judah", "Samaritans", "Amalekites", "Maacathites", "Media", "Lydia", "Libya", "Put", "Sheba", "Arabia", "Avites", "Cuthah", "Sepharvaim"],
-    "Exile": ["Egypt", "Philistia", "Phoenicia", "Babylon", "Persia", "Greece", "Rome", "Elam", "Cush", "Israel", "Judah", "Samaritans", "Moab", "Ammon", "Edom", "Media", "Lydia", "Libya", "Put", "Sheba", "Arabia"],
-    "Return and Second Temple": ["Egypt", "Phoenicia", "Persia", "Greece", "Rome", "Cush", "Israel", "Judah", "Samaritans", "Moab", "Ammon", "Edom", "Libya", "Put", "Sheba", "Arabia", "Parthians", "Galatians"],
-    "Life of Christ": ["Rome", "Parthians", "Arabia", "Sheba", "Cush", "Galatians", "Israel", "Judah", "Samaritans"],
-    "Early Church": ["Rome", "Parthians", "Arabia", "Sheba", "Cush", "Galatians", "Israel", "Judah", "Samaritans", "Alexandrians", "Cappadocians", "Cilicians", "Cretans", "Cypriots", "Cyrenians", "Lycaonians", "Mesopotamians", "Pamphylians", "Phrygians", "Pontians", "Scythians", "Syrophoenicians"]
+    "Primeval / Patriarchs": ["Egypt", "Elam", "Babylon", "Israel", "Amorites", "Hivites", "Perizzites", "Jebusites", "Girgashites", "Midianites", "Ishmaelites", "Amalekites", "Cush", "Kenites", "Kenizzites", "Horites", "Kadmonites", "Rephaim", "Nephilim"],
+    "Exodus and Wilderness": ["Egypt", "Phoenicia", "Hittite Empire", "Amorites", "Hivites", "Perizzites", "Jebusites", "Girgashites", "Midianites", "Ishmaelites", "Amalekites", "Anakim", "Edom", "Moab", "Ammon", "Elam", "Cush", "Israel", "Kenites", "Kenizzites", "Rephaim", "Nephilim"],
+    "Conquest and Judges": ["Egypt", "Phoenicia", "Hittite Empire", "Aram", "Amorites", "Hivites", "Perizzites", "Jebusites", "Girgashites", "Midianites", "Ishmaelites", "Amalekites", "Anakim", "Geshur", "Maacah", "Moab", "Ammon", "Edom", "Elam", "Cush", "Israel", "Judah", "Kenites", "Kenizzites", "Rephaim", "Lydia"],
+    "United Monarchy": ["Egypt", "Phoenicia", "Aram", "Moab", "Ammon", "Edom", "Elam", "Cush", "Israel", "Judah", "Amalekites", "Geshur", "Maacah", "Kenites", "Rephaim", "Jebusites", "Lydia", "Libyans", "Put", "Sheba", "Arabians"],
+    "Divided Monarchy": ["Egypt", "Phoenicia", "Aram", "Moab", "Ammon", "Edom", "Assyria", "Babylon", "Greece", "Rome", "Elam", "Cush", "Israel", "Judah", "Samaritans", "Amalekites", "Maacah", "Media", "Lydia", "Libyans", "Put", "Sheba", "Arabians", "Avites", "Cuthites", "Sepharvites"],
+    "Exile": ["Egypt", "Phoenicia", "Babylon", "Persia", "Greece", "Rome", "Elam", "Cush", "Israel", "Judah", "Samaritans", "Moab", "Ammon", "Edom", "Media", "Lydia", "Libyans", "Put", "Sheba", "Arabians"],
+    "Return and Second Temple": ["Egypt", "Phoenicia", "Persia", "Greece", "Rome", "Cush", "Israel", "Judah", "Samaritans", "Moab", "Ammon", "Edom", "Libyans", "Put", "Sheba", "Arabians", "Parthians", "Galatians"],
+    "Life of Christ": ["Rome", "Parthians", "Arabians", "Sheba", "Cush", "Galatians", "Israel", "Judah", "Samaritans"],
+    "Early Church": ["Rome", "Parthians", "Arabians", "Sheba", "Cush", "Galatians", "Israel", "Judah", "Samaritans", "Alexandrians", "Cappadocians", "Cilicians", "Cretans", "Cypriots", "Cyrenians", "Lycaonians", "Mesopotamians", "Pamphylians", "Phrygians", "Pontians", "Scythians", "Syrophoenicians"]
   };
   /* Places for one profile, derived from existing data only:
      timeline entries whose KeyPersons names the person (exact match)
@@ -5006,7 +5006,7 @@ function genBindInteractive(node) {
       "<h3>Nothing invented, nothing auto-verified</h3>" +
       "<p>No discovery, date, biblical reference, manuscript identification, or citation is invented to fill a gap. Where adequate sources have not been found, the field stays blank and the entry stays Awaiting Review. Content drafted with AI assistance is never automatically marked verified — it earns Verified only after a source check, like any other entry.</p>" +
       "<h3>Coverage today</h3>" +
-      "<p>Of 21,338 database entries, 24 are Verified, 6 are Scholarly Debate, and 21,308 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
+      "<p>Of 21,342 database entries, 24 are Verified, 6 are Scholarly Debate, and 21,312 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
       "<p>Browse the statuses: <a href='#/manuscripts?f_VerificationStatus=Verified'>Verified manuscripts</a> &middot; <a href='#/manuscripts?f_VerificationStatus=Scholarly Debate'>Debated manuscripts</a> &middot; <a href='#/finds?f_VerificationStatus=Scholarly Debate'>Debated finds</a></p>" +
       "<h3>Corrections</h3>" +
       "<p>Entries can be corrected and updated at any time. Corrections go through the site editor or through the site owner, and a corrected entry keeps its sources and review date visible so readers can see what changed and when it was last checked.</p>" +
