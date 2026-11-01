@@ -92,7 +92,7 @@
     blurb: "The empires and peoples around Israel — Egypt, Assyria, Babylon, Persia, Greece, Rome, and their neighbors — and how each one touches the Bible story.",
     filters: [{ label: "Region", field: "Region" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Region"] },
   { id: "peoples", label: "People Groups", file: "content/peoples.json", primary: "PeopleGroup",
-    blurb: "The tribes, peoples, and ethnic groups of the Bible — from the twelve tribes of Israel to the nations around them — and how each one touches the Bible story.",
+    blurb: "The tribes, peoples, ethnic groups, and factions of the Bible — from the twelve tribes of Israel to the nations around them — and how each one touches the Bible story.",
     filters: [{ label: "Region", field: "Region" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Region"] },
   { id: "manuscripts", label: "Dead Sea Scrolls Manuscripts", file: "content/manuscripts.json", primary: "Manuscript",
     blurb: "Qumran manuscripts of the Bible — the best-preserved copy of each book, with its cave, date, language, material, and the passages that actually survive. Search by book, cave, period, language, or completeness.",
@@ -109,9 +109,6 @@
     { id: "journeys", label: "Journeys", file: "content/journeys.json", primary: "Journey",
       blurb: "The roads of the Bible — every journey of God's people, from Abraham's call to Paul's voyage to Rome, traced stop by stop through Scripture.",
       filters: [{ label: "Verification", field: "VerificationStatus" }], meta: ["FromPlace", "ToPlace"] },
-    { id: "groups", label: "Groups & Factions", file: "content/groups.json", primary: "Group",
-      blurb: "The parties, classes, and circles of the Bible world — scribes, Pharisees, the Sanhedrin, the Twelve, and the early church — who they were and what they believed.",
-      filters: [{ label: "Period", field: "Period" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Period"] },
 ];
   /* Explore tile order, as a study journey: the story first, then the
      world behind it, then deeper study, then discernment, then the
@@ -120,7 +117,7 @@
      display-only: COLLECTIONS itself stays untouched, because its order
      decides link-index tie-breaking. Any collection missing here falls
      back to the end of the tiles, so nothing can ever disappear. */
-  var EXPLORE_ORDER = ["timeline", "books", "stories", "people", "groups", "places",
+  var EXPLORE_ORDER = ["timeline", "books", "stories", "people", "places",
     "finds", "manuscripts", "civilizations", "peoples", "questions", "hermeneutics", "jewishculture",
     "topics", "wordstudies", "doctrines", "prophecies", "typology", "apologetics",
     "objections", "heresies", "fallacies", "perspectives", "heritage",
@@ -207,7 +204,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "198";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "199";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -860,7 +857,7 @@
     var peopleNames = nameSet("people", "Name");
     var placesNames = nameSet("places", "Name");
     var civNames = nameSet("civilizations", "Civilization");
-    var groupNames = nameSet("groups", "Group");
+    var groupNames = nameSet("peoples", "PeopleGroup");
     var eraSet = {};
     eras.forEach(function (e) { eraSet[e] = true; });
     function validParam(v, map) { return v && map[v] ? v : ""; }
@@ -876,8 +873,8 @@
        from data already loaded — no new fields. A timeline entry
        matches a civilization when its Title equals one of the
        civilization's RelatedEvents titles or its Places share a place
-       with the civilization's RelatedPlaces; it matches a group when
-       its KeyPersons include any of the group's KeyMembers (exact). */
+       with the civilization's RelatedPlaces; it matches a people group when
+       its KeyPersons include any of the people group's RelatedPeople (exact). */
     var civIndex = {};
     (data.civilizations || []).forEach(function (cv) {
       var name = val(cv, "Civilization");
@@ -888,11 +885,11 @@
       civIndex[name] = { events: ev, places: pl };
     });
     var groupMembers = {};
-    (data.groups || []).forEach(function (g) {
-      var name = val(g, "Group");
+    (data.peoples || []).forEach(function (p) {
+      var name = val(p, "PeopleGroup");
       if (isEmpty(name)) return;
       var m = {};
-      splitList(val(g, "KeyMembers")).forEach(function (n) { m[n] = true; });
+      splitList(val(p, "RelatedPeople")).forEach(function (n) { m[n] = true; });
       groupMembers[name] = m;
     });
     function matchesCiv(row, civName) {
@@ -1125,7 +1122,7 @@
       var civOpts = '<option value="">All civilizations</option>' + Object.keys(civNames).sort().map(function (n) {
         return '<option value="' + esc(n) + '"' + (state.civ === n ? " selected" : "") + ">" + esc(n) + "</option>";
       }).join("");
-      var groupOpts = '<option value="">All groups</option>' + Object.keys(groupNames).sort().map(function (n) {
+      var groupOpts = '<option value="">All people groups</option>' + Object.keys(groupNames).sort().map(function (n) {
         return '<option value="' + esc(n) + '"' + (state.group === n ? " selected" : "") + ">" + esc(n) + "</option>";
       }).join("");
       var personOpts = Object.keys(peopleNames).sort().map(function (n) { return '<option value="' + esc(n) + '">'; }).join("");

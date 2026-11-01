@@ -67,7 +67,6 @@ SOURCES = [
     ("promises", "", "Title"),
     ("identity", "", "Title"),
     ("journeys", "", "Journey"),
-    ("groups", "", "Group"),
     ("peoples", "", "PeopleGroup"),
 ]
 
