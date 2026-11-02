@@ -208,7 +208,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "219";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "220";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1979,7 +1979,10 @@
      post, and More-to-explore links restyled into bands. Every link
      below is an existing route. The four path steps replace the full
      Explore grid on the homepage (v219); the full grid still lives on
-     #/explore, untouched, via the "Browse everything" link. */
+     #/explore, untouched, via the "Browse everything" link — and since
+     v220 it ALSO appears on the homepage as "Browse by step",
+     grouped under the four guided-path steps (NOT the Explore
+     section headings, per her correction). */
   function viewHome() {
     var total = COLLECTIONS.reduce(function (sum, c) { return sum + (data[c.id] || []).length; }, 0);
     var latest = posts[0];
@@ -2004,6 +2007,55 @@
         "<div><h3 class='retro-step-title'>" + s.title + "</h3><p class='retro-step-desc'>" + s.desc + "</p></div></div>" +
         "<div class='card-grid retro-doors'>" + doors + "</div></div>";
     }).join("");
+    /* Browse by step (v220, corrected): every collection on the
+       homepage, grouped under the four guided-path steps — NOT under
+       the Explore section headings. Tile construction is the same as
+       viewExplore (collectionCard tiles, the special places card);
+       Journeys stays excluded, exactly as Explore excludes it. */
+    var browseHtml = (function () {
+      function tileFor(c) {
+        if (c.id === "places") {
+          var pn = (data.places || []).length;
+          var pblurb = c.blurb;
+          (explorePage.blurbs || []).forEach(function (b) { if (b.collection === "places" && b.blurb) pblurb = b.blurb; });
+          var part = TILE_ART.places ? "<img class='card-art' src='" + esc(TILE_ART.places) + "' alt=''>" : "";
+          return "<div class='card retro-tile'><a href='#/places'>" + part + "<h3>" + esc(c.label) + "</h3>" +
+            "<p class='meta'>" + pn + " entries</p><p class='snippet'>" + esc(pblurb) + "</p></a>" +
+            "<p><a class='btn' href='#/atlas'>View on map &rarr;</a></p></div>";
+        }
+        return collectionCard(c).replace('class="card"', 'class="card retro-tile"');
+      }
+      var genealogyHtml = "<div class='card retro-tile genealogy-card'><h3>Biblical Genealogies</h3>" +
+        "<p class='snippet'>Every parent, child, and spouse named in the Bible's genealogy passages — linked to their profiles and to the passages.</p><p>" +
+        "<a class='btn' href='#/genealogy'>Explore Biblical Genealogies</a></p></div>";
+      var atlasHtml = "<div class='card retro-tile atlas-card'><h3>Biblical Atlas</h3>" +
+        "<p class='snippet'>Real places on a real map — every marker links to its place page.</p><p>" +
+        "<a class='btn' href='#/atlas'>Open the Atlas</a></p></div>";
+      var storyHtml = "<div class='card retro-tile storybook-card'><h3>Storybook Reader</h3>" +
+        "<p class='snippet'>Read stories like a book — one page at a time.</p><p>" +
+        STORYBOOK_SHELVES.map(function (s) {
+          return '<a class="btn" href="#/storybook/' + s.key + '">' + esc(s.label) + '</a>';
+        }).join(" ") + "</p></div>";
+      var browseSteps = [
+        { title: "Step 1 \u00b7 Start Here", tiles: ["timeline", "books", "stories", "genealogy"] },
+        { title: "Step 2 \u00b7 Go Deeper", tiles: ["people", "places", "atlas", "civilizations", "peoples", "wordstudies",
+          "topics", "doctrines", "hermeneutics", "jewishculture", "questions", "laws",
+          "god", "promises", "identity", "manuscripts", "finds"] },
+        { title: "Step 3 \u00b7 Defend", tiles: ["apologetics", "objections", "prophecies", "typology", "heritage",
+          "heresies", "fallacies", "perspectives", "politics", "socialmedia"] },
+        { title: "Step 4 \u00b7 Learn and Create", tiles: ["courses", "studyguides", "quizzes", "hymns", "nature", "storybook"] }
+      ];
+      return browseSteps.map(function (s) {
+        var tiles = s.tiles.map(function (t) {
+          if (t === "genealogy") return genealogyHtml;
+          if (t === "atlas") return atlasHtml;
+          if (t === "storybook") return storyHtml;
+          var c = coll(t);
+          return c ? tileFor(c) : "";
+        }).join("");
+        return "<h3 class='retro-subhead'>" + esc(s.title) + "</h3><div class='card-grid retro-tiles'>" + tiles + "</div>";
+      }).join("");
+    })();
     var badges = [["#/bible", "books", "Study the Bible"], ["#/apologetics", "finds", "Examine the Evidence"],
       ["#/timeline", "timeline", "Biblical History"], ["#/nature", "nature", "God's Creation"],
       ["#/people", "people", "Biblical People"], ["#/places", "places", "Biblical Places"],
@@ -2025,6 +2077,11 @@
       "<p class='retro-band-intro'>Four steps, in order — start at the beginning and follow the path as far as you like.</p>" +
       pathHtml +
       "<p class='retro-browse-all'>Want it all at once? <a class='btn' href='#/explore'>Browse everything</a></p>" +
+      "</section>" +
+      "<section class='retro-band retro-cream' id='retro-browse'>" +
+      "<h2 class='retro-display retro-display-dark'>Browse by step</h2>" +
+      "<p class='retro-band-intro'>Every collection on the site, grouped under the four steps of the journey.</p>" +
+      browseHtml +
       "</section>" +
       "<section class='retro-band retro-cream' id='retro-about'>" +
       "<h2 class='retro-display retro-display-dark'>About Us</h2>" +
