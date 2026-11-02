@@ -208,7 +208,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "216";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "217";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1973,31 +1973,91 @@
     return '<a class="card" href="#/' + c.id + '">' + art + "<h3>" + esc(c.label) + "</h3>" +
       '<p class="meta">' + n + " entries</p><p class='snippet'>" + esc(blurb) + "</p></a>";
   }
+  /* ---------- retro homepage (v217) ----------
+     Banded retro restyle of the original home view: teal hero, cream
+     About Us, coral Explore portfolio, then the original stats, latest
+     post, and More-to-explore links restyled into bands. Every word of
+     copy below is the site's existing copy; every link is an existing
+     route. The portfolio tiles mirror #/explore exactly: same
+     EXPLORE_ORDER order, same routes, same Storybook/Atlas/Genealogy
+     cards, same section subheads, same special places card — journeys
+     stays out, exactly as Explore filters it (it lives in the Atlas). */
   function viewHome() {
     var total = COLLECTIONS.reduce(function (sum, c) { return sum + (data[c.id] || []).length; }, 0);
     var latest = posts[0];
-    var html = "<h2>Welcome to Hope Anchored in Christ</h2>" +
-      "<p class='page-intro'>The whole Bible is one anchored story. Walk the timeline, meet the people, " +
+    var ordered = EXPLORE_ORDER.map(function (id) { return coll(id); }).filter(Boolean)
+      .concat(COLLECTIONS.filter(function (c) { return EXPLORE_ORDER.indexOf(c.id) === -1; }))
+      .filter(function (c) { return c.id !== "journeys"; });
+    var tiles = "<div class='card retro-tile storybook-card'><h3>Storybook Reader</h3>" +
+      "<p class='snippet'>Read stories like a book — one page at a time.</p><p>" +
+      STORYBOOK_SHELVES.map(function (s) {
+        return '<a class="btn" href="#/storybook/' + s.key + '">' + esc(s.label) + '</a>';
+      }).join(" ") + "</p></div>" +
+      "<div class='card retro-tile atlas-card'><h3>Biblical Atlas</h3>" +
+      "<p class='snippet'>Real places on a real map — every marker links to its place page.</p><p>" +
+      "<a class='btn' href='#/atlas'>Open the Atlas</a></p></div>";
+    ordered.forEach(function (c) {
+      var heading = SECTION_HEADINGS[c.id];
+      if (heading) tiles += "<h3 class='retro-subhead'>" + esc(heading) + "</h3>";
+      if (c.id === "places") {
+        var pn = (data.places || []).length;
+        var pblurb = c.blurb;
+        (explorePage.blurbs || []).forEach(function (b) { if (b.collection === "places" && b.blurb) pblurb = b.blurb; });
+        var part = TILE_ART.places ? "<img class='card-art' src='" + esc(TILE_ART.places) + "' alt=''>" : "";
+        tiles += "<div class='card retro-tile'><a href='#/places'>" + part + "<h3>" + esc(c.label) + "</h3>" +
+          "<p class='meta'>" + pn + " entries</p><p class='snippet'>" + esc(pblurb) + "</p></a>" +
+          "<p><a class='btn' href='#/atlas'>View on map &rarr;</a></p></div>";
+      } else {
+        tiles += collectionCard(c).replace('class="card"', 'class="card retro-tile"');
+      }
+      if (c.id === "people") {
+        tiles += "<div class='card retro-tile genealogy-card'><h3>Biblical Genealogies</h3>" +
+          "<p class='snippet'>Every parent, child, and spouse named in the Bible's genealogy passages — linked to their profiles and to the passages.</p><p>" +
+          "<a class='btn' href='#/genealogy'>Explore Biblical Genealogies</a></p></div>";
+      }
+    });
+    var badges = [["#/bible", "books", "Study the Bible"], ["#/apologetics", "finds", "Examine the Evidence"],
+      ["#/timeline", "timeline", "Biblical History"], ["#/nature", "nature", "God's Creation"]].map(function (b) {
+      var img = TILE_ART[b[1]] ? "<img src='" + esc(TILE_ART[b[1]]) + "' alt=''>" : "";
+      return "<a class='retro-badge' href='" + b[0] + "'>" + img + "<span>" + b[2] + "</span></a>";
+    }).join("");
+    var html = "<div class='retro-home'>" +
+      "<section class='retro-band retro-teal'>" +
+      "<p class='retro-eyebrow'>Welcome to Hope Anchored in Christ</p>" +
+      "<h2 class='retro-display'>Hope Anchored in Christ</h2>" +
+      "<p class='retro-tagline'>Explore Scripture. Examine the Evidence. Discover the Truth.</p>" +
+      "<p class='retro-ribbon'>&ldquo;We have this hope as an anchor for the soul, firm and secure. " +
+      "It enters the inner sanctuary behind the curtain, where our forerunner, Jesus, has entered on our behalf.&rdquo; " +
+      "&mdash; Hebrews 6:19&ndash;20</p>" +
+      "</section>" +
+      "<section class='retro-band retro-cream' id='retro-about'>" +
+      "<h2 class='retro-display retro-display-dark'>About Us</h2>" +
+      "<p class='page-intro retro-intro'>The whole Bible is one anchored story. Walk the timeline, meet the people, " +
       "visit the places, touch the archaeology, and explore all 66 books — every post pointing back to " +
       "Jesus Christ, the same yesterday and today and forever (Hebrews 13:8).</p>" +
-      '<div class="stats">' +
+      "<div class='retro-badges'>" + badges + "</div>" +
+      "<p><a class='btn' href='#/about'>Read Our Story</a></p>" +
+      "</section>" +
+      "<section class='retro-band retro-coral' id='retro-portfolio'>" +
+      "<h2 class='retro-display retro-display-dark'>Explore</h2>" +
+      "<p class='retro-band-intro'>" + esc(explorePage.intro || "Every collection on the site — pick one and start browsing.") + "</p>" +
+      "<div class='card-grid retro-tiles'>" + tiles + "</div>" +
+      "</section>" +
+      "<section class='retro-band retro-cream'><div class='stats'>" +
       '<div class="stat"><strong>' + COLLECTIONS.length + "</strong><span>collections</span></div>" +
       '<div class="stat"><strong>' + total + "</strong><span>entries</span></div>" +
       '<div class="stat"><strong>' + (data.books || []).length + "</strong><span>books of the Bible</span></div>" +
-      '<div class="stat"><strong>' + quizGroups().length + "</strong><span>quizzes</span></div></div>" +
-      '<div class="verse-band">&ldquo;We have this hope as an anchor for the soul, firm and secure. ' +
-      "It enters the inner sanctuary behind the curtain, where our forerunner, Jesus, has entered on our behalf.&rdquo; " +
-      "&mdash; Hebrews 6:19&ndash;20</div>";
+      '<div class="stat"><strong>' + quizGroups().length + "</strong><span>quizzes</span></div></div></section>";
     if (latest) {
-      html += "<h3>Latest from the blog</h3>" + postRowCard(latest, "Latest blog post");
+      html += "<section class='retro-band retro-paper'><h2 class='retro-display retro-display-dark'>Latest from the blog</h2>" + postRowCard(latest, "Latest blog post") + "</section>";
     }
-    html += "<h3>Explore the collections</h3><div class='card-grid home-grid'>" +
-      COLLECTIONS.map(collectionCard).join("") + "</div>";
-    html += "<h3>More to explore</h3><p class='page-intro'>Pages beyond the collections — readers, tools, and ways to support the ministry.</p>" +
+    html += "<section class='retro-band retro-cream'><h2 class='retro-display retro-display-dark'>More to explore</h2>" +
+      "<p class='page-intro'>Pages beyond the collections — readers, tools, and ways to support the ministry.</p>" +
       "<p>" + [["#/bible", "Bible"], ["#/blog", "Blog"], ["#/art", "Art Gallery"],
       ["#/storybook", "Storybook Reader"], ["#/genealogy", "Biblical Genealogies"],
       ["#/lookup", "Manuscript Lookup"], ["#/store", "Store"], ["#/give", "Give"],
-      ["#/connect", "Connect"]].map(function (l) { return "<a class='btn' href='" + l[0] + "'>" + l[1] + "</a>"; }).join(" ") + "</p>";
+      ["#/connect", "Connect"]].map(function (l) { return "<a class='btn' href='" + l[0] + "'>" + l[1] + "</a>"; }).join(" ") + "</p></section>";
+    html += "</div>";
     app.innerHTML = html;
     /* Animated home: stat numbers count up on load (instant under
        reduced-motion, where the final values simply stay put). */

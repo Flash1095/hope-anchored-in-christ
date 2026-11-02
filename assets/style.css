@@ -574,3 +574,59 @@ html[data-theme="dark"] .gtn-head { fill: #16213f; }
 html[data-theme="dark"] .gtn-box-center { fill: #2a2140; }
 html[data-theme="dark"] .gtn-head-none { fill: #232a44; }
 html[data-theme="dark"] .gtn-name, html[data-theme="dark"] .gtn-head-name { fill: #eef1f7; }
+
+/* ---------- retro homepage bands (v217, home only) ----------
+   Scoped to .retro-home (the viewHome wrapper), so no other page is
+   restyled. Palette is inspired by the retro reference Lorraine sent
+   (teal hero, cream about, coral portfolio) in original CSS only:
+   white text on the deep teal, dark navy text on cream and coral. */
+.retro-home .retro-band { padding: 2rem 1.5rem; margin: 0 0 1.5rem; border-radius: 6px; }
+.retro-home .retro-teal { background: #1F7673; color: #fff; text-align: center; }
+.retro-home .retro-cream { background: #F7ECD7; color: #2b2b2b; }
+.retro-home .retro-coral { background: #F0907A; color: #1B2A4E; }
+.retro-home .retro-paper { background: #fff; border: 1px solid var(--line); }
+.retro-home .retro-display { font-family: "Bebas Neue", "Arial Narrow", Impact, sans-serif; text-transform: uppercase; letter-spacing: 0.04em; line-height: 1.05; }
+.retro-home .retro-teal .retro-display { color: #fff; font-size: clamp(2.2rem, 7vw, 4rem); margin: 0.3rem 0 0.5rem; }
+.retro-home .retro-display-dark { color: #1B2A4E; font-size: clamp(1.9rem, 5vw, 2.8rem); margin: 0 0 0.8rem; }
+.retro-home .retro-eyebrow { margin: 0; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.9rem; color: #F7ECD7; }
+.retro-home .retro-tagline { font-size: 1.25rem; font-weight: 600; margin: 0 0 1.2rem; color: #fff; }
+.retro-home .retro-ribbon { display: inline-block; background: #F7ECD7; color: #1B2A4E; border-radius: 4px; padding: 0.7rem 1.2rem; margin: 0; font-style: italic; max-width: 680px; }
+.retro-home .retro-intro { color: #2b2b2b; max-width: none; font-size: 1.05rem; }
+.retro-home .retro-band-intro { color: #1B2A4E; font-weight: 600; }
+.retro-home .retro-badges { display: flex; gap: 1.2rem; flex-wrap: wrap; justify-content: center; margin: 1.4rem 0; }
+.retro-home .retro-badge { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; text-decoration: none; color: #1B2A4E; font-weight: 700; width: 130px; text-align: center; }
+.retro-home .retro-badge img { width: 110px; height: 110px; object-fit: cover; border-radius: 50%; border: 4px solid #1F7673; background: #fff; display: block; }
+.retro-home .retro-badge:hover img { border-color: var(--gold-dark); }
+.retro-home .retro-tiles .retro-tile { background: #fff; }
+.retro-home .retro-tiles .retro-tile:nth-child(4n+2) { background: #F7ECD7; }
+.retro-home .retro-tiles .retro-tile:nth-child(4n+3) { background: #D8EDEB; }
+.retro-home .retro-tiles .retro-tile:nth-child(4n+4) { background: #FDF0C8; }
+.retro-home .retro-subhead { grid-column: 1 / -1; font-family: "Bebas Neue", "Arial Narrow", Impact, sans-serif; text-transform: uppercase; letter-spacing: 0.05em; color: #1B2A4E; margin: 0.8rem 0 0; font-size: 1.6rem; }
+.retro-home .retro-tile h3 { color: #1B2A4E; }
+.retro-home .stats { margin: 0; }
+.retro-home .stat { background: #fff; }
+.retro-home .stat strong { font-family: "Bebas Neue", "Arial Narrow", Impact, sans-serif; font-size: 2rem; letter-spacing: 0.03em; }
+@media (max-width: 700px) {
+  .retro-home .retro-band { padding: 1.4rem 1rem; }
+  .retro-home .retro-badges { gap: 0.8rem; }
+  .retro-home .retro-badge { width: 100px; font-size: 0.9rem; }
+  .retro-home .retro-badge img { width: 84px; height: 84px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .retro-home .card, .retro-home .retro-badge img { transition: none; }
+}
+/* Dark view: same bands, darkened so text stays readable. */
+html[data-theme="dark"] .retro-home .retro-teal { background: #14544F; }
+html[data-theme="dark"] .retro-home .retro-cream { background: #2B2419; color: #F2E8D5; }
+html[data-theme="dark"] .retro-home .retro-coral { background: #6E3428; color: #FDE8DE; }
+html[data-theme="dark"] .retro-home .retro-display-dark, html[data-theme="dark"] .retro-home .retro-band-intro,
+html[data-theme="dark"] .retro-home .retro-intro, html[data-theme="dark"] .retro-home .retro-badge,
+html[data-theme="dark"] .retro-home .retro-subhead, html[data-theme="dark"] .retro-home .retro-tile h3 { color: #F2E8D5; }
+html[data-theme="dark"] .retro-home .retro-tiles .retro-tile, html[data-theme="dark"] .retro-home .stat,
+html[data-theme="dark"] .retro-home .retro-paper { background: #16213f; }
+html[data-theme="dark"] .retro-home .retro-tiles .retro-tile:nth-child(4n+2),
+html[data-theme="dark"] .retro-home .retro-tiles .retro-tile:nth-child(4n+3),
+html[data-theme="dark"] .retro-home .retro-tiles .retro-tile:nth-child(4n+4) { background: #1E2A4A; }
+html[data-theme="dark"] .retro-home .retro-ribbon { background: #2B2419; color: #F2E8D5; }
+html[data-theme="dark"] .retro-home .retro-eyebrow { color: #F2E8D5; }
+html[data-theme="dark"] .retro-home .retro-badge img { border-color: #3AAFA9; background: #16213f; }
