@@ -208,7 +208,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "220";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "221";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -2039,10 +2039,10 @@
       var browseSteps = [
         { title: "Step 1 \u00b7 Start Here", tiles: ["timeline", "books", "stories", "genealogy"] },
         { title: "Step 2 \u00b7 Go Deeper", tiles: ["people", "places", "atlas", "civilizations", "peoples", "wordstudies",
-          "topics", "doctrines", "hermeneutics", "jewishculture", "questions", "laws",
-          "god", "promises", "identity", "manuscripts", "finds"] },
-        { title: "Step 3 \u00b7 Defend", tiles: ["apologetics", "objections", "prophecies", "typology", "heritage",
-          "heresies", "fallacies", "perspectives", "politics", "socialmedia"] },
+          "topics", "doctrines", "hermeneutics", "jewishculture", "laws",
+          "god", "promises", "identity", "manuscripts", "finds", "prophecies", "typology", "heritage", "perspectives"] },
+        { title: "Step 3 \u00b7 Defend", tiles: ["apologetics", "objections", "questions",
+          "heresies", "fallacies", "politics", "socialmedia"] },
         { title: "Step 4 \u00b7 Learn and Create", tiles: ["courses", "studyguides", "quizzes", "hymns", "nature", "storybook"] }
       ];
       return browseSteps.map(function (s) {
