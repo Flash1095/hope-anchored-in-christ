@@ -18,14 +18,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script>try{var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
-<link rel="stylesheet" href="assets/style.css?v=222">
+<link rel="stylesheet" href="assets/style.css?v=223">
 <link rel="icon" type="image/png" href="assets/favicon.png?v=76">
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+<section class="banner">
+  <h1 class="visually-hidden">Hope Anchored in Christ</h1>
+  <img src="assets/banner.jpg?v=19" alt="Hope Anchored in Christ — wildflower meadow with a butterfly and a bee">
+</section>
+
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="#/"><img class="brand-logo" src="assets/logo.jpg?v=76" alt="">Hope Anchored in Christ</a>
+    <a class="brand" href="#/" aria-label="Hope Anchored in Christ — home"><img class="brand-logo" src="assets/logo.jpg?v=76" alt=""></a>
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">☰ Menu</button>
     <nav class="main-nav" id="mainNav" aria-label="Main">
       <a href="#/">Home</a>
@@ -46,11 +51,6 @@
   </div>
 </header>
 
-<section class="banner">
-  <h1 class="visually-hidden">Hope Anchored in Christ</h1>
-  <img src="assets/banner.jpg?v=19" alt="Hope Anchored in Christ — wildflower meadow with a butterfly and a bee">
-</section>
-
 <main id="app" class="content"></main>
 
 <section class="lower-banner">
@@ -65,7 +65,7 @@
 </footer>
 
 <noscript><p style="text-align:center;padding:2rem">This site needs JavaScript to browse the collections.</p></noscript>
-<script src="assets/app.js?v=222"></script>
+<script src="assets/app.js?v=223"></script>
 <script>
   if (window.netlifyIdentity) {
     window.netlifyIdentity.init({ APIUrl: 'https://hope-anchored-in-christ.netlify.app/.netlify/identity' });
