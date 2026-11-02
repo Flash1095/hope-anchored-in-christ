@@ -208,7 +208,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "214";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "215";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1660,7 +1660,7 @@
     var rows = data[c.id] || [];
     var row = rows[idx];
     if (!row) return viewCollection(c.id, null, new URLSearchParams());
-    var html = '<a class="back-link" href="#/' + c.id + '">&larr; All ' + esc(c.label) + "</a>";
+    var html = '<nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a> &rsaquo; <a href="#/' + c.id + '">' + esc(c.label) + '</a> &rsaquo; <span aria-current="page">' + esc(val(row, c.primary)) + "</span></nav>" + '<a class="back-link" href="#/' + c.id + '">&larr; All ' + esc(c.label) + "</a>";
     if (c.id === "wordstudies") {
       html += "<h2>" + esc(val(row, "Transliteration")) + ' <span class="word-script">' + esc(val(row, "Word")) + "</span></h2>";
     } else {
@@ -1973,50 +1973,291 @@
     return '<a class="card" href="#/' + c.id + '">' + art + "<h3>" + esc(c.label) + "</h3>" +
       '<p class="meta">' + n + " entries</p><p class='snippet'>" + esc(blurb) + "</p></a>";
   }
-  function viewHome() {
-    var total = COLLECTIONS.reduce(function (sum, c) { return sum + (data[c.id] || []).length; }, 0);
-    var latest = posts[0];
-    var html = "<h2>Welcome to Hope Anchored in Christ</h2>" +
-      "<p class='page-intro'>The whole Bible is one anchored story. Walk the timeline, meet the people, " +
-      "visit the places, touch the archaeology, and explore all 66 books — every post pointing back to " +
-      "Jesus Christ, the same yesterday and today and forever (Hebrews 13:8).</p>" +
-      '<div class="stats">' +
-      '<div class="stat"><strong>' + COLLECTIONS.length + "</strong><span>collections</span></div>" +
-      '<div class="stat"><strong>' + total + "</strong><span>entries</span></div>" +
-      '<div class="stat"><strong>' + (data.books || []).length + "</strong><span>books of the Bible</span></div>" +
-      '<div class="stat"><strong>' + quizGroups().length + "</strong><span>quizzes</span></div></div>" +
-      '<div class="verse-band">&ldquo;We have this hope as an anchor for the soul, firm and secure. ' +
-      "It enters the inner sanctuary behind the curtain, where our forerunner, Jesus, has entered on our behalf.&rdquo; " +
-      "&mdash; Hebrews 6:19&ndash;20</div>";
-    if (latest) {
-      html += "<h3>Latest from the blog</h3>" + postRowCard(latest, "Latest blog post");
-    }
-    html += "<h3>Explore the collections</h3><div class='card-grid home-grid'>" +
-      COLLECTIONS.map(collectionCard).join("") + "</div>";
-    html += "<h3>More to explore</h3><p class='page-intro'>Pages beyond the collections — readers, tools, and ways to support the ministry.</p>" +
-      "<p>" + [["#/bible", "Bible"], ["#/blog", "Blog"], ["#/art", "Art Gallery"],
-      ["#/storybook", "Storybook Reader"], ["#/genealogy", "Biblical Genealogies"],
-      ["#/lookup", "Manuscript Lookup"], ["#/store", "Store"], ["#/give", "Give"],
-      ["#/connect", "Connect"]].map(function (l) { return "<a class='btn' href='" + l[0] + "'>" + l[1] + "</a>"; }).join(" ") + "</p>";
-    app.innerHTML = html;
-    /* Animated home: stat numbers count up on load (instant under
-       reduced-motion, where the final values simply stay put). */
-    (function () {
-      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (reduce) return;
-      app.querySelectorAll(".stat strong").forEach(function (el) {
-        var target = parseInt(el.textContent.replace(/[^0-9]/g, ""), 10);
-        if (isNaN(target)) return;
-        var start = null, dur = 1200;
-        el.textContent = "0";
-        (function step(ts) {
-          if (!start) start = ts;
-          var p = Math.min((ts - start) / dur, 1);
-          el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
-          if (p < 1) requestAnimationFrame(step);
-        })(performance.now());
+  /* ---------- homepage (v215 redesign) ----------
+     Sections render in the brief's order. Static sections render at
+     once; data sections fill through homeLazy() as they scroll into
+     view, so a homepage visit never loads the whole database — in
+     particular wordstudies (14,197 rows) is fetched only if the
+     visitor navigates to a route that needs it. Every link below is a
+     real route; every connection comes from the featured person's own
+     entry or a reverse lookup over the live collections. */
+  function updateHomeStats() {
+    var el = document.getElementById("homeStats");
+    if (!el) return;
+    function n(collId) { var rows = data[collId]; return rows ? String(rows.length) : "…"; }
+    el.innerHTML =
+      '<div class="stat"><strong>' + COLLECTIONS.length + "</strong><span>Collections</span></div>" +
+      '<div class="stat"><strong>' + n("books") + "</strong><span>Books of the Bible</span></div>" +
+      '<div class="stat"><strong>' + (data.quizzes ? String(quizGroups().length) : "…") + "</strong><span>Quizzes</span></div>" +
+      '<div class="stat"><strong>' + n("timeline") + "</strong><span>Timeline Events</span></div>";
+  }
+  function homeLazy(containerId, ids, fill) {
+    var el = document.getElementById(containerId);
+    if (!el) return;
+    function run() {
+      ensureCollections(ids).then(function () {
+        if (!document.body.contains(el)) return;
+        fill(el);
+        updateHomeStats();
+      }).catch(function () {
+        if (document.body.contains(el)) el.innerHTML = '<p class="empty">This section could not be loaded right now.</p>';
       });
-    })();
+    }
+    if (ids.every(function (id) { return !!data[id]; })) { fill(el); updateHomeStats(); return; }
+    if (window.IntersectionObserver) {
+      var obs = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { obs.disconnect(); run(); }
+      }, { rootMargin: "200px" });
+      obs.observe(el);
+    } else { run(); }
+  }
+  function fillHomeConnect(el) {
+    var people = data.people || [];
+    var person = null, pIdx = -1;
+    people.forEach(function (r, i) { if (val(r, "Name") === "King David") { person = r; pIdx = i; } });
+    if (!person) { el.innerHTML = ""; return; }
+    function chip(collId, token) {
+      var by = linkIndexByColl[collId] || {};
+      var hit = by[token] || by[token.toLowerCase()];
+      if (!hit) return "";
+      return '<a class="conn-chip" href="#/' + hit.coll + "/" + hit.idx + '">' + esc(hit.display) + "</a>";
+    }
+    function chipList(collId, tokens) { return tokens.map(function (t) { return chip(collId, t); }).filter(Boolean).join(""); }
+    function group(title, inner) { return inner ? '<div class="home-connect-group"><h4>' + title + '</h4><div class="home-connect-chips">' + inner + "</div></div>" : ""; }
+    function reverse(collId, field) {
+      var out = [];
+      (data[collId] || []).forEach(function (r, i) {
+        if (splitList(val(r, field)).indexOf("King David") !== -1) out.push({ row: r, idx: i });
+      });
+      return out;
+    }
+    var topics = reverse("topics", "RelatedPeople");
+    topics.sort(function (a, b) {
+      var ad = val(a.row, "Topic").indexOf("David") !== -1 ? 0 : 1;
+      var bd = val(b.row, "Topic").indexOf("David") !== -1 ? 0 : 1;
+      return ad - bd || a.idx - b.idx;
+    });
+    var topicsShown = topics.slice(0, 8);
+    var topicsChips = topicsShown.map(function (it) {
+      return '<a class="conn-chip" href="#/topics/' + it.idx + '">' + esc(val(it.row, "Topic")) + "</a>";
+    }).join("") + (topics.length > 8 ? '<a class="conn-chip gold" href="#/topics">+' + (topics.length - 8) + " more topics &rarr;</a>" : "");
+    el.innerHTML = '<div class="home-connect-person"><h3>' + esc(val(person, "Name")) + '</h3>' +
+      '<p class="home-connect-role">' + esc(val(person, "Role")) + '</p>' +
+      '<p>' + esc(val(person, "Summary")) + '</p>' +
+      '<p><a class="btn" href="#/people/' + pIdx + '">View King David&rsquo;s full profile &rarr;</a></p></div>' +
+      group("Biblical passages", linkifyScriptureRefs(val(person, "KeyVerses"))) +
+      group("Events in his story", chipList("stories", splitList(val(person, "RelatedEvents")))) +
+      group("Places", chipList("places", splitList(val(person, "Places")))) +
+      group("Related people", chipList("people", splitList(val(person, "RelatedPeople")))) +
+      group("Books of the Bible", chipList("books", splitList(val(person, "RelatedBooks")))) +
+      group("Archaeological discoveries", reverse("finds", "RelatedPeople").map(function (it) {
+        return '<a class="conn-chip" href="#/finds/' + it.idx + '">' + esc(val(it.row, "FindName")) + "</a>";
+      }).join("")) +
+      group("Theological topics", topicsChips) +
+      group("Apologetics", reverse("apologetics", "RelatedPeople").map(function (it) {
+        return '<a class="conn-chip" href="#/apologetics/' + it.idx + '">' + esc(val(it.row, "Argument")) + "</a>";
+      }).join(""));
+  }
+  function fillHomeTimeline(el) {
+    var rows = data.timeline || [];
+    var wanted = ["Creation", "Call of Abraham", "David Becomes King", "Birth of Jesus", "Crucifixion of Jesus", "Resurrection of Jesus"];
+    var picked = [];
+    wanted.forEach(function (title) {
+      for (var i = 0; i < rows.length; i++) if (val(rows[i], "Title") === title) { picked.push({ row: rows[i], idx: i }); break; }
+    });
+    if (!picked.length) { el.innerHTML = ""; return; }
+    el.innerHTML = '<div class="home-tl-strip">' + picked.map(function (it) {
+      return '<a class="home-tl-card" href="#/timeline/' + it.idx + '"><p class="tl-date">' + esc(val(it.row, "DateApprox")) + '</p><h3>' + esc(val(it.row, "Title")) + '</h3><p class="tl-era-note">' + esc(val(it.row, "Era")) + "</p></a>";
+    }).join("") + '</div><p><a class="btn" href="#/timeline">Explore the full timeline &rarr;</a></p>';
+  }
+  function fillHomeLearn(el) {
+    var qs = data.quizzes || [];
+    var sample = null;
+    for (var i = 0; i < qs.length; i++) {
+      if (val(qs[i], "Quiz") === "David and Bathsheba Story Quiz" && !isEmpty(val(qs[i], "Explanation")) && !isEmpty(val(qs[i], "ScriptureReference"))) { sample = qs[i]; break; }
+    }
+    if (!sample) {
+      for (i = 0; i < qs.length; i++) {
+        if (!isEmpty(val(qs[i], "Explanation")) && !isEmpty(val(qs[i], "ScriptureReference"))) { sample = qs[i]; break; }
+      }
+    }
+    var courseCard = "";
+    var courses = data.courses || [];
+    if (courses.length) courseCard = cardFor(coll("courses"), courses[0], 0);
+    var findCard = "";
+    var finds = data.finds || [];
+    var telDan = null, telDanIdx = -1;
+    finds.forEach(function (r, j) { if (val(r, "FindName") === "Tel Dan Stele (House of David)") { telDan = r; telDanIdx = j; } });
+    if (telDan) findCard = cardFor(coll("finds"), telDan, telDanIdx);
+    else if (finds.length) findCard = cardFor(coll("finds"), finds[0], 0);
+    var qHtml = "";
+    if (sample) {
+      qHtml = '<div class="question-card"><h3>Sample question</h3>' +
+        '<p>' + esc(val(sample, "Question")) + '</p>' +
+        '<p class="meta">From the quiz &ldquo;' + esc(val(sample, "Quiz")) + '&rdquo;</p>' +
+        '<div class="options">' + ["A", "B", "C", "D"].map(function (letter) {
+          return '<button class="option-btn" data-letter="' + letter + '"><strong>' + letter + ".</strong> " + esc(val(sample, "Option" + letter)) + "</button>";
+        }).join("") + "</div>" +
+        '<div class="explanation" hidden></div></div>';
+    }
+    el.innerHTML = '<div class="home-learn-grid"><div>' + qHtml + '</div><div class="home-learn-links">' +
+      courseCard + findCard +
+      '<p><a class="btn" href="#/quizzes">Browse all quizzes &rarr;</a> <a class="btn-secondary" href="#/courses">Browse all courses &rarr;</a></p>' +
+      '</div></div>';
+    if (sample) {
+      var right = val(sample, "CorrectAnswer");
+      var card = el.querySelector(".question-card");
+      var expl = card.querySelector(".explanation");
+      card.querySelectorAll(".option-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          card.querySelectorAll(".option-btn").forEach(function (b) { b.disabled = true; });
+          var picked = btn.getAttribute("data-letter");
+          if (picked === right) btn.classList.add("correct");
+          else {
+            btn.classList.add("wrong");
+            card.querySelector('[data-letter="' + right + '"]').classList.add("correct");
+          }
+          expl.innerHTML = (picked === right ? "<strong>Correct!</strong> " : "<strong>Not quite.</strong> The answer is " + esc(right) + ". ") +
+            esc(val(sample, "Explanation")) + " " + linkifyScriptureRefs(val(sample, "ScriptureReference")) +
+            ' <a href="#/quizzes/play/' + encodeURIComponent(val(sample, "Quiz")) + '">Take the full quiz &rarr;</a>';
+          expl.hidden = false;
+        });
+      });
+    }
+  }
+  /* Featured Scripture rotator: KJV text from the on-site Bible data
+     only, one verse at a time, fetched on demand. No auto-advance, so
+     reduced-motion readers are never distracted. */
+  var HOME_VERSES = [
+    { book: "Hebrews", ch: 6, v: 19 },
+    { book: "Psalms", ch: 23, v: 1 },
+    { book: "John", ch: 3, v: 16 },
+    { book: "Philippians", ch: 4, v: 13 },
+    { book: "Jeremiah", ch: 29, v: 11 },
+    { book: "Romans", ch: 8, v: 28 }
+  ];
+  var homeVerseCache = {};
+  function homeVerseBook(name) {
+    for (var i = 0; i < BIBLE_BOOKS.length; i++) if (BIBLE_BOOKS[i].name === name) return BIBLE_BOOKS[i];
+    return null;
+  }
+  function renderHomeVerse(section, idx) {
+    var ref = HOME_VERSES[idx];
+    var book = homeVerseBook(ref.book);
+    var box = section.querySelector(".home-verse-text");
+    var cite = section.querySelector(".home-verse-cite");
+    var count = section.querySelector(".home-verse-count");
+    if (!book || !box) return;
+    count.textContent = (idx + 1) + " of " + HOME_VERSES.length;
+    function show(text) {
+      box.textContent = "\u201C" + text + "\u201D";
+      cite.innerHTML = esc(ref.book + " " + ref.ch + ":" + ref.v) + " (KJV) &middot; " +
+        '<a href="#/bible/' + book.slug + "/" + ref.ch + "?v=" + ref.v + '">Read in context &rarr;</a>';
+    }
+    if (homeVerseCache[book.slug]) { show(homeVerseCache[book.slug][String(ref.ch)][String(ref.v)]); return; }
+    box.textContent = "Loading verse…";
+    fetch("content/bible/" + book.slug + ".json?v=" + ASSET_V).then(function (r) {
+      if (!r.ok) throw new Error("book");
+      return r.json();
+    }).then(function (bj) {
+      homeVerseCache[book.slug] = bj.chapters;
+      if (document.body.contains(section)) show(bj.chapters[String(ref.ch)][String(ref.v)]);
+    }).catch(function () { if (document.body.contains(section)) box.textContent = "This verse could not be loaded right now."; });
+  }
+  function viewHome() {
+    var art = TILE_ART;
+    function cardImg(id, alt) { return art[id] ? '<img src="' + art[id] + '" alt="' + esc(alt) + '" loading="lazy">' : ""; }
+    function fourCard(imgId, imgAlt, title, href, desc, links) {
+      return '<div class="home-card">' + cardImg(imgId, imgAlt) + '<div class="home-card-body"><h3><a href="' + href + '">' + title + "</a></h3>" +
+        "<p>" + desc + "</p>" +
+        '<ul class="home-card-links">' + links.map(function (l) { return '<li><a href="' + l[1] + '">' + l[0] + "</a></li>"; }).join("") + "</ul></div></div>";
+    }
+    var html = '<section class="home-hero">' +
+      '<div><h1>HOPE ANCHORED IN CHRIST</h1>' +
+      '<p class="home-hero-tagline">Explore Scripture. Examine the Evidence. Discover the Truth.</p>' +
+      '<p class="home-hero-intro">Explore the Bible through Scripture, history, archaeology, theology, and apologetics. Discover connections between biblical events, people, places, manuscripts, and historical evidence&mdash;all in one place.</p>' +
+      '<form class="home-search" id="homeSearchForm"><label class="sr-only" for="homeSearchInput">Search the site</label>' +
+      '<input id="homeSearchInput" type="search" placeholder="Search the Bible, people, places, topics&hellip;" aria-label="Search the site">' +
+      '<button class="btn" type="submit">Search</button></form>' +
+      '<div class="home-hero-btns"><a class="btn" href="#/bible">Explore the Bible</a><a class="btn-secondary" href="#/apologetics">Examine the Evidence</a></div></div>' +
+      '<figure><img class="home-hero-img" src="assets/banner.jpg" alt="Hope Anchored in Christ &mdash; wildflower meadow with a butterfly and a bee"><figcaption>Artwork by Lorraine Cole</figcaption></figure></section>' +
+      '<section class="home-section"><div class="stats" id="homeStats"></div></section>' +
+      '<section class="home-section"><span class="home-eyebrow">Start Exploring</span><h2>Four Ways In</h2>' +
+      '<div class="home-cards4">' +
+      fourCard("books", "Open Bible books", "Study the Bible", "#/bible", "Open the Bible and study it book by book, theme by theme.", [["Bible reader", "#/bible"], ["All 66 books", "#/books"], ["Scripture studies", "#/studyguides"], ["Biblical themes", "#/topics"], ["Theology", "#/doctrines"], ["Biblical doctrines", "#/doctrines"]]) +
+      fourCard("manuscripts", "Ancient manuscript", "Examine the Evidence", "#/apologetics", "Ask the hard questions and follow the evidence where it leads.", [["Apologetics", "#/apologetics"], ["Biblical archaeology", "#/finds"], ["Ancient manuscripts", "#/manuscripts"], ["Dead Sea Scrolls", "#/manuscripts"], ["Historical evidence", "#/apologetics?f_Category=History"], ["Common objections", "#/objections"]]) +
+      fourCard("timeline", "Biblical timeline", "Explore Biblical History", "#/timeline", "Walk the story from Creation to the Early Church.", [["Interactive timeline", "#/timeline"], ["Biblical people", "#/people"], ["Ancient civilizations", "#/civilizations"], ["Biblical places", "#/places"], ["Biblical atlas", "#/atlas"], ["Historical events", "#/timeline"]]) +
+      fourCard("stories", "Bible story", "Learn &amp; Teach", "#/quizzes", "Test what you have learned and keep growing.", [["Bible quizzes", "#/quizzes"], ["Guided courses", "#/courses"], ["Children's stories", "#/storybook"], ["Educational resources", "#/studyguides"], ["Logical fallacies", "#/fallacies"], ["Teaching materials", "#/studyguides"]]) +
+      "</div></section>" +
+      '<section class="home-section home-connect"><span class="home-eyebrow">Discover How Everything Connects</span><h2>Discover How Everything Connects</h2><p class="home-section-sub">One person, connected to passages, events, places, people, discoveries, topics, and evidence.</p><div id="homeConnectBody"><p class="loading">Loading connections…</p></div></section>' +
+      '<section class="home-section"><span class="home-eyebrow">Journey Through Biblical History</span><h2>Journey Through Biblical History</h2><p class="home-section-sub">A few landmarks from Creation to the Early Church — open any card for the full entry.</p><div id="homeTimelineBody"><p class="loading">Loading timeline…</p></div></section>';
+    if (posts.length) {
+      html += '<section class="home-section"><span class="home-eyebrow">From the Blog</span><h2>Latest from the Blog</h2><p class="home-section-sub">The newest writing on the blog.</p>' +
+        '<div class="post-row-list">' + posts.slice(0, 3).map(function (p) { return postRowCard(p); }).join("") + '</div>' +
+        '<p><a class="btn" href="#/blog">View all posts &rarr;</a></p></section>';
+    } else {
+      html += '<section class="home-section"><span class="home-eyebrow">From the Blog</span><h2>Latest from the Blog</h2>' +
+        '<p><a class="btn" href="#/blog">Visit the blog &rarr;</a></p></section>';
+    }
+    html += '<section class="home-section"><span class="home-eyebrow">Examine the Evidence</span><h2>Examine the Evidence</h2><p class="home-section-sub">Six starting points for examining the Christian faith, from arguments to archaeology.</p>' +
+      '<div class="home-evidence-grid">' +
+      '<a class="home-evidence-card" href="#/apologetics?f_Category=Philosophy"><span class="home-evidence-num">1</span><h3>Arguments for God&rsquo;s Existence</h3><p>Cosmological, moral, and other philosophical arguments for God&rsquo;s existence.</p></a>' +
+      '<a class="home-evidence-card" href="#/objections"><span class="home-evidence-num">2</span><h3>Common Objections to Christianity</h3><p>Objections stated fairly and answered step by step.</p></a>' +
+      '<a class="home-evidence-card" href="#/finds"><span class="home-evidence-num">3</span><h3>Biblical Archaeology</h3><p>Discoveries from the ancient world that illuminate the Bible.</p></a>' +
+      '<a class="home-evidence-card" href="#/manuscripts"><span class="home-evidence-num">4</span><h3>Manuscripts and Textual Evidence</h3><p>The ancient manuscripts behind the Bible we read.</p></a>' +
+      '<a class="home-evidence-card" href="#/fallacies"><span class="home-evidence-num">5</span><h3>Logical Fallacies</h3><p>Learn to spot weak reasoning — in others and in ourselves.</p></a>' +
+      '<a class="home-evidence-card" href="#/apologetics?f_Category=History"><span class="home-evidence-num">6</span><h3>Historical Evidence for Christianity</h3><p>Outside witnesses and historical arguments for the faith.</p></a>' +
+      '</div></section>' +
+      '<section class="home-section"><span class="home-eyebrow">Learn Something New Today</span><h2>Learn Something New Today</h2><p class="home-section-sub">Try a question, then keep going with quizzes and courses.</p><div id="homeLearnBody"><p class="loading">Loading learning activities…</p></div></section>';
+    var artPicks = ["Monarch Butterfly on a Pink Coneflower", "White Egret with a Fish", "Green Lizard on a Blossom Branch", "Hummingbird and Cherry Blossoms", "Watercolor Flowers and Bumblebees", "Firefly on a Pink Flower"];
+    var artItems = [];
+    artPicks.forEach(function (title) {
+      var hit = galleryItems.filter(function (g) { return val(g, "Title") === title; })[0];
+      if (hit) artItems.push(hit);
+    });
+    html += '<section class="home-section home-art"><span class="home-eyebrow">The Beauty of God&rsquo;s Creation</span><h2>The Beauty of God&rsquo;s Creation</h2><p class="home-section-sub">Photography and artwork from the gallery — birds, butterflies, flowers, and the natural world.</p>';
+    if (artItems.length) {
+      html += '<div class="home-art-grid">' + artItems.map(function (g) {
+        return '<figure><img src="' + esc(val(g, "Image")) + '" alt="' + esc(val(g, "Title")) + '" loading="lazy"><figcaption>' + esc(val(g, "Title")) + "</figcaption></figure>";
+      }).join("") + "</div>";
+    }
+    html += '<p><a class="btn" href="#/art">Visit the Art Gallery &rarr;</a> <a class="btn-secondary" href="#/store">Visit the Store</a></p></section>' +
+      '<section class="home-section home-verse" id="homeVerseSection"><span class="home-eyebrow">Featured Scripture</span><h2>Featured Scripture</h2>' +
+      '<blockquote class="home-verse-text">Loading verse…</blockquote>' +
+      '<cite class="home-verse-cite"></cite>' +
+      '<div class="home-verse-nav"><button class="btn-secondary" type="button" id="homeVersePrev">&larr; Previous verse</button><span class="home-verse-count"></span><button class="btn" type="button" id="homeVerseNext">Next verse &rarr;</button></div>' +
+      '<p class="home-verse-note">All passages are quoted from the King James Version (public domain), from the Bible text on this site.</p></section>' +
+      '<section class="home-section"><span class="home-eyebrow">Your Journey Through Scripture Starts Here</span><h2>Your Journey Through Scripture Starts Here</h2><p class="home-section-sub">Guided studies and courses to work through at your own pace.</p>' +
+      '<div class="home-learn-grid"><div class="home-learn-links">' +
+      '<a class="card" href="#/studyguides"><h3>Guided Bible Studies</h3><p class="snippet">Work through a passage step by step, with questions to think and pray over.</p></a>' +
+      '<a class="card" href="#/courses"><h3>Courses</h3><p class="snippet">Multi-week guided paths through the Bible&rsquo;s big themes.</p></a></div>' +
+      '<div><div class="home-coming"><strong>Coming Soon</strong><span class="soon-badge">Planned Features</span><p>Saved collections, notebooks, and progress tracking are planned features — they are not available yet, and there is no account or membership to sign up for.</p></div></div></div></section>' +
+      '<section class="home-section home-newsletter"><span class="home-eyebrow">Continue Learning With Us</span><h2>Continue Learning With Us</h2><p>New articles, studies, and resources are added to the site regularly — bookmark this page and come back often. There is no newsletter signup on this page.</p></section>';
+    app.innerHTML = html;
+    var hs = document.getElementById("homeSearchForm");
+    if (hs) hs.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var q = document.getElementById("homeSearchInput").value.trim();
+      if (q) location.hash = "#/search?q=" + encodeURIComponent(q);
+    });
+    homeLazy("homeConnectBody", ["people", "stories", "places", "finds", "topics", "apologetics", "books"], fillHomeConnect);
+    homeLazy("homeTimelineBody", ["timeline"], fillHomeTimeline);
+    homeLazy("homeLearnBody", ["quizzes", "courses", "finds"], fillHomeLearn);
+    updateHomeStats();
+    var verseSection = document.getElementById("homeVerseSection");
+    var verseIdx = 0;
+    function showVerse(i) {
+      verseIdx = (i + HOME_VERSES.length) % HOME_VERSES.length;
+      renderHomeVerse(verseSection, verseIdx);
+    }
+    document.getElementById("homeVersePrev").addEventListener("click", function () { showVerse(verseIdx - 1); });
+    document.getElementById("homeVerseNext").addEventListener("click", function () { showVerse(verseIdx + 1); });
+    if (window.IntersectionObserver) {
+      var vObs = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { vObs.disconnect(); showVerse(0); }
+      }, { rootMargin: "200px" });
+      vObs.observe(verseSection);
+    } else { showVerse(0); }
     loadExcerpts();
     window.scrollTo(0, 0);
   }
@@ -5390,12 +5631,43 @@ function genBindInteractive(node) {
   }
 
   /* ---------- router + boot ---------- */
+  /* Which collections a route needs before it may render (v215 lazy
+     loading). [] = core jobs only; "all" = every collection. Search,
+     explore, collection lists/detail pages, and the Bible reader need
+     everything so related links and results stay complete. */
+  function routeCollections(path) {
+    if (path.length === 0) return [];
+    if (path[0] === "quizzes") return ["quizzes"];
+    if (path[0] === "storybook") return ["stories"];
+    if (path[0] === "lookup") return ["manuscripts"];
+    if (path[0] === "genealogy" || path[0] === "atlas" || path[0] === "blog" ||
+        path[0] === "gallery" || path[0] === "art" || path[0] === "store" ||
+        path[0] === "connect" || path[0] === "give" || path[0] === "terms" ||
+        path[0] === "privacy" || path[0] === "faq" || path[0] === "verification") return [];
+    return "all";
+  }
   function render() {
     var raw = (location.hash || "#/").replace(/^#/, "");
     var parts = raw.split("?");
     var path = parts[0].split("/").filter(Boolean);
     var params = new URLSearchParams(parts[1] || "");
     document.body.classList.toggle("is-home", path.length === 0);
+    var need = routeCollections(path);
+    if (need === "all") {
+      if (!allCollectionsReady) {
+        app.innerHTML = '<p class="loading">Loading the collections…</p>';
+        ensureAllCollections().then(function () { render(); }).catch(function (err) {
+          app.innerHTML = '<p class="empty">Could not load site data (' + esc(err.message) + ").</p>";
+        });
+        return;
+      }
+    } else if (need.length && !need.every(function (id) { return !!data[id]; })) {
+      app.innerHTML = '<p class="loading">Loading…</p>';
+      ensureCollections(need).then(function () { render(); }).catch(function (err) {
+        app.innerHTML = '<p class="empty">Could not load site data (' + esc(err.message) + ").</p>";
+      });
+      return;
+    }
     if (path.length === 0) return viewHome();
     if (path[0] === "explore") return viewExplore();
     if (path[0] === "blog") return viewBlog(path[1] ? decodeURIComponent(path[1]) : null, params);
@@ -5468,17 +5740,89 @@ function genBindInteractive(node) {
       }
     });
   }
-  document.getElementById("footerNav").innerHTML =
-    COLLECTIONS.map(function (c) { return '<a href="#/' + c.id + '">' + esc(c.label) + "</a>"; }).join("") +
-    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/art">Art</a><a href="#/genealogy">Biblical Genealogies</a><a href="#/lookup">Manuscript Lookup</a><a href="#/atlas">Atlas</a>';
-
-  app.innerHTML = '<p class="loading">Loading the collections…</p>';
-  var jobs = COLLECTIONS.map(function (c) {
-    return fetch(c.file + "?v=" + ASSET_V).then(function (r) {
-      if (!r.ok) throw new Error(c.file);
-      return r.json();
-    }).then(function (rows) { data[c.id] = rows; });
+  /* Nav dropdowns (v215): click toggles, Escape or an outside click
+     closes; on desktop hover/focus-within also opens (CSS). */
+  document.querySelectorAll(".nav-drop-btn").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var drop = btn.parentNode;
+      var wasOpen = drop.classList.contains("open");
+      document.querySelectorAll(".nav-drop.open").forEach(function (d) {
+        d.classList.remove("open");
+        d.querySelector(".nav-drop-btn").setAttribute("aria-expanded", "false");
+      });
+      if (!wasOpen) { drop.classList.add("open"); btn.setAttribute("aria-expanded", "true"); }
+    });
   });
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest || !e.target.closest(".nav-drop")) {
+      document.querySelectorAll(".nav-drop.open").forEach(function (d) {
+        d.classList.remove("open");
+        d.querySelector(".nav-drop-btn").setAttribute("aria-expanded", "false");
+      });
+    }
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      document.querySelectorAll(".nav-drop.open").forEach(function (d) {
+        d.classList.remove("open");
+        d.querySelector(".nav-drop-btn").setAttribute("aria-expanded", "false");
+      });
+    }
+  });
+  /* Footer columns (v215): every link is a real route. The old flat
+     footer listed every collection plus Blog/Bible/About/Store/
+     Connect/Give/Storybook/Art/Genealogy/Lookup/Atlas; Genealogy and
+     Lookup now live in the More dropdown and on the Explore page. */
+  (function () {
+    var cols = [
+      { h: "Explore", links: [["Study the Bible", "#/bible"], ["Biblical Timeline", "#/timeline"], ["Biblical Atlas", "#/atlas"], ["Archaeology", "#/finds"], ["Apologetics", "#/apologetics"]] },
+      { h: "Learn", links: [["Blog", "#/blog"], ["Courses", "#/courses"], ["Quizzes", "#/quizzes"], ["Children's Resources", "#/storybook"]] },
+      { h: "About", links: [["Our Mission", "#/about"], ["About Hope Anchored in Christ", "#/blog/why-hope-anchored-in-christ"], ["Contact", "#/connect"], ["Source Verification", "#/verification"]] },
+      { h: "Creative", links: [["Art Gallery", "#/art"], ["Shop", "#/store"], ["Support the Ministry", "#/give"]] }
+    ];
+    document.getElementById("footerNav").innerHTML = '<div class="footer-cols">' + cols.map(function (col) {
+      return '<div class="footer-col"><h4>' + col.h + '</h4><ul>' + col.links.map(function (l) {
+        return '<li><a href="' + l[1] + '">' + l[0] + "</a></li>";
+      }).join("") + "</ul></div>";
+    }).join("") + "</div>";
+    var cy = document.getElementById("copyYear");
+    if (cy) cy.textContent = new Date().getFullYear();
+  })();
+
+  app.innerHTML = '<p class="loading">Loading…</p>';
+  /* Lazy loading (v215): the homepage must not load the whole database.
+     Only the small core jobs below run at boot — posts (the blog's own
+     GitHub-contents-API loader with its posts.json fallback), maps,
+     explore page, pet/child stories, gallery, DSS lookup dates,
+     genealogy, atlas, and road paths. Collection data loads on demand:
+     ensureCollections(ids) fetches just the collections a section or
+     route needs, then rebuilds the link index (first-wins, so partial
+     loads are safe). Routes that need everything (search, explore,
+     collection lists and detail pages, the Bible reader) wait for
+     ensureAllCollections() behind the same loading text the old boot
+     showed. A failed core job still surfaces the old error message. */
+  var collectionPromises = {};
+  var allCollectionsReady = false;
+  function ensureCollections(ids) {
+    var pending = [];
+    ids.forEach(function (id) {
+      if (data[id]) return;
+      if (!collectionPromises[id]) {
+        var c = coll(id);
+        collectionPromises[id] = c ? fetch(c.file + "?v=" + ASSET_V).then(function (r) {
+          if (!r.ok) throw new Error(c.file);
+          return r.json();
+        }).then(function (rows) { data[id] = rows; }) : Promise.resolve();
+      }
+      pending.push(collectionPromises[id]);
+    });
+    return Promise.all(pending).then(function () { buildLinkIndex(); });
+  }
+  function ensureAllCollections() {
+    return ensureCollections(COLLECTIONS.map(function (c) { return c.id; })).then(function () { allCollectionsReady = true; });
+  }
+  var jobs = [];
   jobs.push(loadPostsFromGithub().catch(function () {
     return fetch("content/posts.json?v=" + ASSET_V).then(function (r) { return r.json(); });
   }).then(function (p) { posts = p; }));
@@ -5499,7 +5843,6 @@ function genBindInteractive(node) {
     app.innerHTML = '<p class="empty">Could not load site data (' + esc(err.message) + "). " +
       "This site must be served over http(s) — opening index.html directly from disk (file://) blocks the data files.</p>";
   });
-
   /* Static-build hook: a vm harness may define __hopeStatic before this
      script runs; the hook then exposes the people-section helpers for
      the static generator and for validation harnesses. In browsers

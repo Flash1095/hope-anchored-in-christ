@@ -574,3 +574,252 @@ html[data-theme="dark"] .gtn-head { fill: #16213f; }
 html[data-theme="dark"] .gtn-box-center { fill: #2a2140; }
 html[data-theme="dark"] .gtn-head-none { fill: #232a44; }
 html[data-theme="dark"] .gtn-name, html[data-theme="dark"] .gtn-head-name { fill: #eef1f7; }
+
+/* =====================================================================
+   HOMEPAGE REDESIGN (v215) — homepage, nav dropdowns, footer columns,
+   and detail breadcrumbs only. The Lunara theme above is untouched:
+   white cards, navy #1B2A4E headings, rose #e91e63 accent, lavender
+   footer, Playfair Display headings, Source Sans 3 body. New section
+   tints reuse the existing pastel variables. No other page is restyled.
+   ===================================================================== */
+
+/* The shell banner photo is hidden on the homepage only, so the hero
+   below is the page top; the same artwork returns inside the hero. */
+body.is-home .banner { display: none; }
+
+/* Visible keyboard focus for the new interactive elements (and, as a
+   side benefit, everywhere else). */
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--navy); outline-offset: 2px; border-radius: 4px;
+}
+
+/* ---------- nav dropdowns ---------- */
+.nav-drop { position: relative; display: flex; align-items: center; }
+.nav-drop-btn {
+  background: none; border: none; cursor: pointer; color: var(--navy);
+  font-weight: 700; font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.05rem; letter-spacing: 0.01em; padding: 0;
+}
+.nav-drop-btn:hover { color: var(--gold-dark); }
+.nav-drop-menu {
+  display: none; position: absolute; top: calc(100% + 0.5rem); left: 0; z-index: 20;
+  background: #fff; border: 1px solid var(--line); border-radius: 16px; min-width: 230px;
+  box-shadow: 0 8px 22px rgba(27, 42, 78, 0.15); padding: 0.4rem 0;
+}
+.nav-drop-menu a { display: block; padding: 0.55rem 1rem; font-size: 1rem; }
+.nav-drop.open .nav-drop-menu { display: block; }
+@media (min-width: 701px) {
+  .nav-drop:hover .nav-drop-menu, .nav-drop:focus-within .nav-drop-menu { display: block; }
+}
+
+/* ---------- homepage layout ---------- */
+.home-section { margin-top: 3rem; }
+.home-section h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); margin-bottom: 0.3rem; }
+.home-section-sub { color: var(--muted); max-width: 720px; margin-top: 0; font-size: 1.05rem; }
+.home-eyebrow {
+  display: block; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gold-dark); margin-bottom: 0.4rem;
+}
+
+/* Hero */
+.home-hero {
+  display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 2rem; align-items: center;
+  background: linear-gradient(105deg, #fdf2f5 0%, #f3e5f5 55%, #ede7f6 100%);
+  border-radius: 24px; padding: 2.2rem 2.4rem; margin-top: 0.5rem;
+}
+.home-hero h1 { font-size: clamp(2rem, 5.5vw, 3.4rem); line-height: 1.1; margin: 0 0 0.4rem; letter-spacing: 0.02em; }
+.home-hero-tagline { font-family: "Playfair Display", Georgia, serif; font-size: clamp(1.15rem, 2.5vw, 1.5rem); color: var(--navy); margin: 0 0 0.8rem; }
+.home-hero-intro { font-size: 1.05rem; max-width: 620px; }
+.home-hero-img { width: 100%; height: auto; border-radius: 20px; box-shadow: 0 8px 22px rgba(27, 42, 78, 0.15); display: block; }
+.home-hero figcaption { color: var(--muted); font-size: 0.85rem; margin-top: 0.4rem; text-align: center; }
+.home-search { display: flex; gap: 0.5rem; margin: 1.2rem 0 1rem; max-width: 560px; }
+.home-search input {
+  flex: 1; min-width: 0; padding: 0.7rem 1rem; border: 1.5px solid var(--gold);
+  border-radius: 999px; font-size: 1rem; background: #fff; font-family: inherit;
+}
+.home-hero-btns { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.btn-secondary {
+  background: #fff; color: var(--navy); border: 1.5px solid var(--gold);
+  border-radius: 999px; padding: 0.45rem 0.9rem; font-weight: 700; cursor: pointer;
+  text-decoration: none; display: inline-block; font-size: 0.95rem;
+}
+.btn-secondary:hover { background: var(--cream); color: var(--gold-dark); }
+
+/* Four exploration cards */
+.home-cards4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1rem; }
+.home-card {
+  background: #fff; border: 1px solid var(--line); border-radius: 20px; overflow: hidden;
+  text-decoration: none; color: inherit; display: block;
+  box-shadow: 0 2px 10px rgba(27, 42, 78, 0.08);
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+.home-card:hover { box-shadow: 0 8px 22px rgba(27, 42, 78, 0.15); transform: translateY(-3px); }
+.home-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+.home-card-body { padding: 1rem 1.2rem 1.2rem; }
+.home-card-body h3 { margin: 0 0 0.3rem; font-size: 1.2rem; }
+.home-card-body p { margin: 0 0 0.7rem; font-size: 0.95rem; }
+.home-card-links { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.home-card-links a {
+  font-size: 0.85rem; font-weight: 700; color: var(--navy); background: var(--pastel-lilac);
+  border-radius: 999px; padding: 0.15rem 0.7rem; text-decoration: none;
+}
+.home-card-links a:hover { background: var(--pastel-pink); color: var(--gold-dark); }
+
+/* Connect-the-person section */
+.home-connect { background: var(--pastel-mint); border-radius: 24px; padding: 1.6rem 1.8rem; }
+.home-connect-person h3 { margin: 0 0 0.2rem; font-size: 1.4rem; }
+.home-connect-person .home-connect-role { color: var(--gold-dark); font-weight: 700; margin: 0 0 0.5rem; }
+.home-connect-group { margin-top: 1.2rem; }
+.home-connect-group h4 { margin: 0 0 0.4rem; color: var(--navy); font-family: "Playfair Display", Georgia, serif; }
+.home-connect-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.home-connect-chips .conn-chip { margin: 0.1rem 0.25rem 0.1rem 0; }
+
+/* Timeline preview strip */
+.home-tl-strip {
+  display: flex; gap: 1rem; overflow-x: auto; padding: 0.5rem 0.2rem 1rem;
+  scroll-snap-type: x proximity;
+}
+.home-tl-card {
+  flex: 0 0 250px; scroll-snap-align: start; background: #fff; border: 1px solid var(--line);
+  border-radius: 16px; padding: 1rem 1.2rem; text-decoration: none; color: inherit;
+  box-shadow: 0 2px 10px rgba(27, 42, 78, 0.08);
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+.home-tl-card:hover { box-shadow: 0 8px 22px rgba(27, 42, 78, 0.15); transform: translateY(-2px); }
+.home-tl-card .tl-date { margin: 0; }
+.home-tl-card h3 { margin: 0.3rem 0 0.2rem; font-size: 1.1rem; }
+.home-tl-card .tl-era-note { color: var(--muted); font-size: 0.9rem; margin: 0; }
+
+/* Evidence cards: pastel tints + serif numerals, no mismatched art */
+.home-evidence-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; }
+.home-evidence-card {
+  border-radius: 20px; padding: 1.2rem 1.4rem; text-decoration: none; color: inherit;
+  border: 1px solid var(--line); display: block;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+.home-evidence-card:hover { box-shadow: 0 8px 22px rgba(27, 42, 78, 0.15); transform: translateY(-2px); }
+.home-evidence-card:nth-child(6n+1) { background: var(--pastel-lilac); }
+.home-evidence-card:nth-child(6n+2) { background: var(--pastel-pink); }
+.home-evidence-card:nth-child(6n+3) { background: var(--pastel-mint); }
+.home-evidence-card:nth-child(6n+4) { background: var(--pastel-sky); }
+.home-evidence-card:nth-child(6n+5) { background: var(--pastel-butter); }
+.home-evidence-card:nth-child(6n+6) { background: var(--pastel-peach); }
+.home-evidence-num {
+  font-family: "Playfair Display", Georgia, serif; font-size: 2rem; color: var(--gold-dark);
+  line-height: 1; display: block; margin-bottom: 0.4rem;
+}
+.home-evidence-card h3 { margin: 0 0 0.3rem; font-size: 1.15rem; }
+.home-evidence-card p { margin: 0; font-size: 0.95rem; }
+
+/* Learn section */
+.home-learn-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 1rem; margin-top: 1rem; align-items: start; }
+.home-learn-links { display: grid; gap: 1rem; }
+
+/* Art strip */
+.home-art-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; }
+.home-art figure { margin: 0; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: #fff; }
+.home-art img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.home-art figcaption {
+  background: var(--navy); color: #fff; font-family: "Playfair Display", Georgia, serif;
+  font-size: 1rem; padding: 0.55rem 0.8rem;
+}
+
+/* Scripture rotator: her watercolor art, veiled so the text stays readable */
+.home-verse {
+  border-radius: 24px; padding: 2rem 2.2rem; text-align: center;
+  background:
+    linear-gradient(105deg, rgba(253, 242, 245, 0.94) 0%, rgba(243, 229, 245, 0.94) 55%, rgba(237, 231, 246, 0.94) 100%),
+    url("gallery/watercolor-bees.jpg") center / cover;
+  border-left: 6px solid var(--gold);
+}
+.home-verse blockquote { font-family: "Playfair Display", Georgia, serif; font-size: clamp(1.25rem, 3vw, 1.8rem); color: var(--navy); margin: 0 0 0.5rem; line-height: 1.4; }
+.home-verse cite { font-style: normal; font-weight: 700; color: var(--gold-dark); }
+.home-verse-nav { display: flex; gap: 0.6rem; justify-content: center; align-items: center; margin-top: 1rem; }
+.home-verse-nav .btn, .home-verse-nav .btn-secondary { padding: 0.4rem 1rem; }
+.home-verse-count { color: var(--muted); font-weight: 700; }
+
+/* Journey / coming-soon */
+.home-coming {
+  border: 1.5px dashed var(--line); border-radius: 16px; padding: 1rem 1.2rem;
+  background: #fff; color: var(--muted);
+}
+.home-coming strong { color: var(--navy); }
+.soon-badge {
+  display: inline-block; background: var(--pastel-butter); color: var(--navy);
+  border-radius: 999px; padding: 0.1rem 0.7rem; font-size: 0.8rem; font-weight: 700; margin-left: 0.4rem;
+}
+.home-newsletter {
+  background: var(--pastel-lilac); border-radius: 24px; padding: 1.6rem 1.8rem; text-align: center;
+}
+.home-newsletter p { max-width: 640px; margin: 0.4rem auto 0; }
+
+/* Footer columns */
+.footer-cols {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem;
+  max-width: 1100px; margin: 0.8rem auto; text-align: left;
+}
+.footer-col h4 { margin: 0 0 0.5rem; font-size: 1.05rem; }
+.footer-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-col li { margin: 0.3rem 0; }
+.footer-col a { color: var(--gold-dark); text-decoration: none; font-size: 0.95rem; }
+.footer-col a:hover { text-decoration: underline; }
+.footer-copy { font-size: 0.85rem; opacity: 0.8; margin-top: 0.8rem; }
+
+/* Detail breadcrumbs */
+.crumbs { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.4rem; }
+.crumbs a { text-decoration: none; font-weight: 600; }
+.crumbs span[aria-current="page"] { color: var(--navy); font-weight: 700; }
+
+/* Homepage responsive */
+@media (min-width: 701px) and (max-width: 1100px) {
+  .home-cards4 { grid-template-columns: repeat(2, 1fr); }
+  .home-evidence-grid { grid-template-columns: repeat(2, 1fr); }
+  .home-art-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-cols { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px) {
+  .home-hero { grid-template-columns: 1fr; padding: 1.4rem 1.2rem; gap: 1.2rem; }
+  .home-cards4 { grid-template-columns: 1fr; }
+  .home-evidence-grid { grid-template-columns: 1fr; }
+  .home-art-grid { grid-template-columns: 1fr; }
+  .home-learn-grid { grid-template-columns: 1fr; }
+  .footer-cols { grid-template-columns: 1fr; }
+  .home-connect, .home-verse, .home-newsletter { padding: 1.2rem 1rem; }
+  .nav-drop { width: 100%; flex-direction: column; align-items: stretch; }
+  .nav-drop-btn { text-align: left; padding: 0.6rem 1rem; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+  .main-nav.open .nav-drop-menu { position: static; display: none; box-shadow: none; border: none; padding: 0; }
+  .main-nav.open .nav-drop.open .nav-drop-menu { display: block; }
+  .main-nav.open .nav-drop-menu a { padding-left: 2rem; border-bottom: 1px solid var(--line); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-card, .home-tl-card, .home-evidence-card { transition: none; }
+  .home-card:hover, .home-tl-card:hover, .home-evidence-card:hover { transform: none; }
+}
+
+/* Dark view for the new homepage pieces (light mode above is unchanged) */
+html[data-theme="dark"] .home-hero {
+  background: linear-gradient(105deg, #3a1f33 0%, #2a2140 55%, #1d2542 100%);
+}
+html[data-theme="dark"] .home-card, html[data-theme="dark"] .home-tl-card,
+html[data-theme="dark"] .home-coming, html[data-theme="dark"] .home-art figure {
+  background: #16213f;
+}
+html[data-theme="dark"] .home-evidence-card:nth-child(6n+1) { background: #2a2140; }
+html[data-theme="dark"] .home-evidence-card:nth-child(6n+2) { background: #3a1f33; }
+html[data-theme="dark"] .home-evidence-card:nth-child(6n+3) { background: #1d3a2a; }
+html[data-theme="dark"] .home-evidence-card:nth-child(6n+4) { background: #22345a; }
+html[data-theme="dark"] .home-evidence-card:nth-child(6n+5) { background: #3a2f14; }
+html[data-theme="dark"] .home-evidence-card:nth-child(6n+6) { background: #3a2a1c; }
+html[data-theme="dark"] .home-connect { background: #1d3a2a; }
+html[data-theme="dark"] .home-newsletter { background: #2a2140; }
+html[data-theme="dark"] .home-verse {
+  background:
+    linear-gradient(105deg, rgba(58, 31, 51, 0.94) 0%, rgba(42, 33, 64, 0.94) 55%, rgba(29, 37, 66, 0.94) 100%),
+    url("gallery/watercolor-bees.jpg") center / cover;
+}
+html[data-theme="dark"] .home-verse blockquote { color: #eef1f7; }
+html[data-theme="dark"] .home-search input { background: #16213f; color: #edf0f7; }
+html[data-theme="dark"] .btn-secondary { background: #16213f; color: #eef1f7; }
+html[data-theme="dark"] .nav-drop-menu { background: #16213f; }
+html[data-theme="dark"] .nav-drop-btn { color: #eef1f7; }
+html[data-theme="dark"] .crumbs span[aria-current="page"] { color: #eef1f7; }

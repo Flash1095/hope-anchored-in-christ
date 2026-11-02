@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script>try{var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
-<link rel="stylesheet" href="assets/style.css?v=214">
+<link rel="stylesheet" href="assets/style.css?v=215">
 <link rel="icon" type="image/png" href="assets/favicon.png?v=76">
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -29,14 +29,34 @@
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">☰ Menu</button>
     <nav class="main-nav" id="mainNav" aria-label="Main">
       <a href="#/">Home</a>
+      <a href="#/bible">Study the Bible</a>
       <a href="#/explore">Explore</a>
-      <a href="#/bible">Bible</a>
+      <a href="#/apologetics">Apologetics</a>
       <a href="#/blog">Blog</a>
-      <a href="#/about">About</a>
-      <a href="#/art">Art Gallery</a>
-      <a href="#/store">Store</a>
-      <a href="#/connect">Connect</a>
-      <a href="#/give">Give</a>
+      <div class="nav-drop" id="artShopDrop">
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-haspopup="true">Art &amp; Shop &#9662;</button>
+        <div class="nav-drop-menu">
+          <a href="#/art">Art Gallery</a>
+          <a href="#/store">Store</a>
+        </div>
+      </div>
+      <div class="nav-drop" id="moreDrop">
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-haspopup="true">More &#9662;</button>
+        <div class="nav-drop-menu">
+          <a href="#/timeline">Biblical Timeline</a>
+          <a href="#/atlas">Biblical Atlas</a>
+          <a href="#/genealogy">Biblical Genealogies</a>
+          <a href="#/lookup">Manuscript Lookup</a>
+          <a href="#/storybook">Storybook Reader</a>
+          <a href="#/connect">Connect</a>
+          <a href="#/give">Give</a>
+          <a href="#/about">About</a>
+          <a href="#/verification">Source Verification</a>
+          <a href="#/terms">Terms</a>
+          <a href="#/privacy">Privacy</a>
+          <a href="#/faq">FAQ</a>
+        </div>
+      </div>
     </nav>
     <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to dark view">🌙 Dark</button>
     <form class="header-search" id="headerSearch">
@@ -59,13 +79,14 @@
 
 <footer class="site-footer">
   <p><strong>Hope Anchored in Christ</strong> &middot; &ldquo;We have this hope as an anchor for the soul, firm and secure.&rdquo; (Hebrews 6:19)</p>
-  <nav class="footer-nav" id="footerNav" aria-label="Collections"></nav>
-  <nav class="footer-legal" aria-label="Legal and help"><a href="#/verification">Source Verification</a><nav class="footer-legal" aria-label="Legal and help"><a href="#/terms">Terms &amp; Conditions</a><a href="#/privacy">Privacy Policy</a><a href="#/faq">FAQ</a></nav>
+  <nav class="footer-nav" id="footerNav" aria-label="Site sections"></nav>
+  <nav class="footer-legal" aria-label="Legal and help"><a href="#/verification">Source Verification</a><a href="#/terms">Terms &amp; Conditions</a><a href="#/privacy">Privacy Policy</a><a href="#/faq">FAQ</a></nav>
   <p class="footer-note">Built from Scripture, history, and archaeology &middot; Content edited through the site admin</p>
+  <p class="footer-copy">&copy; <span id="copyYear"></span> Hope Anchored in Christ</p>
 </footer>
 
 <noscript><p style="text-align:center;padding:2rem">This site needs JavaScript to browse the collections.</p></noscript>
-<script src="assets/app.js?v=214"></script>
+<script src="assets/app.js?v=215"></script>
 <script>
   if (window.netlifyIdentity) {
     window.netlifyIdentity.init({ APIUrl: 'https://hope-anchored-in-christ.netlify.app/.netlify/identity' });
