@@ -208,7 +208,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "221";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "222";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1980,34 +1980,19 @@
      below is an existing route. The four path steps replace the full
      Explore grid on the homepage (v219); the full grid still lives on
      #/explore, untouched, via the "Browse everything" link — and since
-     v220 it ALSO appears on the homepage as "Browse by step",
-     grouped under the four guided-path steps (NOT the Explore
-     section headings, per her correction). */
+     v220 it ALSO appeared on the homepage grouped under the four
+     guided-path steps (NOT the Explore section headings, per her
+     correction); v222 merged the two into the single journey section
+     below, and the old 11-door path band is gone. */
   function viewHome() {
     var total = COLLECTIONS.reduce(function (sum, c) { return sum + (data[c.id] || []).length; }, 0);
     var latest = posts[0];
-    /* Guided path (v219): four numbered steps replace the full Explore
-       grid on the homepage. Every door is an existing route; the full
-       grid still lives on #/explore, untouched. */
-    var pathSteps = [
-      { num: "1", title: "Start Here", desc: "Open the Bible, walk the timeline, and meet the books in order.",
-        doors: [["#/bible", "Bible reader"], ["#/timeline", "Biblical Timeline"], ["#/books", "Books of the Bible"]] },
-      { num: "2", title: "Go Deeper", desc: "Meet the people, visit the places, and work through guided studies.",
-        doors: [["#/people", "Biblical People"], ["#/places", "Biblical Places"], ["#/studyguides", "Bible Study Guides"]] },
-      { num: "3", title: "Defend", desc: "Ask difficult questions and examine the evidence for the faith.",
-        doors: [["#/apologetics", "Defend your faith"], ["#/objections", "Objections & Answers"]] },
-      { num: "4", title: "Learn and Create", desc: "Test what you have learned, take a guided course, and enjoy the art.",
-        doors: [["#/quizzes", "Quizzes"], ["#/courses", "Courses"], ["#/art", "Art Gallery"]] }
-    ];
-    var pathHtml = pathSteps.map(function (s) {
-      var doors = s.doors.map(function (d) {
-        return "<a class='card retro-door' href='" + d[0] + "'><h3>" + d[1] + "</h3><p class='snippet'>Explore &rarr;</p></a>";
-      }).join("");
-      return "<div class='retro-step'><div class='retro-step-head'><span class='retro-step-num'>" + s.num + "</span>" +
-        "<div><h3 class='retro-step-title'>" + s.title + "</h3><p class='retro-step-desc'>" + s.desc + "</p></div></div>" +
-        "<div class='card-grid retro-doors'>" + doors + "</div></div>";
-    }).join("");
-    /* Browse by step (v220, corrected): every collection on the
+    /* Journey section (v222, merged): the four guided-path steps now
+       carry every collection as tiles — the separate "Browse by step"
+       section is gone, and the old 11-door path band with it. The full
+       grid still lives on #/explore, untouched, via the
+       "Browse everything" button. */
+    /* Journey tiles (v222, merged): every collection on the
        homepage, grouped under the four guided-path steps — NOT under
        the Explore section headings. Tile construction is the same as
        viewExplore (collectionCard tiles, the special places card);
@@ -2075,13 +2060,8 @@
       "<section class='retro-band retro-paper' id='retro-path'>" +
       "<h2 class='retro-display retro-display-dark'>Your journey through Scripture</h2>" +
       "<p class='retro-band-intro'>Four steps, in order — start at the beginning and follow the path as far as you like.</p>" +
-      pathHtml +
-      "<p class='retro-browse-all'>Want it all at once? <a class='btn' href='#/explore'>Browse everything</a></p>" +
-      "</section>" +
-      "<section class='retro-band retro-cream' id='retro-browse'>" +
-      "<h2 class='retro-display retro-display-dark'>Browse by step</h2>" +
-      "<p class='retro-band-intro'>Every collection on the site, grouped under the four steps of the journey.</p>" +
       browseHtml +
+      "<p class='retro-browse-all'><a class='btn' href='#/explore'>Browse everything</a></p>" +
       "</section>" +
       "<section class='retro-band retro-cream' id='retro-about'>" +
       "<h2 class='retro-display retro-display-dark'>About Us</h2>" +
