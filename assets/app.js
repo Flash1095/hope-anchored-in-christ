@@ -5557,12 +5557,14 @@ function genBindInteractive(node) {
   var listenEpoch = 0;
   var listenRates = [1, 1.25, 1.5];
   var audioBar = document.getElementById("audioBar");
+  var audioStatus = document.getElementById("audioStatus");
   var audioPauseBtn = document.getElementById("audioPauseBtn");
   var audioStopBtn = document.getElementById("audioStopBtn");
   var audioSpeedBtn = document.getElementById("audioSpeedBtn");
   function listenSupported() { return !!listenSynth && typeof SpeechSynthesisUtterance !== "undefined"; }
   function showAudioBar() { if (audioBar) audioBar.hidden = false; }
   function hideAudioBar() { if (audioBar) audioBar.hidden = true; }
+  function setAudioStatus(t) { if (audioStatus) audioStatus.textContent = t; }
   function syncAudioButtons() {
     if (audioPauseBtn) {
       audioPauseBtn.textContent = listenPaused ? "▶ Resume" : "⏸ Pause";
@@ -5666,6 +5668,11 @@ function genBindInteractive(node) {
     if (v) { u.voice = v; u.lang = v.lang; }
     else u.lang = "en-US";
     u.rate = listenRate;
+    var started = false;
+    u.onstart = function () {
+      started = true;
+      if (epoch === listenEpoch && listenActive) setAudioStatus("Reading…");
+    };
     u.onend = function () {
       if (epoch !== listenEpoch || !listenActive) return;
       listenIndex++;
@@ -5673,9 +5680,27 @@ function genBindInteractive(node) {
     };
     u.onerror = function () {
       if (epoch !== listenEpoch || !listenActive) return;
-      stopReading();
+      /* Do NOT hide the bar: a silent failure is worse than a visible
+         message. The bar stays with Stop to dismiss it. */
+      listenActive = false;
+      try { listenSynth.cancel(); } catch (e) {}
+      setAudioStatus("Reading couldn't start in this browser.");
     };
-    try { listenSynth.speak(u); } catch (e) { stopReading(); }
+    try { listenSynth.speak(u); } catch (e) {
+      listenActive = false;
+      setAudioStatus("Reading couldn't start in this browser.");
+      return;
+    }
+    /* Watchdog: some browsers (notably voiceless headless ones) accept
+       speak() yet never fire onstart, onend, or onerror, which used to
+       leave the reader stuck with no visible state. If nothing starts
+       within 3 seconds, say so instead of hanging silently. */
+    setTimeout(function () {
+      if (epoch !== listenEpoch || !listenActive || listenPaused || started) return;
+      listenActive = false;
+      try { listenSynth.cancel(); } catch (e) {}
+      setAudioStatus("Reading couldn't start in this browser.");
+    }, 3000);
   }
   function startReading(text) {
     if (!listenSupported()) return;
@@ -5687,6 +5712,7 @@ function genBindInteractive(node) {
     listenPaused = false;
     listenEpoch++;
     showAudioBar();
+    setAudioStatus("Reading…");
     syncAudioButtons();
     speakNext();
   }
