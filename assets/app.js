@@ -208,7 +208,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "228";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "229";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1799,6 +1799,7 @@
       });
     }
     if (c.id === "people") bindPersonSections(idx);
+    mountListenButton(function () { return detailSpeechText(c, row); });
     window.scrollTo(0, 0);
   }
 
@@ -3274,7 +3275,9 @@ function genBindInteractive(node) {
       html += '<p class="storybook-more"><a href="#/stories/' + i + '">Read the full story page &rarr;</a></p>';
     }
     html += '<p class="storybook-more"><a href="#/storybook">Back to the Storybook</a></p>';
-    app.innerHTML = html; window.scrollTo(0, 0);
+    app.innerHTML = html;
+    mountListenButton(function () { return (item.Story || "") + ". " + (isThink ? "Think about it. " : "") + body; });
+    window.scrollTo(0, 0);
   }
   function viewExplore() {
     var html = "<h2>" + esc(explorePage.heading || "Explore") + "</h2><p class='page-intro'>" +
@@ -3369,6 +3372,7 @@ function genBindInteractive(node) {
           (post.scripture ? " &middot; " + linkifyScriptureRefs(post.scripture) : "") + "</p>" + seriesNav(post) +
           (POST_ART[post.slug] ? "<img class='post-art' src='" + esc(POST_ART[post.slug]) + "' alt=''>" : "") +
           renderMarkdown(body) + "</article>";
+        mountListenButton(function () { return post.title + ". " + body; });
         window.scrollTo(0, 0);
       }).catch(function () {
         app.innerHTML = '<p class="empty">That post could not be loaded.</p>';
@@ -5093,6 +5097,15 @@ function genBindInteractive(node) {
       });
       html += "</div>";
       app.innerHTML = html;
+      mountListenButton(function () {
+        var spoken = book.name + " " + chapter + ". ";
+        Object.keys(verses).sort(function (a, b) { return +a - +b; }).forEach(function (n) {
+          var t = verses[n];
+          if (t.indexOf("# ") === 0) t = t.slice(2);
+          spoken += t + " ";
+        });
+        return spoken;
+      });
       app.querySelectorAll(".verse-note").forEach(function (btn) {
         btn.addEventListener("click", function () {
           var vn = +btn.getAttribute("data-v");
@@ -5514,7 +5527,179 @@ function genBindInteractive(node) {
   }
 
   /* ---------- router + boot ---------- */
+  /* ---------- read aloud (Listen, v229) ----------
+     Browser-native speechSynthesis: no audio files, no service, no cost,
+     no account. The Listen button is mounted ONLY on reading pages
+     (blog post detail, Bible chapter, story detail, storybook page,
+     generic entry detail) — never on list, Explore, home, Atlas,
+     Genealogy, Timeline, quiz, Store, Give, or Connect pages, because
+     those views never call mountListenButton. Long text is split into
+     sentence chunks of at most ~200 characters so no browser utterance
+     limit cuts a passage off. Navigating stops reading: render() calls
+     stopReading() on every route change. If speechSynthesis is
+     unavailable, mountListenButton silently mounts nothing. */
+  var listenSynth = (typeof window !== "undefined" && window.speechSynthesis) ? window.speechSynthesis : null;
+  var listenQueue = [];
+  var listenIndex = 0;
+  var listenActive = false;
+  var listenPaused = false;
+  var listenRate = 1;
+  var listenEpoch = 0;
+  var listenRates = [1, 1.25, 1.5];
+  var audioBar = document.getElementById("audioBar");
+  var audioPauseBtn = document.getElementById("audioPauseBtn");
+  var audioStopBtn = document.getElementById("audioStopBtn");
+  var audioSpeedBtn = document.getElementById("audioSpeedBtn");
+  function listenSupported() { return !!listenSynth && typeof SpeechSynthesisUtterance !== "undefined"; }
+  function showAudioBar() { if (audioBar) audioBar.hidden = false; }
+  function hideAudioBar() { if (audioBar) audioBar.hidden = true; }
+  function syncAudioButtons() {
+    if (audioPauseBtn) {
+      audioPauseBtn.textContent = listenPaused ? "▶ Resume" : "⏸ Pause";
+      audioPauseBtn.setAttribute("aria-label", listenPaused ? "Resume reading" : "Pause reading");
+    }
+    if (audioSpeedBtn) audioSpeedBtn.textContent = listenRate + "x";
+  }
+  function speechClean(text) {
+    return String(text)
+      .replace(/<[^>]*>/g, " ")
+      .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+      .replace(/[#*_`>~]/g, "")
+      .replace(/&[a-zA-Z]+;/g, " ")
+      .replace(/\s+/g, " ").trim();
+  }
+  function chunkSpeechText(text) {
+    var clean = speechClean(text);
+    if (!clean) return [];
+    var sentences = [], tail = "", consumed = 0;
+    var re = /[^.!?]+[.!?]+["'”’)\]]*/g, m;
+    while ((m = re.exec(clean)) !== null) sentences.push(m[0]);
+    sentences.forEach(function (s) { consumed += s.length; });
+    tail = clean.slice(consumed).trim();
+    if (tail) sentences.push(tail);
+    if (!sentences.length) sentences = [clean];
+    var chunks = [], cur = "";
+    function push(s) {
+      if (cur && cur.length + 1 + s.length > 200) { chunks.push(cur); cur = s; }
+      else cur = cur ? cur + " " + s : s;
+    }
+    sentences.forEach(function (s) {
+      s = s.trim();
+      if (!s) return;
+      if (s.length > 200) {
+        s.split(/;\s*|,\s*/).forEach(function (part) {
+          part = part.trim();
+          if (part) push(part);
+        });
+      } else push(s);
+    });
+    if (cur) chunks.push(cur);
+    return chunks;
+  }
+  function pickEnglishVoice() {
+    if (!listenSynth || !listenSynth.getVoices) return null;
+    var voices = listenSynth.getVoices() || [], i;
+    for (i = 0; i < voices.length; i++) {
+      if (voices[i].lang && voices[i].lang.toLowerCase().indexOf("en") === 0) return voices[i];
+    }
+    return null;
+  }
+  function stopReading() {
+    listenActive = false;
+    listenPaused = false;
+    if (listenSynth) { try { listenSynth.cancel(); } catch (e) {} }
+    hideAudioBar();
+  }
+  function speakNext() {
+    if (!listenActive || listenPaused) return;
+    if (listenIndex >= listenQueue.length) { stopReading(); return; }
+    var epoch = listenEpoch, u;
+    try { u = new SpeechSynthesisUtterance(listenQueue[listenIndex]); }
+    catch (e) { stopReading(); return; }
+    var v = pickEnglishVoice();
+    if (v) u.voice = v;
+    u.rate = listenRate;
+    u.onend = function () {
+      if (epoch !== listenEpoch || !listenActive) return;
+      listenIndex++;
+      speakNext();
+    };
+    u.onerror = function () {
+      if (epoch !== listenEpoch || !listenActive) return;
+      stopReading();
+    };
+    try { listenSynth.speak(u); } catch (e) { stopReading(); }
+  }
+  function startReading(text) {
+    if (!listenSupported()) return;
+    stopReading();
+    listenQueue = chunkSpeechText(text);
+    if (!listenQueue.length) return;
+    listenIndex = 0;
+    listenActive = true;
+    listenPaused = false;
+    listenEpoch++;
+    showAudioBar();
+    syncAudioButtons();
+    speakNext();
+  }
+  function toggleListenPause() {
+    if (!listenActive || !listenSynth) return;
+    try {
+      if (listenPaused) { listenSynth.resume(); listenPaused = false; }
+      else { listenSynth.pause(); listenPaused = true; }
+    } catch (e) {}
+    syncAudioButtons();
+  }
+  function cycleListenSpeed() {
+    var i = listenRates.indexOf(listenRate);
+    listenRate = listenRates[(i + 1) % listenRates.length];
+    syncAudioButtons();
+    /* Restart the current chunk at the new rate. The epoch guard makes
+       the cancelled utterance's onend/onerror harmless; when paused, the
+       rate simply applies to the following chunks on resume. */
+    if (listenActive && listenSynth && !listenPaused) {
+      listenEpoch++;
+      try { listenSynth.cancel(); } catch (e) {}
+      speakNext();
+    }
+  }
+  if (audioPauseBtn) audioPauseBtn.addEventListener("click", toggleListenPause);
+  if (audioStopBtn) audioStopBtn.addEventListener("click", stopReading);
+  if (audioSpeedBtn) audioSpeedBtn.addEventListener("click", cycleListenSpeed);
+  function mountListenButton(getText) {
+    if (!listenSupported()) return;
+    var h2 = app.querySelector("h2");
+    if (!h2 || !h2.parentNode) return;
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "btn listen-btn";
+    btn.setAttribute("aria-label", "Listen to this page read aloud");
+    btn.textContent = "🔊 Listen";
+    btn.addEventListener("click", function () { startReading(getText()); });
+    h2.parentNode.insertBefore(btn, h2.nextSibling);
+  }
+  function detailSpeechText(c, row) {
+    if (c.id === "stories") {
+      var main = val(row, "Retelling") || val(row, "Summary") || "";
+      var disc = val(row, "Discussion") || "";
+      return [val(row, c.primary), main, disc].filter(Boolean).join(". ");
+    }
+    var parts = [val(row, c.primary)];
+    Object.keys(row).forEach(function (field) {
+      if (SKIP_FIELDS.indexOf(field) !== -1) return;
+      if (VERIF_FIELDS.indexOf(field) !== -1) return;
+      if (STUDY_FIELDS.indexOf(field) !== -1 || field === "StudyIntroduction") return;
+      var v = val(row, field);
+      if (isEmpty(v)) return;
+      if (field === "Group" && v === "No") return;
+      parts.push(label(field) + ": " + v);
+    });
+    return parts.join(". ");
+  }
+
   function render() {
+    stopReading();
     var raw = (location.hash || "#/").replace(/^#/, "");
     var parts = raw.split("?");
     var path = parts[0].split("/").filter(Boolean);
