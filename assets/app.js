@@ -210,7 +210,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "236";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "237";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1143,81 +1143,25 @@
       var s = p.toString();
       history.replaceState(null, "", "#/timeline" + (s ? "?" + s : ""));
     }
-    /* ---------- color-coded timeline visualization (Oct 2026) ----------
-       Era bar (one color per era, clickable), era chips with counts,
-       scrollable dot rows for stories & events, people, and
-       civilizations, and a detail panel. Era selection filters both
-       the dots and the list below. The filter row (civilization,
-       group, person, place) combines with the era selection and
-       filters dots and list together. */
+    /* ---------- timeline visualization REMOVED (Nov 2026, v237) ----------
+       The era bar, era chips, legend, dot rows, and click-a-dot detail
+       panel were removed on the user's order ("remove everything besides
+       the filter"). Era filtering moved into the Filter panel as a select
+       (see filterRowHtml). timelineVizData/timelineVizDetail helpers above
+       are kept: they are exposed via __hopeStatic for the static generator. */
     function eraCount(e) { var n = 0; rows.forEach(function (r) { if (val(r, "Era") === e) n++; }); return n; }
-    function renderViz() {
-      var wrap = document.getElementById("tlViz");
-      if (!wrap) return;
-      var d = timelineVizData(state.era, filtered(), state.civ);
-      var bar = '<div style="display:flex;overflow-x:auto;margin:8px 0">';
-      eras.forEach(function (e) {
-        var active = state.era === e;
-        bar += '<button type="button" data-viz-era="' + esc(e) + '" title="' + esc(e) + '" style="flex:1 0 120px;background:' + (TL_ERA_COLORS[e] || "#999") + ';color:#fff;border:none;padding:10px 4px;cursor:pointer;font-size:12px' + (active ? ';outline:3px solid #1B2A4E;outline-offset:-3px' : '') + '">' + esc(e) + "</button>";
-      });
-      bar += "</div>";
-      var chipsHtml = '<div class="chips"><span class="chip-label">Era:</span>';
-      chipsHtml += '<button class="chip' + (state.era === "" ? " active" : "") + '" data-era="">All time (' + rows.length + ")</button>";
-      eras.forEach(function (e) {
-        chipsHtml += '<button class="chip' + (state.era === e ? " active" : "") + '" data-era="' + esc(e) + '">' + esc(e) + " (" + eraCount(e) + ")</button>";
-      });
-      chipsHtml += "</div>";
-      var legend = '<p style="font-size:13px"><span style="display:inline-block;width:12px;height:12px;background:#1B2A4E;border-radius:50%"></span> Stories &amp; Events &nbsp; ' +
-        '<span style="display:inline-block;width:12px;height:12px;background:#e91e63;border-radius:50%"></span> People &nbsp; ' +
-        '<span style="display:inline-block;width:12px;height:12px;background:#00695c;border-radius:50%"></span> Civilizations &amp; Peoples &nbsp; ' +
-        '<span>Eras: the bar above (one color per era). Click an era to zoom in. Click any dot for details.</span></p>';
-      function dotRow(labelText, items, kind) {
-        var rowHtml = '<div style="display:flex;align-items:center;gap:6px;margin:6px 0"><span style="min-width:130px;font-weight:600;font-size:13px">' + labelText + "</span>";
-        if (!items.length) { rowHtml += '<span class="empty" style="font-size:13px">' + (state.civ || state.group || state.person || state.place ? "None match these filters." : "None in this era.") + '</span>'; }
-        else {
-          rowHtml += '<div style="display:flex;overflow-x:auto;white-space:nowrap;flex:1">';
-          items.forEach(function (it) {
-            var ttl = kind === "story" ? val(it.row, "Title") : it.name;
-            rowHtml += '<button type="button" data-dot="' + kind + '" data-idx="' + it.idx + '" data-coll="' + (it.coll || "") + '" title="' + esc(ttl) + '" aria-label="' + esc(ttl) + '" style="display:inline-block;width:14px;height:14px;border-radius:50%;background:' + TL_DOT_COLORS[kind] + ';border:none;margin:2px;cursor:pointer;flex:0 0 auto"></button>';
-          });
-          rowHtml += "</div>";
-        }
-        return rowHtml + "</div>";
-      }
-      wrap.innerHTML = bar + chipsHtml + legend +
-        dotRow("Stories &amp; Events", d.stories, "story") +
-        dotRow("People", d.people, "person") +
-        dotRow("Civilizations &amp; Peoples", d.civs, "civ");
-      wrap.querySelectorAll("[data-viz-era]").forEach(function (btn) {
-        btn.addEventListener("click", function () { selectEra(btn.getAttribute("data-viz-era")); });
-      });
-      wrap.querySelectorAll("[data-era]").forEach(function (btn) {
-        btn.addEventListener("click", function () { selectEra(btn.getAttribute("data-era")); });
-      });
-      wrap.querySelectorAll("[data-dot]").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          var detail = document.getElementById("tlDetail");
-          if (detail) detail.innerHTML = timelineVizDetail(btn.getAttribute("data-dot"), parseInt(btn.getAttribute("data-idx"), 10), btn.getAttribute("data-coll"));
-        });
-      });
-    }
-    function selectEra(e) {
-      state.era = e;
-      syncUrl(); renderViz(); renderTl();
-    }
-    /* ---------- timeline filter row (Oct 2026, menu-ified v236) ----------
+    /* ---------- timeline filter panel (Oct 2026, menu-ified v236,
+       era select added v237) ----------
        The same Filter button + panel pattern as the generic collection
-       pages: civilization + group dropdowns, person + place search
+       pages: era + civilization + group dropdowns, person + place search
        boxes with native datalist autocomplete, and a Clear all filters
        button, all behind ONE Filter button. Every control combines (AND)
-       with the others and with the era selection, and filters the
-       dots and the list together. The panel is rendered once; later
-       renders only touch #tlViz, #tlDetail, and #tlWrap, so typed
-       values and the panel's open state survive filtering. The era bar
-       and era chips stay in the visualization (renderViz regenerates
-       them on every filter change), NOT in the panel. */
+       with the others and filters the event list. The panel is rendered
+       once; later renders only touch #tlWrap, so typed values and the
+       panel's open state survive filtering. */
     function activeTlFilterCount() {
       var n = 0;
+      if (state.era) n++;
       if (state.civ) n++;
       if (state.group) n++;
       if (state.person) n++;
@@ -1235,6 +1179,7 @@
     }
     function filterStatusText() {
       var parts = [];
+      if (state.era) parts.push("Events in " + state.era);
       if (state.civ) parts.push("Events connected to " + state.civ);
       if (state.group) parts.push("Events featuring members of " + state.group);
       if (state.person && peopleNames[state.person]) parts.push("Events featuring " + state.person);
@@ -1245,16 +1190,19 @@
       var el = document.getElementById("tlFilterStatus");
       if (el) el.textContent = filterStatusText();
     }
-    function applyFilters() { syncUrl(); renderViz(); renderTl(); updateFilterStatus(); }
+    function applyFilters() { syncUrl(); renderTl(); updateFilterStatus(); }
     function clearAll() {
       state.era = ""; state.civ = ""; state.group = ""; state.person = ""; state.place = ""; state.q = "";
-      ["tlSearch", "tlCiv", "tlGroup", "tlPerson", "tlPlace"].forEach(function (id) {
+      ["tlSearch", "tlEra", "tlCiv", "tlGroup", "tlPerson", "tlPlace"].forEach(function (id) {
         var el = document.getElementById(id);
         if (el) el.value = "";
       });
-      syncUrl(); renderViz(); renderTl(); updateFilterStatus();
+      syncUrl(); renderTl(); updateFilterStatus();
     }
     function filterRowHtml() {
+      var eraOpts = '<option value="">All time (' + rows.length + ")</option>" + eras.map(function (e) {
+        return '<option value="' + esc(e) + '"' + (state.era === e ? " selected" : "") + ">" + esc(e) + " (" + eraCount(e) + ")</option>";
+      }).join("");
       var civOpts = '<option value="">All civilizations</option>' + Object.keys(civNames).sort().map(function (n) {
         return '<option value="' + esc(n) + '"' + (state.civ === n ? " selected" : "") + ">" + esc(n) + "</option>";
       }).join("");
@@ -1267,6 +1215,7 @@
       return '<div class="filter-menu"><button class="btn" id="tlFilterMenuBtn" type="button" ' +
         'aria-expanded="false" aria-controls="tlFilterPanel">Filter' + (fc ? " (" + fc + ")" : "") + "</button>" +
         '<div class="filter-panel" id="tlFilterPanel">' +
+        '<label class="filter-field"><span>Era</span><select id="tlEra">' + eraOpts + "</select></label>" +
         '<label class="filter-field"><span>Civilization</span><select id="tlCiv">' + civOpts + "</select></label>" +
         '<label class="filter-field"><span>People group</span><select id="tlGroup">' + groupOpts + "</select></label>" +
         '<label class="filter-field"><span>Person</span><input type="search" id="tlPerson" list="tlPersonList" placeholder="Search people…" value="' + esc(state.person) + '"><datalist id="tlPersonList">' + personOpts + "</datalist></label>" +
@@ -1275,16 +1224,14 @@
         '<p><button type="button" class="btn" id="tlClearFilters">Clear all filters</button></p>' +
         '<p id="tlFilterStatus">' + esc(filterStatusText()) + "</p></div></div>";
     }
-    var html = "<h2>Biblical Timeline</h2><p class='page-intro'>The whole story, era by era, from Creation to the Early Church — " +
-      "with the people, places, events, and discoveries connected at every step. &middot; " + rows.length + " entries</p>";
+    var html = "<h2>Biblical Timeline</h2>";
     html += filterRowHtml();
-    html += '<div id="tlViz"></div><div id="tlDetail"></div>';
     html += '<div class="controls"><input type="search" id="tlSearch" placeholder="Search the timeline…" value="' + esc(state.q) + '"></div><div id="tlWrap"></div>';
     app.innerHTML = html;
-    renderViz();
     renderTl();
     updateFilterStatus();
     document.getElementById("tlSearch").addEventListener("input", function (e) { state.q = e.target.value; syncUrl(); renderTl(); });
+    document.getElementById("tlEra").addEventListener("change", function () { state.era = document.getElementById("tlEra").value; applyFilters(); });
     document.getElementById("tlCiv").addEventListener("change", function () { state.civ = document.getElementById("tlCiv").value; applyFilters(); });
     document.getElementById("tlGroup").addEventListener("change", function () { state.group = document.getElementById("tlGroup").value; applyFilters(); });
     document.getElementById("tlPerson").addEventListener("input", function () { state.person = document.getElementById("tlPerson").value; applyFilters(); });
