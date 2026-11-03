@@ -126,6 +126,20 @@
     "LastReviewed": ""
   },
   {
+    "Principle": "Biblical Theology vs Systematic Theology",
+    "Category": "Term",
+    "Summary": "Biblical theology traces the story as it unfolds: what God revealed at each stage of redemptive history, in the order and terms Scripture itself uses. Systematic theology gathers what the whole canon teaches on a topic — God, humanity, salvation, the church — and arranges it into an ordered, coherent account. Both are legitimate, and both are needed: biblical theology keeps doctrine rooted in the story, while systematic theology keeps the story's claims clear, consistent, and applicable. They are two ways of putting Scripture together, not two rival Bibles.",
+    "HowToApply": "When studying a doctrine, do both moves in order: first trace it through the story (what did this mean for Abraham, for Israel, for the first Christians?), then gather the whole-canon teaching into a summary. Be suspicious of either move done alone: a system built without the story flattens development into timeless abstractions, and a story told without ever drawing conclusions leaves the reader with narrative but no doctrine.",
+    "ScriptureExample": "Luke 24:27 models the biblical-theological move: Jesus explains from Moses and all the Prophets, in sequence, the things concerning himself. Romans models the systematic move: Paul gathers teaching on sin, justification, Israel, and Christian living into a sustained, ordered argument that later readers can summarize topic by topic.",
+    "CommonMistake": "Confusing the two: reading a later systematic category back into an early passage as if the original audience held it, or refusing to systematize at all on the grounds that 'the Bible is a story, not a textbook.' The first anachronizes; the second leaves the church unable to state what it believes.",
+    "Scripture": "Luke 24:27; Romans 1:16-17; Romans 9:1-5",
+    "RelatedTopics": "Scripture; Interpretation",
+    "Slug": "biblical-theology-vs-systematic-theology",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
+  },
+  {
     "Principle": "Book Context",
     "Category": "Context",
     "Summary": "Every passage sits inside a whole book with its own purpose, argument, and themes. Book context asks how a passage functions in that larger flow: what came before it, what it prepares for, and what the author's stated purpose says it is doing.",
@@ -224,6 +238,20 @@
     "LastReviewed": ""
   },
   {
+    "Principle": "Contextualization",
+    "Category": "Principle",
+    "Summary": "Contextualization is the work of bridging an ancient text to a new culture without changing its meaning: expressing the same truth in forms, language, and examples the hearers actually understand. It is the step after application — application asks what the text means for me, and contextualization asks how that meaning is faithfully carried into a different time, place, or culture. Done well, it preserves the message while changing the packaging; done badly, it either keeps foreign packaging that nobody understands or alters the message to suit the audience.",
+    "HowToApply": "Separate the timeless truth from its original cultural packaging before you carry it anywhere: what did this command or promise mean in its world, and what is the equivalent faithful expression in mine? Test every bridge in both directions — does it still say what the text said, and does it actually land where the hearers live? Where a practice was culture-bound (greetings, food customs, dress), translate the principle; where the text gives a moral command, do not translate it away.",
+    "ScriptureExample": "1 Corinthians 9:19-23 shows Paul becoming all things to all people — adapting his approach to Jews and Gentiles alike — while refusing to change the gospel itself. Acts 15 shows the church deciding the same question institutionally: Gentile believers were not required to adopt Jewish cultural packaging in order to belong to God's people, because the gospel, not the packaging, is what saves.",
+    "CommonMistake": "Two opposite failures: under-contextualizing, so the message stays locked in ancient forms and sounds foreign, and over-contextualizing, so the message is reshaped until it merely echoes the audience's own values. Faithful contextualization changes the form, never the truth.",
+    "Scripture": "1 Corinthians 9:19-23; Acts 15:1-29",
+    "RelatedTopics": "Church; Discipleship",
+    "Slug": "contextualization",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
+  },
+  {
     "Principle": "Covenant Lawsuit",
     "Category": "Genre",
     "Summary": "The covenant lawsuit (Hebrew rib) is a prophetic form modeled on an ancient treaty dispute: God summons his people, calls heaven and earth as witnesses, lays out the covenant breach, and announces judgment — often with an offer of restoration. It is a courtroom speech, not a poem about feelings.",
@@ -289,6 +317,20 @@
     "Scripture": "Daniel 9:24-27; Romans 11:25-27; Ephesians 3:1-6",
     "RelatedTopics": "Covenant; Second Coming",
     "Slug": "dispensational-reading",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
+  },
+  {
+    "Principle": "Dual Authorship",
+    "Category": "Principle",
+    "Summary": "Dual authorship is the conviction that Scripture has two authors at once: God, who breathed it out, and the human writers, who wrote as real people in real times with real vocabularies, styles, and purposes. Neither side cancels the other. The divine authorship is why the text carries God's authority and a unity across centuries; the human authorship is why grammar, history, culture, and genre are legitimate and necessary tools for understanding it.",
+    "HowToApply": "Read every passage with both authorships in view: ask what the human writer was saying to the original audience through words, genre, and history, and ask how that fits the whole counsel of God across the canon. If an interpretation honors the human writer's intent but contradicts the rest of Scripture, or honors a theological system but flattens what the writer actually wrote, something has gone wrong on one side of the pair.",
+    "ScriptureExample": "2 Timothy 3:16 states that all Scripture is God-breathed, while 2 Peter 1:21 adds that men spoke from God as they were carried along by the Holy Spirit — divine origin through human agency. Luke 1:1-4 shows the human side plainly: Luke investigated eyewitness accounts and wrote an orderly account, using ordinary historical method in service of a true report.",
+    "CommonMistake": "Collapsing to one side: treating the Bible as if it dropped from heaven without human authors (so genre, culture, and wording stop mattering), or treating it as merely human literature (so its divine authority and unity disappear). Sound interpretation holds both together.",
+    "Scripture": "2 Timothy 3:16-17; 2 Peter 1:20-21; Luke 1:1-4",
+    "RelatedTopics": "Scripture",
+    "Slug": "dual-authorship",
     "VerificationStatus": "Awaiting Review",
     "Sources": "",
     "LastReviewed": ""
@@ -443,6 +485,20 @@
     "Scripture": "Luke 1:1-4; John 20:30-31; 2 Timothy 3:16",
     "RelatedTopics": "Scripture; Truth",
     "Slug": "historical-critical-method",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
+  },
+  {
+    "Principle": "How the New Testament Uses the Old Testament",
+    "Category": "Principle",
+    "Summary": "New Testament writers draw on the Old Testament in several distinct ways: direct quotation introduced by a formula such as 'it is written,' allusion that echoes older wording without quoting it, and typological fulfillment in which a person, event, or institution foreshadows a later reality. Recognizing which kind is in play matters, because a direct quotation used as proof functions differently from an echo that colors a passage or a type that finds its climax in Christ.",
+    "HowToApply": "When you meet an Old Testament reference in the New Testament, look up the original passage in its own context first, then ask how the New Testament writer is using it: as direct evidence, as an echo, or as a fulfilled pattern. Do not assume every quotation means the Old Testament passage had only the New Testament event in view; many quoted passages had a genuine meaning for their first audience and a fuller significance the New Testament draws out.",
+    "ScriptureExample": "Matthew 1:22-23 quotes Isaiah 7:14 with a fulfillment formula to present Jesus' birth as the climax of God's promised sign. Luke 24:27 shows Jesus himself explaining from Moses and all the Prophets the things concerning himself, modeling a reading of the whole Old Testament as pointing toward him. Romans 4 reasons from Abraham's story in Genesis 15 to argue about faith and righteousness for all peoples.",
+    "CommonMistake": "Treating every New Testament echo as a direct prediction, or the opposite error of treating New Testament use of the Old as arbitrary. Both miss that the apostles read the Old Testament as one unfolding story with real continuity and real development.",
+    "Scripture": "Matthew 1:22-23; Luke 24:27; Romans 4:1-12",
+    "RelatedTopics": "Scripture; Covenant",
+    "Slug": "new-testament-uses-old-testament",
     "VerificationStatus": "Awaiting Review",
     "Sources": "",
     "LastReviewed": ""
@@ -770,6 +826,20 @@
     "LastReviewed": ""
   },
   {
+    "Principle": "Presuppositions",
+    "Category": "Term",
+    "Summary": "Presuppositions are the beliefs and assumptions a reader brings to the text before interpretation begins: about whether God exists and speaks, whether miracles can happen, whether the text is trustworthy, and what counts as evidence. No reader comes to the Bible with a blank mind. Presuppositions do not make interpretation impossible, but unexamined ones quietly decide outcomes in advance — the same passage can yield opposite readings from readers who started from opposite assumptions.",
+    "HowToApply": "Name your own starting points honestly before you study: what do you already assume about this passage, and what would change your mind? When two careful readers disagree, check whether the disagreement is really about the text or about a prior assumption each brought to it. Test your presuppositions against Scripture itself rather than letting them silently filter what Scripture is allowed to say.",
+    "ScriptureExample": "Acts 17:11 commends the Bereans for receiving the message eagerly and examining the Scriptures daily to see whether what Paul said was true — a model of holding teaching accountable to the text rather than to prior loyalty. 1 Thessalonians 5:21 gives the same posture in one line: test everything, hold fast to what is good.",
+    "CommonMistake": "Believing you have no presuppositions while spotting everyone else's, or treating the recognition of presuppositions as permission for relativism — as if every reading were equally valid. The goal is examined assumptions, not abandoned ones.",
+    "Scripture": "Acts 17:11; 1 Thessalonians 5:21",
+    "RelatedTopics": "Truth; Wisdom",
+    "Slug": "presuppositions",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
+  },
+  {
     "Principle": "Progressive Revelation",
     "Category": "Principle",
     "Summary": "Progressive revelation means God disclosed truth gradually across redemptive history: later revelation clarifies, deepens, and fulfills earlier revelation without contradicting it. Earlier texts are true as far as they go, but they do not yet say everything.",
@@ -947,6 +1017,48 @@
     "Scripture": "Acts 17:11; 2 Thessalonians 2:15; 1 Timothy 3:15",
     "RelatedTopics": "Church; Truth",
     "Slug": "church-and-tradition",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
+  },
+  {
+    "Principle": "The Interpreter's Posture",
+    "Category": "Principle",
+    "Summary": "The interpreter's posture is the character a reader brings to the text: humility about one's own understanding, prayer for light, patience with difficulty, and a willingness to read in community rather than alone. Technique matters, but technique in the hands of a hasty, proud, or isolated reader still produces hasty, proud, isolated readings. The posture does not replace study — it is what keeps study honest, because it admits that the reader, not only the text, is part of every interpretation.",
+    "HowToApply": "Slow down on passages you are sure about, and slower still on passages you want to use against someone. Pray before you study and expect to be corrected by what you read, not merely confirmed. Check your reading with other believers, living and dead — a private interpretation that no faithful reader in any age has seen deserves extra scrutiny. And let reading lead to doing: an interpretation that never reaches obedience is unfinished.",
+    "ScriptureExample": "James 1:19-22 pairs the posture with the practice: be quick to listen and slow to speak, receive the implanted word with meekness, and be doers of the word rather than hearers only. Psalm 119:18 prays the posture in one line — open my eyes, that I may behold wondrous things out of your law — and Acts 2:42 shows it communally: the first believers devoted themselves together to the apostles' teaching.",
+    "CommonMistake": "Treating interpretation as pure technique, so that character drops out of the picture, or treating posture as a substitute for study, so that sincerity excuses sloppy reading. Humility without diligence is sentiment; diligence without humility is pride with footnotes.",
+    "Scripture": "James 1:19-22; Psalm 119:18; Acts 2:42",
+    "RelatedTopics": "Prayer; Humility",
+    "Slug": "interpreters-posture",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
+  },
+  {
+    "Principle": "The Rule of Faith",
+    "Category": "Principle",
+    "Summary": "The rule of faith is the early church's summary of apostolic teaching — creation by God, the incarnation, death, and resurrection of Christ, and the hope of new life — used as a guardrail for interpreting Scripture. Writers of the second and third centuries appealed to it when rival readings twisted passages: an interpretation that contradicted the church's received summary of the gospel was judged to have gone wrong, however clever its handling of individual verses. Christians differ on how much authority to give this summary today: some traditions treat it as a binding guide alongside Scripture, while others treat it as a helpful summary that must itself be tested by Scripture.",
+    "HowToApply": "Use the core summary of the gospel as a sanity check on novel readings: if your interpretation of a difficult passage overturns the plain teaching of the whole canon about who God is and what Christ has done, the interpretation is the problem, not the summary. At the same time, do not let any summary replace the text — the rule of faith guards interpretation, it does not substitute for reading Scripture itself.",
+    "ScriptureExample": "Jude 3 urges contending for the faith that was once for all delivered to the saints, pointing to a received body of teaching that predates later disputes. 2 Timothy 1:13 tells Timothy to follow the pattern of sound words he heard, and 1 Corinthians 15:3-5 preserves one of the earliest summaries itself: Christ died for sins, was buried, and was raised on the third day according to the Scriptures.",
+    "CommonMistake": "Either ignoring the rule entirely, so that any inventive reading counts as valid, or elevating a later creed or tradition above Scripture so that the text is never allowed to correct it. Both errors abandon the balance the early church itself practiced.",
+    "Scripture": "Jude 3; 2 Timothy 1:13; 1 Corinthians 15:3-5",
+    "RelatedTopics": "Church; Tradition",
+    "Slug": "rule-of-faith",
+    "VerificationStatus": "Awaiting Review",
+    "Sources": "",
+    "LastReviewed": ""
+  },
+  {
+    "Principle": "Translation Philosophy",
+    "Category": "Principle",
+    "Summary": "Translation philosophy is the set of decisions a Bible translation makes about how closely to follow the original wording versus how freely to restate the meaning. At one end are formal-equivalence translations, which stay as close as possible to the words and structures of Hebrew, Aramaic, and Greek; at the other are dynamic- or functional-equivalence translations, which prioritize expressing the same meaning in natural, modern language. Most translations sit somewhere between the two poles, and no translation is purely one or the other.",
+    "HowToApply": "When a passage puzzles you, compare a more word-for-word translation with a more thought-for-thought one: agreement between them usually means the meaning is secure, while differences flag a place where the original is ambiguous or idiomatic. Remember that every translation is already an interpretation at the points where the original languages do not map neatly onto English, so lean on the original-language tools in Word Studies for key terms rather than building doctrine on a single English wording.",
+    "ScriptureExample": "Nehemiah 8:8 describes the Levites reading from the Law of God, making it clear and giving the sense so the people could understand — translation as faithful mediation, not mere word-swapping. A modern example: a formal translation keeps Paul's long, layered sentences intact, while a dynamic one breaks them into shorter sentences; both are translating the same Greek, but they make different trade-offs between precision and readability.",
+    "CommonMistake": "Assuming your preferred translation is the original, or dismissing a translation from the other end of the spectrum as unfaithful. The mistake is treating translation philosophy as a loyalty test instead of asking what each approach gains and loses.",
+    "Scripture": "Nehemiah 8:8; 2 Timothy 3:16-17",
+    "RelatedTopics": "Scripture; Translation",
+    "Slug": "translation-philosophy",
     "VerificationStatus": "Awaiting Review",
     "Sources": "",
     "LastReviewed": ""
