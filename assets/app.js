@@ -210,7 +210,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "232";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "233";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -5619,88 +5619,76 @@ function genBindInteractive(node) {
      non-English voice is never returned, so the caller leaves the
      utterance voice unset (browser default) rather than assigning a
      foreign voice to English text. */
-  function pickBestVoiceFrom(voices) {
-    var i, v, lang, name, isUSGB, natural;
-    var tier1 = null, tier1other = null, tier2 = null, tier3 = null, tier4 = null;
-    for (i = 0; i < voices.length; i++) {
-      v = voices[i];
+  /* Voice gender: browsers do not label a voice male or female, so gender
+     is read from the voice's name tokens (whole words only, so
+     "Samantha" never matches "man"). Google's US English voice is
+     female-sounding and is treated as female. Names with no gender clue
+     return null and fall back to the best US voice below. */
+  var FEMALE_VOICE_TOKENS = ["female", "woman", "samantha", "aria", "jenny", "michelle", "emma", "olivia", "ava", "allison", "joana", "zira", "susan", "kate", "serena", "veena", "tessa", "fiona", "moira", "sara", "sarah", "karen", "melina", "luciana", "victoria", "amara", "natasha"];
+  var MALE_VOICE_TOKENS = ["male", "man", "alex", "guy", "davis", "ryan", "daniel", "fred", "aaron", "matthew", "james", "david", "mark", "paul", "thomas", "rishi", "jorge", "diego", "john", "robert", "michael", "christopher", "george", "henry", "tom", "ben", "adam", "luke", "owen", "ethan", "jacob", "joseph"];
+  function voiceGender(v) {
+    var tokens = String(v.name || "").toLowerCase().split(/[^a-z]+/).filter(Boolean);
+    var i;
+    for (i = 0; i < tokens.length; i++) {
+      if (FEMALE_VOICE_TOKENS.indexOf(tokens[i]) !== -1) return "female";
+    }
+    for (i = 0; i < tokens.length; i++) {
+      if (MALE_VOICE_TOKENS.indexOf(tokens[i]) !== -1) return "male";
+    }
+    if (/google\s+us\s+english/.test(String(v.name || "").toLowerCase())) return "female";
+    return null;
+  }
+  /* Pick one American English voice of the requested gender, most
+     book-like first: a Natural/Neural voice, then Google US English,
+     then any US voice. If no voice of that gender is found, fall back
+     to the best US voice so reading still works. Never a non-US voice:
+     when no US voice exists at all, the caller leaves the voice unset
+     and sets lang en-US on the utterance. */
+  function pickUSVoice(gender) {
+    if (!listenSynth || !listenSynth.getVoices) return null;
+    var list = [], us = [], matched = [], pool = [], i, v, lang, name, natural;
+    try { list = listenSynth.getVoices() || []; } catch (e) { return null; }
+    for (i = 0; i < list.length; i++) {
+      v = list[i];
       lang = String(v.lang || "").toLowerCase().replace("_", "-");
-      if (lang.indexOf("en") !== 0) continue;
-      isUSGB = (lang === "en-us" || lang === "en-gb");
+      if (lang === "en-us") us.push(v);
+    }
+    for (i = 0; i < us.length; i++) {
+      if (voiceGender(us[i]) === gender) matched.push(us[i]);
+    }
+    pool = matched.length ? matched : us;
+    var tier1 = null, tier2 = null, tier3 = null;
+    for (i = 0; i < pool.length; i++) {
+      v = pool[i];
       name = String(v.name || "").toLowerCase();
       natural = /natural|neural|wavenet|premium|enhanced/.test(name);
-      if (natural && isUSGB && !tier1) tier1 = v;
-      else if (natural && !tier1other) tier1other = v;
-      else if (/google\s+(us|uk)\s+english/.test(name) && !tier2) tier2 = v;
-      else if (isUSGB && !tier3) tier3 = v;
-      else if (v.default && !tier4) tier4 = v;
+      if (natural && !tier1) tier1 = v;
+      else if (/google\s+us\s+english/.test(name) && !tier2) tier2 = v;
+      else if (!tier3) tier3 = v;
     }
-    return tier1 || tier1other || tier2 || tier3 || tier4 || null;
+    return tier1 || tier2 || tier3 || null;
   }
   /* Chosen at SPEAK time (called from speakNext for every utterance),
-     so voices that load late are picked up by the next chunk. A voice
-     the reader picked in the dropdown (saved in localStorage) wins over
-     the automatic preference, so she can keep the voice that sounds
-     most like a book being read. */
-  function storedVoiceURI() {
-    try { return localStorage.getItem("listenVoice") || ""; } catch (e) { return ""; }
+     so voices that load late are picked up by the next chunk. The
+     reader's Male/Female choice (saved in localStorage, default
+     female) decides which US voice is picked. */
+  function listenGender() {
+    try {
+      var g = localStorage.getItem("listenVoiceGender") || "";
+      return (g === "male" || g === "female") ? g : "female";
+    } catch (e) { return "female"; }
   }
   function pickBestVoice() {
-    if (!listenSynth || !listenSynth.getVoices) return null;
-    try {
-      var list = listenSynth.getVoices() || [];
-      var saved = storedVoiceURI(), i;
-      if (saved) {
-        for (i = 0; i < list.length; i++) {
-          if (list[i].voiceURI === saved) return list[i];
-        }
-      }
-      return pickBestVoiceFrom(list);
-    } catch (e) { return null; }
+    return pickUSVoice(listenGender());
   }
-  /* Tier for ordering the voice dropdown: most book-like first. */
-  function voiceTier(v) {
-    var lang = String(v.lang || "").toLowerCase().replace("_", "-");
-    var name = String(v.name || "").toLowerCase();
-    var natural = /natural|neural|wavenet|premium|enhanced/.test(name);
-    var isUSGB = (lang === "en-us" || lang === "en-gb");
-    if (natural && isUSGB) return 0;
-    if (natural) return 1;
-    if (/google\s+(us|uk)\s+english/.test(name)) return 2;
-    if (isUSGB) return 3;
-    return 4;
-  }
-  /* Fill the voice dropdown with the device's English voices, most
-     book-like first, and keep the saved (or automatic) choice selected.
-     Called when the bar opens and whenever voices load late. */
+  /* The dropdown holds exactly two options (Female / Male voice), so
+     syncing it just means showing the saved choice. */
   function syncVoiceSelect() {
-    if (!audioVoiceSelect || !listenSynth || !listenSynth.getVoices) return;
-    var list = [];
-    try { list = listenSynth.getVoices() || []; } catch (e) { list = []; }
-    var en = list.filter(function (v) {
-      return String(v.lang || "").toLowerCase().replace("_", "-").indexOf("en") === 0;
-    });
-    en.sort(function (a, b) { return voiceTier(a) - voiceTier(b); });
-    var saved = storedVoiceURI();
-    var best = pickBestVoice();
-    var want = saved || (best ? best.voiceURI : "");
-    var html = "";
-    if (!en.length) {
-      html = "<option value=\"\">Default voice</option>";
-    } else {
-      en.forEach(function (v) {
-        html += "<option value=\"" + esc(v.voiceURI) + "\"" +
-          (v.voiceURI === want ? " selected" : "") + ">" +
-          esc(v.name) + "</option>";
-      });
-    }
-    audioVoiceSelect.innerHTML = html;
-    if (want) audioVoiceSelect.value = want;
+    if (audioVoiceSelect) audioVoiceSelect.value = listenGender();
   }
   /* Prime the voice list: some browsers only populate getVoices() after
      the voiceschanged event fires. Selection still happens per utterance,
-     so this is a warm-up, not the selection point. The dropdown refreshes
-     here too, so late-loaded voices appear in it. */
+     so this is a warm-up, not the selection point. */
   if (listenSynth) {
     try {
       var primeListenVoices = function () {
@@ -5801,7 +5789,7 @@ function genBindInteractive(node) {
   if (audioStopBtn) audioStopBtn.addEventListener("click", stopReading);
   if (audioSpeedBtn) audioSpeedBtn.addEventListener("click", cycleListenSpeed);
   if (audioVoiceSelect) audioVoiceSelect.addEventListener("change", function () {
-    try { localStorage.setItem("listenVoice", audioVoiceSelect.value); } catch (e) {}
+    try { localStorage.setItem("listenVoiceGender", audioVoiceSelect.value); } catch (e) {}
     /* Restart the current chunk at once so she hears the new voice
        immediately instead of waiting for the next chunk or page. */
     if (listenActive && listenSynth && !listenPaused) {
