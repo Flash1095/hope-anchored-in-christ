@@ -210,7 +210,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "233";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "234";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -2095,6 +2095,115 @@
         return "<h3 class='retro-subhead'>" + esc(s.title) + "</h3><div class='card-grid retro-tiles'>" + tiles + "</div>";
       }).join("");
     })();
+    /* Featured this week (v234): one "of the Week" card per Explore
+       tile, rotating weekly. The week index is deterministic — the same
+       for every visitor and stable all week, never random: weeks are
+       counted from a fixed Monday (2026-01-05) in UTC, so timezones
+       cannot split a week. A tile's pick is weekIndex % its length
+       (positive-modulo, so any week index stays in range). Titles and
+       meta lines come only from the entry's own fields; nothing is
+       invented. Quizzes link to that week's quiz group play page,
+       because #/quizzes/<n> routes to quiz play by name, not to a
+       question detail — a numeric row index would not resolve there. */
+    var featuredHtml = (function () {
+      var FEATURED_EPOCH = Date.UTC(2026, 0, 5); // a Monday
+      var weekIndex = Math.floor((Date.now() - FEATURED_EPOCH) / 604800000);
+      function pick(len) { if (!len) return -1; return ((weekIndex % len) + len) % len; }
+      function metaOf(row, fields) {
+        for (var i = 0; i < fields.length; i++) {
+          var v = val(row, fields[i]);
+          if (!isEmpty(v)) {
+            v = splitList(v)[0] || v;
+            return v.length > 60 ? v.slice(0, 60).replace(/\s+\S*$/, "") + "…" : v;
+          }
+        }
+        return "";
+      }
+      function featuredCard(label, href, title, meta) {
+        return '<a class="card" href="' + href + '"><span class="post-row-label">' + esc(label) + "</span><h3>" + esc(title) + "</h3>" +
+          (meta ? '<p class="meta">' + esc(meta) + "</p>" : "") + "</a>";
+      }
+      var FEATURED_LABELS = { timeline: "Timeline Event of the Week", books: "Book of the Week",
+        stories: "Story of the Week", people: "Bible Person of the Week", places: "Place of the Week",
+        finds: "Archaeology Find of the Week", manuscripts: "Manuscript of the Week",
+        civilizations: "Civilization of the Week", peoples: "People Group of the Week",
+        wordstudies: "Word Study of the Week", questions: "Question of the Week",
+        hermeneutics: "Principle of the Week", jewishculture: "Cultural Background of the Week",
+        topics: "Topic of the Week", doctrines: "Doctrine of the Week", prophecies: "Prophecy of the Week",
+        typology: "Foreshadow of the Week", apologetics: "Argument of the Week",
+        objections: "Objection of the Week", heresies: "Heretical Teaching of the Week",
+        fallacies: "Fallacy of the Week", perspectives: "Perspective of the Week",
+        heritage: "Heritage Entry of the Week", politics: "Issue of the Week",
+        socialmedia: "Social Media Response of the Week", laws: "Command of the Week",
+        courses: "Course of the Week", studyguides: "Study Guide of the Week",
+        quizzes: "Quiz of the Week", hymns: "Hymn of the Week", nature: "Nature Feature of the Week",
+        god: "Know God Feature of the Week", promises: "Promise of the Week",
+        identity: "Identity Truth of the Week" };
+      var FEATURED_META = { timeline: ["DateApprox", "Era"], books: ["Testament", "Category"],
+        stories: ["Testament", "TimelineEra"], people: ["Role"],
+        places: ["ModernLocation", "Testament"], finds: ["DiscoveryLocation", "EvidenceClass"],
+        manuscripts: ["Cave", "DateApprox"], civilizations: ["Region", "TimePeriod"],
+        peoples: ["Region", "TimePeriod"], wordstudies: ["Language", "PartOfSpeech"],
+        questions: ["Category", "Subcategory"], hermeneutics: ["Category"],
+        jewishculture: ["Category"], topics: ["Category"], doctrines: ["BiblicalSupport"],
+        prophecies: ["Prophet", "FulfillmentStatus"], typology: ["Category"],
+        apologetics: ["Category"], objections: ["Worldview"], heresies: ["Founder"],
+        fallacies: ["Category"], perspectives: ["Exemplar"], heritage: ["Type", "Era"],
+        politics: ["Scripture"], socialmedia: ["Platform"], laws: ["Category", "Duration"],
+        courses: ["Level", "Duration"], studyguides: ["Category"], hymns: ["Author", "Year"],
+        nature: ["Category"], god: ["Category", "Subject"], promises: ["Covenant"],
+        identity: ["KeyScriptures"] };
+      var cards = [];
+      EXPLORE_ORDER.forEach(function (id) {
+        var c = coll(id);
+        if (!c) return;
+        if (id === "quizzes") {
+          var groups = quizGroups();
+          var gi = pick(groups.length);
+          if (gi < 0) return;
+          var g = groups[gi];
+          cards.push(featuredCard("Quiz of the Week", "#/quizzes/play/" + encodeURIComponent(g.name), g.name,
+            g.qs.length + (g.qs.length === 1 ? " question" : " questions")));
+          return;
+        }
+        var rows = data[id] || [];
+        var ri = pick(rows.length);
+        if (ri < 0) return;
+        var row = rows[ri];
+        cards.push(featuredCard(FEATURED_LABELS[id] || (c.label + " of the Week"), "#/" + id + "/" + ri,
+          val(row, c.primary), metaOf(row, FEATURED_META[id] || [])));
+      });
+      /* The three app-only tiles: Genealogy, Atlas, Storybook. */
+      var G = genealogyData || { nodes: [] };
+      var nodes = G.nodes || [];
+      var ni = pick(nodes.length);
+      if (ni >= 0) {
+        var node = nodes[ni];
+        var nameCounts = {};
+        nodes.forEach(function (n) { nameCounts[n.name] = (nameCounts[n.name] || 0) + 1; });
+        var genHref = "#/genealogy/" + encodeURIComponent(node.name) +
+          (nameCounts[node.name] > 1 ? "?id=" + encodeURIComponent(node.id) : "");
+        cards.push(featuredCard("Ancestor of the Week", genHref, node.name, node.context || ""));
+      }
+      var atlas = atlasItems || [];
+      var ai = pick(atlas.length);
+      if (ai >= 0) {
+        var it = atlas[ai];
+        cards.push(featuredCard("Atlas Place of the Week", "#/atlas?place=" + it.placeIndex, it.placeName,
+          it.modernName || it.evidence || ""));
+      }
+      var stories = data.stories || [];
+      var si = pick(stories.length);
+      if (si >= 0) {
+        var st = stories[si];
+        cards.push(featuredCard("Bible Story of the Week", "#/storybook/bible/" + si,
+          val(st, "Story"), metaOf(st, ["Scripture", "Testament"])));
+      }
+      if (!cards.length) return "";
+      return "<section class='retro-band retro-paper'><h2 class='retro-display retro-display-dark'>Featured this week</h2>" +
+        "<p class='retro-band-intro'>A fresh pick from every corner of the site, changing every week.</p>" +
+        "<div class='card-grid'>" + cards.join("") + "</div></section>";
+    })();
     var html = "<div class='retro-home'>" +
       "<section class='retro-band retro-teal'>" +
       "<p class='retro-eyebrow'>Welcome to Hope Anchored in Christ</p>" +
@@ -2110,6 +2219,7 @@
       browseHtml +
       "<p class='retro-browse-all'><a class='btn' href='#/explore'>Browse everything</a></p>" +
       "</section>" +
+      featuredHtml +
       "<section class='retro-band retro-cream'><div class='stats'>" +
       '<div class="stat"><strong>' + COLLECTIONS.length + "</strong><span>collections</span></div>" +
       '<div class="stat"><strong>' + total + "</strong><span>entries</span></div>" +
