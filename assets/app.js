@@ -8,28 +8,28 @@
   var COLLECTIONS = [
     { id: "timeline", label: "Biblical Timeline", file: "content/timeline.json", primary: "Title",
       blurb: "The whole story, era by era, from Creation to the Early Church.",
-      filters: [{ label: "Era", field: "Era" }, { label: "Verification", field: "VerificationStatus" }], meta: ["DateApprox", "Era"] },
+      filters: [{ label: "Era", field: "Era" }], meta: ["DateApprox", "Era"] },
     { id: "books", label: "Books of the Bible", file: "content/books.json", primary: "Book",
       blurb: "All 66 books: author, date, theme, outline, and context.",
-      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }],
+      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Category", field: "Category" }],
       meta: ["Testament", "Category", "DateApprox"] },
     { id: "questions", label: "Questions and Answers", file: "content/questions.json", primary: "Question",
       blurb: "Searchable Bible Q&A — short answers and full studies.",
-      filters: [{ label: "Category", field: "Category" }, { label: "Subcategory", field: "Subcategory" }, { label: "Book", field: "RelatedBook" }, { label: "Era", field: "TimelineEra" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category", "Subcategory"] },
+      filters: [{ label: "Category", field: "Category" }, { label: "Subcategory", field: "Subcategory" }, { label: "Book", field: "RelatedBook" }, { label: "Era", field: "TimelineEra" }], meta: ["Category", "Subcategory"] },
     { id: "people", label: "Biblical People", file: "content/people.json", primary: "Name",
       blurb: "Every major person of Scripture, from Adam to the apostles.",
-      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Book", field: "RelatedBooks" }, { label: "Place", field: "Places" }, { label: "Verification", field: "VerificationStatus" }],
+      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Book", field: "RelatedBooks" }, { label: "Place", field: "Places" }],
       meta: ["Role", "Testament"] },
     { id: "finds", label: "Ancient Discoveries", file: "content/finds.json", primary: "FindName",
       blurb: "Archaeological finds that illuminate the Bible.",
-      filters: [{ label: "Era", field: "TimelineEra" }, { label: "Evidence", field: "EvidenceClass" }, { label: "Book", field: "RelatedBooks" }, { label: "Verification", field: "VerificationStatus" }], meta: ["DiscoveryLocation", "ArtifactDate"] },
+      filters: [{ label: "Era", field: "TimelineEra" }, { label: "Evidence", field: "EvidenceClass" }, { label: "Book", field: "RelatedBooks" }], meta: ["DiscoveryLocation", "ArtifactDate"] },
     { id: "places", label: "Biblical Places", file: "content/places.json", primary: "Name",
       blurb: "Where the story happened, and where those places are today.",
-      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Book", field: "RelatedBooks" }, { label: "Verification", field: "VerificationStatus" }],
+      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Book", field: "RelatedBooks" }],
       meta: ["ModernLocation", "Testament"] },
     { id: "topics", label: "Topics and Themes", file: "content/topics.json", primary: "Topic",
       blurb: "Central topics and the great themes woven through Scripture, linking passages, people, doctrines, and questions.",
-      filters: [{ label: "Category", field: "Category" }, { label: "Book", field: "RelatedBooks" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category"] },
+      filters: [{ label: "Category", field: "Category" }, { label: "Book", field: "RelatedBooks" }], meta: ["Category"] },
     { id: "doctrines", label: "Theology and Doctrine", file: "content/doctrines.json", primary: "Doctrine",
       blurb: "What Christians believe, with biblical support and history." },
     { id: "heresies", label: "Heretical Teachings", file: "content/heresies.json", primary: "Heresy",
@@ -38,20 +38,20 @@
       meta: ["Founder"] },
     { id: "wordstudies", label: "Word Studies", file: "content/wordstudies.json", primary: "Transliteration",
       blurb: "Hebrew and Greek words, with Strong's numbers and meaning.",
-      filters: [{ label: "Language", field: "Language" }, { label: "Part of Speech", field: "PartOfSpeech" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Language", "StrongsNumber", "PartOfSpeech"] },
+      filters: [{ label: "Language", field: "Language" }], meta: ["Language", "StrongsNumber", "PartOfSpeech"] },
     { id: "prophecies", label: "Biblical Prophecies", file: "content/prophecies.json", primary: "Prophecy",
       blurb: "What was foretold, how it was fulfilled — marked honestly.",
-      filters: [{ label: "Status", field: "FulfillmentStatus" }, { label: "Era", field: "TimelineEra" }, { label: "Prophet", field: "Prophet" }, { label: "Book", field: "RelatedBooks" }, { label: "Verification", field: "VerificationStatus" }],
+      filters: [{ label: "Status", field: "FulfillmentStatus" }, { label: "Era", field: "TimelineEra" }, { label: "Prophet", field: "Prophet" }, { label: "Book", field: "RelatedBooks" }],
       meta: ["Prophet", "DateApprox"] },
     { id: "typology", label: "Foreshadows of Christ", file: "content/typology.json", primary: "Type",
       blurb: "Old Testament shadows fulfilled in Christ.",
-      filters: [{ label: "Category", field: "Category" }, { label: "Book", field: "RelatedBooks" }, { label: "Verification", field: "VerificationStatus" }] },
+      filters: [{ label: "Category", field: "Category" }, { label: "Book", field: "RelatedBooks" }] },
     { id: "fallacies", label: "Logical Fallacies", file: "content/fallacies.json", primary: "Fallacy",
       blurb: "Spot bad reasoning in faith discussions — and answer graciously.",
-      filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }] },
+      filters: [{ label: "Category", field: "Category" }] },
     { id: "courses", label: "Courses", file: "content/courses.json", primary: "Course",
       blurb: "Guided studies, from Foundations of Faith to Hebrew and Greek.",
-      filters: [{ label: "Level", field: "Level" }, { label: "Duration", field: "Duration" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Level", "Duration"] },
+      filters: [{ label: "Level", field: "Level" }, { label: "Duration", field: "Duration" }], meta: ["Level", "Duration"] },
     { id: "quizzes", label: "Quizzes", file: "content/quizzes.json", primary: "Question",
     blurb: "Test what you've learned — every answer teaches.", special: "quizzes" },
   { id: "hymns", label: "Hymns", file: "content/hymns.json", primary: "Hymn",
@@ -63,57 +63,57 @@
     meta: ["Category"] },
   { id: "apologetics", label: "Defend your faith", file: "content/apologetics.json", primary: "Argument",
     blurb: "Why Christianity best explains reality — the cumulative case from philosophy, science, history, and experience.",
-    filters: [{ label: "Category", field: "Category" }, { label: "Event", field: "RelatedEvents" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category"] },
+    filters: [{ label: "Category", field: "Category" }, { label: "Event", field: "RelatedEvents" }], meta: ["Category"] },
   { id: "objections", label: "Objections & Answers", file: "content/objections.json", primary: "Objection",
     blurb: "Honest objections from atheists, Muslims, Jews, and others — stated fairly and answered with grace and truth.",
-    filters: [{ label: "Worldview", field: "Worldview" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Worldview"] },
+    filters: [{ label: "Worldview", field: "Worldview" }], meta: ["Worldview"] },
   { id: "perspectives", label: "Different Perspectives", file: "content/perspectives.json", primary: "Profession",
     blurb: "How journalists, detectives, doctors, and other professionals shed light on the truth of the Bible.",
     meta: ["Exemplar"] },
   { id: "heritage", label: "Christian Heritage", file: "content/heritage.json", primary: "Name",
     blurb: "Writings, commentaries, church history, and the men and women whose testimonies shaped Christianity.",
-    filters: [{ label: "Type", field: "Type" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Type", "Era"] },
+    filters: [{ label: "Type", field: "Type" }], meta: ["Type", "Era"] },
   { id: "politics", label: "Faith & Politics", file: "content/politics.json", primary: "Issue",
     blurb: "Political issues and current events — and how to respond to them biblically." },
   { id: "socialmedia", label: "Social Media Responses", file: "content/socialmedia.json", primary: "Post",
     blurb: "Viral posts, trends, and hot takes from TikTok, X, Facebook, Instagram, and beyond — addressed with grace and truth.",
-    filters: [{ label: "Platform", field: "Platform" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Platform"] },
+    filters: [{ label: "Platform", field: "Platform" }], meta: ["Platform"] },
   { id: "stories", label: "Biblical Stories & Events", file: "content/stories.json", primary: "Story",
     blurb: "Beloved Bible stories and events retold in detail — with the people, the meaning, and what they mean for us today.",
-    filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Book", field: "RelatedBooks" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Testament"] },
+    filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Book", field: "RelatedBooks" }], meta: ["Testament"] },
   { id: "hermeneutics", label: "Biblical Hermeneutics", file: "content/hermeneutics.json", primary: "Principle",
     blurb: "How to interpret Scripture rightly — context, literary genres, literary devices, and principles for handling God's Word with care.",
-    filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category"] },
+    filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
   { id: "jewishculture", label: "Jewish Cultural Backgrounds", file: "content/jewishculture.json", primary: "Topic",
     blurb: "Jewish culture, feasts, and traditions \u2014 and how each one points to Jesus the Messiah.",
-    filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category"] },
+    filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
   { id: "studyguides", label: "Bible Study Guides", file: "content/studyguides.json", primary: "Guide",
     blurb: "Step-by-step guides for studying a book, a topic, a person, or a passage — with questions and application for every study.",
-    filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category"] },
+    filters: [{ label: "Category", field: "Category" }], meta: ["Category"] },
   { id: "civilizations", label: "Ancient Civilizations", file: "content/civilizations.json", primary: "Civilization",
     blurb: "The empires and peoples around Israel — Egypt, Assyria, Babylon, Persia, Greece, Rome, and their neighbors — and how each one touches the Bible story.",
-    filters: [{ label: "Region", field: "Region" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Region"] },
+    filters: [{ label: "Region", field: "Region" }], meta: ["Region"] },
   { id: "peoples", label: "People Groups", file: "content/peoples.json", primary: "PeopleGroup",
     blurb: "The tribes, peoples, ethnic groups, and factions of the Bible — from the twelve tribes of Israel to the nations around them — and how each one touches the Bible story.",
-    filters: [{ label: "Region", field: "Region" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Region"] },
+    filters: [{ label: "Region", field: "Region" }], meta: ["Region"] },
   { id: "manuscripts", label: "Dead Sea Scrolls Manuscripts", file: "content/manuscripts.json", primary: "Manuscript",
     blurb: "Qumran manuscripts of the Bible — the best-preserved copy of each book, with its cave, date, language, material, and the passages that actually survive. Search by book, cave, period, language, or completeness.",
-    filters: [{ label: "Book", field: "Work" }, { label: "Cave", field: "Cave" }, { label: "Period", field: "Period" }, { label: "Language", field: "Language" }, { label: "Category", field: "Category" }, { label: "Completeness", field: "Completeness" }, { label: "Script", field: "Script" }, { label: "Verification", field: "VerificationStatus" }], meta: ["ManuscriptID", "Cave", "DateApprox"] },
+    filters: [{ label: "Book", field: "Work" }, { label: "Cave", field: "Cave" }, { label: "Period", field: "Period" }, { label: "Language", field: "Language" }, { label: "Category", field: "Category" }, { label: "Completeness", field: "Completeness" }, { label: "Script", field: "Script" }], meta: ["ManuscriptID", "Cave", "DateApprox"] },
     { id: "god", label: "God", file: "content/god.json", primary: "Name",
       blurb: "The names, titles, attributes, roles, and actions of God — who he is, what he is called, and what he does.",
-      filters: [{ label: "Category", field: "Category" }, { label: "Subject", field: "Subject" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category", "Subject"] },
+      filters: [{ label: "Category", field: "Category" }, { label: "Subject", field: "Subject" }], meta: ["Category", "Subject"] },
     { id: "promises", label: "Promises of God", file: "content/promises.json", primary: "Title",
       blurb: "Every promise of God in Scripture — what he pledged, on what condition, and where it was fulfilled.",
-      filters: [{ label: "Covenant", field: "Covenant" }, { label: "Book", field: "RelatedBooks" }, { label: "Verification", field: "VerificationStatus" }] },
+      filters: [{ label: "Covenant", field: "Covenant" }, { label: "Book", field: "RelatedBooks" }] },
     { id: "identity", label: "Identity in Christ", file: "content/identity.json", primary: "Title",
       blurb: "Who you are in Christ — and what changes because of it.",
-      filters: [{ label: "Verification", field: "VerificationStatus" }] },
+      filters: [] },
     { id: "journeys", label: "Journeys", file: "content/journeys.json", primary: "Journey",
       blurb: "The roads of the Bible — every journey of God's people, from Abraham's call to Paul's voyage to Rome, traced stop by stop through Scripture.",
-      filters: [{ label: "Verification", field: "VerificationStatus" }], meta: ["FromPlace", "ToPlace"] },
+      filters: [], meta: ["FromPlace", "ToPlace"] },
     { id: "laws", label: "Biblical Laws and Commands", file: "content/laws.json", primary: "Command",
       blurb: "God's laws and commands, from Sinai to the Sermon on the Mount — what each one says, and how Christ fulfills it.",
-      filters: [{ label: "Category", field: "Category" }, { label: "Duration", field: "Duration" }, { label: "Book", field: "RelatedBooks" }, { label: "Topic", field: "RelatedTopics" }, { label: "Verification", field: "VerificationStatus" }] },
+      filters: [{ label: "Category", field: "Category" }, { label: "Duration", field: "Duration" }, { label: "Book", field: "RelatedBooks" }, { label: "Topic", field: "RelatedTopics" }] },
 ];
   /* Explore tile order, as a study journey: the story first, then the
      world behind it, then deeper study, then discernment, then the
@@ -210,7 +210,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "238";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "239";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -638,7 +638,7 @@
            in covenant-history order (not alphabetical). All 320 items
            render grouped — batching is skipped here because incremental
            appends do not mix with group headings. Search and the
-           Covenant/Verification filters still apply: filteredRows()
+           Covenant filter still applies: filteredRows()
            runs first, so a filtered view shows only the groups that
            still have items. */
         var COVENANT_ORDER = ["Noahic", "Abrahamic", "Mosaic", "Davidic", "New Covenant", "General"];
@@ -5416,7 +5416,7 @@ function genBindInteractive(node) {
       "<p>No discovery, date, biblical reference, manuscript identification, or citation is invented to fill a gap. Where adequate sources have not been found, the field stays blank and the entry stays Awaiting Review. Content drafted with AI assistance is never automatically marked verified — it earns Verified only after a source check, like any other entry.</p>" +
       "<h3>Coverage today</h3>" +
       "<p>Of 23,844 database entries, 24 are Verified, 6 are Scholarly Debate, and 23,814 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
-      "<p>Browse the statuses: <a href='#/manuscripts?f_VerificationStatus=Verified'>Verified manuscripts</a> &middot; <a href='#/manuscripts?f_VerificationStatus=Scholarly Debate'>Debated manuscripts</a> &middot; <a href='#/finds?f_VerificationStatus=Scholarly Debate'>Debated finds</a></p>" +
+      "<p>Browse the lists: <a href='#/manuscripts'>Manuscripts</a> &middot; <a href='#/finds'>Ancient Discoveries</a></p>" +
       "<h3>Corrections</h3>" +
       "<p>Entries can be corrected and updated at any time. Corrections go through the site editor or through the site owner, and a corrected entry keeps its sources and review date visible so readers can see what changed and when it was last checked.</p>" +
       "<h3>What is not status-tagged</h3>" +
