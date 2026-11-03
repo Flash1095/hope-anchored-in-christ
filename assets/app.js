@@ -210,7 +210,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "235";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "236";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -796,6 +796,10 @@
         }
         return true;
       });
+      var ce = document.getElementById("natureFilterCount");
+      if (ce) ce.textContent = shown.length + " entries match";
+      var nb = document.getElementById("natureFilterMenuBtn");
+      if (nb) nb.textContent = "Filter" + (state.cat ? " (1)" : "");
       if (!shown.length) {
         wrap.innerHTML = '<p class="empty">Nothing matches. Try clearing the search or filters.</p>';
       } else {
@@ -819,12 +823,18 @@
       rows.length + " entries. Tap a tile to open its page.</p>" +
       "<p class='page-intro'><em>Preview: the tile images are placeholders for now. Lorraine's own photos will replace them as she uploads them.</em></p>";
     html += '<div class="controls"><input type="search" id="natureSearch" placeholder="Search nature…" value="' + esc(state.q) + '">';
-    html += '<div class="chips"><span class="chip-label">Category:</span>';
+    html += '<div class="filter-menu"><button class="btn" id="natureFilterMenuBtn" type="button" ' +
+      'aria-expanded="false" aria-controls="natureFilterPanel">Filter' + (state.cat ? " (1)" : "") + "</button>" +
+      '<div class="filter-panel" id="natureFilterPanel">' +
+      '<div class="chips"><span class="chip-label">Category:</span>';
     html += '<button class="chip' + (state.cat === "" ? " active" : "") + '" data-cat="">All</button>';
     cats.forEach(function (cat) {
       html += '<button class="chip' + (state.cat === cat ? " active" : "") + '" data-cat="' + cat + '">' + cat + "s</button>";
     });
-    html += '</div></div><div id="natureWrap"></div>';
+    html += '</div>' +
+      '<p class="filter-count" id="natureFilterCount"></p>' +
+      '<p><button class="btn" id="natureFilterClearBtn" type="button">Clear all filters</button></p>' +
+      "</div></div></div><div id=\"natureWrap\"></div>";
     app.innerHTML = html;
     renderTiles();
     document.getElementById("natureSearch").addEventListener("input", function (e) {
@@ -842,6 +852,30 @@
         renderTiles();
       });
     });
+    var natureMenuBtn = document.getElementById("natureFilterMenuBtn");
+    var naturePanel = document.getElementById("natureFilterPanel");
+    if (natureMenuBtn && naturePanel) {
+      natureMenuBtn.addEventListener("click", function () {
+        var open = naturePanel.classList.toggle("open");
+        natureMenuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      naturePanel.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          naturePanel.classList.remove("open");
+          natureMenuBtn.setAttribute("aria-expanded", "false");
+          natureMenuBtn.focus();
+        }
+      });
+      var natureClear = document.getElementById("natureFilterClearBtn");
+      if (natureClear) natureClear.addEventListener("click", function () {
+        state.cat = "";
+        naturePanel.querySelectorAll("[data-cat]").forEach(function (b) {
+          b.classList.toggle("active", b.getAttribute("data-cat") === "");
+        });
+        syncUrl();
+        renderTiles();
+      });
+    }
     window.scrollTo(0, 0);
   }
   /* ---------- timeline: a real vertical timeline with connections ---------- */
@@ -1074,6 +1108,7 @@
         wrap.innerHTML = '<p class="empty">' + msg + '</p><p><button type="button" class="btn" id="tlClearFiltersEmpty">Clear all filters</button></p>';
         var cb = document.getElementById("tlClearFiltersEmpty");
         if (cb) cb.addEventListener("click", clearAll);
+        refreshTlFilterUi(0);
         return;
       }
       var html = '<p class="tl-showing">Showing ' + items.length + ' of ' + rows.length + ' events.</p><div class="tl">', lastEra = null;
@@ -1095,6 +1130,7 @@
       });
       html += "</div>";
       wrap.innerHTML = html;
+      refreshTlFilterUi(items.length);
     }
     function syncUrl() {
       var p = new URLSearchParams();
@@ -1169,14 +1205,34 @@
       state.era = e;
       syncUrl(); renderViz(); renderTl();
     }
-    /* ---------- timeline filter row (Oct 2026) ----------
-       One row above the era bar: civilization + group dropdowns,
-       person + place search boxes with native datalist autocomplete,
-       and a Clear all filters button. Every control combines (AND)
+    /* ---------- timeline filter row (Oct 2026, menu-ified v236) ----------
+       The same Filter button + panel pattern as the generic collection
+       pages: civilization + group dropdowns, person + place search
+       boxes with native datalist autocomplete, and a Clear all filters
+       button, all behind ONE Filter button. Every control combines (AND)
        with the others and with the era selection, and filters the
-       dots and the list together. The row is rendered once; later
+       dots and the list together. The panel is rendered once; later
        renders only touch #tlViz, #tlDetail, and #tlWrap, so typed
-       values survive filtering. */
+       values and the panel's open state survive filtering. The era bar
+       and era chips stay in the visualization (renderViz regenerates
+       them on every filter change), NOT in the panel. */
+    function activeTlFilterCount() {
+      var n = 0;
+      if (state.civ) n++;
+      if (state.group) n++;
+      if (state.person) n++;
+      if (state.place) n++;
+      return n;
+    }
+    function refreshTlFilterUi(count) {
+      var btn = document.getElementById("tlFilterMenuBtn");
+      if (btn) {
+        var n = activeTlFilterCount();
+        btn.textContent = "Filter" + (n ? " (" + n + ")" : "");
+      }
+      var ce = document.getElementById("tlFilterCount");
+      if (ce) ce.textContent = count + " events match";
+    }
     function filterStatusText() {
       var parts = [];
       if (state.civ) parts.push("Events connected to " + state.civ);
@@ -1207,13 +1263,17 @@
       }).join("");
       var personOpts = Object.keys(peopleNames).sort().map(function (n) { return '<option value="' + esc(n) + '">'; }).join("");
       var placeOpts = Object.keys(placesNames).sort().map(function (n) { return '<option value="' + esc(n) + '">'; }).join("");
-      return '<div class="controls" id="tlFilters">' +
-        '<label>Civilization <select id="tlCiv">' + civOpts + "</select></label> " +
-        '<label>People group <select id="tlGroup">' + groupOpts + "</select></label> " +
-        '<label>Person <input type="search" id="tlPerson" list="tlPersonList" placeholder="Search people…" value="' + esc(state.person) + '"><datalist id="tlPersonList">' + personOpts + "</datalist></label> " +
-        '<label>Place <input type="search" id="tlPlace" list="tlPlaceList" placeholder="Search places…" value="' + esc(state.place) + '"><datalist id="tlPlaceList">' + placeOpts + "</datalist></label> " +
-        '<button type="button" class="btn" id="tlClearFilters">Clear all filters</button>' +
-        '<p id="tlFilterStatus">' + esc(filterStatusText()) + "</p></div>";
+      var fc = activeTlFilterCount();
+      return '<div class="filter-menu"><button class="btn" id="tlFilterMenuBtn" type="button" ' +
+        'aria-expanded="false" aria-controls="tlFilterPanel">Filter' + (fc ? " (" + fc + ")" : "") + "</button>" +
+        '<div class="filter-panel" id="tlFilterPanel">' +
+        '<label class="filter-field"><span>Civilization</span><select id="tlCiv">' + civOpts + "</select></label>" +
+        '<label class="filter-field"><span>People group</span><select id="tlGroup">' + groupOpts + "</select></label>" +
+        '<label class="filter-field"><span>Person</span><input type="search" id="tlPerson" list="tlPersonList" placeholder="Search people…" value="' + esc(state.person) + '"><datalist id="tlPersonList">' + personOpts + "</datalist></label>" +
+        '<label class="filter-field"><span>Place</span><input type="search" id="tlPlace" list="tlPlaceList" placeholder="Search places…" value="' + esc(state.place) + '"><datalist id="tlPlaceList">' + placeOpts + "</datalist></label>" +
+        '<p class="filter-count" id="tlFilterCount"></p>' +
+        '<p><button type="button" class="btn" id="tlClearFilters">Clear all filters</button></p>' +
+        '<p id="tlFilterStatus">' + esc(filterStatusText()) + "</p></div></div>";
     }
     var html = "<h2>Biblical Timeline</h2><p class='page-intro'>The whole story, era by era, from Creation to the Early Church — " +
       "with the people, places, events, and discoveries connected at every step. &middot; " + rows.length + " entries</p>";
@@ -1230,6 +1290,21 @@
     document.getElementById("tlPerson").addEventListener("input", function () { state.person = document.getElementById("tlPerson").value; applyFilters(); });
     document.getElementById("tlPlace").addEventListener("input", function () { state.place = document.getElementById("tlPlace").value; applyFilters(); });
     document.getElementById("tlClearFilters").addEventListener("click", clearAll);
+    var tlMenuBtn = document.getElementById("tlFilterMenuBtn");
+    var tlPanel = document.getElementById("tlFilterPanel");
+    if (tlMenuBtn && tlPanel) {
+      tlMenuBtn.addEventListener("click", function () {
+        var open = tlPanel.classList.toggle("open");
+        tlMenuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      tlPanel.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          tlPanel.classList.remove("open");
+          tlMenuBtn.setAttribute("aria-expanded", "false");
+          tlMenuBtn.focus();
+        }
+      });
+    }
     window.scrollTo(0, 0);
   }
   function navigate(hash, replace) {
@@ -1844,15 +1919,21 @@
     });
     var html = "<h2>Quizzes</h2><p class='page-intro'>Test what you've learned — every answer teaches. " +
       (data.quizzes || []).length + " questions across " + groups.length + " quizzes.</p>";
-    html += '<div class="controls"><span class="chip-label">Categories:</span>' +
+    var shown = groups.filter(function (g) {
+      return quizInCategory(g, cat);
+    }).sort(function (a, b) { return a.name.localeCompare(b.name); });
+    html += '<div class="controls"><div class="filter-menu"><button class="btn" id="quizFilterMenuBtn" type="button" ' +
+      'aria-expanded="false" aria-controls="quizFilterPanel">Filter' + (cat ? " (1)" : "") + "</button>" +
+      '<div class="filter-panel" id="quizFilterPanel">' +
+      '<label class="filter-field"><span>Category</span>' +
       '<select id="quizCategorySelect">' +
       cats.map(function (c) {
         return '<option value="' + c.key + '"' + (cat === c.key ? " selected" : "") + ">" +
           esc(c.label) + " (" + c.count + ")</option>";
-      }).join("") + "</select></div>";
-    var shown = groups.filter(function (g) {
-      return quizInCategory(g, cat);
-    }).sort(function (a, b) { return a.name.localeCompare(b.name); });
+      }).join("") + "</select></label>" +
+      '<p class="filter-count">' + shown.length + " quizzes match</p>" +
+      '<p><button class="btn" id="quizFilterClearBtn" type="button">Clear all filters</button></p>' +
+      "</div></div></div>";
     html += '<div class="card-grid">' + shown.map(function (g) {
       var counts = {};
       g.qs.forEach(function (q) { var d = val(q, "Difficulty"); counts[d] = (counts[d] || 0) + 1; });
@@ -1867,6 +1948,23 @@
     if (sel) sel.addEventListener("change", function () {
       navigate(sel.value ? "#/quizzes?category=" + sel.value : "#/quizzes", true);
     });
+    var quizMenuBtn = document.getElementById("quizFilterMenuBtn");
+    var quizPanel = document.getElementById("quizFilterPanel");
+    if (quizMenuBtn && quizPanel) {
+      quizMenuBtn.addEventListener("click", function () {
+        var open = quizPanel.classList.toggle("open");
+        quizMenuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      quizPanel.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          quizPanel.classList.remove("open");
+          quizMenuBtn.setAttribute("aria-expanded", "false");
+          quizMenuBtn.focus();
+        }
+      });
+      var quizClear = document.getElementById("quizFilterClearBtn");
+      if (quizClear) quizClear.addEventListener("click", function () { navigate("#/quizzes", true); });
+    }
     window.scrollTo(0, 0);
   }
   function viewQuizPlay(name, params) {
@@ -4302,11 +4400,15 @@ function genBindInteractive(node) {
     }
     var html = "<h2>Bible Verses by Topic</h2><div class='post-body'>" +
       "<p>Find passages by what you need. Tap a passage to read it in the Bible reader; tap a topic name to open its full article.</p>" +
-      '<div class="controls"><input type="search" id="bibleTopicSearch" placeholder="Search topics, e.g. healing"></div>' +
-      "<p>" + NEEDS.map(function (n) {
+      '<div class="controls"><input type="search" id="bibleTopicSearch" placeholder="Search topics, e.g. healing">' +
+      '<div class="filter-menu"><button class="btn" id="bibleTopicFilterMenuBtn" type="button" ' +
+      'aria-expanded="false" aria-controls="bibleTopicFilterPanel">Filter</button>' +
+      '<div class="filter-panel" id="bibleTopicFilterPanel"><p>Find passages by what you need:</p><p>' + NEEDS.map(function (n) {
         return '<button class="chip bible-topic-need" data-need="' + esc(n.toLowerCase()) + '">' + esc(n) + "</button>";
       }).join(" ") + "</p>" +
-      "<p class='meta' id='bibleTopicCount'>" + rows.length + " topics</p>" +
+      "<p class='filter-count' id='bibleTopicCount'>" + rows.length + " topics</p>" +
+      '<p><button class="btn" id="bibleTopicFilterClearBtn" type="button">Clear all filters</button></p>' +
+      "</div></div></div>" +
       "<div class='card-grid' id='bibleTopicGrid'>" + rows.map(card).join("") + "</div>" +
       "<p id='bibleTopicEmpty' style='display:none'>No topics match that search.</p></div>";
     app.innerHTML = html;
@@ -4326,6 +4428,23 @@ function genBindInteractive(node) {
     Array.prototype.forEach.call(document.querySelectorAll(".bible-topic-need"), function (btn) {
       btn.addEventListener("click", function () { input.value = btn.getAttribute("data-need"); filter(); input.focus(); });
     });
+    var bibleTopicMenuBtn = document.getElementById("bibleTopicFilterMenuBtn");
+    var bibleTopicPanel = document.getElementById("bibleTopicFilterPanel");
+    if (bibleTopicMenuBtn && bibleTopicPanel) {
+      bibleTopicMenuBtn.addEventListener("click", function () {
+        var open = bibleTopicPanel.classList.toggle("open");
+        bibleTopicMenuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      bibleTopicPanel.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          bibleTopicPanel.classList.remove("open");
+          bibleTopicMenuBtn.setAttribute("aria-expanded", "false");
+          bibleTopicMenuBtn.focus();
+        }
+      });
+      var bibleTopicClear = document.getElementById("bibleTopicFilterClearBtn");
+      if (bibleTopicClear) bibleTopicClear.addEventListener("click", function () { input.value = ""; filter(); });
+    }
     window.scrollTo(0, 0);
   }
   /* ---------- Dead Sea Scrolls passage lookup ---------- */
@@ -4644,12 +4763,26 @@ function genBindInteractive(node) {
       atlasPendingFocus = null;
     }
   }
+  function atlasSyncFilterUi(count) {
+    var btn = document.getElementById("atlasFilterMenuBtn");
+    if (btn) {
+      var n = 0;
+      if (atlasTestament !== "all") n++;
+      if (atlasEra !== "all") n++;
+      if (atlasEvidence !== "all") n++;
+      if (atlasJourney !== "all") n++;
+      btn.textContent = "Filter" + (n ? " (" + n + ")" : "");
+    }
+    var ce = document.getElementById("atlasFilterCount");
+    if (ce) ce.textContent = count + " places match";
+  }
   function atlasRefresh() {
     var list = document.getElementById("atlasList");
     var count = document.getElementById("atlasCount");
     if (!list) return;
     var rows = atlasFiltered();
     if (count) count.textContent = "Showing " + rows.length + " of " + atlasItems.length + " places";
+    atlasSyncFilterUi(rows.length);
     list.innerHTML = rows.length ? rows.map(atlasRow).join("") : "<p class='empty'>No places match those filters.</p>";
     var jp = document.getElementById("atlasJourneyPanel");
     if (jp) jp.innerHTML = atlasJourneyPanelHTML();
@@ -4722,22 +4855,28 @@ function genBindInteractive(node) {
       html += "<div class='atlas-map' id='atlasMap'></div>" +
         "<p class='meta'>Rose = Confirmed · Navy = Probable — Capernaum's marker shows its primary candidate, Tell Hum. Tap a place name to show it on the map. Switch Ancient / Modern with the layers button at the top right of the map.</p>" +
         "<div class='controls'><input id='atlasSearch' type='search' placeholder='Search places…' value='" + esc(atlasQuery).replace(/'/g, "&#39;") + "'>" +
-        "<span class='chip-label'>Testament:</span>" +
+        '<div class="filter-menu"><button class="btn" id="atlasFilterMenuBtn" type="button" ' +
+        'aria-expanded="false" aria-controls="atlasFilterPanel">Filter</button>' +
+        '<div class="filter-panel" id="atlasFilterPanel">' +
+        '<div class="filter-field"><span>Testament</span><span class="chips">' +
         [["all", "All"], ["old", "Old Testament"], ["new", "New Testament"], ["both", "Both Testaments"]].map(function (t) {
           return "<button class='chip atlas-test-chip" + (atlasTestament === t[0] ? " active" : "") + "' data-t='" + t[0] + "'>" + t[1] + "</button>";
-        }).join("") +
-        "<span class='chip-label'>Era:</span><select id='atlasEra'><option value='all'>All eras</option>" +
-        eras.map(function (e) { return "<option value='" + esc(e) + "'" + (atlasEra === e ? " selected" : "") + ">" + esc(e) + "</option>"; }).join("") + "</select>" +
-        "<span class='chip-label'>Evidence:</span>" +
+        }).join("") + "</span></div>" +
+        '<label class="filter-field"><span>Era</span><select id="atlasEra"><option value="all">All eras</option>' +
+        eras.map(function (e) { return "<option value='" + esc(e) + "'" + (atlasEra === e ? " selected" : "") + ">" + esc(e) + "</option>"; }).join("") + "</select></label>" +
+        '<div class="filter-field"><span>Evidence</span><span class="chips">' +
         [["all", "All"], ["Confirmed", "Confirmed"], ["Probable", "Probable"], ["Disputed", "Disputed"], ["Unknown", "Unknown"]].map(function (t) {
           return "<button class='chip atlas-ev-chip" + (atlasEvidence === t[0] ? " active" : "") + "' data-v='" + t[0] + "'>" + t[1] + "</button>";
-        }).join("") +
-        "<span class='chip-label'>Journey:</span><select id='atlasJourney'><option value='all'" + (atlasJourney === "all" ? " selected" : "") + ">All places</option>" +
+        }).join("") + "</span></div>" +
+        '<label class="filter-field"><span>Journey</span><select id="atlasJourney"><option value="all"' + (atlasJourney === "all" ? " selected" : "") + ">All places</option>" +
         (data.journeys || []).map(function (j, ji) {
           var grp = val(j, "Group"), trav = val(j, "Travelers");
           var who = (grp && grp !== "No") ? grp : trav;
           return "<option value='" + ji + "'" + (atlasJourney === String(ji) ? " selected" : "") + ">" + esc(val(j, "Journey")) + (who ? " — " + esc(who) : "") + "</option>";
-        }).join("") + "</select></div>" +
+        }).join("") + "</select></label>" +
+        '<p class="filter-count" id="atlasFilterCount"></p>' +
+        '<p><button class="btn" id="atlasFilterClearBtn" type="button">Clear all filters</button></p>' +
+        "</div></div></div>" +
         "<div id='atlasJourneyPanel'></div>" +
         "<p class='meta' id='atlasCount'></p><div id='atlasList'></div>";
     }
@@ -4767,6 +4906,30 @@ function genBindInteractive(node) {
           atlasRefresh();
         });
       });
+      var atlasMenuBtn = document.getElementById("atlasFilterMenuBtn");
+      var atlasPanel = document.getElementById("atlasFilterPanel");
+      if (atlasMenuBtn && atlasPanel) {
+        atlasMenuBtn.addEventListener("click", function () {
+          var open = atlasPanel.classList.toggle("open");
+          atlasMenuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+        atlasPanel.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            atlasPanel.classList.remove("open");
+            atlasMenuBtn.setAttribute("aria-expanded", "false");
+            atlasMenuBtn.focus();
+          }
+        });
+        var atlasClear = document.getElementById("atlasFilterClearBtn");
+        if (atlasClear) atlasClear.addEventListener("click", function () {
+          atlasTestament = "all"; atlasEra = "all"; atlasEvidence = "all"; atlasJourney = "all";
+          document.querySelectorAll(".atlas-test-chip").forEach(function (x) { x.classList.toggle("active", x.getAttribute("data-t") === "all"); });
+          document.querySelectorAll(".atlas-ev-chip").forEach(function (x) { x.classList.toggle("active", x.getAttribute("data-v") === "all"); });
+          var e2 = document.getElementById("atlasEra"); if (e2) e2.value = "all";
+          var j2 = document.getElementById("atlasJourney"); if (j2) j2.value = "all";
+          atlasRefresh();
+        });
+      }
     }
     window.scrollTo(0, 0);
     if (focusItem && (focusItem.lat === null || focusItem.lat === undefined)) {
