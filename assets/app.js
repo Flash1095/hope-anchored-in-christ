@@ -208,7 +208,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "223";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "224";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1974,8 +1974,8 @@
       '<p class="meta">' + n + " entries</p><p class='snippet'>" + esc(blurb) + "</p></a>";
   }
   /* ---------- retro homepage (v217) ----------
-     Banded retro restyle of the original home view: teal hero, cream
-     About Us, guided path, then the original stats, latest
+     Banded retro restyle of the original home view: teal hero,
+     guided path, then the original stats, latest
      post, and More-to-explore links restyled into bands. Every link
      below is an existing route. The four path steps replace the full
      Explore grid on the homepage (v219); the full grid still lives on
@@ -1983,7 +1983,8 @@
      v220 it ALSO appeared on the homepage grouped under the four
      guided-path steps (NOT the Explore section headings, per her
      correction); v222 merged the two into the single journey section
-     below, and the old 11-door path band is gone. */
+     below, and the old 11-door path band is gone; v224 removed the
+     About Us band from the homepage (the #/about page itself stays). */
   function viewHome() {
     var total = COLLECTIONS.reduce(function (sum, c) { return sum + (data[c.id] || []).length; }, 0);
     var latest = posts[0];
@@ -2041,13 +2042,6 @@
         return "<h3 class='retro-subhead'>" + esc(s.title) + "</h3><div class='card-grid retro-tiles'>" + tiles + "</div>";
       }).join("");
     })();
-    var badges = [["#/bible", "books", "Study the Bible"], ["#/apologetics", "finds", "Examine the Evidence"],
-      ["#/timeline", "timeline", "Biblical History"], ["#/nature", "nature", "God's Creation"],
-      ["#/people", "people", "Biblical People"], ["#/places", "places", "Biblical Places"],
-      ["#/manuscripts", "manuscripts", "Ancient Manuscripts"], ["#/stories", "stories", "Bible Stories"]].map(function (b) {
-      var img = TILE_ART[b[1]] ? "<img src='" + esc(TILE_ART[b[1]]) + "' alt=''>" : "";
-      return "<a class='retro-badge' href='" + b[0] + "'>" + img + "<span>" + b[2] + "</span></a>";
-    }).join("");
     var html = "<div class='retro-home'>" +
       "<section class='retro-band retro-teal'>" +
       "<p class='retro-eyebrow'>Welcome to Hope Anchored in Christ</p>" +
@@ -2062,14 +2056,6 @@
       "<p class='retro-band-intro'>Four steps, in order — start at the beginning and follow the path as far as you like.</p>" +
       browseHtml +
       "<p class='retro-browse-all'><a class='btn' href='#/explore'>Browse everything</a></p>" +
-      "</section>" +
-      "<section class='retro-band retro-cream' id='retro-about'>" +
-      "<h2 class='retro-display retro-display-dark'>About Us</h2>" +
-      "<p class='page-intro retro-intro'>The whole Bible is one anchored story. Walk the timeline, meet the people, " +
-      "visit the places, touch the archaeology, and explore all 66 books — every post pointing back to " +
-      "Jesus Christ, the same yesterday and today and forever (Hebrews 13:8).</p>" +
-      "<div class='retro-badges'>" + badges + "</div>" +
-      "<p><a class='btn' href='#/about'>Read Our Story</a></p>" +
       "</section>" +
       "<section class='retro-band retro-cream'><div class='stats'>" +
       '<div class="stat"><strong>' + COLLECTIONS.length + "</strong><span>collections</span></div>" +
