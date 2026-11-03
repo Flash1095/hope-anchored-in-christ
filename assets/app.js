@@ -210,7 +210,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "231";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "232";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -5558,6 +5558,7 @@ function genBindInteractive(node) {
   var listenRates = [1, 1.25, 1.5];
   var audioBar = document.getElementById("audioBar");
   var audioStatus = document.getElementById("audioStatus");
+  var audioVoiceSelect = document.getElementById("audioVoiceSelect");
   var audioPauseBtn = document.getElementById("audioPauseBtn");
   var audioStopBtn = document.getElementById("audioStopBtn");
   var audioSpeedBtn = document.getElementById("audioSpeedBtn");
@@ -5637,17 +5638,75 @@ function genBindInteractive(node) {
     return tier1 || tier1other || tier2 || tier3 || tier4 || null;
   }
   /* Chosen at SPEAK time (called from speakNext for every utterance),
-     so voices that load late are picked up by the next chunk. */
+     so voices that load late are picked up by the next chunk. A voice
+     the reader picked in the dropdown (saved in localStorage) wins over
+     the automatic preference, so she can keep the voice that sounds
+     most like a book being read. */
+  function storedVoiceURI() {
+    try { return localStorage.getItem("listenVoice") || ""; } catch (e) { return ""; }
+  }
   function pickBestVoice() {
     if (!listenSynth || !listenSynth.getVoices) return null;
-    try { return pickBestVoiceFrom(listenSynth.getVoices() || []); } catch (e) { return null; }
+    try {
+      var list = listenSynth.getVoices() || [];
+      var saved = storedVoiceURI(), i;
+      if (saved) {
+        for (i = 0; i < list.length; i++) {
+          if (list[i].voiceURI === saved) return list[i];
+        }
+      }
+      return pickBestVoiceFrom(list);
+    } catch (e) { return null; }
+  }
+  /* Tier for ordering the voice dropdown: most book-like first. */
+  function voiceTier(v) {
+    var lang = String(v.lang || "").toLowerCase().replace("_", "-");
+    var name = String(v.name || "").toLowerCase();
+    var natural = /natural|neural|wavenet|premium|enhanced/.test(name);
+    var isUSGB = (lang === "en-us" || lang === "en-gb");
+    if (natural && isUSGB) return 0;
+    if (natural) return 1;
+    if (/google\s+(us|uk)\s+english/.test(name)) return 2;
+    if (isUSGB) return 3;
+    return 4;
+  }
+  /* Fill the voice dropdown with the device's English voices, most
+     book-like first, and keep the saved (or automatic) choice selected.
+     Called when the bar opens and whenever voices load late. */
+  function syncVoiceSelect() {
+    if (!audioVoiceSelect || !listenSynth || !listenSynth.getVoices) return;
+    var list = [];
+    try { list = listenSynth.getVoices() || []; } catch (e) { list = []; }
+    var en = list.filter(function (v) {
+      return String(v.lang || "").toLowerCase().replace("_", "-").indexOf("en") === 0;
+    });
+    en.sort(function (a, b) { return voiceTier(a) - voiceTier(b); });
+    var saved = storedVoiceURI();
+    var best = pickBestVoice();
+    var want = saved || (best ? best.voiceURI : "");
+    var html = "";
+    if (!en.length) {
+      html = "<option value=\"\">Default voice</option>";
+    } else {
+      en.forEach(function (v) {
+        html += "<option value=\"" + esc(v.voiceURI) + "\"" +
+          (v.voiceURI === want ? " selected" : "") + ">" +
+          esc(v.name) + "</option>";
+      });
+    }
+    audioVoiceSelect.innerHTML = html;
+    if (want) audioVoiceSelect.value = want;
   }
   /* Prime the voice list: some browsers only populate getVoices() after
      the voiceschanged event fires. Selection still happens per utterance,
-     so this is a warm-up, not the selection point. */
+     so this is a warm-up, not the selection point. The dropdown refreshes
+     here too, so late-loaded voices appear in it. */
   if (listenSynth) {
     try {
-      var primeListenVoices = function () { try { listenSynth.getVoices(); } catch (e) {} };
+      var primeListenVoices = function () {
+        try { listenSynth.getVoices(); } catch (e) {}
+        syncVoiceSelect();
+      };
       if (listenSynth.addEventListener) listenSynth.addEventListener("voiceschanged", primeListenVoices);
       else listenSynth.onvoiceschanged = primeListenVoices;
     } catch (e) {}
@@ -5713,6 +5772,7 @@ function genBindInteractive(node) {
     listenEpoch++;
     showAudioBar();
     setAudioStatus("Reading…");
+    syncVoiceSelect();
     syncAudioButtons();
     speakNext();
   }
@@ -5740,6 +5800,16 @@ function genBindInteractive(node) {
   if (audioPauseBtn) audioPauseBtn.addEventListener("click", toggleListenPause);
   if (audioStopBtn) audioStopBtn.addEventListener("click", stopReading);
   if (audioSpeedBtn) audioSpeedBtn.addEventListener("click", cycleListenSpeed);
+  if (audioVoiceSelect) audioVoiceSelect.addEventListener("change", function () {
+    try { localStorage.setItem("listenVoice", audioVoiceSelect.value); } catch (e) {}
+    /* Restart the current chunk at once so she hears the new voice
+       immediately instead of waiting for the next chunk or page. */
+    if (listenActive && listenSynth && !listenPaused) {
+      listenEpoch++;
+      try { listenSynth.cancel(); } catch (e) {}
+      speakNext();
+    }
+  });
   function mountListenButton(getText) {
     if (!listenSupported()) return;
     var h2 = app.querySelector("h2");

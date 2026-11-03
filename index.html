@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script>try{var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
-<link rel="stylesheet" href="assets/style.css?v=231">
+<link rel="stylesheet" href="assets/style.css?v=232">
 <link rel="icon" type="image/png" href="assets/favicon.png?v=76">
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -67,13 +67,14 @@
 <div id="audioBar" class="audio-bar" hidden aria-live="polite">
   <span id="audioStatus" class="audio-bar-label">Reading…</span>
   <span class="audio-bar-label">Listening</span>
+  <select id="audioVoiceSelect" class="audio-voice-select" aria-label="Choose reading voice"></select>
   <button type="button" id="audioPauseBtn" aria-label="Pause reading">⏸ Pause</button>
   <button type="button" id="audioSpeedBtn" aria-label="Change reading speed">1x</button>
   <button type="button" id="audioStopBtn" aria-label="Stop reading">Stop</button>
 </div>
 
 <noscript><p style="text-align:center;padding:2rem">This site needs JavaScript to browse the collections.</p></noscript>
-<script src="assets/app.js?v=231"></script>
+<script src="assets/app.js?v=232"></script>
 <script>
   if (window.netlifyIdentity) {
     window.netlifyIdentity.init({ APIUrl: 'https://hope-anchored-in-christ.netlify.app/.netlify/identity' });
