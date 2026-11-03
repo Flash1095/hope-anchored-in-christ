@@ -611,9 +611,6 @@ html[data-theme="dark"] .gtn-name, html[data-theme="dark"] .gtn-head-name { fill
 .retro-home .retro-badge img { width: 110px; height: 110px; object-fit: cover; border-radius: 50%; border: 4px solid #1F7673; background: #fff; display: block; }
 .retro-home .retro-badge:hover img { border-color: var(--gold-dark); }
 .retro-home .retro-tiles .retro-tile { background: #fff; }
-.retro-home .retro-tiles .retro-tile:nth-child(4n+2) { background: #F7ECD7; }
-.retro-home .retro-tiles .retro-tile:nth-child(4n+3) { background: #D8EDEB; }
-.retro-home .retro-tiles .retro-tile:nth-child(4n+4) { background: #FDF0C8; }
 .retro-home .retro-subhead { grid-column: 1 / -1; font-family: "Bebas Neue", "Arial Narrow", Impact, sans-serif; text-transform: uppercase; letter-spacing: 0.05em; color: #1B2A4E; margin: 0.8rem 0 0; font-size: 1.6rem; }
 .retro-home .retro-tile h3 { color: #1B2A4E; }
 .retro-home .stats { margin: 0; }
@@ -637,9 +634,6 @@ html[data-theme="dark"] .retro-home .retro-intro, html[data-theme="dark"] .retro
 html[data-theme="dark"] .retro-home .retro-subhead, html[data-theme="dark"] .retro-home .retro-tile h3 { color: #F2E8D5; }
 html[data-theme="dark"] .retro-home .retro-tiles .retro-tile, html[data-theme="dark"] .retro-home .stat,
 html[data-theme="dark"] .retro-home .retro-paper { background: #16213f; }
-html[data-theme="dark"] .retro-home .retro-tiles .retro-tile:nth-child(4n+2),
-html[data-theme="dark"] .retro-home .retro-tiles .retro-tile:nth-child(4n+3),
-html[data-theme="dark"] .retro-home .retro-tiles .retro-tile:nth-child(4n+4) { background: #1E2A4A; }
 html[data-theme="dark"] .retro-home .retro-ribbon { background: #2B2419; color: #F2E8D5; }
 html[data-theme="dark"] .retro-home .retro-eyebrow { color: #F2E8D5; }
 html[data-theme="dark"] .retro-home .retro-badge img { border-color: #3AAFA9; background: #16213f; }
