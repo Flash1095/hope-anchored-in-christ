@@ -210,7 +210,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "237";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "238";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -4717,7 +4717,6 @@ function genBindInteractive(node) {
       if (atlasTestament !== "all") n++;
       if (atlasEra !== "all") n++;
       if (atlasEvidence !== "all") n++;
-      if (atlasJourney !== "all") n++;
       btn.textContent = "Filter" + (n ? " (" + n + ")" : "");
     }
     var ce = document.getElementById("atlasFilterCount");
@@ -4795,13 +4794,22 @@ function genBindInteractive(node) {
     var eras = ATLAS_ERA_ORDER.filter(function (e) {
       return atlasItems.some(function (it) { return (it.periods || []).indexOf(e) !== -1; });
     });
-    var html = "<h2>Biblical Atlas</h2><p class='page-intro'>All " + atlasItems.length + " places from Biblical Places. Markers show the places whose locations are verified; every row links to its place page, tapping a place name shows it on the map, and the Journey picker below highlights one journey's stages on the map.</p>";
+    var mappedPlaces = atlasItems.filter(function (it) {
+      return it.lat !== null && it.lat !== undefined && it.lon !== null && it.lon !== undefined;
+    }).sort(function (a, b) { return a.placeName < b.placeName ? -1 : a.placeName > b.placeName ? 1 : 0; });
+    var atlasBoxesHtml = "<div class='card'><label class='filter-field'><span>Biblical Places</span><select id='atlasPlaceBox'><option value=''>All places</option>" +
+      mappedPlaces.map(function (it) { return "<option value='" + it.placeIndex + "'>" + esc(it.placeName) + "</option>"; }).join("") + "</select></label></div>" +
+      "<div class='card'><label class='filter-field'><span>Biblical Journeys</span><select id='atlasJourneyBox'><option value='all'" + (atlasJourney === "all" ? " selected" : "") + ">All journeys</option>" +
+      (data.journeys || []).map(function (j, ji) {
+        var grp = val(j, "Group"), trav = val(j, "Travelers");
+        var who = (grp && grp !== "No") ? grp : trav;
+        return "<option value='" + ji + "'" + (atlasJourney === String(ji) ? " selected" : "") + ">" + esc(val(j, "Journey")) + (who ? " — " + esc(who) : "") + "</option>";
+      }).join("") + "</select></label></div>";
+    var html = "<h2>Biblical Atlas</h2><p class='page-intro'>All " + atlasItems.length + " places from Biblical Places. Markers show the places whose locations are verified; every row links to its place page, tapping a place name shows it on the map, and the Biblical Journeys box below highlights one journey's stages on the map.</p>";
     if (!atlasItems.length) {
       html += "<p class='empty'>The atlas data is not available right now.</p>";
     } else {
-      html += "<div class='atlas-map' id='atlasMap'></div>" +
-        "<p class='meta'>Rose = Confirmed · Navy = Probable — Capernaum's marker shows its primary candidate, Tell Hum. Tap a place name to show it on the map. Switch Ancient / Modern with the layers button at the top right of the map.</p>" +
-        "<div class='controls'><input id='atlasSearch' type='search' placeholder='Search places…' value='" + esc(atlasQuery).replace(/'/g, "&#39;") + "'>" +
+      html += "<div class='controls'><input id='atlasSearch' type='search' placeholder='Search places…' value='" + esc(atlasQuery).replace(/'/g, "&#39;") + "'>" +
         '<div class="filter-menu"><button class="btn" id="atlasFilterMenuBtn" type="button" ' +
         'aria-expanded="false" aria-controls="atlasFilterPanel">Filter</button>' +
         '<div class="filter-panel" id="atlasFilterPanel">' +
@@ -4815,15 +4823,12 @@ function genBindInteractive(node) {
         [["all", "All"], ["Confirmed", "Confirmed"], ["Probable", "Probable"], ["Disputed", "Disputed"], ["Unknown", "Unknown"]].map(function (t) {
           return "<button class='chip atlas-ev-chip" + (atlasEvidence === t[0] ? " active" : "") + "' data-v='" + t[0] + "'>" + t[1] + "</button>";
         }).join("") + "</span></div>" +
-        '<label class="filter-field"><span>Journey</span><select id="atlasJourney"><option value="all"' + (atlasJourney === "all" ? " selected" : "") + ">All places</option>" +
-        (data.journeys || []).map(function (j, ji) {
-          var grp = val(j, "Group"), trav = val(j, "Travelers");
-          var who = (grp && grp !== "No") ? grp : trav;
-          return "<option value='" + ji + "'" + (atlasJourney === String(ji) ? " selected" : "") + ">" + esc(val(j, "Journey")) + (who ? " — " + esc(who) : "") + "</option>";
-        }).join("") + "</select></label>" +
         '<p class="filter-count" id="atlasFilterCount"></p>' +
         '<p><button class="btn" id="atlasFilterClearBtn" type="button">Clear all filters</button></p>' +
         "</div></div></div>" +
+        atlasBoxesHtml +
+        "<div class='atlas-map' id='atlasMap'></div>" +
+        "<p class='meta'>Rose = Confirmed · Navy = Probable — Capernaum's marker shows its primary candidate, Tell Hum. Tap a place name to show it on the map. Switch Ancient / Modern with the layers button at the top right of the map.</p>" +
         "<div id='atlasJourneyPanel'></div>" +
         "<p class='meta' id='atlasCount'></p><div id='atlasList'></div>";
     }
@@ -4837,8 +4842,26 @@ function genBindInteractive(node) {
       if (search) search.addEventListener("input", function () { atlasQuery = search.value.trim(); atlasRefresh(); });
       var era = document.getElementById("atlasEra");
       if (era) era.addEventListener("change", function () { atlasEra = era.value; atlasRefresh(); });
-      var jsel = document.getElementById("atlasJourney");
-      if (jsel) jsel.addEventListener("change", function () { atlasJourney = jsel.value; atlasRefresh(); });
+      var jbox = document.getElementById("atlasJourneyBox");
+      if (jbox) jbox.addEventListener("change", function () { atlasJourney = jbox.value; atlasRefresh(); });
+      var pbox = document.getElementById("atlasPlaceBox");
+      if (pbox) pbox.addEventListener("change", function () {
+        var v = pbox.value;
+        if (!v) return;
+        var idx = parseInt(v, 10);
+        var it = null;
+        for (var k = 0; k < atlasItems.length; k++) if (atlasItems[k].placeIndex === idx) { it = atlasItems[k]; break; }
+        if (!it || it.lat === null || it.lat === undefined || it.lon === null || it.lon === undefined) return;
+        atlasTestament = "all"; atlasEra = "all"; atlasEvidence = "all"; atlasQuery = "";
+        document.querySelectorAll(".atlas-test-chip").forEach(function (x) { x.classList.toggle("active", x.getAttribute("data-t") === "all"); });
+        document.querySelectorAll(".atlas-ev-chip").forEach(function (x) { x.classList.toggle("active", x.getAttribute("data-v") === "all"); });
+        var e2 = document.getElementById("atlasEra"); if (e2) e2.value = "all";
+        var s2 = document.getElementById("atlasSearch"); if (s2) s2.value = "";
+        var mapEl = document.getElementById("atlasMap");
+        if (mapEl) { var top = mapEl.getBoundingClientRect().top + window.scrollY - 80; window.scrollTo(0, top < 0 ? 0 : top); }
+        atlasPendingFocus = idx;
+        atlasRefresh();
+      });
       document.querySelectorAll(".atlas-test-chip").forEach(function (b) {
         b.addEventListener("click", function () {
           atlasTestament = b.getAttribute("data-t");
@@ -4869,11 +4892,10 @@ function genBindInteractive(node) {
         });
         var atlasClear = document.getElementById("atlasFilterClearBtn");
         if (atlasClear) atlasClear.addEventListener("click", function () {
-          atlasTestament = "all"; atlasEra = "all"; atlasEvidence = "all"; atlasJourney = "all";
+          atlasTestament = "all"; atlasEra = "all"; atlasEvidence = "all";
           document.querySelectorAll(".atlas-test-chip").forEach(function (x) { x.classList.toggle("active", x.getAttribute("data-t") === "all"); });
           document.querySelectorAll(".atlas-ev-chip").forEach(function (x) { x.classList.toggle("active", x.getAttribute("data-v") === "all"); });
           var e2 = document.getElementById("atlasEra"); if (e2) e2.value = "all";
-          var j2 = document.getElementById("atlasJourney"); if (j2) j2.value = "all";
           atlasRefresh();
         });
       }
