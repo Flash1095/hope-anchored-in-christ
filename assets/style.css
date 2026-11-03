@@ -108,7 +108,7 @@ a:hover { color: var(--gold-dark); }
 /* Cards */
 .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; margin-top: 1rem; }
 .card {
-  background: #fff; border: 1px solid var(--line); border-radius: 16px;
+  background: #fff; border: 1px solid var(--line); border-radius: 16px; position: relative;
   padding: 1rem 1.2rem; text-decoration: none; color: inherit; display: block;
   box-shadow: 0 2px 10px rgba(27, 42, 78, 0.08);
   transition: box-shadow 0.15s, transform 0.15s;
@@ -613,6 +613,44 @@ html[data-theme="dark"] .gtn-name, html[data-theme="dark"] .gtn-head-name { fill
 .retro-home .retro-tiles .retro-tile { background: #fff; }
 .retro-home .retro-subhead { grid-column: 1 / -1; font-family: "Bebas Neue", "Arial Narrow", Impact, sans-serif; text-transform: uppercase; letter-spacing: 0.05em; color: #1B2A4E; margin: 0.8rem 0 0; font-size: 1.6rem; }
 .retro-home .retro-tile h3 { color: #1B2A4E; }
+/* Perched watercolor motifs (v227) — pure-CSS decoration layer, no JS.
+   Motifs are cut from Lorraine's own banner artworks (assets/motifs/,
+   white converted to transparent alpha). Every 6th card gets one motif,
+   rotating through 7 motifs (period 42: positions 2, 8, 14, 20, 26, 32,
+   38), so decorated boxes are never adjacent and every homepage step
+   group (4/20/7/6 tiles) gets at least one. Scopes: homepage journey
+   tiles (.retro-tiles), generic collection lists (#gridWrap), Explore
+   tiles (the page containing #exploreJump). Each motif perches
+   straddling its card's top-right edge (30px above, 34px inside, over
+   art/padding — never over titles or body text; the 14px intrusion
+   into the card above lands inside that card's 16px bottom padding).
+   Static (no motion), pointer-events none, decorative only. */
+:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+2)::after,
+:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+8)::after,
+:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+14)::after,
+:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+20)::after,
+:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+26)::after,
+:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+32)::after,
+:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+38)::after {
+  content: ""; position: absolute; top: -30px; right: 10px; width: 64px; height: 64px;
+  background-size: contain; background-repeat: no-repeat; background-position: center bottom;
+  pointer-events: none; z-index: 2;
+  filter: drop-shadow(0 6px 6px rgba(27, 42, 78, 0.35));
+}
+:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+2)::after { background-image: url("motifs/monarch.png"); }
+:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+8)::after { background-image: url("motifs/bee.png"); }
+:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+14)::after { background-image: url("motifs/flowers-banner.png"); }
+:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+20)::after { background-image: url("motifs/mantis.png"); }
+:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+26)::after { background-image: url("motifs/hummingbird.png"); }
+:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+32)::after { background-image: url("motifs/rabbit.png"); }
+:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+38)::after { background-image: url("motifs/flowers-coneflower.png"); }
+html[data-theme="dark"] :is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+2)::after,
+html[data-theme="dark"] :is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+8)::after,
+html[data-theme="dark"] :is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+14)::after,
+html[data-theme="dark"] :is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+20)::after,
+html[data-theme="dark"] :is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+26)::after,
+html[data-theme="dark"] :is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+32)::after,
+html[data-theme="dark"] :is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(42n+38)::after { filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.55)); }
 .retro-home .stats { margin: 0; }
 .retro-home .stat { background: #fff; }
 .retro-home .stat strong { font-family: "Bebas Neue", "Arial Narrow", Impact, sans-serif; font-size: 2rem; letter-spacing: 0.03em; }
