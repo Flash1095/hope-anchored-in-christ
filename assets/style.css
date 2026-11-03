@@ -613,29 +613,6 @@ html[data-theme="dark"] .gtn-name, html[data-theme="dark"] .gtn-head-name { fill
 .retro-home .retro-tiles .retro-tile { background: #fff; }
 .retro-home .retro-subhead { grid-column: 1 / -1; font-family: "Bebas Neue", "Arial Narrow", Impact, sans-serif; text-transform: uppercase; letter-spacing: 0.05em; color: #1B2A4E; margin: 0.8rem 0 0; font-size: 1.6rem; }
 .retro-home .retro-tile h3 { color: #1B2A4E; }
-/* Perched watercolor flower motifs (v228; creatures removed per Lorraine —
-   flowers only). Motifs are cut from Lorraine's own banner artworks
-   (assets/motifs/, white converted to transparent alpha). Every 6th card
-   gets one flower motif, alternating the two flower clusters (period 12:
-   positions 2, 14, 26, 38 → flowers-banner; 8, 20, 32 → flowers-coneflower),
-   so decorated boxes are never adjacent. Scopes: homepage journey
-   tiles (.retro-tiles), generic collection lists (#gridWrap), Explore
-   tiles (the page containing #exploreJump). Each motif perches
-   straddling its card's top-right edge (30px above, 34px inside, over
-   art/padding — never over titles or body text; the 14px intrusion
-   into the card above lands inside that card's 16px bottom padding).
-   Static (no motion), pointer-events none, decorative only. */
-:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(12n+2)::after,
-:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(12n+8)::after {
-  content: ""; position: absolute; top: -30px; right: 10px; width: 64px; height: 64px;
-  background-size: contain; background-repeat: no-repeat; background-position: center bottom;
-  pointer-events: none; z-index: 2;
-  filter: drop-shadow(0 6px 6px rgba(27, 42, 78, 0.35));
-}
-:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(12n+2)::after { background-image: url("motifs/flowers-banner.png"); }
-:is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(12n+8)::after { background-image: url("motifs/flowers-coneflower.png"); }
-html[data-theme="dark"] :is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(12n+2)::after,
-html[data-theme="dark"] :is(.retro-tiles > .retro-tile, #gridWrap .card-grid > .card, #app:has(#exploreJump) .card-grid > .card):nth-child(12n+8)::after { filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.55)); }
 .retro-home .stats { margin: 0; }
 .retro-home .stat { background: #fff; }
 .retro-home .stat strong { font-family: "Bebas Neue", "Arial Narrow", Impact, sans-serif; font-size: 2rem; letter-spacing: 0.03em; }
