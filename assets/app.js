@@ -11,57 +11,59 @@
       filters: [{ label: "Era", field: "Era" }, { label: "Verification", field: "VerificationStatus" }], meta: ["DateApprox", "Era"] },
     { id: "books", label: "Books of the Bible", file: "content/books.json", primary: "Book",
       blurb: "All 66 books: author, date, theme, outline, and context.",
-      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Verification", field: "VerificationStatus" }],
+      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }],
       meta: ["Testament", "Category", "DateApprox"] },
     { id: "questions", label: "Questions and Answers", file: "content/questions.json", primary: "Question",
       blurb: "Searchable Bible Q&A — short answers and full studies.",
-      filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category", "Subcategory"] },
+      filters: [{ label: "Category", field: "Category" }, { label: "Subcategory", field: "Subcategory" }, { label: "Book", field: "RelatedBook" }, { label: "Era", field: "TimelineEra" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category", "Subcategory"] },
     { id: "people", label: "Biblical People", file: "content/people.json", primary: "Name",
       blurb: "Every major person of Scripture, from Adam to the apostles.",
-      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Verification", field: "VerificationStatus" }],
+      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Book", field: "RelatedBooks" }, { label: "Place", field: "Places" }, { label: "Verification", field: "VerificationStatus" }],
       meta: ["Role", "Testament"] },
     { id: "finds", label: "Ancient Discoveries", file: "content/finds.json", primary: "FindName",
       blurb: "Archaeological finds that illuminate the Bible.",
-      filters: [{ label: "Era", field: "TimelineEra" }, { label: "Evidence", field: "EvidenceClass" }, { label: "Verification", field: "VerificationStatus" }], meta: ["DiscoveryLocation", "ArtifactDate"] },
+      filters: [{ label: "Era", field: "TimelineEra" }, { label: "Evidence", field: "EvidenceClass" }, { label: "Book", field: "RelatedBooks" }, { label: "Verification", field: "VerificationStatus" }], meta: ["DiscoveryLocation", "ArtifactDate"] },
     { id: "places", label: "Biblical Places", file: "content/places.json", primary: "Name",
       blurb: "Where the story happened, and where those places are today.",
-      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Verification", field: "VerificationStatus" }],
+      filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Book", field: "RelatedBooks" }, { label: "Verification", field: "VerificationStatus" }],
       meta: ["ModernLocation", "Testament"] },
     { id: "topics", label: "Topics and Themes", file: "content/topics.json", primary: "Topic",
       blurb: "Central topics and the great themes woven through Scripture, linking passages, people, doctrines, and questions.",
-      filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category"] },
+      filters: [{ label: "Category", field: "Category" }, { label: "Book", field: "RelatedBooks" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category"] },
     { id: "doctrines", label: "Theology and Doctrine", file: "content/doctrines.json", primary: "Doctrine",
       blurb: "What Christians believe, with biblical support and history." },
     { id: "heresies", label: "Heretical Teachings", file: "content/heresies.json", primary: "Heresy",
       blurb: "False teachings answered, with the Christian response.",
+      filters: [{ label: "Doctrine", field: "RelatedDoctrines" }],
       meta: ["Founder"] },
     { id: "wordstudies", label: "Word Studies", file: "content/wordstudies.json", primary: "Transliteration",
       blurb: "Hebrew and Greek words, with Strong's numbers and meaning.",
-      filters: [{ label: "Language", field: "Language" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Language", "StrongsNumber", "PartOfSpeech"] },
+      filters: [{ label: "Language", field: "Language" }, { label: "Part of Speech", field: "PartOfSpeech" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Language", "StrongsNumber", "PartOfSpeech"] },
     { id: "prophecies", label: "Biblical Prophecies", file: "content/prophecies.json", primary: "Prophecy",
       blurb: "What was foretold, how it was fulfilled — marked honestly.",
-      filters: [{ label: "Status", field: "FulfillmentStatus" }, { label: "Era", field: "TimelineEra" }, { label: "Verification", field: "VerificationStatus" }],
+      filters: [{ label: "Status", field: "FulfillmentStatus" }, { label: "Era", field: "TimelineEra" }, { label: "Prophet", field: "Prophet" }, { label: "Book", field: "RelatedBooks" }, { label: "Verification", field: "VerificationStatus" }],
       meta: ["Prophet", "DateApprox"] },
     { id: "typology", label: "Foreshadows of Christ", file: "content/typology.json", primary: "Type",
       blurb: "Old Testament shadows fulfilled in Christ.",
-      filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }] },
+      filters: [{ label: "Category", field: "Category" }, { label: "Book", field: "RelatedBooks" }, { label: "Verification", field: "VerificationStatus" }] },
     { id: "fallacies", label: "Logical Fallacies", file: "content/fallacies.json", primary: "Fallacy",
       blurb: "Spot bad reasoning in faith discussions — and answer graciously.",
       filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }] },
     { id: "courses", label: "Courses", file: "content/courses.json", primary: "Course",
       blurb: "Guided studies, from Foundations of Faith to Hebrew and Greek.",
-      filters: [{ label: "Level", field: "Level" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Level", "Duration"] },
+      filters: [{ label: "Level", field: "Level" }, { label: "Duration", field: "Duration" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Level", "Duration"] },
     { id: "quizzes", label: "Quizzes", file: "content/quizzes.json", primary: "Question",
     blurb: "Test what you've learned — every answer teaches.", special: "quizzes" },
   { id: "hymns", label: "Hymns", file: "content/hymns.json", primary: "Hymn",
     blurb: "Great hymns and the stories behind them — how each song was born.",
+    filters: [{ label: "Book", field: "RelatedBooks" }, { label: "Topic", field: "RelatedTopics" }],
     meta: ["Author", "Year"] },
   { id: "nature", label: "Nature & Creation", file: "content/nature.json", primary: "Name",
     blurb: "Birds, plants, and animals that point to the Creator — with photos from Lorraine.",
     meta: ["Category"] },
   { id: "apologetics", label: "Defend your faith", file: "content/apologetics.json", primary: "Argument",
     blurb: "Why Christianity best explains reality — the cumulative case from philosophy, science, history, and experience.",
-    filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category"] },
+    filters: [{ label: "Category", field: "Category" }, { label: "Event", field: "RelatedEvents" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category"] },
   { id: "objections", label: "Objections & Answers", file: "content/objections.json", primary: "Objection",
     blurb: "Honest objections from atheists, Muslims, Jews, and others — stated fairly and answered with grace and truth.",
     filters: [{ label: "Worldview", field: "Worldview" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Worldview"] },
@@ -78,7 +80,7 @@
     filters: [{ label: "Platform", field: "Platform" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Platform"] },
   { id: "stories", label: "Biblical Stories & Events", file: "content/stories.json", primary: "Story",
     blurb: "Beloved Bible stories and events retold in detail — with the people, the meaning, and what they mean for us today.",
-    filters: [{ label: "Testament", field: "Testament" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Testament"] },
+    filters: [{ label: "Testament", field: "Testament" }, { label: "Era", field: "TimelineEra" }, { label: "Book", field: "RelatedBooks" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Testament"] },
   { id: "hermeneutics", label: "Biblical Hermeneutics", file: "content/hermeneutics.json", primary: "Principle",
     blurb: "How to interpret Scripture rightly — context, literary genres, literary devices, and principles for handling God's Word with care.",
     filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category"] },
@@ -96,13 +98,13 @@
     filters: [{ label: "Region", field: "Region" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Region"] },
   { id: "manuscripts", label: "Dead Sea Scrolls Manuscripts", file: "content/manuscripts.json", primary: "Manuscript",
     blurb: "Qumran manuscripts of the Bible — the best-preserved copy of each book, with its cave, date, language, material, and the passages that actually survive. Search by book, cave, period, language, or completeness.",
-    filters: [{ label: "Book", field: "Work" }, { label: "Cave", field: "Cave" }, { label: "Period", field: "Period" }, { label: "Language", field: "Language" }, { label: "Category", field: "Category" }, { label: "Completeness", field: "Completeness" }, { label: "Verification", field: "VerificationStatus" }], meta: ["ManuscriptID", "Cave", "DateApprox"] },
+    filters: [{ label: "Book", field: "Work" }, { label: "Cave", field: "Cave" }, { label: "Period", field: "Period" }, { label: "Language", field: "Language" }, { label: "Category", field: "Category" }, { label: "Completeness", field: "Completeness" }, { label: "Script", field: "Script" }, { label: "Verification", field: "VerificationStatus" }], meta: ["ManuscriptID", "Cave", "DateApprox"] },
     { id: "god", label: "God", file: "content/god.json", primary: "Name",
       blurb: "The names, titles, attributes, roles, and actions of God — who he is, what he is called, and what he does.",
-      filters: [{ label: "Category", field: "Category" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category", "Subject"] },
+      filters: [{ label: "Category", field: "Category" }, { label: "Subject", field: "Subject" }, { label: "Verification", field: "VerificationStatus" }], meta: ["Category", "Subject"] },
     { id: "promises", label: "Promises of God", file: "content/promises.json", primary: "Title",
       blurb: "Every promise of God in Scripture — what he pledged, on what condition, and where it was fulfilled.",
-      filters: [{ label: "Covenant", field: "Covenant" }, { label: "Verification", field: "VerificationStatus" }] },
+      filters: [{ label: "Covenant", field: "Covenant" }, { label: "Book", field: "RelatedBooks" }, { label: "Verification", field: "VerificationStatus" }] },
     { id: "identity", label: "Identity in Christ", file: "content/identity.json", primary: "Title",
       blurb: "Who you are in Christ — and what changes because of it.",
       filters: [{ label: "Verification", field: "VerificationStatus" }] },
@@ -111,7 +113,7 @@
       filters: [{ label: "Verification", field: "VerificationStatus" }], meta: ["FromPlace", "ToPlace"] },
     { id: "laws", label: "Biblical Laws and Commands", file: "content/laws.json", primary: "Command",
       blurb: "God's laws and commands, from Sinai to the Sermon on the Mount — what each one says, and how Christ fulfills it.",
-      filters: [{ label: "Category", field: "Category" }, { label: "Duration", field: "Duration" }, { label: "Verification", field: "VerificationStatus" }] },
+      filters: [{ label: "Category", field: "Category" }, { label: "Duration", field: "Duration" }, { label: "Book", field: "RelatedBooks" }, { label: "Topic", field: "RelatedTopics" }, { label: "Verification", field: "VerificationStatus" }] },
 ];
   /* Explore tile order, as a study journey: the story first, then the
      world behind it, then deeper study, then discernment, then the
@@ -208,7 +210,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "229";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "230";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -5527,9 +5529,17 @@ function genBindInteractive(node) {
   }
 
   /* ---------- router + boot ---------- */
-  /* ---------- read aloud (Listen, v229) ----------
+  /* ---------- read aloud (Listen, v229; realistic-voice preference v230) ----------
      Browser-native speechSynthesis: no audio files, no service, no cost,
-     no account. The Listen button is mounted ONLY on reading pages
+     no account. Voice: the most human-sounding built-in English voice
+     available — Natural / Neural / WaveNet / Premium / Enhanced names
+     first, then Google US / UK English, then any en-US / en-GB voice,
+     then the browser default voice when it is English; a non-English
+     voice is never assigned. The voice is chosen fresh for EVERY
+     utterance (not once at mount time) because browsers load voices
+     asynchronously and getVoices() often returns empty on first call;
+     a voiceschanged listener primes the list so late-loaded voices get
+     used by the next chunk. The Listen button is mounted ONLY on reading pages
      (blog post detail, Bible chapter, story detail, storybook page,
      generic entry detail) — never on list, Explore, home, Atlas,
      Genealogy, Timeline, quiz, Store, Give, or Connect pages, because
@@ -5596,13 +5606,49 @@ function genBindInteractive(node) {
     if (cur) chunks.push(cur);
     return chunks;
   }
-  function pickEnglishVoice() {
-    if (!listenSynth || !listenSynth.getVoices) return null;
-    var voices = listenSynth.getVoices() || [], i;
+  /* Pick the most human-sounding built-in English voice from a voice
+     list, in preference order: (1) an English voice whose name contains
+     natural, neural, wavenet, premium, or enhanced — the device's most
+     human-sounding voices (e.g. Microsoft Natural, Google natural
+     voices) — preferring en-US / en-GB within that tier; (2) Google US
+     English / Google UK English; (3) any other en-US or en-GB voice;
+     (4) the browser default voice, but only when it is English. A
+     non-English voice is never returned, so the caller leaves the
+     utterance voice unset (browser default) rather than assigning a
+     foreign voice to English text. */
+  function pickBestVoiceFrom(voices) {
+    var i, v, lang, name, isUSGB, natural;
+    var tier1 = null, tier1other = null, tier2 = null, tier3 = null, tier4 = null;
     for (i = 0; i < voices.length; i++) {
-      if (voices[i].lang && voices[i].lang.toLowerCase().indexOf("en") === 0) return voices[i];
+      v = voices[i];
+      lang = String(v.lang || "").toLowerCase().replace("_", "-");
+      if (lang.indexOf("en") !== 0) continue;
+      isUSGB = (lang === "en-us" || lang === "en-gb");
+      name = String(v.name || "").toLowerCase();
+      natural = /natural|neural|wavenet|premium|enhanced/.test(name);
+      if (natural && isUSGB && !tier1) tier1 = v;
+      else if (natural && !tier1other) tier1other = v;
+      else if (/google\s+(us|uk)\s+english/.test(name) && !tier2) tier2 = v;
+      else if (isUSGB && !tier3) tier3 = v;
+      else if (v.default && !tier4) tier4 = v;
     }
-    return null;
+    return tier1 || tier1other || tier2 || tier3 || tier4 || null;
+  }
+  /* Chosen at SPEAK time (called from speakNext for every utterance),
+     so voices that load late are picked up by the next chunk. */
+  function pickBestVoice() {
+    if (!listenSynth || !listenSynth.getVoices) return null;
+    try { return pickBestVoiceFrom(listenSynth.getVoices() || []); } catch (e) { return null; }
+  }
+  /* Prime the voice list: some browsers only populate getVoices() after
+     the voiceschanged event fires. Selection still happens per utterance,
+     so this is a warm-up, not the selection point. */
+  if (listenSynth) {
+    try {
+      var primeListenVoices = function () { try { listenSynth.getVoices(); } catch (e) {} };
+      if (listenSynth.addEventListener) listenSynth.addEventListener("voiceschanged", primeListenVoices);
+      else listenSynth.onvoiceschanged = primeListenVoices;
+    } catch (e) {}
   }
   function stopReading() {
     listenActive = false;
@@ -5616,8 +5662,9 @@ function genBindInteractive(node) {
     var epoch = listenEpoch, u;
     try { u = new SpeechSynthesisUtterance(listenQueue[listenIndex]); }
     catch (e) { stopReading(); return; }
-    var v = pickEnglishVoice();
-    if (v) u.voice = v;
+    var v = pickBestVoice();
+    if (v) { u.voice = v; u.lang = v.lang; }
+    else u.lang = "en-US";
     u.rate = listenRate;
     u.onend = function () {
       if (epoch !== listenEpoch || !listenActive) return;
