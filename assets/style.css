@@ -185,6 +185,16 @@ a:hover { color: var(--gold-dark); }
   border-radius: 999px; padding: 0.25rem 0.8rem; cursor: pointer; font-size: 0.9rem;
 }
 .chip.active { background: var(--gold); color: #fff; border-color: var(--gold); }
+/* Filter menu (v225): one button + collapsible panel on every generic
+   list page. Panel stacks full-width; native selects keep long value
+   lists usable. */
+.filter-menu { display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+.filter-panel { display: none; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 1rem 1.2rem; box-shadow: 0 2px 10px rgba(27,42,78,0.08); width: 100%; max-width: 520px; box-sizing: border-box; }
+.filter-panel.open { display: flex; flex-direction: column; gap: 0.7rem; }
+.filter-panel p { margin: 0; }
+.filter-field { display: flex; flex-direction: column; gap: 0.25rem; font-weight: 700; color: var(--navy); }
+.filter-field select { padding: 0.5rem 0.8rem; border: 1px solid var(--line); border-radius: 999px; font-size: 1rem; background: #fff; color: var(--navy); width: 100%; }
+.filter-count { color: var(--navy); }
 #quizCategorySelect, #exploreJump {
   padding: 0.5rem 0.8rem; border: 1px solid var(--line); border-radius: 999px;
   font-size: 1rem; background: #fff; color: var(--navy); max-width: 520px;
@@ -546,6 +556,9 @@ html[data-theme="dark"] .option-btn, html[data-theme="dark"] .gen-view-toggle bu
 html[data-theme="dark"] .gen-tree-ctrls button, html[data-theme="dark"] .nav-toggle {
   background: #16213f; color: #edf0f7;
 }
+html[data-theme="dark"] .filter-panel { background: #16213f; }
+html[data-theme="dark"] .filter-field, html[data-theme="dark"] .filter-count { color: #eef1f7; }
+html[data-theme="dark"] .filter-field select { background: #16213f; color: #edf0f7; }
 html[data-theme="dark"] .theme-toggle:hover { background: var(--cream); }
 /* Verse band + banner title: light gradients become deep navy ones. */
 html[data-theme="dark"] .verse-band {

@@ -208,7 +208,7 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "224";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "225";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -688,35 +688,85 @@
     if (id === "objections") html += '<p><a class="btn" href="#/objections/examine">Examine the Evidence &rarr;</a> Pick an objection and work through it step by step — the passages, the evidence and context, the competing arguments, and the conclusion.</p>';
     html += '<div class="controls"><input type="search" id="listSearch" placeholder="Search ' +
       esc(c.label.toLowerCase()) + '…" value="' + esc(state.q) + '">';
-    filterDefs.forEach(function (f) {
-      html += '<div class="chips"><span class="chip-label">' + esc(f.label) + ":</span>";
-      html += '<button class="chip' + (state.filters[f.field] === "" ? " active" : "") +
-        '" data-filter="' + esc(f.field) + '" data-value="">All</button>';
-      values[f.field].forEach(function (v) {
-        var cls = f.field === "FulfillmentStatus" ? statusClass(v) : "chip";
-        var active = state.filters[f.field] === v ? " active" : "";
-        html += '<button class="' + cls + active + '" data-filter="' + esc(f.field) +
-          '" data-value="' + esc(v) + '">' + esc(v) + "</button>";
+    /* Filter menu (v225): ONE button + panel replaces the old per-filter
+       chip rows. Same filter defs, same value options (values[] above,
+       same splitList computation), same state + ?f_ URL params — only
+       the presentation changed. Native selects keep long value lists
+       (Region across 1,048 places, TimelineEra across 3,029 people)
+       usable without rendering thousand-item lists. */
+    function activeFilterCount() {
+      var n = 0;
+      filterDefs.forEach(function (f) { if (state.filters[f.field]) n++; });
+      return n;
+    }
+    if (filterDefs.length) {
+      var fc = activeFilterCount();
+      html += '<div class="filter-menu"><button class="btn" id="filterMenuBtn" type="button" ' +
+        'aria-expanded="false" aria-controls="filterPanel">Filter' + (fc ? " (" + fc + ")" : "") + "</button>" +
+        '<div class="filter-panel" id="filterPanel">';
+      filterDefs.forEach(function (f) {
+        html += '<label class="filter-field"><span>' + esc(f.label) + "</span>" +
+          '<select data-filter-select="' + esc(f.field) + '"><option value="">All ' + esc(f.label) + "</option>";
+        values[f.field].forEach(function (v) {
+          html += '<option value="' + esc(v) + '"' + (state.filters[f.field] === v ? " selected" : "") + ">" + esc(v) + "</option>";
+        });
+        html += "</select></label>";
       });
-      html += "</div>";
-    });
+      html += '<p class="filter-count" id="filterCount"></p>' +
+        '<p><button class="btn" id="filterClearBtn" type="button">Clear all filters</button></p>' +
+        "</div></div>";
+    }
     html += '</div><div id="gridWrap"></div>';
     app.innerHTML = html;
     renderGrid();
+    /* Keeps the menu's count + button label in step with the grid after
+       every search keystroke, select change, or clear. The panel itself
+       lives outside #gridWrap, so open/closed state and select values
+       survive re-renders. */
+    function refreshFilterUi() {
+      var countEl = document.getElementById("filterCount");
+      if (countEl) countEl.textContent = filteredRows().length + " entries match";
+      var btn = document.getElementById("filterMenuBtn");
+      if (btn) {
+        var n = activeFilterCount();
+        btn.textContent = "Filter" + (n ? " (" + n + ")" : "");
+      }
+    }
+    refreshFilterUi();
     document.getElementById("listSearch").addEventListener("input", function (e) {
       state.q = e.target.value;
       syncUrl();
       renderGrid();
+      refreshFilterUi();
     });
-    app.querySelectorAll("[data-filter]").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var f = btn.getAttribute("data-filter"), v = btn.getAttribute("data-value");
-        state.filters[f] = v;
-        btn.parentNode.querySelectorAll("[data-filter]").forEach(function (b) {
-          b.classList.toggle("active", b.getAttribute("data-value") === v);
-        });
+    var menuBtn = document.getElementById("filterMenuBtn");
+    var panel = document.getElementById("filterPanel");
+    if (menuBtn && panel) {
+      menuBtn.addEventListener("click", function () {
+        var open = panel.classList.toggle("open");
+        menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      panel.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          panel.classList.remove("open");
+          menuBtn.setAttribute("aria-expanded", "false");
+          menuBtn.focus();
+        }
+      });
+      document.getElementById("filterClearBtn").addEventListener("click", function () {
+        filterDefs.forEach(function (f) { state.filters[f.field] = ""; });
+        panel.querySelectorAll("[data-filter-select]").forEach(function (s) { s.value = ""; });
         syncUrl();
         renderGrid();
+        refreshFilterUi();
+      });
+    }
+    app.querySelectorAll("[data-filter-select]").forEach(function (sel) {
+      sel.addEventListener("change", function () {
+        state.filters[sel.getAttribute("data-filter-select")] = sel.value;
+        syncUrl();
+        renderGrid();
+        refreshFilterUi();
       });
     });
     window.scrollTo(0, 0);
