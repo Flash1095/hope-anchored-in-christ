@@ -1,0 +1,1787 @@
+{
+  "series": "The Havenbrook Chronicles",
+  "setting": "Havenbrook, a small fictional Texas town",
+  "headquarters": "The Lantern House Research Center & Museum",
+  "invention": "The Gateway — a teleportation machine allowing characters to explore locations around the world.",
+  "themes": [
+    "Christianity",
+    "theology",
+    "apologetics",
+    "archaeology",
+    "science",
+    "history",
+    "philosophy",
+    "politics",
+    "law",
+    "medicine",
+    "family",
+    "friendship",
+    "mystery",
+    "adventure",
+    "critical thinking",
+    "the pursuit of truth"
+  ],
+  "parentProject": "Hope Anchored in Christ",
+  "families": [
+    {
+      "name": "Bennett",
+      "members": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "connections": [
+        "Professor Gabriel Mercer",
+        "Naomi Price",
+        "the museum research team"
+      ],
+      "animals": []
+    },
+    {
+      "name": "Cole",
+      "members": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "connections": [
+        "Henry Collins",
+        "Hank Morales",
+        "Clara Bennett",
+        "Daniel Reyes",
+        "Lily Harper"
+      ],
+      "animals": [
+        86
+      ]
+    },
+    {
+      "name": "Reyes",
+      "members": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "connections": [
+        "Isaac Romero",
+        "Pastor Elijah Carter",
+        "Clara Bennett",
+        "Benji Cole"
+      ],
+      "animals": []
+    },
+    {
+      "name": "Brooks",
+      "members": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "connections": [
+        "Detective Mara Ellis",
+        "Dr. Hannah Foster",
+        "Representative David Callahan"
+      ],
+      "animals": []
+    },
+    {
+      "name": "Finch",
+      "members": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "connections": [
+        "Caleb Montgomery",
+        "Emma Wilson",
+        "Benji Cole"
+      ],
+      "animals": [
+        88
+      ]
+    },
+    {
+      "name": "Carter",
+      "members": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "connections": [
+        "Ruth Thompson",
+        "Dr. Nathaniel Price",
+        "Lucas Bennett",
+        "Grace Mitchell"
+      ],
+      "animals": []
+    },
+    {
+      "name": "Mercer",
+      "members": [
+        25,
+        26
+      ],
+      "connections": [
+        "Dr. Simon Wren",
+        "Dr. Miriam Vale",
+        "Dr. Evelyn Hart",
+        "Clara Bennett",
+        "the museum research team"
+      ],
+      "animals": [
+        87
+      ]
+    },
+    {
+      "name": "Wren",
+      "members": [
+        27,
+        28
+      ],
+      "connections": [
+        "Professor Mercer",
+        "Noah Kim",
+        "Naomi Chen",
+        "Professor Elias Rowan"
+      ],
+      "animals": []
+    },
+    {
+      "name": "Hayes",
+      "members": [
+        29,
+        30
+      ],
+      "connections": [
+        "Councilwoman Isabel Navarro",
+        "Councilman Samuel Parks",
+        "Sofia Alvarez"
+      ],
+      "animals": []
+    },
+    {
+      "name": "Navarro",
+      "members": [
+        31,
+        32,
+        33
+      ],
+      "connections": [
+        "Mayor Eleanor Hayes",
+        "Naomi Chen",
+        "Mateo Rivera",
+        "Hank Morales"
+      ],
+      "animals": []
+    },
+    {
+      "name": "Lane",
+      "members": [
+        34,
+        35
+      ],
+      "connections": [
+        "Professor Mercer",
+        "Grace Mitchell"
+      ],
+      "animals": []
+    },
+    {
+      "name": "Mitchell",
+      "members": [
+        36,
+        37
+      ],
+      "connections": [
+        "Dr. Lydia Rhodes",
+        "Pastor Elijah Carter",
+        "Teresa Reyes"
+      ],
+      "animals": []
+    },
+    {
+      "name": "Parks",
+      "members": [
+        38,
+        39
+      ],
+      "connections": [
+        "Sofia Alvarez",
+        "Dr. Amara Okafor",
+        "Dr. Hannah Foster"
+      ],
+      "animals": []
+    },
+    {
+      "name": "Foster",
+      "members": [
+        40,
+        41
+      ],
+      "connections": [
+        "Lila Brooks",
+        "Professor Gabriel Mercer",
+        "Professor Aaron Stein"
+      ],
+      "animals": []
+    },
+    {
+      "name": "Ellis",
+      "members": [
+        42,
+        43
+      ],
+      "connections": [
+        "Officer Caleb Ruiz",
+        "Tessa Quinn",
+        "Julian Brooks"
+      ],
+      "animals": []
+    },
+    {
+      "name": "Whitfield",
+      "members": [
+        44,
+        45
+      ],
+      "connections": [
+        "Mayor Eleanor Hayes",
+        "Julian Brooks",
+        "Detective Mara Ellis"
+      ],
+      "animals": []
+    },
+    {
+      "name": "Quinn",
+      "members": [
+        46,
+        47
+      ],
+      "connections": [
+        "Detective Mara Ellis",
+        "Naomi Chen",
+        "Mateo Rivera"
+      ],
+      "animals": []
+    },
+    {
+      "name": "Morgan",
+      "members": [
+        48,
+        49
+      ],
+      "connections": [
+        "Oliver Greene",
+        "Dr. Amara Okafor",
+        "County Commissioner Marcus Bell"
+      ],
+      "animals": []
+    },
+    {
+      "name": "Collins",
+      "members": [
+        50,
+        51
+      ],
+      "connections": [
+        "Hank Morales",
+        "Dr. Lydia Rhodes",
+        "Amelia Mitchell"
+      ],
+      "animals": []
+    }
+  ],
+  "teams": [
+    {
+      "name": "Main Adventure Team",
+      "members": [
+        25,
+        27,
+        3,
+        11,
+        7,
+        52,
+        53,
+        26
+      ]
+    },
+    {
+      "name": "Young Investigators",
+      "members": [
+        3,
+        11,
+        7,
+        82,
+        20,
+        85
+      ]
+    },
+    {
+      "name": "Teenage Friends and Discussion Group",
+      "members": [
+        3,
+        11,
+        15,
+        83,
+        33,
+        82
+      ]
+    },
+    {
+      "name": "Archaeology and Historical Research Team",
+      "members": [
+        25,
+        27,
+        52,
+        53,
+        55,
+        57,
+        41,
+        17,
+        54,
+        26
+      ]
+    },
+    {
+      "name": "Science, Technology, and Mathematics Team",
+      "members": [
+        65,
+        39,
+        66,
+        28,
+        71,
+        68,
+        70,
+        47,
+        69,
+        49
+      ]
+    },
+    {
+      "name": "Medical and Psychology Team",
+      "members": [
+        67,
+        51,
+        40,
+        72,
+        37,
+        10
+      ]
+    },
+    {
+      "name": "Law, Politics, and Government",
+      "members": [
+        29,
+        31,
+        44,
+        38,
+        59,
+        60,
+        45,
+        13,
+        42,
+        58
+      ]
+    },
+    {
+      "name": "Arts, Music, Literature, and Media",
+      "members": [
+        74,
+        2,
+        4,
+        73,
+        46,
+        35,
+        82
+      ]
+    },
+    {
+      "name": "Faith, Theology, and Philosophy",
+      "members": [
+        22,
+        62,
+        27,
+        63,
+        55,
+        64,
+        83,
+        11
+      ]
+    },
+    {
+      "name": "Business Owners and Skilled Workers",
+      "members": [
+        5,
+        9,
+        14,
+        21,
+        36,
+        35,
+        77,
+        78,
+        44,
+        76,
+        50,
+        32,
+        66,
+        70,
+        81
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "number": 1,
+      "name": "Walter Bennett",
+      "age": null,
+      "role": "Antique restorer",
+      "family": "Bennett",
+      "description": "Antique restorer; father",
+      "connections": [
+        "Professor Gabriel Mercer",
+        "Naomi Price",
+        "the museum research team"
+      ],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 2,
+      "name": "Olivia Bennett",
+      "age": 44,
+      "role": "Children's book illustrator",
+      "family": "Bennett",
+      "description": "Children's book illustrator; mother",
+      "connections": [
+        "Professor Gabriel Mercer",
+        "Naomi Price",
+        "the museum research team"
+      ],
+      "groups": [
+        "Arts, Music, Literature, and Media"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 3,
+      "name": "Clara Bennett",
+      "age": 14,
+      "role": "Student and aspiring archaeologist",
+      "family": "Bennett",
+      "description": "Student and aspiring archaeologist; daughter",
+      "connections": [
+        "Professor Gabriel Mercer",
+        "Naomi Price",
+        "the museum research team"
+      ],
+      "groups": [
+        "Main Adventure Team",
+        "Young Investigators",
+        "Teenage Friends and Discussion Group"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 4,
+      "name": "Lucas Bennett",
+      "age": null,
+      "role": "Musician",
+      "family": "Bennett",
+      "description": "Musician; son",
+      "connections": [
+        "Professor Gabriel Mercer",
+        "Naomi Price",
+        "the museum research team"
+      ],
+      "groups": [
+        "Arts, Music, Literature, and Media"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 5,
+      "name": "Ethan Cole",
+      "age": 41,
+      "role": "Hardware store owner",
+      "family": "Cole",
+      "description": "Hardware store owner; father",
+      "connections": [
+        "Henry Collins",
+        "Hank Morales",
+        "Clara Bennett",
+        "Daniel Reyes",
+        "Lily Harper"
+      ],
+      "groups": [
+        "Business Owners and Skilled Workers"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 6,
+      "name": "Hannah Cole",
+      "age": 39,
+      "role": "Elementary school teacher",
+      "family": "Cole",
+      "description": "Elementary school teacher; mother",
+      "connections": [
+        "Henry Collins",
+        "Hank Morales",
+        "Clara Bennett",
+        "Daniel Reyes",
+        "Lily Harper"
+      ],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 7,
+      "name": "Benjamin \"Benji\" Cole",
+      "age": 11,
+      "role": "Student and aspiring detective",
+      "family": "Cole",
+      "description": "Student and aspiring detective; son",
+      "connections": [
+        "Henry Collins",
+        "Hank Morales",
+        "Clara Bennett",
+        "Daniel Reyes",
+        "Lily Harper"
+      ],
+      "groups": [
+        "Main Adventure Team",
+        "Young Investigators"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 8,
+      "name": "Sophie Cole",
+      "age": 9,
+      "role": "Student and animal enthusiast",
+      "family": "Cole",
+      "description": "Student and animal enthusiast; daughter",
+      "connections": [
+        "Henry Collins",
+        "Hank Morales",
+        "Clara Bennett",
+        "Daniel Reyes",
+        "Lily Harper"
+      ],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 9,
+      "name": "Rafael Reyes",
+      "age": 45,
+      "role": "Auto repair shop owner",
+      "family": "Reyes",
+      "description": "Auto repair shop owner; father",
+      "connections": [
+        "Isaac Romero",
+        "Pastor Elijah Carter",
+        "Clara Bennett",
+        "Benji Cole"
+      ],
+      "groups": [
+        "Business Owners and Skilled Workers"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 10,
+      "name": "Teresa Reyes",
+      "age": 43,
+      "role": "Social worker",
+      "family": "Reyes",
+      "description": "Social worker; mother",
+      "connections": [
+        "Isaac Romero",
+        "Pastor Elijah Carter",
+        "Clara Bennett",
+        "Benji Cole"
+      ],
+      "groups": [
+        "Medical and Psychology Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 11,
+      "name": "Daniel Reyes",
+      "age": 15,
+      "role": "Student and thoughtful skeptic",
+      "family": "Reyes",
+      "description": "Student and thoughtful skeptic; son",
+      "connections": [
+        "Isaac Romero",
+        "Pastor Elijah Carter",
+        "Clara Bennett",
+        "Benji Cole"
+      ],
+      "groups": [
+        "Main Adventure Team",
+        "Young Investigators",
+        "Teenage Friends and Discussion Group",
+        "Faith, Theology, and Philosophy"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 12,
+      "name": "Nico Reyes",
+      "age": 8,
+      "role": "Student interested in science",
+      "family": "Reyes",
+      "description": "Student interested in science; younger son",
+      "connections": [
+        "Isaac Romero",
+        "Pastor Elijah Carter",
+        "Clara Bennett",
+        "Benji Cole"
+      ],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 13,
+      "name": "Julian Brooks",
+      "age": null,
+      "role": "Attorney and legal advocate",
+      "family": "Brooks",
+      "description": "Attorney and legal advocate; father",
+      "connections": [
+        "Detective Mara Ellis",
+        "Dr. Hannah Foster",
+        "Representative David Callahan"
+      ],
+      "groups": [
+        "Law, Politics, and Government"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 14,
+      "name": "Lila Brooks",
+      "age": null,
+      "role": "Dog groomer and owner of Paws & Polish",
+      "family": "Brooks",
+      "description": "Dog groomer and owner of Paws & Polish; mother",
+      "connections": [
+        "Detective Mara Ellis",
+        "Dr. Hannah Foster",
+        "Representative David Callahan"
+      ],
+      "groups": [
+        "Business Owners and Skilled Workers"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 15,
+      "name": "Abigail Brooks",
+      "age": 15,
+      "role": "Student interested in law, logic, and justice",
+      "family": "Brooks",
+      "description": "Student interested in law, logic, and justice; daughter",
+      "connections": [
+        "Detective Mara Ellis",
+        "Dr. Hannah Foster",
+        "Representative David Callahan"
+      ],
+      "groups": [
+        "Teenage Friends and Discussion Group"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 16,
+      "name": "Owen Brooks",
+      "age": 9,
+      "role": "Student and aspiring veterinarian",
+      "family": "Brooks",
+      "description": "Student and aspiring veterinarian; son",
+      "connections": [
+        "Detective Mara Ellis",
+        "Dr. Hannah Foster",
+        "Representative David Callahan"
+      ],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 17,
+      "name": "Edith Finch",
+      "age": null,
+      "role": "Librarian and archivist",
+      "family": "Finch",
+      "description": "Librarian and archivist; grandmother",
+      "connections": [
+        "Caleb Montgomery",
+        "Emma Wilson",
+        "Benji Cole"
+      ],
+      "groups": [
+        "Archaeology and Historical Research Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 18,
+      "name": "Natalie Finch",
+      "age": 38,
+      "role": "Community college literature lecturer",
+      "family": "Finch",
+      "description": "Community college literature lecturer; mother",
+      "connections": [
+        "Caleb Montgomery",
+        "Emma Wilson",
+        "Benji Cole"
+      ],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 19,
+      "name": "David Finch",
+      "age": 40,
+      "role": "Postal worker",
+      "family": "Finch",
+      "description": "Postal worker; father",
+      "connections": [
+        "Caleb Montgomery",
+        "Emma Wilson",
+        "Benji Cole"
+      ],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 20,
+      "name": "Oliver Finch",
+      "age": 12,
+      "role": "Student interested in books, mythology, and history",
+      "family": "Finch",
+      "description": "Student interested in books, mythology, and history; son",
+      "connections": [
+        "Caleb Montgomery",
+        "Emma Wilson",
+        "Benji Cole"
+      ],
+      "groups": [
+        "Young Investigators"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 21,
+      "name": "Ruby Carter",
+      "age": null,
+      "role": "Grocery store owner",
+      "family": "Carter",
+      "description": "Grocery store owner; grandmother; Elijah's mother",
+      "connections": [
+        "Ruth Thompson",
+        "Dr. Nathaniel Price",
+        "Lucas Bennett",
+        "Grace Mitchell"
+      ],
+      "groups": [
+        "Business Owners and Skilled Workers"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 22,
+      "name": "Elijah Carter",
+      "age": null,
+      "role": "Pastor and spiritual mentor",
+      "family": "Carter",
+      "description": "Pastor and spiritual mentor; Ruby's son",
+      "connections": [
+        "Ruth Thompson",
+        "Dr. Nathaniel Price",
+        "Lucas Bennett",
+        "Grace Mitchell"
+      ],
+      "groups": [
+        "Faith, Theology, and Philosophy"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 23,
+      "name": "Leah Carter",
+      "age": 42,
+      "role": "Church choir director",
+      "family": "Carter",
+      "description": "Church choir director; Elijah's wife",
+      "connections": [
+        "Ruth Thompson",
+        "Dr. Nathaniel Price",
+        "Lucas Bennett",
+        "Grace Mitchell"
+      ],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 24,
+      "name": "Zoe Carter",
+      "age": 12,
+      "role": "Student and singer",
+      "family": "Carter",
+      "description": "Student and singer; Elijah and Leah's daughter",
+      "connections": [
+        "Ruth Thompson",
+        "Dr. Nathaniel Price",
+        "Lucas Bennett",
+        "Grace Mitchell"
+      ],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 25,
+      "name": "Gabriel Mercer",
+      "age": null,
+      "role": "Retired archaeologist, historian, and mentor",
+      "family": "Mercer",
+      "description": "Retired archaeologist, historian, and mentor; uncle",
+      "connections": [
+        "Dr. Simon Wren",
+        "Dr. Miriam Vale",
+        "Dr. Evelyn Hart",
+        "Clara Bennett",
+        "the museum research team"
+      ],
+      "groups": [
+        "Main Adventure Team",
+        "Archaeology and Historical Research Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 26,
+      "name": "Charlotte Mercer",
+      "age": 29,
+      "role": "Museum assistant and historian",
+      "family": "Mercer",
+      "description": "Museum assistant and historian; niece",
+      "connections": [
+        "Dr. Simon Wren",
+        "Dr. Miriam Vale",
+        "Dr. Evelyn Hart",
+        "Clara Bennett",
+        "the museum research team"
+      ],
+      "groups": [
+        "Main Adventure Team",
+        "Archaeology and Historical Research Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 27,
+      "name": "Simon Wren",
+      "age": null,
+      "role": "Linguist, researcher, and Christian apologist",
+      "family": "Wren",
+      "description": "Linguist, researcher, and Christian apologist; older brother",
+      "connections": [
+        "Professor Mercer",
+        "Noah Kim",
+        "Naomi Chen",
+        "Professor Elias Rowan"
+      ],
+      "groups": [
+        "Main Adventure Team",
+        "Archaeology and Historical Research Team",
+        "Faith, Theology, and Philosophy"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 28,
+      "name": "Theo Wren",
+      "age": 34,
+      "role": "Physics teacher",
+      "family": "Wren",
+      "description": "Physics teacher; younger brother",
+      "connections": [
+        "Professor Mercer",
+        "Noah Kim",
+        "Naomi Chen",
+        "Professor Elias Rowan"
+      ],
+      "groups": [
+        "Science, Technology, and Mathematics Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 29,
+      "name": "Eleanor Hayes",
+      "age": null,
+      "role": "Mayor of Havenbrook",
+      "family": "Hayes",
+      "description": "Mayor of Havenbrook; wife",
+      "connections": [
+        "Councilwoman Isabel Navarro",
+        "Councilman Samuel Parks",
+        "Sofia Alvarez"
+      ],
+      "groups": [
+        "Law, Politics, and Government"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 30,
+      "name": "Martin Hayes",
+      "age": 62,
+      "role": "Retired high school principal",
+      "family": "Hayes",
+      "description": "Retired high school principal; husband",
+      "connections": [
+        "Councilwoman Isabel Navarro",
+        "Councilman Samuel Parks",
+        "Sofia Alvarez"
+      ],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 31,
+      "name": "Isabel Navarro",
+      "age": 42,
+      "role": "Town councilmember and former small-business owner",
+      "family": "Navarro",
+      "description": "Town councilmember and former small-business owner; mother",
+      "connections": [
+        "Mayor Eleanor Hayes",
+        "Naomi Chen",
+        "Mateo Rivera",
+        "Hank Morales"
+      ],
+      "groups": [
+        "Law, Politics, and Government"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 32,
+      "name": "Javier Navarro",
+      "age": 44,
+      "role": "Electrician and electrical contractor",
+      "family": "Navarro",
+      "description": "Electrician and electrical contractor; father",
+      "connections": [
+        "Mayor Eleanor Hayes",
+        "Naomi Chen",
+        "Mateo Rivera",
+        "Hank Morales"
+      ],
+      "groups": [
+        "Business Owners and Skilled Workers"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 33,
+      "name": "Rosa Navarro",
+      "age": 13,
+      "role": "Student interested in robotics and engineering",
+      "family": "Navarro",
+      "description": "Student interested in robotics and engineering; daughter",
+      "connections": [
+        "Mayor Eleanor Hayes",
+        "Naomi Chen",
+        "Mateo Rivera",
+        "Hank Morales"
+      ],
+      "groups": [
+        "Teenage Friends and Discussion Group"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 34,
+      "name": "Robert Lane",
+      "age": 68,
+      "role": "Retired baker",
+      "family": "Lane",
+      "description": "Retired baker; father",
+      "connections": [
+        "Professor Mercer",
+        "Grace Mitchell"
+      ],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 35,
+      "name": "Maggie Lane",
+      "age": null,
+      "role": "Baker",
+      "family": "Lane",
+      "description": "Baker; daughter",
+      "connections": [
+        "Professor Mercer",
+        "Grace Mitchell"
+      ],
+      "groups": [
+        "Arts, Music, Literature, and Media",
+        "Business Owners and Skilled Workers"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 36,
+      "name": "Grace Mitchell",
+      "age": null,
+      "role": "Café owner",
+      "family": "Mitchell",
+      "description": "Café owner; Amelia's cousin",
+      "connections": [
+        "Dr. Lydia Rhodes",
+        "Pastor Elijah Carter",
+        "Teresa Reyes"
+      ],
+      "groups": [
+        "Business Owners and Skilled Workers"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 37,
+      "name": "Amelia Mitchell",
+      "age": 36,
+      "role": "Family counselor",
+      "family": "Mitchell",
+      "description": "Family counselor; Grace's cousin",
+      "connections": [
+        "Dr. Lydia Rhodes",
+        "Pastor Elijah Carter",
+        "Teresa Reyes"
+      ],
+      "groups": [
+        "Medical and Psychology Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 38,
+      "name": "Samuel Parks",
+      "age": 53,
+      "role": "Civics teacher and city councilmember",
+      "family": "Parks",
+      "description": "Civics teacher and city councilmember; father",
+      "connections": [
+        "Sofia Alvarez",
+        "Dr. Amara Okafor",
+        "Dr. Hannah Foster"
+      ],
+      "groups": [
+        "Law, Politics, and Government"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 39,
+      "name": "Celeste Parks",
+      "age": 31,
+      "role": "Molecular biologist and geneticist",
+      "family": "Parks",
+      "description": "Molecular biologist and geneticist; daughter",
+      "connections": [
+        "Sofia Alvarez",
+        "Dr. Amara Okafor",
+        "Dr. Hannah Foster"
+      ],
+      "groups": [
+        "Science, Technology, and Mathematics Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 40,
+      "name": "Hannah Foster",
+      "age": null,
+      "role": "Veterinarian",
+      "family": "Foster",
+      "description": "Veterinarian; sister",
+      "connections": [
+        "Lila Brooks",
+        "Professor Gabriel Mercer",
+        "Professor Aaron Stein"
+      ],
+      "groups": [
+        "Medical and Psychology Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 41,
+      "name": "Benjamin Foster",
+      "age": 43,
+      "role": "Cultural anthropologist",
+      "family": "Foster",
+      "description": "Cultural anthropologist; brother",
+      "connections": [
+        "Lila Brooks",
+        "Professor Gabriel Mercer",
+        "Professor Aaron Stein"
+      ],
+      "groups": [
+        "Archaeology and Historical Research Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 42,
+      "name": "Mara Ellis",
+      "age": null,
+      "role": "Police detective",
+      "family": "Ellis",
+      "description": "Police detective; Rachel's cousin",
+      "connections": [
+        "Officer Caleb Ruiz",
+        "Tessa Quinn",
+        "Julian Brooks"
+      ],
+      "groups": [
+        "Law, Politics, and Government"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 43,
+      "name": "Rachel Ellis",
+      "age": 37,
+      "role": "Forensic scientist",
+      "family": "Ellis",
+      "description": "Forensic scientist; Mara's cousin",
+      "connections": [
+        "Officer Caleb Ruiz",
+        "Tessa Quinn",
+        "Julian Brooks"
+      ],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 44,
+      "name": "Andrew Whitfield",
+      "age": 48,
+      "role": "Business owner and town councilmember",
+      "family": "Whitfield",
+      "description": "Business owner and town councilmember; younger brother",
+      "connections": [
+        "Mayor Eleanor Hayes",
+        "Julian Brooks",
+        "Detective Mara Ellis"
+      ],
+      "groups": [
+        "Law, Politics, and Government",
+        "Business Owners and Skilled Workers"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 45,
+      "name": "Catherine Whitfield",
+      "age": 55,
+      "role": "Judge",
+      "family": "Whitfield",
+      "description": "Judge; older sister",
+      "connections": [
+        "Mayor Eleanor Hayes",
+        "Julian Brooks",
+        "Detective Mara Ellis"
+      ],
+      "groups": [
+        "Law, Politics, and Government"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 46,
+      "name": "Tessa Quinn",
+      "age": null,
+      "role": "Investigative journalist",
+      "family": "Quinn",
+      "description": "Investigative journalist; older sister",
+      "connections": [
+        "Detective Mara Ellis",
+        "Naomi Chen",
+        "Mateo Rivera"
+      ],
+      "groups": [
+        "Arts, Music, Literature, and Media"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 47,
+      "name": "Preston Quinn",
+      "age": 32,
+      "role": "Computer scientist and cybersecurity specialist",
+      "family": "Quinn",
+      "description": "Computer scientist and cybersecurity specialist; younger brother",
+      "connections": [
+        "Detective Mara Ellis",
+        "Naomi Chen",
+        "Mateo Rivera"
+      ],
+      "groups": [
+        "Science, Technology, and Mathematics Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 48,
+      "name": "David Morgan",
+      "age": null,
+      "role": "Farmer",
+      "family": "Morgan",
+      "description": "Farmer; Rebecca's brother",
+      "connections": [
+        "Oliver Greene",
+        "Dr. Amara Okafor",
+        "County Commissioner Marcus Bell"
+      ],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 49,
+      "name": "Rebecca Morgan",
+      "age": 42,
+      "role": "Ecologist and conservation scientist",
+      "family": "Morgan",
+      "description": "Ecologist and conservation scientist; David's sister",
+      "connections": [
+        "Oliver Greene",
+        "Dr. Amara Okafor",
+        "County Commissioner Marcus Bell"
+      ],
+      "groups": [
+        "Science, Technology, and Mathematics Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 50,
+      "name": "Henry Collins",
+      "age": null,
+      "role": "Carpenter",
+      "family": "Collins",
+      "description": "Carpenter; father",
+      "connections": [
+        "Hank Morales",
+        "Dr. Lydia Rhodes",
+        "Amelia Mitchell"
+      ],
+      "groups": [
+        "Business Owners and Skilled Workers"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 51,
+      "name": "Sarah Collins",
+      "age": 36,
+      "role": "Registered nurse",
+      "family": "Collins",
+      "description": "Registered nurse; daughter",
+      "connections": [
+        "Hank Morales",
+        "Dr. Lydia Rhodes",
+        "Amelia Mitchell"
+      ],
+      "groups": [
+        "Medical and Psychology Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 52,
+      "name": "Evelyn Hart",
+      "age": null,
+      "role": "Field archaeologist and scholar",
+      "family": null,
+      "description": "Field archaeologist and scholar",
+      "connections": [],
+      "groups": [
+        "Main Adventure Team",
+        "Archaeology and Historical Research Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 53,
+      "name": "Miriam Vale",
+      "age": null,
+      "role": "Museum curator and artifact specialist",
+      "family": null,
+      "description": "Museum curator and artifact specialist",
+      "connections": [],
+      "groups": [
+        "Main Adventure Team",
+        "Archaeology and Historical Research Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 54,
+      "name": "Adrian Walker",
+      "age": null,
+      "role": "Explorer and cartographer",
+      "family": null,
+      "description": "Explorer and cartographer",
+      "connections": [],
+      "groups": [
+        "Archaeology and Historical Research Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 55,
+      "name": "Aaron Stein",
+      "age": null,
+      "role": "Jewish historian",
+      "family": null,
+      "description": "Jewish historian",
+      "connections": [],
+      "groups": [
+        "Archaeology and Historical Research Team",
+        "Faith, Theology, and Philosophy"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 56,
+      "name": "Victor Blackwood",
+      "age": null,
+      "role": "Antiquities dealer",
+      "family": null,
+      "description": "Antiquities dealer",
+      "connections": [],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 57,
+      "name": "Esther Levine",
+      "age": 51,
+      "role": "Ancient manuscript scholar and textual critic",
+      "family": null,
+      "description": "Ancient manuscript scholar and textual critic",
+      "connections": [],
+      "groups": [
+        "Archaeology and Historical Research Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 58,
+      "name": "Caleb Ruiz",
+      "age": null,
+      "role": "Local police officer",
+      "family": null,
+      "description": "Local police officer",
+      "connections": [],
+      "groups": [
+        "Law, Politics, and Government"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 59,
+      "name": "Marcus Bell",
+      "age": 57,
+      "role": "County commissioner and rancher",
+      "family": null,
+      "description": "County commissioner and rancher",
+      "connections": [],
+      "groups": [
+        "Law, Politics, and Government"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 60,
+      "name": "David \"Dave\" Callahan",
+      "age": 46,
+      "role": "Texas state representative and former prosecutor",
+      "family": null,
+      "description": "Texas state representative and former prosecutor",
+      "connections": [],
+      "groups": [
+        "Law, Politics, and Government"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 61,
+      "name": "Sofia Alvarez",
+      "age": null,
+      "role": "History teacher",
+      "family": null,
+      "description": "History teacher",
+      "connections": [],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 62,
+      "name": "Nathaniel Price",
+      "age": null,
+      "role": "Christian philosopher and apologist",
+      "family": null,
+      "description": "Christian philosopher and apologist",
+      "connections": [],
+      "groups": [
+        "Faith, Theology, and Philosophy"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 63,
+      "name": "Ruth Thompson",
+      "age": null,
+      "role": "Retired missionary",
+      "family": null,
+      "description": "Retired missionary",
+      "connections": [],
+      "groups": [
+        "Faith, Theology, and Philosophy"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 64,
+      "name": "Rebecca Shaw",
+      "age": null,
+      "role": "Philosophy student and skeptic",
+      "family": null,
+      "description": "Philosophy student and skeptic",
+      "connections": [],
+      "groups": [
+        "Faith, Theology, and Philosophy"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 65,
+      "name": "Amara Okafor",
+      "age": null,
+      "role": "Scientist and geologist",
+      "family": null,
+      "description": "Scientist and geologist",
+      "connections": [],
+      "groups": [
+        "Science, Technology, and Mathematics Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 66,
+      "name": "Naomi Chen",
+      "age": null,
+      "role": "Engineer and designer",
+      "family": null,
+      "description": "Engineer and designer",
+      "connections": [],
+      "groups": [
+        "Science, Technology, and Mathematics Team",
+        "Business Owners and Skilled Workers"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 67,
+      "name": "Lydia Rhodes",
+      "age": null,
+      "role": "Family physician",
+      "family": null,
+      "description": "Family physician",
+      "connections": [],
+      "groups": [
+        "Medical and Psychology Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 68,
+      "name": "Noah Kim",
+      "age": null,
+      "role": "Young astronomer",
+      "family": null,
+      "description": "Young astronomer",
+      "connections": [],
+      "groups": [
+        "Science, Technology, and Mathematics Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 69,
+      "name": "Oliver Greene",
+      "age": null,
+      "role": "Botanist and gardener",
+      "family": null,
+      "description": "Botanist and gardener",
+      "connections": [],
+      "groups": [
+        "Science, Technology, and Mathematics Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 70,
+      "name": "Isaac Romero",
+      "age": null,
+      "role": "Mechanic and inventor",
+      "family": null,
+      "description": "Mechanic and inventor",
+      "connections": [],
+      "groups": [
+        "Science, Technology, and Mathematics Team",
+        "Business Owners and Skilled Workers"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 71,
+      "name": "Elias Rowan",
+      "age": 46,
+      "role": "Mathematician and statistician",
+      "family": null,
+      "description": "Mathematician and statistician",
+      "connections": [],
+      "groups": [
+        "Science, Technology, and Mathematics Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 72,
+      "name": "Nadia Rahman",
+      "age": 40,
+      "role": "Clinical psychologist",
+      "family": null,
+      "description": "Clinical psychologist",
+      "connections": [],
+      "groups": [
+        "Medical and Psychology Team"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 73,
+      "name": "Caleb Montgomery",
+      "age": null,
+      "role": "Writer and storyteller",
+      "family": null,
+      "description": "Writer and storyteller",
+      "connections": [],
+      "groups": [
+        "Arts, Music, Literature, and Media"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 74,
+      "name": "Naomi Price",
+      "age": null,
+      "role": "Artist and photographer",
+      "family": null,
+      "description": "Artist and photographer",
+      "connections": [],
+      "groups": [
+        "Arts, Music, Literature, and Media"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 75,
+      "name": "Eli Turner",
+      "age": null,
+      "role": "Pilot",
+      "family": null,
+      "description": "Pilot",
+      "connections": [],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 76,
+      "name": "Hank Morales",
+      "age": null,
+      "role": "Construction worker",
+      "family": null,
+      "description": "Construction worker",
+      "connections": [],
+      "groups": [
+        "Business Owners and Skilled Workers"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 77,
+      "name": "Bea Holloway",
+      "age": null,
+      "role": "Curiosity and knick-knack shop owner",
+      "family": null,
+      "description": "Curiosity and knick-knack shop owner",
+      "connections": [],
+      "groups": [
+        "Business Owners and Skilled Workers"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 78,
+      "name": "Thomas Grant",
+      "age": null,
+      "role": "Banker",
+      "family": null,
+      "description": "Banker",
+      "connections": [],
+      "groups": [
+        "Business Owners and Skilled Workers"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 79,
+      "name": "Samuel Ortiz",
+      "age": null,
+      "role": "Firefighter",
+      "family": null,
+      "description": "Firefighter",
+      "connections": [],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 80,
+      "name": "Jonathan Pierce",
+      "age": 49,
+      "role": "Economist and financial consultant",
+      "family": null,
+      "description": "Economist and financial consultant",
+      "connections": [],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 81,
+      "name": "Daniel \"Dan\" Fletcher",
+      "age": 45,
+      "role": "Architect",
+      "family": null,
+      "description": "Architect",
+      "connections": [],
+      "groups": [
+        "Business Owners and Skilled Workers"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 82,
+      "name": "Emma Wilson",
+      "age": 12,
+      "role": "Student and aspiring artist interested in nature and history",
+      "family": null,
+      "description": "Student and aspiring artist interested in nature and history",
+      "connections": [],
+      "groups": [
+        "Young Investigators",
+        "Teenage Friends and Discussion Group",
+        "Arts, Music, Literature, and Media"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 83,
+      "name": "Joshua Miller",
+      "age": 16,
+      "role": "Christian student wrestling with questions about faith",
+      "family": null,
+      "description": "Christian student wrestling with questions about faith",
+      "connections": [],
+      "groups": [
+        "Teenage Friends and Discussion Group",
+        "Faith, Theology, and Philosophy"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 84,
+      "name": "Lily Harper",
+      "age": 10,
+      "role": "Student and animal lover",
+      "family": null,
+      "description": "Student and animal lover",
+      "connections": [],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 85,
+      "name": "Mateo Rivera",
+      "age": 13,
+      "role": "Student interested in technology and robotics",
+      "family": null,
+      "description": "Student interested in technology and robotics",
+      "connections": [],
+      "groups": [
+        "Young Investigators"
+      ],
+      "kind": "human"
+    },
+    {
+      "number": 86,
+      "name": "Scout",
+      "age": null,
+      "role": "Benji Cole's dog",
+      "family": "Cole",
+      "description": "Benji Cole's dog; family pet",
+      "connections": [],
+      "groups": [],
+      "kind": "animal"
+    },
+    {
+      "number": 87,
+      "name": "Clover",
+      "age": null,
+      "role": "Rabbit who lives at the Lantern House Research Center & Museum",
+      "family": "Mercer",
+      "description": "Rabbit who lives at the Lantern House Research Center & Museum; museum rabbit",
+      "connections": [],
+      "groups": [],
+      "kind": "animal"
+    },
+    {
+      "number": 88,
+      "name": "Archie",
+      "age": null,
+      "role": "Cat associated with the Havenbrook Public Library",
+      "family": "Finch",
+      "description": "Cat associated with the Havenbrook Public Library; library cat",
+      "connections": [],
+      "groups": [],
+      "kind": "animal"
+    }
+  ]
+}

@@ -209,8 +209,9 @@
   var genealogyData = null; // Biblical Genealogies (content/genealogy.json)
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
+  var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "242";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "243";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -2276,7 +2277,7 @@
     html += "<section class='retro-band retro-cream'><h2 class='retro-display retro-display-dark'>More to explore</h2>" +
       "<p class='page-intro'>Pages beyond the collections — readers, tools, and ways to support the ministry.</p>" +
       "<p>" + [["#/bible", "Bible"], ["#/blog", "Blog"], ["#/art", "Art Gallery"],
-      ["#/storybook", "Storybook Reader"], ["#/genealogy", "Biblical Genealogies"],
+      ["#/storybook", "Storybook Reader"], ["#/havenbrook", "Havenbrook Chronicles"], ["#/genealogy", "Biblical Genealogies"],
       ["#/lookup", "Manuscript Lookup"], ["#/store", "Store"], ["#/give", "Give"],
       ["#/connect", "Connect"]].map(function (l) { return "<a class='btn' href='" + l[0] + "'>" + l[1] + "</a>"; }).join(" ") + "</p></section>";
     html += "</div>";
@@ -6071,6 +6072,256 @@ function genBindInteractive(node) {
     return parts.join(". ");
   }
 
+  /* ---------- The Havenbrook Chronicles (app-only fiction, v243) ----------
+     Like Storybook: a custom section, NOT a COLLECTIONS entry — the
+     fictional roster never enters the Bible reference totals (the
+     verification total stays 23,908) and gets no static pages or sitemap
+     entries. Data lives in content/havenbrook.json: series facts,
+     families, teams, and the 88 characters (85 human + 3 animal).
+     Connection strings resolve to roster characters by stripping
+     honorific titles (Dr., Pastor, Mayor, …) and a small alias table;
+     anything that does not resolve renders as plain text, never a
+     wrong link. */
+  var HAVENBROOK_TITLES = ["County Commissioner", "Councilwoman", "Councilman", "Commissioner", "Representative", "Detective", "Professor", "Pastor", "Officer", "Mayor", "Judge", "Captain", "Dr.", "Mrs.", "Mr."];
+  var HAVENBROOK_ALIASES = { "Mercer": "Gabriel Mercer", "Benji Cole": 'Benjamin "Benji" Cole', "David Callahan": 'David "Dave" Callahan' };
+  function havenbrookChars() { return (havenbrookData && havenbrookData.characters) || []; }
+  function havenbrookByNumber(n) {
+    var rows = havenbrookChars();
+    for (var i = 0; i < rows.length; i++) if (rows[i].number === n) return rows[i];
+    return null;
+  }
+  function havenbrookResolve(name) {
+    var t = (name || "").trim(), i, p;
+    for (i = 0; i < HAVENBROOK_TITLES.length; i++) {
+      p = HAVENBROOK_TITLES[i];
+      if (t.indexOf(p + " ") === 0) { t = t.slice(p.length + 1); break; }
+    }
+    var rows = havenbrookChars();
+    for (i = 0; i < rows.length; i++) if (rows[i].name === t) return rows[i];
+    if (HAVENBROOK_ALIASES[t]) {
+      for (i = 0; i < rows.length; i++) if (rows[i].name === HAVENBROOK_ALIASES[t]) return rows[i];
+    }
+    return null;
+  }
+  function havenbrookCharLink(name) {
+    var r = havenbrookResolve(name);
+    return r ? "<a href='#/havenbrook/characters/" + r.number + "'>" + esc(name) + "</a>" : esc(name);
+  }
+  function havenbrookFamily(name) {
+    var fams = (havenbrookData && havenbrookData.families) || [];
+    for (var i = 0; i < fams.length; i++) if (fams[i].name === name) return fams[i];
+    return null;
+  }
+  function havenbrookTeam(name) {
+    var teams = (havenbrookData && havenbrookData.teams) || [];
+    for (var i = 0; i < teams.length; i++) if (teams[i].name === name) return teams[i];
+    return null;
+  }
+  function havenbrookCard(ch) {
+    var meta = [];
+    if (ch.age !== null && ch.age !== undefined) meta.push("Age " + ch.age);
+    if (ch.family) meta.push(esc(ch.family) + " family");
+    if (ch.kind === "animal") meta.push("Animal character");
+    return '<a class="card" href="#/havenbrook/characters/' + ch.number + '"><h3>' + esc(ch.name) + '</h3>' +
+      '<p class="meta">' + esc(ch.role) + (meta.length ? " &middot; " + meta.join(" &middot; ") : "") + '</p></a>';
+  }
+  function havenbrookMemberLinks(numbers) {
+    return numbers.map(function (n) {
+      var ch = havenbrookByNumber(n);
+      return ch ? '<a href="#/havenbrook/characters/' + ch.number + '">' + esc(ch.name) + '</a>' : "";
+    }).filter(Boolean).join(", ");
+  }
+  function viewHavenbrook() {
+    var d = havenbrookData || {};
+    var chars = havenbrookChars();
+    var humans = chars.filter(function (c) { return c.kind === "human"; }).length;
+    var animals = chars.filter(function (c) { return c.kind === "animal"; }).length;
+    var html = '<a class="back-link" href="#/">&larr; Home</a><h2>The Havenbrook Chronicles</h2>' +
+      "<p class='page-intro'>An original story world in the Adventures in Odyssey tradition — mystery, adventure, and faith in " + esc(d.setting || "Havenbrook, a small fictional Texas town") + ".</p>" +
+      "<p class='page-intro'>The stories center on " + esc(d.headquarters || "The Lantern House Research Center & Museum") + ", home of the Gateway — " + esc(d.invention || "a teleportation machine") + "</p>" +
+      "<p>" + [["#/havenbrook/characters", "Meet the characters"], ["#/havenbrook/families", "Families"], ["#/havenbrook/teams", "Groups & teams"]].map(function (l) { return "<a class='btn' href='" + l[0] + "'>" + l[1] + "</a>"; }).join(" ") + "</p>" +
+      "<p class='page-intro'>" + chars.length + " characters (" + humans + " people and " + animals + " animals) in " + ((d.families || []).length) + " families and " + ((d.teams || []).length) + " groups &amp; teams.</p>" +
+      "<p class='page-intro'>Themes: " + ((d.themes || []).map(function (t) { return esc(t); }).join(", ")) + ".</p>" +
+      "<p class='page-intro'>The Havenbrook Chronicles is a work of fiction created for Hope Anchored in Christ. The characters and town are invented; any resemblance to real people is coincidental.</p>";
+    app.innerHTML = html;
+    window.scrollTo(0, 0);
+  }
+  function viewHavenbrookCharacters(params) {
+    var rows = havenbrookChars();
+    var fams = (havenbrookData && havenbrookData.families) || [];
+    var teams = (havenbrookData && havenbrookData.teams) || [];
+    var state = { q: (params.get("q") || ""), family: (params.get("f_Family") || ""), team: (params.get("f_Team") || "") };
+    function filtered() {
+      var q = state.q.toLowerCase();
+      return rows.filter(function (ch) {
+        if (state.family && ch.family !== state.family) return false;
+        if (state.team && (ch.groups || []).indexOf(state.team) === -1) return false;
+        if (q) {
+          var hay = [ch.name, ch.role, ch.family || "", ch.description || ""].join(" ").toLowerCase();
+          if (hay.indexOf(q) === -1) return false;
+        }
+        return true;
+      });
+    }
+    function activeCount() { return (state.family ? 1 : 0) + (state.team ? 1 : 0); }
+    function renderList() {
+      var shown = filtered();
+      var wrap = document.getElementById("havenbrookWrap");
+      if (!wrap) return;
+      var ce = document.getElementById("havenbrookFilterCount");
+      if (ce) ce.textContent = shown.length + " characters match";
+      var nb = document.getElementById("havenbrookFilterMenuBtn");
+      if (nb) nb.textContent = "Filter" + (activeCount() ? " (" + activeCount() + ")" : "");
+      if (!shown.length) {
+        wrap.innerHTML = '<p class="empty">Nothing matches. Try clearing the search or filters.</p>';
+      } else {
+        wrap.innerHTML = '<div class="card-grid">' + shown.map(function (ch) { return havenbrookCard(ch); }).join("") + "</div>";
+      }
+    }
+    function syncUrl() {
+      var p = new URLSearchParams();
+      if (state.q) p.set("q", state.q);
+      if (state.family) p.set("f_Family", state.family);
+      if (state.team) p.set("f_Team", state.team);
+      var s = p.toString();
+      history.replaceState(null, "", "#/havenbrook/characters" + (s ? "?" + s : ""));
+    }
+    function selectHtml(id, label, values, current) {
+      var h = '<label class="filter-field"><span>' + esc(label) + '</span><select id="' + id + '"><option value="">All</option>';
+      values.forEach(function (v) {
+        h += '<option value="' + esc(v) + '"' + (v === current ? " selected" : "") + ">" + esc(v) + "</option>";
+      });
+      return h + "</select></label>";
+    }
+    var html = '<a class="back-link" href="#/havenbrook">&larr; The Havenbrook Chronicles</a><h2>Havenbrook Characters</h2>' +
+      "<p class='page-intro'>" + rows.length + " characters. Tap a card to open a character's page.</p>" +
+      '<div class="controls"><input type="search" id="havenbrookSearch" placeholder="Search characters…" value="' + esc(state.q) + '">' +
+      '<div class="filter-menu"><button class="btn" id="havenbrookFilterMenuBtn" type="button" ' +
+      'aria-expanded="false" aria-controls="havenbrookFilterPanel">Filter' + (activeCount() ? " (" + activeCount() + ")" : "") + "</button>" +
+      '<div class="filter-panel" id="havenbrookFilterPanel">' +
+      selectHtml("havenbrookFamilySel", "Family", fams.map(function (f) { return f.name; }), state.family) +
+      selectHtml("havenbrookTeamSel", "Group / Team", teams.map(function (t) { return t.name; }), state.team) +
+      '<p class="filter-count" id="havenbrookFilterCount"></p>' +
+      '<p><button class="btn" id="havenbrookFilterClearBtn" type="button">Clear all filters</button></p>' +
+      "</div></div></div><div id=\"havenbrookWrap\"></div>";
+    app.innerHTML = html;
+    renderList();
+    document.getElementById("havenbrookSearch").addEventListener("input", function (e) {
+      state.q = e.target.value;
+      syncUrl();
+      renderList();
+    });
+    document.getElementById("havenbrookFamilySel").addEventListener("change", function (e) {
+      state.family = e.target.value;
+      syncUrl();
+      renderList();
+    });
+    document.getElementById("havenbrookTeamSel").addEventListener("change", function (e) {
+      state.team = e.target.value;
+      syncUrl();
+      renderList();
+    });
+    var hbBtn = document.getElementById("havenbrookFilterMenuBtn");
+    var hbPanel = document.getElementById("havenbrookFilterPanel");
+    if (hbBtn && hbPanel) {
+      hbBtn.addEventListener("click", function () {
+        var open = hbPanel.classList.toggle("open");
+        hbBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      hbPanel.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          hbPanel.classList.remove("open");
+          hbBtn.setAttribute("aria-expanded", "false");
+          hbBtn.focus();
+        }
+      });
+      var hbClear = document.getElementById("havenbrookFilterClearBtn");
+      if (hbClear) hbClear.addEventListener("click", function () {
+        state.family = "";
+        state.team = "";
+        document.getElementById("havenbrookFamilySel").value = "";
+        document.getElementById("havenbrookTeamSel").value = "";
+        syncUrl();
+        renderList();
+      });
+    }
+    window.scrollTo(0, 0);
+  }
+  function viewHavenbrookCharacter(num) {
+    var ch = havenbrookByNumber(num);
+    if (!ch) return viewHavenbrookCharacters(new URLSearchParams(""));
+    var html = '<a class="back-link" href="#/havenbrook/characters">&larr; All characters</a><h2>' + esc(ch.name) + "</h2>" +
+      '<p class="meta">' + esc(ch.role) +
+      ((ch.age !== null && ch.age !== undefined) ? " &middot; Age " + ch.age : "") +
+      (ch.kind === "animal" ? " &middot; Animal character" : "") + "</p>" +
+      "<p>" + esc(ch.description) + "</p>";
+    if (ch.family) {
+      var fam = havenbrookFamily(ch.family);
+      html += "<h3>Family</h3><p><a href='#/havenbrook/families/" + encodeURIComponent(ch.family) + "'>" + esc(ch.family) + " family</a>";
+      if (fam) {
+        var others = fam.members.filter(function (n) { return n !== ch.number; });
+        if (others.length) html += ": " + havenbrookMemberLinks(others);
+        if ((fam.animals || []).length && ch.kind !== "animal") html += "<br>Family animals: " + havenbrookMemberLinks(fam.animals);
+      }
+      html += "</p>";
+    }
+    if ((ch.connections || []).length) {
+      html += "<h3>Connections</h3><p>" + ch.connections.map(function (n) { return havenbrookCharLink(n); }).join(", ") + "</p>";
+    }
+    if ((ch.groups || []).length) {
+      html += "<h3>Groups &amp; teams</h3><p>" + ch.groups.map(function (g) {
+        return "<a href='#/havenbrook/teams/" + encodeURIComponent(g) + "'>" + esc(g) + "</a>";
+      }).join(", ") + "</p>";
+    }
+    app.innerHTML = html;
+    window.scrollTo(0, 0);
+  }
+  function havenbrookFamilyCard(fam) {
+    var html = '<div class="card"><h3><a href="#/havenbrook/families/' + encodeURIComponent(fam.name) + '">' + esc(fam.name) + " family</a></h3>" +
+      "<p>" + havenbrookMemberLinks(fam.members) + "</p>";
+    if ((fam.animals || []).length) html += "<p class='meta'>Animals: " + havenbrookMemberLinks(fam.animals) + "</p>";
+    if ((fam.connections || []).length) html += "<p class='meta'>Connections: " + fam.connections.map(function (n) { return havenbrookCharLink(n); }).join(", ") + "</p>";
+    return html + "</div>";
+  }
+  function viewHavenbrookFamilies() {
+    var fams = (havenbrookData && havenbrookData.families) || [];
+    var html = '<a class="back-link" href="#/havenbrook">&larr; The Havenbrook Chronicles</a><h2>Families of Havenbrook</h2>' +
+      "<p class='page-intro'>" + fams.length + " families. Tap a family name for its full page.</p>" +
+      '<div class="card-grid">' + fams.map(function (f) { return havenbrookFamilyCard(f); }).join("") + "</div>";
+    app.innerHTML = html;
+    window.scrollTo(0, 0);
+  }
+  function viewHavenbrookFamily(name) {
+    var fam = havenbrookFamily(name);
+    if (!fam) return viewHavenbrookFamilies();
+    var html = '<a class="back-link" href="#/havenbrook/families">&larr; All families</a><h2>' + esc(fam.name) + " family</h2>" +
+      havenbrookFamilyCard(fam);
+    app.innerHTML = html;
+    window.scrollTo(0, 0);
+  }
+  function havenbrookTeamCard(team) {
+    return '<div class="card"><h3><a href="#/havenbrook/teams/' + encodeURIComponent(team.name) + '">' + esc(team.name) + "</a></h3>" +
+      "<p class='meta'>" + team.members.length + " members</p>" +
+      "<p>" + havenbrookMemberLinks(team.members) + "</p></div>";
+  }
+  function viewHavenbrookTeams() {
+    var teams = (havenbrookData && havenbrookData.teams) || [];
+    var html = '<a class="back-link" href="#/havenbrook">&larr; The Havenbrook Chronicles</a><h2>Groups &amp; teams</h2>' +
+      "<p class='page-intro'>" + teams.length + " groups &amp; teams. Tap a team name for its full page.</p>" +
+      '<div class="card-grid">' + teams.map(function (t) { return havenbrookTeamCard(t); }).join("") + "</div>";
+    app.innerHTML = html;
+    window.scrollTo(0, 0);
+  }
+  function viewHavenbrookTeam(name) {
+    var team = havenbrookTeam(name);
+    if (!team) return viewHavenbrookTeams();
+    var html = '<a class="back-link" href="#/havenbrook/teams">&larr; All groups &amp; teams</a><h2>' + esc(team.name) + "</h2>" +
+      "<p class='meta'>" + team.members.length + " members</p>" +
+      '<div class="card-grid">' + team.members.map(function (n) { var ch = havenbrookByNumber(n); return ch ? havenbrookCard(ch) : ""; }).join("") + "</div>";
+    app.innerHTML = html;
+    window.scrollTo(0, 0);
+  }
+
   function render() {
     stopReading();
     var raw = (location.hash || "#/").replace(/^#/, "");
@@ -6103,6 +6354,16 @@ function genBindInteractive(node) {
     if (path[0] === "genealogy") return viewGenealogy(path[1] ? decodeURIComponent(path[1]) : null, params);
     if (path[0] === "atlas") return viewAtlas(params);
     if (path[0] === "objections" && path[1] === "examine") return path[2] ? viewExamineWalkthrough(parseInt(decodeURIComponent(path[2]), 10), params) : viewExamineLanding();
+    if (path[0] === "havenbrook") {
+      if (!path[1]) return viewHavenbrook();
+      if (path[1] === "characters") {
+        if (path[2]) return viewHavenbrookCharacter(parseInt(decodeURIComponent(path[2]), 10));
+        return viewHavenbrookCharacters(params);
+      }
+      if (path[1] === "families") return path[2] ? viewHavenbrookFamily(decodeURIComponent(path[2])) : viewHavenbrookFamilies();
+      if (path[1] === "teams") return path[2] ? viewHavenbrookTeam(decodeURIComponent(path[2])) : viewHavenbrookTeams();
+      return viewHavenbrook();
+    }
     var c = coll(path[0]);
     if (c) return viewCollection(c.id, path[1] ? decodeURIComponent(path[1]) : null, params);
     return viewHome();
@@ -6152,7 +6413,7 @@ function genBindInteractive(node) {
   }
   document.getElementById("footerNav").innerHTML =
     COLLECTIONS.map(function (c) { return '<a href="#/' + c.id + '">' + esc(c.label) + "</a>"; }).join("") +
-    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/art">Art</a><a href="#/genealogy">Biblical Genealogies</a><a href="#/lookup">Manuscript Lookup</a><a href="#/atlas">Atlas</a>';
+    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/art">Art</a><a href="#/genealogy">Biblical Genealogies</a><a href="#/lookup">Manuscript Lookup</a><a href="#/atlas">Atlas</a><a href="#/havenbrook">Havenbrook Chronicles</a>';
 
   app.innerHTML = '<p class="loading">Loading the collections…</p>';
   var jobs = COLLECTIONS.map(function (c) {
@@ -6172,6 +6433,7 @@ function genBindInteractive(node) {
   jobs.push(fetch("content/dss_lookup_dates.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (d) { lookupDates = d; }).catch(function () { lookupDates = []; }));
   jobs.push(fetch("content/genealogy.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : { nodes: [], edges: [] }; }).then(function (g) { genealogyData = g; }).catch(function () { genealogyData = { nodes: [], edges: [] }; }));
   jobs.push(fetch("content/atlas.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (a) { atlasItems = a; }).catch(function () { atlasItems = []; }));
+  jobs.push(fetch("content/havenbrook.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : null; }).then(function (h) { havenbrookData = h; }).catch(function () { havenbrookData = null; }));
   jobs.push(fetch("content/journey_road_paths.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) { journeyRoadPaths = d; }).catch(function () { journeyRoadPaths = null; }));
   Promise.all(jobs).then(function () {
     buildLinkIndex();
