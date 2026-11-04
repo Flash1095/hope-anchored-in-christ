@@ -1041,9 +1041,34 @@
       "number": 28,
       "name": "Theo Wren",
       "age": 34,
-      "role": "Physics teacher",
+      "image": "assets/havenbrook/theo-wren.jpg",
+      "role": "Physics Teacher & Science Educator",
       "family": "Wren",
-      "description": "Physics teacher; younger brother",
+      "description": "Physics Teacher & Science Educator; brother of Simon Wren",
+      "interests": [
+        "Physics, astronomy & the laws of nature",
+        "Teaching and mentoring students",
+        "Stargazing and astrophotography",
+        "Science, technology & practical invention",
+        "Hiking, camping & exploring God's creation",
+        "Apologetics, faith & the harmony of science and Scripture"
+      ],
+      "personality": [
+        "Thoughtful and inquisitive",
+        "Patient and encouraging",
+        "Analytical and detail-oriented",
+        "Warm, loyal, and protective of his family",
+        "Passionate about learning and teaching",
+        "Seeks to understand how God's design is seen in the natural world"
+      ],
+      "growingIn": [
+        "Balancing a busy schedule with rest and family time",
+        "Continuing to mentor and invest in his students",
+        "Using his knowledge of science to strengthen the faith of others",
+        "Growing in patience and trusting God's timing",
+        "Finding practical ways to serve Havenbrook and the next generation"
+      ],
+      "verse": "The heavens declare the glory of God; the skies proclaim the work of His hands. — Psalm 19:1",
       "connections": [
         "Professor Mercer",
         "Noah Kim",
