@@ -823,10 +823,36 @@
     {
       "number": 17,
       "name": "Edith Finch",
-      "age": null,
-      "role": "Librarian and archivist",
+      "age": 68,
+      "image": "assets/havenbrook/edith-finch.jpg",
+      "role": "Havenbrook Public Librarian, local historian, and beloved mentor to students and townspeople",
       "family": "Finch",
-      "description": "Librarian and archivist; grandmother",
+      "description": "Havenbrook Public Librarian, local historian, and beloved mentor to students and townspeople; mother of Natalie Finch; grandmother of Oliver Finch; mother-in-law of David Finch",
+      "interests": [
+        "Books",
+        "Church history",
+        "Local history",
+        "Genealogy",
+        "Research",
+        "Storytelling",
+        "Encouraging the next generation"
+      ],
+      "personality": [
+        "Wise",
+        "Warm",
+        "Patient",
+        "Perceptive",
+        "Nurturing",
+        "Thoughtful",
+        "Faithful"
+      ],
+      "growingIn": [
+        "Serving and mentoring others",
+        "Preserving Havenbrook's history",
+        "Using her experience for God's glory",
+        "Continuing to learn and grow in faith"
+      ],
+      "verse": "Teach the older women to be reverent in the way they live, to love what is good, and to be teachers of what is right. — Titus 2:3–4",
       "connections": [
         "Caleb Montgomery",
         "Emma Wilson",
