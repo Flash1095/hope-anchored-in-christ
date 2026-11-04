@@ -1580,16 +1580,43 @@
     {
       "number": 52,
       "name": "Evelyn Hart",
-      "age": null,
-      "role": "Field archaeologist and scholar",
+      "age": 49,
+      "role": "Field archaeologist and historical scholar",
       "family": null,
-      "description": "Field archaeologist and scholar",
+      "description": "Field archaeologist and historical scholar; longtime friend and colleague of Gabriel Mercer",
       "connections": [],
       "groups": [
         "Main Adventure Team",
         "Archaeology and Historical Research Team"
       ],
-      "kind": "human"
+      "kind": "human",
+      "image": "assets/havenbrook/evelyn-hart.jpg",
+      "interests": [
+        "Archaeology",
+        "Ancient artifacts",
+        "Excavation",
+        "Historical evidence",
+        "The ancient Near East",
+        "Careful research",
+        "Museum collections",
+        "Honest scholarship"
+      ],
+      "personality": [
+        "Principled",
+        "Skeptical",
+        "Intelligent",
+        "Disciplined",
+        "Perceptive",
+        "Honest",
+        "Quietly caring"
+      ],
+      "growingIn": [
+        "Remaining open to deeper questions of faith",
+        "Balancing caution with wonder",
+        "Mentoring the next generation with integrity",
+        "Seeking truth wherever the evidence leads"
+      ],
+      "quote": "Truth does not fear careful examination."
     },
     {
       "number": 53,
