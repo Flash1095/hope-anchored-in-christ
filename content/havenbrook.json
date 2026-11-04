@@ -669,10 +669,36 @@
     {
       "number": 11,
       "name": "Daniel Reyes",
-      "age": 15,
-      "role": "Student and thoughtful skeptic",
+      "age": 16,
+      "image": "assets/havenbrook/daniel-reyes.jpg",
+      "role": "High School Student, Mechanic in Training",
       "family": "Reyes",
-      "description": "Student and thoughtful skeptic; son",
+      "description": "High School Student, Mechanic in Training; son of Rafael and Teresa Reyes; brother of Nico Reyes",
+      "interests": [
+        "Automotive repair & mechanics",
+        "Cars, trucks & how things work",
+        "Outdoors, hiking & camping",
+        "Photography & documenting adventures",
+        "Apologetics, science & faith discussions",
+        "Training, fitness & self-discipline"
+      ],
+      "personality": [
+        "Hardworking and dependable",
+        "Curious and hands-on learner",
+        "Loyal, protective, and encouraging",
+        "Humble and willing to learn",
+        "Creative problem-solver",
+        "Respectful and kind",
+        "Passionate about truth, faith, and how things work"
+      ],
+      "growingIn": [
+        "Developing perseverance and patience",
+        "Growing in leadership and responsibility",
+        "Deepening his faith and understanding",
+        "Standing for truth with grace and wisdom",
+        "Using his skills to serve his family, friends, and community"
+      ],
+      "verse": "Whatever you do, work heartily, as for the Lord and not for men. — Colossians 3:23",
       "connections": [
         "Isaac Romero",
         "Pastor Elijah Carter",
