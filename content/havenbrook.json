@@ -1030,9 +1030,36 @@
       "number": 26,
       "name": "Charlotte Mercer",
       "age": 29,
+      "image": "assets/havenbrook/charlotte-mercer.jpg",
       "role": "Museum assistant and historian",
       "family": "Mercer",
       "description": "Museum assistant and historian; niece",
+      "interests": [
+        "History",
+        "Museums",
+        "Books",
+        "Research",
+        "Preserving stories",
+        "Local history",
+        "Encouraging others",
+        "Time with Gabriel"
+      ],
+      "personality": [
+        "Warm",
+        "Intelligent",
+        "Observant",
+        "Encouraging",
+        "Creative",
+        "Thoughtful"
+      ],
+      "growingIn": [
+        "Deepening her faith in God",
+        "Practicing humility",
+        "Gaining wisdom and discernment",
+        "Finding healthy balance in her responsibilities",
+        "Serving others well in her home, work, and community"
+      ],
+      "verse": "Let all that you do be done in love. — 1 Corinthians 16:14 (ESV)",
       "connections": [
         "Dr. Simon Wren",
         "Dr. Miriam Vale",
