@@ -1168,7 +1168,7 @@
       "age": "Mid-50s",
       "role": "Mayor of Havenbrook, serving the town, its families, and future generations",
       "family": "Hayes",
-      "description": "Mayor of Havenbrook, serving the town, its families, and future generations; wife",
+      "description": "Mayor of Havenbrook, serving the town, its families, and future generations; wife of Martin Hayes",
       "connections": [
         "Councilwoman Isabel Navarro",
         "Councilman Samuel Parks",
@@ -1210,10 +1210,10 @@
     {
       "number": 30,
       "name": "Martin Hayes",
-      "age": 62,
-      "role": "Retired high school principal",
+      "age": 61,
+      "role": "Retired Principal, Education Advocate, Community Volunteer, and Town Mentor",
       "family": "Hayes",
-      "description": "Retired high school principal; husband",
+      "description": "Retired Principal, Education Advocate, Community Volunteer, and Town Mentor; husband of Mayor Eleanor Hayes. Spent many years as school principal, dedicated to students, teachers, and families. Now retired, he continues to serve Havenbrook through education initiatives, community projects, and by supporting his wife, Mayor Eleanor Hayes.",
       "connections": [
         "Councilwoman Isabel Navarro",
         "Councilman Samuel Parks",
@@ -1221,7 +1221,33 @@
       ],
       "groups": [],
       "kind": "human",
-      "thumb": "assets/havenbrook/martin-hayes-figure.jpg"
+      "thumb": "assets/havenbrook/martin-hayes-figure.jpg",
+      "image": "assets/havenbrook/martin-hayes.jpg",
+      "interests": [
+        "Education and mentoring youth",
+        "Local history and preserving Havenbrook's heritage",
+        "Reading and research",
+        "Woodworking and hands-on projects",
+        "Gardening and outdoor work"
+      ],
+      "personality": [
+        "Wise",
+        "Steady",
+        "Humble",
+        "Encouraging",
+        "Patient listener",
+        "Strong source of support",
+        "Kind",
+        "Good judgment",
+        "Practical wisdom"
+      ],
+      "growingIn": [
+        "Continuing to serve with gratitude in this new season of life",
+        "Supporting Eleanor's leadership",
+        "Investing in the next generation",
+        "Using his experience and gifts to bless Havenbrook"
+      ],
+      "verse": "Let each of you look not only to his own interests, but also to the interests of others. \u2014 Philippians 2:4 (ESV)"
     },
     {
       "number": 31,
