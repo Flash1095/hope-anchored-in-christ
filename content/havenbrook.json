@@ -722,12 +722,34 @@
     {
       "number": 14,
       "name": "Lila Brooks",
-      "age": null,
+      "age": 32,
       "image": "assets/havenbrook/lila-brooks.jpg",
       "thumb": "assets/havenbrook/lila-brooks-figure.jpg",
-      "role": "Dog groomer and owner of Paws & Polish",
+      "role": "Dog Groomer & Pet Care Advocate",
       "family": "Brooks",
-      "description": "Dog groomer and owner of Paws & Polish; mother",
+      "description": "Dog Groomer & Pet Care Advocate; mother",
+      "interests": [
+        "Animals of all kinds",
+        "Pet care & training",
+        "Photography (especially pets & nature)",
+        "Animal rescue & adoption",
+        "Simple living"
+      ],
+      "personality": [
+        "Warm, cheerful, and people-focused",
+        "Compassionate and deeply loves animals",
+        "Observant and notices details others miss",
+        "Creative and resourceful",
+        "Encouraging and a great listener",
+        "A little talkative (in a lovable way!)"
+      ],
+      "growingIn": [
+        "Trusting God with her worries (especially for animals she can't save)",
+        "Learning when to rest and slow down",
+        "Balancing compassion with wise boundaries",
+        "Sharing God's love through service and kindness"
+      ],
+      "verse": "A righteous man regards the life of his animal. — Proverbs 12:10",
       "connections": [
         "Detective Mara Ellis",
         "Dr. Hannah Foster",
