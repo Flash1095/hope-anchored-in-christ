@@ -1337,10 +1337,10 @@
     {
       "number": 36,
       "name": "Grace Mitchell",
-      "age": null,
-      "role": "Caf\u00e9 owner",
+      "age": 39,
+      "role": "Owner of a welcoming local caf\u00e9 in Havenbrook where neighbors gather, stories are shared, and people are cared for",
       "family": "Mitchell",
-      "description": "Caf\u00e9 owner; Amelia's cousin",
+      "description": "Owner of a welcoming local caf\u00e9 in Havenbrook where neighbors gather, stories are shared, and people are cared for; Amelia's cousin",
       "connections": [
         "Dr. Lydia Rhodes",
         "Pastor Elijah Carter",
@@ -1349,7 +1349,31 @@
       "groups": [
         "Business Owners and Skilled Workers"
       ],
-      "kind": "human"
+      "kind": "human",
+      "image": "assets/havenbrook/grace-mitchell.jpg",
+      "interests": [
+        "Hospitality",
+        "Baking",
+        "Coffee",
+        "Encouraging others",
+        "Community events",
+        "Books",
+        "Creating a peaceful gathering place"
+      ],
+      "personality": [
+        "Warm",
+        "Observant",
+        "Nurturing",
+        "Wise",
+        "Creative",
+        "Quietly strong"
+      ],
+      "growingIn": [
+        "Balancing caring for everyone with resting in God",
+        "Setting healthy boundaries",
+        "Continuing to serve others with joy and grace"
+      ],
+      "verse": "Practice hospitality. \u2014 Romans 12:13"
     },
     {
       "number": 37,
