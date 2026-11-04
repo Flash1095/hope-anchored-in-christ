@@ -211,7 +211,7 @@
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "245";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "246";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -6256,6 +6256,11 @@ function genBindInteractive(node) {
       (ch.kind === "animal" ? " &middot; Animal character" : "") + "</p>" +
       (ch.image ? '<figure class="havenbrook-portrait"><img src="' + esc(ch.image) + "?v=" + ASSET_V + '" alt="' + esc(ch.name) + '"></figure>' : "") +
       "<p>" + esc(ch.description) + "</p>";
+    if (ch.quote) html += '<p><em>"' + esc(ch.quote) + '"</em></p>';
+    if ((ch.interests || []).length) html += "<h3>Interests</h3><p>" + ch.interests.map(function (t) { return esc(t); }).join(", ") + "</p>";
+    if ((ch.personality || []).length) html += "<h3>Personality</h3><ul>" + ch.personality.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>";
+    if ((ch.growingIn || []).length) html += "<h3>Growing In</h3><ul>" + ch.growingIn.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>";
+    if (ch.verse) html += "<h3>Favorite verse</h3><p><em>" + esc(ch.verse) + "</em></p>";
     if (ch.family) {
       var fam = havenbrookFamily(ch.family);
       html += "<h3>Family</h3><p><a href='#/havenbrook/families/" + encodeURIComponent(ch.family) + "'>" + esc(ch.family) + " family</a>";

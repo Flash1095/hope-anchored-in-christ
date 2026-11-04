@@ -892,11 +892,34 @@
     {
       "number": 27,
       "name": "Simon Wren",
-      "age": null,
+      "age": 31,
       "image": "assets/havenbrook/simon-wren.jpg",
-      "role": "Linguist, researcher, and Christian apologist",
+      "role": "Linguist, Researcher & Apologist",
       "family": "Wren",
-      "description": "Linguist, researcher, and Christian apologist; older brother",
+      "description": "Linguist, Researcher & Apologist; older brother",
+      "interests": [
+        "Biblical languages",
+        "Ancient inscriptions",
+        "Manuscripts",
+        "Apologetics",
+        "Research",
+        "History"
+      ],
+      "personality": [
+        "Brilliant, curious, precise",
+        "Awkward (in a lovable way)",
+        "Loyal",
+        "Enthusiastic"
+      ],
+      "growingIn": [
+        "Patience with people",
+        "Humility",
+        "Clear communication",
+        "Trusting God more deeply",
+        "Balancing knowledge with wisdom"
+      ],
+      "quote": "Every inscription tells a story — if we examine the evidence carefully enough to hear it.",
+      "verse": "The heart of the prudent acquires knowledge, and the ear of the wise seeks knowledge. — Proverbs 18:15",
       "connections": [
         "Professor Mercer",
         "Noah Kim",
