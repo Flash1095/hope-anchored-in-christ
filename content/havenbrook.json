@@ -1165,10 +1165,10 @@
     {
       "number": 29,
       "name": "Eleanor Hayes",
-      "age": null,
-      "role": "Mayor of Havenbrook",
+      "age": "Mid-50s",
+      "role": "Mayor of Havenbrook, serving the town, its families, and future generations",
       "family": "Hayes",
-      "description": "Mayor of Havenbrook; wife",
+      "description": "Mayor of Havenbrook, serving the town, its families, and future generations; wife",
       "connections": [
         "Councilwoman Isabel Navarro",
         "Councilman Samuel Parks",
@@ -1177,7 +1177,34 @@
       "groups": [
         "Law, Politics, and Government"
       ],
-      "kind": "human"
+      "kind": "human",
+      "image": "assets/havenbrook/eleanor-hayes.jpg",
+      "interests": [
+        "Local history and Havenbrook's heritage",
+        "Thoughtful town development",
+        "Mentoring young leaders",
+        "Community events and town traditions",
+        "Supporting the library and museum"
+      ],
+      "personality": [
+        "Wise",
+        "Gracious",
+        "Polished",
+        "Approachable",
+        "A natural leader",
+        "Organized",
+        "Civic-minded",
+        "Compassionate",
+        "Genuine care for people of all ages"
+      ],
+      "growingIn": [
+        "Continuing to balance the many responsibilities of leadership with grace",
+        "Listening well",
+        "Always seeking God's wisdom for Havenbrook's future",
+        "Remaining deeply dedicated to preserving the town's history",
+        "Serving its families"
+      ],
+      "verse": "He has shown you, O man, what is good; and what does the Lord require of you but to do justice, and to love kindness, and to walk humbly with your God? \u2014 Micah 6:8 (ESV)"
     },
     {
       "number": 30,
