@@ -483,6 +483,7 @@
       "name": "Olivia Bennett",
       "age": 35,
       "image": "assets/havenbrook/olivia-bennett.jpg",
+      "thumb": "assets/havenbrook/olivia-bennett-figure.jpg",
       "role": "Children's Book Illustrator & Author (Walter's Wife)",
       "family": "Bennett",
       "description": "Children's Book Illustrator & Author (Walter's Wife); mother",
@@ -927,21 +928,36 @@
     {
       "number": 25,
       "name": "Gabriel Mercer",
-      "age": null,
+      "age": 58,
       "image": "assets/havenbrook/gabriel-mercer.jpg",
-      "role": "Retired archaeologist, historian, and mentor",
+      "role": "Historian, Researcher & Museum Curator",
       "family": "Mercer",
-      "description": "Retired archaeologist, historian, and mentor; founder of the Lantern House Research Center & Museum; uncle",
+      "description": "Historian, Researcher & Museum Curator; uncle",
       "interests": [
-        "Biblical archaeology",
-        "Ancient history",
-        "Apologetics",
-        "Mentoring young investigators"
+        "History, archaeology & ancient cultures",
+        "Biblical history & apologetics",
+        "Preserving and curating historical artifacts",
+        "Documentation, research & writing",
+        "Travel, exploration & field study",
+        "Mentoring younger researchers (including Charlotte, his niece)"
       ],
       "personality": [
-        "Wise, patient, curious, gentle, and deeply faithful"
+        "Wise, patient, and thoughtful",
+        "Deeply curious and a lifelong learner",
+        "Encouraging mentor and teacher",
+        "Analytical and detail-oriented",
+        "Passionate about truth and evidence",
+        "Faithful, humble, and servant-hearted",
+        "Sees the \"big picture\" and connects history to God's plan"
       ],
-      "quote": "We follow the evidence, ask good questions, and trust that God's truth can handle honest investigation.",
+      "growingIn": [
+        "Continuing to steward the museum and research center",
+        "Training and mentoring the next generation",
+        "Using history to strengthen faith and answer tough questions",
+        "Remaining humble and dependent on God's guidance",
+        "Investing in family and the community of Havenbrook"
+      ],
+      "verse": "Consider the work of God; for who can make straight what He has made crooked? — Ecclesiastes 7:13",
       "connections": [
         "Dr. Simon Wren",
         "Dr. Miriam Vale",
