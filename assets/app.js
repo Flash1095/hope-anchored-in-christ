@@ -211,7 +211,7 @@
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "246";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "247";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -6122,8 +6122,10 @@ function genBindInteractive(node) {
     if (ch.age !== null && ch.age !== undefined) meta.push("Age " + ch.age);
     if (ch.family) meta.push(esc(ch.family) + " family");
     if (ch.kind === "animal") meta.push("Animal character");
-    return '<a class="card" href="#/havenbrook/characters/' + ch.number + '"><h3>' + esc(ch.name) + '</h3>' +
-      '<p class="meta">' + esc(ch.role) + (meta.length ? " &middot; " + meta.join(" &middot; ") : "") + '</p></a>';
+    var body = '<div><h3>' + esc(ch.name) + '</h3>' +
+      '<p class="meta">' + esc(ch.role) + (meta.length ? " &middot; " + meta.join(" &middot; ") : "") + '</p></div>';
+    if (ch.thumb) return '<a class="card havenbrook-card" href="#/havenbrook/characters/' + ch.number + '"><img class="havenbrook-thumb" src="' + esc(ch.thumb) + "?v=" + ASSET_V + '" alt="' + esc(ch.name) + '">' + body + '</a>';
+    return '<a class="card" href="#/havenbrook/characters/' + ch.number + '">' + body + '</a>';
   }
   function havenbrookMemberLinks(numbers) {
     return numbers.map(function (n) {

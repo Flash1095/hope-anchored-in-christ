@@ -162,6 +162,8 @@ a:hover { color: var(--gold-dark); }
 .nature-figure figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 0.35rem; }
 .havenbrook-portrait { margin: 1rem 0 1.5rem; }
 .havenbrook-portrait img { width: 100%; max-width: 720px; height: auto; display: block; margin: 0 auto; border: 1px solid var(--line); border-radius: 8px; }
+.havenbrook-card { display: flex; gap: 0.9rem; align-items: center; }
+.havenbrook-thumb { height: 76px; width: auto; flex-shrink: 0; border-radius: 8px; }
 .badge {
   display: inline-block; background: var(--sage-light); color: var(--navy);
   border-radius: 999px; padding: 0.1rem 0.65rem; font-size: 0.8rem; font-weight: 700;
