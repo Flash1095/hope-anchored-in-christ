@@ -439,11 +439,37 @@
     {
       "number": 1,
       "name": "Walter Bennett",
-      "age": null,
+      "age": 37,
       "image": "assets/havenbrook/walter-bennett.jpg",
-      "role": "Antique restorer",
+      "thumb": "assets/havenbrook/walter-bennett-figure.jpg",
+      "role": "Antique Restorer, Historian & Teacher",
       "family": "Bennett",
-      "description": "Antique restorer; father",
+      "description": "Antique Restorer, Historian & Teacher; father",
+      "interests": [
+        "Restoring and preserving antiques",
+        "History (biblical, ancient & church history)",
+        "Teaching and mentoring",
+        "Archaeology and historical discoveries",
+        "Travel and exploring historical sites",
+        "Time with Olivia, Clara, and Lucas"
+      ],
+      "personality": [
+        "Thoughtful and inquisitive",
+        "Patient and encouraging",
+        "Hands-on and resourceful",
+        "A natural teacher and mentor",
+        "Detail-oriented and persistent",
+        "Loves to solve the \"story behind the object\"",
+        "Loyal, protective, and devoted to his family"
+      ],
+      "growingIn": [
+        "Balancing his many roles and responsibilities",
+        "Trusting God's timing in long-term plans",
+        "Continuing to teach and disciple the next generation",
+        "Using history and artifacts to point people to the truth of Scripture",
+        "Leaving a legacy of faith for Olivia, Clara, and Lucas"
+      ],
+      "verse": "Remember the days of old; consider the years of many generations... — Deuteronomy 32:7",
       "connections": [
         "Professor Gabriel Mercer",
         "Naomi Price",
@@ -455,11 +481,35 @@
     {
       "number": 2,
       "name": "Olivia Bennett",
-      "age": 44,
+      "age": 35,
       "image": "assets/havenbrook/olivia-bennett.jpg",
-      "role": "Children's book illustrator",
+      "role": "Children's Book Illustrator & Author (Walter's Wife)",
       "family": "Bennett",
-      "description": "Children's book illustrator; mother",
+      "description": "Children's Book Illustrator & Author (Walter's Wife); mother",
+      "interests": [
+        "Writing and illustrating stories",
+        "Nature and photography",
+        "Gardening and creating beauty",
+        "Art, design, and creative projects",
+        "Animals and pet care",
+        "Spending time with Walter, Clara, and Lucas"
+      ],
+      "personality": [
+        "Creative and imaginative",
+        "Warm, nurturing, and encouraging",
+        "Detail-oriented and diligent",
+        "Compassionate and empathetic",
+        "Joyful and optimistic",
+        "A faithful wife and devoted mom"
+      ],
+      "growingIn": [
+        "Balancing creative work and family life",
+        "Trusting God with future plans",
+        "Practicing rest and renewal",
+        "Continuing to use her art and stories for God's glory",
+        "Encouraging and discipling her kids in faith, truth, and creativity"
+      ],
+      "verse": "Whatever you do, do it heartily, as unto the Lord... — Colossians 3:23",
       "connections": [
         "Professor Gabriel Mercer",
         "Naomi Price",
