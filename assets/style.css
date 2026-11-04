@@ -164,6 +164,18 @@ a:hover { color: var(--gold-dark); }
 .havenbrook-portrait img { width: 100%; max-width: 720px; height: auto; display: block; margin: 0 auto; border: 1px solid var(--line); border-radius: 8px; }
 .havenbrook-card { display: flex; gap: 0.9rem; align-items: center; }
 .havenbrook-thumb { height: 76px; width: auto; flex-shrink: 0; border-radius: 8px; }
+.webtoon-cover { width: 100%; height: auto; display: block; border-radius: 8px; margin-bottom: 0.75rem; }
+.webtoon-reader { max-width: 640px; margin: 0 auto; }
+.webtoon-panel { margin: 0; }
+.webtoon-panel img { width: 100%; height: auto; display: block; border: 2px solid #1B2A4E; border-radius: 8px; }
+.webtoon-caption { background: #1B2A4E; color: #fff; font-style: italic; padding: 0.6rem 0.9rem; border-radius: 8px; margin: 0.6rem 0; }
+.webtoon-bubble { background: #fff; border: 2px solid #1B2A4E; border-radius: 16px; padding: 0.55rem 0.9rem; margin: 0.6rem 0; max-width: 88%; position: relative; }
+.webtoon-bubble.right { margin-left: auto; background: #fdf2f6; }
+.webtoon-bubble::after { content: ""; position: absolute; left: 22px; bottom: -9px; width: 14px; height: 14px; background: #fff; border-right: 2px solid #1B2A4E; border-bottom: 2px solid #1B2A4E; transform: rotate(45deg); }
+.webtoon-bubble.right::after { left: auto; right: 22px; background: #fdf2f6; }
+.webtoon-scene { text-align: center; margin: 1.5rem 0 0.75rem; }
+.webtoon-scene span { display: inline-block; font-weight: 700; letter-spacing: 0.04em; color: #c2185b; border-top: 2px solid #e91e63; border-bottom: 2px solid #e91e63; padding: 0.4rem 1.2rem; }
+.webtoon-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 1rem 0; }
 .badge {
   display: inline-block; background: var(--sage-light); color: var(--navy);
   border-radius: 999px; padding: 0.1rem 0.65rem; font-size: 0.8rem; font-weight: 700;

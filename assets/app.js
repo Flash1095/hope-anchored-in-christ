@@ -210,8 +210,9 @@
   var lookupDates = []; // DSS passage-lookup dates (content/dss_lookup_dates.json)
   var atlasItems = []; // biblical atlas (content/atlas.json)
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
+  var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "276";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "277";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -6141,7 +6142,7 @@ function genBindInteractive(node) {
     var html = '<a class="back-link" href="#/">&larr; Home</a><h2>The Havenbrook Chronicles</h2>' +
       "<p class='page-intro'>An original story world in the Adventures in Odyssey tradition — mystery, adventure, and faith in " + esc(d.setting || "Havenbrook, a small fictional Texas town") + ".</p>" +
       "<p class='page-intro'>The stories center on " + esc(d.headquarters || "The Lantern House Research Center & Museum") + ", home of the Gateway — " + esc(d.invention || "a teleportation machine") + "</p>" +
-      "<p>" + [["#/havenbrook/characters", "Meet the characters"], ["#/havenbrook/families", "Families"], ["#/havenbrook/teams", "Groups & teams"]].map(function (l) { return "<a class='btn' href='" + l[0] + "'>" + l[1] + "</a>"; }).join(" ") + "</p>" +
+      "<p>" + [["#/havenbrook/characters", "Meet the characters"], ["#/havenbrook/families", "Families"], ["#/havenbrook/teams", "Groups & teams"], ["#/havenbrook/webtoons", "Webtoon stories"]].map(function (l) { return "<a class='btn' href='" + l[0] + "'>" + l[1] + "</a>"; }).join(" ") + "</p>" +
       "<p class='page-intro'>" + chars.length + " characters (" + humans + " people and " + animals + " animals) in " + ((d.families || []).length) + " families and " + ((d.teams || []).length) + " groups &amp; teams.</p>" +
       "<p class='page-intro'>Themes: " + ((d.themes || []).map(function (t) { return esc(t); }).join(", ")) + ".</p>" +
       "<p class='page-intro'>The Havenbrook Chronicles is a work of fiction created for Hope Anchored in Christ. The characters and town are invented; any resemblance to real people is coincidental.</p>";
@@ -6329,6 +6330,71 @@ function genBindInteractive(node) {
     app.innerHTML = html;
     window.scrollTo(0, 0);
   }
+  /* ---------- Havenbrook webtoons (app-only fiction, v277) ----------
+     Episode scripts live in content/webtoons.json, separate from the
+     artwork in assets/havenbrook/webtoons/panels/ — so words can be
+     edited without touching the pictures. Panels are plain images;
+     captions and speech bubbles render from the JSON. */
+  function webtoonEpisodes() { return (webtoonsData && webtoonsData.episodes) || []; }
+  function webtoonById(id) {
+    var eps = webtoonEpisodes();
+    for (var i = 0; i < eps.length; i++) if (eps[i].id === id) return eps[i];
+    return null;
+  }
+  function webtoonPanelCount(ep) {
+    var n = 0, i, j;
+    for (i = 0; i < (ep.scenes || []).length; i++) n += ((ep.scenes[i].panels || []).length);
+    return n;
+  }
+  function webtoonCastLinks(ep) {
+    return (ep.cast || []).map(function (n) { var ch = havenbrookByNumber(n); return ch ? '<a href="#/havenbrook/characters/' + ch.number + '">' + esc(ch.name) + '</a>' : ""; }).filter(Boolean).join(", ");
+  }
+  function viewHavenbrookWebtoons() {
+    var eps = webtoonEpisodes();
+    var cards = eps.map(function (ep) {
+      return '<a class="card" href="#/havenbrook/webtoons/' + ep.id + '">' +
+        (ep.cover ? '<img class="webtoon-cover" src="' + esc(ep.cover) + "?v=" + ASSET_V + '" alt="">' : "") +
+        "<div><h3>" + esc(ep.title) + "</h3>" +
+        "<p class='meta'>" + esc(ep.subtitle || "") + "</p>" +
+        "<p class='meta'>" + webtoonPanelCount(ep) + " panels</p></div></a>";
+    }).join("");
+    var html = '<a class="back-link" href="#/havenbrook">&larr; The Havenbrook Chronicles</a><h2>Webtoon stories</h2>' +
+      "<p class='page-intro'>Original comic episodes from Havenbrook. Read top to bottom, one panel at a time.</p>" +
+      (eps.length ? '<div class="card-grid">' + cards + "</div>" : "<p class='page-intro'>The first episode is on its way — check back soon.</p>");
+    app.innerHTML = html;
+    window.scrollTo(0, 0);
+  }
+  function viewHavenbrookWebtoon(id) {
+    var ep = webtoonById(id);
+    if (!ep) return viewHavenbrookWebtoons();
+    var eps = webtoonEpisodes();
+    var idx = eps.indexOf(ep);
+    var prev = idx > 0 ? eps[idx - 1] : null;
+    var next = idx < eps.length - 1 ? eps[idx + 1] : null;
+    var nav = '<p class="webtoon-nav">' +
+      (prev ? '<a class="btn" href="#/havenbrook/webtoons/' + prev.id + '">&larr; ' + esc(prev.title) + '</a>' : "") +
+      '<a class="btn" href="#/havenbrook/webtoons">All episodes</a>' +
+      (next ? '<a class="btn" href="#/havenbrook/webtoons/' + next.id + '">' + esc(next.title) + ' &rarr;</a>' : "<span class='meta'>Next episode coming soon</span>") + "</p>";
+    var body = "";
+    (ep.scenes || []).forEach(function (sc) {
+      body += '<div class="webtoon-scene"><span>' + esc(sc.title || "") + "</span></div>";
+      (sc.panels || []).forEach(function (p) {
+        body += '<figure class="webtoon-panel"><img src="' + esc(p.img) + "?v=" + ASSET_V + '" alt=""></figure>';
+        if (p.narration) body += '<div class="webtoon-caption">' + esc(p.narration) + "</div>";
+        (p.lines || []).forEach(function (ln, li) {
+          body += '<div class="webtoon-bubble' + (li % 2 ? " right" : "") + '"><strong>' + havenbrookCharLink(ln.who) + "</strong> " + esc(ln.text) + "</div>";
+        });
+      });
+    });
+    var cast = webtoonCastLinks(ep);
+    var html = '<a class="back-link" href="#/havenbrook/webtoons">&larr; Webtoon stories</a><h2>' + esc(ep.title) + "</h2>" +
+      "<p class='meta'>" + esc(ep.subtitle || "") + "</p>" +
+      (cast ? "<p class='meta'>Starring: " + cast + "</p>" : "") + nav +
+      '<div class="webtoon-reader">' + body + "</div>" +
+      (ep.ending ? '<div class="webtoon-scene"><span>' + esc(ep.ending) + "</span></div>" : "") + nav;
+    app.innerHTML = html;
+    window.scrollTo(0, 0);
+  }
 
   function render() {
     stopReading();
@@ -6370,6 +6436,7 @@ function genBindInteractive(node) {
       }
       if (path[1] === "families") return path[2] ? viewHavenbrookFamily(decodeURIComponent(path[2])) : viewHavenbrookFamilies();
       if (path[1] === "teams") return path[2] ? viewHavenbrookTeam(decodeURIComponent(path[2])) : viewHavenbrookTeams();
+      if (path[1] === "webtoons") return path[2] ? viewHavenbrookWebtoon(parseInt(decodeURIComponent(path[2]), 10)) : viewHavenbrookWebtoons();
       return viewHavenbrook();
     }
     var c = coll(path[0]);
@@ -6442,6 +6509,7 @@ function genBindInteractive(node) {
   jobs.push(fetch("content/genealogy.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : { nodes: [], edges: [] }; }).then(function (g) { genealogyData = g; }).catch(function () { genealogyData = { nodes: [], edges: [] }; }));
   jobs.push(fetch("content/atlas.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (a) { atlasItems = a; }).catch(function () { atlasItems = []; }));
   jobs.push(fetch("content/havenbrook.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : null; }).then(function (h) { havenbrookData = h; }).catch(function () { havenbrookData = null; }));
+  jobs.push(fetch("content/webtoons.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : null; }).then(function (w) { webtoonsData = w; }).catch(function () { webtoonsData = null; }));
   jobs.push(fetch("content/journey_road_paths.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) { journeyRoadPaths = d; }).catch(function () { journeyRoadPaths = null; }));
   Promise.all(jobs).then(function () {
     buildLinkIndex();
