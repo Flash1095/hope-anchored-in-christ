@@ -2,7 +2,7 @@
   "series": "The Havenbrook Chronicles",
   "setting": "Havenbrook, a small fictional Texas town",
   "headquarters": "The Lantern House Research Center & Museum",
-  "invention": "The Gateway — a teleportation machine allowing characters to explore locations around the world.",
+  "invention": "The Gateway \u2014 a teleportation machine allowing characters to explore locations around the world.",
   "themes": [
     "Christianity",
     "theology",
@@ -469,7 +469,7 @@
         "Using history and artifacts to point people to the truth of Scripture",
         "Leaving a legacy of faith for Olivia, Clara, and Lucas"
       ],
-      "verse": "Remember the days of old; consider the years of many generations... — Deuteronomy 32:7",
+      "verse": "Remember the days of old; consider the years of many generations... \u2014 Deuteronomy 32:7",
       "connections": [
         "Professor Gabriel Mercer",
         "Naomi Price",
@@ -510,7 +510,7 @@
         "Continuing to use her art and stories for God's glory",
         "Encouraging and discipling her kids in faith, truth, and creativity"
       ],
-      "verse": "Whatever you do, do it heartily, as unto the Lord... — Colossians 3:23",
+      "verse": "Whatever you do, do it heartily, as unto the Lord... \u2014 Colossians 3:23",
       "connections": [
         "Professor Gabriel Mercer",
         "Naomi Price",
@@ -750,7 +750,7 @@
         "Balancing compassion with wise boundaries",
         "Sharing God's love through service and kindness"
       ],
-      "verse": "A righteous man regards the life of his animal. — Proverbs 12:10",
+      "verse": "A righteous man regards the life of his animal. \u2014 Proverbs 12:10",
       "connections": [
         "Detective Mara Ellis",
         "Dr. Hannah Foster",
@@ -957,7 +957,7 @@
         "Remaining humble and dependent on God's guidance",
         "Investing in family and the community of Havenbrook"
       ],
-      "verse": "Consider the work of God; for who can make straight what He has made crooked? — Ecclesiastes 7:13",
+      "verse": "Consider the work of God; for who can make straight what He has made crooked? \u2014 Ecclesiastes 7:13",
       "connections": [
         "Dr. Simon Wren",
         "Dr. Miriam Vale",
@@ -1021,8 +1021,8 @@
         "Trusting God more deeply",
         "Balancing knowledge with wisdom"
       ],
-      "quote": "Every inscription tells a story — if we examine the evidence carefully enough to hear it.",
-      "verse": "The heart of the prudent acquires knowledge, and the ear of the wise seeks knowledge. — Proverbs 18:15",
+      "quote": "Every inscription tells a story \u2014 if we examine the evidence carefully enough to hear it.",
+      "verse": "The heart of the prudent acquires knowledge, and the ear of the wise seeks knowledge. \u2014 Proverbs 18:15",
       "connections": [
         "Professor Mercer",
         "Noah Kim",
@@ -1175,9 +1175,9 @@
       "number": 36,
       "name": "Grace Mitchell",
       "age": null,
-      "role": "Café owner",
+      "role": "Caf\u00e9 owner",
       "family": "Mitchell",
-      "description": "Café owner; Amelia's cousin",
+      "description": "Caf\u00e9 owner; Amelia's cousin",
       "connections": [
         "Dr. Lydia Rhodes",
         "Pastor Elijah Carter",
@@ -1910,6 +1910,105 @@
       "connections": [],
       "groups": [],
       "kind": "animal"
+    },
+    {
+      "number": 89,
+      "name": "Wesley Hale",
+      "age": null,
+      "role": "Blacksmith",
+      "family": null,
+      "description": "Blacksmith",
+      "connections": [],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 90,
+      "name": "Delia Vance",
+      "age": null,
+      "role": "Magazine editor",
+      "family": null,
+      "description": "Magazine editor",
+      "connections": [],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 91,
+      "name": "Silas Cross",
+      "age": null,
+      "role": "Mediator",
+      "family": null,
+      "description": "Mediator",
+      "connections": [],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 92,
+      "name": "Willa Monroe",
+      "age": null,
+      "role": "Translator",
+      "family": null,
+      "description": "Translator",
+      "connections": [],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 93,
+      "name": "Jesse Rivers",
+      "age": null,
+      "role": "Naturalist",
+      "family": null,
+      "description": "Naturalist",
+      "connections": [],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 94,
+      "name": "August Silva",
+      "age": null,
+      "role": "Probation officer",
+      "family": null,
+      "description": "Probation officer",
+      "connections": [],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 95,
+      "name": "June Calloway",
+      "age": null,
+      "role": "Radio host",
+      "family": null,
+      "description": "Radio host",
+      "connections": [],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 96,
+      "name": "Harvey Ward",
+      "age": null,
+      "role": "Legislative aide",
+      "family": null,
+      "description": "Legislative aide",
+      "connections": [],
+      "groups": [],
+      "kind": "human"
+    },
+    {
+      "number": 97,
+      "name": "Pearl Ellison",
+      "age": null,
+      "role": "Book conservator",
+      "family": null,
+      "description": "Book conservator",
+      "connections": [],
+      "groups": [],
+      "kind": "human"
     }
   ]
 }
