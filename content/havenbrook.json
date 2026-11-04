@@ -1262,10 +1262,38 @@
     {
       "number": 38,
       "name": "Samuel Parks",
-      "age": 53,
-      "role": "Civics teacher and city councilmember",
+      "age": 46,
+      "image": "assets/havenbrook/samuel-parks.jpg",
+      "role": "Civics teacher at Havenbrook High School and member of the Havenbrook Town Council",
       "family": "Parks",
-      "description": "Civics teacher and city councilmember; father",
+      "description": "Civics teacher at Havenbrook High School and member of the Havenbrook Town Council; father",
+      "interests": [
+        "Civics",
+        "History",
+        "Constitutional ideas",
+        "Mentoring students",
+        "Public speaking",
+        "Community service",
+        "Reading",
+        "Thoughtful discussion"
+      ],
+      "personality": [
+        "Wise",
+        "Calm",
+        "Principled",
+        "Articulate",
+        "Patient",
+        "Fair-minded",
+        "Encouraging"
+      ],
+      "growingIn": [
+        "Balancing public service and family life",
+        "Humility",
+        "Listening well",
+        "Courage in difficult decisions",
+        "Serving with wisdom"
+      ],
+      "verse": "What does the Lord require of you but to do justice, and to love kindness, and to walk humbly with your God? — Micah 6:8",
       "connections": [
         "Sofia Alvarez",
         "Dr. Amara Okafor",
