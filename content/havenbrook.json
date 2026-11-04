@@ -699,7 +699,7 @@
         "Standing for truth with grace and wisdom",
         "Using his skills to serve his family, friends, and community"
       ],
-      "verse": "Whatever you do, work heartily, as for the Lord and not for men. — Colossians 3:23",
+      "verse": "Whatever you do, work heartily, as for the Lord and not for men. \u2014 Colossians 3:23",
       "connections": [
         "Isaac Romero",
         "Pastor Elijah Carter",
@@ -853,7 +853,7 @@
         "Using her experience for God's glory",
         "Continuing to learn and grow in faith"
       ],
-      "verse": "Teach the older women to be reverent in the way they live, to love what is good, and to be teachers of what is right. — Titus 2:3–4",
+      "verse": "Teach the older women to be reverent in the way they live, to love what is good, and to be teachers of what is right. \u2014 Titus 2:3\u20134",
       "connections": [
         "Caleb Montgomery",
         "Emma Wilson",
@@ -982,37 +982,35 @@
     {
       "number": 25,
       "name": "Gabriel Mercer",
-      "age": 58,
+      "age": 52,
       "image": "assets/havenbrook/gabriel-mercer.jpg",
       "thumb": "assets/havenbrook/gabriel-mercer-figure.jpg",
-      "role": "Historian, Researcher & Museum Curator",
+      "role": "Director of the Lantern House Research Center & Museum, historian, researcher, and teacher",
       "family": "Mercer",
-      "description": "Historian, Researcher & Museum Curator; uncle",
+      "description": "Director of the Lantern House Research Center & Museum, historian, researcher, and teacher; husband of Charlotte Mercer",
       "interests": [
-        "History, archaeology & ancient cultures",
-        "Biblical history & apologetics",
-        "Preserving and curating historical artifacts",
-        "Documentation, research & writing",
-        "Travel, exploration & field study",
-        "Mentoring younger researchers (including Charlotte, his niece)"
+        "Biblical and ancient history",
+        "Archaeology",
+        "Artifacts",
+        "World cultures",
+        "Travel",
+        "Museum curation"
       ],
       "personality": [
-        "Wise, patient, and thoughtful",
-        "Deeply curious and a lifelong learner",
-        "Encouraging mentor and teacher",
-        "Analytical and detail-oriented",
-        "Passionate about truth and evidence",
-        "Faithful, humble, and servant-hearted",
-        "Sees the \"big picture\" and connects history to God's plan"
+        "Curious",
+        "Thoughtful",
+        "Wise",
+        "Patient",
+        "Humble",
+        "Encouraging",
+        "Passionate about truth and learning"
       ],
       "growingIn": [
-        "Continuing to steward the museum and research center",
-        "Training and mentoring the next generation",
-        "Using history to strengthen faith and answer tough questions",
-        "Remaining humble and dependent on God's guidance",
-        "Investing in family and the community of Havenbrook"
+        "Mentoring the next generation",
+        "Expanding the museum's research",
+        "Deepening historical and biblical study",
+        "Using history to point others to Christ"
       ],
-      "verse": "Consider the work of God; for who can make straight what He has made crooked? \u2014 Ecclesiastes 7:13",
       "connections": [
         "Dr. Simon Wren",
         "Dr. Miriam Vale",
@@ -1024,7 +1022,8 @@
         "Main Adventure Team",
         "Archaeology and Historical Research Team"
       ],
-      "kind": "human"
+      "kind": "human",
+      "quote": "Study the past, understand God's work in history, and point others to the hope we have in Christ."
     },
     {
       "number": 26,
@@ -1034,7 +1033,7 @@
       "thumb": "assets/havenbrook/charlotte-mercer-figure.jpg",
       "role": "Museum assistant and historian",
       "family": "Mercer",
-      "description": "Museum assistant and historian; niece",
+      "description": "Museum assistant and historian; wife of Gabriel Mercer",
       "interests": [
         "History",
         "Museums",
@@ -1060,7 +1059,7 @@
         "Finding healthy balance in her responsibilities",
         "Serving others well in her home, work, and community"
       ],
-      "verse": "Let all that you do be done in love. — 1 Corinthians 16:14 (ESV)",
+      "verse": "Let all that you do be done in love. \u2014 1 Corinthians 16:14 (ESV)",
       "connections": [
         "Dr. Simon Wren",
         "Dr. Miriam Vale",
@@ -1151,7 +1150,7 @@
         "Growing in patience and trusting God's timing",
         "Finding practical ways to serve Havenbrook and the next generation"
       ],
-      "verse": "The heavens declare the glory of God; the skies proclaim the work of His hands. — Psalm 19:1",
+      "verse": "The heavens declare the glory of God; the skies proclaim the work of His hands. \u2014 Psalm 19:1",
       "connections": [
         "Professor Mercer",
         "Noah Kim",
@@ -1349,7 +1348,7 @@
         "Courage in difficult decisions",
         "Serving with wisdom"
       ],
-      "verse": "What does the Lord require of you but to do justice, and to love kindness, and to walk humbly with your God? — Micah 6:8",
+      "verse": "What does the Lord require of you but to do justice, and to love kindness, and to walk humbly with your God? \u2014 Micah 6:8",
       "connections": [
         "Sofia Alvarez",
         "Dr. Amara Okafor",
