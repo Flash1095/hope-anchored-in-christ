@@ -440,6 +440,7 @@
       "number": 1,
       "name": "Walter Bennett",
       "age": null,
+      "image": "assets/havenbrook/walter-bennett.jpg",
       "role": "Antique restorer",
       "family": "Bennett",
       "description": "Antique restorer; father",
