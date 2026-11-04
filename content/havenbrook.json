@@ -928,9 +928,20 @@
       "number": 25,
       "name": "Gabriel Mercer",
       "age": null,
+      "image": "assets/havenbrook/gabriel-mercer.jpg",
       "role": "Retired archaeologist, historian, and mentor",
       "family": "Mercer",
-      "description": "Retired archaeologist, historian, and mentor; uncle",
+      "description": "Retired archaeologist, historian, and mentor; founder of the Lantern House Research Center & Museum; uncle",
+      "interests": [
+        "Biblical archaeology",
+        "Ancient history",
+        "Apologetics",
+        "Mentoring young investigators"
+      ],
+      "personality": [
+        "Wise, patient, curious, gentle, and deeply faithful"
+      ],
+      "quote": "We follow the evidence, ask good questions, and trust that God's truth can handle honest investigation.",
       "connections": [
         "Dr. Simon Wren",
         "Dr. Miriam Vale",
