@@ -212,7 +212,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "279";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "280";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -6282,6 +6282,13 @@ function genBindInteractive(node) {
         return "<a href='#/havenbrook/teams/" + encodeURIComponent(g) + "'>" + esc(g) + "</a>";
       }).join(", ") + "</p>";
     }
+    var chEps = webtoonEpisodes().filter(function (ep) { return (ep.cast || []).indexOf(ch.number) !== -1; });
+    if (chEps.length) {
+      html += "<h3>Webtoon episodes</h3><p>" + chEps.map(function (ep) {
+        var isFocus = (ep.focus || []).indexOf(ch.number) !== -1;
+        return "<a href='#/havenbrook/webtoons/" + ep.id + "'>" + esc(ep.title) + "</a>" + (isFocus ? " (focus character)" : "") + " — " + esc(ep.subtitle || "");
+      }).join("<br>") + "</p>";
+    }
     app.innerHTML = html;
     window.scrollTo(0, 0);
   }
@@ -6349,19 +6356,122 @@ function genBindInteractive(node) {
   function webtoonCastLinks(ep) {
     return (ep.cast || []).map(function (n) { var ch = havenbrookByNumber(n); return ch ? '<a href="#/havenbrook/characters/' + ch.number + '">' + esc(ch.name) + '</a>' : ""; }).filter(Boolean).join(", ");
   }
-  function viewHavenbrookWebtoons() {
+  function webtoonShared(a, b) {
+    var shared = [];
+    (a.cast || []).forEach(function (n) {
+      if ((b.cast || []).indexOf(n) !== -1) { var ch = havenbrookByNumber(n); if (ch) shared.push("Also features " + ch.name); }
+    });
+    (a.locations || []).forEach(function (l) { if ((b.locations || []).indexOf(l) !== -1) shared.push("Same place: " + l); });
+    (a.families || []).forEach(function (f) { if ((b.families || []).indexOf(f) !== -1) shared.push("Same family: " + f); });
+    if (a.thread && a.thread === b.thread) shared.push("Same storyline: " + a.thread);
+    return shared;
+  }
+  function webtoonCard(ep) {
+    var focus = (ep.focus || []).map(function (n) { var ch = havenbrookByNumber(n); return ch ? ch.name : ""; }).filter(Boolean).join(", ");
+    var tags = [];
+    if (focus) tags.push("Focus: " + focus);
+    if ((ep.locations || []).length) tags.push(ep.locations[0]);
+    if (ep.thread) tags.push("Storyline: " + ep.thread);
+    return '<a class="card" href="#/havenbrook/webtoons/' + ep.id + '">' +
+      (ep.cover ? '<img class="webtoon-cover" src="' + esc(ep.cover) + "?v=" + ASSET_V + '" alt="">' : "") +
+      "<div><h3>" + esc(ep.title) + "</h3>" +
+      "<p class='meta'>" + esc(ep.subtitle || "") + "</p>" +
+      "<p class='meta'>" + webtoonPanelCount(ep) + " panels" + (tags.length ? " &middot; " + esc(tags.join(" · ")) : "") + "</p></div></a>";
+  }
+  function viewHavenbrookWebtoons(params) {
+    params = params || new URLSearchParams("");
     var eps = webtoonEpisodes();
-    var cards = eps.map(function (ep) {
-      return '<a class="card" href="#/havenbrook/webtoons/' + ep.id + '">' +
-        (ep.cover ? '<img class="webtoon-cover" src="' + esc(ep.cover) + "?v=" + ASSET_V + '" alt="">' : "") +
-        "<div><h3>" + esc(ep.title) + "</h3>" +
-        "<p class='meta'>" + esc(ep.subtitle || "") + "</p>" +
-        "<p class='meta'>" + webtoonPanelCount(ep) + " panels</p></div></a>";
-    }).join("");
+    var state = { character: (params.get("character") || ""), place: (params.get("place") || ""), family: (params.get("family") || ""), thread: (params.get("thread") || "") };
+    function uniq(list) { var out = []; list.forEach(function (v) { if (out.indexOf(v) === -1) out.push(v); }); return out; }
+    var charNums = uniq(eps.reduce(function (acc, ep) { return acc.concat(ep.cast || []); }, []));
+    var places = uniq(eps.reduce(function (acc, ep) { return acc.concat(ep.locations || []); }, []));
+    var fams = uniq(eps.reduce(function (acc, ep) { return acc.concat(ep.families || []); }, []));
+    var threads = uniq(eps.map(function (ep) { return ep.thread || ""; }).filter(Boolean));
+    function filtered() {
+      return eps.filter(function (ep) {
+        if (state.character && (ep.cast || []).indexOf(parseInt(state.character, 10)) === -1) return false;
+        if (state.place && (ep.locations || []).indexOf(state.place) === -1) return false;
+        if (state.family && (ep.families || []).indexOf(state.family) === -1) return false;
+        if (state.thread && ep.thread !== state.thread) return false;
+        return true;
+      });
+    }
+    function activeCount() { return (state.character ? 1 : 0) + (state.place ? 1 : 0) + (state.family ? 1 : 0) + (state.thread ? 1 : 0); }
+    function renderList() {
+      var shown = filtered();
+      var wrap = document.getElementById("webtoonWrap");
+      if (!wrap) return;
+      var ce = document.getElementById("webtoonFilterCount");
+      if (ce) ce.textContent = shown.length + " episode" + (shown.length === 1 ? "" : "s") + " match";
+      var nb = document.getElementById("webtoonFilterMenuBtn");
+      if (nb) nb.textContent = "Filter" + (activeCount() ? " (" + activeCount() + ")" : "");
+      if (!shown.length) {
+        wrap.innerHTML = '<p class="empty">Nothing matches. Try clearing the filters.</p>';
+      } else {
+        wrap.innerHTML = '<div class="card-grid">' + shown.map(function (ep) { return webtoonCard(ep); }).join("") + "</div>";
+      }
+    }
+    function syncUrl() {
+      var p = new URLSearchParams();
+      if (state.character) p.set("character", state.character);
+      if (state.place) p.set("place", state.place);
+      if (state.family) p.set("family", state.family);
+      if (state.thread) p.set("thread", state.thread);
+      var s = p.toString();
+      history.replaceState(null, "", "#/havenbrook/webtoons" + (s ? "?" + s : ""));
+    }
+    function selectHtml(id, label, options, current) {
+      var h = '<label class="filter-field"><span>' + esc(label) + '</span><select id="' + id + '"><option value="">All</option>';
+      options.forEach(function (o) {
+        h += '<option value="' + esc(o.v) + '"' + (o.v === current ? " selected" : "") + ">" + esc(o.label) + "</option>";
+      });
+      return h + "</select></label>";
+    }
     var html = '<a class="back-link" href="#/havenbrook">&larr; The Havenbrook Chronicles</a><h2>Webtoon stories</h2>' +
-      "<p class='page-intro'>Original comic episodes from Havenbrook. Read top to bottom, one panel at a time.</p>" +
-      (eps.length ? '<div class="card-grid">' + cards + "</div>" : "<p class='page-intro'>The first episode is on its way — check back soon.</p>");
+      "<p class='page-intro'>Original comic episodes from Havenbrook. Read top to bottom, one panel at a time. Browse by character, place, family, or storyline — episodes that share one connect to each other.</p>" +
+      '<div class="controls"><div class="filter-menu"><button class="btn" id="webtoonFilterMenuBtn" type="button" ' +
+      'aria-expanded="false" aria-controls="webtoonFilterPanel">Filter' + (activeCount() ? " (" + activeCount() + ")" : "") + "</button>" +
+      '<div class="filter-panel" id="webtoonFilterPanel">' +
+      selectHtml("webtoonCharSel", "Character", charNums.map(function (n) { var ch = havenbrookByNumber(n); return { v: String(n), label: ch ? ch.name : String(n) }; }), state.character) +
+      selectHtml("webtoonPlaceSel", "Place", places.map(function (l) { return { v: l, label: l }; }), state.place) +
+      selectHtml("webtoonFamSel", "Family", fams.map(function (f) { return { v: f, label: f + " family" }; }), state.family) +
+      selectHtml("webtoonThreadSel", "Storyline", threads.map(function (t) { return { v: t, label: t }; }), state.thread) +
+      '<p class="filter-count" id="webtoonFilterCount"></p>' +
+      '<p><button class="btn" id="webtoonFilterClearBtn" type="button">Clear all filters</button></p>' +
+      "</div></div></div><div id=\"webtoonWrap\"></div>";
     app.innerHTML = html;
+    renderList();
+    [["webtoonCharSel", "character"], ["webtoonPlaceSel", "place"], ["webtoonFamSel", "family"], ["webtoonThreadSel", "thread"]].forEach(function (pair) {
+      document.getElementById(pair[0]).addEventListener("change", function (e) {
+        state[pair[1]] = e.target.value;
+        syncUrl();
+        renderList();
+      });
+    });
+    var wBtn = document.getElementById("webtoonFilterMenuBtn");
+    var wPanel = document.getElementById("webtoonFilterPanel");
+    if (wBtn && wPanel) {
+      wBtn.addEventListener("click", function () {
+        var open = wPanel.classList.toggle("open");
+        wBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      wPanel.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          wPanel.classList.remove("open");
+          wBtn.setAttribute("aria-expanded", "false");
+          wBtn.focus();
+        }
+      });
+      document.getElementById("webtoonFilterClearBtn").addEventListener("click", function () {
+        state.character = ""; state.place = ""; state.family = ""; state.thread = "";
+        document.getElementById("webtoonCharSel").value = "";
+        document.getElementById("webtoonPlaceSel").value = "";
+        document.getElementById("webtoonFamSel").value = "";
+        document.getElementById("webtoonThreadSel").value = "";
+        syncUrl();
+        renderList();
+      });
+    }
     window.scrollTo(0, 0);
   }
   function viewHavenbrookWebtoon(id) {
@@ -6387,11 +6497,28 @@ function genBindInteractive(node) {
       });
     });
     var cast = webtoonCastLinks(ep);
+    var focusLinks = (ep.focus || []).map(function (n) { var ch = havenbrookByNumber(n); return ch ? '<a href="#/havenbrook/characters/' + ch.number + '">' + esc(ch.name) + '</a>' : ""; }).filter(Boolean).join(", ");
+    var placeLinks = (ep.locations || []).map(function (l) { return '<a href="#/havenbrook/webtoons?place=' + encodeURIComponent(l) + '">' + esc(l) + '</a>'; }).join(", ");
+    var famLinks = (ep.families || []).map(function (f) { return '<a href="#/havenbrook/webtoons?family=' + encodeURIComponent(f) + '">' + esc(f) + ' family</a>'; }).join(", ");
+    var threadLink = ep.thread ? '<a href="#/havenbrook/webtoons?thread=' + encodeURIComponent(ep.thread) + '">' + esc(ep.thread) + '</a>' : "";
+    var connected = eps.filter(function (o) { return o.id !== ep.id && webtoonShared(ep, o).length; });
+    var connectedHtml = "";
+    if (connected.length) {
+      connectedHtml = "<h3>Connected episodes</h3><p class='page-intro'>Episodes that share characters, places, families, or a storyline with this one.</p>" +
+        '<div class="card-grid">' + connected.map(function (o) {
+          return '<a class="card" href="#/havenbrook/webtoons/' + o.id + '"><div><h3>' + esc(o.title) + "</h3>" +
+            "<p class='meta'>" + esc(webtoonShared(ep, o).join(" · ")) + "</p></div></a>";
+        }).join("") + "</div>";
+    }
     var html = '<a class="back-link" href="#/havenbrook/webtoons">&larr; Webtoon stories</a><h2>' + esc(ep.title) + "</h2>" +
       "<p class='meta'>" + esc(ep.subtitle || "") + "</p>" +
-      (cast ? "<p class='meta'>Starring: " + cast + "</p>" : "") + nav +
+      (cast ? "<p class='meta'>Starring: " + cast + "</p>" : "") +
+      (focusLinks ? "<p class='meta'>Focus: " + focusLinks + "</p>" : "") +
+      (placeLinks ? "<p class='meta'>Places: " + placeLinks + "</p>" : "") +
+      (famLinks ? "<p class='meta'>Families: " + famLinks + "</p>" : "") +
+      (threadLink ? "<p class='meta'>Storyline: " + threadLink + "</p>" : "") + nav +
       '<div class="webtoon-reader">' + body + "</div>" +
-      (ep.ending ? '<div class="webtoon-scene"><span>' + esc(ep.ending) + "</span></div>" : "") + nav;
+      (ep.ending ? '<div class="webtoon-scene"><span>' + esc(ep.ending) + "</span></div>" : "") + connectedHtml + nav;
     app.innerHTML = html;
     window.scrollTo(0, 0);
   }
@@ -6436,7 +6563,7 @@ function genBindInteractive(node) {
       }
       if (path[1] === "families") return path[2] ? viewHavenbrookFamily(decodeURIComponent(path[2])) : viewHavenbrookFamilies();
       if (path[1] === "teams") return path[2] ? viewHavenbrookTeam(decodeURIComponent(path[2])) : viewHavenbrookTeams();
-      if (path[1] === "webtoons") return path[2] ? viewHavenbrookWebtoon(parseInt(decodeURIComponent(path[2]), 10)) : viewHavenbrookWebtoons();
+      if (path[1] === "webtoons") return path[2] ? viewHavenbrookWebtoon(parseInt(decodeURIComponent(path[2]), 10)) : viewHavenbrookWebtoons(params);
       return viewHavenbrook();
     }
     var c = coll(path[0]);
