@@ -10,12 +10,11 @@
 #   npx wrangler secret put PRINTIFY_SHOP_ID
 #
 # The publishable key is public (it is meant to be visible in the browser),
-# so it lives here as a plain variable. Replace the placeholder with the
-# real key from the Stripe dashboard (test key first, live key at go-live).
+# but it lives ONLY in the Cloudflare dashboard (Worker -> Settings ->
+# Variables) — NOT in this file. A value here would override the dashboard
+# value on every git deploy, so keep this file free of it. The Worker
+# code reads env.STRIPE_PUBLISHABLE_KEY and falls back to "" when unset.
 
 name = "hope-anchored-checkout"
 main = "worker/worker.js"
 compatibility_date = "2026-11-10"
-
-[vars]
-STRIPE_PUBLISHABLE_KEY = "pk_test_YOUR_PUBLISHABLE_KEY_HERE"
