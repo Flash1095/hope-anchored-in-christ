@@ -212,7 +212,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "280";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "281";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3591,7 +3591,7 @@ function genBindInteractive(node) {
      real products are added once the shops are set up, so the live page never
      shows fake items. */
   /* Set to the Printify Pop-Up Store URL once Lorraine shares it. Empty means no shop button. */
-  var STORE_URL = "";
+  var STORE_URL = "https://hope-anchored-in-christ.printify.me/";
   /* Set to the Ko-fi shop URL once Lorraine shares it. Empty means no digital-shop button. */
   var DIGITAL_SHOP_URL = "";
   /* Set to the giving link (Ko-fi/PayPal/Stripe) once Lorraine shares it. Empty means coming soon. */
