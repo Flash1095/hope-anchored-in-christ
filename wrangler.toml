@@ -1,0 +1,21 @@
+# Hope Anchored in Christ — checkout Worker
+# One-tap deploy: https://deploy.workers.cloudflare.com/?url=https://github.com/Flash1095/hope-anchored-in-christ
+# (or: npx wrangler deploy)
+#
+# Secrets are NOT in this file. Set them in the Cloudflare dashboard
+# (Worker -> Settings -> Variables -> Add secret) or with:
+#   npx wrangler secret put STRIPE_SECRET_KEY
+#   npx wrangler secret put STRIPE_WEBHOOK_SECRET
+#   npx wrangler secret put PRINTIFY_API_TOKEN
+#   npx wrangler secret put PRINTIFY_SHOP_ID
+#
+# The publishable key is public (it is meant to be visible in the browser),
+# so it lives here as a plain variable. Replace the placeholder with the
+# real key from the Stripe dashboard (test key first, live key at go-live).
+
+name = "hope-anchored-checkout"
+main = "worker/worker.js"
+compatibility_date = "2026-11-10"
+
+[vars]
+STRIPE_PUBLISHABLE_KEY = "pk_test_YOUR_PUBLISHABLE_KEY_HERE"
