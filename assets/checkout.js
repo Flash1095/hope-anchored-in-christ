@@ -43,6 +43,24 @@ function hacEsc(s) {
     .replace(/"/g, "&quot;");
 }
 
+/* Product gallery views (from the product's images in store.json). */
+var HAC_VIEWS = [
+  { key: "front", label: "Front" },
+  { key: "back", label: "Back" },
+  { key: "folded", label: "Folded" },
+  { key: "styled", label: "Styled" },
+  { key: "sizeChart", label: "Size chart" }
+];
+/* Mockup image URL for one colour + view; falls back to the product image. */
+function hacViewSrc(product, color, viewKey) {
+  if (product.images) {
+    if (viewKey === "sizeChart") return product.images.sizeChart || product.image;
+    var byColor = product.images[color];
+    if (byColor && byColor[viewKey]) return byColor[viewKey];
+  }
+  return product.image;
+}
+
 // Countries the checkout offers. Printify ships to many more; extend this
 // list by adding entries — the Worker passes the code straight through
 // to Printify's shipping quote.
@@ -102,8 +120,9 @@ function hacVariantPrice(color, size) {
   return price;
 }
 
-/* Open the checkout overlay for one store.json product. */
-function hacOpenCheckout(product) {
+/* Open the checkout overlay for one store.json product. preferredColor
+ * (optional) preselects the colour the shopper picked on the Store card. */
+function hacOpenCheckout(product, preferredColor) {
   hacFetchConfig(function (err, cfg) {
     if (err) {
       alert(err.message);
@@ -126,8 +145,9 @@ function hacOpenCheckout(product) {
       if (colors.indexOf(v.color) === -1) colors.push(v.color);
     });
 
+    var initialColor = (preferredColor && colors.indexOf(preferredColor) !== -1) ? preferredColor : colors[0];
     var colorOptions = colors.map(function (c) {
-      return "<option value='" + hacEsc(c) + "'>" + hacEsc(c) + "</option>";
+      return "<option value='" + hacEsc(c) + "'" + (c === initialColor ? " selected" : "") + ">" + hacEsc(c) + "</option>";
     }).join("");
 
     var countryOptions = HAC_COUNTRIES.map(function (c) {
@@ -138,7 +158,17 @@ function hacOpenCheckout(product) {
       "<div class='card checkout-box'>" +
       "<p style='text-align:right;margin:0'><button class='chip' id='hacClose' type='button'>Close ✕</button></p>" +
       "<h3>" + hacEsc(product.name) + "</h3>" +
-      (product.image ? "<img src='" + hacEsc(product.image) + "' alt='" + hacEsc(product.name) + "' style='max-width:220px'>" : "") +
+      (function () {
+        var hasImage = !!(product.image || (product.images && product.images[initialColor] && product.images[initialColor].front));
+        if (!hasImage) return "";
+        var thumbs = "";
+        if (product.images) {
+          thumbs = "<div id='hacViews' class='store-thumbs'>" + HAC_VIEWS.map(function (vw) {
+            return "<button type='button' class='store-thumb" + (vw.key === "front" ? " active" : "") + "' data-hac-view='" + vw.key + "'><img src='" + hacEsc(hacViewSrc(product, initialColor, vw.key)) + "' alt='" + hacEsc(vw.label) + "'><span>" + hacEsc(vw.label) + "</span></button>";
+          }).join("") + "</div>";
+        }
+        return "<img id='hacProductImg' src='" + hacEsc(hacViewSrc(product, initialColor, "front")) + "' alt='" + hacEsc(product.name) + "' style='max-width:220px'>" + thumbs;
+      })() +
       "<div id='hacStep1'>" +
       "<p><label>Colour<br><select id='hacColor'>" + colorOptions + "</select></label></p>" +
       "<p><label>Size<br><select id='hacSize'></select></label></p>" +
@@ -174,6 +204,21 @@ function hacOpenCheckout(product) {
     wrap.innerHTML = html;
     document.body.appendChild(wrap.firstChild);
 
+    var hacView = "front";
+    function refreshProductImage() {
+      var color = document.getElementById("hacColor").value;
+      var img = document.getElementById("hacProductImg");
+      if (img) img.src = hacViewSrc(product, color, hacView);
+      var views = document.getElementById("hacViews");
+      if (views) {
+        views.querySelectorAll("[data-hac-view]").forEach(function (b) {
+          var k = b.getAttribute("data-hac-view");
+          b.classList.toggle("active", k === hacView);
+          var ti = b.querySelector("img");
+          if (ti) ti.src = hacViewSrc(product, color, k);
+        });
+      }
+    }
     function refreshSize() {
       var color = document.getElementById("hacColor").value;
       var sizes = hacSizesForColor(color);
@@ -182,6 +227,7 @@ function hacOpenCheckout(product) {
         return "<option value='" + hacEsc(v.size) + "'>" + hacEsc(v.size) + " — " + hacMoney(v.priceCents) + "</option>";
       }).join("");
       refreshPrice();
+      refreshProductImage();
     }
     function refreshPrice() {
       var color = document.getElementById("hacColor").value;
@@ -211,6 +257,15 @@ function hacOpenCheckout(product) {
     document.getElementById("hacSize").addEventListener("change", refreshPrice);
     document.getElementById("hacQty").addEventListener("input", refreshPrice);
     refreshSize();
+    var hacViewsEl = document.getElementById("hacViews");
+    if (hacViewsEl) {
+      hacViewsEl.querySelectorAll("[data-hac-view]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          hacView = b.getAttribute("data-hac-view");
+          refreshProductImage();
+        });
+      });
+    }
 
     document.getElementById("hacBack").addEventListener("click", function () {
       document.getElementById("hacStep2").style.display = "none";
@@ -343,7 +398,13 @@ function hacWireStoreButtons(products) {
       (products || []).forEach(function (p) {
         if (p.name === name) product = p;
       });
-      if (product) hacOpenCheckout(product);
+      var preferredColor = null;
+      var card = btn.closest ? btn.closest(".store-card") : null;
+      if (card) {
+        var sw = card.querySelector(".store-swatch.active");
+        if (sw) preferredColor = sw.getAttribute("data-gallery-color");
+      }
+      if (product) hacOpenCheckout(product, preferredColor);
     });
   });
 }

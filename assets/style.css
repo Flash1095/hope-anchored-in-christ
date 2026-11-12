@@ -704,3 +704,16 @@ html[data-theme="dark"] .audio-bar { background: #0F1B33; box-shadow: 0 8px 24px
   border: 1px solid #d8d8e0; border-radius: 8px;
 }
 .checkout-box label { font-weight: 600; }
+
+/* Store product gallery: colour swatches + view thumbnails. */
+.store-gallery { margin: 0 0 8px; }
+.store-main-img { display: block; width: 100%; max-width: 420px; margin: 0 auto; border-radius: 8px; }
+.store-gallery-caption { text-align: center; font-size: 14px; margin: 6px 0; }
+.store-swatches { display: flex; gap: 8px; justify-content: center; margin: 6px 0; }
+.store-swatch { width: 28px; height: 28px; border-radius: 50%; border: 2px solid #ccc; cursor: pointer; padding: 0; }
+.store-swatch.active { border-color: #e91e63; box-shadow: 0 0 0 2px #fff, 0 0 0 4px #e91e63; }
+.store-thumbs { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; margin: 6px 0; }
+.store-thumb { border: 2px solid #ddd; border-radius: 6px; background: #fff; cursor: pointer; padding: 2px; width: 62px; }
+.store-thumb img { display: block; width: 100%; border-radius: 4px; }
+.store-thumb span { display: block; font-size: 11px; text-align: center; padding: 2px 0; }
+.store-thumb.active { border-color: #e91e63; }

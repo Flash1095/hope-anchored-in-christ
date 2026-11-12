@@ -212,7 +212,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "286";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "287";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3602,6 +3602,42 @@ function genBindInteractive(node) {
     }).catch(function () { return { products: [] }; }).then(function (json) {
       var products = json.products || [];
       var state = { q: "", kind: "" };
+      var GALLERY_COLORS = ["White", "Sand", "Light Pink", "Light Blue", "Sport Grey"];
+      var GALLERY_VIEWS = [
+        { key: "front", label: "Front" },
+        { key: "back", label: "Back" },
+        { key: "folded", label: "Folded" },
+        { key: "styled", label: "Styled" },
+        { key: "sizeChart", label: "Size chart" }
+      ];
+      var GALLERY_SWATCH = { "White": "#ffffff", "Sand": "#e6d3b3", "Light Pink": "#f6d3d8", "Light Blue": "#cfe3f5", "Sport Grey": "#b9bec4" };
+      var galleryState = {}; // product name -> { color, view }
+      function galleryViewLabel(key) {
+        var label = key;
+        GALLERY_VIEWS.forEach(function (vw) { if (vw.key === key) label = vw.label; });
+        return label;
+      }
+      function gallerySrc(p, color, view) {
+        if (!p.images) return p.image || "";
+        if (view === "sizeChart") return p.images.sizeChart || p.image || "";
+        var byColor = p.images[color];
+        return (byColor && byColor[view]) || p.image || "";
+      }
+      function storeGalleryHtml(p) {
+        var st = galleryState[p.name] || (galleryState[p.name] = { color: "White", view: "front" });
+        var html = "<div class='store-gallery' data-gallery='" + esc(p.name) + "'>" +
+          "<img class='store-main-img' src='" + esc(gallerySrc(p, st.color, st.view)) + "' alt='" + esc(p.name) + "'>" +
+          "<p class='store-gallery-caption'>" + esc(st.color) + " — " + esc(galleryViewLabel(st.view)) + "</p>" +
+          "<div class='store-swatches'>" + GALLERY_COLORS.map(function (c) {
+            if (!p.images[c]) return "";
+            return "<button type='button' class='store-swatch" + (c === st.color ? " active" : "") + "' data-gallery-color='" + esc(c) + "' style='background:" + GALLERY_SWATCH[c] + "' title='" + esc(c) + "' aria-label='Show " + esc(c) + "'></button>";
+          }).join("") + "</div>" +
+          "<div class='store-thumbs'>" + GALLERY_VIEWS.map(function (vw) {
+            return "<button type='button' class='store-thumb" + (vw.key === st.view ? " active" : "") + "' data-gallery-view='" + vw.key + "'><img src='" + esc(gallerySrc(p, st.color, vw.key)) + "' alt='" + esc(vw.label) + "'><span>" + esc(vw.label) + "</span></button>";
+          }).join("") + "</div>" +
+          "</div>";
+        return html;
+      }
       function renderGrid() {
         var q = state.q.trim().toLowerCase();
         var filtered = products.filter(function (p) {
@@ -3618,7 +3654,8 @@ function genBindInteractive(node) {
         } else {
           wrap.innerHTML = "<div class='card-grid'>" + filtered.map(function (p) {
             var card = "<div class='card store-card'>";
-            if (p.image) card += "<img src='" + esc(p.image) + "' alt='" + esc(p.name) + "'>";
+            if (p.images) card += storeGalleryHtml(p);
+            else if (p.image) card += "<img src='" + esc(p.image) + "' alt='" + esc(p.name) + "'>";
             card += "<h3>" + esc(p.name) + "</h3>";
             card += "<p><span class='chip'>" + esc(p.kind || "Physical") + "</span></p>";
             if (p.price) card += "<p class='price'>" + esc(p.price) + "</p>";
@@ -3661,6 +3698,34 @@ function genBindInteractive(node) {
             b.classList.toggle("active", b.getAttribute("data-kind") === state.kind);
           });
           renderGrid();
+        });
+      });
+      document.getElementById("storeGrid").addEventListener("click", function (e) {
+        var t = e.target;
+        var colorBtn = t.closest ? t.closest("[data-gallery-color]") : null;
+        var viewBtn = t.closest ? t.closest("[data-gallery-view]") : null;
+        if (!colorBtn && !viewBtn) return;
+        var gal = (colorBtn || viewBtn).closest("[data-gallery]");
+        if (!gal) return;
+        var name = gal.getAttribute("data-gallery");
+        var p = null;
+        products.forEach(function (it) { if (it.name === name) p = it; });
+        if (!p || !p.images) return;
+        var st = galleryState[name] || (galleryState[name] = { color: "White", view: "front" });
+        if (colorBtn) st.color = colorBtn.getAttribute("data-gallery-color");
+        if (viewBtn) st.view = viewBtn.getAttribute("data-gallery-view");
+        var img = gal.querySelector(".store-main-img");
+        if (img) img.src = gallerySrc(p, st.color, st.view);
+        var cap = gal.querySelector(".store-gallery-caption");
+        if (cap) cap.textContent = st.color + " — " + galleryViewLabel(st.view);
+        gal.querySelectorAll("[data-gallery-color]").forEach(function (b) {
+          b.classList.toggle("active", b.getAttribute("data-gallery-color") === st.color);
+        });
+        gal.querySelectorAll("[data-gallery-view]").forEach(function (b) {
+          var k = b.getAttribute("data-gallery-view");
+          b.classList.toggle("active", k === st.view);
+          var ti = b.querySelector("img");
+          if (ti) ti.src = gallerySrc(p, st.color, k);
         });
       });
       window.scrollTo(0, 0);
