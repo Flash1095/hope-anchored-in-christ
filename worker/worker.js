@@ -257,10 +257,23 @@ async function quoteShipping(env, variantId, quantity, address) {
   if (!res.ok) return { cents: null, status: res.status };
   const data = await res.json();
   // "standard" is shipping method 1, the one the order will use.
+  // Printify's shape varies: a bare number, or an object with a cost.
+  if (data && Number.isInteger(data.standard)) {
+    return { cents: data.standard, status: res.status };
+  }
   if (data && data.standard && Number.isInteger(data.standard.cost)) {
     return { cents: data.standard.cost, status: res.status };
   }
-  return { cents: null, status: "no-standard" };
+  // Diagnostic: report the response shape so a mismatch can be fixed.
+  const keys = data && typeof data === "object" ? Object.keys(data) : [];
+  return {
+    cents: null,
+    status:
+      "no-standard:" +
+      keys.join(",") +
+      "|std=" +
+      JSON.stringify(data ? data.standard : null),
+  };
 }
 
 /* ------------------------------------------------------------------ */
