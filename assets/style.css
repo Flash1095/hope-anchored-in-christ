@@ -689,3 +689,18 @@ html[data-theme="dark"] .audio-bar { background: #0F1B33; box-shadow: 0 8px 24px
   .audio-bar { bottom: 0.6rem; padding: 0.5rem 0.6rem; gap: 0.4rem; }
   .audio-bar button { padding: 0.4rem 0.7rem; font-size: 0.9rem; }
 }
+
+/* On-site checkout overlay (v283) */
+.checkout-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(27, 42, 78, 0.55);
+  overflow-y: auto; padding: 24px 12px;
+  box-sizing: border-box;
+}
+.checkout-box { max-width: 560px; margin: 0 auto; text-align: left; }
+.checkout-box input, .checkout-box select {
+  width: 100%; box-sizing: border-box;
+  padding: 10px; margin: 4px 0; font: inherit;
+  border: 1px solid #d8d8e0; border-radius: 8px;
+}
+.checkout-box label { font-weight: 600; }

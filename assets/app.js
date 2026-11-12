@@ -212,7 +212,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "282";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "283";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3623,10 +3623,16 @@ function genBindInteractive(node) {
             card += "<p><span class='chip'>" + esc(p.kind || "Physical") + "</span></p>";
             if (p.price) card += "<p class='price'>" + esc(p.price) + "</p>";
             if (p.desc) card += "<p class='snippet'>" + esc(p.desc) + "</p>";
-            card += "<p><a class='buy-btn' href='" + esc(p.url) + "'>Buy</a></p></div>";
+            if (p.checkout === "onsite") {
+              card += "<p><a class='buy-btn' href='#' data-onsite-checkout='" + esc(p.name) + "'>Buy on this site</a></p>";
+              card += "<p class='snippet'>or <a href='" + esc(p.url) + "'>buy on Printify</a></p></div>";
+            } else {
+              card += "<p><a class='buy-btn' href='" + esc(p.url) + "'>Buy</a></p></div>";
+            }
             return card;
           }).join("") + "</div>";
         }
+        if (typeof hacWireStoreButtons === "function") hacWireStoreButtons(products);
       }
       var html = "<h2>Store</h2><div class='post-body'>" +
         "<p>Beautiful, faith-anchored goods, made to order and shipped to you. " +
