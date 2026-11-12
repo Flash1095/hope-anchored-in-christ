@@ -223,6 +223,23 @@ function printifyAddress(a) {
 /* this file sets it.                                                  */
 /* ------------------------------------------------------------------ */
 const PRINTIFY_USER_AGENT = "HopeAnchoredInChrist/1.0";
+
+/* Every outbound call gets a hard timeout: a hung provider must never
+   hold the checkout open. AbortController + setTimeout is used (not
+   AbortSignal.timeout) so the cutoff is explicit. Callers pass
+   timeoutMs inside the options object; it is stripped before fetch. */
+async function fetchWithTimeout(url, options) {
+  const ms = (options && options.timeoutMs) || 10000;
+  const opts = { ...options };
+  delete opts.timeoutMs;
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), ms);
+  try {
+    return await fetch(url, { ...opts, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
 async function quoteShipping(env, variantId, quantity, address) {
   const url =
     "https://api.printify.com/v1/shops/" +
@@ -230,7 +247,8 @@ async function quoteShipping(env, variantId, quantity, address) {
     "/orders/shipping.json";
   let res;
   try {
-    res = await fetch(url, {
+    res = await fetchWithTimeout(url, {
+      timeoutMs: 10000,
       method: "POST",
       headers: {
         Authorization: "Bearer " + env.PRINTIFY_API_TOKEN,
@@ -249,7 +267,6 @@ async function quoteShipping(env, variantId, quantity, address) {
       }),
       // Never let a hung quote hold the checkout open: fail fast to the
       // flat estimated fallback instead of a ~40s wait.
-      signal: AbortSignal.timeout(10000),
     });
   } catch (e) {
     return { cents: null, status: "threw:" + (e && e.name ? e.name : "fetch") };
@@ -287,7 +304,8 @@ async function createPaymentIntent(env, amountCents, orderMeta) {
   body.set("description", PRODUCT.title + " — Hope Anchored in Christ");
   body.set("metadata[order]", JSON.stringify(orderMeta));
   body.set("metadata[printify_product_id]", PRODUCT.printifyProductId);
-  const res = await fetch("https://api.stripe.com/v1/payment_intents", {
+  const res = await fetchWithTimeout("https://api.stripe.com/v1/payment_intents", {
+    timeoutMs: 15000,
     method: "POST",
     headers: {
       Authorization: "Bearer " + env.STRIPE_SECRET_KEY,
@@ -457,9 +475,10 @@ async function setPaymentIntentMetadata(env, paymentIntentId, metadata) {
   for (const key of Object.keys(metadata)) {
     body.set("metadata[" + key + "]", metadata[key]);
   }
-  const res = await fetch(
+  const res = await fetchWithTimeout(
     "https://api.stripe.com/v1/payment_intents/" + encodeURIComponent(paymentIntentId),
     {
+      timeoutMs: 15000,
       method: "POST",
       headers: {
         Authorization: "Bearer " + env.STRIPE_SECRET_KEY,
@@ -495,7 +514,8 @@ async function createPrintifyOrder(env, paymentIntentId, orderMeta) {
     city: orderMeta.city,
     zip: orderMeta.zip,
   };
-  const res = await fetch(url, {
+  const res = await fetchWithTimeout(url, {
+    timeoutMs: 15000,
     method: "POST",
     headers: {
       Authorization: "Bearer " + env.PRINTIFY_API_TOKEN,
@@ -528,7 +548,8 @@ async function findPrintifyOrderByExternalId(env, externalId) {
     "https://api.printify.com/v1/shops/" +
     encodeURIComponent(env.PRINTIFY_SHOP_ID) +
     "/orders.json?limit=100";
-  const res = await fetch(url, {
+  const res = await fetchWithTimeout(url, {
+    timeoutMs: 15000,
     headers: {
       Authorization: "Bearer " + env.PRINTIFY_API_TOKEN,
       "User-Agent": PRINTIFY_USER_AGENT,
