@@ -162,6 +162,7 @@ function hacOpenCheckout(product) {
       "<div id='hacPaymentElement'></div>" +
       "<p><button class='btn' id='hacPay' type='button'>Pay</button> " +
       "<button class='chip' id='hacBack' type='button'>Back</button></p>" +
+      "<p class='snippet'>By placing your order, you agree to our <a href='#/terms'>Terms &amp; Conditions</a> and <a href='#/store-policies'>Store Policies</a>.</p>" +
       "</div>" +
       "<div id='hacStep3' style='display:none'></div>" +
       "<p id='hacError' class='empty' style='display:none;color:#c2185b'></p>" +

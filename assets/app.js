@@ -212,7 +212,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "285";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "286";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3638,6 +3638,7 @@ function genBindInteractive(node) {
         "<p>Beautiful, faith-anchored goods, made to order and shipped to you. " +
         "Every physical item is printed on demand — nothing is mass-produced or warehoused — so your purchase supports this ministry " +
         "and arrives made just for you. Digital items download instantly for you to print at home.</p>";
+      html += "<p>Shipping, returns, and refunds: see our <a href='#/store-policies'>Store Policies</a>.</p>";
       if (STORE_URL) html += "<p><a class='btn' href='" + esc(STORE_URL) + "'>Visit our shop</a></p>";
       html += "<p><a class='btn' href='#/art'>Browse the art</a></p>";
       if (DIGITAL_SHOP_URL) html += "<p><a class='btn' href='" + esc(DIGITAL_SHOP_URL) + "' target='_blank' rel='noopener'>Browse digital downloads</a></p>";
@@ -5435,30 +5436,44 @@ function genBindInteractive(node) {
   }
   function viewTerms() {
     var html = "<h2>Terms &amp; Conditions</h2><div class='post-body'>" +
-      "<p class='page-intro'>Last updated: October 25, 2026.</p>" +
+      "<p class='page-intro'>Last updated: November 12, 2026.</p>" +
       "<h3>About this site</h3>" +
-      "<p>Hope Anchored in Christ is an independent Bible study ministry website. By using this site, you agree to these terms. If you do not agree, please do not use the site.</p>" +
+      "<p>Hope Anchored in Christ is an independent Bible study ministry website, run by Lorraine Cole. By using this site, you agree to these terms. If you do not agree, please do not use the site.</p>" +
       "<h3>What this site is for</h3>" +
       "<p>Everything here is offered freely for Bible study, encouragement, and learning. The content is prepared carefully, but it is study material, not pastoral counseling, and not medical, legal, or financial advice.</p>" +
       "<h3>Using the content</h3>" +
       "<p>You are welcome to read everything on the site, share links to any page, and quote brief passages with credit to Hope Anchored in Christ. Please do not republish whole articles, copy the artwork, or present the site's content as your own. The King James Bible text in the Bible reader is in the public domain; other Bible translations are not reproduced here — the reader links to them on BibleGateway, where they are licensed.</p>" +
-      "<h3>Store and giving</h3>" +
-      "<p>When products or donations are offered, buying and giving happen on third-party providers' websites (for example, a print-on-demand store or a giving platform). Those purchases and donations are governed by the provider's own terms, and the provider handles payment, shipping, and support for its own service.</p>" +
+      "<h3>Buying from the Store</h3>" +
+      "<p>Physical goods in the Store are sold by Hope Anchored in Christ through our own checkout on this site. Payment is processed securely by Stripe, and orders are printed and shipped for us by our print partner, Printify. You are buying from Hope Anchored in Christ — not from Stripe or Printify — and these terms, together with our <a href='#/store-policies'>Store Policies</a>, govern your order.</p>" +
+      "<p>Prices are shown in US dollars and are the prices at the time you place your order. Shipping is quoted live at checkout. When you place an order, you are offering to buy; we accept your order when your payment succeeds and we send your receipt. We may cancel an order before it goes into production — for example, if an item becomes unavailable or a price was shown in error — and refund you in full.</p>" +
+      "<p>Your card details go directly to Stripe and are never seen or stored by this site. Items are made to order, so production and delivery take time; tracking is emailed when your order ships. Delivery estimates are estimates, not guarantees. Cancellations, returns, and refunds are covered in our <a href='#/store-policies'>Store Policies</a>.</p>" +
+      "<p>Sales tax is not currently added at checkout.</p>" +
+      "<h3>Giving</h3>" +
+      "<p>When donations are offered, giving happens through the giving provider linked on the Give page, and donations are governed by that provider's own terms.</p>" +
       "<h3>Links to other sites</h3>" +
       "<p>This site links to outside websites, including BibleGateway and any future store or giving providers. We are not responsible for the content, policies, or practices of those sites.</p>" +
       "<h3>No warranties</h3>" +
-      "<p>This site is provided as-is. We do not guarantee that it will always be available or free of errors, and we are not liable for any loss arising from your use of it.</p>" +
+      "<p>This site is provided as-is. We do not guarantee that it will always be available or free of errors, and we are not liable for any loss arising from your use of it. Nothing in these terms limits any rights you have under consumer law that cannot be limited by agreement.</p>" +
       "<h3>Changes to these terms</h3>" +
       "<p>These terms may be updated from time to time. Continued use of the site after an update means you accept the updated terms.</p>" +
+      "<p>Questions about these terms or about an order: email <a href='mailto:Hopeanchoredinchrist@gmail.com'>Hopeanchoredinchrist@gmail.com</a>.</p>" +
       "</div>";
     app.innerHTML = html;
     window.scrollTo(0, 0);
   }
   function viewPrivacy() {
     var html = "<h2>Privacy Policy</h2><div class='post-body'>" +
-      "<p class='page-intro'>Last updated: October 25, 2026. The short version: this site does not run accounts, does not ask for your email, and does not set its own tracking cookies.</p>" +
-      "<h3>What we do not collect</h3>" +
-      "<p>There is no sign-up, no comment form, and no newsletter on this site, so we do not collect your name, email address, or any other information from you directly. The site sets no cookies of its own and stores nothing in your browser.</p>" +
+      "<p class='page-intro'>Last updated: November 12, 2026. The short version: reading this site collects nothing from you directly. Ordering from the Store collects only what is needed to take your payment and deliver your order.</p>" +
+      "<h3>Reading the site</h3>" +
+      "<p>There is no sign-up, no comment form, and no newsletter on this site, so reading it does not ask for your name, email address, or any other information. The site sets no tracking cookies. The only thing stored in your browser is a display preference — whether you chose the dark or light view.</p>" +
+      "<h3>What we collect when you order</h3>" +
+      "<p>When you place an order in the Store, we collect your name, email address, shipping address, phone number if you give one, and the details of your order. We use this to process your payment, print and ship your order, send your receipt and tracking, and answer questions about your order.</p>" +
+      "<h3>Who receives your order information</h3>" +
+      "<p>Your payment is processed by Stripe. Your card details go directly to Stripe and are never stored on this site. Your name, shipping address, and order details are shared with Printify and the print provider that makes and ships your order, so they can fulfil it. We do not sell your information, and we do not share it for advertising.</p>" +
+      "<h3>How long we keep it</h3>" +
+      "<p>We keep order information for as long as needed to fulfil your order, handle any return or question about it, and meet tax and accounting record-keeping requirements.</p>" +
+      "<h3>Your choices</h3>" +
+      "<p>You can ask for a copy of the order information we hold about you, or ask us to delete it, by emailing <a href='mailto:Hopeanchoredinchrist@gmail.com'>Hopeanchoredinchrist@gmail.com</a>. Some records, such as payment records needed for tax and accounting, cannot be deleted while they are legally required to be kept.</p>" +
       "<h3>What happens automatically</h3>" +
       "<p>This site is hosted on GitHub Pages. Like most web hosts, GitHub may collect standard server logs when you visit (such as your IP address, browser type, and the pages you view) under GitHub's own privacy statement. The blog list is loaded from GitHub's public system, which also involves a request to GitHub when you open the blog. The editor sign-in tool (Netlify Identity) loads on the site so the site's editor can sign in; it only handles sign-in details when someone actually signs in as an editor — ordinary readers are never signed in.</p>" +
       "<h3>No analytics or advertising</h3>" +
@@ -5466,9 +5481,33 @@ function genBindInteractive(node) {
       "<h3>Links to other sites</h3>" +
       "<p>Clicking a link to another site — such as BibleGateway, a store, or a giving provider — takes you under that site's privacy policy, not this one.</p>" +
       "<h3>Children</h3>" +
-      "<p>This site collects no information from anyone, including children.</p>" +
+      "<p>Reading this site collects no information from anyone, including children. The Store is intended for adults; if you are under 18, please have a parent or guardian place any order.</p>" +
       "<h3>Changes to this policy</h3>" +
-      "<p>This policy may be updated from time to time. The date at the top shows when it was last updated.</p>" +
+      "<p>This policy may be updated from time to time. The date at the top shows when it was last updated. Questions about your information or an order: email <a href='mailto:Hopeanchoredinchrist@gmail.com'>Hopeanchoredinchrist@gmail.com</a>.</p>" +
+      "</div>";
+    app.innerHTML = html;
+    window.scrollTo(0, 0);
+  }
+  function viewStorePolicies() {
+    var html = "<h2>Store Policies</h2><div class='post-body'>" +
+      "<p class='page-intro'>Last updated: November 12, 2026. These policies cover orders placed through the Store on this site. They sit alongside our <a href='#/terms'>Terms &amp; Conditions</a>.</p>" +
+      "<h3>How ordering works</h3>" +
+      "<p>Every physical item is printed on demand, made just for you — nothing is mass-produced or warehoused. When you order, you are buying from Hope Anchored in Christ. Your payment is processed securely by Stripe, and your order is printed and shipped for us by our print partner, Printify. You will receive a receipt by email, and tracking information when your order ships.</p>" +
+      "<h3>Prices and payment</h3>" +
+      "<p>Prices are shown in US dollars. Shipping is quoted live at checkout, based on your address and the items in your order. Sales tax is not currently added at checkout. We accept the card payment methods shown at checkout, processed by Stripe. Your card details go directly to Stripe and are never stored on this site.</p>" +
+      "<h3>Shipping</h3>" +
+      "<p>Items are printed after you order, so please allow a few business days for production before your order ships. Standard shipping is used for all orders. Delivery times are estimates and are not guaranteed. If your order has not arrived within the estimated time, email us and we will look into it.</p>" +
+      "<h3>Changing or cancelling an order</h3>" +
+      "<p>If you need to change or cancel an order, email us as soon as possible at <a href='mailto:Hopeanchoredinchrist@gmail.com'>Hopeanchoredinchrist@gmail.com</a>, quoting your order number from your receipt. Orders can be changed or cancelled free of charge any time before they go into production. Once production has started, an order cannot be changed or cancelled.</p>" +
+      "<h3>Returns and refunds</h3>" +
+      "<p>If your order arrives damaged, defective, or wrong, please email us within 30 days of delivery, with a photo if you can. We will reprint the item or give you a full refund — your choice.</p>" +
+      "<p>Because every item is printed just for you, we cannot accept returns or offer refunds where you ordered the wrong size, colour, or item, or where you have changed your mind. Please check the size and colour carefully before ordering. If you are unsure about a size, email us before you order and we will help.</p>" +
+      "<p>Refunds are issued in full to your original payment method. Please allow 5-10 business days for your bank to show the refund.</p>" +
+      "<p>To request a return or refund, email <a href='mailto:Hopeanchoredinchrist@gmail.com'>Hopeanchoredinchrist@gmail.com</a> with your order number and, for a damaged or defective item, a photo.</p>" +
+      "<h3>Digital items</h3>" +
+      "<p>When digital items are offered, they are delivered by download. Digital items are non-refundable once downloaded, except where the file itself is defective.</p>" +
+      "<h3>Contact</h3>" +
+      "<p>For any question about an order, shipping, a return, or a refund, email <a href='mailto:Hopeanchoredinchrist@gmail.com'>Hopeanchoredinchrist@gmail.com</a>, quoting your order number where you have one.</p>" +
       "</div>";
     app.innerHTML = html;
     window.scrollTo(0, 0);
@@ -5477,12 +5516,14 @@ function genBindInteractive(node) {
     var faqs = [
       ["What is Hope Anchored in Christ?", "An independent Bible study blog built around Hebrews 6:19 — \u201CWe have this hope as an anchor for the soul, firm and secure.\u201D It offers Bible studies, articles, and reference collections to help readers know Scripture and hold fast to hope in Christ."],
       ["What Bible translation does the Bible reader use?", "The on-site reader uses the King James Version, which is in the public domain, so the full text can live here freely. The NIV and ESV are copyrighted, so every chapter page also links to the same passage on BibleGateway in NIV and ESV."],
-      ["Is everything on the site free?", "Yes — everything you can read here is free. If paid courses or products appear later, they will be clearly marked and sold through their own checkout, separate from the free reading."],
+      ["Is everything on the site free?", "Reading is free — every article, study, and collection on this site is free to read. The Store sells physical goods through our own checkout, and any future paid courses will be clearly marked. Buying is always separate from the free reading."],
       ["How do the links inside the Bible text work?", "Names in the Bible text link to the site's own articles: tap a person, place, or event and you land on that article. Below each chapter, \u201CArticles about this chapter\u201D lists questions, word studies, topics, and other entries that point at that chapter."],
       ["Can I share or reprint something from the site?", "Please do share links to any page. You may also quote brief passages with credit to Hope Anchored in Christ. Whole articles and the artwork should not be republished without permission."],
-      ["How can I support the ministry?", "The Give page explains giving, and the Store page will list products when they launch. Both stay honestly marked as coming soon until their links are connected."],
+      ["How can I support the ministry?", "The Store page lists products — every purchase supports the ministry — and the Give page explains giving. Giving links will be added when they are ready."],
+      ["What if my order arrives damaged or wrong?", "Email us within 30 days of delivery, with a photo if you can. We will reprint the item or give you a full refund — your choice. Full details are in our Store Policies."],
+      ["Can I cancel or change my order?", "Yes, free of charge, any time before the order goes into production. Email us as soon as possible with your order number. Once production has started, an order cannot be changed or cancelled."],
       ["Do you have social media or a podcast?", "Not yet. The Connect page will list them as soon as they launch."],
-      ["Can I suggest a topic or ask a question?", "Not yet — there is no contact form on the site right now. Contact options will come with the social pages on the Connect page."],
+      ["Can I suggest a topic or ask a question?", "For questions about an order, email Hopeanchoredinchrist@gmail.com. For topic suggestions, there is no contact form on the site right now — contact options will come with the social pages on the Connect page."],
       ["Where do the maps and artwork come from?", "The Bible maps are public-domain maps from 1888. The artwork, including the banner and collection tiles, is made by Lorraine herself — no stock photos are used."],
       ["Is this site connected to a church or denomination?", "No. It is an independent, Bible-centered ministry, not affiliated with a particular church or denomination."],
       ["Is there an app?", "There is no app. The site works in any browser on a phone, tablet, or computer, and you can add it to your home screen for app-like access."]
@@ -6541,6 +6582,7 @@ function genBindInteractive(node) {
     if (path[0] === "blog") return viewBlog(path[1] ? decodeURIComponent(path[1]) : null, params);
     if (path[0] === "about") return viewAbout();
     if (path[0] === "store") return viewStore();
+    if (path[0] === "store-policies") return viewStorePolicies();
     if (path[0] === "connect") return viewConnect();
     if (path[0] === "give") return viewGive();
     if (path[0] === "bible") {
