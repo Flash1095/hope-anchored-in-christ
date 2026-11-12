@@ -228,31 +228,39 @@ async function quoteShipping(env, variantId, quantity, address) {
     "https://api.printify.com/v1/shops/" +
     encodeURIComponent(env.PRINTIFY_SHOP_ID) +
     "/orders/shipping.json";
-  const res = await fetch(url, {
-    method: "POST",
-    headers: {
-      Authorization: "Bearer " + env.PRINTIFY_API_TOKEN,
-      "Content-Type": "application/json",
-      "User-Agent": PRINTIFY_USER_AGENT,
-    },
-    body: JSON.stringify({
-      line_items: [
-        {
-          product_id: PRODUCT.printifyProductId,
-          variant_id: variantId,
-          quantity: quantity,
-        },
-      ],
-      address_to: printifyAddress(address),
-    }),
-  });
-  if (!res.ok) return null;
+  let res;
+  try {
+    res = await fetch(url, {
+      method: "POST",
+      headers: {
+        Authorization: "Bearer " + env.PRINTIFY_API_TOKEN,
+        "Content-Type": "application/json",
+        "User-Agent": PRINTIFY_USER_AGENT,
+      },
+      body: JSON.stringify({
+        line_items: [
+          {
+            product_id: PRODUCT.printifyProductId,
+            variant_id: variantId,
+            quantity: quantity,
+          },
+        ],
+        address_to: printifyAddress(address),
+      }),
+      // Never let a hung quote hold the checkout open: fail fast to the
+      // flat estimated fallback instead of a ~40s wait.
+      signal: AbortSignal.timeout(10000),
+    });
+  } catch (e) {
+    return { cents: null, status: "threw:" + (e && e.name ? e.name : "fetch") };
+  }
+  if (!res.ok) return { cents: null, status: res.status };
   const data = await res.json();
   // "standard" is shipping method 1, the one the order will use.
   if (data && data.standard && Number.isInteger(data.standard.cost)) {
-    return data.standard.cost;
+    return { cents: data.standard.cost, status: res.status };
   }
-  return null;
+  return { cents: null, status: "no-standard" };
 }
 
 /* ------------------------------------------------------------------ */
@@ -315,10 +323,14 @@ async function handleCreatePaymentIntent(request, env) {
   // Live shipping quote from Printify for this exact order + address.
   let shippingCents = null;
   let shippingEstimated = false;
+  let printifyStatus = null;
   try {
-    shippingCents = await quoteShipping(env, variantId, quantity, address);
+    const quote = await quoteShipping(env, variantId, quantity, address);
+    shippingCents = quote.cents;
+    printifyStatus = quote.status;
   } catch (e) {
     shippingCents = null; // fall through to the flat fallback below
+    printifyStatus = "threw";
   }
   if (shippingCents === null) {
     shippingCents = FLAT_SHIPPING_CENTS;
@@ -357,6 +369,7 @@ async function handleCreatePaymentIntent(request, env) {
     productCents: productCents,
     shippingCents: shippingCents,
     shippingEstimated: shippingEstimated,
+    printifyStatus: printifyStatus,
     amountCents: amountCents,
     currency: CURRENCY,
   });
