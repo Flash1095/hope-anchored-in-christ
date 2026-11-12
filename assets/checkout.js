@@ -55,13 +55,13 @@ var hacCurrent = null;  // { amountCents, address } for the payment in progress
 function hacFetchConfig(cb) {
   if (hacConfig) return cb(null, hacConfig);
   fetch(CHECKOUT_API_URL + "/config").then(function (r) {
-    if (!r.ok) throw new Error("config");
+    if (!r.ok) throw new Error("config HTTP " + r.status);
     return r.json();
   }).then(function (json) {
     hacConfig = json;
     cb(null, json);
-  }).catch(function () {
-    cb(new Error("Could not reach the checkout service. Please try again, or use the Printify link below."));
+  }).catch(function (e) {
+    cb(new Error("Could not reach the checkout service (" + (e && e.message ? e.message : "network error") + "). Please try again, or use the Printify link below."));
   });
 }
 
@@ -95,7 +95,18 @@ function hacVariantPrice(color, size) {
 /* Open the checkout overlay for one store.json product. */
 function hacOpenCheckout(product) {
   hacFetchConfig(function (err, cfg) {
-    if (err) { alert(err.message); return; }
+    if (err) {
+      alert(err.message);
+      var banner = document.createElement("div");
+      banner.style.cssText = "position:fixed;left:12px;right:12px;top:12px;z-index:2000;background:#fff;border:2px solid #c2185b;border-radius:8px;padding:12px;font-size:15px";
+      banner.textContent = err.message + " ";
+      var x = document.createElement("button");
+      x.textContent = "Close";
+      x.addEventListener("click", function () { banner.parentNode.removeChild(banner); });
+      banner.appendChild(x);
+      document.body.appendChild(banner);
+      return;
+    }
     if (typeof Stripe === "undefined") { alert("The payment service did not load. Please try again, or use the Printify link below."); return; }
     hacStripe = Stripe(cfg.stripePublishableKey);
     hacCurrent = null;
