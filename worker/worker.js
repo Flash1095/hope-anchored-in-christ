@@ -218,7 +218,11 @@ function printifyAddress(a) {
 /* Body: { line_items, address_to } ->                                 */
 /*   { standard: { cost }, priority: {...}, express: {...}, ... }      */
 /* All costs are integer cents.                                        */
+/* Printify requires a User-Agent header on every API request, and     */
+/* Workers' fetch sends none by default, so every Printify call in    */
+/* this file sets it.                                                  */
 /* ------------------------------------------------------------------ */
+const PRINTIFY_USER_AGENT = "HopeAnchoredInChrist/1.0";
 async function quoteShipping(env, variantId, quantity, address) {
   const url =
     "https://api.printify.com/v1/shops/" +
@@ -229,6 +233,7 @@ async function quoteShipping(env, variantId, quantity, address) {
     headers: {
       Authorization: "Bearer " + env.PRINTIFY_API_TOKEN,
       "Content-Type": "application/json",
+      "User-Agent": PRINTIFY_USER_AGENT,
     },
     body: JSON.stringify({
       line_items: [
@@ -469,6 +474,7 @@ async function createPrintifyOrder(env, paymentIntentId, orderMeta) {
     headers: {
       Authorization: "Bearer " + env.PRINTIFY_API_TOKEN,
       "Content-Type": "application/json",
+      "User-Agent": PRINTIFY_USER_AGENT,
     },
     body: JSON.stringify({
       external_id: "hac-" + paymentIntentId,
@@ -497,7 +503,10 @@ async function findPrintifyOrderByExternalId(env, externalId) {
     encodeURIComponent(env.PRINTIFY_SHOP_ID) +
     "/orders.json?limit=100";
   const res = await fetch(url, {
-    headers: { Authorization: "Bearer " + env.PRINTIFY_API_TOKEN },
+    headers: {
+      Authorization: "Bearer " + env.PRINTIFY_API_TOKEN,
+      "User-Agent": PRINTIFY_USER_AGENT,
+    },
   });
   if (!res.ok) return null;
   const data = await res.json();
