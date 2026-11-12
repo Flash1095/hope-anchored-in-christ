@@ -20,7 +20,8 @@
  * Requires Stripe.js on the page:
  *   <script src="https://js.stripe.com/v3"></script>
  * (add it to index.html next to the app.js script tag — see notes.)
- * Also uses the site's esc() helper from app.js.
+ * It has its own local HTML escaper (hacEsc): app.js's escaper lives
+ * inside its IIFE and is not a global, so checkout.js cannot use it.
  *
  * The existing Pop-Up "Buy" link stays on the card as a fallback until
  * this checkout is proven live. Do not remove it yet.
@@ -31,6 +32,15 @@ var CHECKOUT_API_URL = "https://hope-anchored-checkout.hopeanchoredinchrist.work
 
 function hacMoney(cents) {
   return "$" + (cents / 100).toFixed(2);
+}
+
+// Local HTML escaper, same escaping as the site's own helper. It must
+// live here because app.js wraps everything in an IIFE, so the site's
+// helper is not a global and this file cannot reach it.
+function hacEsc(s) {
+  return String(s == null ? "" : s)
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 }
 
 // Countries the checkout offers. Printify ships to many more; extend this
@@ -117,18 +127,18 @@ function hacOpenCheckout(product) {
     });
 
     var colorOptions = colors.map(function (c) {
-      return "<option value='" + esc(c) + "'>" + esc(c) + "</option>";
+      return "<option value='" + hacEsc(c) + "'>" + hacEsc(c) + "</option>";
     }).join("");
 
     var countryOptions = HAC_COUNTRIES.map(function (c) {
-      return "<option value='" + c[0] + "'" + (c[0] === "US" ? " selected" : "") + ">" + esc(c[1]) + "</option>";
+      return "<option value='" + c[0] + "'" + (c[0] === "US" ? " selected" : "") + ">" + hacEsc(c[1]) + "</option>";
     }).join("");
 
     var html = "<div class='checkout-overlay' id='hacOverlay'>" +
       "<div class='card checkout-box'>" +
       "<p style='text-align:right;margin:0'><button class='chip' id='hacClose' type='button'>Close ✕</button></p>" +
-      "<h3>" + esc(product.name) + "</h3>" +
-      (product.image ? "<img src='" + esc(product.image) + "' alt='" + esc(product.name) + "' style='max-width:220px'>" : "") +
+      "<h3>" + hacEsc(product.name) + "</h3>" +
+      (product.image ? "<img src='" + hacEsc(product.image) + "' alt='" + hacEsc(product.name) + "' style='max-width:220px'>" : "") +
       "<div id='hacStep1'>" +
       "<p><label>Colour<br><select id='hacColor'>" + colorOptions + "</select></label></p>" +
       "<p><label>Size<br><select id='hacSize'></select></label></p>" +
@@ -168,7 +178,7 @@ function hacOpenCheckout(product) {
       var sizes = hacSizesForColor(color);
       var sel = document.getElementById("hacSize");
       sel.innerHTML = sizes.map(function (v) {
-        return "<option value='" + esc(v.size) + "'>" + esc(v.size) + " — " + hacMoney(v.priceCents) + "</option>";
+        return "<option value='" + hacEsc(v.size) + "'>" + hacEsc(v.size) + " — " + hacMoney(v.priceCents) + "</option>";
       }).join("");
       refreshPrice();
     }
@@ -238,14 +248,14 @@ function hacOpenCheckout(product) {
         step3.style.display = "block";
         if (pi && pi.status === "succeeded") {
           step3.innerHTML = "<h4>Thank you — your order is in!</h4>" +
-            "<p>Your payment went through. Your receipt is on its way to " + esc(address.email) + ".</p>" +
+            "<p>Your payment went through. Your receipt is on its way to " + hacEsc(address.email) + ".</p>" +
             "<p>Your sweatshirt is made to order: we send it to the printer now, and it ships to " +
-            esc(address.city) + ". We will email you when it is on its way.</p>" +
+            hacEsc(address.city) + ". We will email you when it is on its way.</p>" +
             "<p><button class='btn' id='hacDone' type='button'>Continue shopping</button></p>";
         } else {
           step3.innerHTML = "<h4>Payment received — finishing up</h4>" +
             "<p>Your payment is being confirmed. If anything needs attention we will email " +
-            esc(address.email) + ".</p>" +
+            hacEsc(address.email) + ".</p>" +
             "<p><button class='btn' id='hacDone' type='button'>Continue shopping</button></p>";
         }
         document.getElementById("hacDone").addEventListener("click", closeOverlay);
@@ -298,7 +308,7 @@ function hacOpenCheckout(product) {
           ? hacMoney(b.shippingCents) + " (estimated — we will confirm the exact shipping by email if it differs)"
           : hacMoney(b.shippingCents);
         document.getElementById("hacSummary").innerHTML =
-          "<p>" + esc(product.name) + " — " + esc(color) + ", " + esc(size) + " × " + qty + "</p>" +
+          "<p>" + hacEsc(product.name) + " — " + hacEsc(color) + ", " + hacEsc(size) + " × " + qty + "</p>" +
           "<p>Items: " + hacMoney(b.productCents) + "<br>Shipping: " + shipLine +
           "<br><strong>Total: " + hacMoney(b.amountCents) + "</strong></p>";
         document.getElementById("hacStep1").style.display = "none";
