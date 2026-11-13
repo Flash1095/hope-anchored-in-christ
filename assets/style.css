@@ -583,6 +583,21 @@ html[data-theme="dark"] .gen-tree-ctrls button, html[data-theme="dark"] .nav-tog
 html[data-theme="dark"] .filter-panel { background: #132A4C; }
 html[data-theme="dark"] .filter-field, html[data-theme="dark"] .filter-count { color: #eef1f7; }
 html[data-theme="dark"] .filter-field select { background: #132A4C; color: #edf0f7; }
+/* Tabs (v293): the white .chip pills (Blog categories, quiz difficulty,
+   Art Gallery kind, verse chips, genealogy letters, Bible topic needs)
+   become dark navy in dark mode; the active tab stays rose. */
+html[data-theme="dark"] .chip { background: #132A4C; }
+html[data-theme="dark"] .chip.active { background: var(--gold); color: #fff; }
+/* Other white pills in dark mode: store view thumbnails + voice select. */
+html[data-theme="dark"] .store-thumb { background: #132A4C; border-color: #2a3f66; }
+html[data-theme="dark"] .store-thumb.active { border-color: #e91e63; }
+html[data-theme="dark"] .audio-voice-select { background: #132A4C; color: #edf0f7; }
+/* Webtoon speech bubbles (v293): white becomes dark navy, the pink
+   right-side bubbles become a dark rose tint, tails match their bubble. */
+html[data-theme="dark"] .webtoon-bubble { background: #132A4C; border-color: var(--line); }
+html[data-theme="dark"] .webtoon-bubble::after { background: #132A4C; border-right-color: var(--line); border-bottom-color: var(--line); }
+html[data-theme="dark"] .webtoon-bubble.right { background: #3d1f24; }
+html[data-theme="dark"] .webtoon-bubble.right::after { background: #3d1f24; }
 html[data-theme="dark"] .theme-toggle:hover { background: var(--cream); }
 /* Verse band + banner title: light gradients become deep navy ones. */
 html[data-theme="dark"] .verse-band {
