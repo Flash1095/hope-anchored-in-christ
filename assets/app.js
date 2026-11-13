@@ -212,7 +212,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "287";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "288";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -6744,7 +6744,7 @@ function genBindInteractive(node) {
   jobs.push(fetch("content/pages/explore.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : {}; }).then(function (p) { explorePage = p; }).catch(function () { explorePage = {}; }));
   jobs.push(fetch("content/petstories.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (p) { petStories = p; }).catch(function () { petStories = []; }));
   jobs.push(fetch("content/childrenstories.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (p) { childStories = p; }).catch(function () { childStories = []; }));
-  jobs.push(fetch("content/gallery.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (g) { galleryItems = g; }).catch(function () { galleryItems = []; }));
+  jobs.push(fetch("content/gallery.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (g) { galleryItems = g.pieces || g; }).catch(function () { galleryItems = []; }));
   jobs.push(fetch("content/dss_lookup_dates.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (d) { lookupDates = d; }).catch(function () { lookupDates = []; }));
   jobs.push(fetch("content/genealogy.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : { nodes: [], edges: [] }; }).then(function (g) { genealogyData = g; }).catch(function () { genealogyData = { nodes: [], edges: [] }; }));
   jobs.push(fetch("content/atlas.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : []; }).then(function (a) { atlasItems = a; }).catch(function () { atlasItems = []; }));
