@@ -74,6 +74,10 @@ html[data-theme="dark"] .banner img.banner-light { display: none; }
 html[data-theme="dark"] .banner img.banner-dark { display: block; }
 /* Lower banner — full-width strip above the footer, on every page */
 .lower-banner img { display: block; width: 100%; height: auto; }
+/* Dark view keeps the previous bottom banner; light view shows the new meadow. */
+.lower-banner img.lower-banner-dark { display: none; }
+html[data-theme="dark"] .lower-banner img.lower-banner-light { display: none; }
+html[data-theme="dark"] .lower-banner img.lower-banner-dark { display: block; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .banner-title {
   position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
