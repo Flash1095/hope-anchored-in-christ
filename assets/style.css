@@ -518,22 +518,22 @@ html[data-theme="dark"] .lower-banner img.lower-banner-dark { display: block; }
 }
 .theme-toggle:hover { background: var(--cream); }
 
-/* ---------- Dark view (v195) ----------
+/* ---------- Dark view (v195; v292 matched to banner navy #0B203D) ----------
    Everything below is scoped to html[data-theme="dark"], so light mode
    renders exactly as before. Palette keeps the site's identity: deep
-   navy surfaces, near-white text, the rose accent kept (brightened only
+   navy surfaces in tints of the banners' navy #0B203D, near-white text, the rose accent kept (brightened only
    where dark rose text would fail on dark). Images, artwork, and photos
    are NEVER filtered or inverted — her art stays true. Raster map tiles
    are untouched; only the atlas page chrome changes. */
 html[data-theme="dark"] {
   color-scheme: dark;
-  --ivory: #0e1730;
-  --cream: #1b2747;
+  --ivory: #0B203D;
+  --cream: #183054;
   --sage-light: #1d3a2a;
   --pastel-butter: #3a2f14;
   --ink: #edf0f7;
   --muted: #a9b2c6;
-  --line: #2e3d63;
+  --line: #2a3f66;
   --navy-light: #b9c6e4;
   --gold-dark: #f06292;
   --green-ok: #6fbf8f;
@@ -570,7 +570,7 @@ html[data-theme="dark"] .storybook-page, html[data-theme="dark"] .gen-panel,
 html[data-theme="dark"] .gen-tree-scroll, html[data-theme="dark"] .atlas-row,
 html[data-theme="dark"] .about-photo-frame, html[data-theme="dark"] .main-nav.open,
 html[data-theme="dark"] .card-art, html[data-theme="dark"] .post-art {
-  background: #16213f;
+  background: #132A4C;
 }
 html[data-theme="dark"] .header-search input,
 html[data-theme="dark"] .controls input[type="search"],
@@ -578,38 +578,38 @@ html[data-theme="dark"] #quizCategorySelect, html[data-theme="dark"] #exploreJum
 html[data-theme="dark"] #atlasSearch, html[data-theme="dark"] #genSearch,
 html[data-theme="dark"] .option-btn, html[data-theme="dark"] .gen-view-toggle button,
 html[data-theme="dark"] .gen-tree-ctrls button, html[data-theme="dark"] .nav-toggle {
-  background: #16213f; color: #edf0f7;
+  background: #132A4C; color: #edf0f7;
 }
-html[data-theme="dark"] .filter-panel { background: #16213f; }
+html[data-theme="dark"] .filter-panel { background: #132A4C; }
 html[data-theme="dark"] .filter-field, html[data-theme="dark"] .filter-count { color: #eef1f7; }
-html[data-theme="dark"] .filter-field select { background: #16213f; color: #edf0f7; }
+html[data-theme="dark"] .filter-field select { background: #132A4C; color: #edf0f7; }
 html[data-theme="dark"] .theme-toggle:hover { background: var(--cream); }
 /* Verse band + banner title: light gradients become deep navy ones. */
 html[data-theme="dark"] .verse-band {
-  background: linear-gradient(105deg, #3a1f33 0%, #2a2140 55%, #1d2542 100%);
+  background: linear-gradient(105deg, #2a2140 0%, #16263f 55%, #0B203D 100%);
 }
-html[data-theme="dark"] .banner-title { background: rgba(13, 22, 46, 0.94); }
+html[data-theme="dark"] .banner-title { background: rgba(11, 32, 61, 0.94); }
 /* Footer: soft lavender gradient becomes a deep muted lavender-navy. */
 html[data-theme="dark"] .site-footer {
-  background: linear-gradient(180deg, #1a2140 0%, #232a4a 45%, #2b3358 100%);
+  background: linear-gradient(180deg, #0B203D 0%, #12294d 45%, #1a3358 100%);
 }
 html[data-theme="dark"] .footer-legal { border-top-color: rgba(255, 255, 255, 0.15); }
 /* Timeline spine dots: lighter navy so the dots stay visible on dark. */
-html[data-theme="dark"] .tl-era::before { border-color: #16213f; }
+html[data-theme="dark"] .tl-era::before { border-color: #132A4C; }
 html[data-theme="dark"] .tl-node::before { background: #3a4f7d; }
 /* Study tables + quiz answers: light fills become dark tints. */
-html[data-theme="dark"] .study-table th { background: #2a2440; }
+html[data-theme="dark"] .study-table th { background: #1a2c4e; }
 html[data-theme="dark"] .option-btn.correct { background: #1d3a2a; }
 html[data-theme="dark"] .option-btn.wrong { background: #3d1f24; }
 html[data-theme="dark"] .badge.fulfilled { background: #1d3a2a; }
 html[data-theme="dark"] .badge.partial { background: #3a2f14; color: #e8c66a; }
-html[data-theme="dark"] .badge.future { background: #22345a; }
+html[data-theme="dark"] .badge.future { background: #1a2c4e; }
 html[data-theme="dark"] .badge.debated { background: #3d1f24; }
 /* Genealogy SVG: fills follow the surfaces, text follows the ink. */
 html[data-theme="dark"] .gtn-box, html[data-theme="dark"] .gtn-box-loop,
-html[data-theme="dark"] .gtn-head { fill: #16213f; }
-html[data-theme="dark"] .gtn-box-center { fill: #2a2140; }
-html[data-theme="dark"] .gtn-head-none { fill: #232a44; }
+html[data-theme="dark"] .gtn-head { fill: #132A4C; }
+html[data-theme="dark"] .gtn-box-center { fill: #1a2c4e; }
+html[data-theme="dark"] .gtn-head-none { fill: #1a2c4e; }
 html[data-theme="dark"] .gtn-name, html[data-theme="dark"] .gtn-head-name { fill: #eef1f7; }
 
 /* ---------- retro homepage bands (v217, home only) ----------
@@ -657,10 +657,10 @@ html[data-theme="dark"] .retro-home .retro-display-dark, html[data-theme="dark"]
 html[data-theme="dark"] .retro-home .retro-intro, html[data-theme="dark"] .retro-home .retro-badge,
 html[data-theme="dark"] .retro-home .retro-subhead, html[data-theme="dark"] .retro-home .retro-tile h3 { color: #F2E8D5; }
 html[data-theme="dark"] .retro-home .retro-tiles .retro-tile, html[data-theme="dark"] .retro-home .stat,
-html[data-theme="dark"] .retro-home .retro-paper { background: #16213f; }
+html[data-theme="dark"] .retro-home .retro-paper { background: #132A4C; }
 html[data-theme="dark"] .retro-home .retro-ribbon { background: #2B2419; color: #F2E8D5; }
 html[data-theme="dark"] .retro-home .retro-eyebrow { color: #F2E8D5; }
-html[data-theme="dark"] .retro-home .retro-badge img { border-color: #3AAFA9; background: #16213f; }
+html[data-theme="dark"] .retro-home .retro-badge img { border-color: #3AAFA9; background: #132A4C; }
 
 /* ---------- guided path (v219, home only) ---------- */
 .retro-home .retro-step { margin: 0 0 2rem; }
@@ -692,7 +692,7 @@ html[data-theme="dark"] .retro-home .retro-step-title, html[data-theme="dark"] .
 }
 .audio-bar button:hover { background: #c2185b; }
 .audio-voice-select { background: #fff; color: #1B2A4E; border: 0; border-radius: 999px; padding: 0.4rem 0.6rem; font-size: 0.9rem; max-width: 13rem; }
-html[data-theme="dark"] .audio-bar { background: #0F1B33; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55); }
+html[data-theme="dark"] .audio-bar { background: #132A4C; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55); }
 @media (max-width: 700px) {
   .audio-bar { bottom: 0.6rem; padding: 0.5rem 0.6rem; gap: 0.4rem; }
   .audio-bar button { padding: 0.4rem 0.7rem; font-size: 0.9rem; }
