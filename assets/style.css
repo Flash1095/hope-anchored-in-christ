@@ -697,6 +697,10 @@ html[data-theme="dark"] .retro-home .retro-badge img { border-color: #3AAFA9; ba
    hero → search → journey as one path. Input is 1.1rem so phones do
    not zoom on focus. */
 .retro-home .home-search { max-width: 680px; margin: 0 auto 2rem; padding: 0 1rem; text-align: center; }
+/* v296: the hidden attribute alone does not hide a .card-grid — the
+   .card-grid display rule beats the browser's built-in [hidden] rule,
+   so all 37 featured cards showed until this explicit rule. */
+#featuredRest[hidden] { display: none; }
 .retro-home .home-search form { display: flex; gap: 0.5rem; }
 .retro-home .home-search input { flex: 1; min-width: 0; padding: 0.8rem 1.1rem; border: 1px solid var(--gold); border-radius: 999px; background: #fff; font-size: 1.1rem; }
 .retro-home .home-search .btn { padding: 0.8rem 1.4rem; font-size: 1.05rem; }
