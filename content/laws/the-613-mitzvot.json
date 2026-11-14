@@ -14,5 +14,6 @@
   "Sources": "",
   "LastReviewed": "",
   "Purpose": "Not a command at all but a study aid: the rabbinic tradition counting the Torah's commandments as 613 (248 positive, 365 negative), traced to Rabbi Simlai and codified by Maimonides. Scripture itself gives no count. See notes for the proposed handling: this row should NOT receive a Duration value.",
+  "Function": "This entry is not a command at all, and it has no evil to restrain — it is the overview entry for the whole collection, and its job is orientation. Scripture never gives a count of its own commandments; the 613 figure — 248 positive, 365 negative — comes from rabbinic tradition, traced to Rabbi Simlai and codified by Maimonides, and different rabbinic lists disagree on details. Its goal is to introduce the collection: what the 613 enumeration is, where it came from, and how this site treats the traditional moral, ceremonial, and civil division — as traditional, not as Scripture's own.",
   "Duration": ""
 }
