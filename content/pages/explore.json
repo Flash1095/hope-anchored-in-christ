@@ -113,6 +113,10 @@
     {
       "collection": "civilizations",
       "blurb": "The empires and peoples around Israel — Egypt, Assyria, Babylon, Persia, Greece, Rome, and their neighbors — and how each one touches the Bible story."
+    },
+    {
+      "collection": "difficultpassages",
+      "blurb": "The hard passages — apparent contradictions, troubling commands, and verses readers stumble on — stated fairly, explained side by side, and assessed honestly."
     }
   ]
 }

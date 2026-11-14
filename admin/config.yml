@@ -623,6 +623,26 @@ collections:
       - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
       - {label: "Sources", name: "Sources", widget: "string", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
       - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
+  - name: "difficultpassages"
+    label: "Difficult Passages & Supposed Contradictions"
+    folder: "content/difficultpassages"
+    create: true
+    slug: "{{fields.Passage}}"
+    identifier_field: "Passage"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Passage", name: "Passage", widget: "string"}
+      - {label: "Reference", name: "Reference", widget: "string"}
+      - {label: "Difficulty", name: "Difficulty", widget: "text"}
+      - {label: "Explanations", name: "Explanations", widget: "text"}
+      - {label: "Site Assessment", name: "SiteAssessment", widget: "text"}
+      - {label: "Related Books", name: "RelatedBooks", widget: "list"}
+      - {label: "Related Topics", name: "RelatedTopics", widget: "list"}
+      - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Verification Status", name: "VerificationStatus", widget: "select", options: ["Verified", "Awaiting Review", "Scholarly Debate"], default: "Awaiting Review"}
+      - {label: "Sources", name: "Sources", widget: "string", required: false, hint: "Full citations: author, title, publisher/year, and URL. Primary sources, museum catalogues, and peer-reviewed scholarship first."}
+      - {label: "Last Reviewed", name: "LastReviewed", widget: "string", required: false, hint: "Date this entry was last checked against its sources (YYYY-MM-DD). Leave blank until reviewed."}
   - name: "perspectives"
     label: "Professional Perspectives on Biblical Evidence"
     folder: "content/perspectives"
