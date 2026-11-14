@@ -180,6 +180,52 @@
     "ProphecySummary", "Explanation", "BiblicalUsage", "Beliefs", "Meaning", "Promise"];
   var SKIP_FIELDS = ["Slug", "Maps", "Image", "ImageCredit", "ImageSource", "PanelImage", "PanelImageCredit"];
   var VERIF_FIELDS = ["VerificationStatus", "Sources", "LastReviewed"];
+  /* Blog-style detail pages (v304): prose fields read as article sections
+     (first one is the lead paragraph, the rest get a heading); the rest
+     land in a compact "Details" block. Fields in neither list are prose
+     when their value is long (>150 chars), meta when short. */
+  var PROSE_FIELDS = ["Summary", "KeyStory", "LifeLesson", "Purpose", "Function",
+    "Application", "Commandment", "Description", "Explanation", "Explanations",
+    "Discussion", "Retelling", "Themes", "DetailedAnswer", "ShortAnswer",
+    "SiteAssessment", "Argument", "Response", "ObjectionSummary", "BiblicalResponse",
+    "BiblicalInsight", "BiblicalSignificance", "BiblicalContext", "BiblicalSupport",
+    "BiblicalPrinciples", "BiblicalUsage", "TheologicalSignificance", "Definition",
+    "Meaning", "Significance", "History", "HistoricalContext", "HistoricalDevelopment",
+    "HistoricalEvidence", "CulturalBackground", "JewishBackground", "PointsToChrist",
+    "Fulfillment", "Condition", "Covenant", "Promise", "Prophecy", "ProphecySummary",
+    "Testimony", "Contribution", "HowToApply", "HowToRespond", "CommonMistake",
+    "CommonObjections", "Controversy", "Interpretations", "Example",
+    "FaithDiscussionExample", "LifeApplication", "PracticalChange", "CreationReflection",
+    "Habitat", "Beliefs", "Practices", "Culture", "Worldview", "Issue", "Doctrine",
+    "Guide", "Method", "Principle", "Pitfalls", "Story", "Outline", "BiblicalConnection",
+    "ArchaeologicalFinds", "ScriptureIlluminated", "Question", "Lessons", "Steps",
+    "Questions", "PostSummary"];
+  var META_FIELDS = ["RelatedBooks", "RelatedBook", "RelatedPeople", "RelatedTopics",
+    "RelatedEvents", "RelatedFinds", "RelatedDoctrines", "RelatedQuestions",
+    "RelatedStories", "RelatedPlaces", "KeyVerses", "KeyPassages", "KeyScriptures",
+    "ScriptureReference", "Scripture", "Reference", "Places", "KeyPeople", "KeyPersons",
+    "KeyTopics", "KeyPoints", "Tags", "altNames", "AlternativeNames", "AlsoCalled",
+    "Category", "Duration", "Testament", "testament", "TimelineEra", "Role", "Type",
+    "Status", "Era", "Language", "PartOfSpeech", "StrongsNumber", "Subcategory",
+    "EvidenceClass", "FulfillmentStatus", "Form", "Group", "Level", "Origin", "Region",
+    "Period", "TimePeriod", "Subject", "Book", "Course", "Quiz", "ReadingTitle",
+    "ReadingLink", "BlogPostLink", "LeonLevyLink", "BibleBooks", "BibleReferences",
+    "FulfillmentPassage", "FulfillmentScriptures", "OldTestamentPassage",
+    "PreservedPassages", "ScriptureExample", "OptionA", "OptionB", "OptionC",
+    "OptionD", "CorrectAnswer", "Topic", "Title", "Post", "Platform", "KeyTheme",
+    "KeyWork", "KeyWorks", "Profession", "Exemplar", "Founder", "Civilization",
+    "Travelers", "FromPlace", "ToPlace", "Journey", "Stages", "MetaDescription",
+    "SEOTitle", "LastUpdated", "Prophet", "OriginalLanguage", "ArtifactDate",
+    "DateDiscovered", "DiscoveryLocation", "HistoricalPeriod", "CurrentLocation",
+    "Location", "Work", "source", "sourceId", "sourceUrl", "pleiadesId", "pleiadesUrl",
+    "placeSlug", "placeName", "placeIndex", "lat", "lon", "modernName",
+    "modernLocation", "category", "periods", "journeys", "DateApprox", "ManuscriptID",
+    "manuscriptId", "manuscriptName", "dateMin", "dateMax"];
+  function isProseField(field, v) {
+    if (META_FIELDS.indexOf(field) !== -1) return false;
+    if (PROSE_FIELDS.indexOf(field) !== -1) return true;
+    return String(v).length > 150;
+  }
 
   var data = {};      // collection id -> array of rows
   var posts = [];     // blog manifest
@@ -194,7 +240,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "303";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "304";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1762,17 +1808,35 @@
       }
       html += '</figure>';
     }
-    html += '<div class="detail"><dl>';
+    html += '<div class="detail detail-article">';
+    var proseFields = [], metaFields = [];
     Object.keys(row).forEach(function (field) {
+      if (field === c.primary) return;  // title already shown above
+      if (c.id === "wordstudies" && field === "Word") return;  // shown in the heading
       if (SKIP_FIELDS.indexOf(field) !== -1) return;
       if (VERIF_FIELDS.indexOf(field) !== -1) return;
       if (STUDY_FIELDS.indexOf(field) !== -1 || field === "StudyIntroduction") return;
       var v = val(row, field);
       if (isEmpty(v)) return;
       if (field === "Group" && v === "No") return;  // journeys: individuals carry Group "No"; don't show it
-      html += "<dt>" + esc(label(field)) + "</dt><dd>" + renderValue(field, v) + "</dd>";
+      if (isProseField(field, v)) proseFields.push(field); else metaFields.push(field);
     });
-    html += "</dl>";
+    proseFields.forEach(function (field, i) {
+      var rv = renderValue(field, val(row, field));
+      var block = /^<(ul|ol|p)[\s>]/.test(rv);  // Lessons/Steps/Questions/Response/DetailedAnswer render as blocks
+      if (i === 0) {
+        html += block ? rv : '<p class="detail-lede">' + rv + '</p>';
+      } else {
+        html += '<h3>' + esc(label(field)) + '</h3>' + (block ? rv : '<p>' + rv + '</p>');
+      }
+    });
+    if (metaFields.length) {
+      html += '<div class="detail-meta"><h3>Details</h3>';
+      metaFields.forEach(function (field) {
+        html += '<div class="meta-line"><span class="meta-label">' + esc(label(field)) + ':</span> ' + renderValue(field, val(row, field)) + '</div>';
+      });
+      html += '</div>';
+    }
     if (c.id === "promises") {
       if (isEmpty(val(row, "Condition"))) html += '<p class="promise-note"><strong>Condition:</strong> None stated in Scripture.</p>';
       if (isEmpty(val(row, "Fulfillment"))) html += '<p class="promise-note"><strong>Fulfillment:</strong> Not stated in Scripture for this promise.</p>';

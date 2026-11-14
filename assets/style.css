@@ -239,6 +239,13 @@ html[data-theme="dark"] .lower-banner img.lower-banner-dark { display: block; }
 .detail dt { font-weight: 700; color: var(--navy); margin-top: 1rem; }
 .detail dt:first-child { margin-top: 0; }
 .detail dd { margin: 0.15rem 0 0 0; }
+.detail-article .detail-lede { font-size: 1.12em; line-height: 1.65; }
+.detail-article h3 { margin: 1.7rem 0 0.5rem; }
+.detail-article p { line-height: 1.65; }
+.detail-meta { margin-top: 2rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+.detail-meta h3 { margin: 0 0 0.6rem; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.meta-line { margin: 0.35rem 0; font-size: 0.95em; line-height: 1.55; }
+.meta-label { font-weight: 700; }
 .detail ul { margin: 0.3rem 0 0 1.2rem; }
 .related a { font-weight: 600; }
 

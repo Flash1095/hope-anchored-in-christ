@@ -298,6 +298,56 @@ FIELD_HOME = {"RelatedBooks": "books", "RelatedBook": "books", "BibleBooks": "bo
     "KeyMembers": "people"}
 SKIP_FIELDS = ["Slug", "Maps", "Image", "ImageCredit", "ImageSource", "PanelImage", "PanelImageCredit"]
 VERIF_FIELDS = ["VerificationStatus", "Sources", "LastReviewed"]
+# Blog-style detail pages (v304): same classification as app.js — prose
+# fields read as article sections (first one is the lead paragraph, the
+# rest get a heading); the rest land in a compact "Details" block. Fields
+# in neither list are prose when their value is long (>150 chars), meta
+# when short. Keep the two lists identical to the JS ones.
+PROSE_FIELDS = ["Summary", "KeyStory", "LifeLesson", "Purpose", "Function",
+    "Application", "Commandment", "Description", "Explanation", "Explanations",
+    "Discussion", "Retelling", "Themes", "DetailedAnswer", "ShortAnswer",
+    "SiteAssessment", "Argument", "Response", "ObjectionSummary", "BiblicalResponse",
+    "BiblicalInsight", "BiblicalSignificance", "BiblicalContext", "BiblicalSupport",
+    "BiblicalPrinciples", "BiblicalUsage", "TheologicalSignificance", "Definition",
+    "Meaning", "Significance", "History", "HistoricalContext", "HistoricalDevelopment",
+    "HistoricalEvidence", "CulturalBackground", "JewishBackground", "PointsToChrist",
+    "Fulfillment", "Condition", "Covenant", "Promise", "Prophecy", "ProphecySummary",
+    "Testimony", "Contribution", "HowToApply", "HowToRespond", "CommonMistake",
+    "CommonObjections", "Controversy", "Interpretations", "Example",
+    "FaithDiscussionExample", "LifeApplication", "PracticalChange", "CreationReflection",
+    "Habitat", "Beliefs", "Practices", "Culture", "Worldview", "Issue", "Doctrine",
+    "Guide", "Method", "Principle", "Pitfalls", "Story", "Outline", "BiblicalConnection",
+    "ArchaeologicalFinds", "ScriptureIlluminated", "Question", "Lessons", "Steps",
+    "Questions", "PostSummary"]
+META_FIELDS = ["RelatedBooks", "RelatedBook", "RelatedPeople", "RelatedTopics",
+    "RelatedEvents", "RelatedFinds", "RelatedDoctrines", "RelatedQuestions",
+    "RelatedStories", "RelatedPlaces", "KeyVerses", "KeyPassages", "KeyScriptures",
+    "ScriptureReference", "Scripture", "Reference", "Places", "KeyPeople", "KeyPersons",
+    "KeyTopics", "KeyPoints", "Tags", "altNames", "AlternativeNames", "AlsoCalled",
+    "Category", "Duration", "Testament", "testament", "TimelineEra", "Role", "Type",
+    "Status", "Era", "Language", "PartOfSpeech", "StrongsNumber", "Subcategory",
+    "EvidenceClass", "FulfillmentStatus", "Form", "Group", "Level", "Origin", "Region",
+    "Period", "TimePeriod", "Subject", "Book", "Course", "Quiz", "ReadingTitle",
+    "ReadingLink", "BlogPostLink", "LeonLevyLink", "BibleBooks", "BibleReferences",
+    "FulfillmentPassage", "FulfillmentScriptures", "OldTestamentPassage",
+    "PreservedPassages", "ScriptureExample", "OptionA", "OptionB", "OptionC",
+    "OptionD", "CorrectAnswer", "Topic", "Title", "Post", "Platform", "KeyTheme",
+    "KeyWork", "KeyWorks", "Profession", "Exemplar", "Founder", "Civilization",
+    "Travelers", "FromPlace", "ToPlace", "Journey", "Stages", "MetaDescription",
+    "SEOTitle", "LastUpdated", "Prophet", "OriginalLanguage", "ArtifactDate",
+    "DateDiscovered", "DiscoveryLocation", "HistoricalPeriod", "CurrentLocation",
+    "Location", "Work", "source", "sourceId", "sourceUrl", "pleiadesId", "pleiadesUrl",
+    "placeSlug", "placeName", "placeIndex", "lat", "lon", "modernName",
+    "modernLocation", "category", "periods", "journeys", "DateApprox", "ManuscriptID",
+    "manuscriptId", "manuscriptName", "dateMin", "dateMax"]
+
+
+def is_prose_field(field, v):
+    if field in META_FIELDS:
+        return False
+    if field in PROSE_FIELDS:
+        return True
+    return len(str(v)) > 150
 VERIF_MEANING = {
     "Verified": "Checked against the sources listed below. Its core claims \u2014 identification, dates, and cited passages \u2014 were matched to a scholarly or primary source.",
     "Awaiting Review": "Not yet checked against scholarly sources. Treat its claims as provisional until this entry is reviewed.",
@@ -1154,8 +1204,13 @@ def entry_page(e, glob, home, quizzes_by_course, people_extra=None):
             fig += "</figcaption>"
         fig += "</figure>"
         parts.append(fig)
-    dl = []
+    prose = []
+    meta = []
     for field, v in row.items():
+        if field == e["primary"]:
+            continue  # title already shown above
+        if coll == "wordstudies" and field == "Word":
+            continue  # shown in the heading
         if field in SKIP_FIELDS or field in VERIF_FIELDS:
             continue
         if field in STUDY_FIELDS or field == "StudyIntroduction":
@@ -1167,9 +1222,27 @@ def entry_page(e, glob, home, quizzes_by_course, people_extra=None):
             continue
         if field == "Group" and v == "No":
             continue  # journeys: individuals carry Group "No"; don't show it
-        dl.append("<dt>%s</dt><dd>%s</dd>" % (
-            esc(label(field)), render_entry_field(field, v, coll, glob, home)))
-    body = "\n".join(parts) + '<div class="detail"><dl>' + "\n".join(dl) + "</dl>" + verification_box(row)
+        (prose if is_prose_field(field, v) else meta).append(field)
+    body = "\n".join(parts) + '<div class="detail detail-article">'
+    for i, field in enumerate(prose):
+        v = row[field]
+        if isinstance(v, list):
+            v = "; ".join(str(x) for x in v)
+        rv = render_entry_field(field, "" if v is None else str(v), coll, glob, home)
+        block = rv.startswith(("<ul", "<ol", "<p"))  # Lessons/Steps/Questions/Response/DetailedAnswer render as blocks
+        if i == 0:
+            body += rv if block else '<p class="detail-lede">' + rv + '</p>'
+        else:
+            body += '<h3>' + esc(label(field)) + '</h3>' + (rv if block else '<p>' + rv + '</p>')
+    if meta:
+        body += '<div class="detail-meta"><h3>Details</h3>'
+        for field in meta:
+            v = row[field]
+            if isinstance(v, list):
+                v = "; ".join(str(x) for x in v)
+            body += '<div class="meta-line"><span class="meta-label">' + esc(label(field)) + ':</span> ' + render_entry_field(field, "" if v is None else str(v), coll, glob, home) + '</div>'
+        body += '</div>'
+    body += verification_box(row)
     if coll == "promises":
         if not (row.get("Condition") or "").strip():
             body += '<p class="promise-note"><strong>Condition:</strong> None stated in Scripture.</p>'
