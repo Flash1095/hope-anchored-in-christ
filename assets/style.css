@@ -61,10 +61,6 @@ a:hover { color: var(--gold-dark); }
 .nav-more-menu { display: none; position: absolute; top: calc(100% + 0.5rem); right: 0; min-width: 12rem; background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 2px 12px rgba(27, 42, 78, 0.08); padding: 0.4rem 0; z-index: 20; }
 .nav-more.open .nav-more-menu { display: block; }
 .nav-more-menu a { display: block; padding: 0.6rem 1rem; }
-/* Store's own phone-menu link: hidden on desktop, shown only in the
-   open phone menu (below), so the phone menu stays Home, Explore,
-   Bible, Blog, Store. */
-.nav-phone-store { display: none; }
 .header-search { margin-left: auto; display: flex; gap: 0.4rem; }
 .header-search input {
   padding: 0.4rem 0.6rem; border: 1px solid var(--gold); border-radius: 999px;
@@ -342,13 +338,10 @@ html[data-theme="dark"] .lower-banner img.lower-banner-dark { display: block; }
   .main-nav.open { display: flex; flex-direction: column; gap: 0; width: 100%; background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 2px 12px rgba(27, 42, 78, 0.08); padding: 0.4rem 0; }
   .main-nav.open a { font-size: 1.05rem; padding: 0.6rem 1rem; border-bottom: 1px solid var(--line); }
   .main-nav.open a:last-child { border-bottom: none; }
-  /* v295: the phone menu shows only Home, Explore, Bible, Blog, Store.
-     About, Art Gallery, Connect, Give stay reachable from the footer. */
-  .main-nav.open a.nav-extra { display: none; }
-  /* v297: the whole More control is hidden on phone; Store keeps its
-     own menu link so the phone menu is unchanged. */
-  .main-nav.open .nav-more { display: none; }
-  .main-nav.open a.nav-phone-store { display: block; }
+  /* v299: all nine nav links show in the phone menu again (Lorraine
+     asked for them back) — the More menu flattens into plain links. */
+  .main-nav.open .nav-more-btn { display: none; }
+  .main-nav.open .nav-more-menu { display: block; position: static; min-width: 0; background: none; border: none; box-shadow: none; padding: 0; }
   .header-search { margin-left: 0; width: 100%; }
   .header-search input { flex: 1; min-width: 0; }
   .content { padding: 1rem 0.75rem 2.5rem; }
