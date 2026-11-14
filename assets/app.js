@@ -67,7 +67,7 @@
   { id: "objections", label: "Objections & Answers", file: "content/objections.json", primary: "Objection",
     blurb: "Honest objections from atheists, Muslims, Jews, and others — stated fairly and answered with grace and truth.",
     filters: [{ label: "Worldview", field: "Worldview" }], meta: ["Worldview"] },
-  { id: "perspectives", label: "Different Perspectives", file: "content/perspectives.json", primary: "Profession",
+  { id: "perspectives", label: "Professional Perspectives on Biblical Evidence", file: "content/perspectives.json", primary: "Profession",
     blurb: "How journalists, detectives, doctors, and other professionals shed light on the truth of the Bible.",
     meta: ["Exemplar"] },
   { id: "heritage", label: "Christian Heritage", file: "content/heritage.json", primary: "Name",
@@ -115,27 +115,6 @@
       blurb: "God's laws and commands, from Sinai to the Sermon on the Mount — what each one says, and how Christ fulfills it.",
       filters: [{ label: "Category", field: "Category" }, { label: "Duration", field: "Duration" }, { label: "Book", field: "RelatedBooks" }, { label: "Topic", field: "RelatedTopics" }] },
 ];
-  /* Explore tile order, as a study journey: the story first, then the
-     world behind it, then deeper study, then discernment, then the
-     learn-and-practice trio in taxonomy order (take a course, use a
-     guide, test with a quiz), then worship and wonder. This order is
-     display-only: COLLECTIONS itself stays untouched, because its order
-     decides link-index tie-breaking. Any collection missing here falls
-     back to the end of the tiles, so nothing can ever disappear. */
-  var EXPLORE_ORDER = ["timeline", "books", "stories", "people", "places",
-    "finds", "manuscripts", "civilizations", "peoples", "wordstudies", "questions", "hermeneutics", "jewishculture",
-    "topics", "doctrines", "prophecies", "typology", "apologetics",
-    "objections", "heresies", "fallacies", "perspectives", "heritage",
-    "politics", "socialmedia", "laws", "courses", "studyguides", "quizzes", "hymns",
-    "nature", "god", "promises", "identity"];
-  /* Section headings for the Explore tiles, keyed by the collection that
-     starts each section. The first section combines the story and the
-     world behind it under one title, Discover the Bible. */
-  var SECTION_HEADINGS = { timeline: "Discover the Bible", questions: "Ask and Understand",
-    laws: "Understanding Biblical Laws and Commands",
-    courses: "Learn and Practice",
-    hymns: "Worship and Wonder", god: "Know God" };
-
   var REL_FIELDS = ["RelatedBooks", "RelatedPeople", "RelatedEvents", "RelatedTopics",
     "RelatedDoctrines", "RelatedQuestions", "RelatedFinds", "RelatedBook",
     "KeyPersons", "KeyPeople", "BibleBooks", "Places", "Events",
@@ -212,7 +191,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "299";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "300";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -2095,46 +2074,49 @@
      correction); v222 merged the two into the single journey section
      below, and the old 11-door path band is gone; v224 removed the
      About Us band from the homepage (the #/about page itself stays). */
-  /* ---------- library gateways (v297) ----------
-     Six subject doorways into the library — the homepage's front door
-     and the #/library/<key> pages. Each gateway lists real collections
-     (via collectionCard, so entry counts stay live) plus, where a
-     gateway has no collection of its own, real links to existing pages.
-     Every collection has exactly one home:
-       study: timeline books stories people places wordstudies
-         hermeneutics jewishculture journeys manuscripts topics
-       apologetics: apologetics objections questions fallacies
-         perspectives heresies socialmedia politics
-       history: finds civilizations peoples heritage
-       theology: god promises identity doctrines prophecies typology laws
-       science: nature (+ Genesis 1 + a creation search — no science
-         collection exists, and none is invented)
-       art: courses studyguides quizzes hymns (+ Art Gallery + Store) */
+  /* ---------- library gateways (v300) ----------
+     Nine subject doorways into the library — Lorraine's own plan,
+     pasted 2026-11-13 ("Do this for explore page"). The Explore page
+     shows only these nine category cards plus an Interactive section;
+     each gateway lists its real collections (via collectionCard, so
+     entry counts stay live). Every collection has exactly one home:
+       biblical-studies: books stories people places timeline
+         wordstudies hermeneutics jewishculture topics journeys
+         (+ the Genealogy tool card — "genealogy" is a pseudo-id,
+         not a collection, so the count line says 10 collections)
+       theology-doctrine: god doctrines promises identity laws
+       apologetics-reasoning: apologetics objections fallacies
+         questions perspectives
+       history-heritage: finds manuscripts civilizations peoples heritage
+       prophecy-fulfillment: prophecies typology
+       comparative-religion: heresies
+       christian-living: politics socialmedia
+       christian-education: courses studyguides quizzes
+       worship-creation: hymns nature
+     Journeys was overlooked in her plan's member lists; it keeps its
+     Explore home in Biblical Studies so no collection is left out.
+     The old six-subject table (study/apologetics/history/theology/
+     science/art) is gone; an old #/library/<key> falls back to
+     viewExplore via the unknown-key check in viewLibrary. */
   var LIBRARY_GATEWAYS = [
-    { key: "study", title: "Study the Bible", desc: "Books, passages, people, places, timelines",
-      ids: ["timeline", "books", "stories", "people", "places", "wordstudies", "hermeneutics", "jewishculture", "journeys", "manuscripts", "topics"] },
-    { key: "apologetics", title: "Apologetics", desc: "Objections, evidence, arguments, answers",
-      ids: ["apologetics", "objections", "questions", "fallacies", "perspectives", "heresies", "socialmedia", "politics"] },
-    { key: "history", title: "History & Archaeology", desc: "Ancient civilizations, discoveries, church history",
-      ids: ["finds", "civilizations", "peoples", "heritage"] },
-    { key: "theology", title: "Theology & Doctrine", desc: "God, salvation, prophecy, Christian beliefs",
-      ids: ["god", "promises", "identity", "doctrines", "prophecies", "typology", "laws"] },
-    { key: "science", title: "Faith & Science", desc: "Creation, nature, scientific discoveries",
-      ids: ["nature"],
-      extra: [
-        { href: "#/bible/genesis/1", label: "Genesis 1 — The Creation Account", meta: "Bible reader",
-          snippet: "“In the beginning God created the heaven and the earth.” Read the Creation account in the Bible reader." },
-        { href: "#/search?q=creation", label: "Search the library for “creation”", meta: "Search",
-          snippet: "Every entry that mentions creation, across all collections." }
-      ] },
-    { key: "art", title: "Art & Resources", desc: "Photography, illustrations, learning materials",
-      ids: ["courses", "studyguides", "quizzes", "hymns"],
-      extra: [
-        { href: "#/art", label: "Art Gallery", meta: "GALLERY_COUNT",
-          snippet: "Original artwork, verse cards, and photography from the gallery." },
-        { href: "#/store", label: "Store", meta: "Shop",
-          snippet: "Faith-filled apparel and gifts from Hope Anchored in Christ." }
-      ] }
+    { key: "biblical-studies", title: "Biblical Studies", desc: "Scripture, its people, places, languages, and interpretation",
+      ids: ["books", "stories", "people", "genealogy", "places", "timeline", "wordstudies", "hermeneutics", "jewishculture", "topics", "journeys"] },
+    { key: "theology-doctrine", title: "Theology & Christian Doctrine", desc: "The nature of God, Christian beliefs, and biblical teachings",
+      ids: ["god", "doctrines", "promises", "identity", "laws"] },
+    { key: "apologetics-reasoning", title: "Christian Apologetics & Reasoning", desc: "Evidence, objections, logic, and defending the faith",
+      ids: ["apologetics", "objections", "fallacies", "questions", "perspectives"] },
+    { key: "history-heritage", title: "History, Archaeology & Christian Heritage", desc: "The historical world of Scripture and Christianity",
+      ids: ["finds", "manuscripts", "civilizations", "peoples", "heritage"] },
+    { key: "prophecy-fulfillment", title: "Biblical Prophecy & Fulfillment", desc: "Prophetic promises, fulfillment, and Christ throughout Scripture",
+      ids: ["prophecies", "typology"] },
+    { key: "comparative-religion", title: "Comparative Religion & Worldviews", desc: "Religious claims, competing beliefs, and doctrinal disagreements",
+      ids: ["heresies"] },
+    { key: "christian-living", title: "Christian Living, Ethics & Society", desc: "Biblical principles applied to life and contemporary issues",
+      ids: ["politics", "socialmedia"] },
+    { key: "christian-education", title: "Christian Education & Study Resources", desc: "Structured learning and interactive study",
+      ids: ["courses", "studyguides", "quizzes"] },
+    { key: "worship-creation", title: "Worship, Nature & God's Creation", desc: "Worship, hymns, and the beauty of creation",
+      ids: ["hymns", "nature"] }
   ];
   function libraryGateway(key) {
     return LIBRARY_GATEWAYS.filter(function (g) { return g.key === key; })[0];
@@ -2142,18 +2124,21 @@
   function viewLibrary(key) {
     var g = libraryGateway(key);
     if (!g) return viewExplore();
-    var cards = g.ids.map(function (id) { var c = coll(id); return c ? collectionCard(c) : ""; }).join("");
-    (g.extra || []).forEach(function (x) {
-      /* GALLERY_COUNT is resolved at render time, not at load: the
-         gallery data arrives after this table is built, so a count
-         baked into the table would read 0. */
-      var meta = x.meta === "GALLERY_COUNT" ? (galleryItems || []).length + " pieces" : x.meta;
-      cards += '<a class="card" href="' + x.href + '"><h3>' + esc(x.label) + "</h3>" +
-        '<p class="meta">' + esc(meta) + "</p><p class='snippet'>" + esc(x.snippet) + "</p></a>";
-    });
+    /* "genealogy" is a pseudo-id for the Genealogy tool card, not a
+       collection — same markup as on the Explore page. */
+    var cards = g.ids.map(function (id) {
+      if (id === "genealogy") return "<div class='card genealogy-card'><h3>Biblical Genealogies</h3>" +
+        "<p class='snippet'>Every parent, child, and spouse named in the Bible's genealogy passages — linked to their profiles and to the passages.</p><p>" +
+        "<a class='btn' href='#/genealogy'>Explore Biblical Genealogies</a></p></div>";
+      var c = coll(id); return c ? collectionCard(c) : "";
+    }).join("");
     var html = '<a class="back-link" href="#/">&larr; Home</a><h2>' + esc(g.title) + "</h2>" +
-      "<p class='page-intro'>" + esc(g.desc) + "</p>" +
-      "<form class='library-search' id='librarySearch'><label class='visually-hidden' for='librarySearchInput'>Search the site</label>" +
+      "<p class='page-intro'>" + esc(g.desc) + "</p>";
+    if (g.key === "comparative-religion") {
+      html += "<p class='page-intro'>Heretical Teachings also relates to " +
+        "<a href='#/library/theology-doctrine'>Theology &amp; Christian Doctrine</a> — see that category.</p>";
+    }
+    html += "<form class='library-search' id='librarySearch'><label class='visually-hidden' for='librarySearchInput'>Search the site</label>" +
       "<input type='search' id='librarySearchInput' placeholder='Search the whole library…' aria-label='Search the whole library'>" +
       "<button type='submit' class='btn'>Search</button></form>" +
       "<div class='card-grid'>" + cards + "</div>" +
@@ -2169,11 +2154,12 @@
   }
   /* ---------- homepage (v297, library entrance) ----------
      The homepage is the welcoming entrance, not the whole library:
-     hero (verse, tagline, search, Explore button) → six subject
-     gateways → three featured articles → a personal introduction.
-     The 37-tile journey section, the Featured-this-week cards, the
-     stats band, Latest from the Blog, and More to explore are gone
-     from the homepage — every collection still lives on #/explore. */
+     hero (verse, tagline, search, Explore button) → three featured
+     articles → a personal introduction. The 37-tile journey section,
+     the Featured-this-week cards, the stats band, Latest from the
+     Blog, and More to explore are gone from the homepage — every
+     collection still lives on #/explore, and the nine subject
+     gateways live on #/library/<key>. */
   function viewHome() {
     var total = COLLECTIONS.reduce(function (sum, c) { return sum + (data[c.id] || []).length; }, 0);
     var recent = posts.slice(0, 3);
@@ -3349,66 +3335,75 @@ function genBindInteractive(node) {
     mountListenButton(function () { return (item.Story || "") + ". " + (isThink ? "Think about it. " : "") + body; });
     window.scrollTo(0, 0);
   }
+  /* ---------- explore (v300) ----------
+     Nine category cards plus an Interactive section — no full
+     collection grid. Each category card links to its #/library/<key>
+     page; the live filter matches a card on its title, description,
+     or any member collection label, and the Interactive cards match
+     on their title and description. Cards are hidden with an inline
+     display style (the hidden attribute loses to .card-grid's display
+     rule — v296). The Timeline collection card also stays in Biblical
+     Studies; the Timeline interactive card is the same collection
+     reached as a tool, per the plan. */
   function viewExplore() {
     var html = "<h2>" + esc(explorePage.heading || "Explore") + "</h2><p class='page-intro'>" +
-      esc(explorePage.intro || "Every collection on the site — pick one and start browsing.") + "</p>";
-    var cats = COLLECTIONS.map(function (c) {
-      var n = c.id === "quizzes" ? quizGroups().length : (data[c.id] || []).length;
-      return { id: c.id, label: c.label, n: n };
-    }).sort(function (a, b) { return a.label.localeCompare(b.label); });
+      esc(explorePage.intro || "Nine categories, one library — tap a category to see its collections.") + "</p>";
+    html += "<div class='controls'><label class='visually-hidden' for='exploreFilter'>Find a category or collection</label>" +
+      "<input type='search' id='exploreFilter' placeholder='Find a category or collection…' aria-label='Find a category or collection'></div>";
     html += '<div class="controls"><span class="chip-label">Jump to a category:</span>' +
       '<select id="exploreJump"><option value="">Choose a category…</option>' +
-      cats.map(function (c) {
-        return '<option value="#/' + c.id + '">' + esc(c.label) + " (" + c.n + ")</option>";
+      LIBRARY_GATEWAYS.map(function (g) {
+        return '<option value="#/library/' + g.key + '">' + esc(g.title) + "</option>";
       }).join("") + "</select></div>";
-    html += "<div class='card storybook-card'><h3>Storybook Reader</h3>" +
+    html += "<div class='card-grid' id='exploreCatGrid'>" + LIBRARY_GATEWAYS.map(function (g) {
+      var real = g.ids.filter(function (id) { return id !== "genealogy"; });
+      var names = g.ids.map(function (id) {
+        if (id === "genealogy") return "Biblical Genealogies";
+        var c = coll(id); return c ? c.label : id;
+      });
+      var searchText = (g.title + " " + g.desc + " " + names.join(" ")).toLowerCase();
+      return '<a class="card explore-cat-card" href="#/library/' + g.key + '" data-search="' + esc(searchText) + '">' +
+        "<h3>" + esc(g.title) + "</h3>" +
+        '<p class="meta">' + real.length + (real.length === 1 ? " collection" : " collections") + "</p>" +
+        "<p class='snippet'>" + esc(g.desc) + "</p>" +
+        "<p class='meta'>" + esc(names.join(" · ")) + "</p></a>";
+    }).join("") + "</div>";
+    html += "<h3 id='exploreInteractiveHeading'>Interactive Learning &amp; Exploration</h3>" +
+      "<div class='card-grid' id='exploreInteractiveGrid'>" +
+      "<div class='card storybook-card' data-search='storybook reader bible stories pet stories children stories read stories like a book one page at a time'><h3>Storybook Reader</h3>" +
       "<p class='snippet'>Read stories like a book — one page at a time.</p><p>" +
       STORYBOOK_SHELVES.map(function (s) {
         return '<a class="btn" href="#/storybook/' + s.key + '">' + esc(s.label) + '</a>';
-      }).join(" ") + "</p></div>";
-    html += "<div class='card atlas-card'><h3>Biblical Atlas</h3>" +
+      }).join(" ") + "</p></div>" +
+      "<div class='card atlas-card' data-search='biblical atlas real places on a real map every marker links to its place page'><h3>Biblical Atlas</h3>" +
       "<p class='snippet'>Real places on a real map — every marker links to its place page.</p><p>" +
-      "<a class='btn' href='#/atlas'>Open the Atlas</a></p></div>";
-    /* Journeys lives in the Atlas now, not on Explore: the concat fallback
-       below would re-append any collection missing from EXPLORE_ORDER at
-       the end, so journeys is filtered out of the rendered order outright. */
-    var ordered = EXPLORE_ORDER.map(function (id) { return coll(id); }).filter(Boolean)
-      .concat(COLLECTIONS.filter(function (c) { return EXPLORE_ORDER.indexOf(c.id) === -1; }))
-      .filter(function (c) { return c.id !== "journeys"; });
-    var gridHtml = "";
-    var openGrid = false;
-    ordered.forEach(function (c, i) {
-      var heading = SECTION_HEADINGS[c.id];
-      var listed = EXPLORE_ORDER.indexOf(c.id) !== -1;
-      var prevListed = i > 0 && EXPLORE_ORDER.indexOf(ordered[i - 1].id) !== -1;
-      if (heading || (listed !== prevListed && i > 0) || !openGrid) {
-        if (openGrid) gridHtml += "</div>";
-        if (heading) gridHtml += "<h3>" + esc(heading) + "</h3>";
-        gridHtml += "<div class='card-grid'>";
-        openGrid = true;
-      }
-      if (c.id === "places") {
-        var pn = (data.places || []).length;
-        var pblurb = c.blurb;
-        (explorePage.blurbs || []).forEach(function (b) { if (b.collection === "places" && b.blurb) pblurb = b.blurb; });
-        var part = TILE_ART.places ? "<img class='card-art' src='" + esc(TILE_ART.places) + "' alt=''>" : "";
-        gridHtml += "<div class='card'><a href='#/places'>" + part + "<h3>" + esc(c.label) + "</h3>" +
-          "<p class='meta'>" + pn + " entries</p><p class='snippet'>" + esc(pblurb) + "</p></a>" +
-          "<p><a class='btn' href='#/atlas'>View on map &rarr;</a></p></div>";
-      } else {
-        gridHtml += collectionCard(c);
-      }
-      if (c.id === "people") {
-        gridHtml += "<div class='card genealogy-card'><h3>Biblical Genealogies</h3>" +
-          "<p class='snippet'>Every parent, child, and spouse named in the Bible's genealogy passages — linked to their profiles and to the passages.</p><p>" +
-          "<a class='btn' href='#/genealogy'>Explore Biblical Genealogies</a></p></div>";
-      }
-    });
-    if (openGrid) gridHtml += "</div>";
-    html += gridHtml;
+      "<a class='btn' href='#/atlas'>Open the Atlas</a></p></div>" +
+      "<div class='card' data-search='biblical timeline walk through scripture story in order every event dated and linked'><h3>Biblical Timeline</h3>" +
+      "<p class='snippet'>Walk through Scripture's story in order — every event, dated and linked.</p><p>" +
+      "<a class='btn' href='#/timeline'>Open the Timeline</a></p></div>" +
+      "</div>";
+    html += "<p class='empty' id='exploreNoMatch' style='display:none'>No categories match.</p>";
     app.innerHTML = html;
     var sel = document.getElementById("exploreJump");
     if (sel) sel.addEventListener("change", function () { if (sel.value) navigate(sel.value, true); });
+    var input = document.getElementById("exploreFilter");
+    if (input) input.addEventListener("input", function () {
+      var q = input.value.trim().toLowerCase();
+      var any = false;
+      document.querySelectorAll("#exploreCatGrid .explore-cat-card, #exploreInteractiveGrid .card").forEach(function (card) {
+        var hit = !q || (card.getAttribute("data-search") || "").indexOf(q) !== -1;
+        card.style.display = hit ? "" : "none";
+        if (hit) any = true;
+      });
+      var interactiveVisible = false;
+      document.querySelectorAll("#exploreInteractiveGrid .card").forEach(function (card) {
+        if (card.style.display !== "none") interactiveVisible = true;
+      });
+      var heading = document.getElementById("exploreInteractiveHeading");
+      if (heading) heading.style.display = interactiveVisible ? "" : "none";
+      var noMatch = document.getElementById("exploreNoMatch");
+      if (noMatch) noMatch.style.display = any ? "none" : "";
+    });
     window.scrollTo(0, 0);
   }
   /* Blog series: posts sharing a frontmatter `series` name, ordered by
