@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script>try{var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
-<link rel="stylesheet" href="assets/style.css?v=296">
+<link rel="stylesheet" href="assets/style.css?v=297">
 <link rel="icon" type="image/png" href="assets/favicon.png?v=76">
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -40,10 +40,16 @@
       <a href="#/bible">Bible</a>
       <a href="#/blog">Blog</a>
       <a href="#/about" class="nav-extra">About</a>
-      <a href="#/art" class="nav-extra">Art Gallery</a>
-      <a href="#/store">Store</a>
-      <a href="#/connect" class="nav-extra">Connect</a>
-      <a href="#/give" class="nav-extra">Give</a>
+      <div class="nav-more">
+        <button type="button" class="nav-more-btn" id="navMoreBtn" aria-expanded="false" aria-haspopup="true">More ▾</button>
+        <div class="nav-more-menu" id="navMoreMenu" role="menu">
+          <a href="#/art" role="menuitem">Art Gallery</a>
+          <a href="#/store" role="menuitem">Store</a>
+          <a href="#/connect" role="menuitem">Connect</a>
+          <a href="#/give" role="menuitem">Give</a>
+        </div>
+      </div>
+      <a href="#/store" class="nav-phone-store">Store</a>
     </nav>
     <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to dark view">🌙 Dark</button>
     <form class="header-search" id="headerSearch">
@@ -82,7 +88,7 @@
 <noscript><p style="text-align:center;padding:2rem">This site needs JavaScript to browse the collections.</p></noscript>
 <script src="https://js.stripe.com/v3"></script>
 <script src="assets/checkout.js?v=287"></script>
-<script src="assets/app.js?v=296"></script>
+<script src="assets/app.js?v=297"></script>
 <script>
   if (window.netlifyIdentity) {
     window.netlifyIdentity.init({ APIUrl: 'https://hope-anchored-in-christ.netlify.app/.netlify/identity' });

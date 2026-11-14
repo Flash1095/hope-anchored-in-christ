@@ -212,7 +212,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "296";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "297";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -2095,255 +2095,132 @@
      correction); v222 merged the two into the single journey section
      below, and the old 11-door path band is gone; v224 removed the
      About Us band from the homepage (the #/about page itself stays). */
+  /* ---------- library gateways (v297) ----------
+     Six subject doorways into the library — the homepage's front door
+     and the #/library/<key> pages. Each gateway lists real collections
+     (via collectionCard, so entry counts stay live) plus, where a
+     gateway has no collection of its own, real links to existing pages.
+     Every collection has exactly one home:
+       study: timeline books stories people places wordstudies
+         hermeneutics jewishculture journeys manuscripts topics
+       apologetics: apologetics objections questions fallacies
+         perspectives heresies socialmedia politics
+       history: finds civilizations peoples heritage
+       theology: god promises identity doctrines prophecies typology laws
+       science: nature (+ Genesis 1 + a creation search — no science
+         collection exists, and none is invented)
+       art: courses studyguides quizzes hymns (+ Art Gallery + Store) */
+  var LIBRARY_GATEWAYS = [
+    { key: "study", title: "Study the Bible", desc: "Books, passages, people, places, timelines",
+      ids: ["timeline", "books", "stories", "people", "places", "wordstudies", "hermeneutics", "jewishculture", "journeys", "manuscripts", "topics"] },
+    { key: "apologetics", title: "Apologetics", desc: "Objections, evidence, arguments, answers",
+      ids: ["apologetics", "objections", "questions", "fallacies", "perspectives", "heresies", "socialmedia", "politics"] },
+    { key: "history", title: "History & Archaeology", desc: "Ancient civilizations, discoveries, church history",
+      ids: ["finds", "civilizations", "peoples", "heritage"] },
+    { key: "theology", title: "Theology & Doctrine", desc: "God, salvation, prophecy, Christian beliefs",
+      ids: ["god", "promises", "identity", "doctrines", "prophecies", "typology", "laws"] },
+    { key: "science", title: "Faith & Science", desc: "Creation, nature, scientific discoveries",
+      ids: ["nature"],
+      extra: [
+        { href: "#/bible/genesis/1", label: "Genesis 1 — The Creation Account", meta: "Bible reader",
+          snippet: "“In the beginning God created the heaven and the earth.” Read the Creation account in the Bible reader." },
+        { href: "#/search?q=creation", label: "Search the library for “creation”", meta: "Search",
+          snippet: "Every entry that mentions creation, across all collections." }
+      ] },
+    { key: "art", title: "Art & Resources", desc: "Photography, illustrations, learning materials",
+      ids: ["courses", "studyguides", "quizzes", "hymns"],
+      extra: [
+        { href: "#/art", label: "Art Gallery", meta: "GALLERY_COUNT",
+          snippet: "Original artwork, verse cards, and photography from the gallery." },
+        { href: "#/store", label: "Store", meta: "Shop",
+          snippet: "Faith-filled apparel and gifts from Hope Anchored in Christ." }
+      ] }
+  ];
+  function libraryGateway(key) {
+    return LIBRARY_GATEWAYS.filter(function (g) { return g.key === key; })[0];
+  }
+  function viewLibrary(key) {
+    var g = libraryGateway(key);
+    if (!g) return viewExplore();
+    var cards = g.ids.map(function (id) { var c = coll(id); return c ? collectionCard(c) : ""; }).join("");
+    (g.extra || []).forEach(function (x) {
+      /* GALLERY_COUNT is resolved at render time, not at load: the
+         gallery data arrives after this table is built, so a count
+         baked into the table would read 0. */
+      var meta = x.meta === "GALLERY_COUNT" ? (galleryItems || []).length + " pieces" : x.meta;
+      cards += '<a class="card" href="' + x.href + '"><h3>' + esc(x.label) + "</h3>" +
+        '<p class="meta">' + esc(meta) + "</p><p class='snippet'>" + esc(x.snippet) + "</p></a>";
+    });
+    var html = '<a class="back-link" href="#/">&larr; Home</a><h2>' + esc(g.title) + "</h2>" +
+      "<p class='page-intro'>" + esc(g.desc) + "</p>" +
+      "<form class='library-search' id='librarySearch'><label class='visually-hidden' for='librarySearchInput'>Search the site</label>" +
+      "<input type='search' id='librarySearchInput' placeholder='Search the whole library…' aria-label='Search the whole library'>" +
+      "<button type='submit' class='btn'>Search</button></form>" +
+      "<div class='card-grid'>" + cards + "</div>" +
+      "<p class='retro-browse-all'><a class='btn' href='#/explore'>Browse everything on the Explore page</a></p>";
+    app.innerHTML = html;
+    var f = document.getElementById("librarySearch");
+    if (f) f.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var q = document.getElementById("librarySearchInput").value.trim();
+      if (q) location.hash = "#/search?q=" + encodeURIComponent(q);
+    });
+    window.scrollTo(0, 0);
+  }
+  /* ---------- homepage (v297, library entrance) ----------
+     The homepage is the welcoming entrance, not the whole library:
+     hero (verse, tagline, search, Explore button) → six subject
+     gateways → three featured articles → a personal introduction.
+     The 37-tile journey section, the Featured-this-week cards, the
+     stats band, Latest from the Blog, and More to explore are gone
+     from the homepage — every collection still lives on #/explore. */
   function viewHome() {
     var total = COLLECTIONS.reduce(function (sum, c) { return sum + (data[c.id] || []).length; }, 0);
-    var latest = posts[0];
-    /* Journey section (v222, merged): the four guided-path steps now
-       carry every collection as tiles — the separate "Browse by step"
-       section is gone, and the old 11-door path band with it. The full
-       grid still lives on #/explore, untouched, via the
-       "Browse everything" button. */
-    /* Journey tiles (v222, merged): every collection on the
-       homepage, grouped under the four guided-path steps — NOT under
-       the Explore section headings. Tile construction is the same as
-       viewExplore (collectionCard tiles, the special places card);
-       Journeys stays excluded, exactly as Explore excludes it. */
-    var browseHtml = (function () {
-      function tileFor(c) {
-        if (c.id === "places") {
-          var pn = (data.places || []).length;
-          var pblurb = c.blurb;
-          (explorePage.blurbs || []).forEach(function (b) { if (b.collection === "places" && b.blurb) pblurb = b.blurb; });
-          var part = TILE_ART.places ? "<img class='card-art' src='" + esc(TILE_ART.places) + "' alt=''>" : "";
-          return "<div class='card retro-tile'><a href='#/places'>" + part + "<h3>" + esc(c.label) + "</h3>" +
-            "<p class='meta'>" + pn + " entries</p><p class='snippet'>" + esc(pblurb) + "</p></a>" +
-            "<p><a class='btn' href='#/atlas'>View on map &rarr;</a></p></div>";
-        }
-        return collectionCard(c).replace('class="card"', 'class="card retro-tile"');
-      }
-      var genealogyHtml = "<div class='card retro-tile genealogy-card'><h3>Biblical Genealogies</h3>" +
-        "<p class='snippet'>Every parent, child, and spouse named in the Bible's genealogy passages — linked to their profiles and to the passages.</p><p>" +
-        "<a class='btn' href='#/genealogy'>Explore Biblical Genealogies</a></p></div>";
-      var atlasHtml = "<div class='card retro-tile atlas-card'><h3>Biblical Atlas</h3>" +
-        "<p class='snippet'>Real places on a real map — every marker links to its place page.</p><p>" +
-        "<a class='btn' href='#/atlas'>Open the Atlas</a></p></div>";
-      var storyHtml = "<div class='card retro-tile storybook-card'><h3>Storybook Reader</h3>" +
-        "<p class='snippet'>Read stories like a book — one page at a time.</p><p>" +
-        STORYBOOK_SHELVES.map(function (s) {
-          return '<a class="btn" href="#/storybook/' + s.key + '">' + esc(s.label) + '</a>';
-        }).join(" ") + "</p></div>";
-      var browseSteps = [
-        { title: "Step 1 \u00b7 Start Here", tiles: ["timeline", "books", "stories", "genealogy"] },
-        { title: "Step 2 \u00b7 Go Deeper", tiles: ["people", "places", "atlas", "civilizations", "peoples", "wordstudies",
-          "topics", "doctrines", "hermeneutics", "jewishculture", "laws",
-          "god", "promises", "identity", "manuscripts", "finds", "prophecies", "typology", "heritage", "perspectives"] },
-        { title: "Step 3 \u00b7 Defend", tiles: ["apologetics", "objections", "questions",
-          "heresies", "fallacies", "politics", "socialmedia"] },
-        { title: "Step 4 \u00b7 Learn and Create", tiles: ["courses", "studyguides", "quizzes", "hymns", "nature", "storybook"] }
-      ];
-      return browseSteps.map(function (s) {
-        var tiles = s.tiles.map(function (t) {
-          if (t === "genealogy") return genealogyHtml;
-          if (t === "atlas") return atlasHtml;
-          if (t === "storybook") return storyHtml;
-          var c = coll(t);
-          return c ? tileFor(c) : "";
-        }).join("");
-        return "<h3 class='retro-subhead'>" + esc(s.title) + "</h3><div class='card-grid retro-tiles'>" + tiles + "</div>";
-      }).join("");
-    })();
-    /* Featured this week (v234): one "of the Week" card per Explore
-       tile, rotating weekly. The week index is deterministic — the same
-       for every visitor and stable all week, never random: weeks are
-       counted from a fixed Monday (2026-01-05) in UTC, so timezones
-       cannot split a week. A tile's pick is weekIndex % its length
-       (positive-modulo, so any week index stays in range). Titles and
-       meta lines come only from the entry's own fields; nothing is
-       invented. Quizzes link to that week's quiz group play page,
-       because #/quizzes/<n> routes to quiz play by name, not to a
-       question detail — a numeric row index would not resolve there. */
-    var featuredHtml = (function () {
-      var FEATURED_EPOCH = Date.UTC(2026, 0, 5); // a Monday
-      var weekIndex = Math.floor((Date.now() - FEATURED_EPOCH) / 604800000);
-      function pick(len) { if (!len) return -1; return ((weekIndex % len) + len) % len; }
-      function metaOf(row, fields) {
-        for (var i = 0; i < fields.length; i++) {
-          var v = val(row, fields[i]);
-          if (!isEmpty(v)) {
-            v = splitList(v)[0] || v;
-            return v.length > 60 ? v.slice(0, 60).replace(/\s+\S*$/, "") + "…" : v;
-          }
-        }
-        return "";
-      }
-      function featuredCard(label, href, title, meta) {
-        return '<a class="card" href="' + href + '"><span class="post-row-label">' + esc(label) + "</span><h3>" + esc(title) + "</h3>" +
-          (meta ? '<p class="meta">' + esc(meta) + "</p>" : "") + "</a>";
-      }
-      var FEATURED_LABELS = { timeline: "Timeline Event of the Week", books: "Book of the Week",
-        stories: "Story of the Week", people: "Bible Person of the Week", places: "Place of the Week",
-        finds: "Archaeology Find of the Week", manuscripts: "Manuscript of the Week",
-        civilizations: "Civilization of the Week", peoples: "People Group of the Week",
-        wordstudies: "Word Study of the Week", questions: "Question of the Week",
-        hermeneutics: "Principle of the Week", jewishculture: "Cultural Background of the Week",
-        topics: "Topic of the Week", doctrines: "Doctrine of the Week", prophecies: "Prophecy of the Week",
-        typology: "Foreshadow of the Week", apologetics: "Argument of the Week",
-        objections: "Objection of the Week", heresies: "Heretical Teaching of the Week",
-        fallacies: "Fallacy of the Week", perspectives: "Perspective of the Week",
-        heritage: "Heritage Entry of the Week", politics: "Issue of the Week",
-        socialmedia: "Social Media Response of the Week", laws: "Command of the Week",
-        courses: "Course of the Week", studyguides: "Study Guide of the Week",
-        quizzes: "Quiz of the Week", hymns: "Hymn of the Week", nature: "Nature Feature of the Week",
-        god: "Know God Feature of the Week", promises: "Promise of the Week",
-        identity: "Identity Truth of the Week" };
-      var FEATURED_META = { timeline: ["DateApprox", "Era"], books: ["Testament", "Category"],
-        stories: ["Testament", "TimelineEra"], people: ["Role"],
-        places: ["ModernLocation", "Testament"], finds: ["DiscoveryLocation", "EvidenceClass"],
-        manuscripts: ["Cave", "DateApprox"], civilizations: ["Region", "TimePeriod"],
-        peoples: ["Region", "TimePeriod"], wordstudies: ["Language", "PartOfSpeech"],
-        questions: ["Category", "Subcategory"], hermeneutics: ["Category"],
-        jewishculture: ["Category"], topics: ["Category"], doctrines: ["BiblicalSupport"],
-        prophecies: ["Prophet", "FulfillmentStatus"], typology: ["Category"],
-        apologetics: ["Category"], objections: ["Worldview"], heresies: ["Founder"],
-        fallacies: ["Category"], perspectives: ["Exemplar"], heritage: ["Type", "Era"],
-        politics: ["Scripture"], socialmedia: ["Platform"], laws: ["Category", "Duration"],
-        courses: ["Level", "Duration"], studyguides: ["Category"], hymns: ["Author", "Year"],
-        nature: ["Category"], god: ["Category", "Subject"], promises: ["Covenant"],
-        identity: ["KeyScriptures"] };
-      var cards = [];
-      EXPLORE_ORDER.forEach(function (id) {
-        var c = coll(id);
-        if (!c) return;
-        if (id === "quizzes") {
-          var groups = quizGroups();
-          var gi = pick(groups.length);
-          if (gi < 0) return;
-          var g = groups[gi];
-          cards.push(featuredCard("Quiz of the Week", "#/quizzes/play/" + encodeURIComponent(g.name), g.name,
-            g.qs.length + (g.qs.length === 1 ? " question" : " questions")));
-          return;
-        }
-        var rows = data[id] || [];
-        var ri = pick(rows.length);
-        if (ri < 0) return;
-        var row = rows[ri];
-        cards.push(featuredCard(FEATURED_LABELS[id] || (c.label + " of the Week"), "#/" + id + "/" + ri,
-          val(row, c.primary), metaOf(row, FEATURED_META[id] || [])));
-      });
-      /* The three app-only tiles: Genealogy, Atlas, Storybook. */
-      var G = genealogyData || { nodes: [] };
-      var nodes = G.nodes || [];
-      var ni = pick(nodes.length);
-      if (ni >= 0) {
-        var node = nodes[ni];
-        var nameCounts = {};
-        nodes.forEach(function (n) { nameCounts[n.name] = (nameCounts[n.name] || 0) + 1; });
-        var genHref = "#/genealogy/" + encodeURIComponent(node.name) +
-          (nameCounts[node.name] > 1 ? "?id=" + encodeURIComponent(node.id) : "");
-        cards.push(featuredCard("Ancestor of the Week", genHref, node.name, node.context || ""));
-      }
-      var atlas = atlasItems || [];
-      var ai = pick(atlas.length);
-      if (ai >= 0) {
-        var it = atlas[ai];
-        cards.push(featuredCard("Atlas Place of the Week", "#/atlas?place=" + it.placeIndex, it.placeName,
-          it.modernName || it.evidence || ""));
-      }
-      var stories = data.stories || [];
-      var si = pick(stories.length);
-      if (si >= 0) {
-        var st = stories[si];
-        cards.push(featuredCard("Bible Story of the Week", "#/storybook/bible/" + si,
-          val(st, "Story"), metaOf(st, ["Scripture", "Testament"])));
-      }
-      if (!cards.length) return "";
-      /* v295: show six picks, not all 37 — the rest sit behind one
-         "See all featured" toggle. The picks themselves still rotate
-         weekly (weekIndex % length), so the six shown change too. */
-      var shown = cards.slice(0, 6);
-      var rest = cards.slice(6);
-      return "<section class='retro-band retro-paper'><h2 class='retro-display retro-display-dark'>Featured this week</h2>" +
-        "<p class='retro-band-intro'>Six fresh picks from around the site, changing every week.</p>" +
-        "<div class='card-grid'>" + shown.join("") + "</div>" +
-        (rest.length ? "<div class='card-grid' id='featuredRest' hidden>" + rest.join("") + "</div>" +
-          "<p class='retro-browse-all'><button type='button' class='btn' id='featuredMoreBtn' aria-expanded='false' data-total='" + cards.length + "'>See all featured (" + cards.length + ")</button></p>" : "") +
-        "</section>";
-    })();
+    var recent = posts.slice(0, 3);
+    var gatewayCards = LIBRARY_GATEWAYS.map(function (g) {
+      var n = g.ids.length;
+      return '<a class="card gateway-card" href="#/library/' + g.key + '"><h3>' + esc(g.title) + "</h3>" +
+        '<p class="meta">' + n + (n === 1 ? " collection" : " collections") + "</p>" +
+        "<p class='snippet'>" + esc(g.desc) + "</p></a>";
+    }).join("");
     var html = "<div class='retro-home'>" +
       "<section class='retro-band retro-teal'>" +
       "<p class='retro-eyebrow'>Welcome to Hope Anchored in Christ</p>" +
-      "<h2 class='retro-display'>Hope Anchored in Christ</h2>" +
-      "<p class='retro-tagline'>Explore Scripture. Examine the Evidence. Discover the Truth.</p>" +
+      "<h2 class='retro-display'>Faith That Invites Examination</h2>" +
+      "<p class='retro-tagline'>Explore the beauty, truth, and evidence of Christianity through Scripture, history, science, and reason.</p>" +
       "<p class='retro-ribbon'>&ldquo;We have this hope as an anchor for the soul, firm and secure. " +
       "It enters the inner sanctuary behind the curtain, where our forerunner, Jesus, has entered on our behalf.&rdquo; " +
       "&mdash; Hebrews 6:19&ndash;20</p>" +
-      "</section>" +
-      /* v295: the homepage search is the single clear first action — one
-         big box above the tile grid, reusing the #/search route. */
-      "<section class='home-search'><form id='homeSearch'>" +
+      "<div class='home-search'><form id='homeSearch'>" +
       "<label class='visually-hidden' for='homeSearchInput'>Search the site</label>" +
       "<input type='search' id='homeSearchInput' placeholder='Search " + total.toLocaleString() + " entries…' aria-label='Search the site'>" +
       "<button type='submit' class='btn'>Search</button></form>" +
-      "<p class='home-search-hint'>One search across every person, place, story, question, and study on the site.</p></section>" +
-      "<section class='retro-band retro-paper' id='retro-path'>" +
-      "<h2 class='retro-display retro-display-dark'>Your journey through Scripture</h2>" +
-      "<p class='retro-band-intro'>Four steps, in order — start at the beginning and follow the path as far as you like.</p>" +
-      browseHtml +
-      "<p class='retro-browse-all'><a class='btn' href='#/explore'>Browse everything</a></p>" +
+      "<p class='home-search-hint'>One search across every person, place, story, question, and study on the site.</p></div>" +
+      "<p><a class='btn' href='#/explore'>Explore the Library</a></p>" +
       "</section>" +
-      featuredHtml +
-      "<section class='retro-band retro-cream'><div class='stats'>" +
-      '<div class="stat"><strong>' + COLLECTIONS.length + "</strong><span>collections</span></div>" +
-      '<div class="stat"><strong>' + total + "</strong><span>entries</span></div>" +
-      '<div class="stat"><strong>' + (data.books || []).length + "</strong><span>books of the Bible</span></div>" +
-      '<div class="stat"><strong>' + quizGroups().length + "</strong><span>quizzes</span></div></div></section>";
-    if (latest) {
-      html += "<section class='retro-band retro-paper'><h2 class='retro-display retro-display-dark'>Latest from the blog</h2>" + postRowCard(latest, "Latest blog post") + "</section>";
+      "<section class='retro-band retro-paper'><h2 class='retro-display retro-display-dark'>Explore by subject</h2>" +
+      "<p class='retro-band-intro'>Six doorways into the library — pick one and start exploring.</p>" +
+      "<div class='card-grid'>" + gatewayCards + "</div></section>";
+    if (recent.length) {
+      html += "<section class='retro-band retro-cream'><h2 class='retro-display retro-display-dark'>Featured Articles</h2>" +
+        "<p class='retro-band-intro'>Fresh from the blog — research and reflection, newest first.</p>" +
+        "<div class='home-posts'>" + recent.map(function (p) { return postRowCard(p); }).join("") + "</div>" +
+        "<p class='retro-browse-all'><a class='btn' href='#/blog'>View All Articles</a></p></section>";
     }
-    html += "<section class='retro-band retro-cream'><h2 class='retro-display retro-display-dark'>More to explore</h2>" +
-      "<p class='page-intro'>Pages beyond the collections — readers, tools, and ways to support the ministry.</p>" +
-      "<p>" + [["#/bible", "Bible"], ["#/blog", "Blog"], ["#/art", "Art Gallery"],
-      ["#/storybook", "Storybook Reader"], ["#/havenbrook", "Havenbrook Chronicles"], ["#/genealogy", "Biblical Genealogies"],
-      ["#/lookup", "Manuscript Lookup"], ["#/store", "Store"], ["#/give", "Give"],
-      ["#/connect", "Connect"]].map(function (l) { return "<a class='btn' href='" + l[0] + "'>" + l[1] + "</a>"; }).join(" ") + "</p></section>";
+    html += "<section class='retro-band retro-paper retro-intro-band'><h2 class='retro-display retro-display-dark'>Why this site exists</h2>" +
+      "<p class='retro-quote'>&ldquo;I believe Christianity is a faith that invites examination, not one that fears questions. " +
+      "Hope Anchored in Christ was created to explore the truth of Scripture through careful study, historical evidence, " +
+      "sound reasoning, and a love for God's creation.&rdquo;</p>" +
+      "<p><a class='btn' href='#/about'>About the site</a> <a class='btn' href='#/art'>Art Gallery</a> <a class='btn' href='#/store'>Store</a></p>" +
+      "</section>";
     html += "</div>";
     app.innerHTML = html;
-    /* v295: homepage search goes to the existing #/search route; the
-       Featured toggle reveals the remaining weekly picks in place. */
     var homeSearch = document.getElementById("homeSearch");
     if (homeSearch) homeSearch.addEventListener("submit", function (e) {
       e.preventDefault();
       var q = document.getElementById("homeSearchInput").value.trim();
       if (q) location.hash = "#/search?q=" + encodeURIComponent(q);
     });
-    var featuredMoreBtn = document.getElementById("featuredMoreBtn");
-    var featuredRest = document.getElementById("featuredRest");
-    if (featuredMoreBtn && featuredRest) {
-      featuredMoreBtn.addEventListener("click", function () {
-        var open = featuredRest.hidden;
-        featuredRest.hidden = !open;
-        featuredMoreBtn.setAttribute("aria-expanded", open ? "true" : "false");
-        featuredMoreBtn.textContent = open ? "Show fewer featured" : "See all featured (" + featuredMoreBtn.getAttribute("data-total") + ")";
-      });
-    }
-    /* Animated home: stat numbers count up on load (instant under
-       reduced-motion, where the final values simply stay put). */
-    (function () {
-      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (reduce) return;
-      app.querySelectorAll(".stat strong").forEach(function (el) {
-        var target = parseInt(el.textContent.replace(/[^0-9]/g, ""), 10);
-        if (isNaN(target)) return;
-        var start = null, dur = 1200;
-        el.textContent = "0";
-        (function step(ts) {
-          if (!start) start = ts;
-          var p = Math.min((ts - start) / dur, 1);
-          el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
-          if (p < 1) requestAnimationFrame(step);
-        })(performance.now());
-      });
-    })();
     loadExcerpts();
     window.scrollTo(0, 0);
   }
@@ -6687,6 +6564,7 @@ function genBindInteractive(node) {
     document.body.classList.toggle("is-home", path.length === 0);
     if (path.length === 0) return viewHome();
     if (path[0] === "explore") return viewExplore();
+    if (path[0] === "library") return viewLibrary(path[1] ? decodeURIComponent(path[1]) : null);
     if (path[0] === "blog") return viewBlog(path[1] ? decodeURIComponent(path[1]) : null, params);
     if (path[0] === "about") return viewAbout();
     if (path[0] === "store") return viewStore();
@@ -6769,6 +6647,39 @@ function genBindInteractive(node) {
       }
     });
   }
+  /* More dropdown (v297, desktop only): Art Gallery, Store, Connect,
+     Give live here instead of in the top bar. Click toggles; Escape,
+     an outside click, or picking a link closes it. The whole control
+     is hidden on phone widths (CSS), where Store has its own menu
+     link and the other three stay reachable from the footer. */
+  var navMoreBtn = document.getElementById("navMoreBtn");
+  var navMore = navMoreBtn ? navMoreBtn.parentElement : null;
+  if (navMoreBtn && navMore) {
+    navMoreBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var open = navMore.classList.toggle("open");
+      navMoreBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    navMore.addEventListener("click", function (e) {
+      if (e.target && e.target.tagName === "A") {
+        navMore.classList.remove("open");
+        navMoreBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+    document.addEventListener("click", function (e) {
+      if (navMore.classList.contains("open") && !navMore.contains(e.target)) {
+        navMore.classList.remove("open");
+        navMoreBtn.setAttribute("aria-expanded", "false");
+      }
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && navMore.classList.contains("open")) {
+        navMore.classList.remove("open");
+        navMoreBtn.setAttribute("aria-expanded", "false");
+        navMoreBtn.focus();
+      }
+    });
+  }
   document.getElementById("footerNav").innerHTML =
     COLLECTIONS.map(function (c) { return '<a href="#/' + c.id + '">' + esc(c.label) + "</a>"; }).join("") +
     '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/art">Art</a><a href="#/genealogy">Biblical Genealogies</a><a href="#/lookup">Manuscript Lookup</a><a href="#/atlas">Atlas</a><a href="#/havenbrook">Havenbrook Chronicles</a>';
@@ -6820,3 +6731,4 @@ function genBindInteractive(node) {
     __hopeStatic.personSectionsHTML = personSectionsHTML;
   }
 })();
+

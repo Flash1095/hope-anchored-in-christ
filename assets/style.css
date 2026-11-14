@@ -53,6 +53,18 @@ a:hover { color: var(--gold-dark); }
 .main-nav a { color: var(--navy); text-decoration: none; font-weight: 700; font-family: "Playfair Display", Georgia, serif; font-size: 1.05rem; letter-spacing: 0.01em; }
 .nav-toggle { display: none; }
 .main-nav a:hover { color: var(--gold-dark); }
+/* More dropdown (v297, desktop only): the button reads as a nav link;
+   the menu is a small card under it. Hidden on phone widths (below). */
+.nav-more { position: relative; }
+.nav-more-btn { background: none; border: none; padding: 0; margin: 0; font: inherit; color: var(--navy); font-weight: 700; font-family: "Playfair Display", Georgia, serif; font-size: 1.05rem; letter-spacing: 0.01em; cursor: pointer; }
+.nav-more-btn:hover { color: var(--gold-dark); }
+.nav-more-menu { display: none; position: absolute; top: calc(100% + 0.5rem); right: 0; min-width: 12rem; background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 2px 12px rgba(27, 42, 78, 0.08); padding: 0.4rem 0; z-index: 20; }
+.nav-more.open .nav-more-menu { display: block; }
+.nav-more-menu a { display: block; padding: 0.6rem 1rem; }
+/* Store's own phone-menu link: hidden on desktop, shown only in the
+   open phone menu (below), so the phone menu stays Home, Explore,
+   Bible, Blog, Store. */
+.nav-phone-store { display: none; }
 .header-search { margin-left: auto; display: flex; gap: 0.4rem; }
 .header-search input {
   padding: 0.4rem 0.6rem; border: 1px solid var(--gold); border-radius: 999px;
@@ -333,6 +345,10 @@ html[data-theme="dark"] .lower-banner img.lower-banner-dark { display: block; }
   /* v295: the phone menu shows only Home, Explore, Bible, Blog, Store.
      About, Art Gallery, Connect, Give stay reachable from the footer. */
   .main-nav.open a.nav-extra { display: none; }
+  /* v297: the whole More control is hidden on phone; Store keeps its
+     own menu link so the phone menu is unchanged. */
+  .main-nav.open .nav-more { display: none; }
+  .main-nav.open a.nav-phone-store { display: block; }
   .header-search { margin-left: 0; width: 100%; }
   .header-search input { flex: 1; min-width: 0; }
   .content { padding: 1rem 0.75rem 2.5rem; }
@@ -546,6 +562,7 @@ html[data-theme="dark"] {
    stays #1B2A4E so navy-background components keep working). */
 html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3,
 html[data-theme="dark"] .brand, html[data-theme="dark"] .main-nav a,
+html[data-theme="dark"] .nav-more-btn,
 html[data-theme="dark"] .detail dt, html[data-theme="dark"] .stat strong,
 html[data-theme="dark"] .store-card .price, html[data-theme="dark"] .chip-label,
 html[data-theme="dark"] .chip, html[data-theme="dark"] .word-script,
@@ -577,6 +594,7 @@ html[data-theme="dark"] .card-art, html[data-theme="dark"] .post-art {
 }
 html[data-theme="dark"] .header-search input,
 html[data-theme="dark"] .home-search input,
+html[data-theme="dark"] .library-search input,
 html[data-theme="dark"] .controls input[type="search"],
 html[data-theme="dark"] #quizCategorySelect, html[data-theme="dark"] #exploreJump,
 html[data-theme="dark"] #atlasSearch, html[data-theme="dark"] #genSearch,
@@ -596,6 +614,8 @@ html[data-theme="dark"] .chip.active { background: var(--gold); color: #fff; }
 html[data-theme="dark"] .store-thumb { background: #132A4C; border-color: #2a3f66; }
 html[data-theme="dark"] .store-thumb.active { border-color: #e91e63; }
 html[data-theme="dark"] .audio-voice-select { background: #132A4C; color: #edf0f7; }
+/* More dropdown in dark mode (v297): the menu card goes dark navy. */
+html[data-theme="dark"] .nav-more-menu { background: #132A4C; border-color: #2a3f66; }
 /* Webtoon speech bubbles (v293): white becomes dark navy, the pink
    right-side bubbles become a dark rose tint, tails match their bubble. */
 html[data-theme="dark"] .webtoon-bubble { background: #132A4C; border-color: var(--line); }
@@ -708,6 +728,23 @@ html[data-theme="dark"] .retro-home .retro-badge img { border-color: #3AAFA9; ba
 @media (max-width: 700px) {
   .retro-home .home-search form { flex-direction: column; }
   .retro-home .home-search .btn { width: 100%; }
+}
+/* v297: the homepage search now lives inside the teal hero, and the
+   homepage ends with a personal-introduction band. */
+.retro-home .retro-teal .home-search { margin: 1.4rem auto 1.2rem; }
+.retro-home .retro-teal .home-search-hint { color: #d8ece8; }
+.retro-home .retro-intro-band { text-align: center; }
+.retro-home .retro-quote { font-size: 1.2rem; font-style: italic; line-height: 1.6; max-width: 720px; margin: 0 auto 1.2rem; }
+.retro-home .home-posts .post-row-card { margin-bottom: 1rem; }
+.retro-home .home-posts .post-row-card:last-child { margin-bottom: 0; }
+/* Library gateway pages (v297): search box reusing the homepage
+   search look. */
+.library-search { display: flex; gap: 0.5rem; max-width: 680px; margin: 0 0 1rem; }
+.library-search input { flex: 1; min-width: 0; padding: 0.8rem 1.1rem; border: 1px solid var(--gold); border-radius: 999px; background: #fff; font-size: 1.05rem; }
+.library-search .btn { padding: 0.8rem 1.4rem; font-size: 1.05rem; }
+@media (max-width: 700px) {
+  .library-search { flex-direction: column; }
+  .library-search .btn { width: 100%; }
 }
 html[data-theme="dark"] .retro-home .retro-step-num { color: #7FCFC9; }
 html[data-theme="dark"] .retro-home .retro-step-title, html[data-theme="dark"] .retro-home .retro-step-desc { color: #F2E8D5; }
