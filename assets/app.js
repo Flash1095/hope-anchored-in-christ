@@ -212,7 +212,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "297";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "298";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -2177,12 +2177,6 @@
   function viewHome() {
     var total = COLLECTIONS.reduce(function (sum, c) { return sum + (data[c.id] || []).length; }, 0);
     var recent = posts.slice(0, 3);
-    var gatewayCards = LIBRARY_GATEWAYS.map(function (g) {
-      var n = g.ids.length;
-      return '<a class="card gateway-card" href="#/library/' + g.key + '"><h3>' + esc(g.title) + "</h3>" +
-        '<p class="meta">' + n + (n === 1 ? " collection" : " collections") + "</p>" +
-        "<p class='snippet'>" + esc(g.desc) + "</p></a>";
-    }).join("");
     var html = "<div class='retro-home'>" +
       "<section class='retro-band retro-teal'>" +
       "<p class='retro-eyebrow'>Welcome to Hope Anchored in Christ</p>" +
@@ -2197,10 +2191,7 @@
       "<button type='submit' class='btn'>Search</button></form>" +
       "<p class='home-search-hint'>One search across every person, place, story, question, and study on the site.</p></div>" +
       "<p><a class='btn' href='#/explore'>Explore the Library</a></p>" +
-      "</section>" +
-      "<section class='retro-band retro-paper'><h2 class='retro-display retro-display-dark'>Explore by subject</h2>" +
-      "<p class='retro-band-intro'>Six doorways into the library — pick one and start exploring.</p>" +
-      "<div class='card-grid'>" + gatewayCards + "</div></section>";
+      "</section>";
     if (recent.length) {
       html += "<section class='retro-band retro-cream'><h2 class='retro-display retro-display-dark'>Featured Articles</h2>" +
         "<p class='retro-band-intro'>Fresh from the blog — research and reflection, newest first.</p>" +
