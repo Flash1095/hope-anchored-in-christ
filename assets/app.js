@@ -212,7 +212,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "294";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "295";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -1704,14 +1704,24 @@
     }
     return html;
   }
+  /* People sections (v295): each long section folds open and shut, so a
+     profile reads short on a phone. The builders still return their own
+     <h3> heading first; the wrapper swaps it for the <summary> and keeps
+     the body untouched — the Events "Show more" list and the Verses
+     loader still bind to the same ids inside the closed sections.
+     Default: Places open, the rest closed. */
+  function personSectionWrap(title, inner, open) {
+    inner = inner.replace(/^<h3>[^<]*<\/h3>/, "");
+    return '<details class="study-section person-section"' + (open ? " open" : "") + "><summary>" + title + "</summary><div class='study-body'>" + inner + "</div></details>";
+  }
   function personSectionsHTML(idx) {
     var cache = personExtraCache[idx] || (personExtraCache[idx] = {});
     if (!cache.timeline) cache.timeline = personTimelineItems(idx);
-    var html = personPlacesHTML(idx);
-    html += personEventsHTML(idx);
-    html += personCivHTML(idx);
-    html += personFamilyHTML(idx);
-    html += '<h3>Verses mentioning this person</h3><div id="personVersesWrap"><p class="loading">Loading verses…</p></div>';
+    var html = personSectionWrap("Places", personPlacesHTML(idx), true);
+    html += personSectionWrap("Events", personEventsHTML(idx), false);
+    html += personSectionWrap("Civilizations, Nations & Tribes", personCivHTML(idx), false);
+    html += personSectionWrap("Family", personFamilyHTML(idx), false);
+    html += personSectionWrap("Verses mentioning this person", '<h3>Verses mentioning this person</h3><div id="personVersesWrap"><p class="loading">Loading verses…</p></div>', false);
     return html;
   }
   function bindPersonSections(idx) {
@@ -2247,9 +2257,17 @@
           val(st, "Story"), metaOf(st, ["Scripture", "Testament"])));
       }
       if (!cards.length) return "";
+      /* v295: show six picks, not all 37 — the rest sit behind one
+         "See all featured" toggle. The picks themselves still rotate
+         weekly (weekIndex % length), so the six shown change too. */
+      var shown = cards.slice(0, 6);
+      var rest = cards.slice(6);
       return "<section class='retro-band retro-paper'><h2 class='retro-display retro-display-dark'>Featured this week</h2>" +
-        "<p class='retro-band-intro'>A fresh pick from every corner of the site, changing every week.</p>" +
-        "<div class='card-grid'>" + cards.join("") + "</div></section>";
+        "<p class='retro-band-intro'>Six fresh picks from around the site, changing every week.</p>" +
+        "<div class='card-grid'>" + shown.join("") + "</div>" +
+        (rest.length ? "<div class='card-grid' id='featuredRest' hidden>" + rest.join("") + "</div>" +
+          "<p class='retro-browse-all'><button type='button' class='btn' id='featuredMoreBtn' aria-expanded='false' data-total='" + cards.length + "'>See all featured (" + cards.length + ")</button></p>" : "") +
+        "</section>";
     })();
     var html = "<div class='retro-home'>" +
       "<section class='retro-band retro-teal'>" +
@@ -2260,6 +2278,13 @@
       "It enters the inner sanctuary behind the curtain, where our forerunner, Jesus, has entered on our behalf.&rdquo; " +
       "&mdash; Hebrews 6:19&ndash;20</p>" +
       "</section>" +
+      /* v295: the homepage search is the single clear first action — one
+         big box above the tile grid, reusing the #/search route. */
+      "<section class='home-search'><form id='homeSearch'>" +
+      "<label class='visually-hidden' for='homeSearchInput'>Search the site</label>" +
+      "<input type='search' id='homeSearchInput' placeholder='Search " + total.toLocaleString() + " entries…' aria-label='Search the site'>" +
+      "<button type='submit' class='btn'>Search</button></form>" +
+      "<p class='home-search-hint'>One search across every person, place, story, question, and study on the site.</p></section>" +
       "<section class='retro-band retro-paper' id='retro-path'>" +
       "<h2 class='retro-display retro-display-dark'>Your journey through Scripture</h2>" +
       "<p class='retro-band-intro'>Four steps, in order — start at the beginning and follow the path as far as you like.</p>" +
@@ -2283,6 +2308,24 @@
       ["#/connect", "Connect"]].map(function (l) { return "<a class='btn' href='" + l[0] + "'>" + l[1] + "</a>"; }).join(" ") + "</p></section>";
     html += "</div>";
     app.innerHTML = html;
+    /* v295: homepage search goes to the existing #/search route; the
+       Featured toggle reveals the remaining weekly picks in place. */
+    var homeSearch = document.getElementById("homeSearch");
+    if (homeSearch) homeSearch.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var q = document.getElementById("homeSearchInput").value.trim();
+      if (q) location.hash = "#/search?q=" + encodeURIComponent(q);
+    });
+    var featuredMoreBtn = document.getElementById("featuredMoreBtn");
+    var featuredRest = document.getElementById("featuredRest");
+    if (featuredMoreBtn && featuredRest) {
+      featuredMoreBtn.addEventListener("click", function () {
+        var open = featuredRest.hidden;
+        featuredRest.hidden = !open;
+        featuredMoreBtn.setAttribute("aria-expanded", open ? "true" : "false");
+        featuredMoreBtn.textContent = open ? "Show fewer featured" : "See all featured (" + featuredMoreBtn.getAttribute("data-total") + ")";
+      });
+    }
     /* Animated home: stat numbers count up on load (instant under
        reduced-motion, where the final values simply stay put). */
     (function () {
@@ -5091,7 +5134,7 @@ function genBindInteractive(node) {
   function viewBibleBook(slug) {
     var book = bibleBookBySlug(slug);
     if (!book) return viewBible();
-    var html = "<h2>" + esc(book.name) + "</h2><div class='post-body'>" +
+    var html = '<a class="back-link" href="#/bible">&larr; Bible</a><h2>' + esc(book.name) + "</h2><div class='post-body'>" +
       "<p class='page-intro'>" + esc(book.testament === "Old" ? "Old Testament" : "New Testament") + " &middot; " + book.chapters + " chapters &middot; King James Version</p>";
     var artIdx = -1;
     (data.books || []).forEach(function (r, i) { if (val(r, "Book") === book.name) artIdx = i; });
@@ -5366,7 +5409,7 @@ function genBindInteractive(node) {
         var marker = marked[+n] ? '<button type="button" class="verse-note" data-v="' + n + '" aria-label="Study notes for verse ' + n + '">†</button>' : "";
         paras[paras.length - 1] += '<span class="verse" id="v' + n + '"><sup>' + n + '</sup>' + marker + ' ' + linkifyVerseText(txt, book.name, +chapter, +n) + '</span> ';
       });
-      var html = "<h2>" + esc(book.name) + " " + esc(chapter) + "</h2><div class='post-body'>" +
+      var html = '<a class="back-link" href="#/bible">&larr; Bible</a><h2>' + esc(book.name) + " " + esc(chapter) + "</h2><div class='post-body'>" +
         "<p class='page-intro'>King James Version &middot; " + esc(book.testament === "Old" ? "Old Testament" : "New Testament") + "</p>";
       html += "<p>";
       if (prev) html += "<a class='btn' href='#/bible/" + slug + "/" + prev + "'>&larr; Chapter " + prev + "</a> ";

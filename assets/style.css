@@ -330,6 +330,9 @@ html[data-theme="dark"] .lower-banner img.lower-banner-dark { display: block; }
   .main-nav.open { display: flex; flex-direction: column; gap: 0; width: 100%; background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 2px 12px rgba(27, 42, 78, 0.08); padding: 0.4rem 0; }
   .main-nav.open a { font-size: 1.05rem; padding: 0.6rem 1rem; border-bottom: 1px solid var(--line); }
   .main-nav.open a:last-child { border-bottom: none; }
+  /* v295: the phone menu shows only Home, Explore, Bible, Blog, Store.
+     About, Art Gallery, Connect, Give stay reachable from the footer. */
+  .main-nav.open a.nav-extra { display: none; }
   .header-search { margin-left: 0; width: 100%; }
   .header-search input { flex: 1; min-width: 0; }
   .content { padding: 1rem 0.75rem 2.5rem; }
@@ -573,6 +576,7 @@ html[data-theme="dark"] .card-art, html[data-theme="dark"] .post-art {
   background: #132A4C;
 }
 html[data-theme="dark"] .header-search input,
+html[data-theme="dark"] .home-search input,
 html[data-theme="dark"] .controls input[type="search"],
 html[data-theme="dark"] #quizCategorySelect, html[data-theme="dark"] #exploreJump,
 html[data-theme="dark"] #atlasSearch, html[data-theme="dark"] #genSearch,
@@ -632,7 +636,7 @@ html[data-theme="dark"] .gtn-name, html[data-theme="dark"] .gtn-head-name { fill
    restyled. Palette is inspired by the retro reference Lorraine sent
    (teal hero, cream about, coral portfolio) in original CSS only:
    white text on the deep teal, dark navy text on cream and coral. */
-.retro-home .retro-band { padding: 2rem 1.5rem; margin: 0 0 1.5rem; border-radius: 6px; }
+.retro-home .retro-band { padding: 2rem 1.5rem; margin: 0 0 2rem; border-radius: 6px; }
 .retro-home .retro-teal { background: #1F7673; color: #fff; text-align: center; }
 .retro-home .retro-cream { background: #F7ECD7; color: #2b2b2b; }
 .retro-home .retro-coral { background: #F0907A; color: #1B2A4E; }
@@ -675,6 +679,7 @@ html[data-theme="dark"] .retro-home .retro-tiles .retro-tile, html[data-theme="d
 html[data-theme="dark"] .retro-home .retro-paper { background: #132A4C; }
 html[data-theme="dark"] .retro-home .retro-ribbon { background: #2B2419; color: #F2E8D5; }
 html[data-theme="dark"] .retro-home .retro-eyebrow { color: #F2E8D5; }
+html[data-theme="dark"] .retro-home .home-search-hint { color: #eef1f7; }
 html[data-theme="dark"] .retro-home .retro-badge img { border-color: #3AAFA9; background: #132A4C; }
 
 /* ---------- guided path (v219, home only) ---------- */
@@ -686,6 +691,20 @@ html[data-theme="dark"] .retro-home .retro-badge img { border-color: #3AAFA9; ba
 .retro-home .retro-step-desc { margin: 0.2rem 0 0; color: #2b2b2b; }
 .retro-home .retro-doors .retro-door h3 { color: #1B2A4E; }
 .retro-home .retro-browse-all { margin: 1.5rem 0 0; font-weight: 600; }
+/* Homepage search (v295): the single clear first action — one big box
+   above the tile grid, reusing the header search look (white rounded
+   input, rose button). No band background, so the page reads
+   hero → search → journey as one path. Input is 1.1rem so phones do
+   not zoom on focus. */
+.retro-home .home-search { max-width: 680px; margin: 0 auto 2rem; padding: 0 1rem; text-align: center; }
+.retro-home .home-search form { display: flex; gap: 0.5rem; }
+.retro-home .home-search input { flex: 1; min-width: 0; padding: 0.8rem 1.1rem; border: 1px solid var(--gold); border-radius: 999px; background: #fff; font-size: 1.1rem; }
+.retro-home .home-search .btn { padding: 0.8rem 1.4rem; font-size: 1.05rem; }
+.retro-home .home-search-hint { color: var(--muted); font-size: 0.95rem; margin: 0.6rem 0 0; }
+@media (max-width: 700px) {
+  .retro-home .home-search form { flex-direction: column; }
+  .retro-home .home-search .btn { width: 100%; }
+}
 html[data-theme="dark"] .retro-home .retro-step-num { color: #7FCFC9; }
 html[data-theme="dark"] .retro-home .retro-step-title, html[data-theme="dark"] .retro-home .retro-step-desc { color: #F2E8D5; }
 
