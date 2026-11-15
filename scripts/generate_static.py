@@ -318,7 +318,7 @@ PROSE_FIELDS = ["Summary", "KeyStory", "LifeLesson", "Purpose", "Function",
     "Habitat", "Beliefs", "Practices", "Culture", "Worldview", "Issue", "Doctrine",
     "Guide", "Method", "Principle", "Pitfalls", "Story", "Outline", "BiblicalConnection",
     "ArchaeologicalFinds", "ScriptureIlluminated", "Question", "Lessons", "Steps",
-    "Questions", "PostSummary"]
+    "Questions", "PostSummary", "WhatItMeans", "WhatTheBibleSays"]
 META_FIELDS = ["RelatedBooks", "RelatedBook", "RelatedPeople", "RelatedTopics",
     "RelatedEvents", "RelatedFinds", "RelatedDoctrines", "RelatedQuestions",
     "RelatedStories", "RelatedPlaces", "KeyVerses", "KeyPassages", "KeyScriptures",
@@ -339,7 +339,7 @@ META_FIELDS = ["RelatedBooks", "RelatedBook", "RelatedPeople", "RelatedTopics",
     "Location", "Work", "source", "sourceId", "sourceUrl", "pleiadesId", "pleiadesUrl",
     "placeSlug", "placeName", "placeIndex", "lat", "lon", "modernName",
     "modernLocation", "category", "periods", "journeys", "DateApprox", "ManuscriptID",
-    "manuscriptId", "manuscriptName", "dateMin", "dateMax"]
+    "manuscriptId", "manuscriptName", "dateMin", "dateMax", "ClosestVerse"]
 
 
 def is_prose_field(field, v):
