@@ -240,7 +240,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "305";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "306";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3438,8 +3438,8 @@ function genBindInteractive(node) {
       '<div class="controls"><input type="search" id="bibleRef" placeholder="Go to a passage, e.g. John 3:16">' +
       '<button class="btn" id="bibleGo">Go</button></div>' +
       '<p><a class="btn" href="#/bible/topics">Bible Verses by Topic</a> Find passages by need — healing, strength, anxiety, fear, hope, and every other topic.</p>' +
-      "<h3>Old Testament</h3>" + grid(ot) +
-      "<h3>New Testament</h3>" + grid(nt) + "</div>";
+      '<details class="study-section"><summary>Old Testament (' + ot.length + ' books)</summary><div class="study-body">' + grid(ot) + "</div></details>" +
+      '<details class="study-section"><summary>New Testament (' + nt.length + ' books)</summary><div class="study-body">' + grid(nt) + "</div></details>" + "</div>";
     html += "<h2>" + esc(explorePage.heading || "Explore") + "</h2><p class='page-intro'>" +
       esc(explorePage.intro || "Browse the library by category — tap a category to see its collections.") + "</p>";
     html += "<div class='controls'><label class='visually-hidden' for='exploreFilter'>Find a category or collection</label>" +
