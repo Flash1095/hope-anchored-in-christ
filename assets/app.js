@@ -240,7 +240,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "304";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "305";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3421,8 +3421,26 @@ function genBindInteractive(node) {
      rule — v296). The Timeline collection card also stays in Biblical
      Studies; the Timeline interactive card is the same collection
      reached as a tool, per the plan. */
-  function viewExplore() {
-    var html = "<h2>" + esc(explorePage.heading || "Explore") + "</h2><p class='page-intro'>" +
+  /* Combined Bible + Explore page (v305): one library home. The Bible
+     reader sits on top, the nine Explore categories below it, then the
+     Interactive section. Both #/bible and #/explore render this page. */
+  function viewLibraryHome() {
+    function grid(list) {
+      return "<div class='card-grid'>" + list.map(function (b) {
+        return "<a class='card' href='#/bible/" + b.slug + "'><h3>" + esc(b.name) + "</h3><p class='meta'>" + b.chapters + " chapters</p></a>";
+      }).join("") + "</div>";
+    }
+    var ot = BIBLE_BOOKS.filter(function (b) { return b.testament === "Old"; });
+    var nt = BIBLE_BOOKS.filter(function (b) { return b.testament === "New"; });
+    var html = "<h2>Bible</h2><div class='post-body'>" +
+      "<p>Read the King James Version — public domain, free for everyone — with names linked to the site's articles. Tap a person, place, or event in the text to open its article.</p>" +
+      "<p>Looking for another translation? The NIV and ESV are copyrighted, so this reader shows the KJV on-site; every chapter page also links to the same passage on BibleGateway in NIV and ESV.</p>" +
+      '<div class="controls"><input type="search" id="bibleRef" placeholder="Go to a passage, e.g. John 3:16">' +
+      '<button class="btn" id="bibleGo">Go</button></div>' +
+      '<p><a class="btn" href="#/bible/topics">Bible Verses by Topic</a> Find passages by need — healing, strength, anxiety, fear, hope, and every other topic.</p>' +
+      "<h3>Old Testament</h3>" + grid(ot) +
+      "<h3>New Testament</h3>" + grid(nt) + "</div>";
+    html += "<h2>" + esc(explorePage.heading || "Explore") + "</h2><p class='page-intro'>" +
       esc(explorePage.intro || "Browse the library by category — tap a category to see its collections.") + "</p>";
     html += "<div class='controls'><label class='visually-hidden' for='exploreFilter'>Find a category or collection</label>" +
       "<input type='search' id='exploreFilter' placeholder='Find a category or collection…' aria-label='Find a category or collection'></div>";
@@ -3455,6 +3473,14 @@ function genBindInteractive(node) {
       "</div>";
     html += "<p class='empty' id='exploreNoMatch' style='display:none'>No categories match.</p>";
     app.innerHTML = html;
+    function go() {
+      var q = document.getElementById("bibleRef").value.trim();
+      var ref = parseBibleRef(q);
+      if (ref) location.hash = "#/bible/" + ref.slug + "/" + ref.chapter + (ref.verse ? "?v=" + ref.verse : "");
+      else document.getElementById("bibleRef").focus();
+    }
+    document.getElementById("bibleGo").addEventListener("click", go);
+    document.getElementById("bibleRef").addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); go(); } });
     var sel = document.getElementById("exploreJump");
     if (sel) sel.addEventListener("change", function () { if (sel.value) navigate(sel.value, true); });
     var input = document.getElementById("exploreFilter");
@@ -3477,6 +3503,7 @@ function genBindInteractive(node) {
     });
     window.scrollTo(0, 0);
   }
+  function viewExplore() { return viewLibraryHome(); }
   /* Blog series: posts sharing a frontmatter `series` name, ordered by
      numeric `part` (a post without a part sorts first). Series posts are
      called Parts, never Lessons — lessons belong to courses only. */
@@ -4355,33 +4382,7 @@ function genBindInteractive(node) {
     }
     return null;
   }
-  function viewBible() {
-    function grid(list) {
-      return "<div class='card-grid'>" + list.map(function (b) {
-        return "<a class='card' href='#/bible/" + b.slug + "'><h3>" + esc(b.name) + "</h3><p class='meta'>" + b.chapters + " chapters</p></a>";
-      }).join("") + "</div>";
-    }
-    var ot = BIBLE_BOOKS.filter(function (b) { return b.testament === "Old"; });
-    var nt = BIBLE_BOOKS.filter(function (b) { return b.testament === "New"; });
-    var html = "<h2>Bible</h2><div class='post-body'>" +
-      "<p>Read the King James Version — public domain, free for everyone — with names linked to the site's articles. Tap a person, place, or event in the text to open its article.</p>" +
-      "<p>Looking for another translation? The NIV and ESV are copyrighted, so this reader shows the KJV on-site; every chapter page also links to the same passage on BibleGateway in NIV and ESV.</p>" +
-      '<div class="controls"><input type="search" id="bibleRef" placeholder="Go to a passage, e.g. John 3:16">' +
-      '<button class="btn" id="bibleGo">Go</button></div>' +
-      '<p><a class="btn" href="#/bible/topics">Bible Verses by Topic</a> Find passages by need — healing, strength, anxiety, fear, hope, and every other topic.</p>' +
-      "<h3>Old Testament</h3>" + grid(ot) +
-      "<h3>New Testament</h3>" + grid(nt) + "</div>";
-    app.innerHTML = html;
-    function go() {
-      var q = document.getElementById("bibleRef").value.trim();
-      var ref = parseBibleRef(q);
-      if (ref) location.hash = "#/bible/" + ref.slug + "/" + ref.chapter + (ref.verse ? "?v=" + ref.verse : "");
-      else document.getElementById("bibleRef").focus();
-    }
-    document.getElementById("bibleGo").addEventListener("click", go);
-    document.getElementById("bibleRef").addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); go(); } });
-    window.scrollTo(0, 0);
-  }
+  function viewBible() { return viewLibraryHome(); }
   /* Bible Verses by Topic: every Topics and Themes entry's KeyPassages,
      rendered as links straight into this reader. No new data, no new
      collection — the reader reuses the topics already on the site. */
