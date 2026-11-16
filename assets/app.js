@@ -243,7 +243,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "308";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "309";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -2174,7 +2174,7 @@
      was removed (its collection card is already there).
      The old six-subject table (study/apologetics/history/theology/
      science/art) is gone; an old #/library/<key> falls back to
-     viewExplore via the unknown-key check in viewLibrary. */
+     viewLibraryHome via the unknown-key check in viewLibrary. */
   var LIBRARY_GATEWAYS = [
     { key: "biblical-studies", title: "Biblical Studies", desc: "Scripture, its people, places, languages, and interpretation",
       ids: ["books", "stories", "people", "genealogy", "places", "timeline", "wordstudies", "hermeneutics", "jewishculture", "topics", "journeys", "atlas"] },
@@ -2200,7 +2200,7 @@
   }
   function viewLibrary(key) {
     var g = libraryGateway(key);
-    if (!g) return viewExplore();
+    if (!g) return viewLibraryHome();
     /* "genealogy" and "atlas" are pseudo-ids for tool cards, not
        collections — same markup as on the Explore page. */
     var cards = g.ids.map(function (id) {
@@ -2221,7 +2221,7 @@
       "<input type='search' id='librarySearchInput' placeholder='Search the whole library…' aria-label='Search the whole library'>" +
       "<button type='submit' class='btn'>Search</button></form>" +
       "<div class='card-grid'>" + cards + "</div>" +
-      "<p class='retro-browse-all'><a class='btn' href='#/explore'>Browse everything on the Explore page</a></p>";
+      "<p class='retro-browse-all'><a class='btn' href='#/library'>Browse everything in the Library</a></p>";
     app.innerHTML = html;
     var f = document.getElementById("librarySearch");
     if (f) f.addEventListener("submit", function (e) {
@@ -2255,7 +2255,7 @@
       "<input type='search' id='homeSearchInput' placeholder='Search " + total.toLocaleString() + " entries…' aria-label='Search the site'>" +
       "<button type='submit' class='btn'>Search</button></form>" +
       "<p class='home-search-hint'>One search across every person, place, story, question, and study on the site.</p></div>" +
-      "<p><a class='btn' href='#/explore'>Explore the Library</a></p>" +
+      "<p><a class='btn' href='#/library'>Explore the Library</a></p>" +
       "</section>";
     if (recent.length) {
       html += "<section class='retro-band retro-cream'><h2 class='retro-display retro-display-dark'>Featured Articles</h2>" +
@@ -2319,7 +2319,7 @@
       }
       wrap.innerHTML = "<div class='card-grid'>" + items.map(cardHTML).join("") + "</div>";
     }
-    var html = '<a class="back-link" href="#/explore">&larr; Explore</a><h2>Art</h2>' +
+    var html = '<a class="back-link" href="#/library">&larr; Library</a><h2>Art</h2>' +
       "<p class='page-intro'>Art, verse cards, and other pieces — displayed here, and connected to the store where they can be bought.</p>" +
       '<div class="controls"><div class="chips"><span class="chip-label">Show:</span>' +
       '<button class="chip active" data-kind="">All</button>' +
@@ -2670,7 +2670,7 @@
         }).join("") + "</ul>";
       });
     }
-    var html = '<a class="back-link" href="#/explore">&larr; Explore</a><h2>Biblical Genealogies</h2>' +
+    var html = '<a class="back-link" href="#/library">&larr; Library</a><h2>Biblical Genealogies</h2>' +
       "<p class='page-intro'>Every parent, child, and spouse named in the Bible's genealogy passages — Genesis 5, 10, 11, 36; Exodus 6; Ruth 4; Matthew 1; Luke 3; 1 Chronicles 1–9 — linked to their profiles and to the passages themselves. Where the text leaves a link unstated or debated, the genealogy says so instead of guessing.</p>";
     if (!nodes.length) {
       html += "<p class='empty'>The Biblical Genealogies data is not available right now.</p>";
@@ -3356,7 +3356,7 @@ function genBindInteractive(node) {
   function viewStorybook(shelfKey, idx, params) {
     var shelf, items, i, html, item, pages, thinkPage, page, body, isThink;
     if (!shelfKey) {
-      html = '<a class="back-link" href="#/explore">&larr; Explore</a><h2>Storybook Reader</h2>' +
+      html = '<a class="back-link" href="#/library">&larr; Library</a><h2>Storybook Reader</h2>' +
         '<p class="page-intro">Pick a shelf, pick a story, and read it one page at a time — just like a book.</p><div class="card-grid">' +
         STORYBOOK_SHELVES.map(function (s) {
           var n = s.items().length;
@@ -3424,9 +3424,10 @@ function genBindInteractive(node) {
      rule — v296). The Timeline collection card also stays in Biblical
      Studies; the Timeline interactive card is the same collection
      reached as a tool, per the plan. */
-  /* Combined Bible + Explore page (v305): one library home. The Bible
+  /* Single library page (v305 combined, v309 renamed): one home. The Bible
      reader sits on top, the nine Explore categories below it, then the
-     Interactive section. Both #/bible and #/explore render this page. */
+     Interactive section. Only #/library renders this page; the old bare
+     #/bible and #/explore addresses redirect here. */
   function viewLibraryHome() {
     function grid(list) {
       return "<div class='card-grid'>" + list.map(function (b) {
@@ -3506,7 +3507,6 @@ function genBindInteractive(node) {
     });
     window.scrollTo(0, 0);
   }
-  function viewExplore() { return viewLibraryHome(); }
   /* Blog series: posts sharing a frontmatter `series` name, ordered by
      numeric `part` (a post without a part sorts first). Series posts are
      called Parts, never Lessons — lessons belong to courses only. */
@@ -4385,7 +4385,6 @@ function genBindInteractive(node) {
     }
     return null;
   }
-  function viewBible() { return viewLibraryHome(); }
   /* Bible Verses by Topic: every Topics and Themes entry's KeyPassages,
      rendered as links straight into this reader. No new data, no new
      collection — the reader reuses the topics already on the site. */
@@ -5071,8 +5070,8 @@ function genBindInteractive(node) {
   }
   function viewBibleBook(slug) {
     var book = bibleBookBySlug(slug);
-    if (!book) return viewBible();
-    var html = '<a class="back-link" href="#/bible">&larr; Bible</a><h2>' + esc(book.name) + "</h2><div class='post-body'>" +
+    if (!book) return viewLibraryHome();
+    var html = '<a class="back-link" href="#/library">&larr; Library</a><h2>' + esc(book.name) + "</h2><div class='post-body'>" +
       "<p class='page-intro'>" + esc(book.testament === "Old" ? "Old Testament" : "New Testament") + " &middot; " + book.chapters + " chapters &middot; King James Version</p>";
     var artIdx = -1;
     (data.books || []).forEach(function (r, i) { if (val(r, "Book") === book.name) artIdx = i; });
@@ -5307,7 +5306,7 @@ function genBindInteractive(node) {
   }
   function viewBibleChapter(slug, chapter, params) {
     var book = bibleBookBySlug(slug);
-    if (!book) return viewBible();
+    if (!book) return viewLibraryHome();
     fetch("content/bible/" + slug + ".json?v=" + ASSET_V).then(function (r) {
       if (!r.ok) throw new Error("book");
       return r.json();
@@ -5347,7 +5346,7 @@ function genBindInteractive(node) {
         var marker = marked[+n] ? '<button type="button" class="verse-note" data-v="' + n + '" aria-label="Study notes for verse ' + n + '">†</button>' : "";
         paras[paras.length - 1] += '<span class="verse" id="v' + n + '"><sup>' + n + '</sup>' + marker + ' ' + linkifyVerseText(txt, book.name, +chapter, +n) + '</span> ';
       });
-      var html = '<a class="back-link" href="#/bible">&larr; Bible</a><h2>' + esc(book.name) + " " + esc(chapter) + "</h2><div class='post-body'>" +
+      var html = '<a class="back-link" href="#/library">&larr; Library</a><h2>' + esc(book.name) + " " + esc(chapter) + "</h2><div class='post-body'>" +
         "<p class='page-intro'>King James Version &middot; " + esc(book.testament === "Old" ? "Old Testament" : "New Testament") + "</p>";
       html += "<p>";
       if (prev) html += "<a class='btn' href='#/bible/" + slug + "/" + prev + "'>&larr; Chapter " + prev + "</a> ";
@@ -5625,7 +5624,7 @@ function genBindInteractive(node) {
       '<div class="stat"><strong>' + total + "</strong><span>entries</span></div>" +
       '<div class="stat"><strong>' + (data.books || []).length + "</strong><span>books of the Bible</span></div>" +
       '<div class="stat"><strong>' + quizGroups().length + "</strong><span>quizzes</span></div></div>" +
-      '<div class="about-actions"><a class="btn" href="#/explore">Explore the collections</a><a class="btn" href="#/bible">Read the Bible</a><a class="btn" href="#/blog">Visit the blog</a></div>' +
+      '<div class="about-actions"><a class="btn" href="#/library">Explore the Library</a><a class="btn" href="#/blog">Visit the blog</a></div>' +
       "<h3>The meaning behind our name</h3>" +
       "<p>The name Hope Anchored in Christ comes from a deep place in both of our hearts and stories. Life has brought storms, heartache, " +
       "questions, and seasons of waiting — but through it all, one thing has remained constant: the hope we have in Jesus. It's not a shallow " +
@@ -6624,8 +6623,11 @@ function genBindInteractive(node) {
     var params = new URLSearchParams(parts[1] || "");
     document.body.classList.toggle("is-home", path.length === 0);
     if (path.length === 0) return viewHome();
-    if (path[0] === "explore") return viewExplore();
-    if (path[0] === "library") return viewLibrary(path[1] ? decodeURIComponent(path[1]) : null);
+    if (path[0] === "explore") { location.hash = "#/library"; return; }
+    if (path[0] === "library") {
+      if (!path[1]) return viewLibraryHome();
+      return viewLibrary(decodeURIComponent(path[1]));
+    }
     if (path[0] === "blog") return viewBlog(path[1] ? decodeURIComponent(path[1]) : null, params);
     if (path[0] === "about") return viewAbout();
     if (path[0] === "store") return viewStore();
@@ -6633,7 +6635,7 @@ function genBindInteractive(node) {
     if (path[0] === "connect") return viewConnect();
     if (path[0] === "give") return viewGive();
     if (path[0] === "bible") {
-      if (!path[1]) return viewBible();
+      if (!path[1]) { location.hash = "#/library"; return; }
       if (path[1] === "topics") return viewBibleTopics();
       if (!path[2]) return viewBibleBook(path[1]);
       return viewBibleChapter(path[1], path[2], params);
@@ -6743,7 +6745,7 @@ function genBindInteractive(node) {
   }
   document.getElementById("footerNav").innerHTML =
     COLLECTIONS.map(function (c) { return '<a href="#/' + c.id + '">' + esc(c.label) + "</a>"; }).join("") +
-    '<a href="#/blog">Blog</a><a href="#/bible">Bible</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/art">Art</a><a href="#/genealogy">Biblical Genealogies</a><a href="#/lookup">Manuscript Lookup</a><a href="#/atlas">Atlas</a><a href="#/havenbrook">Havenbrook Chronicles</a>';
+    '<a href="#/blog">Blog</a><a href="#/library">Library</a><a href="#/about">About</a><a href="#/store">Store</a><a href="#/connect">Connect</a><a href="#/give">Give</a><a href="#/storybook">Storybook</a><a href="#/art">Art</a><a href="#/genealogy">Biblical Genealogies</a><a href="#/lookup">Manuscript Lookup</a><a href="#/atlas">Atlas</a><a href="#/havenbrook">Havenbrook Chronicles</a>';
 
   app.innerHTML = '<p class="loading">Loading the collections…</p>';
   var jobs = COLLECTIONS.map(function (c) {
