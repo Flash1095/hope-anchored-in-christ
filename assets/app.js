@@ -243,7 +243,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "307";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "308";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -5470,7 +5470,7 @@ function genBindInteractive(node) {
       "<h3>Nothing invented, nothing auto-verified</h3>" +
       "<p>No discovery, date, biblical reference, manuscript identification, or citation is invented to fill a gap. Where adequate sources have not been found, the field stays blank and the entry stays Awaiting Review. Content drafted with AI assistance is never automatically marked verified — it earns Verified only after a source check, like any other entry.</p>" +
       "<h3>Coverage today</h3>" +
-      "<p>Of 24,018 database entries, 24 are Verified, 6 are Scholarly Debate, and 23,988 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
+      "<p>Of 24,033 database entries, 24 are Verified, 6 are Scholarly Debate, and 24,003 are Awaiting Review. The Verified entries are the Dead Sea Scrolls manuscripts audited field by field against DJD, Tov, and Ulrich in October 2026. The debated entries are the three manuscripts whose identification, dating, or provenance scholars dispute, and the three archaeological finds classed as Disputed evidence. Review continues entry by entry, and a status changes whenever new evidence or a correction warrants it.</p>" +
       "<p>Browse the lists: <a href='#/manuscripts'>Manuscripts</a> &middot; <a href='#/finds'>Ancient Discoveries</a></p>" +
       "<h3>Corrections</h3>" +
       "<p>Entries can be corrected and updated at any time. Corrections go through the site editor or through the site owner, and a corrected entry keeps its sources and review date visible so readers can see what changed and when it was last checked.</p>" +
@@ -6169,7 +6169,7 @@ function genBindInteractive(node) {
   /* ---------- The Havenbrook Chronicles (app-only fiction, v243) ----------
      Like Storybook: a custom section, NOT a COLLECTIONS entry — the
      fictional roster never enters the Bible reference totals (the
-     verification total stays 24,018) and gets no static pages or sitemap
+     verification total stays 24,033) and gets no static pages or sitemap
      entries. Data lives in content/havenbrook.json: series facts,
      families, teams, and the 88 characters (85 human + 3 animal).
      Connection strings resolve to roster characters by stripping
