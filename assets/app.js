@@ -243,7 +243,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "330";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "331";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3645,6 +3645,12 @@ function genBindInteractive(node) {
           "</div>";
         return html;
       }
+      function storeTrustHtml() {
+        return "<ul class='store-trust'>" +
+          "<li>Secure checkout — your card details go directly to Stripe</li>" +
+          "<li>Made to order — printed just for you, nothing warehoused</li>" +
+          "<li>30-day promise — damaged, defective or wrong? Reprint or full refund</li></ul>";
+      }
       function renderGrid() {
         var q = state.q.trim().toLowerCase();
         var filtered = products.filter(function (p) {
@@ -3658,6 +3664,26 @@ function genBindInteractive(node) {
           wrap.innerHTML = "<p class='empty'>Our shop is coming soon. Physical goods from our Printify store and printable downloads will be listed here as soon as they launch.</p>";
         } else if (!filtered.length) {
           wrap.innerHTML = "<p class='empty'>No products match your search.</p>";
+        } else if (products.length === 1) {
+          var p = filtered[0];
+          var feat = "<div class='store-featured'>";
+          feat += "<div class='store-featured-gallery'>";
+          if (p.images) feat += storeGalleryHtml(p);
+          else if (p.image) feat += "<img src='" + esc(p.image) + "' alt='" + esc(p.name) + "'>";
+          feat += "</div><div class='store-featured-info'>";
+          feat += "<h3>" + esc(p.name) + "</h3>";
+          feat += "<p><span class='chip'>" + esc(p.kind || "Physical") + "</span></p>";
+          if (p.price) feat += "<p class='price'>" + esc(p.price) + "</p>";
+          if (p.desc) feat += "<p class='snippet'>" + esc(p.desc) + "</p>";
+          if (p.checkout === "onsite") {
+            feat += "<p><a class='buy-btn' href='#' data-onsite-checkout='" + esc(p.name) + "'>Buy on this site</a></p>";
+            feat += "<p class='snippet'>or <a href='" + esc(p.url) + "'>buy on Printify</a></p>";
+          } else {
+            feat += "<p><a class='buy-btn' href='" + esc(p.url) + "'>Buy</a></p>";
+          }
+          feat += storeTrustHtml();
+          feat += "</div></div>";
+          wrap.innerHTML = feat;
         } else {
           wrap.innerHTML = "<div class='card-grid'>" + filtered.map(function (p) {
             var card = "<div class='card store-card'>";
@@ -3674,27 +3700,29 @@ function genBindInteractive(node) {
               card += "<p><a class='buy-btn' href='" + esc(p.url) + "'>Buy</a></p></div>";
             }
             return card;
-          }).join("") + "</div>";
+          }).join("") + "</div>" + storeTrustHtml();
         }
         if (typeof hacWireStoreButtons === "function") hacWireStoreButtons(products);
       }
-      var html = "<h2>Store</h2><div class='post-body'>" +
-        "<p>Beautiful, faith-anchored goods, made to order and shipped to you. " +
-        "Every physical item is printed on demand — nothing is mass-produced or warehoused — so your purchase supports this ministry " +
-        "and arrives made just for you. Digital items download instantly for you to print at home.</p>";
+      var html = "<div class='store-hero'><h2>Beautiful, faith-anchored goods</h2>" +
+        "<p>Every physical item is printed on demand — nothing is mass-produced or warehoused — so your purchase supports this ministry " +
+        "and arrives made just for you. Digital items download instantly for you to print at home.</p></div>" +
+        "<div class='post-body'>";
       html += "<p>Shipping, returns, and refunds: see our <a href='#/store-policies'>Store Policies</a>.</p>";
       if (STORE_URL) html += "<p><a class='btn' href='" + esc(STORE_URL) + "'>Visit our shop</a></p>";
       html += "<p><a class='btn' href='#/art'>Browse the art</a></p>";
       if (DIGITAL_SHOP_URL) html += "<p><a class='btn' href='" + esc(DIGITAL_SHOP_URL) + "' target='_blank' rel='noopener'>Browse digital downloads</a></p>";
-      html += '<div class="controls"><input type="search" id="storeSearch" placeholder="Search the store…">' +
+      if (products.length > 1) html += '<div class="controls"><input type="search" id="storeSearch" placeholder="Search the store…">' +
         '<div class="chips"><span class="chip-label">Type:</span>' +
         '<button class="chip active" data-kind="">All</button>' +
         '<button class="chip" data-kind="Physical">Physical</button>' +
-        '<button class="chip" data-kind="Digital">Digital</button></div></div>' +
-        '<div id="storeGrid"></div>';
+        '<button class="chip" data-kind="Digital">Digital</button></div></div>';
+      html += '<div id="storeGrid"></div>';
+      if (products.length) html += "<p class='store-coming'>More goods are on the way — new designs will appear here as they launch.</p>";
       app.innerHTML = html + "</div>";
       renderGrid();
-      document.getElementById("storeSearch").addEventListener("input", function (e) {
+      var searchEl = document.getElementById("storeSearch");
+      if (searchEl) searchEl.addEventListener("input", function (e) {
         state.q = e.target.value;
         renderGrid();
       });

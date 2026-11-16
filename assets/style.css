@@ -613,6 +613,9 @@ html[data-theme="dark"] .chip.active { background: var(--gold); color: #fff; }
 /* Other white pills in dark mode: store view thumbnails + voice select. */
 html[data-theme="dark"] .store-thumb { background: #132A4C; border-color: #2a3f66; }
 html[data-theme="dark"] .store-thumb.active { border-color: #e91e63; }
+html[data-theme="dark"] .store-hero { background: #0B203D; }
+html[data-theme="dark"] .store-featured { background: #132A4C; border-color: #2a3f66; }
+html[data-theme="dark"] .store-featured-info .price { color: #eef1f7; }
 html[data-theme="dark"] .audio-voice-select { background: #132A4C; color: #edf0f7; }
 /* More dropdown in dark mode (v297): the menu card goes dark navy. */
 html[data-theme="dark"] .nav-more-menu { background: #132A4C; border-color: #2a3f66; }
@@ -800,3 +803,18 @@ html[data-theme="dark"] .audio-bar { background: #132A4C; box-shadow: 0 8px 24px
 .store-thumb img { display: block; width: 100%; border-radius: 4px; }
 .store-thumb span { display: block; font-size: 11px; text-align: center; padding: 2px 0; }
 .store-thumb.active { border-color: #e91e63; }
+/* Store hero + featured product (v331). */
+.store-hero { background: var(--navy); border-radius: 16px; padding: 1.4rem 1.5rem; margin-bottom: 1.2rem; }
+.store-hero h2 { color: #fff; margin: 0 0 0.5rem; }
+.store-hero h2::after { content: ""; display: block; width: 64px; height: 4px; background: var(--gold); border-radius: 2px; margin-top: 0.5rem; }
+.store-hero p { color: #dfe3ee; margin: 0; }
+.store-featured { display: grid; grid-template-columns: 1fr; gap: 1.2rem; background: #fff; border: 1px solid #e5e7ef; border-radius: 16px; padding: 1.2rem; }
+@media (min-width: 700px) { .store-featured { grid-template-columns: 1fr 1fr; } }
+.store-featured-gallery .store-main-img { max-width: 100%; }
+.store-featured-info h3 { margin-top: 0; font-size: 1.35rem; }
+.store-featured-info .price { font-weight: 700; color: var(--navy); font-size: 1.25rem; margin: 0.4rem 0; }
+.store-featured-info .buy-btn { display: block; text-align: center; padding: 0.7rem 1.4rem; }
+.store-trust { list-style: none; padding: 0; margin: 1rem 0 0; }
+.store-trust li { padding: 0.3rem 0 0.3rem 1.6rem; position: relative; font-size: 0.92rem; color: var(--muted); }
+.store-trust li::before { content: "\2713"; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+.store-coming { text-align: center; color: var(--muted); margin-top: 1.4rem; }
