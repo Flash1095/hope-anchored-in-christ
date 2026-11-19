@@ -1,6 +1,6 @@
 /**
- * Hope Anchored in Christ — on-site Stripe checkout backend (DRAFT, not deployed)
- * -------------------------------------------------------------------------------
+ * Hope Anchored in Christ — on-site Stripe checkout backend
+ * ---------------------------------------------------------
  * Cloudflare Worker (free tier). One Worker, three routes:
  *
  *   GET  /config                -> Stripe publishable key + sellable catalog
@@ -23,9 +23,16 @@
  *   STRIPE_PUBLISHABLE_KEY  Stripe publishable key (pk_test_... / pk_live_...)
  *
  * Design notes:
- * - The server NEVER trusts an amount from the browser. Prices come from the
- *   CATALOG below (checked against the live Printify product on 2026-11-10);
- *   shipping comes from Printify's own quote for the buyer's address.
+ * - The server NEVER trusts an amount from the browser. Prices come LIVE
+ *   from Printify at checkout time (see fetchPrintifyProduct /
+ *   liveVariants): the variant's retail price, colour, size and
+ *   availability are read from the shop's own product data on every
+ *   checkout, so a price change or a new variant in Printify is picked
+ *   up with no code change. The only product data hardcoded here is the
+ *   list of Printify product ids this checkout is allowed to sell
+ *   (SELLABLE_PRODUCT_IDS) — the server must control which products can
+ *   be bought. Shipping comes from Printify's own quote for the buyer's
+ *   address.
  * - Orders are created in Printify with status "on-hold". They are NOT sent
  *   to production by this Worker. Whether they then wait for a human or go
  *   automatically is controlled by the shop's "Order approval" setting in
@@ -42,67 +49,17 @@
  */
 
 /* ------------------------------------------------------------------ */
-/* Catalog — ground truth from the live Printify product, 2026-11-10  */
-/* Product: "Look at the Birds of the Air Crewneck Sweatshirt"        */
-/* Printify product id 6af3e044b13d725413071601, provider 99,          */
-/* blueprint 49 (Gildan 18000). Prices are the RETAIL prices in       */
-/* cents, exactly as set in Printify. Only the 34 enabled + available */
-/* variants are listed. The 6 unavailable sizes (4XL/5XL in Sand,     */
-/* Light Pink, Light Blue) are deliberately absent and can never be    */
-/* sold through this checkout. If prices change in Printify, update    */
-/* this table to match BEFORE going live again.                        */
+/* Sellable products — the ONLY hardcoded product data left.           */
+/* One Printify product id per product the checkout may sell.          */
+/* Everything else — title, colours, sizes, prices, availability —    */
+/* comes live from Printify on every checkout (see liveVariants), so   */
+/* a price change or a new variant in Printify needs no code change.   */
+/* To sell a new product: add its Printify product id here (and its    */
+/* store.json entry on the site).                                      */
 /* ------------------------------------------------------------------ */
-const PRODUCT = {
-  printifyProductId: "6af3e044b13d725413071601",
-  title: "Look at the Birds of the Air Crewneck Sweatshirt",
-  providerId: 99,
-  blueprintId: 49,
-  image:
-    "https://images-api.printify.com/mockup/6af3e044b13d725413071601/25458/98502/look-at-the-birds-of-the-air-crewneck-sweatshirt.jpg?camera_label=front",
-};
-
-// variantId -> { color, size, priceCents }
-const CATALOG = {
-  // White — S to 5XL
-  25396: { color: "White", size: "S", priceCents: 3499 },
-  25427: { color: "White", size: "M", priceCents: 3499 },
-  25458: { color: "White", size: "L", priceCents: 3499 },
-  25489: { color: "White", size: "XL", priceCents: 3499 },
-  25520: { color: "White", size: "2XL", priceCents: 3499 },
-  25551: { color: "White", size: "3XL", priceCents: 4299 },
-  25582: { color: "White", size: "4XL", priceCents: 4599 },
-  25613: { color: "White", size: "5XL", priceCents: 4599 },
-  // Sport Grey — S to 5XL
-  25395: { color: "Sport Grey", size: "S", priceCents: 3499 },
-  25426: { color: "Sport Grey", size: "M", priceCents: 3499 },
-  25457: { color: "Sport Grey", size: "L", priceCents: 3499 },
-  25488: { color: "Sport Grey", size: "XL", priceCents: 3499 },
-  25519: { color: "Sport Grey", size: "2XL", priceCents: 3499 },
-  25550: { color: "Sport Grey", size: "3XL", priceCents: 4299 },
-  25581: { color: "Sport Grey", size: "4XL", priceCents: 4599 },
-  25612: { color: "Sport Grey", size: "5XL", priceCents: 4599 },
-  // Sand — S to 3XL only (provider does not stock 4XL/5XL)
-  25394: { color: "Sand", size: "S", priceCents: 3499 },
-  25425: { color: "Sand", size: "M", priceCents: 3499 },
-  25456: { color: "Sand", size: "L", priceCents: 3499 },
-  25487: { color: "Sand", size: "XL", priceCents: 3499 },
-  25518: { color: "Sand", size: "2XL", priceCents: 3499 },
-  25549: { color: "Sand", size: "3XL", priceCents: 4299 },
-  // Light Pink — S to 3XL only
-  25386: { color: "Light Pink", size: "S", priceCents: 3499 },
-  25417: { color: "Light Pink", size: "M", priceCents: 3499 },
-  25448: { color: "Light Pink", size: "L", priceCents: 3499 },
-  25479: { color: "Light Pink", size: "XL", priceCents: 3499 },
-  25510: { color: "Light Pink", size: "2XL", priceCents: 3499 },
-  25541: { color: "Light Pink", size: "3XL", priceCents: 4299 },
-  // Light Blue — S to 3XL only
-  25385: { color: "Light Blue", size: "S", priceCents: 3499 },
-  25416: { color: "Light Blue", size: "M", priceCents: 3499 },
-  25447: { color: "Light Blue", size: "L", priceCents: 3499 },
-  25478: { color: "Light Blue", size: "XL", priceCents: 3499 },
-  25509: { color: "Light Blue", size: "2XL", priceCents: 3499 },
-  25540: { color: "Light Blue", size: "3XL", priceCents: 4299 },
-};
+const SELLABLE_PRODUCT_IDS = [
+  "6af3e044b13d725413071601", // "Look at the Birds of the Air Crewneck Sweatshirt"
+];
 
 const MAX_QUANTITY = 10; // sanity cap per order
 const FLAT_SHIPPING_CENTS = 699; // fallback only, when Printify's quote fails
@@ -144,33 +101,147 @@ function errorResponse(request, status, message) {
 }
 
 /* ------------------------------------------------------------------ */
-/* GET /config                                                         */
+/* Printify: live product fetch + variant mapping                      */
+/* GET /v1/shops/{shop_id}/products/{product_id}.json                 */
+/* Printify requires a User-Agent header on every API request, and     */
+/* Workers' fetch sends none by default, so every Printify call in    */
+/* this file sets it.                                                  */
 /* ------------------------------------------------------------------ */
-function handleConfig(env) {
-  const variants = Object.keys(CATALOG)
-    .map(function (id) {
-      return {
-        variantId: Number(id),
-        color: CATALOG[id].color,
-        size: CATALOG[id].size,
-        priceCents: CATALOG[id].priceCents,
-      };
-    })
-    .sort(function (a, b) {
-      if (a.color !== b.color) return a.color < b.color ? -1 : 1;
-      return a.priceCents - b.priceCents || a.variantId - b.variantId;
+const PRINTIFY_USER_AGENT = "HopeAnchoredInChrist/1.0";
+
+/* Every outbound call gets a hard timeout: a hung provider must never
+   hold the checkout open. AbortController + setTimeout is used (not
+   AbortSignal.timeout) so the cutoff is explicit. Callers pass
+   timeoutMs inside the options object; it is stripped before fetch. */
+async function fetchWithTimeout(url, options) {
+  const ms = (options && options.timeoutMs) || 10000;
+  const opts = { ...options };
+  delete opts.timeoutMs;
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), ms);
+  try {
+    return await fetch(url, { ...opts, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/* Fetch one product live from Printify. Returns the product JSON, null
+   when Printify says it does not exist (404), and throws on a network /
+   timeout failure or any other non-OK status, so callers can tell
+   "gone" apart from "unreachable". */
+async function fetchPrintifyProduct(env, productId) {
+  const url =
+    "https://api.printify.com/v1/shops/" +
+    encodeURIComponent(env.PRINTIFY_SHOP_ID) +
+    "/products/" +
+    encodeURIComponent(productId) +
+    ".json";
+  const res = await fetchWithTimeout(url, {
+    timeoutMs: 10000,
+    headers: {
+      Authorization: "Bearer " + env.PRINTIFY_API_TOKEN,
+      "User-Agent": PRINTIFY_USER_AGENT,
+    },
+  });
+  if (res.status === 404) return null;
+  if (!res.ok) throw new Error("Printify product fetch HTTP " + res.status);
+  return res.json();
+}
+
+/* Sellable variants of a live Printify product, as
+   [{ variantId, color, size, priceCents }], sorted like the old catalog
+   (colour, then price, then id). Only variants that are enabled AND
+   available are listed — the same rule the old hardcoded catalog used.
+   A product's options list the size and colour values by id; each
+   variant names its two option ids. They are resolved by option TYPE,
+   not position, so a blueprint that orders them differently still
+   works. price is Printify's retail price, in integer cents. */
+function liveVariants(product) {
+  const byId = {};
+  (product.options || []).forEach(function (opt) {
+    (opt.values || []).forEach(function (v) {
+      byId[v.id] = { type: opt.type, title: v.title };
     });
-  return {
+  });
+  const out = [];
+  (product.variants || []).forEach(function (v) {
+    if (!v.is_enabled || !v.is_available) return;
+    if (!Number.isInteger(v.price)) return;
+    let color = null;
+    let size = null;
+    (v.options || []).forEach(function (id) {
+      const o = byId[id];
+      if (!o) return;
+      if (o.type === "color") color = o.title;
+      if (o.type === "size") size = o.title;
+    });
+    if (!color || !size) return; // a variant we cannot describe is not sold
+    out.push({
+      variantId: v.id,
+      color: color,
+      size: size,
+      priceCents: v.price,
+    });
+  });
+  out.sort(function (a, b) {
+    if (a.color !== b.color) return a.color < b.color ? -1 : 1;
+    return a.priceCents - b.priceCents || a.variantId - b.variantId;
+  });
+  return out;
+}
+
+/* One sellable variant of a live product, or null. */
+function liveVariant(product, variantId) {
+  const list = liveVariants(product);
+  for (const v of list) {
+    if (v.variantId === variantId) return v;
+  }
+  return null;
+}
+
+/* ------------------------------------------------------------------ */
+/* GET /config                                                         */
+/* Live from Printify: every sellable product with its current         */
+/* variants and prices. The legacy `product` / `variants` fields      */
+/* (first product only) stay so a browser running the previous         */
+/* checkout.js keeps working until the site push lands.                */
+/* ------------------------------------------------------------------ */
+async function handleConfig(request, env) {
+  const products = [];
+  for (const productId of SELLABLE_PRODUCT_IDS) {
+    let product;
+    try {
+      product = await fetchPrintifyProduct(env, productId);
+    } catch (e) {
+      continue; // unreachable product: leave it out rather than fail all
+    }
+    if (!product) continue; // deleted in Printify: not sold
+    const variants = liveVariants(product);
+    if (!variants.length) continue; // nothing sellable on it right now
+    products.push({
+      printifyProductId: product.id,
+      title: product.title,
+      image: (product.images && product.images[0] && product.images[0].src) || "",
+      variants: variants,
+    });
+  }
+  if (!products.length) {
+    return errorResponse(request, 502, "Could not reach the store. Please try again.");
+  }
+  const first = products[0];
+  return jsonResponse(request, {
     stripePublishableKey: env.STRIPE_PUBLISHABLE_KEY || "",
     product: {
-      printifyProductId: PRODUCT.printifyProductId,
-      title: PRODUCT.title,
-      image: PRODUCT.image,
+      printifyProductId: first.printifyProductId,
+      title: first.title,
+      image: first.image,
     },
-    variants: variants,
+    variants: first.variants,
+    products: products,
     maxQuantity: MAX_QUANTITY,
     currency: CURRENCY,
-  };
+  });
 }
 
 /* ------------------------------------------------------------------ */
@@ -178,7 +249,11 @@ function handleConfig(env) {
 /* ------------------------------------------------------------------ */
 function validateAddress(a) {
   if (!a || typeof a !== "object") return "Shipping address is missing.";
-  const need = ["firstName", "lastName", "email", "country", "address1", "city", "zip"];
+  const need = ["firstName", "lastName", "email", "country", "address1", "city", "zip", "phone"];
+  // Note: phone is required because Printify's shipping quote (and order
+  // creation) rejects an address without one — HTTP 400 "The address
+  // to.phone field is required." Without it every quote falls back to the
+  // flat $6.99 estimate and the store eats the real shipping cost.
   for (const key of need) {
     if (!a[key] || String(a[key]).trim() === "") return "Shipping field '" + key + "' is required.";
   }
@@ -218,29 +293,8 @@ function printifyAddress(a) {
 /* Body: { line_items, address_to } ->                                 */
 /*   { standard: { cost }, priority: {...}, express: {...}, ... }      */
 /* All costs are integer cents.                                        */
-/* Printify requires a User-Agent header on every API request, and     */
-/* Workers' fetch sends none by default, so every Printify call in    */
-/* this file sets it.                                                  */
 /* ------------------------------------------------------------------ */
-const PRINTIFY_USER_AGENT = "HopeAnchoredInChrist/1.0";
-
-/* Every outbound call gets a hard timeout: a hung provider must never
-   hold the checkout open. AbortController + setTimeout is used (not
-   AbortSignal.timeout) so the cutoff is explicit. Callers pass
-   timeoutMs inside the options object; it is stripped before fetch. */
-async function fetchWithTimeout(url, options) {
-  const ms = (options && options.timeoutMs) || 10000;
-  const opts = { ...options };
-  delete opts.timeoutMs;
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), ms);
-  try {
-    return await fetch(url, { ...opts, signal: controller.signal });
-  } finally {
-    clearTimeout(timer);
-  }
-}
-async function quoteShipping(env, variantId, quantity, address) {
+async function quoteShipping(env, productId, variantId, quantity, address) {
   const url =
     "https://api.printify.com/v1/shops/" +
     encodeURIComponent(env.PRINTIFY_SHOP_ID) +
@@ -258,7 +312,7 @@ async function quoteShipping(env, variantId, quantity, address) {
       body: JSON.stringify({
         line_items: [
           {
-            product_id: PRODUCT.printifyProductId,
+            product_id: productId,
             variant_id: variantId,
             quantity: quantity,
           },
@@ -296,14 +350,14 @@ async function quoteShipping(env, variantId, quantity, address) {
 /* ------------------------------------------------------------------ */
 /* Stripe: create a PaymentIntent (form-encoded, as Stripe expects)    */
 /* ------------------------------------------------------------------ */
-async function createPaymentIntent(env, amountCents, orderMeta) {
+async function createPaymentIntent(env, amountCents, orderMeta, productId, productTitle) {
   const body = new URLSearchParams();
   body.set("amount", String(amountCents));
   body.set("currency", CURRENCY);
   body.set("automatic_payment_methods[enabled]", "true");
-  body.set("description", PRODUCT.title + " — Hope Anchored in Christ");
+  body.set("description", productTitle + " — Hope Anchored in Christ");
   body.set("metadata[order]", JSON.stringify(orderMeta));
-  body.set("metadata[printify_product_id]", PRODUCT.printifyProductId);
+  body.set("metadata[printify_product_id]", productId);
   const res = await fetchWithTimeout("https://api.stripe.com/v1/payment_intents", {
     timeoutMs: 15000,
     method: "POST",
@@ -323,10 +377,10 @@ async function createPaymentIntent(env, amountCents, orderMeta) {
 
 /* ------------------------------------------------------------------ */
 /* POST /create-payment-intent                                         */
-/* Body: { variantId, quantity, address }                              */
-/* The amount is computed HERE from the server catalog + a live        */
-/* Printify shipping quote. Anything the browser sends about price     */
-/* is ignored.                                                         */
+/* Body: { productId, variantId, quantity, address }                   */
+/* The amount is computed HERE from a live Printify product lookup +   */
+/* a live Printify shipping quote. Anything the browser sends about    */
+/* price is ignored.                                                   */
 /* ------------------------------------------------------------------ */
 async function handleCreatePaymentIntent(request, env) {
   let body;
@@ -336,11 +390,15 @@ async function handleCreatePaymentIntent(request, env) {
     return errorResponse(request, 400, "Request body must be JSON.");
   }
 
-  const variantId = Number(body.variantId);
-  const item = CATALOG[variantId];
-  if (!item) {
-    return errorResponse(request, 400, "That color/size combination is not sold.");
+  // Which product: the browser sends the Printify product id from
+  // /config. An older browser that sends none gets the first sellable
+  // product, so the previous checkout.js keeps working until the site
+  // push lands.
+  const productId = body.productId ? String(body.productId) : SELLABLE_PRODUCT_IDS[0];
+  if (SELLABLE_PRODUCT_IDS.indexOf(productId) === -1) {
+    return errorResponse(request, 400, "That product is not sold here.");
   }
+  const variantId = Number(body.variantId);
   const quantity = Number(body.quantity);
   if (!Number.isInteger(quantity) || quantity < 1 || quantity > MAX_QUANTITY) {
     return errorResponse(request, 400, "Quantity must be between 1 and " + MAX_QUANTITY + ".");
@@ -349,6 +407,22 @@ async function handleCreatePaymentIntent(request, env) {
   if (addressError) return errorResponse(request, 400, addressError);
   const address = body.address;
 
+  // Live price + availability from Printify. An unknown or unavailable
+  // variant is refused outright.
+  let product;
+  try {
+    product = await fetchPrintifyProduct(env, productId);
+  } catch (e) {
+    return errorResponse(request, 502, "Could not reach the store. Please try again.");
+  }
+  if (!product) {
+    return errorResponse(request, 400, "That product is not sold here.");
+  }
+  const item = liveVariant(product, variantId);
+  if (!item) {
+    return errorResponse(request, 400, "That color/size combination is not sold.");
+  }
+
   const productCents = item.priceCents * quantity;
 
   // Live shipping quote from Printify for this exact order + address.
@@ -356,7 +430,7 @@ async function handleCreatePaymentIntent(request, env) {
   let shippingEstimated = false;
   let printifyStatus = null;
   try {
-    const quote = await quoteShipping(env, variantId, quantity, address);
+    const quote = await quoteShipping(env, productId, variantId, quantity, address);
     shippingCents = quote.cents;
     printifyStatus = quote.status;
   } catch (e) {
@@ -389,7 +463,7 @@ async function handleCreatePaymentIntent(request, env) {
 
   let pi;
   try {
-    pi = await createPaymentIntent(env, amountCents, orderMeta);
+    pi = await createPaymentIntent(env, amountCents, orderMeta, productId, product.title);
   } catch (e) {
     return errorResponse(request, 502, "Could not start the payment. Please try again.");
   }
@@ -497,7 +571,7 @@ async function setPaymentIntentMetadata(env, paymentIntentId, metadata) {
 /* for manual approval (or the shop's auto-approval setting — see      */
 /* README.md). No charge happens until it goes to production.          */
 /* ------------------------------------------------------------------ */
-async function createPrintifyOrder(env, paymentIntentId, orderMeta) {
+async function createPrintifyOrder(env, paymentIntentId, orderMeta, productId) {
   const url =
     "https://api.printify.com/v1/shops/" +
     encodeURIComponent(env.PRINTIFY_SHOP_ID) +
@@ -527,7 +601,7 @@ async function createPrintifyOrder(env, paymentIntentId, orderMeta) {
       label: "Hope Anchored — " + paymentIntentId,
       line_items: [
         {
-          product_id: PRODUCT.printifyProductId,
+          product_id: productId,
           variant_id: orderMeta.variant_id,
           quantity: orderMeta.qty,
         },
@@ -612,14 +686,38 @@ async function handleWebhook(request, env) {
     // Nothing sensible to retry: the PaymentIntent carries no order.
     return errorResponse(request, 400, "PaymentIntent has no order metadata.");
   }
-  if (!CATALOG[Number(orderMeta.variant_id)]) {
+
+  // The variant must still exist and be enabled in Printify — checked
+  // live, not against a table, so a product pulled from Printify after
+  // the payment cannot be ordered. A Printify outage here is a 502 so
+  // Stripe retries; a genuinely unknown variant is a 400 (no retry —
+  // the payment was taken and the order needs a human). Availability
+  // is deliberately NOT required here: the order creation itself is the
+  // real test, and stock can flicker between payment and delivery.
+  const webhookProductId = String(metadata.printify_product_id || "");
+  if (SELLABLE_PRODUCT_IDS.indexOf(webhookProductId) === -1) {
+    return errorResponse(request, 400, "PaymentIntent names a product that is not sold here.");
+  }
+  let liveProduct;
+  try {
+    liveProduct = await fetchPrintifyProduct(env, webhookProductId);
+  } catch (e) {
+    return errorResponse(request, 502, "Could not reach Printify. Stripe will retry.");
+  }
+  if (!liveProduct) {
+    return errorResponse(request, 400, "PaymentIntent names a product that is not sold here.");
+  }
+  const live = (liveProduct.variants || []).find(function (v) {
+    return v.id === Number(orderMeta.variant_id);
+  });
+  if (!live || !live.is_enabled) {
     return errorResponse(request, 400, "Order metadata names an unknown variant.");
   }
 
   const externalId = "hac-" + pi.id;
   let created;
   try {
-    created = await createPrintifyOrder(env, pi.id, orderMeta);
+    created = await createPrintifyOrder(env, pi.id, orderMeta, webhookProductId);
   } catch (e) {
     // Transient network failure — 502 so Stripe retries the delivery.
     return errorResponse(request, 502, "Could not reach Printify. Stripe will retry.");
@@ -667,7 +765,7 @@ export default {
     }
 
     if (url.pathname === "/config" && request.method === "GET") {
-      return jsonResponse(request, handleConfig(env));
+      return handleConfig(request, env);
     }
 
     if (url.pathname === "/create-payment-intent" && request.method === "POST") {

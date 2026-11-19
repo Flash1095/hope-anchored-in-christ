@@ -75,6 +75,7 @@ var HAC_COUNTRIES = [
 ];
 
 var hacConfig = null;   // the /config response, fetched once
+var hacVariants = []; // variants of the product in the current overlay (live from /config)
 var hacStripe = null;   // Stripe(publishableKey)
 var hacElements = null; // Stripe Elements for the current PaymentIntent
 var hacPaymentElement = null; // the mounted Payment Element (unmounted before re-mounting)
@@ -95,7 +96,7 @@ function hacFetchConfig(cb) {
 
 function hacSizesForColor(color) {
   var sizes = [];
-  hacConfig.variants.forEach(function (v) {
+  hacVariants.forEach(function (v) {
     if (v.color === color) sizes.push(v);
   });
   // S, M, L, XL, 2XL, 3XL, 4XL, 5XL order
@@ -106,7 +107,7 @@ function hacSizesForColor(color) {
 
 function hacVariantId(color, size) {
   var found = null;
-  hacConfig.variants.forEach(function (v) {
+  hacVariants.forEach(function (v) {
     if (v.color === color && v.size === size) found = v.variantId;
   });
   return found;
@@ -114,7 +115,7 @@ function hacVariantId(color, size) {
 
 function hacVariantPrice(color, size) {
   var price = 0;
-  hacConfig.variants.forEach(function (v) {
+  hacVariants.forEach(function (v) {
     if (v.color === color && v.size === size) price = v.priceCents;
   });
   return price;
@@ -140,8 +141,23 @@ function hacOpenCheckout(product, preferredColor) {
     hacStripe = Stripe(cfg.stripePublishableKey);
     hacCurrent = null;
 
+    /* Variants for THIS product: match the store.json product by title
+     * against the live /config list; fall back to the legacy single-
+     * product shape if the list is absent. The Printify product id goes
+     * to the Worker with the payment-intent request so it looks the
+     * price up live for exactly this product. */
+    var productEntry = null;
+    if (cfg.products) {
+      cfg.products.forEach(function (entry) {
+        if (entry.title === product.name) productEntry = entry;
+      });
+    }
+    var hacProductId = productEntry ? productEntry.printifyProductId : (cfg.product ? cfg.product.printifyProductId : null);
+    hacVariants = productEntry ? productEntry.variants : (cfg.variants || []);
+    if (!hacVariants.length) { alert("This item is not available right now. Please try again later, or use the Printify link below."); return; }
+
     var colors = [];
-    cfg.variants.forEach(function (v) {
+    hacVariants.forEach(function (v) {
       if (colors.indexOf(v.color) === -1) colors.push(v.color);
     });
 
@@ -178,7 +194,7 @@ function hacOpenCheckout(product, preferredColor) {
       "<p><input id='hacFirst' placeholder='First name' autocomplete='given-name'></p>" +
       "<p><input id='hacLast' placeholder='Last name' autocomplete='family-name'></p>" +
       "<p><input id='hacEmail' type='email' placeholder='Email (for your receipt)' autocomplete='email'></p>" +
-      "<p><input id='hacPhone' type='tel' placeholder='Phone (optional)' autocomplete='tel'></p>" +
+      "<p><input id='hacPhone' type='tel' placeholder='Phone (needed for shipping)' autocomplete='tel'></p>" +
       "<p><input id='hacAddress1' placeholder='Street address' autocomplete='address-line1'></p>" +
       "<p><input id='hacAddress2' placeholder='Apt / suite (optional)' autocomplete='address-line2'></p>" +
       "<p><input id='hacCity' placeholder='City' autocomplete='address-level2'> " +
@@ -305,7 +321,7 @@ function hacOpenCheckout(product, preferredColor) {
         if (pi && pi.status === "succeeded") {
           step3.innerHTML = "<h4>Thank you — your order is in!</h4>" +
             "<p>Your payment went through. Your receipt is on its way to " + hacEsc(address.email) + ".</p>" +
-            "<p>Your sweatshirt is made to order: we send it to the printer now, and it ships to " +
+            "<p>Your item is made to order: we send it to the printer now, and it ships to " +
             hacEsc(address.city) + ". We will email you when it is on its way.</p>" +
             "<p><button class='btn' id='hacDone' type='button'>Continue shopping</button></p>";
         } else {
@@ -341,7 +357,7 @@ function hacOpenCheckout(product, preferredColor) {
         zip: document.getElementById("hacZip").value.trim(),
         country: document.getElementById("hacCountry").value,
       };
-      var missing = ["firstName", "lastName", "email", "address1", "city", "zip"].filter(function (k) { return !address[k]; });
+      var missing = ["firstName", "lastName", "email", "phone", "address1", "city", "zip"].filter(function (k) { return !address[k]; });
       if (missing.length) { showError("Please fill in your name, email and full shipping address."); return; }
 
       var btn = document.getElementById("hacToPayment");
@@ -351,7 +367,7 @@ function hacOpenCheckout(product, preferredColor) {
       fetch(CHECKOUT_API_URL + "/create-payment-intent", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ variantId: variantId, quantity: qty, address: address }),
+        body: JSON.stringify({ productId: hacProductId, variantId: variantId, quantity: qty, address: address }),
       }).then(function (r) {
         return r.json().then(function (j) { return { ok: r.ok, body: j }; });
       }).then(function (res) {
