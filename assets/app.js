@@ -243,7 +243,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "353";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "354";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3934,6 +3934,11 @@ function genBindInteractive(node) {
              fetch below would loop forever. */
           if (detailLive.name !== p.name) detailLive = { name: p.name, loaded: false };
           refreshDetailOptions(p);
+          /* The headline price must follow the size the shopper picks —
+             without this the price stays at the first size's price even
+             when a dearer size (e.g. sweatshirt 3XL, $42.99) is chosen. */
+          var sizeEl0 = document.getElementById("detailSize");
+          if (sizeEl0) sizeEl0.addEventListener("change", function () { refreshDetailOptions(p); });
           /* Live colours, sizes and prices from /config. When they land,
              the gallery re-renders with the live swatches and the size
              + price refresh. Guarded against navigating away mid-load. */
