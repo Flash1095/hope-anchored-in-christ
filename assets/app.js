@@ -243,7 +243,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "342";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "344";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3598,20 +3598,33 @@ function genBindInteractive(node) {
      Decor, Accessories, Digital), price, desc, image (a URL, may be empty),
      url (the checkout link). The file starts empty on purpose: real products
      are added once the shops are set up, so the live page never shows fake
-     items. The grid paginates at 24 per page and the filters combine search +
-     category + type; sort is Newest (store.json order, newest first), price,
-     or name. */
+     items. Etsy-simple: the grid shows picture + title only; clicking a
+     card opens a detail view (#/store/<slug>) with the gallery, price,
+     description and buy buttons. The grid paginates at 24 per page and the
+     filters combine search + category + type; sort is Newest (store.json
+     order, newest first), price, or name. */
   /* Set to the Printify Pop-Up Store URL once Lorraine shares it. Empty means no shop button. */
   var STORE_URL = "https://hope-anchored-in-christ.printify.me/";
   /* Set to the Ko-fi shop URL once Lorraine shares it. Empty means no digital-shop button. */
   var DIGITAL_SHOP_URL = "";
   /* Set to the giving link (Ko-fi/PayPal/Stripe) once Lorraine shares it. Empty means coming soon. */
   var GIVE_URL = "";
-  function viewStore() {
+  function viewStore(detailSlug) {
     fetch("content/store.json?v=" + ASSET_V).then(function (r) {
       return r.ok ? r.json() : { products: [] };
     }).catch(function () { return { products: [] }; }).then(function (json) {
       var products = json.products || [];
+      /* Etsy-simple shareable address: #/store/<slug>. Slugs come from the
+         product name at runtime, so no new field is needed in store.json. */
+      function productSlug(p) {
+        return (p.name || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "product";
+      }
+      function productBySlug(slug) {
+        var found = null;
+        products.forEach(function (p) { if (!found && productSlug(p) === slug) found = p; });
+        return found;
+      }
+      var detailProduct = detailSlug ? productBySlug(detailSlug) : null;
       /* Category scheme lives in store.json ("categories") so Lorraine can
          rename or extend it without a code change; products without a
          category show under "Uncategorized". */
@@ -3738,28 +3751,13 @@ function genBindInteractive(node) {
           wrap.innerHTML = "<p class='empty'>Our shop is coming soon. Physical goods from our Printify store and printable downloads will be listed here as soon as they launch.</p>";
         } else if (!filtered.length) {
           wrap.innerHTML = "<p class='empty'>No products match — try a different search or category.</p>";
-        } else if (products.length === 1) {
-          var p = filtered[0];
-          var feat = "<div class='store-featured'>";
-          feat += "<div class='store-featured-gallery'>";
-          if (p.images) feat += storeGalleryHtml(p);
-          else if (p.image) feat += "<img src='" + esc(p.image) + "' alt='" + esc(p.name) + "'>";
-          feat += "</div><div class='store-featured-info'>";
-          feat += "<h3>" + esc(p.name) + "</h3>";
-          feat += "<p><span class='chip'>" + esc(p.kind || "Physical") + "</span></p>";
-          if (p.price) feat += "<p class='price'>" + esc(p.price) + "</p>";
-          if (p.desc) feat += "<p class='snippet'>" + esc(p.desc) + "</p>";
-          if (p.checkout === "onsite") {
-            feat += "<p><a class='buy-btn' href='#' data-onsite-checkout='" + esc(p.name) + "'>Buy on this site</a></p>";
-            feat += "<p class='snippet'>or <a href='" + esc(p.url) + "'>buy on Printify</a></p>";
-          } else {
-            feat += "<p><a class='buy-btn' href='" + esc(p.url) + "'>Buy</a></p>";
-          }
-          feat += storeTrustHtml();
-          feat += "</div></div>";
-          wrap.innerHTML = feat;
         } else {
-          var countLine = "<p class='store-count'>Showing " + (sorted.length ? (start + 1) : 0) + "–" + Math.min(start + PAGE_SIZE, sorted.length) + " of " + sorted.length + " product" + (sorted.length === 1 ? "" : "s") + "</p>";
+          /* Etsy-simple: picture + title only. Everything else lives on
+             the product's detail view (#/store/<slug>). */
+          var countLine = "";
+          if (sorted.length > 1) {
+            countLine = "<p class='store-count'>Showing " + (start + 1) + "–" + Math.min(start + PAGE_SIZE, sorted.length) + " of " + sorted.length + " product" + (sorted.length === 1 ? "" : "s") + "</p>";
+          }
           var pager = "";
           if (pages > 1) {
             pager = "<div class='store-pager'>" +
@@ -3769,22 +3767,42 @@ function genBindInteractive(node) {
               "</div>";
           }
           wrap.innerHTML = countLine + "<div class='card-grid'>" + pageItems.map(function (p) {
-            var card = "<div class='card store-card'>";
-            if (p.images) card += storeGalleryHtml(p);
-            else if (p.image) card += "<img src='" + esc(p.image) + "' alt='" + esc(p.name) + "'>";
-            card += "<h3>" + esc(p.name) + "</h3>";
-            card += "<p><span class='chip'>" + esc(p.kind || "Physical") + "</span></p>";
-            if (p.price) card += "<p class='price'>" + esc(p.price) + "</p>";
-            if (p.desc) card += "<p class='snippet'>" + esc(p.desc) + "</p>";
-            if (p.checkout === "onsite") {
-              card += "<p><a class='buy-btn' href='#' data-onsite-checkout='" + esc(p.name) + "'>Buy on this site</a></p>";
-              card += "<p class='snippet'>or <a href='" + esc(p.url) + "'>buy on Printify</a></p></div>";
-            } else {
-              card += "<p><a class='buy-btn' href='" + esc(p.url) + "'>Buy</a></p></div>";
-            }
-            return card;
-          }).join("") + "</div>" + pager + storeTrustHtml();
+            var imgSrc = p.image || gallerySrc(p, (productColors(p)[0] || "White"), "front");
+            return "<article class='card store-card store-simple-card'>" +
+              "<a class='store-simple-link' href='#/store/" + esc(productSlug(p)) + "'>" +
+              "<img src='" + esc(imgSrc) + "' alt='" + esc(p.name) + "'>" +
+              "<h3>" + esc(p.name) + "</h3></a></article>";
+          }).join("") + "</div>" + pager;
         }
+        if (typeof hacWireStoreButtons === "function") hacWireStoreButtons(products);
+      }
+      /* Product detail view: back link, gallery, title, price, full
+         description, buy buttons, trust lines. Rendered inside #storeGrid
+         so the gallery click handler below keeps working; the outer
+         .store-card class lets the checkout pick up the colour the buyer
+         is viewing (see hacWireStoreButtons). */
+      function renderDetail(p) {
+        var wrap = document.getElementById("storeGrid");
+        if (!wrap) return;
+        var html = "<p class='store-back'><a href='#/store'>&larr; Back to the store</a></p>";
+        html += "<div class='store-featured store-card'>";
+        html += "<div class='store-featured-gallery'>";
+        if (p.images) html += storeGalleryHtml(p);
+        else if (p.image) html += "<img src='" + esc(p.image) + "' alt='" + esc(p.name) + "'>";
+        html += "</div><div class='store-featured-info'>";
+        html += "<h3>" + esc(p.name) + "</h3>";
+        html += "<p><span class='chip'>" + esc(p.kind || "Physical") + "</span></p>";
+        if (p.price) html += "<p class='price'>" + esc(p.price) + "</p>";
+        if (p.desc) html += "<p class='snippet'>" + esc(p.desc) + "</p>";
+        if (p.checkout === "onsite") {
+          html += "<p><a class='buy-btn' href='#' data-onsite-checkout='" + esc(p.name) + "'>Buy on this site</a></p>";
+          html += "<p class='snippet'>or <a href='" + esc(p.url) + "'>buy on Printify</a></p>";
+        } else {
+          html += "<p><a class='buy-btn' href='" + esc(p.url) + "'>Buy</a></p>";
+        }
+        html += storeTrustHtml();
+        html += "</div></div>";
+        wrap.innerHTML = html;
         if (typeof hacWireStoreButtons === "function") hacWireStoreButtons(products);
       }
       function pageNumbersHtml(page, pages) {
@@ -3815,7 +3833,7 @@ function genBindInteractive(node) {
       if (STORE_URL) html += "<p><a class='btn' href='" + esc(STORE_URL) + "'>Visit our shop</a></p>";
       html += "<p><a class='btn' href='#/art'>Browse the art</a></p>";
       if (DIGITAL_SHOP_URL) html += "<p><a class='btn' href='" + esc(DIGITAL_SHOP_URL) + "' target='_blank' rel='noopener'>Browse digital downloads</a></p>";
-      if (products.length > 1) html += '<div class="controls"><input type="search" id="storeSearch" placeholder="Search the store…">' +
+      if (!detailProduct && products.length > 1) html += '<div class="controls"><input type="search" id="storeSearch" placeholder="Search the store…">' +
         '<label class="store-sort">Sort: <select id="storeSort">' +
         '<option value="newest">Newest</option>' +
         '<option value="price-asc">Price: low to high</option>' +
@@ -3830,7 +3848,8 @@ function genBindInteractive(node) {
       html += '<div id="storeGrid"></div>';
       if (products.length) html += "<p class='store-coming'>More goods are on the way — new designs will appear here as they launch.</p>";
       app.innerHTML = html + "</div>";
-      renderGrid();
+      if (detailProduct) renderDetail(detailProduct);
+      else renderGrid();
       var searchEl = document.getElementById("storeSearch");
       if (searchEl) searchEl.addEventListener("input", function (e) {
         state.q = e.target.value;
@@ -6795,7 +6814,7 @@ function genBindInteractive(node) {
     }
     if (path[0] === "blog") return viewBlog(path[1] ? decodeURIComponent(path[1]) : null, params);
     if (path[0] === "about") return viewAbout();
-    if (path[0] === "store") return viewStore();
+    if (path[0] === "store") return viewStore(path[1] ? decodeURIComponent(path[1]) : null);
     if (path[0] === "store-policies") return viewStorePolicies();
     if (path[0] === "connect") return viewConnect();
     if (path[0] === "give") return viewGive();

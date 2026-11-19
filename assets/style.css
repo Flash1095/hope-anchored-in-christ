@@ -826,3 +826,8 @@ html[data-theme="dark"] .audio-bar { background: #132A4C; box-shadow: 0 8px 24px
 .store-pager .btn:disabled { opacity: 0.45; cursor: default; }
 .store-page-ellipsis { color: var(--muted); padding: 0 0.2rem; }
 html[data-theme="dark"] .store-sort select { background: #132A4C; color: #edf0f7; }
+/* Etsy-simple store cards: picture + title only, the whole card links to
+   the product's detail view. */
+.store-simple-link { display: block; color: inherit; text-decoration: none; }
+.store-simple-link h3 { margin: 0.4rem 0 0; }
+.store-back { margin: 0 0 1rem; }
