@@ -59,7 +59,7 @@
 /* ------------------------------------------------------------------ */
 const SELLABLE_PRODUCT_IDS = [
   "6af3e044b13d725413071601", // "Look at the Birds of the Air Crewneck Sweatshirt"
-  "6afd1249c1a507984e0cf7c6", // "My Identity Is in Christ Christian Faith T-Shirt"
+  "6aff566d0e0ec6c28205ccf1", // "My Identity Is in Christ Christian Faith T-Shirt"
 ];
 
 const MAX_QUANTITY = 10; // sanity cap per order
