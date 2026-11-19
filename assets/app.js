@@ -243,7 +243,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "348";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "349";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3677,7 +3677,12 @@ function genBindInteractive(node) {
         var views = GALLERY_VIEWS.slice();
         var hasLifestyle = !!(p.images && p.images.lifestyle);
         if (hasLifestyle) views.unshift({ key: "lifestyle", label: "Lifestyle" });
-        var st = galleryState[p.name] || (galleryState[p.name] = { color: colors[0] || "White", view: hasLifestyle ? "lifestyle" : "front" });
+        /* The lifestyle photo shows the white tee, so a product that has
+           one opens on White — otherwise the caption (and the checkout's
+           default colour) would name a colour the photo doesn't show. */
+        var defaultColor = colors[0] || "White";
+        if (hasLifestyle && colors.indexOf("White") !== -1) defaultColor = "White";
+        var st = galleryState[p.name] || (galleryState[p.name] = { color: defaultColor, view: hasLifestyle ? "lifestyle" : "front" });
         var html = "<div class='store-gallery' data-gallery='" + esc(p.name) + "'>" +
           "<img class='store-main-img' src='" + esc(gallerySrc(p, st.color, st.view)) + "' alt='" + esc(p.name) + "'>" +
           "<p class='store-gallery-caption'>" + esc(st.color) + " — " + esc(galleryViewLabel(st.view)) + "</p>" +
