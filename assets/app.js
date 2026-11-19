@@ -243,7 +243,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "346";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "347";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3756,8 +3756,10 @@ function genBindInteractive(node) {
         } else if (!filtered.length) {
           wrap.innerHTML = "<p class='empty'>No products match — try a different search or category.</p>";
         } else {
-          /* Etsy-simple: picture + title only. Everything else lives on
-             the product's detail view (#/store/<slug>). */
+          /* Reference-shop cards: picture + title + real price + a
+             "Find your color & size" link to the detail view. No
+             invented sale prices or best-seller badges — only the
+             product's real price shows. */
           var countLine = "";
           if (sorted.length > 1) {
             countLine = "<p class='store-count'>Showing " + (start + 1) + "–" + Math.min(start + PAGE_SIZE, sorted.length) + " of " + sorted.length + " product" + (sorted.length === 1 ? "" : "s") + "</p>";
@@ -3770,12 +3772,16 @@ function genBindInteractive(node) {
               "<button type='button' class='btn' data-store-page='" + (state.page + 1) + "'" + (state.page >= pages ? " disabled" : "") + ">Next &rarr;</button>" +
               "</div>";
           }
-          wrap.innerHTML = countLine + "<div class='card-grid'>" + pageItems.map(function (p) {
+          wrap.innerHTML = countLine + "<div class='card-grid store-grid'>" + pageItems.map(function (p) {
             var imgSrc = p.image || gallerySrc(p, (productColors(p)[0] || "White"), "front");
-            return "<article class='card store-card store-simple-card'>" +
-              "<a class='store-simple-link' href='#/store/" + esc(productSlug(p)) + "'>" +
-              "<img src='" + esc(imgSrc) + "' alt='" + esc(p.name) + "'>" +
-              "<h3>" + esc(p.name) + "</h3></a></article>";
+            var detailHref = "#/store/" + esc(productSlug(p));
+            var card = "<article class='card store-card store-simple-card'>" +
+              "<a class='store-simple-link' href='" + detailHref + "'>" +
+              "<img src='" + esc(imgSrc) + "' alt='" + esc(p.name) + "'></a>" +
+              "<h3>" + esc(p.name) + "</h3>";
+            if (p.price) card += "<p class='price'>" + esc(p.price) + "</p>";
+            card += "<p class='store-find-size'><a href='" + detailHref + "'>Find your color &amp; size &nearr;</a></p></article>";
+            return card;
           }).join("") + "</div>" + pager;
         }
         if (typeof hacWireStoreButtons === "function") hacWireStoreButtons(products);
@@ -6810,6 +6816,7 @@ function genBindInteractive(node) {
     var path = parts[0].split("/").filter(Boolean);
     var params = new URLSearchParams(parts[1] || "");
     document.body.classList.toggle("is-home", path.length === 0);
+    document.body.classList.toggle("is-store", path[0] === "store");
     if (path.length === 0) return viewHome();
     if (path[0] === "explore") { location.hash = "#/library"; return; }
     if (path[0] === "library") {

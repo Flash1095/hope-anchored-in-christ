@@ -831,3 +831,22 @@ html[data-theme="dark"] .store-sort select { background: #132A4C; color: #edf0f7
 .store-simple-link { display: block; color: inherit; text-decoration: none; }
 .store-simple-link h3 { margin: 0.4rem 0 0; }
 .store-back { margin: 0 0 1rem; }
+/* Reference-shop store look (Lorraine 2026-11-18): warm cream page,
+   bare two-column product cards with the real price and a "Find your
+   color & size" link under each title. */
+body.is-store { background: #f6f1e7; }
+body.is-store .store-hero { background: transparent; }
+body.is-store .store-hero h2 { color: var(--navy); }
+body.is-store .store-hero p { color: var(--ink); }
+.store-simple-card { background: transparent; border: none; box-shadow: none; padding: 0; }
+.store-simple-card:hover { box-shadow: none; transform: none; }
+.store-simple-card h3 { font-size: 1.05rem; margin: 0.5rem 0 0.2rem; }
+.store-simple-card .price { margin: 0.1rem 0 0.3rem; }
+.store-find-size { margin: 0; font-size: 0.95rem; }
+.store-find-size a { text-decoration: underline; }
+@media (max-width: 700px) {
+  .card-grid.store-grid { grid-template-columns: repeat(2, 1fr); gap: 0.9rem; }
+}
+html[data-theme="dark"] body.is-store { background: #0B203D; }
+html[data-theme="dark"] body.is-store .store-hero h2 { color: #eef1f7; }
+html[data-theme="dark"] body.is-store .store-hero p { color: #dfe3ee; }
