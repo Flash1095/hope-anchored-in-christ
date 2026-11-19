@@ -243,7 +243,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "341";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "342";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3593,10 +3593,14 @@ function genBindInteractive(node) {
   /* ---------- store ---------- */
   /* Store products live in content/store.json (Decap-editable), so new items
      appear without a code change. Each product: name, kind ("Physical" for
-     Printify goods, "Digital" for Ko-fi downloads), price, desc, image (a URL,
-     may be empty), url (the checkout link). The file starts empty on purpose:
-     real products are added once the shops are set up, so the live page never
-     shows fake items. */
+     Printify goods, "Digital" for Ko-fi downloads), category (see the
+     "categories" list in store.json — Apparel, Drinkware, Stickers, Home &
+     Decor, Accessories, Digital), price, desc, image (a URL, may be empty),
+     url (the checkout link). The file starts empty on purpose: real products
+     are added once the shops are set up, so the live page never shows fake
+     items. The grid paginates at 24 per page and the filters combine search +
+     category + type; sort is Newest (store.json order, newest first), price,
+     or name. */
   /* Set to the Printify Pop-Up Store URL once Lorraine shares it. Empty means no shop button. */
   var STORE_URL = "https://hope-anchored-in-christ.printify.me/";
   /* Set to the Ko-fi shop URL once Lorraine shares it. Empty means no digital-shop button. */
@@ -3608,8 +3612,12 @@ function genBindInteractive(node) {
       return r.ok ? r.json() : { products: [] };
     }).catch(function () { return { products: [] }; }).then(function (json) {
       var products = json.products || [];
-      var state = { q: "", kind: "" };
-      var GALLERY_COLORS = ["White", "Sand", "Light Pink", "Light Blue", "Sport Grey"];
+      /* Category scheme lives in store.json ("categories") so Lorraine can
+         rename or extend it without a code change; products without a
+         category show under "Uncategorized". */
+      var STORE_CATEGORIES = (json.categories && json.categories.length ? json.categories : ["Apparel", "Drinkware", "Stickers", "Home & Decor", "Accessories", "Digital"]).slice();
+      var PAGE_SIZE = 24;
+      var state = { q: "", kind: "", category: "", sort: "newest", page: 1 };
       var GALLERY_VIEWS = [
         { key: "front", label: "Front" },
         { key: "back", label: "Back" },
@@ -3617,8 +3625,19 @@ function genBindInteractive(node) {
         { key: "styled", label: "Styled" },
         { key: "sizeChart", label: "Size chart" }
       ];
-      var GALLERY_SWATCH = { "White": "#ffffff", "Sand": "#e6d3b3", "Light Pink": "#f6d3d8", "Light Blue": "#cfe3f5", "Sport Grey": "#b9bec4" };
+      /* Swatch hexes per colour; unknown colours fall back to a neutral in
+         storeGalleryHtml, so a new product's colours never break the gallery. */
+      var GALLERY_SWATCH = { "White": "#ffffff", "Sand": "#e6d3b3", "Light Pink": "#f6d3d8", "Light Blue": "#cfe3f5", "Sport Grey": "#b9bec4", "Carolina Blue": "#7aa7d9", "Coral Silk": "#f08a76", "Orange": "#e67e22", "Mint Green": "#a3e6b5", "Violet": "#8a7fd6" };
       var galleryState = {}; // product name -> { color, view }
+      function productCategory(p) { return p.category || "Uncategorized"; }
+      function productPrice(p) {
+        var m = (p.price || "").match(/\$([\d,]+(?:\.\d+)?)/);
+        return m ? parseFloat(m[1].replace(/,/g, "")) : null;
+      }
+      function productColors(p) {
+        if (!p.images) return [];
+        return Object.keys(p.images).filter(function (k) { return k !== "sizeChart"; });
+      }
       function galleryViewLabel(key) {
         var label = key;
         GALLERY_VIEWS.forEach(function (vw) { if (vw.key === key) label = vw.label; });
@@ -3631,13 +3650,15 @@ function genBindInteractive(node) {
         return (byColor && byColor[view]) || p.image || "";
       }
       function storeGalleryHtml(p) {
-        var st = galleryState[p.name] || (galleryState[p.name] = { color: "White", view: "front" });
+        /* Swatch colours come from this product's own images, so a product
+           with different colours (e.g. the tee's 9) just works. */
+        var colors = productColors(p);
+        var st = galleryState[p.name] || (galleryState[p.name] = { color: colors[0] || "White", view: "front" });
         var html = "<div class='store-gallery' data-gallery='" + esc(p.name) + "'>" +
           "<img class='store-main-img' src='" + esc(gallerySrc(p, st.color, st.view)) + "' alt='" + esc(p.name) + "'>" +
           "<p class='store-gallery-caption'>" + esc(st.color) + " — " + esc(galleryViewLabel(st.view)) + "</p>" +
-          "<div class='store-swatches'>" + GALLERY_COLORS.map(function (c) {
-            if (!p.images[c]) return "";
-            return "<button type='button' class='store-swatch" + (c === st.color ? " active" : "") + "' data-gallery-color='" + esc(c) + "' style='background:" + GALLERY_SWATCH[c] + "' title='" + esc(c) + "' aria-label='Show " + esc(c) + "'></button>";
+          "<div class='store-swatches'>" + colors.map(function (c) {
+            return "<button type='button' class='store-swatch" + (c === st.color ? " active" : "") + "' data-gallery-color='" + esc(c) + "' style='background:" + (GALLERY_SWATCH[c] || "#ddd6c8") + "' title='" + esc(c) + "' aria-label='Show " + esc(c) + "'></button>";
           }).join("") + "</div>" +
           "<div class='store-thumbs'>" + GALLERY_VIEWS.map(function (vw) {
             return "<button type='button' class='store-thumb" + (vw.key === st.view ? " active" : "") + "' data-gallery-view='" + vw.key + "'><img src='" + esc(gallerySrc(p, st.color, vw.key)) + "' alt='" + esc(vw.label) + "'><span>" + esc(vw.label) + "</span></button>";
@@ -3653,17 +3674,70 @@ function genBindInteractive(node) {
       }
       function renderGrid() {
         var q = state.q.trim().toLowerCase();
-        var filtered = products.filter(function (p) {
+        /* Base set for the category counts: search + type, before the
+           category filter, so each chip says how many items picking it shows. */
+        var base = products.filter(function (p) {
           if (state.kind && p.kind !== state.kind) return false;
           if (!q) return true;
           return ((p.name || "") + " " + (p.desc || "")).toLowerCase().indexOf(q) !== -1;
         });
+        var counts = {};
+        base.forEach(function (p) {
+          var c = productCategory(p);
+          counts[c] = (counts[c] || 0) + 1;
+        });
+        /* Chip order follows the store.json scheme, then any other category
+           found on a product, then Uncategorized. */
+        var cats = STORE_CATEGORIES.filter(function (c) { return counts[c]; });
+        Object.keys(counts).forEach(function (c) {
+          if (STORE_CATEGORIES.indexOf(c) === -1 && c !== "Uncategorized") cats.push(c);
+        });
+        if (counts["Uncategorized"]) cats.push("Uncategorized");
+        var chipsEl = document.getElementById("storeCategoryChips");
+        if (chipsEl) {
+          chipsEl.innerHTML = "<span class='chip-label'>Category:</span>" +
+            "<button class='chip" + (state.category === "" ? " active" : "") + "' data-category=''>All (" + base.length + ")</button>" +
+            cats.map(function (c) {
+              return "<button class='chip" + (state.category === c ? " active" : "") + "' data-category='" + esc(c) + "'>" + esc(c) + " (" + counts[c] + ")</button>";
+            }).join("");
+        }
+        var filtered = base.filter(function (p) {
+          return !state.category || productCategory(p) === state.category;
+        });
+        var sorted = filtered.slice();
+        if (state.sort === "price-asc") {
+          sorted.sort(function (a, b) {
+            var pa = productPrice(a), pb = productPrice(b);
+            if (pa === null && pb === null) return 0;
+            if (pa === null) return 1;
+            if (pb === null) return -1;
+            return pa - pb;
+          });
+        } else if (state.sort === "price-desc") {
+          sorted.sort(function (a, b) {
+            var pa = productPrice(a), pb = productPrice(b);
+            if (pa === null && pb === null) return 0;
+            if (pa === null) return 1;
+            if (pb === null) return -1;
+            return pb - pa;
+          });
+        } else if (state.sort === "name") {
+          sorted.sort(function (a, b) { return (a.name || "").localeCompare(b.name || ""); });
+        } else {
+          /* Newest: store.json is oldest first, so reverse it. */
+          sorted.reverse();
+        }
+        var pages = Math.max(1, Math.ceil(sorted.length / PAGE_SIZE));
+        if (state.page > pages) state.page = pages;
+        if (state.page < 1) state.page = 1;
+        var start = (state.page - 1) * PAGE_SIZE;
+        var pageItems = sorted.slice(start, start + PAGE_SIZE);
         var wrap = document.getElementById("storeGrid");
         if (!wrap) return;
         if (!products.length) {
           wrap.innerHTML = "<p class='empty'>Our shop is coming soon. Physical goods from our Printify store and printable downloads will be listed here as soon as they launch.</p>";
         } else if (!filtered.length) {
-          wrap.innerHTML = "<p class='empty'>No products match your search.</p>";
+          wrap.innerHTML = "<p class='empty'>No products match — try a different search or category.</p>";
         } else if (products.length === 1) {
           var p = filtered[0];
           var feat = "<div class='store-featured'>";
@@ -3685,7 +3759,16 @@ function genBindInteractive(node) {
           feat += "</div></div>";
           wrap.innerHTML = feat;
         } else {
-          wrap.innerHTML = "<div class='card-grid'>" + filtered.map(function (p) {
+          var countLine = "<p class='store-count'>Showing " + (sorted.length ? (start + 1) : 0) + "–" + Math.min(start + PAGE_SIZE, sorted.length) + " of " + sorted.length + " product" + (sorted.length === 1 ? "" : "s") + "</p>";
+          var pager = "";
+          if (pages > 1) {
+            pager = "<div class='store-pager'>" +
+              "<button type='button' class='btn' data-store-page='" + (state.page - 1) + "'" + (state.page <= 1 ? " disabled" : "") + ">&larr; Prev</button>" +
+              pageNumbersHtml(state.page, pages) +
+              "<button type='button' class='btn' data-store-page='" + (state.page + 1) + "'" + (state.page >= pages ? " disabled" : "") + ">Next &rarr;</button>" +
+              "</div>";
+          }
+          wrap.innerHTML = countLine + "<div class='card-grid'>" + pageItems.map(function (p) {
             var card = "<div class='card store-card'>";
             if (p.images) card += storeGalleryHtml(p);
             else if (p.image) card += "<img src='" + esc(p.image) + "' alt='" + esc(p.name) + "'>";
@@ -3700,9 +3783,29 @@ function genBindInteractive(node) {
               card += "<p><a class='buy-btn' href='" + esc(p.url) + "'>Buy</a></p></div>";
             }
             return card;
-          }).join("") + "</div>" + storeTrustHtml();
+          }).join("") + "</div>" + pager + storeTrustHtml();
         }
         if (typeof hacWireStoreButtons === "function") hacWireStoreButtons(products);
+      }
+      function pageNumbersHtml(page, pages) {
+        /* Compact window: first page, last page, and up to one either side of
+           the current page, with an ellipsis where pages are skipped. */
+        var nums = [];
+        function push(n) { if (nums.indexOf(n) === -1) nums.push(n); }
+        push(1);
+        if (page - 1 > 1) push(page - 1);
+        if (page !== 1 && page !== pages) push(page);
+        if (page + 1 < pages) push(page + 1);
+        push(pages);
+        nums.sort(function (a, b) { return a - b; });
+        var html = "";
+        var prev = 0;
+        nums.forEach(function (n) {
+          if (prev && n - prev > 1) html += "<span class='store-page-ellipsis'>…</span>";
+          html += "<button type='button' class='chip" + (n === page ? " active" : "") + "' data-store-page='" + n + "' aria-label='Page " + n + "'>" + n + "</button>";
+          prev = n;
+        });
+        return html;
       }
       var html = "<div class='store-hero'><h2>Beautiful, faith-anchored goods</h2>" +
         "<p>Every physical item is printed on demand — nothing is mass-produced or warehoused — so your purchase supports this ministry " +
@@ -3713,6 +3816,13 @@ function genBindInteractive(node) {
       html += "<p><a class='btn' href='#/art'>Browse the art</a></p>";
       if (DIGITAL_SHOP_URL) html += "<p><a class='btn' href='" + esc(DIGITAL_SHOP_URL) + "' target='_blank' rel='noopener'>Browse digital downloads</a></p>";
       if (products.length > 1) html += '<div class="controls"><input type="search" id="storeSearch" placeholder="Search the store…">' +
+        '<label class="store-sort">Sort: <select id="storeSort">' +
+        '<option value="newest">Newest</option>' +
+        '<option value="price-asc">Price: low to high</option>' +
+        '<option value="price-desc">Price: high to low</option>' +
+        '<option value="name">Name A–Z</option>' +
+        '</select></label>' +
+        '<div class="chips" id="storeCategoryChips"></div>' +
         '<div class="chips"><span class="chip-label">Type:</span>' +
         '<button class="chip active" data-kind="">All</button>' +
         '<button class="chip" data-kind="Physical">Physical</button>' +
@@ -3724,11 +3834,27 @@ function genBindInteractive(node) {
       var searchEl = document.getElementById("storeSearch");
       if (searchEl) searchEl.addEventListener("input", function (e) {
         state.q = e.target.value;
+        state.page = 1;
+        renderGrid();
+      });
+      var sortEl = document.getElementById("storeSort");
+      if (sortEl) sortEl.addEventListener("change", function (e) {
+        state.sort = e.target.value;
+        state.page = 1;
+        renderGrid();
+      });
+      var catEl = document.getElementById("storeCategoryChips");
+      if (catEl) catEl.addEventListener("click", function (e) {
+        var btn = e.target.closest ? e.target.closest("[data-category]") : null;
+        if (!btn) return;
+        state.category = btn.getAttribute("data-category");
+        state.page = 1;
         renderGrid();
       });
       app.querySelectorAll("[data-kind]").forEach(function (btn) {
         btn.addEventListener("click", function () {
           state.kind = btn.getAttribute("data-kind");
+          state.page = 1;
           btn.parentNode.querySelectorAll("[data-kind]").forEach(function (b) {
             b.classList.toggle("active", b.getAttribute("data-kind") === state.kind);
           });
@@ -3737,6 +3863,17 @@ function genBindInteractive(node) {
       });
       document.getElementById("storeGrid").addEventListener("click", function (e) {
         var t = e.target;
+        var pageBtn = t.closest ? t.closest("[data-store-page]") : null;
+        if (pageBtn) {
+          var np = parseInt(pageBtn.getAttribute("data-store-page"), 10);
+          if (!isNaN(np)) {
+            state.page = np;
+            renderGrid();
+            var grid = document.getElementById("storeGrid");
+            if (grid && grid.scrollIntoView) grid.scrollIntoView();
+          }
+          return;
+        }
         var colorBtn = t.closest ? t.closest("[data-gallery-color]") : null;
         var viewBtn = t.closest ? t.closest("[data-gallery-view]") : null;
         if (!colorBtn && !viewBtn) return;
@@ -3746,7 +3883,7 @@ function genBindInteractive(node) {
         var p = null;
         products.forEach(function (it) { if (it.name === name) p = it; });
         if (!p || !p.images) return;
-        var st = galleryState[name] || (galleryState[name] = { color: "White", view: "front" });
+        var st = galleryState[name] || (galleryState[name] = { color: (productColors(p)[0] || "White"), view: "front" });
         if (colorBtn) st.color = colorBtn.getAttribute("data-gallery-color");
         if (viewBtn) st.view = viewBtn.getAttribute("data-gallery-view");
         var img = gal.querySelector(".store-main-img");

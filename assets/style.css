@@ -818,3 +818,11 @@ html[data-theme="dark"] .audio-bar { background: #132A4C; box-shadow: 0 8px 24px
 .store-trust li { padding: 0.3rem 0 0.3rem 1.6rem; position: relative; font-size: 0.92rem; color: var(--muted); }
 .store-trust li::before { content: "\2713"; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
 .store-coming { text-align: center; color: var(--muted); margin-top: 1.4rem; }
+/* Store controls (v342): sort dropdown, result count, pager. */
+.store-sort { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--navy); }
+.store-sort select { padding: 0.5rem 0.8rem; border: 1px solid var(--line); border-radius: 999px; font-size: 1rem; background: #fff; color: var(--navy); }
+.store-count { color: var(--muted); font-size: 0.95rem; margin: 0.6rem 0; }
+.store-pager { display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center; justify-content: center; margin: 1.2rem 0 0.5rem; }
+.store-pager .btn:disabled { opacity: 0.45; cursor: default; }
+.store-page-ellipsis { color: var(--muted); padding: 0 0.2rem; }
+html[data-theme="dark"] .store-sort select { background: #132A4C; color: #edf0f7; }
