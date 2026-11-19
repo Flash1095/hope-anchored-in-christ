@@ -243,7 +243,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "347";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "348";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3653,31 +3653,38 @@ function genBindInteractive(node) {
       }
       function productColors(p) {
         if (!p.images) return [];
-        return Object.keys(p.images).filter(function (k) { return k !== "sizeChart"; });
+        return Object.keys(p.images).filter(function (k) { return k !== "sizeChart" && k !== "lifestyle"; });
       }
       function galleryViewLabel(key) {
+        if (key === "lifestyle") return "Lifestyle";
         var label = key;
         GALLERY_VIEWS.forEach(function (vw) { if (vw.key === key) label = vw.label; });
         return label;
       }
       function gallerySrc(p, color, view) {
         if (!p.images) return p.image || "";
+        if (view === "lifestyle") return p.images.lifestyle || p.image || "";
         if (view === "sizeChart") return p.images.sizeChart || p.image || "";
         var byColor = p.images[color];
         return (byColor && byColor[view]) || p.image || "";
       }
       function storeGalleryHtml(p) {
         /* Swatch colours come from this product's own images, so a product
-           with different colours (e.g. the tee's 9) just works. */
+           with different colours (e.g. the tee's 9) just works. A product
+           with its own lifestyle photo (p.images.lifestyle) shows it
+           FIRST, as the opening gallery view and the first thumbnail. */
         var colors = productColors(p);
-        var st = galleryState[p.name] || (galleryState[p.name] = { color: colors[0] || "White", view: "front" });
+        var views = GALLERY_VIEWS.slice();
+        var hasLifestyle = !!(p.images && p.images.lifestyle);
+        if (hasLifestyle) views.unshift({ key: "lifestyle", label: "Lifestyle" });
+        var st = galleryState[p.name] || (galleryState[p.name] = { color: colors[0] || "White", view: hasLifestyle ? "lifestyle" : "front" });
         var html = "<div class='store-gallery' data-gallery='" + esc(p.name) + "'>" +
           "<img class='store-main-img' src='" + esc(gallerySrc(p, st.color, st.view)) + "' alt='" + esc(p.name) + "'>" +
           "<p class='store-gallery-caption'>" + esc(st.color) + " — " + esc(galleryViewLabel(st.view)) + "</p>" +
           "<div class='store-swatches'>" + colors.map(function (c) {
             return "<button type='button' class='store-swatch" + (c === st.color ? " active" : "") + "' data-gallery-color='" + esc(c) + "' style='background:" + (GALLERY_SWATCH[c] || "#ddd6c8") + "' title='" + esc(c) + "' aria-label='Show " + esc(c) + "'></button>";
           }).join("") + "</div>" +
-          "<div class='store-thumbs'>" + GALLERY_VIEWS.map(function (vw) {
+          "<div class='store-thumbs'>" + views.map(function (vw) {
             return "<button type='button' class='store-thumb" + (vw.key === st.view ? " active" : "") + "' data-gallery-view='" + vw.key + "'><img src='" + esc(gallerySrc(p, st.color, vw.key)) + "' alt='" + esc(vw.label) + "'><span>" + esc(vw.label) + "</span></button>";
           }).join("") + "</div>" +
           "</div>";
