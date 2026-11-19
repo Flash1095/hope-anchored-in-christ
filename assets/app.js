@@ -243,7 +243,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "350";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "351";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3653,10 +3653,14 @@ function genBindInteractive(node) {
       }
       function productColors(p) {
         if (!p.images) return [];
-        return Object.keys(p.images).filter(function (k) { return k !== "sizeChart" && k !== "lifestyle"; });
+        return Object.keys(p.images).filter(function (k) { return k !== "sizeChart" && k !== "lifestyle" && k !== "photos"; });
       }
-      function galleryViewLabel(key) {
+      function galleryViewLabel(key, p) {
         if (key === "lifestyle") return "Lifestyle";
+        if (key.indexOf("photo") === 0 && p && p.images && p.images.photos) {
+          var ph = p.images.photos[Number(key.slice(5))];
+          if (ph && ph.label) return ph.label;
+        }
         var label = key;
         GALLERY_VIEWS.forEach(function (vw) { if (vw.key === key) label = vw.label; });
         return label;
@@ -3664,28 +3668,54 @@ function genBindInteractive(node) {
       function gallerySrc(p, color, view) {
         if (!p.images) return p.image || "";
         if (view === "lifestyle") return p.images.lifestyle || p.image || "";
+        if (view.indexOf("photo") === 0) {
+          var ph = (p.images.photos || [])[Number(view.slice(5))];
+          return (ph && ph.src) || p.image || "";
+        }
         if (view === "sizeChart") return p.images.sizeChart || p.image || "";
         var byColor = p.images[color];
         return (byColor && byColor[view]) || p.image || "";
+      }
+      /* A gallery view only shows when the product really has an image
+         for it — so a product whose images drop a view (e.g. the tee's
+         mockups) loses that thumbnail instead of showing the card photo
+         in its place. */
+      function galleryHasView(p, color, view) {
+        if (!p.images) return false;
+        if (view === "lifestyle") return !!p.images.lifestyle;
+        if (view === "sizeChart") return !!p.images.sizeChart;
+        if (view.indexOf("photo") === 0) return !!((p.images.photos || [])[Number(view.slice(5))]);
+        var byColor = p.images[color];
+        return !!(byColor && byColor[view]);
       }
       function storeGalleryHtml(p) {
         /* Swatch colours come from this product's own images, so a product
            with different colours (e.g. the tee's 9) just works. A product
            with its own lifestyle photo (p.images.lifestyle) shows it
-           FIRST, as the opening gallery view and the first thumbnail. */
+           FIRST, as the opening gallery view and the first thumbnail,
+           followed by any extra photos (p.images.photos, each with its
+           own label), then only the mockup views it really has. */
         var colors = productColors(p);
-        var views = GALLERY_VIEWS.slice();
+        var photos = (p.images && p.images.photos) || [];
         var hasLifestyle = !!(p.images && p.images.lifestyle);
-        if (hasLifestyle) views.unshift({ key: "lifestyle", label: "Lifestyle" });
         /* The lifestyle photo shows the white tee, so a product that has
            one opens on White — otherwise the caption (and the checkout's
            default colour) would name a colour the photo doesn't show. */
         var defaultColor = colors[0] || "White";
         if (hasLifestyle && colors.indexOf("White") !== -1) defaultColor = "White";
-        var st = galleryState[p.name] || (galleryState[p.name] = { color: defaultColor, view: hasLifestyle ? "lifestyle" : "front" });
+        var views = [];
+        if (hasLifestyle) views.push({ key: "lifestyle", label: "Lifestyle" });
+        photos.forEach(function (ph, i) { views.push({ key: "photo" + i, label: (ph && ph.label) || ("Photo " + (i + 1)) }); });
+        GALLERY_VIEWS.forEach(function (vw) { if (galleryHasView(p, defaultColor, vw.key)) views.push(vw); });
+        var defaultView = hasLifestyle ? "lifestyle" : (photos.length ? "photo0" : "front");
+        var st = galleryState[p.name];
+        if (!st) st = galleryState[p.name] = { color: defaultColor, view: defaultView };
+        /* A view saved from before the product's images changed (e.g. a
+           dropped mockup) falls back to the opening view. */
+        if (views.every(function (vw) { return vw.key !== st.view; })) st.view = defaultView;
         var html = "<div class='store-gallery' data-gallery='" + esc(p.name) + "'>" +
           "<img class='store-main-img' src='" + esc(gallerySrc(p, st.color, st.view)) + "' alt='" + esc(p.name) + "'>" +
-          "<p class='store-gallery-caption'>" + esc(st.color) + " — " + esc(galleryViewLabel(st.view)) + "</p>" +
+          "<p class='store-gallery-caption'>" + esc(st.color) + " — " + esc(galleryViewLabel(st.view, p)) + "</p>" +
           "<div class='store-swatches'>" + colors.map(function (c) {
             return "<button type='button' class='store-swatch" + (c === st.color ? " active" : "") + "' data-gallery-color='" + esc(c) + "' style='background:" + (GALLERY_SWATCH[c] || "#ddd6c8") + "' title='" + esc(c) + "' aria-label='Show " + esc(c) + "'></button>";
           }).join("") + "</div>" +
@@ -3817,7 +3847,7 @@ function genBindInteractive(node) {
         if (p.price) html += "<p class='price'>" + esc(p.price) + "</p>";
         if (p.desc) html += "<p class='snippet'>" + esc(p.desc) + "</p>";
         if (p.checkout === "onsite") {
-          html += "<p><a class='buy-btn' href='#' data-onsite-checkout='" + esc(p.name) + "'>Buy on this site</a></p>";
+          html += "<p><a class='buy-btn' href='#' data-onsite-checkout='" + esc(p.name) + "'>Add to cart</a></p>";
           if (SHOW_PRINTIFY_LINKS) html += "<p class='snippet'>or <a href='" + esc(p.url) + "'>buy on Printify</a></p>";
         } else {
           html += "<p><a class='buy-btn' href='" + esc(p.url) + "'>Buy</a></p>";
@@ -3930,7 +3960,7 @@ function genBindInteractive(node) {
         var img = gal.querySelector(".store-main-img");
         if (img) img.src = gallerySrc(p, st.color, st.view);
         var cap = gal.querySelector(".store-gallery-caption");
-        if (cap) cap.textContent = st.color + " — " + galleryViewLabel(st.view);
+        if (cap) cap.textContent = st.color + " — " + galleryViewLabel(st.view, p);
         gal.querySelectorAll("[data-gallery-color]").forEach(function (b) {
           b.classList.toggle("active", b.getAttribute("data-gallery-color") === st.color);
         });
