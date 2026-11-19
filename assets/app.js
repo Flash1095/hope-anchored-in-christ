@@ -243,7 +243,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "344";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "345";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3605,6 +3605,10 @@ function genBindInteractive(node) {
      order, newest first), price, or name. */
   /* Set to the Printify Pop-Up Store URL once Lorraine shares it. Empty means no shop button. */
   var STORE_URL = "https://hope-anchored-in-christ.printify.me/";
+  /* Lorraine 2026-11-18: hide the buy-on-Printify options — checkout on
+     this site only. Set true to show the "Visit our shop" button and the
+     "buy on Printify" link again. */
+  var SHOW_PRINTIFY_LINKS = false;
   /* Set to the Ko-fi shop URL once Lorraine shares it. Empty means no digital-shop button. */
   var DIGITAL_SHOP_URL = "";
   /* Set to the giving link (Ko-fi/PayPal/Stripe) once Lorraine shares it. Empty means coming soon. */
@@ -3796,7 +3800,7 @@ function genBindInteractive(node) {
         if (p.desc) html += "<p class='snippet'>" + esc(p.desc) + "</p>";
         if (p.checkout === "onsite") {
           html += "<p><a class='buy-btn' href='#' data-onsite-checkout='" + esc(p.name) + "'>Buy on this site</a></p>";
-          html += "<p class='snippet'>or <a href='" + esc(p.url) + "'>buy on Printify</a></p>";
+          if (SHOW_PRINTIFY_LINKS) html += "<p class='snippet'>or <a href='" + esc(p.url) + "'>buy on Printify</a></p>";
         } else {
           html += "<p><a class='buy-btn' href='" + esc(p.url) + "'>Buy</a></p>";
         }
@@ -3830,7 +3834,7 @@ function genBindInteractive(node) {
         "and arrives made just for you. Digital items download instantly for you to print at home.</p></div>" +
         "<div class='post-body'>";
       html += "<p>Shipping, returns, and refunds: see our <a href='#/store-policies'>Store Policies</a>.</p>";
-      if (STORE_URL) html += "<p><a class='btn' href='" + esc(STORE_URL) + "'>Visit our shop</a></p>";
+      if (SHOW_PRINTIFY_LINKS && STORE_URL) html += "<p><a class='btn' href='" + esc(STORE_URL) + "'>Visit our shop</a></p>";
       html += "<p><a class='btn' href='#/art'>Browse the art</a></p>";
       if (DIGITAL_SHOP_URL) html += "<p><a class='btn' href='" + esc(DIGITAL_SHOP_URL) + "' target='_blank' rel='noopener'>Browse digital downloads</a></p>";
       if (!detailProduct && products.length > 1) html += '<div class="controls"><input type="search" id="storeSearch" placeholder="Search the store…">' +
