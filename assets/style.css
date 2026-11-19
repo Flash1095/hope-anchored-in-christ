@@ -850,3 +850,21 @@ body.is-store .store-hero p { color: var(--ink); }
 html[data-theme="dark"] body.is-store { background: #0B203D; }
 html[data-theme="dark"] body.is-store .store-hero h2 { color: #eef1f7; }
 html[data-theme="dark"] body.is-store .store-hero p { color: #dfe3ee; }
+/* Cart (v353): header count badge, detail size/quantity, cart page. */
+.cart-count { display: inline-block; min-width: 1.5em; padding: 0 0.4em; border-radius: 1em; background: var(--gold); color: #fff; font-size: 0.8em; font-weight: 700; text-align: center; line-height: 1.5; vertical-align: 0.1em; }
+.cart-count[hidden] { display: none; }
+.detail-options label { display: block; margin: 0.5rem 0; font-weight: 600; color: var(--navy); }
+.detail-options select, .detail-options input[type="number"] { padding: 0.5rem 0.7rem; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; background: #fff; color: var(--ink); margin-top: 0.2rem; }
+.detail-options input[type="number"] { width: 5em; }
+.cart-item { display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; background: #fff; border: 1px solid #e5e7ef; border-radius: 12px; padding: 0.7rem; margin: 0.6rem 0; }
+.cart-item img { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; }
+.cart-item-info { flex: 1; min-width: 10rem; }
+.cart-qty { display: flex; gap: 0.3rem; align-items: center; }
+.cart-qty button { width: 2rem; height: 2rem; border-radius: 6px; border: 1px solid #ddd; background: #fff; cursor: pointer; font-size: 1rem; line-height: 1; }
+.cart-line { font-weight: 700; color: var(--navy); white-space: nowrap; }
+.cart-subtotal { font-size: 1.15rem; margin: 0.8rem 0 0.2rem; }
+html[data-theme="dark"] .cart-item { background: #132A4C; border-color: #2a3f66; }
+html[data-theme="dark"] .cart-qty button { background: #132A4C; color: #edf0f7; border-color: #2a3f66; }
+html[data-theme="dark"] .cart-line { color: #eef1f7; }
+html[data-theme="dark"] .detail-options label { color: #eef1f7; }
+html[data-theme="dark"] .detail-options select, html[data-theme="dark"] .detail-options input[type="number"] { background: #132A4C; color: #edf0f7; border-color: #2a3f66; }

@@ -243,7 +243,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "352";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "353";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3646,6 +3646,14 @@ function genBindInteractive(node) {
          storeGalleryHtml, so a new product's colours never break the gallery. */
       var GALLERY_SWATCH = { "White": "#ffffff", "Sand": "#e6d3b3", "Light Pink": "#f6d3d8", "Light Blue": "#cfe3f5", "Sport Grey": "#b9bec4", "Carolina Blue": "#7aa7d9", "Coral Silk": "#f08a76", "Orange": "#e67e22", "Mint Green": "#a3e6b5", "Violet": "#8a7fd6" };
       var galleryState = {}; // product name -> { color, view }
+      /* Live colours per product, from /config (checkout.js). The gallery
+         swatches come from these once loaded, so the colours on the page
+         match the colours Printify has enabled right now; until then the
+         store.json images keys are the fallback. */
+      var liveColors = {}; // product name -> [colour, ...]
+      /* Live-variant state for the product detail being viewed:
+         { name, loaded } — refreshDetailOptions reads it. */
+      var detailLive = { name: null, loaded: false };
       function productCategory(p) { return p.category || "Uncategorized"; }
       function productPrice(p) {
         var m = (p.price || "").match(/\$([\d,]+(?:\.\d+)?)/);
@@ -3690,12 +3698,14 @@ function genBindInteractive(node) {
       }
       function storeGalleryHtml(p) {
         /* Swatch colours come from this product's own images, so a product
-           with different colours (e.g. the tee's 9) just works. A product
+           with different colours (e.g. the tee's 9) just works — unless
+           the live /config colours have loaded, in which case THOSE are
+           the swatches, so the page matches Printify exactly. A product
            with its own lifestyle photo (p.images.lifestyle) shows it
            FIRST, as the opening gallery view and the first thumbnail,
            followed by any extra photos (p.images.photos, each with its
            own label), then only the mockup views it really has. */
-        var colors = productColors(p);
+        var colors = liveColors[p.name] || productColors(p);
         var photos = (p.images && p.images.photos) || [];
         var hasLifestyle = !!(p.images && p.images.lifestyle);
         /* The lifestyle photo shows the white tee, so a product that has
@@ -3706,13 +3716,33 @@ function genBindInteractive(node) {
         var views = [];
         if (hasLifestyle) views.push({ key: "lifestyle", label: "Lifestyle" });
         photos.forEach(function (ph, i) { views.push({ key: "photo" + i, label: (ph && ph.label) || ("Photo " + (i + 1)) }); });
-        GALLERY_VIEWS.forEach(function (vw) { if (galleryHasView(p, defaultColor, vw.key)) views.push(vw); });
+        /* A mockup view is listed when ANY colour has it — the click
+           handler hides it for colours that don't, so switching colours
+           never leaves a view missing from the strip. */
+        GALLERY_VIEWS.forEach(function (vw) {
+          if (vw.key === "sizeChart") { if (galleryHasView(p, defaultColor, vw.key)) views.push(vw); return; }
+          var anyColor = colors.some(function (c) { return galleryHasView(p, c, vw.key); });
+          if (anyColor) views.push(vw);
+        });
         var defaultView = hasLifestyle ? "lifestyle" : (photos.length ? "photo0" : "front");
         var st = galleryState[p.name];
         if (!st) st = galleryState[p.name] = { color: defaultColor, view: defaultView };
+        /* A colour Printify no longer sells (e.g. dropped since the page
+           first rendered) falls back to the default colour. */
+        if (colors.indexOf(st.color) === -1) st.color = defaultColor;
         /* A view saved from before the product's images changed (e.g. a
            dropped mockup) falls back to the opening view. */
         if (views.every(function (vw) { return vw.key !== st.view; })) st.view = defaultView;
+        /* And a view the current colour does not have (e.g. Front on a
+           colour with no mockups) falls back to the first view that
+           colour does have. */
+        if (!galleryHasView(p, st.color, st.view)) {
+          var fb = null;
+          ["lifestyle", "photo0", "photo1", "photo2", "photo3", "sizeChart", "front", "back", "folded", "styled"].forEach(function (k) {
+            if (!fb && galleryHasView(p, st.color, k)) fb = k;
+          });
+          if (fb) st.view = fb;
+        }
         var html = "<div class='store-gallery' data-gallery='" + esc(p.name) + "'>" +
           "<img class='store-main-img' src='" + esc(gallerySrc(p, st.color, st.view)) + "' alt='" + esc(p.name) + "'>" +
           "<p class='store-gallery-caption'>" + esc(st.color) + " — " + esc(galleryViewLabel(st.view, p)) + "</p>" +
@@ -3720,7 +3750,7 @@ function genBindInteractive(node) {
             return "<button type='button' class='store-swatch" + (c === st.color ? " active" : "") + "' data-gallery-color='" + esc(c) + "' style='background:" + (GALLERY_SWATCH[c] || "#ddd6c8") + "' title='" + esc(c) + "' aria-label='Show " + esc(c) + "'></button>";
           }).join("") + "</div>" +
           "<div class='store-thumbs'>" + views.map(function (vw) {
-            return "<button type='button' class='store-thumb" + (vw.key === st.view ? " active" : "") + "' data-gallery-view='" + vw.key + "'><img src='" + esc(gallerySrc(p, st.color, vw.key)) + "' alt='" + esc(vw.label) + "'><span>" + esc(vw.label) + "</span></button>";
+            return "<button type='button' class='store-thumb" + (vw.key === st.view ? " active" : "") + "' data-gallery-view='" + vw.key + "'" + (galleryHasView(p, st.color, vw.key) ? "" : " style='display:none'") + "><img src='" + esc(gallerySrc(p, st.color, vw.key)) + "' alt='" + esc(vw.label) + "'><span>" + esc(vw.label) + "</span></button>";
           }).join("") + "</div>" +
           "</div>";
         return html;
@@ -3826,13 +3856,51 @@ function genBindInteractive(node) {
             return card;
           }).join("") + "</div>" + pager;
         }
-        if (typeof hacWireStoreButtons === "function") hacWireStoreButtons(products);
       }
       /* Product detail view: back link, gallery, title, price, full
-         description, buy buttons, trust lines. Rendered inside #storeGrid
-         so the gallery click handler below keeps working; the outer
-         .store-card class lets the checkout pick up the colour the buyer
-         is viewing (see hacWireStoreButtons). */
+         description, size + quantity, Add to cart, trust lines. Rendered
+         inside #storeGrid so the gallery click handler below keeps
+         working. The price line shows the selected variant's exact live
+         price once /config loads (never "from"); until then it shows the
+         store.json price string. Sizes come live from /config too. */
+      function detailPriceText(p) {
+        if (detailLive.loaded && detailLive.name === p.name && typeof hacVariantPrice === "function") {
+          var st = galleryState[p.name];
+          var color = st ? st.color : ((liveColors[p.name] || productColors(p))[0] || "White");
+          var sizeEl = document.getElementById("detailSize");
+          var size = sizeEl ? sizeEl.value : "";
+          var price = size ? hacVariantPrice(color, size) : 0;
+          if (price) return (typeof hacMoney === "function" ? hacMoney(price) : "$" + (price / 100).toFixed(2));
+        }
+        return p.price || "";
+      }
+      /* Refresh the detail page's size options + price line for the
+         colour currently showing in the gallery. Called after /config
+         loads and whenever the shopper picks another colour. */
+      function refreshDetailOptions(p) {
+        var sizeEl = document.getElementById("detailSize");
+        var priceEl = document.getElementById("detailPrice");
+        if (!sizeEl && !priceEl) return;
+        var st = galleryState[p.name];
+        var color = st ? st.color : ((liveColors[p.name] || productColors(p))[0] || "White");
+        if (sizeEl) {
+          if (detailLive.loaded && detailLive.name === p.name && typeof hacSizesForColor === "function") {
+            var sizes = hacSizesForColor(color);
+            var prev = sizeEl.value;
+            sizeEl.innerHTML = sizes.map(function (v) {
+              return "<option value='" + esc(v.size) + "'>" + esc(v.size) + " — " + (typeof hacMoney === "function" ? hacMoney(v.priceCents) : "$" + (v.priceCents / 100).toFixed(2)) + "</option>";
+            }).join("");
+            var kept = false;
+            sizes.forEach(function (v) { if (v.size === prev) kept = true; });
+            if (kept) sizeEl.value = prev;
+            sizeEl.disabled = false;
+          } else {
+            sizeEl.innerHTML = "<option value=''>Loading sizes…</option>";
+            sizeEl.disabled = true;
+          }
+        }
+        if (priceEl) priceEl.textContent = detailPriceText(p);
+      }
       function renderDetail(p) {
         var wrap = document.getElementById("storeGrid");
         if (!wrap) return;
@@ -3844,10 +3912,15 @@ function genBindInteractive(node) {
         html += "</div><div class='store-featured-info'>";
         html += "<h3>" + esc(p.name) + "</h3>";
         html += "<p><span class='chip'>" + esc(p.kind || "Physical") + "</span></p>";
-        if (p.price) html += "<p class='price'>" + esc(p.price) + "</p>";
+        html += "<p class='price' id='detailPrice'>" + esc(p.price || "") + "</p>";
         if (p.desc) html += "<p class='snippet'>" + esc(p.desc) + "</p>";
         if (p.checkout === "onsite") {
-          html += "<p><a class='buy-btn' href='#' data-onsite-checkout='" + esc(p.name) + "'>Add to cart</a></p>";
+          html += "<div class='detail-options'>" +
+            "<p><label>Size<br><select id='detailSize'><option value=''>Loading sizes…</option></select></label></p>" +
+            "<p><label>Quantity<br><input id='detailQty' type='number' min='1' max='10' value='1'></label></p>" +
+            "</div>";
+          html += "<p><a class='buy-btn' href='#' data-add-to-cart='" + esc(p.name) + "'>Add to cart</a></p>";
+          html += "<p id='detailCartMsg' class='empty' style='display:none'></p>";
           if (SHOW_PRINTIFY_LINKS) html += "<p class='snippet'>or <a href='" + esc(p.url) + "'>buy on Printify</a></p>";
         } else {
           html += "<p><a class='buy-btn' href='" + esc(p.url) + "'>Buy</a></p>";
@@ -3855,7 +3928,83 @@ function genBindInteractive(node) {
         html += storeTrustHtml();
         html += "</div></div>";
         wrap.innerHTML = html;
-        if (typeof hacWireStoreButtons === "function") hacWireStoreButtons(products);
+        if (p.checkout === "onsite") {
+          /* Only reset the live state when the product changes — a
+             re-render after /config loads must keep loaded:true, or the
+             fetch below would loop forever. */
+          if (detailLive.name !== p.name) detailLive = { name: p.name, loaded: false };
+          refreshDetailOptions(p);
+          /* Live colours, sizes and prices from /config. When they land,
+             the gallery re-renders with the live swatches and the size
+             + price refresh. Guarded against navigating away mid-load. */
+          if (!detailLive.loaded && typeof hacProductVariants === "function") {
+            hacProductVariants(p.name, function (err, entry) {
+              if (err) return;
+              if (location.hash.indexOf("#/store/" + productSlug(p)) !== 0) return;
+              if (!document.getElementById("storeGrid")) return;
+              var cols = [];
+              (entry.variants || []).forEach(function (v) {
+                if (cols.indexOf(v.color) === -1) cols.push(v.color);
+              });
+              if (cols.length) liveColors[p.name] = cols;
+              detailLive = { name: p.name, loaded: true };
+              var qtyEl = document.getElementById("detailQty");
+              var qty = qtyEl ? qtyEl.value : "1";
+              renderDetail(p);
+              var qtyEl2 = document.getElementById("detailQty");
+              if (qtyEl2) qtyEl2.value = qty;
+            });
+          }
+        }
+      }
+      /* Add the detail page's selected colour/size/qty to the cart. The
+         variant must resolve live first — if /config has not loaded, it
+         is fetched now; if it fails, nothing is added. */
+      function handleAddToCart(p) {
+        var msgEl = document.getElementById("detailCartMsg");
+        function showMsg(html) {
+          if (msgEl) { msgEl.style.display = "block"; msgEl.innerHTML = html; }
+        }
+        var st = galleryState[p.name];
+        var color = st ? st.color : ((liveColors[p.name] || productColors(p))[0] || "White");
+        var sizeEl = document.getElementById("detailSize");
+        var size = sizeEl ? sizeEl.value : "";
+        var qtyEl = document.getElementById("detailQty");
+        var qty = qtyEl ? parseInt(qtyEl.value, 10) : 1;
+        if (!qty || qty < 1) qty = 1;
+        if (qty > 10) qty = 10;
+        if (!size) { showMsg("Please pick a size first."); return; }
+        function doAdd() {
+          if (typeof hacVariantId !== "function" || typeof hacCartAdd !== "function") {
+            showMsg("The cart is not ready yet — please try again in a moment.");
+            return;
+          }
+          var variantId = hacVariantId(color, size);
+          var priceCents = hacVariantPrice(color, size);
+          if (!variantId || !priceCents) {
+            showMsg("Sorry — that colour and size is not available right now. Please pick another.");
+            return;
+          }
+          var image = p.image || gallerySrc(p, color, "front");
+          var res = hacCartAdd({ name: p.name, color: color, size: size, qty: qty, image: image, priceCents: priceCents });
+          if (!res.added) {
+            showMsg("Your cart already holds 10 items — the most one order can hold. Check out or remove something first.");
+            return;
+          }
+          var note = res.added < qty ? " Only " + res.added + " could be added — one order holds at most 10 items." : "";
+          showMsg("Added to cart — <a href='#/cart'>View cart</a>." + note);
+        }
+        if (detailLive.loaded && detailLive.name === p.name) { doAdd(); return; }
+        if (typeof hacProductVariants === "function") {
+          showMsg("Adding to your cart…");
+          hacProductVariants(p.name, function (err) {
+            if (err) { showMsg("Could not reach the store — please try again."); return; }
+            detailLive = { name: p.name, loaded: true };
+            doAdd();
+          });
+        } else {
+          showMsg("The cart is not ready yet — please try again in a moment.");
+        }
       }
       function pageNumbersHtml(page, pages) {
         /* Compact window: first page, last page, and up to one either side of
@@ -3945,6 +4094,15 @@ function genBindInteractive(node) {
           }
           return;
         }
+        var addBtn = t.closest ? t.closest("[data-add-to-cart]") : null;
+        if (addBtn) {
+          e.preventDefault();
+          var addName = addBtn.getAttribute("data-add-to-cart");
+          var addP = null;
+          products.forEach(function (it) { if (it.name === addName) addP = it; });
+          if (addP) handleAddToCart(addP);
+          return;
+        }
         var colorBtn = t.closest ? t.closest("[data-gallery-color]") : null;
         var viewBtn = t.closest ? t.closest("[data-gallery-view]") : null;
         if (!colorBtn && !viewBtn) return;
@@ -3957,6 +4115,19 @@ function genBindInteractive(node) {
         var st = galleryState[name] || (galleryState[name] = { color: (productColors(p)[0] || "White"), view: "front" });
         if (colorBtn) st.color = colorBtn.getAttribute("data-gallery-color");
         if (viewBtn) st.view = viewBtn.getAttribute("data-gallery-view");
+        /* A colour with no mockups (e.g. a live Printify colour with no
+           images in store.json) shows only the views that really exist
+           for it — lifestyle, photos, size chart — never a Front thumb
+           pointing at the card photo. If the view in progress is one of
+           the missing ones, fall back to the first view that exists. */
+        var viewOrder = ["lifestyle", "photo0", "photo1", "photo2", "photo3", "sizeChart", "front", "back", "folded", "styled"];
+        if (!galleryHasView(p, st.color, st.view)) {
+          var fallbackView = null;
+          viewOrder.forEach(function (k) {
+            if (!fallbackView && galleryHasView(p, st.color, k)) fallbackView = k;
+          });
+          if (fallbackView) st.view = fallbackView;
+        }
         var img = gal.querySelector(".store-main-img");
         if (img) img.src = gallerySrc(p, st.color, st.view);
         var cap = gal.querySelector(".store-gallery-caption");
@@ -3967,12 +4138,113 @@ function genBindInteractive(node) {
         gal.querySelectorAll("[data-gallery-view]").forEach(function (b) {
           var k = b.getAttribute("data-gallery-view");
           b.classList.toggle("active", k === st.view);
+          b.style.display = galleryHasView(p, st.color, k) ? "" : "none";
           var ti = b.querySelector("img");
           if (ti) ti.src = gallerySrc(p, st.color, k);
         });
+        /* Sizes and the price depend on the colour — refresh them. */
+        if (colorBtn) refreshDetailOptions(p);
       });
       window.scrollTo(0, 0);
     });
+  }
+  /* Cart page (#/cart): every item with a thumbnail, name, colour,
+     size, quantity stepper, line total and remove; subtotal; a note
+     that shipping is calculated at checkout; and a Checkout button
+     that opens the cart checkout overlay. Line prices come from the
+     live /config variants when they load; until then the price the
+     item was added at is shown. A line whose colour/size is gone in
+     Printify is flagged and blocks checkout until it is removed. */
+  function viewCart() {
+    var livePrices = {}; // "name|color|size" -> live priceCents
+    var unavailable = {}; // cart index -> true when the live variant is gone
+    function lineKey(it) { return it.name + "|" + it.color + "|" + it.size; }
+    function linePrice(it) {
+      var k = lineKey(it);
+      if (livePrices[k] != null) return livePrices[k];
+      return it.priceCents || 0;
+    }
+    function fmt(cents) {
+      return (typeof hacMoney === "function") ? hacMoney(cents) : "$" + (cents / 100).toFixed(2);
+    }
+    function renderCart() {
+      var cur = (typeof hacCartLoad === "function") ? hacCartLoad() : [];
+      if (!cur.length) {
+        app.innerHTML = "<h2>Your cart</h2><div class='post-body'>" +
+          "<p class='empty'>Your cart is empty.</p>" +
+          "<p><a class='btn' href='#/store'>Browse the store</a></p></div>";
+        window.scrollTo(0, 0);
+        return;
+      }
+      var listEl = document.getElementById("cartList");
+      var subEl = document.getElementById("cartSubtotal");
+      var checkoutBtn = document.getElementById("cartCheckout");
+      var subtotal = 0;
+      var html = cur.map(function (it, i) {
+        var unit = linePrice(it);
+        subtotal += unit * it.qty;
+        var gone = !!unavailable[i];
+        return "<div class='cart-item'>" +
+          (it.image ? "<img src='" + esc(it.image) + "' alt=''>" : "") +
+          "<div class='cart-item-info'><strong>" + esc(it.name) + "</strong><br>" + esc(it.color) + ", size " + esc(it.size) +
+          (gone ? "<br><span style='color:#c2185b'>No longer available — please remove it.</span>" : "") + "</div>" +
+          "<div class='cart-qty'><button type='button' data-cart-dec='" + i + "' aria-label='One fewer'>&minus;</button><span>" + it.qty + "</span><button type='button' data-cart-inc='" + i + "' aria-label='One more'>+</button></div>" +
+          "<div class='cart-line'>" + fmt(unit * it.qty) + "</div>" +
+          "<button type='button' class='chip' data-cart-remove='" + i + "'>Remove</button>" +
+          "</div>";
+      }).join("");
+      if (listEl) listEl.innerHTML = html;
+      if (subEl) subEl.innerHTML = "Subtotal: <strong>" + fmt(subtotal) + "</strong>";
+      if (checkoutBtn) checkoutBtn.disabled = Object.keys(unavailable).length > 0;
+    }
+    function refreshLivePrices() {
+      if (typeof hacFetchConfig !== "function" || typeof hacFindProductEntry !== "function" || typeof hacFindVariant !== "function") return;
+      hacFetchConfig(function (err, cfg) {
+        if (err) return;
+        if (location.hash !== "#/cart") return;
+        if (!document.getElementById("cartList")) return;
+        var cur = hacCartLoad();
+        cur.forEach(function (it, i) {
+          var entry = hacFindProductEntry(cfg, it.name);
+          var v = hacFindVariant(entry, it.color, it.size);
+          if (v) { livePrices[lineKey(it)] = v.priceCents; delete unavailable[i]; }
+          else unavailable[i] = true;
+        });
+        renderCart();
+      });
+    }
+    app.innerHTML = "<h2>Your cart</h2><div class='post-body'>" +
+      "<div id='cartList'></div>" +
+      "<p class='cart-subtotal' id='cartSubtotal'></p>" +
+      "<p class='snippet'>Shipping calculated at checkout.</p>" +
+      "<p><button class='btn' id='cartCheckout' type='button'>Checkout</button> " +
+      "<a class='btn' href='#/store'>Continue shopping</a></p></div>";
+    renderCart();
+    refreshLivePrices();
+    var wrap = document.getElementById("cartList");
+    if (wrap) wrap.addEventListener("click", function (e) {
+      var t = e.target;
+      var inc = t.closest ? t.closest("[data-cart-inc]") : null;
+      var dec = t.closest ? t.closest("[data-cart-dec]") : null;
+      var rem = t.closest ? t.closest("[data-cart-remove]") : null;
+      if (!inc && !dec && !rem) return;
+      var idx = parseInt((inc || dec || rem).getAttribute(inc ? "data-cart-inc" : (dec ? "data-cart-dec" : "data-cart-remove")), 10);
+      var cur = hacCartLoad();
+      if (!cur[idx]) return;
+      if (inc) hacCartSetQty(idx, cur[idx].qty + 1);
+      else if (dec) hacCartSetQty(idx, cur[idx].qty - 1);
+      else hacCartRemove(idx);
+      /* Indices shift after a remove, so the unavailable flags are
+         re-checked rather than trusted. */
+      unavailable = {};
+      renderCart();
+      refreshLivePrices();
+    });
+    var coBtn = document.getElementById("cartCheckout");
+    if (coBtn) coBtn.addEventListener("click", function () {
+      if (typeof hacOpenCartCheckout === "function") hacOpenCartCheckout();
+    });
+    window.scrollTo(0, 0);
   }
   function viewConnect() {
     app.innerHTML = "<h2>Connect</h2><div class='post-body'>" +
@@ -6858,7 +7130,7 @@ function genBindInteractive(node) {
     var path = parts[0].split("/").filter(Boolean);
     var params = new URLSearchParams(parts[1] || "");
     document.body.classList.toggle("is-home", path.length === 0);
-    document.body.classList.toggle("is-store", path[0] === "store");
+    document.body.classList.toggle("is-store", path[0] === "store" || path[0] === "cart");
     if (path.length === 0) return viewHome();
     if (path[0] === "explore") { location.hash = "#/library"; return; }
     if (path[0] === "library") {
@@ -6868,6 +7140,7 @@ function genBindInteractive(node) {
     if (path[0] === "blog") return viewBlog(path[1] ? decodeURIComponent(path[1]) : null, params);
     if (path[0] === "about") return viewAbout();
     if (path[0] === "store") return viewStore(path[1] ? decodeURIComponent(path[1]) : null);
+    if (path[0] === "cart") return viewCart();
     if (path[0] === "store-policies") return viewStorePolicies();
     if (path[0] === "connect") return viewConnect();
     if (path[0] === "give") return viewGive();

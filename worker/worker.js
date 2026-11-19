@@ -4,10 +4,14 @@
  * Cloudflare Worker (free tier). One Worker, three routes:
  *
  *   GET  /config                -> Stripe publishable key + sellable catalog
- *   POST /create-payment-intent -> validate the order, quote live Printify
- *                                  shipping, create a Stripe PaymentIntent
- *   POST /webhook               -> verify Stripe's signature, then create the
- *                                  Printify order when payment succeeds
+ *   POST /create-payment-intent -> validate the cart (one or more lines),
+ *                                  quote live Printify shipping for the
+ *                                  whole order, create a Stripe
+ *                                  PaymentIntent. The old single-item body
+ *                                  is still accepted.
+ *   POST /webhook               -> verify Stripe's signature, then create
+ *                                  ONE Printify order with every line when
+ *                                  payment succeeds
  *
  * Secrets are NEVER in this file. They come from Worker environment variables
  * (set in the Cloudflare dashboard or with `wrangler secret put`):
@@ -295,7 +299,7 @@ function printifyAddress(a) {
 /*   { standard: { cost }, priority: {...}, express: {...}, ... }      */
 /* All costs are integer cents.                                        */
 /* ------------------------------------------------------------------ */
-async function quoteShipping(env, productId, variantId, quantity, address) {
+async function quoteShipping(env, lineItems, address) {
   const url =
     "https://api.printify.com/v1/shops/" +
     encodeURIComponent(env.PRINTIFY_SHOP_ID) +
@@ -311,13 +315,13 @@ async function quoteShipping(env, productId, variantId, quantity, address) {
         "User-Agent": PRINTIFY_USER_AGENT,
       },
       body: JSON.stringify({
-        line_items: [
-          {
-            product_id: productId,
-            variant_id: variantId,
-            quantity: quantity,
-          },
-        ],
+        line_items: lineItems.map(function (it) {
+          return {
+            product_id: it.productId,
+            variant_id: it.variantId,
+            quantity: it.quantity,
+          };
+        }),
         address_to: printifyAddress(address),
       }),
       // Never let a hung quote hold the checkout open: fail fast to the
@@ -351,12 +355,12 @@ async function quoteShipping(env, productId, variantId, quantity, address) {
 /* ------------------------------------------------------------------ */
 /* Stripe: create a PaymentIntent (form-encoded, as Stripe expects)    */
 /* ------------------------------------------------------------------ */
-async function createPaymentIntent(env, amountCents, orderMeta, productId, productTitle) {
+async function createPaymentIntent(env, amountCents, orderMeta, productId, description) {
   const body = new URLSearchParams();
   body.set("amount", String(amountCents));
   body.set("currency", CURRENCY);
   body.set("automatic_payment_methods[enabled]", "true");
-  body.set("description", productTitle + " — Hope Anchored in Christ");
+  body.set("description", description);
   body.set("metadata[order]", JSON.stringify(orderMeta));
   body.set("metadata[printify_product_id]", productId);
   const res = await fetchWithTimeout("https://api.stripe.com/v1/payment_intents", {
@@ -378,10 +382,13 @@ async function createPaymentIntent(env, amountCents, orderMeta, productId, produ
 
 /* ------------------------------------------------------------------ */
 /* POST /create-payment-intent                                         */
-/* Body: { productId, variantId, quantity, address }                   */
-/* The amount is computed HERE from a live Printify product lookup +   */
-/* a live Printify shipping quote. Anything the browser sends about    */
-/* price is ignored.                                                   */
+/* Body: { items: [{ productId, variantId, quantity }], address }      */
+/* The old single-item body { productId, variantId, quantity,         */
+/* address } is still accepted, so a browser running the previous      */
+/* checkout.js keeps working until the site push lands. The amount is  */
+/* computed HERE from live Printify lookups + a live Printify shipping */
+/* quote for the whole order. Anything the browser sends about price   */
+/* is ignored.                                                         */
 /* ------------------------------------------------------------------ */
 async function handleCreatePaymentIntent(request, env) {
   let body;
@@ -391,47 +398,77 @@ async function handleCreatePaymentIntent(request, env) {
     return errorResponse(request, 400, "Request body must be JSON.");
   }
 
-  // Which product: the browser sends the Printify product id from
-  // /config. An older browser that sends none gets the first sellable
-  // product, so the previous checkout.js keeps working until the site
-  // push lands.
-  const productId = body.productId ? String(body.productId) : SELLABLE_PRODUCT_IDS[0];
-  if (SELLABLE_PRODUCT_IDS.indexOf(productId) === -1) {
-    return errorResponse(request, 400, "That product is not sold here.");
+  // Normalize to an items list. The browser sends the Printify product
+  // ids from /config. An older browser that sends the single-item shape
+  // gets one line, defaulting to the first sellable product when it
+  // sends no product id at all.
+  let items = [];
+  if (Array.isArray(body.items) && body.items.length) {
+    items = body.items.map(function (it) {
+      return {
+        productId: it && it.productId ? String(it.productId) : "",
+        variantId: Number(it && it.variantId),
+        quantity: Number(it && it.quantity),
+      };
+    });
+  } else if (body.productId || body.variantId) {
+    items = [{
+      productId: body.productId ? String(body.productId) : SELLABLE_PRODUCT_IDS[0],
+      variantId: Number(body.variantId),
+      quantity: Number(body.quantity),
+    }];
   }
-  const variantId = Number(body.variantId);
-  const quantity = Number(body.quantity);
-  if (!Number.isInteger(quantity) || quantity < 1 || quantity > MAX_QUANTITY) {
-    return errorResponse(request, 400, "Quantity must be between 1 and " + MAX_QUANTITY + ".");
+  if (!items.length) {
+    return errorResponse(request, 400, "Your cart is empty.");
+  }
+  let totalQty = 0;
+  for (const it of items) {
+    if (SELLABLE_PRODUCT_IDS.indexOf(it.productId) === -1) {
+      return errorResponse(request, 400, "That product is not sold here.");
+    }
+    if (!Number.isInteger(it.quantity) || it.quantity < 1 || it.quantity > MAX_QUANTITY) {
+      return errorResponse(request, 400, "Quantity must be between 1 and " + MAX_QUANTITY + ".");
+    }
+    totalQty += it.quantity;
+  }
+  if (totalQty < 1 || totalQty > MAX_QUANTITY) {
+    return errorResponse(request, 400, "An order holds at most " + MAX_QUANTITY + " items.");
   }
   const addressError = validateAddress(body.address);
   if (addressError) return errorResponse(request, 400, addressError);
   const address = body.address;
 
-  // Live price + availability from Printify. An unknown or unavailable
-  // variant is refused outright.
-  let product;
-  try {
-    product = await fetchPrintifyProduct(env, productId);
-  } catch (e) {
-    return errorResponse(request, 502, "Could not reach the store. Please try again.");
+  // Live price + availability from Printify for EVERY line. An unknown
+  // or unavailable variant is refused outright. Products are fetched
+  // once each, even when several lines share one.
+  const productsById = {};
+  let productCents = 0;
+  for (const it of items) {
+    let product = productsById[it.productId];
+    if (!product) {
+      try {
+        product = await fetchPrintifyProduct(env, it.productId);
+      } catch (e) {
+        return errorResponse(request, 502, "Could not reach the store. Please try again.");
+      }
+      if (!product) {
+        return errorResponse(request, 400, "That product is not sold here.");
+      }
+      productsById[it.productId] = product;
+    }
+    const variant = liveVariant(product, it.variantId);
+    if (!variant) {
+      return errorResponse(request, 400, "That color/size combination is not sold.");
+    }
+    productCents += variant.priceCents * it.quantity;
   }
-  if (!product) {
-    return errorResponse(request, 400, "That product is not sold here.");
-  }
-  const item = liveVariant(product, variantId);
-  if (!item) {
-    return errorResponse(request, 400, "That color/size combination is not sold.");
-  }
-
-  const productCents = item.priceCents * quantity;
 
   // Live shipping quote from Printify for this exact order + address.
   let shippingCents = null;
   let shippingEstimated = false;
   let printifyStatus = null;
   try {
-    const quote = await quoteShipping(env, productId, variantId, quantity, address);
+    const quote = await quoteShipping(env, items, address);
     shippingCents = quote.cents;
     printifyStatus = quote.status;
   } catch (e) {
@@ -446,10 +483,13 @@ async function handleCreatePaymentIntent(request, env) {
   const amountCents = productCents + shippingCents;
 
   // What the webhook needs to create the Printify order. Kept small:
-  // Stripe metadata values are limited to 500 characters each.
+  // Stripe metadata values are limited to 500 characters each. The
+  // items ride as one compact string, "productId:variantId:qty" per
+  // line joined by "|"; the address fields stay exactly as before.
   const orderMeta = {
-    variant_id: variantId,
-    qty: quantity,
+    items: items.map(function (it) {
+      return it.productId + ":" + it.variantId + ":" + it.quantity;
+    }).join("|"),
     first: String(address.firstName).trim(),
     last: String(address.lastName).trim(),
     email: String(address.email).trim(),
@@ -462,9 +502,10 @@ async function handleCreatePaymentIntent(request, env) {
     zip: String(address.zip).trim(),
   };
 
+  const description = totalQty + (totalQty === 1 ? " item" : " items") + " — Hope Anchored in Christ";
   let pi;
   try {
-    pi = await createPaymentIntent(env, amountCents, orderMeta, productId, product.title);
+    pi = await createPaymentIntent(env, amountCents, orderMeta, items[0].productId, description);
   } catch (e) {
     return errorResponse(request, 502, "Could not start the payment. Please try again.");
   }
@@ -572,7 +613,7 @@ async function setPaymentIntentMetadata(env, paymentIntentId, metadata) {
 /* for manual approval (or the shop's auto-approval setting — see      */
 /* README.md). No charge happens until it goes to production.          */
 /* ------------------------------------------------------------------ */
-async function createPrintifyOrder(env, paymentIntentId, orderMeta, productId) {
+async function createPrintifyOrder(env, paymentIntentId, orderMeta, lineItems) {
   const url =
     "https://api.printify.com/v1/shops/" +
     encodeURIComponent(env.PRINTIFY_SHOP_ID) +
@@ -600,13 +641,13 @@ async function createPrintifyOrder(env, paymentIntentId, orderMeta, productId) {
     body: JSON.stringify({
       external_id: "hac-" + paymentIntentId,
       label: "Hope Anchored — " + paymentIntentId,
-      line_items: [
-        {
-          product_id: productId,
-          variant_id: orderMeta.variant_id,
-          quantity: orderMeta.qty,
-        },
-      ],
+      line_items: lineItems.map(function (it) {
+        return {
+          product_id: it.productId,
+          variant_id: it.variantId,
+          quantity: it.quantity,
+        };
+      }),
       shipping_method: 1, // 1 = standard
       send_shipping_notification: true,
       address_to: printifyAddress(address),
@@ -688,37 +729,72 @@ async function handleWebhook(request, env) {
     return errorResponse(request, 400, "PaymentIntent has no order metadata.");
   }
 
-  // The variant must still exist and be enabled in Printify — checked
+  // Order lines: the compact "productId:variantId:qty" encoding, one
+  // line per item joined by "|". Older PaymentIntents (pre-cart) carry
+  // a single variant_id + qty instead — read those as one line.
+  const webhookProductId = String(metadata.printify_product_id || "");
+  let orderItems = [];
+  if (orderMeta.items && typeof orderMeta.items === "string") {
+    for (const part of orderMeta.items.split("|")) {
+      const bits = part.split(":");
+      if (bits.length !== 3) continue;
+      orderItems.push({
+        productId: bits[0],
+        variantId: Number(bits[1]),
+        quantity: Number(bits[2]),
+      });
+    }
+  }
+  if (!orderItems.length && orderMeta.variant_id) {
+    orderItems = [{
+      productId: webhookProductId,
+      variantId: Number(orderMeta.variant_id),
+      quantity: Number(orderMeta.qty) || 1,
+    }];
+  }
+  if (!orderItems.length) {
+    return errorResponse(request, 400, "PaymentIntent has no order lines.");
+  }
+
+  // Every variant must still exist and be enabled in Printify — checked
   // live, not against a table, so a product pulled from Printify after
   // the payment cannot be ordered. A Printify outage here is a 502 so
   // Stripe retries; a genuinely unknown variant is a 400 (no retry —
   // the payment was taken and the order needs a human). Availability
   // is deliberately NOT required here: the order creation itself is the
   // real test, and stock can flicker between payment and delivery.
-  const webhookProductId = String(metadata.printify_product_id || "");
-  if (SELLABLE_PRODUCT_IDS.indexOf(webhookProductId) === -1) {
-    return errorResponse(request, 400, "PaymentIntent names a product that is not sold here.");
+  for (const it of orderItems) {
+    if (SELLABLE_PRODUCT_IDS.indexOf(it.productId) === -1) {
+      return errorResponse(request, 400, "PaymentIntent names a product that is not sold here.");
+    }
   }
-  let liveProduct;
-  try {
-    liveProduct = await fetchPrintifyProduct(env, webhookProductId);
-  } catch (e) {
-    return errorResponse(request, 502, "Could not reach Printify. Stripe will retry.");
+  const liveProducts = {};
+  for (const it of orderItems) {
+    if (liveProducts[it.productId]) continue;
+    let liveProduct;
+    try {
+      liveProduct = await fetchPrintifyProduct(env, it.productId);
+    } catch (e) {
+      return errorResponse(request, 502, "Could not reach Printify. Stripe will retry.");
+    }
+    if (!liveProduct) {
+      return errorResponse(request, 400, "PaymentIntent names a product that is not sold here.");
+    }
+    liveProducts[it.productId] = liveProduct;
   }
-  if (!liveProduct) {
-    return errorResponse(request, 400, "PaymentIntent names a product that is not sold here.");
-  }
-  const live = (liveProduct.variants || []).find(function (v) {
-    return v.id === Number(orderMeta.variant_id);
-  });
-  if (!live || !live.is_enabled) {
-    return errorResponse(request, 400, "Order metadata names an unknown variant.");
+  for (const it of orderItems) {
+    const live = (liveProducts[it.productId].variants || []).find(function (v) {
+      return v.id === it.variantId;
+    });
+    if (!live || !live.is_enabled) {
+      return errorResponse(request, 400, "Order metadata names an unknown variant.");
+    }
   }
 
   const externalId = "hac-" + pi.id;
   let created;
   try {
-    created = await createPrintifyOrder(env, pi.id, orderMeta, webhookProductId);
+    created = await createPrintifyOrder(env, pi.id, orderMeta, orderItems);
   } catch (e) {
     // Transient network failure — 502 so Stripe retries the delivery.
     return errorResponse(request, 502, "Could not reach Printify. Stripe will retry.");
