@@ -53,7 +53,8 @@ function hacEsc(s) {
  * store.json, update its key here. */
 var HAC_PRODUCT_IDS = {
   "Look at the Birds of the Air Crewneck Sweatshirt": "6af3e044b13d725413071601",
-  "My Identity Is in Christ Christian Faith T-Shirt": "6aff566d0e0ec6c28205ccf1"
+  "My Identity Is in Christ Christian Faith T-Shirt": "6aff566d0e0ec6c28205ccf1",
+  "Let Your Light Shine Christian Faith T-Shirt": "6affc66913e72c2c980a1624"
 };
 
 // Countries the checkout offers. Printify ships to many more; extend this
