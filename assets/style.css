@@ -809,10 +809,6 @@ html[data-theme="dark"] .audio-bar { background: #132A4C; box-shadow: 0 8px 24px
 .store-hero h2::after { content: ""; display: block; width: 64px; height: 4px; background: var(--gold); border-radius: 2px; margin-top: 0.5rem; }
 .store-hero p { color: #dfe3ee; margin: 0; }
 .store-featured { display: grid; grid-template-columns: 1fr; gap: 1.2rem; background: #fff; border: 1px solid #e5e7ef; border-radius: 16px; padding: 1.2rem; }
-/* Sticker detail pages: the card goes clear so a transparent PNG
-   shows the page background, not a white box (v358). */
-.store-featured.store-featured--clear { background: transparent; border-color: transparent; }
-html[data-theme="dark"] .store-featured.store-featured--clear { background: transparent; border-color: transparent; }
 @media (min-width: 700px) { .store-featured { grid-template-columns: 1fr 1fr; } }
 .store-featured-gallery .store-main-img { max-width: 100%; }
 .store-featured-info h3 { margin-top: 0; font-size: 1.35rem; }

@@ -243,7 +243,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "358";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "359";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3905,11 +3905,7 @@ function genBindInteractive(node) {
         var wrap = document.getElementById("storeGrid");
         if (!wrap) return;
         var html = "<p class='store-back'><a href='#/store'>&larr; Back to the store</a></p>";
-        /* Stickers use transparent PNGs — a white card would put the
-           white box back behind them, so the detail card goes clear
-           and the page background shows through (v358). */
-        var clearCard = (p.category === "Stickers") ? " store-featured--clear" : "";
-        html += "<div class='store-featured store-card" + clearCard + "'>";
+        html += "<div class='store-featured store-card'>";
         html += "<div class='store-featured-gallery'>";
         if (p.images) html += storeGalleryHtml(p);
         else if (p.image) html += "<img src='" + esc(p.image) + "' alt='" + esc(p.name) + "'>";
