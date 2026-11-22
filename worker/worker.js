@@ -65,6 +65,9 @@ const SELLABLE_PRODUCT_IDS = [
   "6af3e044b13d725413071601", // "Look at the Birds of the Air Crewneck Sweatshirt"
   "6aff566d0e0ec6c28205ccf1", // "My Identity Is in Christ Christian Faith T-Shirt"
   "6affc66913e72c2c980a1624", // "Let Your Light Shine Christian Faith T-Shirt"
+  "6b03331a49a554da1d0a6252", // "Fox and Cardinal Kiss-Cut Sticker"
+  "6b033597d0494fc130011aae", // "Deer and Birds Kiss-Cut Sticker"
+  "6b03367d565aeed0240061dc", // "Pink Evening Primrose and Firefly Kiss-Cut Sticker"
 ];
 
 const MAX_QUANTITY = 10; // sanity cap per order
@@ -179,7 +182,9 @@ function liveVariants(product) {
     (v.options || []).forEach(function (id) {
       const o = byId[id];
       if (!o) return;
-      if (o.type === "color") color = o.title;
+      // Stickers carry their colour as type "surface" (White), not
+      // "color" — without this every sticker variant is skipped.
+      if (o.type === "color" || o.type === "surface") color = o.title;
       if (o.type === "size") size = o.title;
     });
     if (!color || !size) return; // a variant we cannot describe is not sold

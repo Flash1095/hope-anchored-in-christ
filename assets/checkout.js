@@ -54,7 +54,10 @@ function hacEsc(s) {
 var HAC_PRODUCT_IDS = {
   "Look at the Birds of the Air Crewneck Sweatshirt": "6af3e044b13d725413071601",
   "My Identity Is in Christ Christian Faith T-Shirt": "6aff566d0e0ec6c28205ccf1",
-  "Let Your Light Shine Christian Faith T-Shirt": "6affc66913e72c2c980a1624"
+  "Let Your Light Shine Christian Faith T-Shirt": "6affc66913e72c2c980a1624",
+  "Fox and Cardinal Kiss-Cut Sticker": "6b03331a49a554da1d0a6252",
+  "Deer and Birds Kiss-Cut Sticker": "6b033597d0494fc130011aae",
+  "Pink Evening Primrose and Firefly Kiss-Cut Sticker": "6b03367d565aeed0240061dc"
 };
 
 // Countries the checkout offers. Printify ships to many more; extend this
