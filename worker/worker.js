@@ -68,6 +68,7 @@ const SELLABLE_PRODUCT_IDS = [
   "6b03331a49a554da1d0a6252", // "Fox and Cardinal Kiss-Cut Sticker"
   "6b033597d0494fc130011aae", // "Deer and Birds Kiss-Cut Sticker"
   "6b03367d565aeed0240061dc", // "Pink Evening Primrose and Firefly Kiss-Cut Sticker"
+  "6b034a1f27184f8ac60877ed", // "Bear Cub and Monarch Butterfly Kiss-Cut Sticker"
 ];
 
 const MAX_QUANTITY = 10; // sanity cap per order
