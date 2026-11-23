@@ -814,6 +814,17 @@ html[data-theme="dark"] .audio-bar { background: #132A4C; box-shadow: 0 8px 24px
 .store-featured-info h3 { margin-top: 0; font-size: 1.35rem; }
 .store-featured-info .price { font-weight: 700; color: var(--navy); font-size: 1.25rem; margin: 0.4rem 0; }
 .store-featured-info .buy-btn { display: block; text-align: center; padding: 0.7rem 1.4rem; }
+/* "From the store" box at the end of a blog post (v361). */
+.shop-box { border: 1px solid #e5e7ef; border-radius: 16px; padding: 1.2rem; margin-top: 1.5rem; background: #fff; }
+.shop-box h3 { margin-top: 0; }
+.shop-box-items { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.8rem; }
+.shop-box-item { display: block; text-align: center; text-decoration: none; }
+.shop-box-item img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 0.4rem; }
+.shop-box-item .shop-box-name { display: block; font-weight: 600; color: var(--navy); }
+.shop-box-item .price { display: block; font-weight: 700; color: var(--navy); margin-top: 0.2rem; }
+.store-read-more { margin-top: 1rem; }
+html[data-theme="dark"] .shop-box { background: #132A4C; border-color: #2a3f66; }
+html[data-theme="dark"] .shop-box-item .shop-box-name, html[data-theme="dark"] .shop-box-item .price { color: #eef1f7; }
 .store-trust { list-style: none; padding: 0; margin: 1rem 0 0; }
 .store-trust li { padding: 0.3rem 0 0.3rem 1.6rem; position: relative; font-size: 0.92rem; color: var(--muted); }
 .store-trust li::before { content: "\2713"; position: absolute; left: 0; color: var(--gold); font-weight: 700; }

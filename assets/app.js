@@ -243,7 +243,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "360";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "361";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3526,6 +3526,60 @@ function genBindInteractive(node) {
     if (idx >= 0 && idx < parts.length - 1) bits.push("Next part: <a href='#/blog/" + esc(parts[idx + 1].slug) + "'>" + esc(parts[idx + 1].title) + "</a> &rarr;");
     return '<p class="post-meta">' + bits.join(" &nbsp;|&nbsp; ") + "</p>";
   }
+  /* Product <-> blog post links (Lorraine 2026-11-23): product name ->
+     blog post slugs. The links render themselves both ways — a "From the
+     store" box at the end of the post, and a "Read more" line on the
+     product page — so no post or product is edited by hand for each link.
+     New products get their entry here when listed; new posts get their
+     entry when published. A product with no entry shows no links, never a
+     forced or wrong link. */
+  var PRODUCT_POSTS = {
+    "Look at the Birds of the Air Crewneck Sweatshirt": ["do-animals-go-to-heaven"],
+    "Fox and Cardinal Kiss-Cut Sticker": ["do-animals-go-to-heaven"],
+    "Deer and Birds Kiss-Cut Sticker": ["do-animals-go-to-heaven"],
+    "Pink Evening Primrose and Firefly Kiss-Cut Sticker": ["do-animals-go-to-heaven"],
+    "Bear Cub and Monarch Butterfly Kiss-Cut Sticker": ["do-animals-go-to-heaven"]
+  };
+  function slugifyName(s) {
+    return (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "product";
+  }
+  var shopLinkProducts = null; // cached store.json products for post shop boxes
+  function loadShopLinkProducts() {
+    if (shopLinkProducts) return Promise.resolve(shopLinkProducts);
+    return fetch("content/store.json?v=" + ASSET_V).then(function (r) { return r.ok ? r.json() : { products: [] }; }).catch(function () { return { products: [] }; }).then(function (json) {
+      shopLinkProducts = json.products || [];
+      return shopLinkProducts;
+    });
+  }
+  function postShopBoxHtml(slug, products) {
+    var linked = [];
+    products.forEach(function (p) {
+      var slugs = PRODUCT_POSTS[p.name] || [];
+      if (slugs.indexOf(slug) !== -1) linked.push(p);
+    });
+    if (!linked.length) return "";
+    var cards = linked.map(function (p) {
+      var href = "#/store/" + esc(slugifyName(p.name));
+      var img = p.image || "";
+      return "<a class='shop-box-item' href='" + href + "'>" +
+        (img ? "<img src='" + esc(img) + "' alt='" + esc(p.name) + "'>" : "") +
+        "<span class='shop-box-name'>" + esc(p.name) + "</span>" +
+        (p.price ? "<span class='price'>" + esc(p.price) + "</span>" : "") + "</a>";
+    }).join("");
+    return "<div class='shop-box'><h3>From the store</h3>" +
+      "<p class='snippet'>Take the story with you:</p>" +
+      "<div class='shop-box-items'>" + cards + "</div></div>";
+  }
+  function productReadMoreHtml(p) {
+    var slugs = PRODUCT_POSTS[p.name] || [];
+    var links = [];
+    slugs.forEach(function (slug) {
+      var post = posts.filter(function (q) { return q.slug === slug; })[0];
+      if (post) links.push("<a href='#/blog/" + esc(post.slug) + "'>" + esc(post.title) + "</a>");
+    });
+    if (!links.length) return "";
+    return "<p class='snippet store-read-more'>Read more: " + links.join(" &middot; ") + "</p>";
+  }
   function viewBlog(slug, params) {
     if (slug) {
       var post = posts.filter(function (p) { return p.slug === slug; })[0];
@@ -3539,6 +3593,12 @@ function genBindInteractive(node) {
           (POST_ART[post.slug] ? "<img class='post-art' src='" + esc(POST_ART[post.slug]) + "' alt=''>" : "") +
           renderMarkdown(body) + "</article>";
         mountListenButton(function () { return post.title + ". " + body; });
+        loadShopLinkProducts().then(function (prods) {
+          var box = postShopBoxHtml(post.slug, prods);
+          if (!box) return;
+          var art = document.querySelector(".post-body");
+          if (art) art.insertAdjacentHTML("beforeend", box);
+        });
         window.scrollTo(0, 0);
       }).catch(function () {
         app.innerHTML = '<p class="empty">That post could not be loaded.</p>';
@@ -3621,7 +3681,7 @@ function genBindInteractive(node) {
       /* Etsy-simple shareable address: #/store/<slug>. Slugs come from the
          product name at runtime, so no new field is needed in store.json. */
       function productSlug(p) {
-        return (p.name || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "product";
+        return slugifyName(p.name);
       }
       function productBySlug(slug) {
         var found = null;
@@ -3828,10 +3888,11 @@ function genBindInteractive(node) {
         } else if (!filtered.length) {
           wrap.innerHTML = "<p class='empty'>No products match — try a different search or category.</p>";
         } else {
-          /* Reference-shop cards: picture + title + real price + a
-             "Find your color & size" link to the detail view. No
+          /* Reference-shop cards: picture + title + real price. No
              invented sale prices or best-seller badges — only the
-             product's real price shows. */
+             product's real price shows. The picture links to the
+             detail view (the "Find your color & size" line was
+             removed 2026-11-23 at Lorraine's word). */
           var countLine = "";
           if (sorted.length > 1) {
             countLine = "<p class='store-count'>Showing " + (start + 1) + "–" + Math.min(start + PAGE_SIZE, sorted.length) + " of " + sorted.length + " product" + (sorted.length === 1 ? "" : "s") + "</p>";
@@ -3852,7 +3913,7 @@ function genBindInteractive(node) {
               "<img src='" + esc(imgSrc) + "' alt='" + esc(p.name) + "'></a>" +
               "<h3>" + esc(p.name) + "</h3>";
             if (p.price) card += "<p class='price'>" + esc(p.price) + "</p>";
-            card += "<p class='store-find-size'><a href='" + detailHref + "'>Find your color &amp; size &nearr;</a></p></article>";
+            card += "</article>";
             return card;
           }).join("") + "</div>" + pager;
         }
@@ -3927,6 +3988,7 @@ function genBindInteractive(node) {
         }
         html += storeTrustHtml();
         html += "</div></div>";
+        html += productReadMoreHtml(p);
         wrap.innerHTML = html;
         if (p.checkout === "onsite") {
           /* Only reset the live state when the product changes — a
