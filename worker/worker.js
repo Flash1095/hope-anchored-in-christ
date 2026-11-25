@@ -69,6 +69,9 @@ const SELLABLE_PRODUCT_IDS = [
   "6b033597d0494fc130011aae", // "Deer and Birds Kiss-Cut Sticker"
   "6b03367d565aeed0240061dc", // "Pink Evening Primrose and Firefly Kiss-Cut Sticker"
   "6b034a1f27184f8ac60877ed", // "Bear Cub and Monarch Butterfly Kiss-Cut Sticker"
+  "6b04812a294e2ede830bcb6a", // "Chameleon and Bee Kiss-Cut Sticker"
+  "6b0736aa31aa8d3ed10b2752", // "Hummingbird and Hibiscus Kiss-Cut Sticker"
+  "6b074d09ee8120dbb70bcb10", // "Hummingbird and Coneflower Kiss-Cut Sticker"
 ];
 
 const MAX_QUANTITY = 10; // sanity cap per order

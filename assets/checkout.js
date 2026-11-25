@@ -58,7 +58,10 @@ var HAC_PRODUCT_IDS = {
   "Fox and Cardinal Kiss-Cut Sticker": "6b03331a49a554da1d0a6252",
   "Deer and Birds Kiss-Cut Sticker": "6b033597d0494fc130011aae",
   "Pink Evening Primrose and Firefly Kiss-Cut Sticker": "6b03367d565aeed0240061dc",
-  "Bear Cub and Monarch Butterfly Kiss-Cut Sticker": "6b034a1f27184f8ac60877ed"
+  "Bear Cub and Monarch Butterfly Kiss-Cut Sticker": "6b034a1f27184f8ac60877ed",
+  "Chameleon and Bee Kiss-Cut Sticker": "6b04812a294e2ede830bcb6a",
+  "Hummingbird and Hibiscus Kiss-Cut Sticker": "6b0736aa31aa8d3ed10b2752",
+  "Hummingbird and Coneflower Kiss-Cut Sticker": "6b074d09ee8120dbb70bcb10"
 };
 
 // Countries the checkout offers. Printify ships to many more; extend this

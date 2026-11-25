@@ -243,7 +243,7 @@
   var havenbrookData = null; // Havenbrook Chronicles (content/havenbrook.json); app-only fiction, NOT a collection
   var webtoonsData = null; // Havenbrook webtoon scripts (content/webtoons.json); words separate from panel artwork
   var journeyRoadPaths = null; // road-following journey paths (content/journey_road_paths.json); null = fall back to v190 straight segments
-  var ASSET_V = "361";  // bump when site code or content changes, so browsers fetch fresh copies
+  var ASSET_V = "363";  // bump when site code or content changes, so browsers fetch fresh copies
   var linkIndex = {}; // exact value -> {coll, idx}
   var linkIndexByColl = {}; // coll id -> exact value -> {coll, idx}
   // A related field's home collection: a RelatedEvents token that matches a
@@ -3538,7 +3538,10 @@ function genBindInteractive(node) {
     "Fox and Cardinal Kiss-Cut Sticker": ["do-animals-go-to-heaven"],
     "Deer and Birds Kiss-Cut Sticker": ["do-animals-go-to-heaven"],
     "Pink Evening Primrose and Firefly Kiss-Cut Sticker": ["do-animals-go-to-heaven"],
-    "Bear Cub and Monarch Butterfly Kiss-Cut Sticker": ["do-animals-go-to-heaven"]
+    "Bear Cub and Monarch Butterfly Kiss-Cut Sticker": ["do-animals-go-to-heaven"],
+    "Chameleon and Bee Kiss-Cut Sticker": ["do-animals-go-to-heaven"],
+    "Hummingbird and Hibiscus Kiss-Cut Sticker": ["do-animals-go-to-heaven"],
+    "Hummingbird and Coneflower Kiss-Cut Sticker": ["do-animals-go-to-heaven"]
   };
   function slugifyName(s) {
     return (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "product";
